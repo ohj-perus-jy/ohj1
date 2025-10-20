@@ -3,3 +3,17 @@ authors = ["JYU"]
 language = "fi"
 src = "src"
 title = "Ohjelmointi 1"
+
+[output.html]
+additional-css = [ 
+  "theme/alerts-style.css",
+]
+
+additional-js = [
+  "mermaid/mermaid.min.js", 
+  "mermaid/mermaid-init.js",
+] 
+
+[preprocessor.alerts]
+
+[preprocessor.mermaid]

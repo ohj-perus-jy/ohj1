@@ -5,7 +5,7 @@
       "label": "mdbook: serve",
       "type": "shell",
       "command": "mdbook",
-      "args": ["serve", "-n", "0.0.0.0", "-p", "36742"],
+      "args": ["serve", "-n", "0.0.0.0", "-p", "36743"],
       "isBackground": true,
       "presentation": {
         "reveal": "always",

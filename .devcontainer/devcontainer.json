@@ -21,10 +21,11 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [36742],
-	"appPort": [36742]
+	"appPort": [36743],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "rustc --version",
+	"postCreateCommand": "bash ./update-mdbook.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
