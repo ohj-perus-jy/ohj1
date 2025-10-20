@@ -182,24 +182,26 @@ html:not(.js) .left-buttons button {
 .mobile-nav-chapters {
     text-align: center;
     text-decoration: none;
-    width: 90px;
+    min-width: 90px;
+    max-width: 120px;
     border-radius: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     background-color: var(--sidebar-bg);
+    border: 1px solid var(--sidebar-spacer);
 }
 
 /* Only Firefox supports flow-relative values */
-.previous { float: left; }
-[dir=rtl] .previous { float: right; }
+/* .previous { float: left; } */
+/* [dir=rtl] .previous { float: right; } */
 
 /* Only Firefox supports flow-relative values */
 .next {
-    float: right;
+    /*float: right;*/
     right: var(--page-padding);
 }
 [dir=rtl] .next {
-    float: left;
-    right: unset;
+    /*float: left;*/
+    /*right: unset;*/
     left: var(--page-padding);
 }
 
@@ -209,13 +211,19 @@ html:not(.js) .left-buttons button {
 
 @media only screen and (max-width: 1080px) {
     .nav-wide-wrapper { display: none; }
-    .nav-wrapper { display: block; }
+    .nav-wrapper {
+        display: flex; 
+        justify-content: space-between;
+    }
 }
 
 /* sidebar-visible */
 @media only screen and (max-width: 1380px) {
     #sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wide-wrapper { display: none; }
-    #sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper { display: block; }
+    #sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper { 
+        display: flex; 
+        justify-content: space-between;
+    }
 }
 
 /* Inline code */

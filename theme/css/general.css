@@ -180,6 +180,13 @@ blockquote {
     font-size: 2rem;
 }
 
+.icon-external {
+  width: 1em; height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url('/external-link.svg') no-repeat center / contain;
+  mask: url('/external-link.svg') no-repeat center / contain;
+}
+
 blockquote .warning:before {
     background-color: var(--quote-bg);
 }
