@@ -185,8 +185,8 @@ blockquote {
     width: 1em; height: 1em;
     margin-inline-start: 0.2em;
     background-color: currentColor;
-    -webkit-mask: url('/images/ext-link.svg') no-repeat center / contain;
-    mask: url('/images/ext-link.svg') no-repeat center / contain;
+    -webkit-mask: url('../images/ext-link.svg') no-repeat center / contain;
+    mask: url('../images/ext-link.svg') no-repeat center / contain;
     content: "";
 }
 
