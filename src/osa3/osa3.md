@@ -1,3 +1,13 @@
+# Osa 3
+
+Katso luennot 5 ja 6
+
+Tämän osan aiheita ovat...
+
+ * ehtolauseet
+ * vertailuoperaattorit
+ * loogiset operaattorit
+ 
 ## ↔️ Ehtolauseet
 
 **Ehtolauseet** ovat rakenteita, jotka suorittavat tiettyjä lauseita vain, jos jokin ehto on voimassa. Ehtolauseella voidaan ikään kuin hypätä sellaisen koodin yli, jota ei ole tarpeellista suorittaa. 

@@ -1,3 +1,61 @@
+# Osa 2
+
+Katso luennot 3 ja 4
+
+Tämän osan aiheita ovat: 
+
+ * muuttujat ja tietotyypit
+ * lausekkeet ja lauseet
+ * ohjelman rakenne ja suoritusjärjestys
+ * aliohjelmat
+ * kommentointi ja dokumentointi
+
+## 📦 Muuttujat ja tietotyypit
+
+## 🛝 Lausekkeet ja lauseet
+
+Lauseet ovat ohjelman perusyksiköitä, jotka suoritetaan yksi kerrallaan. Lause voi olla esimerkiksi muuttujan määrittely, aliohjelman kutsu, ehto- tai toistolause.
+
+
+## 🏗️ Ohjelman rakenne ja suoritusjärjestys
+
+C#-kielessä tulee tavallisesti olla vähintään yksi luokka. Luokassa tulee olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä -- siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia. Pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
+
+Käytäntö on, että yksi tiedosto sisältää yhden luokan, ja että luokan nimi on sama kuin tiedoston nimi.
+
+Alla oleva sovellus koostuu yhdestä luokasta, joka sisältää pääohjelman ja yhden aliohjelman (`Tervehdys`), siis yhteensä kaksi aliohjelmaa.
+
+```csharp
+using System;
+
+public class Sovellus
+{
+  public static void Main()
+  {
+    // Ohjelman suoritus alkaa Main-aliohjelmasta
+    // Tässä kutsutaan Tervehdys-aliohjelmaa kaksi kertaa
+    Tervehdys();
+    Tervehdys();
+  }
+
+  public static void Tervehdys()
+  {
+     Console.WriteLine("Tervehdys!");
+  }
+}
+```
+
+✨ Valinnaista lisätietoa: C#:ssa (alkaen versiosta 9) voi kirjoittaa ohjelman, jossa ei ole luokkaa eikä pääohjelmaa. Tällöin aivan vasemmalle (vähiten sisennetyt rivit) kirjoitetut lauseet muodostavat niin sanotut *top-level statements* -koodin. Kääntäjä muodostaa tämän koodin perusteella luokan ja ohjelman aloituspisteen. Näin on periaatteessa mahdollista kirjoittaa "Hello world"-ohjelma yksinkertaisesti:
+
+```csharp
+System.Console.WriteLine("Hello, World!");
+```
+
+Top-level statements -ohjelmat voivat olla käteviä pikkuohjelmissa ja skripteissä. Isommissa ohjelmissa on usein kuitenkin välttämätöntä kirjoittaa ohjelma luokan ja pääohjelman ympärille.
+
+
+
+
 ## 🧩 Aliohjelmat
 
 Aliohjelmat ovat ohjelman osia, jotka suorittavat tietyn tehtävän. Aliohjelmat helpottavat ohjelman rakentamista pienistä palasista, sekä ohjelman ylläpitoa. Aliohjelmat mahdollistavat koodin uudelleenkäytön, sillä aliohjelma voidaan määritellä kerran ja käyttää (eli *kutsua*) sitä useita kertoja.
@@ -67,3 +125,15 @@ public static int Summa(int a, int b)
     // Käännösvirhe: "not all code paths return a value"
 }
 ```
+
+
+## Kommentointi ja dokumentointi
+
+Kommentointi
+
+## Tehtävät
+
+
+Tässä on lueteltu kaikki tähän osaan kuuluvat tehtävät.
+
+Tee TIMissä... Linkki...

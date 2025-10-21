@@ -1,19 +1,13 @@
----
-title: Toistorakenteet
-parent: Osa 3
-layout: default
-nav_order: 53
----
+# Osa 4
 
+Katso luennot 7 ja 8
 
-# ➿ Toistorakenteet
-{: .no_toc }
+Tässä osassa...
 
-Tällä oppitunnilla tutustumme...
-{: .fs-5 }
+ * toistorakenteet
+ * merkkijonot
 
----
-
+## ➿ Toistorakenteet
 
 **Toistorakenteilla** voidaan toistaa jonkin lauseen tai lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistorakenteita ovat `while`, `do-while`, `for`, ja `foreach`.
 
@@ -85,6 +79,10 @@ for (int i = 1; i <= 10; i++)
 ```
 
 
-## Tehtävät 2.7--2.11
+## Merkkijonot
+
+`String`
+
+## Tehtävät
 
 Tee TIMissä (linkki)
