@@ -180,11 +180,14 @@ blockquote {
     font-size: 2rem;
 }
 
-.icon-external {
-  width: 1em; height: 1em;
-  background-color: currentColor;
-  -webkit-mask: url('/external-link.svg') no-repeat center / contain;
-  mask: url('/external-link.svg') no-repeat center / contain;
+.ext::after {
+    display: inline-block;
+    width: 1em; height: 1em;
+    margin-inline-start: 0.2em;
+    background-color: currentColor;
+    -webkit-mask: url('/images/ext-link.svg') no-repeat center / contain;
+    mask: url('/images/ext-link.svg') no-repeat center / contain;
+    content: "";
 }
 
 blockquote .warning:before {
