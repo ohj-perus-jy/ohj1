@@ -6,6 +6,9 @@ title = "Ohjelmointi 1"
 
 [output.html]
 additional-css = [ 
+  "highlight/atelier-forest-light.css",
+  "highlight/twilight.css",
+  "highlight/apprentice.css",
   "theme/alerts-style.css",
 ]
 default-theme = "jyu-light"
