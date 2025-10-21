@@ -16,8 +16,15 @@ preferred-dark-theme = "jyu-dark"
 additional-js = [
   "mermaid/mermaid.min.js", 
   "mermaid/mermaid-init.js",
+  "theme/playground_ext.js",
 ] 
 site-url = "/ohj1-mdbook-demo/"
+
+[output.html.playground]
+editable = true
+
+[output.html.code.hidelines]
+csharp = "//-"
 
 [preprocessor.alerts]
 
