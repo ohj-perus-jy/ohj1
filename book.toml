@@ -14,6 +14,7 @@ additional-js = [
   "mermaid/mermaid.min.js", 
   "mermaid/mermaid-init.js",
 ] 
+site-url = "/ohj1-mdbook-demo/"
 
 [preprocessor.alerts]
 
