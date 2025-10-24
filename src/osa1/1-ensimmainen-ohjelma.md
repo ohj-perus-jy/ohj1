@@ -38,7 +38,13 @@ Ohjelma ei käänny, jos se sisältää käännöksen estäviä virheitä, kuten
 
 Tehtävien kuvaukset löytyvät alta. Tehtävien palautuslaatikot on luotu valmiiksi TIMiin. 
 
-### Tehtävä 1.1
+⛄ = Normaali tehtävä
+
+🐦‍⬛ = Bonus
+
+🐐 = Haastava
+
+## ⛄ Tehtävä 1.1
 
 Muokkaa alla olevaa ohjelmaa niin, että se tulostaa
 
@@ -50,3 +56,7 @@ Informaatioteknologian tiedekunta
 Älä kuitenkaan poista äläkä lisää uusia koodirivejä. Muokkaa olemassa olevien rivien järjestystä ja niiden sisältöä.
 
 [LINKKI TIMIIN? MIHIN??]()
+
+## ⛄ Tehtävä 1.2
+
+## 🐦‍⬛ Tehtävä 1.3 
