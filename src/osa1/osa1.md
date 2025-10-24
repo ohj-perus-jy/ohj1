@@ -1,44 +1,21 @@
-# Osa 1
+# 🌍 Heippa, maailma!
 
-Katso luennot 1 ja 2
+Tämän osan päätteeksi
 
-Tässä osassa...
+ * osaat luoda, kääntää C#-lähdekoodia ja ajaa C#-ohjelman, joka tulostaa tekstiä näytölle
+ * osaat asentaa itsellesi kehitysympäristön C#-ohjelmointia varten ja luoda uuden C#-projektin
+ * osaat luoda graafisen C#-ohjelman, jossa on erilaisia muotoja
+ * ymmärrät, millä tavalla (tekstimuotoinen) tieto tallennetaan tietokoneeseen
 
- * ensimmäinen ohjelma
- * kääntäminen ja ajaminen
- * graafinen ohjelmointiympäristö
+Harjoituksen päätteeksi sinulla pitäisi olla myös asennettuna
+[kurssin työkalut](/view/%%basedir%%/ohjeet/tyokalut), sillä kotoa käsin toimiminen
+edellyttää niiden asentamista. Apua työkalujen asentamiseen saat myös
+ohjauksissa.
 
-## 👨🏻‍💻 Ensimmäinen ohjelma
+## 📽️ Luennot 
 
-Ihan eka ohjelma C#:ssa näyttää suurin piirtein tältä:
-
-```csharp
-using System;
-
-public class Program
-{
-    public static void Main()
-    {
-        Console.WriteLine("Hello, World!");
-    }
-}
-```
-
-## 📃 Kääntäminen ja ajaminen
-
-Miten käännetään ja ajetaan...
-
-```bash
-dotnet build
-dotnet run
-```
-
-## 🖱️ Graafinen ohjelmointiympäristö
-
-Riderissa...
+[Luentojen 1 ja 2]() katsominen tukee tätä osaa. Suosittelemme katsomaan luennot ennen tai samanaikaisesti tämän osan lukemisen kanssa.
 
 ## 📝 Tehtävät
 
-Tässä on lueteltu kaikki tähän osaan kuuluvat tehtävät.
-
-Tee TIMissä... Linkki...
+Tässä on yhteenveto tämän osan tehtävistä. Tee ne vasta tämän osan lukemisen jälkeen.
