@@ -672,7 +672,7 @@ html:not(.sidebar-resizing) .sidebar {
 
 .theme-popup {
     position: absolute;
-    left: 10px;
+    right: 10px;
     top: var(--menu-bar-height);
     z-index: 1000;
     border-radius: 4px;
