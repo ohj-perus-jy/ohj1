@@ -1,4 +1,4 @@
-# Ohjelmointiympäristö kuntoon
+# <span class="part-icon">🛠️</span> Ohjelmointiympäristö kuntoon
 
 Rider
 

@@ -1,4 +1,4 @@
-# 🌍 Heippa, maailma!
+# <span class="part-icon">🌍</span> Heippa, maailma!
 
 Tämän osan päätteeksi
 

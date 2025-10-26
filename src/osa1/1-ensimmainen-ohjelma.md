@@ -1,4 +1,4 @@
-# 👨🏻‍💻 Ensimmäinen ohjelma
+# <span class="part-icon">👨🏻‍💻</span> Ensimmäinen ohjelma
 
 ## Lähdekoodin kirjoittaminen
 
@@ -27,7 +27,7 @@ dotnet run
 
 Ohjelma on käännettävä aina koodin muuttamisen jälkeen, jotta muutokset tulevat voimaan.
 
-## 🫣 Käännösvirheet
+## Käännösvirheet
 
 Ohjelma ei käänny, jos se sisältää käännöksen estäviä virheitä, kuten syntaksivirheitä. Tällöin kääntäminen ei onnistu eikä ohjelmaa voi ajaa. Virheet on korjattava ennen uutta kääntämistä. Huomaa, että kääntäjä ei havaitse muita virheitä, kuten loogisia virheitä, joskin nykyaikaiset IDE:t auttavat niiden havaitsemisessa.
 
@@ -36,27 +36,4 @@ Ohjelma ei käänny, jos se sisältää käännöksen estäviä virheitä, kuten
 
 ## 📝 Tehtävät
 
-Tehtävien kuvaukset löytyvät alta. Tehtävien palautuslaatikot on luotu valmiiksi TIMiin. 
-
-⛄ = Normaali tehtävä
-
-🐦‍⬛ = Bonus
-
-🐐 = Haastava
-
-## ⛄ Tehtävä 1.1
-
-Muokkaa alla olevaa ohjelmaa niin, että se tulostaa
-
-```
-Jyväskylän yliopisto
-Informaatioteknologian tiedekunta
-```
-
-Älä kuitenkaan poista äläkä lisää uusia koodirivejä. Muokkaa olemassa olevien rivien järjestystä ja niiden sisältöä.
-
-[LINKKI TIMIIN? MIHIN??]()
-
-## ⛄ Tehtävä 1.2
-
-## 🐦‍⬛ Tehtävä 1.3 
+[Tee TIMissä tehtävät 1 ja 2.]

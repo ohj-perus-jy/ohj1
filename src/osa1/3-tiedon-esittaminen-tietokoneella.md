@@ -1,4 +1,4 @@
-# Tiedon esittäminen tietokoneella
+# <span class="part-icon">💾</span>Tiedon esittäminen tietokoneessa
 
 
 ⛄ = Normaali tehtävä
