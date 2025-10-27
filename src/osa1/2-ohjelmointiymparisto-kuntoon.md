@@ -16,9 +16,13 @@ Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti
 
 Jypeli-kirjaston avulla voit luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() **TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä.
 
+> [!TODO]
+> Lisää Jypeli-esimerkki
+
 ## Visual Studio Code
 
-Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta]() **TODO: Linkki**. 
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta]() **TODO: Linkki**
+
 
 ## Tehtävät
 
