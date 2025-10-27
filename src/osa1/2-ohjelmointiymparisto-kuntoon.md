@@ -10,6 +10,16 @@ Tällä opintojaksolla käytämme **JetBrains Rider** -ohjelmointiympäristöä.
 
 Riderilla voi tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
 
+## Graafinen sovellus Jypeli-kirjastolla
+
+Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
+
+Jypeli-kirjaston avulla voit luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() **TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä.
+
+## Visual Studio Code
+
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta]() **TODO: Linkki**. 
+
 ## Tehtävät
 
-Asenna Rider omalle tietokoneellesi [Työkalut-sivulla]() **TODO: Linkki** olevia ohjeita noudattaen. 
+Asenna Rider ja Jypeli omalle tietokoneellesi [Työkalut-sivulla]() **TODO: Linkki** olevia ohjeita noudattaen. 

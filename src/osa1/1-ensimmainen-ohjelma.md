@@ -12,11 +12,16 @@ Console.WriteLine("Heippa, maailma!");
 
 Tämä on ehkäpä yksinkertaisin mahdollinen esimerkki, mutta silti se on täysin toimiva tietokoneohjelma (joskaan ei maailman mielenkiintoisin)! Lupaamme, että opit pian kirjoittamaan monimutkaisempia ohjelmia itse -- mutta aloitetaan pienestä.
 
-Lähdekoodia voi kirjoittaa millä tahansa tekstieditorilla. Tekstieditori on ohjelma, jolla voi kirjoittaa ja muokata pelkkää tekstiä ilman erityisiä muotoiluja tai tyylejä. Olet ehkä käyttänyt tekstieditoria, kuten Muistio (Notepad) Windowsissa tai TextEdit macOS:ssä.  
+> [!TODO]
+> Selitys mitä tuo koodi tarkoittaa
 
-Lähdekoodi tallennetaan tekstitiedostoon, joka yleensä päättyy `.cs` -tiedostopäätteeseen C#:ssa.
+Lähdekoodia voi periaatteessa kirjoittaa millä tahansa *tekstieditorilla*, eli ohjelmalla, jolla voi kirjoittaa ja muokata pelkkää tekstiä ilman erityisiä muotoiluja tai tyylejä. Olet ehkä jo käyttänytkin tekstieditoria, kuten Muistio (Notepad) Windowsissa tai TextEdit macOS:ssä. Tässä "pelkkä teksti" tarkoittaa, että teksti todella tallennetaan tietokoneen muistiin sellaisenaan; esimerkiksi Word-asiakirjaan tallentuu tosiasiassa aina paljon muutakin tietoa, kuten fontti- ja asettelutietoja.
+
+Lähdekoodi tallennetaan tiedostoon, joka yleensä päättyy `.cs` -tiedostopäätteeseen C#:ssa.
 
 ## Kääntäminen ja ajaminen
+
+Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy *kääntää* ennen kuin tietokone voi suorittaa sen.
 
 Kääntäminen tarkoittaa ohjelmoijan kirjoittaman ohjelmakoodin muuttamista tietokoneelle suoritettavaksi ohjelmaksi, konekielelle. Sovelluskehittimessä (esim. Rider) kääntäminen tapahtuu klikkaamalla *Run* tai *Debug*. Tarkasti ottaen noiden painikkeiden painaminen aiheuttaa kaksi asiaa: kääntämisen ja ohjelman käynnistämisen ("ajaminen"). Ohjelmaa voidaan kääntää ja ajaa myös komentoriviltä, esimerkiksi seuraavasti:
 
