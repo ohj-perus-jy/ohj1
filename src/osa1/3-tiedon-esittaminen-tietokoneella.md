@@ -6,7 +6,7 @@ Myös lähdekoodimme teksti ja kaikki tieto jota tietokone ohjelmamme kautta kä
 
 ## Kokonaislukujen esittäminen binäärimuodossa
 
-Siinä missä 10-järjestelmässä (ns. desimaalijärjestelmässä) on kymmenen eri numeroa (0-9), kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3*10² + 4*10¹ + 5*10⁰. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo 
+Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 \* 10² + 4 \* 10¹ + 5 \* 10⁰. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo 
 sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
 
 Vastaavasti idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon potenssina kahdelle: esimerkiksi binääriluku `101` tarkoittaa 1*2² + 0*2¹ + 1*2⁰ = 5 desimaalilukuna. 
