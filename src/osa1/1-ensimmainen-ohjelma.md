@@ -24,9 +24,11 @@ Lähdekoodi tallennetaan tiedostoon, joka yleensä päättyy `.cs` -tiedostopä�
 
 ## Kääntäminen ja ajaminen
 
-Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy *kääntää* ennen kuin tietokone voi suorittaa sen.
+Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy muuttaa sellaiseen muotoon, että tietokone voi suorittaa sen. C#-kielessä tätä muodonmuutosta kutsutaan *kääntämiseksi* (engl. *compilation*), ja useiden vaiheiden seurauksena syntyy niin sanottu konekielinen ohjelma, joka voidaan käynnistää tietokoneella. Kääntäminen tapahtuu *kääntäjällä* (engl. *compiler*), joka on erityinen ohjelma, joka lukee lähdekoodin ja tuottaa siitä suoritettavan ohjelman.
 
-Kääntäminen tarkoittaa ohjelmoijan kirjoittaman ohjelmakoodin muuttamista tietokoneelle suoritettavaksi ohjelmaksi, konekielelle. Sovelluskehittimessä (esim. Rider) kääntäminen tapahtuu klikkaamalla *Run* tai *Debug*. Tarkasti ottaen noiden painikkeiden painaminen aiheuttaa kaksi asiaa: kääntämisen ja ohjelman käynnistämisen ("ajaminen"). Ohjelmaa voidaan kääntää ja ajaa myös komentoriviltä, esimerkiksi seuraavasti:
+Tämä käännetty ohjelma voidaan sitten *ajaa* (engl. *run*), eli käynnistää tietokoneella. 
+
+Tämä kääntäminen-ajo-prosessi voidaan tehdä komentoriviltä seuraavasti. 
 
 ```bash
 dotnet build
@@ -34,6 +36,8 @@ dotnet run
 ```
 
 Ohjelma on käännettävä aina koodin muuttamisen jälkeen, jotta muutokset tulevat voimaan.
+
+Sovelluskehittimessä (esim. Rider) kääntäminen tapahtuu klikkaamalla *Run* tai *Debug*. Noiden painikkeiden painamiseurauksena tapahtuu sekä kääntäminen että ajaminen. 
 
 ## Käännösvirheet
 
