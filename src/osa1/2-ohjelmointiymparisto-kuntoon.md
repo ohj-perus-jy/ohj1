@@ -52,6 +52,15 @@ Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 //-}
 ```
 
+```csharp
+//-public class Lumiukko {
+    public override void Begin()
+    {
+        PhysicsObject pallo = new PhysicsObject(50, 50);
+    }
+//-}
+```
+
 ## Visual Studio Code
 
 Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta]() **TODO: Linkki**
