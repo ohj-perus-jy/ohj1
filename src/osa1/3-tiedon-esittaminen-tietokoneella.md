@@ -1,15 +1,16 @@
 # <span class="part-icon">🔢</span>Tiedon esittäminen tietokoneessa
 
-Tietokoneen muistiin tallennetaan lukuja kaksijärjestelmässä eli ns. _binäärimuodossa_. Tietokoneen muisti koostuu biteistä, jotka voivat olla joko 0 tai 1. 
+Tietokoneen muistiin tallennetaan lukuja kaksijärjestelmässä eli ns. _binäärimuodossa_. Tietokoneen muisti koostuu biteistä, jotka voivat olla joko 0 tai 1. Myös lähdekoodimme teksti ja kaikki tieto on oltava lopulta bittimuodossa, jotta tietokone pystyy käsittelemään sitä.
 
-Myös lähdekoodimme teksti ja kaikki tieto jota tietokone ohjelmamme kautta käsittelee, on lopulta esitetty bitteinä. On hyvä ymmärtää, miten tekstiä, lukuja ja muuta informaatiota esitetään tietokoneessa, jotta voi ymmärtää ohjelmointia ja tietokoneen toimintaa. Informaation tallennus- ja esitystapa kytkeytyy esimerkiksi suorituskykyyn. Myöhemmin opinnoissa tulet törmäämään myös tietoturvaan liittyviin asioihin, joissa tiedon esitystavalla on merkitystä.
+Syy, miksi tietokoneet käyttävät juuri binäärimuotoa piilee tietokoneiden rakenteessa: prosessorit ja muistit on rakennettu kytkimistä, jotka pystyvät luotettavasti erottamaan kaksi tilaa, kuten jännitteisen ja jännitteettömän tilan, jotka voidaan esittää binääriluvuilla 0 ja 1. Vaikka tällainen esitystapa saattaa vaikuttaa yksinkertaiselta tai jopa kömpelöltä, se on erittäin luotettava ja tehokas tapa käsitellä tietoa sähköisissä järjestelmissä.
+
+On hyvä ymmärtää, miten tekstiä, lukuja ja muuta informaatiota esitetään tietokoneessa, jotta voi paremmin hahmottaa ohjelmointia ja tietokoneen toimintaa. Informaation tallennus- ja esitystapa kytkeytyy esimerkiksi ohjelman suorituskykyyn. Myöhemmin opinnoissa tulet törmäämään myös tietoturvaan liittyviin asioihin, joissa tiedon esitystavalla on merkitystä.
 
 ## Kokonaislukujen esittäminen binäärimuodossa
 
-Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 \* 10² + 4 \* 10¹ + 5 \* 10⁰. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo 
-sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
+Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 \* 10² + 4 \* 10¹ + 5 \* 10⁰. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
 
-Vastaavasti idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon potenssina kahdelle: esimerkiksi binääriluku `101` tarkoittaa 1*2² + 0*2¹ + 1*2⁰ = 5 desimaalilukuna. 
+Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa 1*2² + 0*2¹ + 1*2⁰ = 5 kymmenjärjestelmässä. 
 
 Kun luku halutaan tallentaa tietokoneeseen, on ensiksi on sovittava kuinka monta bittiä on käytetään luvun esittämiseen. Käytämme alla olevissa esimerkeissä 8-bittisiä lukuja, jotta luvut pysyvät yksinkertaisina.
 
