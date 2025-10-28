@@ -1,12 +1,8 @@
-# ITKP102 Ohjelmointi 1
-
-## Tietoja opintojaksosta
+# <span class="part-icon">👨🏻‍💻</span> Ohjelmointi 1 (ITKP102, 6 op, Jyväskylän yliopisto)
 
 *Tervetuloa opiskelemaan ohjelmointia!* 😍
 
-Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. 
-
-Opintojaksolla opit
+Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. Opintojaksolla opit
 
 - rakenteisen ohjelmoinnin perusperiaatteita,
 - ratkaisemaan yksinkertaisia ongelmia sopivilla algoritmeilla ja tietorakenteilla,
@@ -14,6 +10,24 @@ Opintojaksolla opit
 
 Et tarvitse aiempaa ohjelmointikokemusta.
 
+Tässä on muutama vinkki tässä materiaalissa navigoimiseen:
+<table>
+<tr>
+<td width="50" align="center"><i class="bi bi-layout-sidebar"></i></td>
+<td>Sisällysluettelo</td>
+<td>Saat sisällysluettelon auki ja kiinni sivupalkki-kuvakkeesta.</td>
+</tr>
+<tr>
+<td width="50" align="center"><i class="bi bi-arrow-left-circle"></i> <i class="bi bi-arrow-right-circle"></i></td>
+<td>Eteen- ja taaksepäin liikkuminen</td>
+<td>Voit selata materiaalia eteen- ja taaksepäin nuolikuvakkeista sivun vasemmassa ja oikeassa laidassa (tai ihan sivun alalaidassa, jos käytät mobiililaitetta).</td>
+</tr>
+<tr>
+<td width="50" align="center"><i class="bi bi-search"></i></td>
+<td>Haku</td>
+<td>Hakutoiminnon saat auki suurennuslasista oikeasta yläreunasta tai painamalla S-kirjainta näppäimistöltä.</td>
+</tr>
+</table>
 
 ## 🫡 Haluatko parannella tätä dokumenttia?
 
