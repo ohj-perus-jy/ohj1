@@ -14,10 +14,34 @@ Riderilla voi tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin.
 
 Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
 
-Jypeli-kirjaston avulla voit luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() **TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä.
+Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() **TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
+
+Tehdään seuraavaksi pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen ympyrä.
+
+> [!HUOMAUTUS]
+> Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut asennettuna; ohjeet löytyvät [Työkalut-sivulta]() **TODO: Linkki**. 
+> Luo uusi Fysiikkapeli-projekti Riderissa ja korvaa `Begin`-metodin sisältö yllä olevalla koodilla. Suorita sitten peli painamalla vihreää "Play"-painiketta ikkunan yläreunassa.
+
+```csharp
+using Jypeli;
+public class YmpyraPeli : PhysicsGame
+{
+    public override void Begin()
+    {
+        GameObject ympyra = new GameObject(50, 50);
+        ympyra.Shape = Shape.Circle; 
+        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
+        Add(ympyra); // Lisätään ympyrä peliin
+    }
+}
+```
+
+Voit käynnistää pelin yllä klikkaamalla oikean yläreunan vihreää "Play"-painiketta. Ikkunaan pitäisi ilmestyä keskelle pieni ympyrä.
+
+Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 
 > [!TODO]
-> Lisää Jypeli-esimerkki
+> Käy läpi esimerkki
 
 ## Visual Studio Code
 
