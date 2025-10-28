@@ -19,6 +19,9 @@ Lähdekoodia voi periaatteessa kirjoittaa millä tahansa *tekstieditorilla*, eli
 
 Lähdekoodi tallennetaan tiedostoon, joka yleensä päättyy `.cs` -tiedostopäätteeseen C#:ssa.
 
+> [!TODO]
+> Pitäisiköhän tässä välissä selittää miten editori avataan, miten tiedosto luodaan ja miten se tallennetaan?
+
 ## Kääntäminen ja ajaminen
 
 Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy *kääntää* ennen kuin tietokone voi suorittaa sen.
