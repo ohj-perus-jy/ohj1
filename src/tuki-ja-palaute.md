@@ -19,9 +19,11 @@ Syksyn 2025 ohjauskauden (1.9.-1.12.) aikana on tarjolla seuraavat tukikanavat:
 
 1. Skrollaa alaspäin, kunnes tulee alaotsikko *Pääteohjaus*
 2. Jos ei vielä näy, niin skrollaa alaspäin, kunnes näkyy *Muiden ryhmien tiedot* ja klikkaa sitä
-3. Nyt voit skrollaamalla alaspäin haluamiesi pääteohjauksien kohdalta klikata nappulaa *Näytä tapahtumat kalenterissa*.
+3. Nyt voit skrollaamalla alaspäin haluamiesi pääteohjauksien kohdalta klikata nappulaa *Näytä tapahtumat kalenterissa*. 
 
    ![Image](images/tapahtumat.jpg)
+
+1. Nyt kyseisen ryhmän ohjausajat näkyvät sinulla automaattisesti. Tarvittaessa voit poistaa ryhmän tapahtumia viikkokohtaisesti Tapahtumakalenterista. 
 
 </details>
 
