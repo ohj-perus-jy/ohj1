@@ -128,9 +128,12 @@ html:not(.js) .page-wrapper,
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    border-radius: 15px;    
 }
+
 table td {
-    padding: 3px 20px;
+    padding: 1em;
+    line-height: 1.45em;
     border: 1px var(--table-border-color) solid;
 }
 table thead {
@@ -141,7 +144,8 @@ table thead td {
     border: none;
 }
 table thead th {
-    padding: 3px 20px;
+    /* TODO Add more contrast to th element text */
+    padding: 1em;
 }
 table thead tr {
     border: 1px var(--table-header-bg) solid;

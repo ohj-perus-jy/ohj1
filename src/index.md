@@ -11,23 +11,10 @@ Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. Opin
 Et tarvitse aiempaa ohjelmointikokemusta.
 
 Tässä on muutama vinkki tässä materiaalissa navigoimiseen:
-<table>
-<tr>
-<td width="50" align="center"><i class="bi bi-layout-sidebar"></i></td>
-<td>Sisällysluettelo</td>
-<td>Saat sisällysluettelon auki ja kiinni sivupalkki-kuvakkeesta.</td>
-</tr>
-<tr>
-<td width="50" align="center"><i class="bi bi-arrow-left-circle"></i> <i class="bi bi-arrow-right-circle"></i></td>
-<td>Eteen- ja taaksepäin liikkuminen</td>
-<td>Voit selata materiaalia eteen- ja taaksepäin nuolikuvakkeista sivun vasemmassa ja oikeassa laidassa (tai ihan sivun alalaidassa, jos käytät mobiililaitetta).</td>
-</tr>
-<tr>
-<td width="50" align="center"><i class="bi bi-search"></i></td>
-<td>Haku</td>
-<td>Hakutoiminnon saat auki suurennuslasista oikeasta yläreunasta tai painamalla S-kirjainta näppäimistöltä.</td>
-</tr>
-</table>
+
+ * Sisällysluettelon saat auki ja kiinni sivupalkki-kuvakkeesta <i class="bi bi-layout-sidebar"></i>.
+ * Voit selata materiaalia eteen- ja taaksepäin nuolikuvakkeista sivun vasemmassa ja oikeassa laidassa (tai ihan sivun alalaidassa, jos käytät mobiililaitetta) <i class="bi bi-arrow-left-circle"></i> <i class="bi bi-arrow-right-circle"></i>.
+ * Hakutoiminnon saat auki suurennuslasista oikeasta yläreunasta tai painamalla S-kirjainta näppäimistöltä <i class="bi bi-search"></i>.
 
 ## 🫡 Haluatko parannella tätä dokumenttia?
 

@@ -1,153 +1,86 @@
 # Suorittaminen
 
-Suoritus arvioidaan asteikolla 1-5. Suorituksen voi saada kahdella tavalla, ja arvosana määräytyy valitun tavan mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
-
-**Tapa 1**: Harjoitustehtävät ja tentti
-
-Tavassa 1 hyväksytty suoritus edellyttää, että
+Suorituksen voi saada kahdella tavalla, ja arvosana määräytyy valitun tavan mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
 
 > [!TODO]
 > Korjaa linkit!
 
-- teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät"),
-- keräät vähintään 27 pistettä harjoitustehtävistä,
-- suoritat [debuggausnäytteen]() hyväksytysti,
-- suoritat [harjoitustyön]() hyväksytysti,
-- osallistut [tenttiin]().
+| Suoritustapa 1 | Suoritustapa 2 |
+| - | - |
+| teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") | teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") |
+| keräät yhteensä vähintään 27 pistettä harjoitustehtävistä | keräät vähintään 5 pistettä **jokaiselta** harjoitustehtäväviikolta |
+| suoritat [debuggausnäytteen]() hyväksytysti | suoritat [debuggausnäytteen]() hyväksytysti |
+| suoritat [harjoitustyön]() hyväksytysti | suoritat [harjoitustyön]() hyväksytysti |
+| osallistut [tenttiin]() | ei tenttiä |
+| Arvosana välillä 1-5 | Arvosana 1 |
 
 Arvosana määräytyy tenttipisteistä, joita voi korottaa harjoitustehtävistä saatavilla [hyvityspisteillä](/view/%%basedir%%/ohjeet/demot#hyvitykset-tenttiin).
 
-**Tapa 2**: Aktiivinen harjoitustehtävien tekeminen ilman tenttiä
+> [!VAROITUS]
+> Suoritustapa 2 ei sovellu välttämättä sinulle, jos tavoitteenasi on hakea opiskelupaikkaa [avoimen väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin) kautta.
+> Tarkista huolellisesti hakukohteesi valintaperusteet.
 
-:::Warning
-Suoritustapa 2 ei sovellu välttämättä sinulle, 
-jos tavoitteenasi on hakea opiskelupaikkaa [avoimen väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin) kautta.
-Tarkista huolellisesti hakukohteesi valintaperusteet.
-:::
+Näet keräämäsi viikkotehtävien pisteet ja muut osasuoritusten edistymiset [Eteneminen]()-sivulla.
 
-Tavassa 2 hyväksytty suoritus edellyttää, että
+Kaikkien suoritusten tekemisessä on noudatettava [akateemista
+rehellisyyttä]().
 
-- teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät"),
-- keräät vähintään 5 pistettä jokaiselta harjoitustehtäväviikolta,
-- suoritat debuggausnäytteen hyväksytysti,
-- suoritat harjoitustyön hyväksytysti.
-
-Suorituksen arvosanaksi tulee tällöin 1.
-
-Näet pisteesi ja vaatimusten edistymistä [Eteneminen](/view/%%basedir%%/eteneminen)-sivulla.
+Mikäli sairauden tai muun hyvän syyn vuoksi et pysty tekemään jotain osasuoritusta, ilmoita siitä heti opettajalle.
 
 ## Harjoitustehtävät
 
-Harjoitustehtävät ovat viikoittaisia tehtäviä, jotka tehdään kotona tai pääteohjauksissa. Harjoitustehtävät ovat erinomainen mahdollisuus oppia asioita omakohtaisesti. 
+Kunkin osan päätteeksi on mainittu siihen osaan liittyvät harjoitustehtävät. Harjoitustehtävien tekemiseen saa apua pääteohjauksissa; ks. ajat etusivulta. Harjoitustehtävät ovat erinomainen mahdollisuus oppia asioita omakohtaisesti. Tehtävät ovat automaattisesti arvosteltuja ellei toisin mainita. 
 
 - `T`- eli *ydintehtävät* sisältävät osaamistavoitteiden kannalta keskeiset asiat,
 - `V`- eli *visuaaliset tehtävät* ovat kertausta ja harjoittelua visualisoinneilla ja simulaattoreilla,
 - `B`- eli *bonustehtävät* ovat lisätehtäviä, jotka vaativat hieman enemmän vaivaa,
 - `G`- eli *gurutehtävät* ovat edistyneitä lisätehtäviä, jotka ylittävät osaamistavoitteet ja saattavat vaatia itsenäistä lisäopiskelua.
 
-*Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen* ellei erikseen
+*Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen*, ellei erikseen
 toisin mainita. Näet maksimipistemäärän aina tehtävän yhteydessä.
 
 *Muista tarkistaa, että viimeisin saamasi pistemäärä on oikein.* 
 Tehtävien vastausten lukumäärää ei ole rajoitettu. Pisteet lasketaan aina
 viimeisimmän tallennuksen tai ajon mukaan.
 
-Tehtävät ovat automaattisesti arvosteltuja ellei toisin mainita. Lue tehtäväkohtaiset ohjeet huolellisesti.
+Tehtävien aikataulurajoitukset ja mallivastauskäytänteet vaihtelevat opiskelijaryhmittäin seuraavasti:
 
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Tutkinto-opiskelijat</th>
+      <th>JY tutkinto-opiskelijat</th>
       <th>Lukiolinjalaiset</th>
       <th>Avoin yliopisto</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <td>Tehtävien deadlinet</td>
+      <td>Tehtävien deadline</td>
       <td>Vastuuopettajan määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
-      <td>Oman opettajasi ilmoittamat. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
+      <td>Oman opettajasi määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
       <td>Ei deadlineja -- vain opiskeluoikeutesi rajoittama.</td>
       </tr>
     <tr>
       <td>Mallivastaukset</td>
-        <td colspan="2">Mallivastaus avataan deadlinen jälkeen.</td>
-        <td>Tehtävän mallivastauksen saa auki käyttämällä Näytä mallivastaus -painiketta. <strong>Mallivastauksen avaaminen lukitsee tehtävän</strong>, eikä avaamisen jälkeen annettuja vastauksia enää lasketa.</td>
+        <td colspan="2">Mallivastaus avataan deadlinen jälkeen. Mallivastauksen saa auki kunkin tehtävän kohdalla Näytä mallivastaus -painikkeella.</td>
+        <td>Tehtävän mallivastauksen saa auki käyttämällä Näytä mallivastaus -painiketta.
+        <br /><br />
+        <strong>Mallivastauksen avaaminen lukitsee tehtävän</strong>, eikä avaamisen jälkeen annettuja vastauksia enää lasketa.        
+        </td>
         </tr>
     </tbody>
 </table>
 
-Vanha teksti: 
+Mallivastauksia voivat katsoa vain opintojaksolle ilmoittautuneet opiskelijat.
 
-```
-{% if demo_deadlines or (False|isview) %}
-Harjoitustehtäviä voi palauttaa ennen niille asetettua takarajaa. Näet jokaisen harjoitustehtäväkerran takarajan opintojakson [etusivulla](/view/%%basedir%%/koti). Takarajan jälkeen tehdyt vastaukset ei lasketa kokonaisetenemiseen.
-{% endif %}
-
-Tehtävistä on tarjolla mallivastauksia TIM-järjestelmässä.
-
-{% if not demo_model_answers.enabled or (False|isview) %}
-Mallivastauksia voivat katsoa vain opintojaksolle ilmoittautuneet
-opiskelijat.
-{% endif %}
-
-{% if demo_model_answers.follows_deadlines or (False|isview) %}
-Mallivastaukset avataan näkyviin harjoitustehtävän palautustakarajan jälkeen.
-Mallivastauksesta löytyy koko koodi sekä mahdollisesti videopätkä, jossa
-opettaja käy mallivastauksen ja vaihtoehtoisia vastauksia läpi.
-
-Huomaa, että ratkaisuun ei yleensä ole olemassa yhtä ainoaa oikeaa vaihtoehtoa.
-On hyödyllistä tutkia useita erilaisia ratkaisuja. 
-**Suosittelemme, että tutustut aina mallivastauksiin.**
-
-{% if instance_type == "tutkinto" or (False|isview) %}
-Opintojaksolla lisäksi järjestetään 
-joka viikko harjoitustehtävien palautustilaisuuksia eli
-*demonstraatioita* (lyhyemmin *demoja*).
-Demoissa tarkoitus on käydä läpi opiskelijoiden 
-tekemiä vastauksia siten, että kuhunkin
-tehtävään valitaan sattumanvaraisesti jonkin 
-opiskelijan vastaus. 
-Demoihin osallistuminen on suositeltavaa, mutta ei pakollista. 
-Demoista tehdään
-tallenteet, jotka voi katsoa jälkikäteen. 
-
-Palautustilaisuuksien aikataulu näkyy opintojakson [etusivulla](/view/%%basedir%%/koti).
-{% endif %}
-{% else %}
-Mallivastaukset ovat katsottavissa suoraan palautuslaatikossa käyttäen 
-*Näytä mallivastaus* -painiketta.
-Huomaa, että mallivastauksen avaaminen lukitsee tehtävän siten, että
-avaamisen jälkeen tehtyjä vastauksia ei lasketa kokonaisetenemiseen.
-{% endif %}
-```
+> [!TODO]
+> Pitäisikö palautustilaisuuksista sanoa tässä kohden jotain?
+> Vanhaa tekstiä...: Demoihin osallistuminen on suositeltavaa, mutta ei pakollista. 
+> Demoista tehdään tallenteet, jotka voi katsoa jälkikäteen. 
+> Palautustilaisuuksien aikataulu näkyy opintojakson [etusivulla]().
 
 Ohjelmatehtävät tehdään Riderissa tai suoraan TIMissä. Heti kun Rideria opitaan käyttämään, kannattaa ohjelmatehtävät pääsääntöisesti tehdä ko. työkalulla. Tehtävien vastaukset palautetaan aina TIM-järjestelmään.
-
-## Tehtävistä ja pisteistä {id="fbako59tqTQG"}
-
-
-
-
-## Pakollisuus {id="COxDtSiZfx3N"}
-
-#- {id="CojJiIEd1TmD"}
-Kaikille yhteiset vaatimukset suoritusmerkinnän saamiseksi ovat:
-
-- Kaikki tähtimerkillä (`*`) merkityt tehtävät (eli ns. *tähtitehtävät*) on tehtävä ja palautettava TIMiin.
-
-Lisäksi seuraavat vaatimukset riippuvat tavoiteletusta [suoritustavasta](/view/%%basedir%%/koti#suorittaminen-ja-arviointi)
-seuraavasti:
-
-- **Suoritustapa 1**: Kaikista harjoitustehtävistä täytyy kerätä yhteensä vähintään %%(demo_min_percentage/100*demo_expected_mean_points*demos_count)|round(0, 'ceil')%% pistettä.
-- **Suoritustapa 2**: Jokaisesta harjoitustehtäväkerrasta tulee kerätä vähintään %%demo_completion_threshold%% pistettä.
-
-Näet kummankin suoritustavan vaatimusten täyttymistä [Eteneminen-sivulla](/view/%%basedir%%/eteneminen).
-
-Mikäli sairauden tai muun hyvän syyn vuoksi et pysty tekemään jollakin kerralla pakollisia tehtäviä, ilmoita siitä heti opettajalle.
-
-#- {id="35qQnrhMo6Fs"}
 
 ## Hyvitykset tenttiin {id="4TdyTQIm9Cap"}
 
@@ -166,11 +99,8 @@ kerättyä lisätehtävillä enemmänkin pisteitä, hyväksiluetaan siitä vain 
 Hyvityspisteet lasketaan suoraan tenttipisteisiin ennen tenttiarvosanan laskemista.
 Hyvityspisteet pätevät kaikkiin opintojakson tenttikertoihin.
 
-#- {area="hyvitys-lisainfo" collapse="true" id="9kUEUl0D3DQL"}
+<details closed><summary>Lisätietoja hyvityspisterajoista kiinnostuneille</summary>
 
-*Lisätietoja hyvityspisterajoista kiinnostuneille*
-
-#- {id="r6gzz60xhpnv"}
 Hyvityspisteiden laskennassa harjoitustehtäväkerroista tehdään seuraavat oletukset:
 
 - Harjoitustehtäväkertoja ($N_{\text{d}}$) on yhteensä $%%demos_count%%$
@@ -195,9 +125,9 @@ $$\left\lceil \dfrac{ %%demo_min_percentage - (100-demo_min_percentage)/max_demo
 
 Yllä oleva taulukko lasketaan tämän kaavan avulla.
 
-#- {area_end="hyvitys-lisainfo" id="kD93swK5CGvv"}
+</details>
 
-## Tehtävien muutos- ja päivityskäytänteet {id="fRXVmIZpjDp0"}
+## Tehtävien muutos- ja päivityskäytänteet
 
 Opintojaksolla ei ole erillisiä "vuosiversioita", vaan samat materiaalit ovat käytettävissä kaikissa toteutuksissa.
 Opintojakson materiaaleja ja harjoitustehtäviä päivitetään 1–2 kertaa
@@ -211,7 +141,6 @@ Muutoksista huolimatta kaikki jo kerätyt harjoitustehtäväpisteet pysyvät voi
 opintojakson suorittamista voi jatkaa normaalisti päivityksistä välittämättä. Myös
 opintojakson suoritusehdot pysyvät samoina muutoksista riippumatta.
 
-## Akateeminen rehellisyys {id="pvS7erMCfCBv"}
+## Akateeminen rehellisyys
 
-Kaikkien suoritusten tekemisessä on noudatettava [akateemista
-rehellisyyttä](/view/%%basedir%%/ohjeet/akateeminen-rehellisyys).
+Tänne juttua.
