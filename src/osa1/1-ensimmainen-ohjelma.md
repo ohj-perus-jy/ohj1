@@ -37,7 +37,7 @@ Ohjelma on käännettävä aina koodin muuttamisen jälkeen, jotta muutokset tul
 
 Sovelluskehittimessä (esim. Rider) kääntäminen tapahtuu klikkaamalla *Run* tai *Debug*. Noiden painikkeiden painamiseurauksena tapahtuu sekä kääntäminen että ajaminen. 
 
-> [!LISÄTIETOA]
+> [!LISÄTIETO]
 > Osa ohjelmointikielistä on käännettäviä, kuten C#, Java ja C++, kun taas osa on *tulkattavia*, kuten Python ja JavaScript. Tulkatuissa kielissä lähdekoodia suoritetaan ilman erillistä käännösvaihetta. Käännetyt kielet ovat olleet perinteisesti nopeampia, mutta nykyaikaiset tulkit ovat hyvin optimoituja, joten ero on kaventunut. Käytännön sovelluksissa valinta käännetyn ja tulkatun kielen välillä voi toki erityisissä tilanteissa (kuten aikakriittiset tai resurssirajoitteiset sovellukset) riippua suorituskyvystä, mutta usein valinta riippuu myös muista tekijöistä, kuten ekosysteemistä (esimerkiksi saatavilla olevat kirjastot) ja kehittäjäyhteisöstä. 
 
 ## Käännösvirheet
