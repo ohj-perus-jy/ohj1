@@ -10,20 +10,30 @@ Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. Opin
 
 Et tarvitse aiempaa ohjelmointikokemusta.
 
-Tässä on muutama vinkki tässä materiaalissa navigoimiseen:
+## Miten aloitan?
+
+Ennen kuin aloitat opintojakson suorittamisen, 
+
+ * tutustu opintojakson suorittamisen periaatteisiin (ks. [Suorittaminen](suorittaminen.md)),
+ * suosittelemme lämpimästi, että asennat valmiiksi tarvittavat ohjelmistot ja työkalut (ks. [Työkalut](tyokalut/tyokalut.md)). Voit kuitenkin selailla materiaalia jo ennen työkalujen asentamista,
+ * pyydämme, että käyt vastaamassa [alkukyselyyn]().
+
+## Navigointi tässä materiaalissa
+
+Tässä muutama pikavinkki tässä materiaalissa navigoimiseen:
 
  * Sisällysluettelon saat auki ja kiinni sivupalkki-kuvakkeesta <i class="bi bi-layout-sidebar"></i>.
  * Voit selata materiaalia eteen- ja taaksepäin nuolikuvakkeista sivun vasemmassa ja oikeassa laidassa (tai ihan sivun alalaidassa, jos käytät mobiililaitetta) <i class="bi bi-arrow-left-circle"></i> <i class="bi bi-arrow-right-circle"></i>.
  * Hakutoiminnon saat auki suurennuslasista oikeasta yläreunasta tai painamalla S-kirjainta näppäimistöltä <i class="bi bi-search"></i>.
 
-## 🫡 Haluatko parannella tätä dokumenttia?
+## Haluatko ehdottaa parannuksia tähän materiaaliin?
 
-Jos löydät tästä dokumentista virheitä tai haluat antaa parannusehdotuksen, toimi seuraavasti:
+Jos löydät virheitä tai haluat antaa parannusehdotuksen, voit tehdä korjausehdotuksen GitHubin kautta seuraavasti:
 
-  1. Kirjaudu GitLabiin ja toimi seuraavasti: 
-  2. Klikkaa tässä tiedostossa Edit -> Edit Single File -> Fork, tee haluamasi muutokset, lisää alle commit-teksti -> Commit changes. 
-  3. Create merge request. 
-   
-Vaihtoehtoisesti voit [🔗 tehdä ns. issuen tähän repoon](https://gitlab.jyu.fi/tie/ohj1/2025k/yhteenveto/-/issues/new?issuable_template=kertaus).
+  1. Kirjaudu GitHubiin (käyttäjätunnus vaaditaan),
+  2. Klikkaa sivun alareunassa olevaa "Ehdota parannusta materiaaliin"-linkkiä, joka vie sinut tämän materiaalin lähdekoodiin,
+  3. Tee haluamasi muutokset GitHubissa, ja tallenna ne.
+  4. Esittämäsi muutos ehdotetaan tarkistettavaksi materiaalin ylläpitäjille, jotka hyväksyvät tai hylkäävät ehdotuksesi.
 
-Mutta -- lähdetäänpä sitte liikkeelle varsinaiseen asiaan!
+Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa <ohj1-opet@tim.jyu.fi>. Otamme mielellämme vastaan parannusehdotuksia! 
+
