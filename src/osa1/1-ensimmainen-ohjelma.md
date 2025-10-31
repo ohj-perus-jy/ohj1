@@ -24,14 +24,17 @@ Lähdekoodi tallennetaan tiedostoon, joka C#-kielen tapauksessa päättyy yleens
 
 ## Kääntäminen ja ajaminen
 
-Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy muuntaa sellaiseen muotoon, että tietokone voi suorittaa sen. C#-kielen kohdalla tätä muodonmuutosta kutsutaan *kääntämiseksi* (engl. *compilation*), ja useiden vaiheiden seurauksena syntyy niin sanottu konekielinen ohjelma, joka voidaan käynnistää tietokoneella. Kääntäminen tapahtuu *kääntäjällä* (engl. *compiler*), joka on erityinen ohjelma, joka lukee lähdekoodin ja tuottaa siitä suoritettavan ohjelman.
+Kun ohjelmoija on kirjoittanut lähdekoodin, se täytyy muuntaa sellaiseen muotoon, että tietokone voi suorittaa sen. C#-kielen kohdalla tätä muodonmuutosta kutsutaan *kääntämiseksi* (engl. *compilation*), ja useiden vaiheiden seurauksena syntyy niin sanottu konekielinen ohjelma, joka voidaan käynnistää tietokoneella. Kääntäminen tapahtuu *kääntäjällä* (engl. *compiler*), joka on erityinen ohjelma, joka lukee lähdekoodin ja tuottaa siitä suoritettavan ohjelman. 
 
-Tämä käännetty ohjelma voidaan sitten *ajaa* (engl. *run*), eli käynnistää tietokoneella. Tämä kääntäminen-ajo-prosessi voidaan tehdä komentoriviltä seuraavasti. Alla on kaksi komentoa, jotka syötetään komentoriville siinä kansiossa, missä projekti on tehty. 
+Tämä käännetty ohjelma voidaan sitten *ajaa* (engl. *run*), eli käynnistää tietokoneella. C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö, joka sisältää tarvittavat työkalut -- asennusohjeen löydät [Työkalut](../tyokalut/tyokalut.md)-kohdasta. .NET-ympäristön asentamisen jälkeen kääntäminen-ajaminen&ndash;prosessi voidaan tehdä komentoriviltä seuraavasti. Alla on kaksi komentoa, jotka syötetään komentoriville siinä kansiossa, missä projekti on tehty. 
 
 ```bash
 dotnet build
 dotnet run
 ```
+
+> [!TODO]
+> Selitetäänkö .NET-projektin luominen tässä? 
 
 Ohjelma on käännettävä aina koodin muuttamisen jälkeen, jotta muutokset tulevat voimaan.
 
