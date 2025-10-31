@@ -2,11 +2,11 @@
 
 [Aloitus](./index.md)
 [Suorittaminen](./suorittaminen.md)
+[Työkalut ja asentaminen](./tyokalut/tyokalut.md)
+[Tuki ja palaute](./tuki-ja-palaute.md)
 [Harjoitustyö](./harjoitustyo.md)
 [Debuggausnäyte](./debuggausnayte.md)
-[Työkalut ja asentaminen](./tyokalut/tyokalut.md)
 [Tentti](./tentti.md)
-[Tuki ja palaute](./tuki-ja-palaute.md)
 
 ---
 
