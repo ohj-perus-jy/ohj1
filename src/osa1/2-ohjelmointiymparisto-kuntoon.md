@@ -22,7 +22,7 @@ Tehdään seuraavaksi pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretä�
 > Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut asennettuna; ohjeet löytyvät [Työkalut-sivulta]() **TODO: Linkki**. 
 > Luo uusi Fysiikkapeli-projekti Riderissa ja korvaa `Begin`-metodin sisältö yllä olevalla koodilla. Suorita sitten peli painamalla vihreää "Play"-painiketta ikkunan yläreunassa.
 
-```csharp
+```csharp,feature-jypeli
 using Jypeli;
 public class YmpyraPeli : PhysicsGame
 {
@@ -43,8 +43,9 @@ Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 > [!TODO]
 > Käy läpi esimerkki
 
-```csharp
-//-public class Lumiukko {
+```csharp,feature-jypeli
+//-using Jypeli;
+//-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
         PhysicsObject pallo = new PhysicsObject(50, 50);
@@ -52,8 +53,9 @@ Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 //-}
 ```
 
-```csharp
-//-public class Lumiukko {
+```csharp,feature-jypeli
+//-using Jypeli;
+//-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
         PhysicsObject pallo = new PhysicsObject(50, 50);
@@ -61,8 +63,9 @@ Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 //-}
 ```
 
-```csharp
-//-public class Lumiukko {
+```csharp,feature-jypeli
+//-using Jypeli;
+//-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
         PhysicsObject pallo = new PhysicsObject(50, 50);

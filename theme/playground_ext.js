@@ -1,5 +1,6 @@
 (function codeSnippets() {
     const PLAYGROUND_LANG = "csharp";
+    const DATA_URI_PATTERN = /@@@DATA_URI_BEGIN@@@(.+)@@@DATA_URI_END@@@/g;
 
     function get_playgrounds() {
         return Array.from(document.querySelectorAll(`pre:has(> .language-${PLAYGROUND_LANG}:not(.noplayground))`));
@@ -22,13 +23,22 @@
 
             code_block.append(result_block);
         }
+        code_block.querySelectorAll('.result-image').forEach(img => img.remove());
 
         const text = playground_text(code_block);
 
-        console.log(text);
+        let code_area = code_block.querySelector(`.language-${PLAYGROUND_LANG}`);
+        
+        let language = PLAYGROUND_LANG;
+
+        for (const cls of code_area.classList) {
+            if (cls.startsWith('feature-')) {
+                language += `-${cls.substring('feature-'.length)}`;
+            }
+        }
 
         const params = {
-            language: "csharp",
+            language: language,
             code: text,
         };
 
@@ -45,6 +55,21 @@
             .then(response => response.json())
             .then(response => {
                 let result = response.errors || response.output || '';
+
+                const dataUris = result.match(DATA_URI_PATTERN);
+                if (dataUris) {
+                    dataUris.forEach(dataUri => {
+                        const uriContent = dataUri
+                            .replace('@@@DATA_URI_BEGIN@@@', '')
+                            .replace('@@@DATA_URI_END@@@', '');
+                        const img = document.createElement('img');
+                        img.src = uriContent;
+                        img.className = 'result-image';
+                        result_block.parentElement.appendChild(img);
+                        result = result.replace(dataUri, '');
+                    });
+                }
+
                 if (result.trim() === '') {
                     result_block.innerText = 'No output';
                     result_block.classList.add('result-no-output');
