@@ -8,15 +8,15 @@ On hyvä ymmärtää, miten tekstiä, lukuja ja muuta informaatiota esitetään 
 
 ## Kokonaislukujen esittäminen binäärimuodossa
 
-Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 \* 10² + 4 \* 10¹ + 5 \* 10⁰. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
+Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa $3 \cdot 10^2 + 4 \cdot 10^1 + 5 \cdot 10^0$. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
 
-Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa 1*2² + 0*2¹ + 1*2⁰ = 5 kymmenjärjestelmässä. 
+Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa $1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 5$ kymmenjärjestelmässä. 
 
 Kun luku halutaan tallentaa tietokoneeseen, on ensiksi on sovittava kuinka monta bittiä on käytetään luvun esittämiseen. Käytämme alla olevissa esimerkeissä 8-bittisiä lukuja, jotta luvut pysyvät yksinkertaisina.
 
 Esimerkiksi luku 7 on 8-bittisessä binäärimuodossa `00000111`, koska
 
-```7 = 0*2^7 + 0*2^6 + 0*2^5 + 0*2^4 + 0*2^3 + 1*2^2 + 1*2^1 + 1*2^0```
+$7 = 0 \cdot 2^7 + 0 \cdot 2^6 + 0 \cdot 2^5 + 0 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0$
 
 Negatiivisten lukujen esittämiseen käytetään yleisesti nk. **kahden komplementin** menetelmää. Kahden komplementin menetelmässä negatiivinen luku saadaan kääntämällä ensin luvun kaikki bitit (0 -> 1 ja 1 -> 0) ja lisäämällä sitten tulokseen 1.
 
