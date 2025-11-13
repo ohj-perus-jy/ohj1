@@ -1,0 +1,15 @@
+# Tehtävän tyyppi
+# Vastaa TIMin pluginin tyyppiä.
+# Sallitut arvot ovat TIMin plugin-typit sekä seuraavat aliakset:
+#   - code = csPlugin
+#   - quiz = qst
+exerciseType: code
+type: csharp           # csPluginin oma asetus
+title: "Määrittele muuttujat"  # csPluginin oma asetus
+# Kuinka monta pistettä tehtävästä saa
+# Tämä sallii kahdenlaista arvoa:
+#   - Luku => silloin kaikkien testien pitää mennä läpi, jotta saa pisteet
+#   - Olio, jolla voi määrittää osapisteitä
+points: 1
+# Näytetäänkö "Näytä koko koodi" -painikkeella piilotettu koodi oletuksella
+viewCollapsedCode: true

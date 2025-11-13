@@ -1,3 +1,0 @@
-Tee alla olevaan koodiin `x`- ja `y`-muuttujat ja sijoita niille arvot niin, että ohjelma tulostaa luvun 1. 
-
-Kysymyksessä on vain yksi vastausyritys!
