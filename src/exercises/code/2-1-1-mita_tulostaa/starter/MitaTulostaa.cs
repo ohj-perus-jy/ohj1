@@ -1,4 +1,3 @@
-```csharp
 public class MitaTulostaa
 {
     public static void Main()
@@ -9,4 +8,3 @@ public class MitaTulostaa
         System.Console.WriteLine(tulos);
     }
 }
-```
