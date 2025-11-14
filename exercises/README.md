@@ -25,6 +25,10 @@ Muuttujat ja niiden selitykset
 - `<order>`: Tehtävän suhteellinen järjestys alaosan sisällä
 - `<task_id>`: Uniikki tehtävän tunnus
 
+Esimerkiksi `5-1-1-positiiviset_ja_negatiiviset`.
+
+`<task_id>` ei saa sisältää välilyöntejä eikä muita erikoismerkkejä. 
+
 ## Tehtävän rakenteen määrittely: `exercise-details.yml`
 
 Jokaisessa tehtävässä on oltava `exercise-details.yml` -tiedosto.
