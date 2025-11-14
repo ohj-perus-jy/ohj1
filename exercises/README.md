@@ -35,9 +35,7 @@ Alla esimerkki tiedostosta ja kaikista tuetuista attribuuteista:
 
 ```yml
 # PAKOLLINEN
-# Tehtävän tyyppi
-# Vastaa TIMin pluginin tyyppiä.
-# Sallitut arvot ovat TIMin plugintypit sekä seuraavat aliakset:
+# Tehtävän tyyppi. Sallitut arvot ovat TIMin plugintyypit sekä seuraavat aliakset: 
 #   - code = csPlugin
 #   - quiz = qst
 exerciseType: code
@@ -58,6 +56,7 @@ title: "Määrittele muuttujat"
 points: 1
 
 # Miten tehtävä arvostellaan ja miten pisteitä lasketaan
+# Jos ei ole annettu, käytetään alla olevia oletusarvoja
 grading:
   # Voiko opiskelija asettaa ja muokata pisteet itse
   selfGrading: false
@@ -65,6 +64,13 @@ grading:
   # Jos true, tehtävän tulosteesta etsitään pisteet regexilla "RANDOMCHECK: (.*)\n"
   # Ohjelmasta saatu pistemäärä skaalataan automaattisesti points-kentässä olevaan pistemäärään
   readFromProgram: false
+  # Kuinka monta pistettä annetaan, jos opiskelijan ohjelman ajon tuloste täsmää
+  # test/expected_output.txt -dokumentin sisällön kanssa
+  # Sallitut arvot
+  #   - Mikä tahansa luku - annetaan luvun verran pisteitä
+  #   - 'auto' - 1 jos expected_output.txt -tiedosto on olemassa, muutoin 0
+  expectedOutput: auto
+
 
 # Näytetäänkö "Näytä koko koodi" -painikkeella piilotettu koodi aina
 viewCollapsedCode: false
