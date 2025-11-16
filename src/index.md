@@ -37,3 +37,12 @@ Jos löydät virheitä tai haluat antaa parannusehdotuksen, voit tehdä korjause
 
 Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa <ohj1-opet@tim.jyu.fi>. Otamme mielellämme vastaan parannusehdotuksia! 
 
+<task>
+  <task-title>Perustehtävä: Mitä tulostuu? <points>1 p.</points> </task-title>
+  <handout>
+
+  {{#include exercises/5-1-2-summaa_yli/handout.md}}
+
+  </handout>
+
+</task>
