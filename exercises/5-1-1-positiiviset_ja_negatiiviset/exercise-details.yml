@@ -1,0 +1,10 @@
+exercise_type: code
+
+type: csharp
+
+title: "Positiiviset ja negatiiviset"
+
+points: 1
+
+grading:
+  read_from_program: true

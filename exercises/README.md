@@ -38,46 +38,55 @@ Alla esimerkki tiedostosta ja kaikista tuetuista attribuuteista:
 **Koodaustehtävä**
 
 ```yml
-# PAKOLLINEN
-# Tehtävän tyyppi. Sallitut arvot ovat TIMin plugintyypit sekä seuraavat aliakset: 
-#   - code = csPlugin
-#   - quiz = qst
-exerciseType: code
+# Pakollinen kenttä: Tehtävän tyyppi. Skeeman mukaan tämän on oltava "code".
+exercise_type: code
 
-# PAKOLLINEN
-# Koodaustehtävän tarkistin
-# Sallitut arvot ovat samat kuin csPluginin type-asetus
-# Yleisimpiä arvoja:
-#   - csharp - C# konsolitehtävä
-#   - java   - Java konsolitehtävä
-#   - jypeli - C# Jypeli-tehtävä
-type: csharp
+# Pakollinen kenttä: Tehtävän nimi.
+# Tämä on nimi, joka näytetään opiskelijoille.
+title: "Hei Maailma -esimerkki"
 
-# Tehtävän nimi, jota näytetään opiskelijoille
-title: "Määrittele muuttujat" 
-
-# Kuinka monta pistettä tehtävästä voi saada
+# Pakollinen kenttä: Tehtävän maksimipisteet.
 points: 1
 
-# Miten tehtävä arvostellaan ja miten pisteitä lasketaan
-# Jos ei ole annettu, käytetään alla olevia oletusarvoja
+# Pakollinen kenttä: Koodaustehtävän tarkistin.
+# Tämä määrittelee käytetyn ohjelmointikielen ja ajoympäristön.
+# Yleisiä arvoja: "csharp", "java", "jypeli", "python"
+type: csharp
+
+# Vapaaehtoinen kenttä: Arviointiasetukset.
+# Määrittelee, miten tehtävästä saa pisteitä.
 grading:
-  # Voiko opiskelija asettaa ja muokata pisteet itse
-  selfGrading: false
-  # Luetaanko pisteet ohjelman tulosteesta
-  # Jos true, tehtävän tulosteesta etsitään pisteet regexilla "RANDOMCHECK: (.*)\n"
-  # Ohjelmasta saatu pistemäärä skaalataan automaattisesti points-kentässä olevaan pistemäärään
-  readFromProgram: false
-  # Kuinka monta pistettä annetaan, jos opiskelijan ohjelman ajon tuloste täsmää
-  # test/expected_output.txt -dokumentin sisällön kanssa
-  # Sallitut arvot
-  #   - Mikä tahansa luku - annetaan luvun verran pisteitä
-  #   - 'auto' - 1 jos expected_output.txt -tiedosto on olemassa, muutoin 0
-  expectedOutput: auto
+  # Vapaaehtoinen kenttä: Pisteet odotetusta tulosteesta.
+  # Kuinka monta pistettä annetaan, jos ohjelman tuloste vastaa
+  # test/expected_output.txt -tiedostoa.
+  # "auto" tarkoittaa 1 pistettä, jos tiedosto on olemassa, muuten 0.
+  # Voi olla myös kiinteä luku (esim. 0.5).
+  expected_output: auto
 
+  # Vapaaehtoinen kenttä: Pisteet ohjelman tulosteesta.
+  # Jos true, pisteet yritetään lukea ohjelman tulosteesta (etsitään "RANDOMCHECK: ...").
+  # Oletusarvo on false.
+  read_from_program: false
 
-# Näytetäänkö "Näytä koko koodi" -painikkeella piilotettu koodi aina
-viewCollapsedCode: false
+  # Vapaaehtoinen kenttä: Itsearviointi.
+  # Jos true, opiskelija voi asettaa pisteet itse.
+  # Oletusarvo on false.
+  self_grading: false
+
+  # Vapaaehtoinen kenttä: Yksikkötestit.
+  # Voi olla kiinteä pistemäärä (esim. 1.0) tai asetusobjekti.
+  unit_test:
+    # Kuinka monta pistettä yksikkötesteistä voi saada.
+    points: 1.5
+    # Kuka testit määrittelee.
+    # "teacher": Opettajan määrittelemät testit ("Aja opettajan testit").
+    # "student": Opiskelijan määrittelemät testit ("Aja omat testit").
+    source: teacher
+
+# Vapaaehtoinen kenttä: Näytetäänkö koodi tiivistettynä.
+# Jos true, "Näytä koko koodi" -painikkeella piilotettu koodi näytetään aina.
+# Oletusarvo on false.
+view_collapsed_code: true
 ```
 
 **Monivalintatehtäväsarja**
@@ -125,3 +134,11 @@ Hyödyllisiä huomioita:
 
   Tämän avulla testaajakoodi voi määrittää oman Main-aliohjelman, jota voidaan ajaa.
 
+## Testit ja arviointi
+
+`test`-kansioon voi lisätä koodin testaamiseen ja arviointiin liittyviä tiedostoja.
+
+Tällä hetkellä tuetut tiedostot ja kansiot:
+
+- `expected_output.txt` - Ohjelman odotettu tuloste
+- `run` - Kansio, jonka sisällä olevat kooditiedostot liitetään osaksi alkukoodia. Hyödyllinen `grading.read_from_program` -asetuksen kanssa.
