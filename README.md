@@ -16,6 +16,24 @@ mdbook serve --hostname 0.0.0.0 --port 3000 --open
 - [mdBook-ohjeet](https://rust-lang.github.io/mdBook/index.html)
 
 
+## Pikaohje kirjoittamiseen
+
+#### Tehtävälohko
+
+````md
+<task>
+  <task-title>Tehtävä T1*: Tulostaminen <points>1 p.</points> </task-title>
+  <handout>
+
+  {{#include ../exercises/1-1-1-tulostaminen/handout.md}}
+
+  </handout>
+  <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_tulostaminen_header">Tee tehtävä TIMissa</a></task-link>
+</task>
+````
+
+
+
 ## License
 
 Ohjelmointi 1 oppimateriaali © 2025 by Denis Zhidkikh, Sami Sarsa, Antti-Jussi Lakanen is licensed under

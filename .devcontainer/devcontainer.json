@@ -32,7 +32,6 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"redhat.vscode-yaml",
 				"yzhang.markdown-all-in-one"
 			]
 		}

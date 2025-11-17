@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "exercises/exercise-details.schema.json": ["exercises/**/exercise-details.yml"]
-    }
-}

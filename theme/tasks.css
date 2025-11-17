@@ -26,6 +26,26 @@ task-title > points {
     text-wrap: nowrap;
 }
 
+task > task-link {
+    display: flex;
+    padding-inline: 16px;
+    padding-block-end: 16px;
+}
+
+task > task-link > a {
+    padding: 12px 24px;
+    background-color: var(--icons);
+    font-family: "Aleo", "Lato", "Open Sans", sans-serif;
+    color: var(--icons-text) !important;
+    text-decoration: none !important;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+task > task-link > a:hover {
+    background-color: var(--icons-hover) !important;
+    color: var(--icons-text-hover) !important;
+}
+
 task > task-title::before {
     content: "";
     display: inline-block;

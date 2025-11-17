@@ -294,6 +294,8 @@
 
     --icons: #002957;
     --icons-hover: #00295777;
+    --icons-text: var(--bg);
+    --icons-text-hover: var(--fg);
 
     --links: #20609f;
 
@@ -348,6 +350,8 @@
     /* --icons: #737480; */
     --icons: #c29a5baa;
     --icons-hover: rgb(178.5,190.8,204.6, 0.77);
+    --icons-text: var(--bg);
+    --icons-text-hover: var(--bg);
 
     --links: #36a;
 

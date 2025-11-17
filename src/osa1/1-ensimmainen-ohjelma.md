@@ -52,4 +52,22 @@ Ohjelma ei käänny, jos se sisältää käännöksen estäviä virheitä, kuten
 
 ## 📝 Tehtävät
 
-[Tee TIMissä tehtävät 1 ja 2.]
+<task>
+  <task-title>Tehtävä T1*: Tulostaminen <points>1 p.</points> </task-title>
+  <handout>
+
+  {{#include ../exercises/1-1-1-tulostaminen/handout.md}}
+
+  </handout>
+  <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_tulostaminen_header">Tee tehtävä TIMissa</a></task-link>
+</task>
+
+<task>
+  <task-title>Tehtävä T2*: Ensimmäinen oma ohjelma <points>1 p.</points> </task-title>
+  <handout>
+
+  {{#include ../exercises/1-1-2-oma_ohjelma/handout.md}}
+
+  </handout>
+  <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_oma_ohjelma_header">Tee tehtävä TIMissa</a></task-link>
+</task>
