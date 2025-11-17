@@ -9,12 +9,19 @@
 
 ## Kehittäminen
 
+
 ```bash
+bash ./start.sh
+```
+
+tai
+
+```bash
+bash ./update-mdbook.sh
 mdbook serve --hostname 0.0.0.0 --port 3000 --open
 ```
 
 - [mdBook-ohjeet](https://rust-lang.github.io/mdBook/index.html)
-
 
 ## Pikaohje kirjoittamiseen
 
@@ -32,7 +39,21 @@ mdbook serve --hostname 0.0.0.0 --port 3000 --open
 </task>
 ````
 
+### Koodin korostukset
 
+Käytä merkintöjä `// HIGHLIGHT_COLOR_BEGIN` ja `// HIGHLIGHT_COLOR_END`, jossa COLOR on jokin seuraavista: `GREEN`, `YELLOW`, `RED`, `BLUE`.
+
+````
+```csharp
+void Lumiukko()
+{
+    PhysicsObject pallo = new PhysicsObject(10, 10);
+    // HIGHLIGHT_GREEN_BEGIN
+    Add(pallo);
+    // HIGHLIGHT_GREEN_END
+}
+```
+```` 
 
 ## License
 
