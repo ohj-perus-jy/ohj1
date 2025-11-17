@@ -11,6 +11,7 @@ additional-css = [
   "highlight/apprentice.css",
   "theme/alerts-style.css",
   "theme/accordion.css",
+  "theme/tasks.css",
 ]
 default-theme = "jyu-light"
 preferred-dark-theme = "jyu-dark"

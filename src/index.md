@@ -36,4 +36,3 @@ Jos löydät virheitä tai haluat antaa parannusehdotuksen, voit tehdä korjause
   4. Esittämäsi muutos ehdotetaan tarkistettavaksi materiaalin ylläpitäjille, jotka hyväksyvät tai hylkäävät ehdotuksesi.
 
 Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa <ohj1-opet@tim.jyu.fi>. Otamme mielellämme vastaan parannusehdotuksia! 
-
