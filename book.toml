@@ -20,7 +20,9 @@ additional-js = [
   "mermaid/mermaid-init.js",
   "theme/playground_ext.js",
   "theme/accordion.js",
-] 
+  "theme/codeblock-tabs.js",
+  "theme/code-highlights.js",
+]
 site-url = "/ohj1-mdbook-demo/"
 
 [output.html.playground]
@@ -34,6 +36,8 @@ csharp = "//-"
 [preprocessor.mermaid]
 
 [preprocessor.katex]
+
+[preprocessor.codeblock-tabs]
 
 [preprocessor.accordion]
 command = "python3 ./preprocessors/accordion.py"
