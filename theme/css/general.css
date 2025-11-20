@@ -52,8 +52,8 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 .hide-boring .boring { display: none; }
 .hidden { display: none !important; }
 
-h2, h3 { margin-block-start: 2.5em; }
-h4, h5 { margin-block-start: 2em; }
+h2, h3 { margin-block-start: 2em; }
+h4, h5 { margin-block-start: 1.5em; }
 
 .header + .header h3,
 .header + .header h4,
@@ -126,14 +126,11 @@ html:not(.js) .page-wrapper,
 }
 
 table {
-    margin: 0 auto 12pt auto;
+    margin: auto auto 1.5em auto;
     border-collapse: collapse;
-    border-radius: 15px;    
 }
-
 table td {
-    padding: 1em;
-    line-height: 1.45em;
+    padding: 3px 20px;
     border: 1px var(--table-border-color) solid;
 }
 table thead {
@@ -144,8 +141,7 @@ table thead td {
     border: none;
 }
 table thead th {
-    /* TODO Add more contrast to th element text */
-    padding: 1em;
+    padding: 3px 20px;
 }
 table thead tr {
     border: 1px var(--table-header-bg) solid;
@@ -182,16 +178,6 @@ blockquote {
     color: var(--warning-border);
     font-weight: bold;
     font-size: 2rem;
-}
-
-.ext::after {
-    display: inline-block;
-    width: 1em; height: 1em;
-    margin-inline-start: 0.2em;
-    background-color: currentColor;
-    -webkit-mask: url('../images/ext-link.svg') no-repeat center / contain;
-    mask: url('../images/ext-link.svg') no-repeat center / contain;
-    content: "";
 }
 
 blockquote .warning:before {
