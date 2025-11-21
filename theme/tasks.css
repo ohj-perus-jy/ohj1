@@ -1,5 +1,5 @@
 task {
-    --main-color: var(--icons);
+    --main-color: var(--task-bg);
 
     display: flex;
     flex-direction: column;
@@ -34,16 +34,16 @@ task > task-link {
 
 task > task-link > a {
     padding: 12px 24px;
-    background-color: var(--icons);
+    background-color: var(--task-bg);
     font-family: "Aleo", "Lato", "Open Sans", sans-serif;
-    color: var(--icons-text) !important;
+    color: var(--task-fg) !important;
     text-decoration: none !important;
     transition: background-color 0.2s, color 0.2s;
 }
 
 task > task-link > a:hover {
-    background-color: var(--icons-hover) !important;
-    color: var(--icons-text-hover) !important;
+    background-color: var(--task-bg-hover) !important;
+    /* color: var(--icons-text-hover) !important; */
 }
 
 task > task-title::before {
