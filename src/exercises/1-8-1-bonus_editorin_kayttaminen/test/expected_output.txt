@@ -30,10 +30,10 @@
 ```
 
 ## Aikataulu
-1. a
-2. b
-3. c
-4. d
-5. e
-6. f
-7. g
+1. Piirrä kuva
+2. Kirjoita suunnitelma
+3. Luo Jypeli-projekti
+4. Luo pelilauta
+5. Ohjelmoi hahmot
+6. Käy läpi tarkistettavat osa-alueet
+7. Näytä valmis työ ohjaajalle
