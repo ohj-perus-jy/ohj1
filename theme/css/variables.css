@@ -338,10 +338,6 @@
     --overlay-bg: rgba(200, 200, 205, 0.4);
 
     --code-bg: #f1efee;
-
-    --task-bg: #002957;
-    --task-fg: #ffffff;
-    --task-bg-hover: #6B7F97;
 }
 
 .jyu-dark {
@@ -370,6 +366,8 @@
     --quote-bg: hsl(226, 15%, 17%);
     --quote-border: hsl(226, 15%, 22%);
 
+    --details-border: #55565d;
+
     --warning-border: #ff8e00;
 
     --table-border-color: hsl(210, 25%, 13%);
@@ -397,10 +395,6 @@
     --overlay-bg: rgba(33, 40, 48, 0.4);
 
     --code-bg: #191f26;
-
-    --task-bg: #C29A5B;
-    --task-fg: #14191f;
-    --task-bg-hover: #EDE1CE;
 }
 
 @media (prefers-color-scheme: dark) {
