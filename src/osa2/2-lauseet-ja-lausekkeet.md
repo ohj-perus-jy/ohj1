@@ -1,4 +1,4 @@
-# <span class="part-icon">🛝</span> Lauseet ja lausekkeet
+# 🛝 Lauseet ja lausekkeet
 
 Lauseet ja lausekkeet ovat eräitä ohjelman perusyksiköitä. 
 Lauseen (engl. *statement*) seurauksena _tapahtuu jotakin_, kun taas lauseke (engl. expression) on asia, jonka arvo voidaan laskea.

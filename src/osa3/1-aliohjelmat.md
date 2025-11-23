@@ -1,4 +1,4 @@
-# <span class="part-icon">🧩</span> Aliohjelmat
+# 🧩 Aliohjelmat
 
 Aliohjelmat ovat ohjelman osia, jotka suorittavat tietyn tehtävän. Aliohjelmat helpottavat ohjelman rakentamista pienistä palasista, sekä ohjelman ylläpitoa. Aliohjelmat mahdollistavat koodin uudelleenkäytön, sillä aliohjelma voidaan määritellä kerran ja käyttää (eli *kutsua*) sitä useita kertoja.
 

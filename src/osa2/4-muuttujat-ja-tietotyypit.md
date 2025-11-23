@@ -1,4 +1,4 @@
-# <span class="part-icon">💾</span>Muuttujat ja tietotyypit
+# 💾 Muuttujat ja tietotyypit
 
 Muuttujat ovat ohjelmassa käytettäviä arvoja, joiden arvo voi muuttua ohjelman suorituksen aikana. Niinpä voidaan sanoa, että ohjelman tila koostuu muuttujissa olevista arvoista. Jos muuttujan arvo muuttuu (esimerkiksi käyttäjän vuorovaikutuksen seurauksena), muuttuu ohjelman tila. 
 

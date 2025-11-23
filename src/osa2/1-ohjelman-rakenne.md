@@ -1,4 +1,4 @@
-# <span class="part-icon">🏗️</span> Ohjelman rakenne
+# 🏗️ Ohjelman rakenne
 
 C#-kieli on [*olioperusteinen ohjelmointikieli*](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction), mikä tarkoittaa, että kaikki koodi kirjoitetaan luokkien sisälle. Jokaisessa ohjelmassa täytyy tavallisesti olla vähintään yksi luokka. Luokassa tulee olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä -- siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia. Pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
 
@@ -26,19 +26,14 @@ public class Sovellus
 }
 ```
 
+<details closed><summary>✨ Valinnaista lisätietoa: "luokaton" ohjelma</summary>
 
-> [!LISATIETO]  
-> ✨ Valinnaista lisätietoa: C#:ssa (alkaen versiosta 9) voi 
-> kirjoittaa ohjelman, jossa ei ole luokkaa eikä pääohjelmaa. Tällöin aivan
-> vasemmalle (vähiten sisennetyt rivit) kirjoitetut lauseet muodostavat niin
-> sanotut *top-level statements* -koodin. Kääntäjä muodostaa tämän koodin
-> perusteella luokan ja ohjelman aloituspisteen. Näin on periaatteessa
-> mahdollista kirjoittaa "Hello world"-ohjelma yksinkertaisesti:
-> 
-> ```csharp
-> System.Console.WriteLine("Hello, World!");
-> ```
-> 
-> Top-level statements -ohjelmat voivat olla käteviä pikkuohjelmissa ja skripteissä. Isommissa ohjelmissa on usein kuitenkin välttämätöntä kirjoittaa ohjelma luokan ja pääohjelman ympärille.
-> 
+C#:ssa (alkaen versiosta 9) voi kirjoittaa ohjelman, jossa ei ole luokkaa eikä pääohjelmaa. Tällöin aivan vasemmalle (vähiten sisennetyt rivit) kirjoitetut lauseet muodostavat niin sanotut *top-level statements* -koodin. Kääntäjä muodostaa tämän koodin perusteella luokan ja ohjelman aloituspisteen taustalla ilman, että ohjelmoijan tarvitsee sitä erikseen määritellä. Näin on periaatteessa mahdollista kirjoittaa "Hello world"-ohjelma yksinkertaisesti:
 
+```csharp
+System.Console.WriteLine("Hello, World!");
+```
+
+Top-level statements -ohjelmat voivat olla käteviä pikkuohjelmissa ja skripteissä. Isommissa ohjelmissa on usein kuitenkin välttämätöntä kirjoittaa ohjelma luokan ja pääohjelman ympärille. Jos ohjelmassa tarvitaan useita luokkia, täytyy myös pääohjelma määritellä ja sen täytyy olla luokan sisällä. Periaatteessa tällä kurssilla voisimme kirjoittaa lähes kaikki esimerkit top-level statements -muodossa, mutta koska isommissa ohjelmissa joudumme joka tapauksessa käyttämään luokkia ja pääohjelmaa, keskitymme tällä kurssilla perinteiseen luokka- ja pääohjelmarakenteeseen.
+
+</details>
