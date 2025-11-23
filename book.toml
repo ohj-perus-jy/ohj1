@@ -4,6 +4,9 @@ language = "fi"
 src = "src"
 title = "Ohjelmointi 1"
 
+[build]
+create-missing = false
+
 [output.html]
 additional-css = [ 
   "highlight/atelier-forest-light.css",
