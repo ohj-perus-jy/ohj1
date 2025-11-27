@@ -1,12 +1,20 @@
 # Git-versiohallinta
-*Ohjeet Ohjelmointi 1 -opintojaksolle*
 
+*Ohjeet Ohjelmointi 1 -opintojaksolle*
 
 Tässä dokumentissa kerrotaan miten harjoitustyön suunnitelmaa, lähdekoodia 
 sekä muita tiedostoja (mm. kuvat) käsitellään Git-versiohallinnan avulla Ohjelmointi 1 -opintojaksolla.
 
-Asenna [kehitystyökalut ja Git-versiohallinta](/view/%%basedir%%/ohjeet/tyokalut) ennen
-tämän ohjeen käyttämistä.
+> [!VAROITUS]
+> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää JY-käyttäjätunnuksesi 
+> jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista, että tiedät käyttäjätunnuksesi,
+> ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä
+> ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `kayttajatunnus`.
+> Korvaa tämä aina omalla käyttäjätunnuksellasi.
+
+## Ennen kuin aloitat
+
+Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehnyt niin.
 
 ## Mikä Git on
 
@@ -81,11 +89,11 @@ git --version
  3. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
  4. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
 
-![](/images/889763/Nayttokuva_2025-9-23_kello_9.40.04.png)
+![](images/mac-terminal-1.png)
 
 Tuloksena pitäisi avautua seuraava pääteikkuna:
 
-![](/images/889764/Nayttokuva_2025-9-23_kello_9.41.45.png)
+![](images/mac-terminal-2.png)
 
 Voit testata, että `git`-työkalu löytyy suorittamalla komento
 
@@ -147,17 +155,14 @@ Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (ta
    <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht.git>
  3. (a) JY: Valitse oikeasta ylänurkasta `fork`
     (b) GitHub: Vastaavasti.
-
-![](/images/219292/output.gif){.kuva}
-      
-4. Valitse omaa tunnustasi vastaava `namespace` (ryhmä).
-5. Valitse näkyvyydeksi `public`. 
-6. Tarkista, että `Project slug` kohdassa lukee `ohj1ht`. Jos muutat tätä, niin tämän ohjeen myöhemmät kohdat eivät toimi oikein. 
+ 4. Valitse omaa tunnustasi vastaava `namespace` (ryhmä).
+ 5. Valitse näkyvyydeksi `public`. 
+ 6. Tarkista, että `Project slug` kohdassa lukee `ohj1ht`. Jos muutat tätä, niin tämän ohjeen myöhemmät kohdat eivät toimi oikein. 
 
 Projektisi etävaraston URL-osoite on nyt:
 
 ```
-https://gitlab.jyu.fi/%%username%%/ohj1ht.git
+https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git
 ```
 
 Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](). TODO: Linkki.
@@ -206,7 +211,7 @@ Forkin tekijä antaa oikeudet muille ryhmäläisille. Tämä tapahtuu projektin 
 
 Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Tämä on otettava huomioon alempana olevissa ohjeissa, joissa tällöin näkyy "väärän" henkilön tunnus.
 
-## Omien tietojen (nimi, sähköposti) asettaminen {#omattiedot id="67eEASdOZWLV"}
+## Omien tietojen (nimi, sähköposti) asettaminen 
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
 harjoitustyötä työstetään.** 
@@ -230,7 +235,7 @@ Jos ei tulostu virheviestiä, niin komennot ovat onnistuneet.
 
 Lisätietoa kiinnostuneille: [git config](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-## Etävaraston hakeminen omalle tietokoneelle (clone) {#clone id="m1mhiQ7y9E6Y"}
+## Etävaraston hakeminen omalle tietokoneelle (clone) 
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
 harjoitustyötä työstetään.** 
@@ -284,7 +289,7 @@ mutta melkein helpompi on tässä vaiheessa:
 
  2. Anna komentoriviltä tässä kansiossa komento. Huomaa välilyönti ja piste lopussa, nekin on annettava.
 
-        git clone https://gitlab.jyu.fi/%%username%%/ohj1ht.git .
+        git clone https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git .
 
  3. Antamalla komennon 
 
@@ -326,7 +331,7 @@ mutta melkein helpompi on tässä vaiheessa:
 
 1. Anna komentoriviltä tässä kansiossa komento. Huomaa välilyönti ja piste lopussa, nekin on annettava.
 
-       git clone https://gitlab.jyu.fi/%%username%%/ohj1ht.git .
+       git clone https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git .
 
 1. Tarkista `ls -la`-komentoa käyttämällä
 että hakemistoon tuli tiedostot `.gitignore`, `README.md` sekä kansio `suunnitelma`. 
@@ -345,7 +350,7 @@ Lisätietoa:
 Git-ohje: [clone](https://www.git-tower.com/learn/git/commands/git-clone), 
 reference: [clone](https://git-scm.com/docs/git-clone)
 
-## Tiedostojen vieminen paikalliseen tietovarastoon (add, commit) {#addcommit id="lugOr25DrDoy"}
+## Tiedostojen vieminen paikalliseen tietovarastoon (add, commit) 
 
 Kun tiedostoja lisätään, muokataan tai poistetaan, tulee kaikki nämä
 muutokset lisätä paikalliseen tietovarastoon.
@@ -354,8 +359,7 @@ muutokset lisätä paikalliseen tietovarastoon.
 **Tämä vaihe tehdään <u>joka kerta kun olet tehnyt muutoksia</u> koodiin tai
 muihin tiedostoihin.**
 
-### Muista: Tallennathan suunnitelman oikeaan paikkaan {area="tallennaSuunnitelma" collapse="false" id="x4ZLqqEiGrSM"}
-
+### Muista: Tallennathan suunnitelman oikeaan paikkaan 
 
 Tallenna harjoitustyösi suunnitelman sekä luonnoskuvan `suunnitelma`-kansioon.
 Sekä suunnitelmatekstiä varten että kuvaa varten on olemassa
@@ -366,9 +370,7 @@ Huomioitavaa:
  1. Kuvan pikselikoon tulee olla enintään 1920 x 1080 pikseliä.
  2. Kuvan tiedostokoon tulee olla enintään 500 kilotavua (500 kB).
 
- {area_end="tallennaSuunnitelma" id="bzRqpB3dXdYc"}
-
-### Komentorivi tai Git Bash (suositus, Windows, macOS, Linux) {area="add-commit-cmd" collapse="false" id="gkNSpnbdDYS0"}
+### Komentorivi tai Git Bash (suositus, Windows, macOS, Linux) 
 
 
 Siirry `cd`-komentoja käyttämällä harkkatyökansioosi ja 
@@ -388,14 +390,9 @@ vain yhden tiedoston, laita `--all`-option tilalle haluamasi tiedoston nimi:
 
     git add TIEDOSTONNIMI   (hakemistoineen, /-viiva hakemistomerkkinä)
 
-Jotkut pitävät parempana luetella kukin lisättävä tiedosto erikseen edellä mainitulla
-komennolla. Kummassakin tavassa (`all`-vipu, tai kukin tiedosto erikseen) on puolensa.
+Jotkut pitävät parempana luetella kukin lisättävä tiedosto erikseen edellä mainitulla komennolla. Kummassakin tavassa (`all`-vipu, tai kukin tiedosto erikseen) on puolensa.
 
-Huomaa, että `.gitignore`-tiedosto sisältää tiedot sellaisista tiedostoista, joita
-ei lähtökohtaisesti viedä versiohallintaan. Jos kuitenkin ehdottomasti haluat
-lisätä tällaisen, esimerkiksi `.jar`-päätteisen tiedoston, niin silloin on 
-käytettävä 
-`-f` -optiota, jolla pakotetaan lisäys. Esimerkiksi:
+Huomaa, että `.gitignore`-tiedosto sisältää tiedot sellaisista tiedostoista, joita ei lähtökohtaisesti viedä versiohallintaan. Jos kuitenkin ehdottomasti haluat lisätä tällaisen, esimerkiksi `.jar`-päätteisen tiedoston, niin silloin on käytettävä `-f` -optiota, jolla pakotetaan lisäys. Esimerkiksi:
 
     git add -f kerho.jar
 
@@ -404,31 +401,21 @@ rivin `.jar` perään rivi:
 
     !kerho.jar
 
-
-Lisätietoa:
-Git-ohje: [add](https://www.git-tower.com/learn/git/commands/git-add),
-reference: [add](https://git-scm.com/docs/git-add)
-
-## Tehtyjen muutosten lähettäminen etävarastoon (push) {#push id="wkH1QJSwAPsH"}
+## Tehtyjen muutosten lähettäminen etävarastoon (push) 
 
 Tässä vaiheessa paikalliseen tietovarastoon lähetetyt muutokset 
 lähetetään etävarastoon.
 
-**Tämä vaihe tehdään [joka kerta kun olet tehnyt muutoksia]{.bgyellow} koodiin tai
-muihin tiedostoihin.**
-Älä unohda tehdä tätä työskentelyn
-päätteeksi. Muutoin tiedot jäävät vain paikalliseen tietovarastoon.
-
+**Tämä vaihe tehdään <u>joka kerta kun olet tehnyt muutoksia</u> koodiin tai muihin tiedostoihin.** Älä unohda tehdä tätä työskentelyn päätteeksi. Muutoin tiedot jäävät vain paikalliseen tietovarastoon.
 
 Avaa Pääte (macOS), Git Bash (Windows) tai muu komentorivi. Siirry harjoitustyökansioosi cd-komentoja käyttämällä ja anna sitten komento
-
 
     git push
 
 Ensimmäisellä kerralla sinulta kysytään käyttäjätunnusta ja salasanaa.
 Valitse kirjautumisikkunassa muodoksi Salasana (Password), **ei** Token.
 
-Anna käyttäjätunnus **lyhyessä muodossa** `%%username%%` ilman @-merkkiä 
+Anna käyttäjätunnus **lyhyessä muodossa** `käyttäjätunnus` ilman @-merkkiä 
 ja loppuosaa. Salasana on se, jota käytät JY-verkossa. 
 
 Mikäli annat salasanan väärin, 
@@ -439,26 +426,20 @@ avaimen kuva. Kun salasanaa kirjoitetaan, ei näyttöön tule mitään.  Lopuksi
 on painettava enter. Jos tässä tulee virhe, niin gitlab-salasana on poistettava
 avainnipusta.
 
-
 Tarkista tämän jälkeen Gitlab-osoitteestasi, että sieltä löytyy lähettämäsi
 tiedostot (alkukurssista ne kuvat).
 
-- Git-ohje: [push](https://www.git-tower.com/learn/git/commands/git-push),
-  reference: [push](https://git-scm.com/docs/git-push)
-
-## Muutosten hakeminen etävarastosta paikalliseen varastoon (pull) {#pull id="7QnM3VoE4ytn"}
+## Muutosten hakeminen etävarastosta paikalliseen varastoon (pull) 
 
 Kun joku toinen (tai sinä jollain toisella tietokoneella) on muuttanut 
 tiedostoja ja pushannut muutokset etävarastoon,
 niin muutokset tulee hakea omalle koneelle. Yhteistyöskentelyssä on syytä
 aina työskentelyä aloittaessa antaa `pull`-komento.
 
-
 Siirry hakemistoon, johon olet kloonannut projektin (ks. [`clone`](#clone))
 ja anna komento: 
 
     git pull
-
 
 Tässä kohti voi tulla kysymys siitä, että miten käyttäjä haluaa pull-komennon jatkossa
 toimivan. Ohj1-kurssin osalta toimiva vaihtoehto on
@@ -467,13 +448,9 @@ toimivan. Ohj1-kurssin osalta toimiva vaihtoehto on
 
 Lue tästä lisää esimerkiksi [StackOverflowsta](https://stackoverflow.com/questions/62653114/how-to-deal-with-this-git-warning-pulling-without-specifying-how-to-reconcile/62653400#62653400).
 
+## Huomioitavaa 
 
- - Git-ohje: [pull](https://www.git-tower.com/learn/git/commands/git-pull),
-   reference: [pull](https://git-scm.com/docs/git-pull)
-
-## Huomioitavaa {#huomioitavaa id="M80Dd6U8UgVl"}
-
-### Tiedostojen koko {#tiedostonKoko id="6m1NWQDqx9eA"}
+### Tiedostojen koko 
 
 Versionhallintajärjestelmä ei sovi suurten tiedostojen tallennukseen. 
 Älä lähetä versiohallintaan esimerkiksi suuria kuva-, musiikki- tai 
@@ -489,6 +466,7 @@ ja on löydettävissä julkaisun jälkeen. Mikäli kuitenkin lähetit etävarast
 jotain, jonka haluat poistaa myöhemmin, se onnistuu esimerkiksi [BFG Repo-Cleaner-työkalun avulla](https://rtyley.github.io/bfg-repo-cleaner/).
 
 ## Tapoja käyttää Gitiä
+
 Aluksi ehdottomasti suositeltavin tapa on käyttää 
 [Gitiä komentoriviltä](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/gitjakomentorivi).
 On olemassa kuitenkin myös graafisia ympäristöjä Gitin käyttämiseen.
@@ -498,7 +476,6 @@ vähän omanlaisensa ja vaatii totuttelua. Kaikkia alla mainittuja
 työkaluja voit kuitenkin käyttää ristiin. Kannattaa kokeilla eri tapoja. 
 Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
 
-
  * [Git ja komentorivi](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/gitjakomentorivi) (Windows, Linux ja macOS)
  * [Git ja Eclipse](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/giteclipse) (Windows, Linux, macOS; nykyisin valmiina Eclipsen mukana)
  * [SmartGit](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/smartgit)  (Windows, Linux, macOS)
@@ -507,10 +484,9 @@ Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
  * GitHub Desktop (Windows, macOS)
  * Gitiä voi käyttää myös [Windows Subsystem for Linuxin](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/wsl) läpi.
 
-
 Asenna näistä kohdista ainakin komentoriviin liittyvät asiat.  Voit asentaa myös muita jos siltä tuntuu.
 
-## Git termejä {#terms id="j0NTCxTlHTco"}
+## Git termejä 
 
 - **repository**, suom. säilytyspaikka, tietovarasto tai arkisesti "repo" = Paikka jossa versioitava tieto tallennetaan, 
    voi olla paikallinen (`local`) tai etä (`remote`). Periaatteessa samasta projektista voi olla samasta projektista useita säilytyspaikkoja niin paikallisesti kuin etänä.
@@ -539,13 +515,11 @@ Vaativampaan käyttöön ja viimeistään Ohjelmointi 2 -kurssilla tarvittavia t
          tietoturvapäivityksiä
 - `HEAD` = viite aktiivisen haaran "päähän" tietyssä lokaalissa
 
-
 Kurssilla käytettäviä Git-komentoja:
 
-
-    git config --global user.name "%%username%%"
+    git config --global user.name "käyttäjätunnus"
     git config --global user.email "%%useremail%%"    
-    git clone https://gitlab.jyu.fi/%%username%%/ohj1ht.git .
+    git clone https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git .
     git status  # tätä komentoa kannattaa käyttää ahkeraan vaikka joka välissä
     git log     # samoin tätä, kunhan opit lukemaan sen sisältöä
     # tee tarvittavia muutoksia
@@ -554,10 +528,7 @@ Kurssilla käytettäviä Git-komentoja:
     git push    # kaverin pitää tämän jälkeen tehdä kotona tehdä git pull
     git pull
 
-
-
-## Ongelmia? {#ongelmia id="TNYmHtiGnAFo"}
-
+## Ongelmia? 
 
 Yleisimpiä ongelmia on lueteltu alla.
 
@@ -578,13 +549,12 @@ URL-osoitetta.
  {area="pushEiOnnistu" collapse="true" id="O95CK3Hj6CQL"}
 Push ei onnistu (remote: HTTP Basic: Access denied)
 
-````
 **Ongelma:** Git ei anna viedä mitään etävarastoon (push ei onnistu). Antaa virheilmoituksen:
 
 `remote: HTTP Basic: Access denied`
 `fatal: Authentication failed for 'https://gitlab.jyu.fi/NIMI/ohj1ht.git'`
 
-![Image](/images/219538/push-access-denied.png){.kuva}
+![Push access denied](images/push-access-denied.png)
 
 Huomaa, että virheilmoitus voi näyttää hieman erilaiselta riippuen siitä
 käytätkö komentoriviä vai jotain muuta Git-asiakasohjelmaa.
@@ -596,7 +566,7 @@ käytätkö komentoriviä vai jotain muuta Git-asiakasohjelmaa.
 Jos fetch- ja push-urlien lopussa **ei ole** `.git`-osaa, käy kopioimassa
 GitLab-palvelussa varastosi HTTPS-url-osoite, ks. kuva alla.
 
-![Image](/images/526693/gitlab-clone-https.gif)
+![Gitlab clone https](images/gitlab-clone-https.gif)
 
 Anna sitten alla oleva komento, ja **pasteta URL-kohtaan** äsken kopioimasi osoite.
 
@@ -605,8 +575,6 @@ git remote set-url URL
 ```
 
 Kokeile nyt tehdä git push.
-````
-
 
 **Syy (vaihtoehto 2):** Olet kirjautumisikkunassa kirjoittanut käyttäjätunnuksesi tai salasanasi väärin. 
 
@@ -616,21 +584,17 @@ Kokeile nyt tehdä git push.
 2. Valitse 'User accounts' (käyttäjätilit).
 3. Valitse 'Manage your credentials' (Tunnistetietojen hallinta).
 
-![](/images/211627/user_accounts.png){.kuva}
+![Win credman 1](images/win-credman-1.png)
 
 4. Valitse 'Windows credentials' (Windows-tunnistetiedot). 
 
-![](/images/211628/win_cred.png){.kuva}
+![Win credman 2](images/win-credman-2.png)
 
 5. Laajentamalla gitin kohtaa, pitäisi päästä muokkaamaan asetettuja käyttäjänimeä ja salasanaa.
 
 **Korjaus Mac:** Sama homma macOS:ssa (??): <https://help.github.com/en/github/using-git/updating-credentials-from-the-osx-keychain>
 
- {area_end="pushEiOnnistu" id="NktWiibuYxOr"}
-
- {area="notempty" collapse="true" id="AsjRCeeB5oZU"}
 fatal: destination path ‘.’ already exists and is not an empty directory
-
 
 `git clone` komennon jälkeen antaa tälläisen:
 
@@ -638,11 +602,7 @@ fatal: destination path ‘.’ already exists and is not an empty directory
     
 Korjaus: Kun tehdään clone, pitää olla tyhjässä hakemistossa.
 
- {area_end="notempty" id="h1srFYCxmNBm"}
-
- {area="nocommit" collapse="true" id="6wNZEXQX7b4k"}
 '[ht]/' does not have a commit checked out, fatal: adding files failed
-
 
 Poista *projektin* hakemistosta `.git`-kansio. (Huom. älä poista ylätason hakemistosta.)
 Piilotetut kansiot eivät välttämättä näy tiedostonhallinta-ikkunassa (macOS:lla Finder).
@@ -652,12 +612,8 @@ Komentorivillä tuon poisto onnistuu esim
 rm -rf .git
 ```
 
- {area_end="nocommit" id="3o8UruSg4xlF"}
-
- {area="cant_push_ssh" collapse="true" id="cYafzV0PshdC"}
 You can't push or pull repositories using SSH until you add an SSH key to your profile
 
-````
 Syy: Kloonatessasi etävarastoa olet todennäköisesti valinnut SSH-osoitteen HTTPS-osoitteen sijaan. 
 
 Suositellaan, että otat tässä kohden työstäsi varmuuskopion.
@@ -677,10 +633,6 @@ git remote set-url origin UUSIOSOITE
 Korjaus, tapa 2: Jos tapa 1 ei toimi, voit tehdä uuden clonen uuteen kansioon käyttäen HTTPS-osoitetta, ja
 kopioida aikaisempaan kansioon tekemäsi muutokset tähän uuteen kansioon.
 Tämän jälkeen pitää tehdä add- ja commit-komennot uudestaan, sen jälkeen push pitäisi onnistua.
-````
-
- {area_end="cant_push_ssh" id="t1G5a4usVAhQ"}
-
 
 Joskus käy niin että Gitissä tulee touhuttua jotakin mikä saa hommat ihan solmuun.
 Joihinkin probleemiin vastauksia voi löytyä 
@@ -688,7 +640,6 @@ täältä: <https://ohshitgit.com/>. Ko. saitin kielenkäyttö ei ehkä sovi
 perheen pienimmille mutta varsinaiset vinkit voivat pelastaa kiperistä tilanteista.
 
 ## Lisätietoa kiinnostuneille
-
 
 - [Gitin käyttö Ohjelmointi 2 -kurssilla](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/ohj2git)
 - [Git reference](https://git-scm.com/docs): Git-yhteisön ylläpitämä dokumentaatio Git-komennoille.
@@ -701,4 +652,3 @@ perheen pienimmille mutta varsinaiset vinkit voivat pelastaa kiperistä tilantei
 - [Helsingin yliopiston Git-kurssi](https://tkt-lapio.github.io/git/)
 - [ohshitgit - ratkaisuja yleisiin virhetilanteisiin (osittain humoristisia)](https://ohshitgit.com/)
 - [git cheatsheet](https://gist.github.com/hofmannsven/6814451)
-
