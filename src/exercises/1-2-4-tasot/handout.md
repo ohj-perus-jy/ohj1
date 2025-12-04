@@ -1,6 +1,6 @@
-Täydennä aliohjelma LuoTaso sellaiseksi että se luo parametreinä annettuhin koordinaatteihin dokumentaation mukaisen tason.
+Täydennä aliohjelma `LuoTaso` sellaiseksi että se luo parametreinä annettuhin koordinaatteihin dokumentaation mukaisen tason.
 
-Lisää aliohjelmaan Begin kutsuja aliohjelmaan LuoTaso siten että pääset hyppimään pelihahmolla kentän oikeassa yläreunassa näkyvään maaliin.
+Luo kenttään tasoja tasaisin välein lisäämällä `Begin`-aliohjelmaan `LuoTaso`-aliohjelman kutsuja. Tavoitteenasi on päästä hyppimään pelihahmolla kentän oikeassa yläreunassa näkyvään maaliin.
 
 Ratkaisu voi olla esimerkiksi alla olevan kuvan mukainen.
 

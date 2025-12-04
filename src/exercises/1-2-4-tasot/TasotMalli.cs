@@ -43,7 +43,7 @@ public class TasotMalli : PhysicsGame
     }
     
     /// <summary>
-    /// Aliohjelma lisää kenttään tason (Jypeli Surface), jonka leveys on 50
+    /// Aliohjelma lisää kenttään tason (PhysicsObject.CreateStaticObject), jonka leveys on 50
     /// ja korkeus 30. Tason keskipiste on (x, y).
     /// </summary>
     /// <param name="x">Tason keskipisteen x-koordinaatti</param>
@@ -51,7 +51,7 @@ public class TasotMalli : PhysicsGame
     private void LuoTaso(double x, double y)
     {
         //Täydennä
-        Surface taso = new Surface(50, 30);
+	PhysicsObject taso = PhysicsObject.CreateStaticObject(50, 30);
         taso.X = x;
         taso.Y = y;
         taso.Color = Color.Green;
