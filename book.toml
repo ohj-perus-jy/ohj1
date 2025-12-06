@@ -8,6 +8,8 @@ title = "Ohjelmointi 1"
 create-missing = false
 
 [output.html]
+site-url = "/ohj1/"
+edit-url-template = "https://github.com/ohj-perus-jy/ohj1/edit/main/{path}"
 additional-css = [ 
   "highlight/atelier-forest-light.css",
   "highlight/twilight.css",
@@ -26,7 +28,6 @@ additional-js = [
   "theme/codeblock-tabs.js",
   "theme/code-highlights.js",
 ]
-site-url = "/ohj1-mdbook-demo/"
 
 [output.html.playground]
 editable = true
