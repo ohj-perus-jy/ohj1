@@ -1,0 +1,933 @@
+# Ohjelmointi 1 -kurssin työkalut 
+
+ 
+
+ 
+Harjoitustehtävien ja harjoitustyön tekemiseen käytämme seuraavia työkaluja:
+
+- **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen ympäristö* (engl. runtime) C
+kielelle. 
+   .NET mahdollistaa C
+ohjelmien kääntämisen ja ajamisen. 
+   Se tarjoaa myös valmista koodia yleisempiin käyttötarkoituksiin (esim. tekstin tulostaminen näytölle, käyttöliittymien tekeminen).   
+- **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä.
+  Vähän kuin Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
+- **JetBrains Rider** - *integroitu kehitysympäristö* (engl. Integrated Development Environment, IDE).
+  IDE sisältää oleellisimmat toiminnot ohjelmien tekemiseen (koodin muokkaus, kääntäminen, ajaminen).
+  Rider on erityisesti .NET ja C
+ohjelmille tarkoitettu IDE.
+- **Tekstieditori** - jokin kevyt tekstieditori, jolla tekstipohjaisia tiedostoja (esim. koodi) voi muokata
+  avaamatta IDE-ohjelmistoa. Suosittelemme esimerkiksi *Visual Studio Code* tai *Notepad++*.
+  Microsoft Word tai Google Docs **ei ole** opintojaksolle soveltuva tekstieditori.
+- **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän yliopistossa kehitetty
+  C
+kirjasto pelien tekemiseen.
+- **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on aputyökalu, jonka avulla
+  kirjoitetulle koodille voi kirjoittaa testejä helposti luettavalla merkintätavalla.
+
+Tässä dokumentissa käydään läpi yllä olevien työkalujen ja ohjelmien asentamista.
+
+Yllä olevat ohjelmat ovat valmiiksi asennettuna Agoran mikroluokissa.
+*Suosittelemme, että asennat ohjelmat lisäksi niille tietokoneille, joilla
+aiot suorittaa opintojakson.*
+Erityisesti harjoitustyön tekeminen pääteohjausten ulkopuolella on
+helpompaa, kun kaikki tarvittavat ohjelmat on myös omalla tietokoneella.
+
+## Ennen asentamista 
+
+### Käyttöjärjestelmä ja vaatimukset 
+
+Tällä sivulla olevat ohjeet riippuvat käyttöjärjestelmästä. 
+Valitse käyttöjärjestelmä alta.
+
+### [Windows](#tab/win)
+ 
+Valitsit Microsfot Windows -käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
+
+- Windows 11
+- Windows 10
+
+***
+
+### [macOS](#tab/macos)
+ 
+Valitsit macOS-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
+
+- macOS 10.15 Catalina
+- macOS 13 Ventura
+- macOS 14 Sonoma
+
+***
+
+### [Linux](#tab/linux)
+
+ 
+Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
+
+- Arch Linux (`6.16.1-arch1-1`)
+- Linux Mint 22.1 (`Linux 6.8.0-51-generic`)
+- Linux Ubuntu 24.04.3 LTS
+- Debian 13
+
+Valitse käyttöjärjestelmäsi yllä olevilla painikkeilla.
+
+Huomaa, että muilla käyttöjärjestelmillä voi esiintyä pieniä poikkeuksia.
+Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@tim.jyu.fi.
+Vastaavasti, jos saat ohjeet toimimaan käyttöjärjestelmällä, jotka eivät ole
+yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme listan.
+
+***
+
+
+## Pikakurssi komentorivin käyttöön 
+ 
+Tämän sivun asennusohjeet vaativat komentorivin avaamista ja käyttöä.
+
+Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana; jos
+luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa vielä hämärältä asialta.
+
+Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin käyttöön alta.
+
+<details closed> <summary>**Pikainen johdatus komentorivin käyttöön** (Avaa klikkaamalla)</summary>
+ 
+**Mikä on komentorivi?**
+
+*Komentorivi* (engl. command line) tai *pääte* (engl. terminal) on (tämän ohjeen
+puitteissa) tietokoneohjelma, jolla tietokonetta voi ohjata tekstillä.
+Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu graafisesti
+avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder),
+sama asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command),
+joka tulostaa näkyviin kansion sisällön.
+
+Komentorivillä työskentely on yleistä ohjelmoinnin yhteydessä. Syitä on monia,
+eikä niitä tässä käsitellä.
+Tämän ohjeen kannalta olennainen syy on, että yleisten ohjelmien asentaminen onnistuu nykyään jopa helpommin
+komentorivillä kuin "käsin" etismällä sopiva asennusohjelma verkosta.
+
+ ***
+
+**Miten avaan komentoriviin omalla tietokoneellani?**
+
+Toimintatapa vaihtelee eri käyttöjärjestelmillä. Samalla käyttöjärjestelmällä
+voi olla myös useita komentoriviohjelmia. Alla olevilla ohjeilla saata ainakin
+kaikki tarvittavat työkalut asennettua.
+
+### [Windows](#tab/win)
+
+``` 
+{plugin="showVideo" id="HIAhI8P5lzq7"}
+type: small
+videoname: "Avaa video: PowerShellin avaaminen Windowsilla"
+width: 400
+height: 500
+file: "/files/873346/powershell_windows.mp4"
+```
+ 
+1. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
+2. Kirjoita hakupalkkiin *PowerShell*
+3. Valitse löytyvistä tuloksista *Windows PowerShell*
+
+Tämä avaa PowerShell-komentorivin, joka on eräs Windowsilla oleva komentorivipääte.
+
+***
+
+### [macOS](#tab/macos)
+
+1. Avaa *Launchpad*
+2. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
+3. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
+
+Tämä avaa Pääte-sovelluksen, joka on macOS:n sisäänrakennettu pääte.
+
+***
+
+### [Linux](#tab/linux)
+
+Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai
+*Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva 
+tämän ohjeen kannalta.
+
+***
+
+**Miten käytän komentoriviä?**
+
+Kun näet tällä sivulla alla olevan tapaisen laatikon:
+
+```bash
+ls
+```
+
+Tulee sinun kirjoittaa laatikossa oleva komento ja suorittaa se komentorivillä.
+Toimi seuraavasti:
+
+1. Klikkaa komentorivi aktiiviseksi ikkunaksi ellei se ole jo.
+2. Kirjoita laatikossa oleva komento komentoriviin näppäimistöllä.
+3. **Tarkista, että kirjoitit komennon täysin oikein.** Huomaa, että kirjainkoolla, välilyönneillä ja muilla merkeillä on merkitystä komennon kannalta!
+4. **Kun olet varmistanut, että kirjoitit komennon oikein**, paina Enter-näppäintä.
+
+Riippuen komennosta komentoriviin voi ilmestyä tuloste, virhe tai ei mitään.
+Jotkin ohjelmat eivät tulosta mitään tekstiä onnistumisen merkiksi.
+Kun komennon suoritus on valmis, komentorivin uudelle riville ilmestyy uusi komentokehote.
+
+**Kokeile** kirjoittaa ja suorittaa yllä oleva esimerkkikomento.
+Komento listaa hakemistossa olevien tiedostojen ja kansioiden nimiä (`ls` on lyhenne sanalle "**l**i**s**t").
+
+Kun tällä sivulla näet laatikon, jossa on useita rivejä, kuten
+
+```bash
+echo "Kissa"
+```
+
+```bash
+ls
+```
+
+Toimi seuraavasti:
+
+1. Tee yllä mainitut vaiheet 1-4 *vain ensimmäisellä rivillä* olevalle komennolle (eli tässä `echo "Kissa"`)
+2. Tee yllä mainitut vaiheet 1-4 *vain toisella rivillä* olevalle komennolle (eli `ls`)
+3. Jatka rivien suorittamista kunnes olet suorittanut kaikki laatikossa olevat rivit
+
+Toisin sanoin, tällä sivulla jokainen yksittäinen komento on aseteltu omalle rivilleen.
+Tarkoitus on, että suoritat jokaisen rivin yksi kerrallaan siinä järjestyksessä, jossa ne on laatikossa kirjoitettu.
+
+**Kokeile** kirjoittaa ja suorittaa yllä olevassa laatikossa olevat komennot.
+Kirjoita ja suorita ensin komento `echo "Kissa"` ja sen jälkeen komento `ls`.
+Muista, että tietokone suorittaa komennon vasta, kun painat Enter-painiketta.
+
+**Voinko kopioida komentoja kirjoittamisen sijaan?**
+
+Kyllä voit. Tällä ohjesivulla komentojen kopiointi onnistuu klikkaamalla kopioitavasta komennosta
+kerran ja painamalla `Ctrl`+`C` (Windows, Linux) tai `Command`+`C` (macOS).
+
+Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
+
+- *Windows*: Valitse PowerShell-komentorivi aktiiviseksi ja paina `Ctrl`+`V` (tai klikkaa hiiren oikea painike)
+- *macOS*: Valitse Pääte aktiiviseksi ja paina `Command`+`V`
+- *Linux*: Valitse komentorivi aktiiviseksi ja paina `Ctrl`+`Shift`+`V` TAI `Shift`+`Insert`. Tarkista pääteohjelmasi ohjeista oikea näppäinoikotie
+
+> [!VAROITUS]
+> Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
+> tiedä, mitä ne oikeasti tekevät.
+> Komentorivien komennot ovat usein lopullisia: jos vahingossa poistat jonkun tiedoston,
+> poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin
+> komentoihin tulee suhtautua aina varauksella.
+> Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi
+> vastuuopettajan toimesta.
+
+</details>
+
+## Asennusohjeet tekstinä 
+
+### Valmistelu 
+
+### [Windows](#tab/win)
+
+ 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) tai että näytönohjaimen ajurit ovat asennettu.
+ 1. Avaa PowerShell-komentorivi (*Haku-ikoni* []{.menu-right} Kirjoita *PowerShell* []{.menu-right} *Windows PowerShell*).
+ 2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
+
+    ```bash
+    winget -v
+    ```
+    
+    Tuloksena pitäisi tulostua `winget`-työkalun versio. Jos sen sijaan saat virheen, jossa
+    lukee *'winget' is not recognized as the name of a cmdlet, function, script file, or operable program*,
+    tarkoittaa tämä, että sinulla todennäköisesti ei ole `winget`-työkalua asennettuna.
+    Kokeile siinä tapauksessa seuraavat ratkaisut:
+    
+    - Tarkista, että käyttöjärjestelmäsi on ajan tasalla
+    - Kokeile ladata ja asentaa `winget`-käsin: [Lataa asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle)
+      Asennuksen jälkeen sulje ja käynnistä PowerShell uudelleen.
+
+ 
+Merkkaa lopuksi ruksi kohtaan "Valmistelu tehty!" tämän ohjeen alussa.
+
+***
+
+### [macOS](#tab/macos)
+
+1. Avaa Pääte tai Termimal (*Launchpad* []{.menu-right} *Pääte*/*Terminal*)
+2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
+
+    ```bash
+    xcode-select --install
+    ```
+    
+    Komennon suorittamisen jälkeen saatat saada seuraavanlaisen ilmoituksen:
+    *Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa työkalut nyt?*
+    (Englanniksi: *The 'xcode-select' command requires the command line developer tools. Would you like to install the tools now?*)
+    
+    Jos sellainen ilmoitus ilmestyy, valitse *Asenna*/*Install* ja odota työkalujen asentumista.
+    Hyväksy tarvittaessa käyttöehdot.
+    Kun asennus on valmis, saat *Ohjelmisto asennettiin*/*The software was installed* -dialogin.
+    Klikkaa silloin *Valmis*.
+    
+    Jos saat virheen, jossa lukee `command line tools are already installed`, sinulla
+    on jo tarvittavat työkalut asennettuna ja voit jatkaa seuraavaan vaiheeseen.  
+3. Asenna Homebrew-ohjelmahallintatyökalu seuraavalla komennolla:
+
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+    
+    *Anna työkalun latautua rauhassa.*
+    
+    Kirjoita macOS-käyttäjäsi salasana, kun *Password*-kenttä ilmestyy.
+    *Huomaa, että salasanan kirjoittaminen ei tuota mitään näkyvää tulostetta komentoriville,
+    ei edes `*`-merkkejä.* Paina Enter-painiketta, kun olet kirjoittanut salasanan.
+    
+    Ennen asennusta Homebrew vielä tulostaa varmistusdialogin, jonka lopussa lukee
+    
+    ```
+    Press RETURN/ENTER to continue or any other key to abort:
+    ```
+    
+    Paina siinä tapauksessa Enter-näppäintä ja odota ohjelman asentumista.
+4. Suorita seuraavat komennot (huom: 1 komento per rivi, 4 komentoa yhteensä):
+
+    ```bash
+    BREW_PREFIX=$( [[ $(uname -m) == arm64 ]] && echo /opt/homebrew || echo /usr/local )
+    ```
+    ```bash
+    echo >> ~/.zprofile
+    ```
+    ```bash
+    echo "eval \"\$(${BREW_PREFIX}/bin/brew shellenv)\"" >> ~/.zprofile
+    ```
+    ```bash
+    eval "$(${BREW_PREFIX}/bin/brew shellenv)"
+    ```
+    
+    Nämä komennot tekevät seuraavat asiat:
+    
+    - Komento 1 tarkistaa, onko tietokone Apple Silicon tai Intel -pohjainen.
+    - Komento 2 lisää tyhjän rivin komentoriviasetuksiin
+    - Komento 3 muokkaa komentorivin asetuksia niin, että jatkossa Homebrew ladataan aina avatessa uusi Pääte
+    - Komento 4 lataa Homebrewin nykyiseen komentoriviin
+
+5. Testaa, että Homebrew toimii suorittamalla komento:
+
+    ```bash
+    brew --version
+    ```
+    
+    Jos asennus suoritettiin onnistuneesti, näet seuraavanlaisen tulosteen:
+    
+    ```
+    Homebrew X.X.X
+    ```
+    
+    Versionumero `X.X.X` voi olla mikä tahansa; olennaista on, että tuloste ilmestyy näkyviin.
+
+ 
+Merkkaa lopuksi ruksi kohtaan "Valmistelu tehty!" tämän ohjeen alussa.
+
+***
+
+### [Linux](#tab/linux)
+ 
+Alla olevat ohjeet olettavat, että sinulla on kokemusta ohjelmien asentamisesta
+sinun käyttämälläsi Linux-jakelulla.
+Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
+
+ 1. Tarkista, että sinulla on tarvittavat grafiikkakirjastot asennettuna. 
+   JyPeli ainakin tarvitsee GLFW-kirjaston, joka löytyy eri jakeluista valmiina pakkauksena:
+     - Ubuntu, Debian, openSUSE: `libglfw3`
+     - Arch, Fedora: `glfw`
+ 2. Vaikka osa työkaluista löytyy jakelujen pakkaustehallinnasta, jotkin graafiset ohjelmat (erityisesti Rider ja VS Code)
+   eivät ole yleensä julkaistu jakelukohtaisissa repoissa.
+   *Suosittelemme* käyttämään jakelusta riippumatonta pakkaustenhallintaa, 
+   kuten [Snap](https://snapcraft.io/docs/installing-snapd) tai [Flatpak](https://flatpak.org/). Tällä sivulla olevat ohjeet käyttävät ensisijaisesti Snapia tai jakelukohtaisia
+   pakkauksia, jos niitä on.
+ 3. Kun olet asentanut tarvittavat esipakkaukset, käynnistä uusi tyhjä pääte.
+
+*** 
+
+### .NET 
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo
+2. Suorita alla oleva komento
+
+    ```bash
+    winget install -e --id=Microsoft.DotNet.SDK.%%dotnet_major_version%%
+    ```
+
+    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+    Jos näet komentorivillä kysymyksen, kuten:
+
+    ```
+    Do you agree to all the source agreements terms?
+    [Y] Yes [N] No:
+    ```
+
+    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
+    
+    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
+4. Testaa, että .NET on asennettu suorittamalla komento:
+
+    ```bash
+    dotnet --list-sdks
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```txt
+    %%dotnet_major_version%%.0.XXX [C:\Program Files\dotnet\sdk]
+    ```
+    
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+
+*** 
+
+### [macOS](#tab/macos)
+
+1. Avaa Pääte ellei se ole jo
+2. Asenna .NET suorittamalla alla olevat komennot (huom: yhteensä 2 komentoa):
+    
+    ```bash
+    brew tap isen-ng/dotnet-sdk-versions
+    ```
+    ```bash
+    brew install --cask dotnet-sdk%%dotnet_major_version%%
+    ```
+    
+    Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+    macOS-käyttäjän salasanaa `Password:`-kentässä. Kirjoita silloin
+    salasana paikalle ja paina Enter-näppäintä.
+    (Mikäli vastaan tulee tilanne että edelliset komennot menevät läpi mutta
+    dotnet ei kuitenkaan ole asentunut, voit seurata [Microsoftin asennusohjeita](https://learn.microsoft.com/en-us/dotnet/core/install/macos))
+
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi Pääte
+
+4. Testaa, että .NET on asennettu suorittamalla komento:
+
+    ```bash
+    dotnet --list-sdks
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```txt
+    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    ```
+    
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+
+ 
+Merkkaa lopuksi ruksi kohtaan ".NET asennettu" tämän ohjeen alussa.
+
+*** 
+
+### [Linux](#tab/linux)
+ 
+1. Avaa jakelusi pääteohjelma ellei se ole jo
+2. Asenna .NET SDK -pakkaus: `dotnet-sdk-%%dotnet_major_version%%.0`. Pakkauksen nimi on yleensä sama
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
+4. Testaa, että .NET on asennettu suorittamalla komento:
+
+    ```bash
+    dotnet --list-sdks
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```txt
+    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    ```
+    
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+
+*** 
+
+### Git 
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo
+2. Asenna Git for Windows suorittamalla alla oleva komento:
+
+    ```bash
+    winget install -e --id=Git.Git --custom '/COMPONENTS="ext,ext\shellhere,ext\guihere"'
+    ```
+    
+    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+    Jos näet komentorivillä kysymyksen, kuten:
+    
+    ```
+    Do you agree to all the source agreements terms?
+    [Y] Yes [N] No:
+    ```
+    
+    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
+    
+    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
+    
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
+4. Testaa, että `git`-komento on asennettu suorittamalla komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* []{.menu-right} Kirjoita *Git Bash* []{.menu-right} Valitse *Git Bash*.
+
+    Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:
+
+    ![](/images/873318/image.png)
+
+ 
+Merkkaa lopuksi ruksi kohtaan "Git asennettu" tämän ohjeen alussa.
+
+*** 
+
+### [macOS](#tab/macos)
+ 
+1. Avaa Pääte ellei se ole jo
+2. Git-työkalun pitäisi olla jo valmiiksi asennettu jos teit Valmistelu-vaiheessa olevat asiat. Tarkista, että Git toimii suorittamalla seuraava komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+
+*** 
+
+### [Linux](#tab/linux)
+ 
+1. Avaa jakelusi pääteohjelma ellei se ole jo
+2. Asenna Git-pakkaus: `git`. Pakkauksen nimi on yleensä sama
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
+4. Testaa, että `git`-komento on asennettu suorittamalla komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+
+*** 
+
+## JetBrains Rider 
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo
+2. Asenna JetBrains Rider suorittamalla alla oleva komento:
+
+    ```bash
+    winget install --interactive -e --id=JetBrains.Rider
+    ```
+
+    Ohjelman lataamisen jälkeen avautuu asennusohjelma.
+    Etene asennusohjelmassa eteenpäin *Next*-painikkeella.
+    Kohdassa *Installation Options* valitse seuraavat ruksit päälle:
+    
+    - Add "Open Folder as Project"
+    - Install JetBrains ETW Host Service
+    - Add Rider executables to Microsoft Defender exclusions
+    - Create Associations: .sln, .cs, .csproj
+    
+    Etene asennusohjelmassa ja anna ohjelman asentua. 
+3. Kun pääset asennusohjelman loppuun, valitse *Run JetBrains Rider* ja paina *Finish*.
+   Testaa, että ohjelma toimii.
+
+    Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Siinä tapauksessa voi valita *Avaa*.
+    
+    Hyväksy mahdolliset Riderin käyttöehdot.
+
+4. Kun JetBrains Rider kysyy lisenssiä, valitse **Free Non-Commercial License**.
+
+5. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse *Continue with email* ja tee itsellesi tunnus.
+
+6. Kun olet rekisteröitynyt, avaa Rider ja valitse *Log in for Non-Commercial License*.
+    
+    Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+    *Start Non-Commercial license*.
+
+6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+
+    - Teema: Valitse haluamasi teema
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Pluginit: valitse *Continue without Plugins*
+
+7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
+   Ohjelman asennus on valmis!
+
+
+*** 
+
+### [macOS](#tab/macos)
+ 
+1. Avaa Pääte ellei se ole jo
+2. Asenna JetBrains Rider suorittamalla alla oleva komento:
+
+    ```bash
+    brew install --cask rider
+    ```
+
+    Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+    macOS-käyttäjän salasanaa `Password:`-kentässä. Kirjoita silloin
+    salasana paikalle ja paina Enter-näppäintä.
+
+3. Tarkista, että Rider toimii. Avaa Launchpad ja käynnistä sieltä *Rider*.
+
+    Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Siinä tapauksessa voi valita *Avaa*.
+    
+    Hyväksy mahdolliset Riderin käyttöehdot.
+
+4. Kun JetBrains Rider kysyy lisenssiä, valitse **Free Non-Commercial License**.
+
+5. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse *Continue with email* ja tee itsellesi tunnus.
+
+6. Kun olet rekisteröitynyt, avaa Rider ja valitse *Log in for Non-Commercial License*.
+    
+    Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+    *Start Non-Commercial license*.
+
+6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+
+    - Teema: Valitse haluamasi teema
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Pluginit: valitse *Continue without Plugins*
+
+7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
+   Ohjelman asennus on valmis!
+
+***
+### [Linux](#tab/linux)
+ 
+1. Avaa jakelusi pääteohjelma ellei se ole jo
+2. Asenna Rider. Asennustapa vaihtelee jakelun mukaan:
+
+    - Arch: Asenna [`rider`](https://aur.archlinux.org/packages/rider)-pakkaus AUR:sta.
+      Voit asentaa sen käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
+      
+      ```bash
+      yay -S rider
+      ```
+      
+    - Muut jakelut: Suosittelemme asentamaan [Rider-snapin](https://snapcraft.io/rider) käyttäen `snap`-pakkaustenhallintaa:
+    
+        ```bash
+        snap install rider --classic
+        ```
+        
+        Vaihtoehtoisesti voit asentaa Riderin käsin seuraamalla [virallisia asennusohjeita](https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux)
+
+3. Tarkista, että Rider toimii. Käynnistä JetBrains Rider (joko sovellusvalikosta tai `rider`-komennolla).
+    Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Siinä tapauksessa voi valita *Avaa*.
+    
+    Hyväksy mahdolliset Riderin käyttöehdot.
+4. Kun JetBrains Rider kysyy lisenssiä, valitse **Free Non-Commercial License**.
+5. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse *Continue with email* ja tee itsellesi tunnus.
+
+6. Kun olet rekisteröitynyt, avaa Rider ja valitse *Log in for Non-Commercial License*.
+    
+    Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+    *Start Non-Commercial license*.
+6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+    - Teema: Valitse haluamasi teema
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Pluginit: valitse *Continue without Plugins*
+7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
+   Ohjelman asennus on valmis!
+
+
+*** 
+
+## Tekstieditori 
+
+Tälle opintojaksolle riittää mikä tahansa tekstieditori, joka
+ei ole asiakirjasovellus (eli ei Google Docs, Microsfot Word, yms. asiakirjojen laadintaan tarkoitettu).
+Vaihtoehtoja on monta; eri editorien vertailu ja latauslinkit löytyvät [Tekstieditori](/view/%%basedir%%/ohjeet/tekstieditori)-sivulla.
+
+Alla olevissa ohjeissa asennetaan Visual Studio Code (lyhyemmin VS Code), joka
+on tekstieditori, mutta on laajennettavissa kokonaiseksi IDE:n kaltaiseksi ohjelmaksi.
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo
+2. Asenna VS Code suorittamalla seuraava komento:
+
+    ```bash
+    winget install -e --id=Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
+    ```
+    
+    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+    Jos näet komentorivillä kysymyksen, kuten:
+    
+    ```
+    Do you agree to all the source agreements terms?
+    [Y] Yes [N] No:
+    ```
+    
+    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
+    
+    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
+
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
+
+3. Kokeile käynnistää VS Code suorittamalla komento:
+
+    ```bash
+    code
+    ```
+
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+    Jatkossa pääset VS Codeen myös menemällä
+    *Haku-ikoni* []{.menu-right} Kirjoita *Visual Studio Code* []{.menu-right} Valitse *Visual Studio Code*.
+
+***
+
+### [macOS](#tab/macos)
+
+ 1. Avaa Pääte ellei se ole jo
+2. Asenna VS Code suorittamalla alla oleva komento:
+
+    ```bash
+    brew install --cask visual-studio-code
+    ```
+    
+    Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+    macOS-käyttäjän salasanaa `Password:`-kentässä. Kirjoita silloin
+    salasana paikalle ja paina Enter-näppäintä.
+
+3. Tarkista, että VS Code toimii. Avaa Launchpad ja käynnistä sieltä *Visual Studio Code*.
+
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+
+
+***
+
+### [Linux](#tab/linux)
+ 
+1.  Avaa jakelusi pääteohjelma ellei se ole jo
+2.  Asenna Visual Studio Code. Asennustapa vaihtelee jakelun mukaan:
+
+    - Arch: Asenna [`visual-studio-code-bin`](https://aur.archlinux.org/packages/visual-studio-code-bin)-pakkaus AUR:sta. Voit asentaa sen
+      käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
+      
+      ```bash
+      yay -S visual-studio-code-bin
+      ```
+      
+    - Muut jakelut: Suosittelemme asentamaan [code-snapin](https://snapcraft.io/code) käyttäen `snap`-työkalua:
+    
+      ```bash
+      snap install code --classic
+      ```
+      
+      Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
+      
+3. Tarkista, että VS Code toimii. Käynnistä VS Code (joko sovellusvalikosta tai `code`-komennolla). 
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+
+***
+ 
+## JyPeli 
+
+1. Avaa käyttöjärjestelmäsi komentorivi (PowerShell, Pääte tai vastaava) ellei se ole jo
+2. Asenna JyPelin .NET-projektipohjat suorittamalla alla oleva komento:
+
+    ```bash
+    dotnet new install Jypeli.Templates
+    ```
+    
+    Kun asennus on valmis, näet jotakin tekstiä mallia:
+    
+    ```
+    Success: Jypeli.Templates installed the following templates:
+    ```
+3. Kokeile, että JyPeli toimii luomalla tasohyppelypeliprojekti ja suorittamalla se.
+   Suorita alla olevat komennot (huom: yhteensä neljä komentoa):
+
+    ```bash
+    cd ~
+    ```
+    ```bash
+    dotnet new Tasohyppelypeli -o TasohyppelypeliTesti
+    ```
+    ```bash
+    cd TasohyppelypeliTesti
+    ```
+    ```bash
+    dotnet run
+    ```
+    
+    Anna erityisesti viimeisen komennon suoriutua loppuun. 
+    Komennot tekevät seuraavat asiat:
+    
+    - Komento 1 muuttaa aktiivisen hakemiston kotihakemistoksi
+    - Komento 2 tekee uuden C#-projektin, jonka pohja otetaan JyPeli tasohyppelypeliesimerkistä
+    - Komento 3 siirtää komentorivin projektikansion sisälle
+    - Komento 4 kääntää ja käynnistää pelin
+    
+    Tuloksena pitäisi avautua pelattava tasohyppelypeli.
+    Voit kokeilla peliä tai sulkea sen.
+
+## ComTest 
+
+ComTest on Rider-plugin, jonka avulla tällä opintojaksolla kirjoitetaan
+yksikkötestejä.
+
+ 1. Avaa JetBrains Rider ja odota, kunnes pääset *Welcome to JetBrains Rider* -näkymään
+ 2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* &rarr; *Plugins*
+ 3. Valitse *Marketplace*-välilehti ja hae hakusanalla `ComTest`
+ 4. Valitse Comtest Runner -pluginin kohdalta *Install*
+     ![](/images/506961/rider-install-comtest.gif)
+ 5. Paina *Save*
+ 6. Sulje JetBrains Rider
+
+## Mitä seuraavaksi? 
+ 
+Onneksi olkoon!
+Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html).
+
+Voit halutessasi tutustua omatoimisesti konfiguroida IDE ja tutustua sen toimintaan tarkemmin:
+
+- [Riderin konfigurointi opintojaksolle sopivaksi](/view/%%basedir%%/ohjeet/rider#vesanAsetukset)
+- [Uuden projektin tekeminen Riderissa](/view/%%basedir%%/ohjeet/rider#solution)
+- [ComTestin käyttö Riderissa](/view/%%basedir%%/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest)
+
+Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/) -pakkaus, joka
+sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. 
+Tällä opintojaksolla *Non-commercial license* -lisenssi riittää
+Riderin käyttöön, mutta erityisesti ohjelmoinnista kiinnostuneelle voi Student Packista olla hyötyä
+myöhemmissä opinnoissa (esimerkiksi TIM-järjestelmä kehitetään paljolti JetBrains PyCharm:lla, 
+joka on Pythonille tarkoitettu IDE).
+
+## Ongelmatilanteita ja niiden ratkaisuja 
+
+Jos sinulla on ongelmia, joita ei ole listattu alla, pyydä apua 
+
+- Tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta](/view/%%basedir%%/koti))
+- Laita viestiä [Teamsissa](/view/%%basedir%%/ohjeet/teams) (Kysymyksiä ja apua -kanava)
+- Laita viestiä opettajille: ohj1-opet@tim.jyu.fi
+
+<details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
+ 
+Yllä olevan virheviestin syynä on todennäköisimmin että sinulla ei ole GLFW asennettuna, 
+tai se on liian vanha. Monen Linux-distron mukana tulee versio 3.2, mutta Jypeli
+vaatii vähintään version 3.3.
+
+Asenna uusin GLFW-versio käyttämäsi paketinhallinnan avulla.
+
+</details>
+
+<details closed><summary> System.PlatformNotSupportedException: GLFW is not supported on this platform...</summary>
+ 
+Voi olla että tietokoneellasi ei ole näytönohjaimen ajureita asennettuna.
+Mene Windowsin asetukset -> Päivitykset -> Valinnaiset (päivitä-nappulan alapuolella)
+-> Ajurit.
+Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"
+
+Jos ajuria ei löydy ja käytät kannettavaa, todennäköisesti sinulla on integroitu
+näytöonohjain, jolloin ajuri voi löytyä prosessorin
+valmistajan (Intel tai AMD) sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla
+`Intel graphics driver` tai `AMD graphics driver` prosessorin valmistajasta riippuen.
+
+Seuraavista työkaluista voi olla hyötyä:
+
+- Intel: [Driver support & Assistant tool](https://www.intel.com/content/www/us/en/support/detect.html)
+- AMD: [Auto detect and install drivers](https://www.amd.com/en/support/download/drivers.html)
+
+</details>
+
+<details closed><summary>Rider pyytää asentamaan .NETia vaikka olen asentanut sen jo </summary>
+
+Voi olla, että Rider ei löydä oikeaa .NET-versiota.
+
+Kokeile seuraavaa:
+
+- Avaa Rider aloitusnäkymä (jos Rider on auki, laita se kiinni ja avaa uudelleen).
+- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) []{.menu-right} *Settings*
+- Mene kohtaan *Build, Execution, Deployment*  []{.menu-right} *Toolset and Build*
+- Klikkaa kohdan *.NET CLI executable path* -kentän alasvetovalikkoa:
+
+    ![](/images/876452/image.png)
+
+Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain toista
+vaihtoehtoa kuin nykyinen arvo.
+Paina lopuksi *Save* ja kokeile luoda uusi solution.
+Jos virhe toistuu, kokeile jotain toista valintaa.
+
+</details>
+
+<details closed><summary> Rider on hidas tai antaa erilaisia oikeusvirheitä </summary>
+ 
+Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla
+hidasta haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.
+
+Mikäli sinulla on käytössä Microsoft Defender, Rider yleensä kysyy, haluatko
+Riderin säätävän sen asetukset automaattisesti. Muiden tuotteiden tapauksessa
+asetukset tulee säätää itse. 
+
+[Katso Riderin viralliset toimintaohjeet haittaohjelmien torjuntaohjelmien säätämiseksi.](https://rider-support.jetbrains.com/hc/en-us/articles/360006365380-How-Antivirus-Software-Affects-Rider-s-Performance-on-Windows)
+
+</details>
+
+<details closed> <summary>Rider-lisenssin uudelleenaktivointi  </summary>
+ 
+Lisenssi täytyy mahdollisesti aika ajoin
+uudelleenaktivoida kohdasta Help -> Manage licenses -> Activate.
+
+</details> 
+
+<details closed> <summary>dotnet not found / command not found: dotnet </summary>
+
+Katso .NET-asennusohjeet Työkalut-ohjeesta.
+
+</details>
+
+<details closed><summary>A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist </summary>
+
+Jos komentoriviltä tulee (Linux):
+
+    A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist 
+  niin  ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist>
+
+</details>
+
+<details closed><summary>Näppäinkomennot eivät toimi</summary>
+ 
+Jotkin editorin näppäinoikotiet ei toimi sellaisenaan muilla kuin 
+Yhdysvaltalaisilla näppäimistöillä. On siis tarpeen valita toimimattomille 
+suosikkikomennoillesi uudet näppäinoikotiet asetuksista:
+`File → Settings → Keymap → Editor actions`.
+
+</details>
