@@ -1,4 +1,6 @@
-# <span class="part-icon">👨🏻‍💻</span> Ohjelmointi 1 (ITKP102, 6 op, Jyväskylän yliopisto)
+# Ohjelmointi 1
+
+Tämä on Jyväskylän yliopiston järjestämän ITKP102 Ohjelmointi 1 -opintojakson oppimateriaali.
 
 *Tervetuloa opiskelemaan ohjelmointia!* 😍
 

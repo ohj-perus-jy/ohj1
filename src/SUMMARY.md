@@ -2,7 +2,7 @@
 
 [Aloitus](./index.md)
 [Suorittaminen](./suorittaminen.md)
-[Työkalut ja asentaminen](./tyokalut/tyokalut.md)
+[Työkalut ja asentaminen](./tyokalut.md)
 [Versiohallinta ja Git](./tyokalut/git.md)
 [Tuki ja palaute](./tuki-ja-palaute.md)
 [Harjoitustyö](./harjoitustyo.md)
@@ -39,7 +39,7 @@
     * [Merkkijonot]()
     * [Osan kaikki tehtävät](./osa4/tehtavat.md)
  * [Toimiikohan ohjelma?](./osa5/osa5.md)
-    * [Debuggaus]()
+    * [Debuggaus](./osa5/1-debuggaus.md)
     * [Automaattinen testaus]()
     * [Osan kaikki tehtävät](./osa5/tehtavat.md)
  * [Asioiden kokoamista yhteen](./osa6/osa6.md)
