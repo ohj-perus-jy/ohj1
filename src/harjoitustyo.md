@@ -1,3 +1,509 @@
 # Harjoitustyö
 
 Harkkatyön kuvaus. Lomakkeet edelleen TIMissä
+
+Harjoitustyö
+
+ - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty.
+   Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada
+   arvosanan.
+ - tehdään yksin tai parityönä. Mikäli luontaista paria ei löydy, ei sitä kannata ehkä etsiäkään
+   väkisin. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
+ - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä.
+   Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
+ - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, 
+   mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli).
+   Muita kieliä ei hyväksytä.
+
+## Vaiheet ja aikataulu
+
+Harjoitustyöhön kuuluu kolme vaihetta, jotka on listattu alla.
+
+Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää harjoitustyösi [ohjauksessa](tuki-ja-palaute.html) tai sopimalla erillinen ohjausaika sähköpostitse (<%%teacher_email%%>). 
+
+## Aikataulu ja takarajat
+
+| Tutkinto-opiskelijat | Lukiolinjat | Avoin yliopisto |
+|----------------------|-------------|-----------------|
+| Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
+
+## Harjoitustyön vaiheiden tarkistuslista
+
+Alla on harjoitustyön vaiheet ja tarkistuslista kunkin vaiheen suorittamiseksi.
+
+### Vaihe 1: Suunnitelma versiohallinnassa
+
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: Suunnitelma on näytettävä ohjaajalle ennen osan 5 harjoitustehtävien takarajaa.
+
+ 2. Luo oma etävarasto GitLabiin tai GitHubiin. Katso [kirjalliset ohjeet]() tai [ohjevideo](https://youtu.be/MQJ69rmd1sw) TODO: Linkki
+
+ 3. Kopioi ja liitä etävarastosi osoite [Oma eteneminen]() -sivulle. Etävaraston osoitteen on oltava muotoa https://github.com/nimi/ohj1ht.git TAI https://gitlab.com/nimi/ohj1ht.git. TODO: Linkki. 
+ 
+ 4. Hae etävarasto omalle tietokoneelle Git-työkalun avulla. Sinulla tulee olla Git-työkalu asennettuna, katso [työkaluohjeet](). Katso git-ohjeet [omien tietojen asettamiseksi]() ja [etävaraston lataamiseksi omalle tietokoneelle](). TODO: Linkit. 
+
+ 5. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](). Katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md). TODO: Linkit.
+ 
+ 6. Lataa suunnitelmasi ja kuvasi etävarastoon. Katso ohjeet [tiedostojen lisäämiseksi git-varastoon]() ja ohjeet [git-varaston lataamiseksi etävarastoon](). TODO: Linkit. 
+
+ 7. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+
+### Vaihe 2: Työ 50 % valmis
+
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: Harjoitustyön tilanne on näytettävä ohjaajalle ennen osan 8 harjoitustehtävien takarajaa.
+
+ 2. Tee työsi eteenpäin suunnitelman mukaan. 
+    - Luo ohjelmakoodia varten [uusi solution](). 
+    - Aseta *Solution directory*-kohtaan sama polku kuin 1. vaiheen Git-varastolla. Esim. `C:\kurssit\ohj1\ht`.
+    - Pidä mielessä suunnitelmasi sekä harjoitustyön [vaatimukset](#vaatimukset). 
+    - Jos teet harjoitustyön parityönä, muista tehdä tarkaa tuntikirjanpito
+
+ 3. Varmista, että työsi koodi on ajan tasalla etävarastossa.
+    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)]() ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](). TODO: Linkit.
+    - Muista pitää etävarasto ajan tasalla mahdollisimman usein!
+
+ 4. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+
+Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
+
+***
+
+### Vaihe 3: Työ 100 % valmis
+
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäisen tentin mennessä** 
+
+
+- {#v3s1 saveSingleAnswer: true#} Tarkista, että työ täyttää kaikki vaaditut osa-alueet
+  - Näet kaikki tarkastettavat osa-alueet [vaatimuksista kohdasta "Tarkastettavat osa-alueet"](#htosat)
+  - Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
+
+- {#v3s2 saveSingleAnswer: true#} Varmista, että työsi lopullinen koodi on etävarastossa
+   - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](/view/%%basedir%%/ohjeet/git#addcommit) ja ohjeet [git-varaston lataamiseksi etävarastoon](/view/%%basedir%%/ohjeet/git#push)
+   - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
+
+- Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+
+Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
+
+## Vaatimukset
+
+### Suunnitelma
+
+Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan hyväksymä.
+Suunnitelmat tallennetaan GitLabiin, ks. yläpuolelta vaiheen 1 tarkistuslista.
+
+Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitustyöhön):
+
+  1. Tekijöiden nimet
+  2. Pelin nimi
+  3. Harjoitustyön osoite gitissä
+  3. Pelaajien lukumäärä (1-4) 
+  4. Pelin taustatarina tai kuvaus pelin teemasta
+  5. Pelin idea ja tavoitteet
+  6. Hahmotelma pelistä (kuva tai kuvia paperilla käsin tai tietokoneella piirrettynä)
+  7. Jonkinlainen kuvaus siitä, miten peli etenee
+  8. Pelissä olevat oliot, niiden toiminnot ja missä suhteessa ne ovat toisiinsa
+  9. Toteutuksen suunnitelma: mitä tekisin ja missä järjestyksessä? Millä aikataululla?
+
+Voit katsoa vinkkejä seuraavista esimerkkisuunitelmista:
+
+ * [Hirsipuu](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/vesal)  (peli)
+ * [AngryLego](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/vesalangry) (peli)
+ * [Työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/tyoaikaraportti) (ei-peli), 
+   katso myös [tutoriaali työaikaraporttiin](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial)
+
+### Toiminnallisuus
+
+Pelissä pitää *tapahtua jotakin*, eli ruudulla pitää tapahtua jotain 
+järkevää. Käyttäjän tulee voida osallistua peliin interaktiivisesti 
+esimerkiksi hiiren ja/tai näppäimistön välityksellä.
+
+### Koodi
+
+Työssä on oltava vähintään muutama aliohjelma Jypelin 
+valmiiden aliohjelmien (`Main`, `Begin`) lisäksi.
+
+Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa-alueet".
+
+
+### Paritöistä {id="E5TkH2FFBzG1"}
+
+Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Ks. [Git-ohjeet]().
+
+**Parityöt, työnjako:** Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
+
+**Parityöt, työn vaativuus:** Työn on oltava vaativampi kuin yksin tehdyn työn, ja tässä työmäärä on tärkein mittari. Ohjaajat käyvät työn läpi tarkastustilaisuudessa ryhmäläisten kanssa. Yksittäistä pelin ominaisuutta joka kaikilta paritöiltä vaadittaisiin ei yleisellä tasolla voi antaa. Näiden kriteerien tarkoitus ei ole vaikeuttaa tekemistä vaan ehkäistä ennalta vapaamatkustamista.
+
+
+### Tarkastettavat osa-alueet {#htosat id="0K0raYtB4Mok"}
+
+Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan harjoitustyön esittelemisen yhteydessä.
+
+ 1. **Nimeäminen** on johdonmukaista ja noudattaa [kurssin koodauskäytänteitä](/view/%%basedir%%/ohjeet/koodauskaytanteet).
+ 
+ 1. **Näkyvyys**: Aliohjelmien ja attribuuttien näkyvyys tulee olla määritelty
+(`public`, `private`). Julkisia staattisia (`public static`) muuttujia ei saa olla. 
+ 1. **Ei turhia peliluokan attribuutteja**. 
+    
+    Jos joitain koko peliluokkaan näkyviä 
+    arvoja tarvitaan, pyritään käyttämään vakioita (`const`). Kuvat, äänet,
+animaatiot ja muut raskaat resurssit on kuitenkin hyvä pitää attribuutteina, jolloin
+ne ladataan vain kerran pelin aikana. Esim. kuvien olioviitteet voi kiinnittää
+muuttumattomaksi `static readonly` määreellä.
+
+ 1. **Toimii**: Ohjelma toimii, ei kaadu ja päättyy asiallisesti. 
+
+    Pelissä pitää tapahtua jotakin järkevää, johon käyttäjä voi osallistua
+interaktiivisesti. Pelissä pitää myös olla 
+    tavoite, haaste tai tarina.
+
+ 1. **Ei toistoa**, joka olisi voitu tehdä silmukoilla tai
+    aliohjelmilla. 
+
+    Myöskään aliohjelmien välillä ei saa olla toistoa: esimerkiksi
+`LuoVihu1` ja `LuoVihu2`, joissa olisi lähes sama koodi kahteen kertaan.
+
+ 1. **Taulukko**: Käytetään taulukkoa tai listaa. 
+ 
+    Tietorakenteella täytyy olla jokin
+    tarkoitus siten, että sinne 
+    tallennetaan useita arvoja, joita todella käytetään 
+    pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja 
+    helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. 
+    Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä.
+    [Esimerkkejä.](#taulukko-silmukka-funktio) 
+
+ 1. **Silmukka**: Ainakin yksi silmukka. 
+ 
+    Silmukalla täytyy olla jokin tarkoitus
+siten,
+    että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään
+    "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee
+    olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista,
+    kirjoittamista tai
+    edelleenkehittämistä. [Esimerkkejä.](#taulukko-silmukka-funktio)
+
+ 1. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen
+käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
+
+    Et
+   siis saa tehdä koodia kuten 
+   
+       ```csharp
+       if (y < 18)
+       ```
+   
+    jossa 18 on hyvin todennäköisesti 
+   turha literaali. Sen tilalle tulee laittaa muuttuja tai vakio, kuten 
+   
+    ```csharp
+    int pisteraja = 18
+    ``` 
+    
+    Vakiot ilmaistaan `const`-määreellä. 
+ 1. **`}` + 2 tyhjää**: Aliohjelmien loppusulun `}` jälkeen tasan kaksi tyhjää riviä.
+ 1. **Dokumentaatio**: Luokat, aliohjelmat ja attribuutit tulee dokumentoida.
+
+    Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne
+sen tekevät.
+    Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`).
+    Myös attribuutit dokumentoidaan `summary`-tagein. 
+1. **Funktio**: Pelissä on funktio. 
+
+    Funktio ottaa
+    vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja
+palauttaa
+    arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin;
+funktiolla täytyy olla jokin todellinen tarkoitus
+    ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa
+tai taulukkoa/listaa. [Esimerkkejä.](#taulukko-silmukka-funktio) 
+ 1. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. 
+    Muista asentaa [kurssin Rider-asetukset](/view/%%basedir%%/ohjeet/rider#vesanAsetukset) 
+ 1. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
+
+#- {id="7OV2RTbSxfxU"}
+
+## Usein kysytyt kysymykset ja muut vinkit {id="XO8Fj61lFd6z"}
+
+#- {area="qa" .qa-list id="sxDGpGyb1ugQ"}
+
+### Millaisia pelejä voi harjoitustyöksi tehdä? {area="qa-mika-aihe" collapse="true" id="O3ePkf8P11Kz"}
+
+#- {id="SsDEpqshyQkV"}
+Jos et keksi, minkä tyylisen pelin haluaisit tehdä, 
+katso, millaisia pelejä on tehty edellisissä toteutuksissa:
+
+``` {#Video2022 plugin="showVideo" id="pQ1qwGBYBVPh"}
+footer: "Ohjelmointi1 -kurssilla tehtyjä pelejä keväällä 2022"
+iframe: true
+width: 560
+lazy: false
+height: 315
+open: true
+file: //www.youtube.com/embed/Coknsg_ClR4
+```
+
+``` {#Video1 plugin="showVideo" id="23RoKB8IVDOF"}
+footer: "Ohjelmointi1 -kurssilla tehtyjä pelejä keväällä 2016"
+iframe: true
+width: 560
+lazy: false
+height: 315
+open: true
+file: //www.youtube.com/embed/-qBQ5CmF5ps
+```
+
+#- {id="VSN2dmOFeTza"}
+Muista että voit tehdä muutakin kuin pelin!
+
+#- {area_end="qa-mika-aihe" id="q1wubHJJTL3M"}
+
+### Miten saan taulukon, silmukan tai funktion peliini? {#taulukko-silmukka-funktio area="qa-taulukko-silmukka" collapse="true" id="PrT6kcAMNZha"}
+
+#- {id="UVYCAVlaf3LL"}
+Kun tallennat pelin olioita tai tapahtumia listaan / taulukkoon, 
+voit käsitellä niitä yhdellä silmukalla ja paketoida logiikan omaan funktioon. 
+Näin syntyy sekä selkeää että tehokasta koodia.
+
+**Mitä pelidataa kannattaa kerätä?** Tässä esimerkkejä. 
+
+ * Pelaajan syötteet: painetut näppäimet, kosketukset
+ * Pelimaailman tila: viholliset, kerättävät, esteet
+ * Tapahtumat: törmäysten tagit, pistemäärät, aikaleimat, ratakierrokset
+
+Tallenna tiedot listaan sitä mukaa kun ne (olio, tapahtuma...) syntyvät.
+
+**Millainen funktio voisi olla?** Tässä esimerkkejä. Huomaa, että nämä ovat enemmän ideoita siitä, millaiset
+funktiot voisivat olla pelissä hyödyllisiä.  
+
+ * Laske aikojen keskiarvo
+ * Etsi minimi, maksimi tai eniten kerätty esine
+ * Yhdistele dataa (esim. kaksinpelissä pallon hallinta-aika)
+ * Erityisesti ei-peleissä jokin muu tiedonkäsittely, johon liittyy
+   sisään menevä aineisto ja siitä tehty laskennallinen tulos
+
+Pidä laskentalogiikka omassa funktiossa, jotta peliluokka pysyy selkeänä.
+
+**Milloin dataa käsitellään?** Tässä esimerkkejä. 
+
+ * Kenttä vaihtuu
+ * Aikaraja ylittyy
+ * Peli alkaa alusta
+
+
+**Hyödynnä tulokset pelissä** Tässä esimerkkejä.
+
+ * Näytä pelaajalle (pisteet, tilastot, top-ajat)
+ * Käynnistä uusi vaikeustaso, jos keskimääräinen kierrosaika laskee
+ * Palkitse pelaaja, kun kerättyjen esineiden määrä ylittää rajan
+
+
+[🐦‍⬛
+Jypelin kirjaston ohjeissa on koodiesimerkkejä, joissa käytetään silmukkaa tai
+taulukkoa. Nämä eivät sellaisenaan riitä, vaan työssä tulee olla oman 
+ajatustyön tulos.]{.huomautus}
+
+#- {id="m5Fl9RsUpWV1"}
+
+```` {id="PF3QJIlneQgK" atom="true"}
+Mikäli omassa pelissä ei ole taulukkoa/listaa, silmukkaa tai funktiota, pitää
+ohjaajalle esittää itse tehdyn (ts. työ on tehty omatoimisesti ilman merkittävää apua ohjaajalta tai muilta opiskelijoilta) demotehtävän vastaus, missä 
+em. asioiden osaaminen on näytetty.  Tästä voi laittaa vaikka
+kommentin omaan harjoitustyöhön tyyliin:
+
+```csharp
+// TODO: taulukko, ks: https://tim.jyu.fi/answers/kurssit/tie/ohj1/%%vuosik%%/demot/demo7?answerNumber=1&task=matriisiensumma&user=vesal
+```
+
+Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä klikkaamalla sitä hiiren oikealla painikkeella, ja kopioimalla linkin osoite.
+````
+
+#- {area_end="qa-taulukko-silmukka" id="U3KHq07dE5rs"}
+
+#- {id="hXkkQVZnTyJP"}
+{!!!
+
+Nyt Ohj1 syksy 2020 kurssin kanssa on ohjauskapasiteetin takia
+pakko venyttää lopullista hyväksyntää sen verran mitä ohjausaikoja
+saadaan riittämään viikoittain.  Mutta viimeistään 17.12 mennessä
+pitäisi kaikkien valmistua (ellei erikseen ole sovittu muuta)!
+
+Älkää panikoiko tenttiviikolla, vaan huilatkaa ja hiokaa loppuun
+seuraavalla viikolla.
+
+!!!}
+
+#- {id="e24RGYX5oa3c"}
+
+### Voinko tehdä jotain muuta kuin peli? {#muukuinpeli area="qa-muukuinpeli" collapse="true" id="PxtuQa5iGxqo"}
+
+#- {id="JHOIqlgmzoli"}
+Kyllä, vaihtoehtoja ovat esimerkiksi:
+
+ * [Janat-haaste](ht/janat)
+ * [työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial )
+ * [Tuulet netistä](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2022/syksy/ht/vesalsaa)
+
+Muita vaihtoehtoja: 
+
+ * Yksi esimerkki voisi olla vaikkapa lukea tiedostosta suomenkielinen teksti ja lasketaan mitä vokaalia on eniten.
+ * Tai työ voi olla tietyn WWW-sivun lukeminen ja sieltä tiettyjen tietojen käsittely yksinkertaiseen muotoon. 
+ * Esimerkiksi joltakin sääsivulta päivän tuuliarvojen maksimi ja keskiarvo.
+
+Monet [Advent of code -tapahtuman](https://adventofcode.com/) tehtävät voivat hyvinkin soveltua harjoitustyön aiheeksi -- tosin loppupään tehtävät ovat jo hyvin vaikeita. 
+Inspraatiota voi hakea myös vaikkapa täältä [http://nifty.stanford.edu/](http://nifty.stanford.edu/). Katso
+tuolta CS1-tasoiset tehtävät, niiden pitäisi (suurelta osin) olla tämän kurssin
+osaamistavoitteiden mukaisia. Näissäkin tapauksissa suunnitelma tulee
+kuitenkin hyväksyttää ohjaajalla. 
+
+Ei-pelien tapauksessa ohjelmaan tehdyt testattavissa olevat aliohjelmat
+tulee testata.
+
+#- {area_end="qa-muukuinpeli" id="saoOkB6lW5f9"}
+
+### Mistä aloitan pelin koodaamisen? {#vinkkeja area="qa-vinkkeja-aloitukseen" collapse="true" id="e1qbGP27oekw"}
+
+#- {id="TDEGrkFEHoBv"}
+ - Aloita vaikka pistämällä kentälle jotakin olioita
+ - [MontaPalloa.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/luento10/MontaPalloa/MontaPalloa/MontaPalloa.cs)
+ - Jos peli on tasohyppelymäinen, luo uusi projekti kohdasta Jypeli -> Tasohyppely
+ - Seuraavassa videossa on esitelty kuinka kuvia käytetään.  Sitä ennen (ks [sisällön tuominen peliin ](https://tim.jyu.fi/view/kurssit/tie/itkp102/ohjeet/sisallon-tuominen-peliin))
+   on
+      1. piirretty/haettu tarvittavat kuvat, muista tekijänoikeus
+      2. tehty projektiin Content-niminen kansio ja kopioitu kuvat sinne
+      3. klikattu hiiren oikealla kutakin kuvaa (tai valittu monta) ja Properties
+      ja sieltä valittu "Copy if newer"
+
+#- {id="YnNNUDPSZv9C"}
+
+``` {plugin="showVideo" #Plugin2 id="21FC0zjNvj7u"}
+type: list
+stem: "Pallopeli, jossa pallojen tilalle kuvia"
+videoname: Luento 10
+start: 48:26
+end: 54:25
+width: 800
+height: 600
+file: "https://kurssit.it.jyu.fi/ITKP102/2020s/luento/luento10a.mp4"
+```
+
+#- {id="cbcoDlNB6uCZ"}
+ - [LumiukkoTaulukolla.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/luento12/LumiukkoTaulukolla/LumiukkoTaulukolla/LumiukkoTaulukolla.cs)
+ - [Pong-peli](https://trac.cc.jyu.fi/projects/npo/wiki/Pong/Vaihe1)
+ - [Läpsylintu](https://trac.cc.jyu.fi/projects/npo/wiki/Lapsylintu)
+ - [AngryLego.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/live13/AngryLego/AngryLego/AngryLego.cs)
+
+``` {plugin="showVideo" #Plugin1 id="4HDfZ7jW8cGf"}
+type: list
+stem: "AngryLegon aloitus"
+videoname: Luento 13
+start: 1:17:50
+end: 1:29:50
+width: 800
+height: 600
+file: "https://kurssit.it.jyu.fi/ITKP102/2020s/luento/luento13a.mp4"
+```
+
+#- {id="6tylu9h3De8s"}
+- ei-pelin tekijöille: 
+    - [Työaikaraportit](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial)
+    - [Kuvaaja.cs](https://gitlab.jyu.fi/tie/ohj1/2022s/esimerkit/-/blob/main/demopohjat/demo7/Kuvaaja/Kuvaaja.cs)
+    - [HaeTuulet versiohistoria](https://gitlab.jyu.fi/vesal/ohj1htsaa/-/commits/main/saa)
+
+#- {area_end="qa-vinkkeja-aloitukseen" id="nbCPBusGMmIs"}
+
+### Miten voisin työskennellä parin kanssa samanaikaisesti? {area="qa-codewithme" collapse="true" id="RN3zAnebEKVO"}
+
+#- {id="syCXPw1fAu4a"}
+Lähtökohtaisesti on kolme tapaa, joita tällä opintojaksolla suositellaan:
+
+- Kunkin tekee muutoksia omalla koneella ja lataa ne samaan etävarastoon
+- Pariohjelmointi
+- Koodieditorin jakaminen verkossa (Google Docs -tyylinen samanaikainen muokkaus)
+
+**Eri koneet, sama etävarasto**: Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston
+omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon.
+Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä)
+tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää
+kahden eri tekijän muutokset yhteen.
+Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](/view/%%basedir%%/ohjeet/git#push)) ja ladataan ([`git pull`](/view/%%basedir%%/ohjeet/git#pull)) sieltä
+mahdollisimman usein.
+Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy
+ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän
+opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan.
+
+**Pariohjelmointi**: Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)).
+Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja
+toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein -- vaihto voi
+tapahtua jopa "lennosta".
+Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon
+menee samalla tavalla kuin jos tekisi harjoitustyötä yksin.
+Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa,
+sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta.
+Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä
+"vuoron vaihtaminen" etänä on yleensä hankalaa.
+
+**Työskentely samanaikaisesti verkossa**: Jos työtä halutaan työstää yhtä aikaa samassa editorissa, helpoin tapa on
+käyttää Riderin Code With Me -ominaisuutta. Ominaisuuden avulla koodieditorista tulee
+Google Docs -tapainen alue, jossa kaksi tai useampaa henkilöä voi muokata koodia samanaikaisesti eri koneella.
+Muutokset tallentuvat yhdelle tietokoneelle, josta ne on helppoa ladata etävarastoon ilman konflikteja.
+Ominaisuus on Riderissa betakokeilussa.
+Valitettavasti non-commercial-lisenssillä (oletus tällä kurssilla) session enimmäisaika on 30 minuuttia.
+Jos anot opiskelijalisenssiä, saat (ilmeisesti) rajattoman käyttöajan.
+
+#- {area="edulisenssi" collapse="true" id="XT8jgrmfuguy"}
+Opiskelijalisenssin anominen Rideriin
+
+#- {id="2bFVZp8bfqFu"}
+Voit anoa itsellesi maksuttoman opiskelijalisenssin käyttäen <u>student.jyu.fi</u>-sähköpostiosoitetta.
+Noudata huolellisesti alla olevia ohjeita. 
+ 			
+ 1. Varmista, että student.jyu.fi-osoitteesi toimii. 
+    Kannattaa lähettää itselleen testiposti jostain ulkopuolisesta osoitteesta
+    (esim. Gmail tai Hotmail) ja katsoa tuleeko posti itselle perille.
+    Ota varmuuden vuoksi mahdollinen edelleenohjaus pois päältä.
+    Huomioi, että edelleenohjauksen deaktivoitumisessa on viivettä.
+    Jos posti ei tule perille, tarkista account.jyu.fi -> sähköpostiasetukset.
+    Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
+
+    **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
+ 1. Siirry osoitteeseen [https://www.jetbrains.com/community/education/#students](https://www.jetbrains.com/community/education/#students) 
+ 2. Klikkaa *Apply now*.			
+ 3. Täytä tiedot *Apply with: University email address* -lomakkeessa, ole tarkkana 
+ että annat student.jyu.fi-loppuisen opiskelijasähköpostiosoitteen. Hyväksy mahdolliset käyttöehdot. 
+ Klikkaa *Apply for free products*.			
+ 4. Avaa yliopiston sähköpostisi, noudata JetBrainsin lähettämän vahvistusviestin
+ ohjeita ja vahvista lisenssi.
+ **<u>Jos viesti ei tulekaan, älä lähetä lomaketta useita kertoja "varmuuden vuoksi". Siitä on vain ja ainoastaan haittaa.</u>**
+ 5. JetBrains pyytää linkittämään lisenssin JetBrains-tiliin. 
+ Tilin voinee luoda M365/Microsoft-tilin kautta valitsemalla *Sign in with Microsoft* ja yhdistämällä suoraan			
+ yliopiston sähköpostiin.			
+ 			
+Lisenssi on voimassa vuoden, jonka jälkeen sen voi uusia.
+ 			
+
+Jos teet yrityksiä väärällä sähköpostiosoitteella (esim. muulla kuin tuo pitkä student-muoto), niin			
+JetBrains lisää osoitteesi mustalle listalle, ja sen jälkeen osoitteen avaamista pitää pyytää lomakkeella:
+ 			
+- <https://rider-support.jetbrains.com/hc/en-us/requests/new>
+
+#- {area_end="edulisenssi" id="csmaI9LmBAjt"}
+**Code With Me käyttöönotto:**
+Valitse yläpalkista *Tools* -> *Enable Code With Me* ja lopuksi *Enable and restart*
+
+**Session aloitus**
+
+1. Yksi ryhmänjäsen käynnistää *Code With Me* session oikealta ylhäältä löytyvästä kuvakkeesta. (henkilön kuva plus merkillä)
+
+2. Valitse sopivat oikeudet. *Edit files* sopivin mikäli koodataan yhdessä. Tämän jälkeen valitse *Start Session*
+
+3. Lähetä liittymislinkki kaikille koodisessioon osallistuville. Linkin saat jälleen oikealta ylhäältä *Code With Me* valikosta.
+
+**Sessioon Liittyminen**
+
+1. Mene linkkiin, jonka session aloittaja jakoi ja paina *Join Session*. Mikäli mitään ei tapahdu, asenna sivun ohjeiden mukaan *Toolbox App*.
+
+2. Odota, että session aloittaja hyväksyy liittymispyynnön.
+
+#- {area_end="qa-codewithme" id="0OEBfU4FStX1"}
+
+#- {area_end="qa" id="it6ss5JzoiUr"}
