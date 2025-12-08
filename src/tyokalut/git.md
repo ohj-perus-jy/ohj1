@@ -355,29 +355,15 @@ reference: [clone](https://git-scm.com/docs/git-clone)
 
 ## Tiedostojen vieminen paikalliseen tietovarastoon (add, commit) 
 
-Kun tiedostoja lisätään, muokataan tai poistetaan, tulee kaikki nämä
-muutokset lisätä paikalliseen tietovarastoon.
+Kun tiedostoja lisätään, muokataan tai poistetaan, tulee kaikki nämä muutokset lisätä paikalliseen tietovarastoon.
 
+**Tämä vaihe tehdään <u>joka kerta kun olet tehnyt muutoksia</u> koodiin tai muihin tiedostoihin.**
 
-**Tämä vaihe tehdään <u>joka kerta kun olet tehnyt muutoksia</u> koodiin tai
-muihin tiedostoihin.**
+Esimerkki: Suunnitelman kuvan tallentaminen. Tallenna harjoitustyösi suunnitelman sekä luonnoskuvan `suunnitelma`-kansioon. Ole tarkkana, että kuva menee oikeasti juuri tuohon kansioon. Sekä suunnitelmatekstiä varten että kuvaa varten on olemassa esimerkit `suunnitelma`-kansiossa. 
 
-### Muista: Tallennathan suunnitelman oikeaan paikkaan 
+Kuvan pikselikoon tulee olla enintään 1920 x 1080 pikseliä. Kuvan tiedostokoon tulee olla enintään 1 megtavu. 
 
-Tallenna harjoitustyösi suunnitelman sekä luonnoskuvan `suunnitelma`-kansioon.
-Sekä suunnitelmatekstiä varten että kuvaa varten on olemassa
-esimerkit `suunnitelma`-kansiossa. 
-
-Huomioitavaa: 
-
- 1. Kuvan pikselikoon tulee olla enintään 1920 x 1080 pikseliä.
- 2. Kuvan tiedostokoon tulee olla enintään 500 kilotavua (500 kB).
-
-### Komentorivi tai Git Bash (suositus, Windows, macOS, Linux) 
-
-
-Siirry `cd`-komentoja käyttämällä harkkatyökansioosi ja 
-anna seuraavat kaksi komentoa:
+Avaa Pääte (macOS), Git Bash (Windows) tai muu komentorivi, siirry `cd`-komentoja käyttämällä harkkatyökansioosi ja anna seuraavat kaksi komentoa:
 
     git add --all 
     git commit -m "kuvaava viesti miksi muutokset on tehty"
@@ -386,7 +372,7 @@ Ensimmäinen komento lisää kaikki muokatut tiedostot ns. index/stage-alueelle,
 ja seuraava komento tekee varsinaisen tietovarastoon tallentamisen.
 
 **On tärkeää**, että aina `add`-komennon jälkeen tarkistat `git status`-komennolla mitä tiedostoja 
-tietovarastoon on menossa. [Älä lähetä tietovarastoihin suuria tiedostoja](#tiedostonKoko).
+tietovarastoon on menossa. Älä lähetä tietovarastoihin suuria tiedostoja.
 
 Mikäli et halua lähettää tietovarastoon kaikkia muutoksia, vaan esimerkiksi
 vain yhden tiedoston, laita `--all`-option tilalle haluamasi tiedoston nimi:
@@ -455,11 +441,7 @@ Lue tästä lisää esimerkiksi [StackOverflowsta](https://stackoverflow.com/que
 
 ### Tiedostojen koko 
 
-Versionhallintajärjestelmä ei sovi suurten tiedostojen tallennukseen. 
-Älä lähetä versiohallintaan esimerkiksi suuria kuva-, musiikki- tai 
-videotiedostoja. Myöskään `bin`, `obj` ja vastaavat kansiot (sis. käännetyt ohjelmat ja 
-muut IDE:n tuottamat käännöksen oheistiedostot) eivät kuulu versiohallintaan. 
-Täydennä tarvittaessa `.gitignore`-tiedostoa.
+Versionhallintajärjestelmä ei sovi suurten tiedostojen tallennukseen. Älä lähetä versiohallintaan esimerkiksi suuria kuva-, musiikki- tai videotiedostoja. Myöskään `bin`, `obj` ja vastaavat kansiot (sis. käännetyt ohjelmat ja muut IDE:n tuottamat käännöksen oheistiedostot) eivät kuulu versiohallintaan. Täydennä tarvittaessa `.gitignore`-tiedostoa.
 
 ### Älä laita salaisuuksia versiohallintaan
 
@@ -470,24 +452,13 @@ jotain, jonka haluat poistaa myöhemmin, se onnistuu esimerkiksi [BFG Repo-Clean
 
 ## Tapoja käyttää Gitiä
 
-Aluksi ehdottomasti suositeltavin tapa on käyttää 
-[Gitiä komentoriviltä](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/gitjakomentorivi).
-On olemassa kuitenkin myös graafisia ympäristöjä Gitin käyttämiseen.
-Myös IDEissä on nykyään varsin asialliset Git-asiakasohjelmistot (eli suomeksi 
-käyttöliittymä Git-komentojen käyttämistä varten), joskin jokainen on aina 
-vähän omanlaisensa ja vaatii totuttelua. Kaikkia alla mainittuja 
-työkaluja voit kuitenkin käyttää ristiin. Kannattaa kokeilla eri tapoja. 
-Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
+Aluksi ehdottomasti suositeltavin tapa on käyttää Gitiä komentoriviltä. On olemassa kuitenkin myös graafisia ympäristöjä Gitin käyttämiseen. Myös IDEissä on nykyään varsin asialliset Git-asiakasohjelmistot (eli käyttöliittymä Git-komentojen käyttämistä varten), joskin jokainen on aina vähän omanlaisensa ja vaatii totuttelua. Kaikkia alla mainittuja työkaluja voit kuitenkin käyttää ristiin. Kannattaa kokeilla eri tapoja. Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
 
- * [Git ja komentorivi](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/gitjakomentorivi) (Windows, Linux ja macOS)
- * [Git ja Eclipse](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/giteclipse) (Windows, Linux, macOS; nykyisin valmiina Eclipsen mukana)
  * [SmartGit](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/smartgit)  (Windows, Linux, macOS)
  * [Fork](https://git-fork.com/) (Windows, macOS)
  * [TortoiseGit](https://tortoisegit.org/) (Windows)
  * GitHub Desktop (Windows, macOS)
- * Gitiä voi käyttää myös [Windows Subsystem for Linuxin](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/wsl) läpi.
-
-Asenna näistä kohdista ainakin komentoriviin liittyvät asiat.  Voit asentaa myös muita jos siltä tuntuu.
+ * Gitiä voi käyttää myös Windows Subsystem for Linuxin läpi.
 
 ## Git termejä 
 
