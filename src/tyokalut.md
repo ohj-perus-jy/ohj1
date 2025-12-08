@@ -114,15 +114,6 @@ kaikki tarvittavat työkalut asennettua.
 
 ### [Windows](#tab/win)
 
-``` 
-{plugin="showVideo" id="HIAhI8P5lzq7"}
-type: small
-videoname: "Avaa video: PowerShellin avaaminen Windowsilla"
-width: 400
-height: 500
-file: "/files/873346/powershell_windows.mp4"
-```
- 
 1. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 2. Kirjoita hakupalkkiin *PowerShell*
 3. Valitse löytyvistä tuloksista *Windows PowerShell*
@@ -188,12 +179,9 @@ Toimi seuraavasti:
 2. Tee yllä mainitut vaiheet 1-4 *vain toisella rivillä* olevalle komennolle (eli `ls`)
 3. Jatka rivien suorittamista kunnes olet suorittanut kaikki laatikossa olevat rivit
 
-Toisin sanoin, tällä sivulla jokainen yksittäinen komento on aseteltu omalle rivilleen.
-Tarkoitus on, että suoritat jokaisen rivin yksi kerrallaan siinä järjestyksessä, jossa ne on laatikossa kirjoitettu.
+Toisin sanoen, tällä sivulla jokainen yksittäinen komento on aseteltu omalle rivilleen. Tarkoitus on, että suoritat jokaisen rivin yksi kerrallaan siinä järjestyksessä, jossa ne on laatikossa kirjoitettu.
 
-**Kokeile** kirjoittaa ja suorittaa yllä olevassa laatikossa olevat komennot.
-Kirjoita ja suorita ensin komento `echo "Kissa"` ja sen jälkeen komento `ls`.
-Muista, että tietokone suorittaa komennon vasta, kun painat Enter-painiketta.
+**Kokeile** kirjoittaa ja suorittaa yllä olevassa laatikossa olevat komennot. Kirjoita ja suorita ensin komento `echo "Kissa"` ja sen jälkeen komento `ls`. Muista, että tietokone suorittaa komennon vasta, kun painat Enter-painiketta.
 
 **Voinko kopioida komentoja kirjoittamisen sijaan?**
 
@@ -208,12 +196,9 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 > [!VAROITUS]
 > Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
-> tiedä, mitä ne oikeasti tekevät.
-> Komentorivien komennot ovat usein lopullisia: jos vahingossa poistat jonkun tiedoston,
-> poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin
-> komentoihin tulee suhtautua aina varauksella.
-> Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi
-> vastuuopettajan toimesta.
+> tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
+> poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
+> Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.
 
 </details>
 
@@ -797,29 +782,19 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
 
 ## Mitä seuraavaksi? 
  
-Onneksi olkoon!
-Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html).
+Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html) sekä materiaalin luvussa [1.2 Ohjelmointiympäristö kuntoon](). TODO: Lisää linkki.
 
-Voit halutessasi tutustua omatoimisesti konfiguroida IDE ja tutustua sen toimintaan tarkemmin:
-
-- [Riderin konfigurointi opintojaksolle sopivaksi](/view/%%basedir%%/ohjeet/rider#vesanAsetukset)
-- [Uuden projektin tekeminen Riderissa](/view/%%basedir%%/ohjeet/rider#solution)
-- [ComTestin käyttö Riderissa](/view/%%basedir%%/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest)
-
-Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/) -pakkaus, joka
-sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. 
-Tällä opintojaksolla *Non-commercial license* -lisenssi riittää
-Riderin käyttöön, mutta erityisesti ohjelmoinnista kiinnostuneelle voi Student Packista olla hyötyä
-myöhemmissä opinnoissa (esimerkiksi TIM-järjestelmä kehitetään paljolti JetBrains PyCharm:lla, 
-joka on Pythonille tarkoitettu IDE).
+Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/), joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin *Non-commercial license* -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.
 
 ## Ongelmatilanteita ja niiden ratkaisuja 
 
-Jos sinulla on ongelmia, joita ei ole listattu alla, pyydä apua 
+Alla on lueteltu joitain yleisimpiä ongelmatilanteita, joita asennuksen tai työkalujen käytön yhteydessä voi tulla vastaan. Jos löydät ongelman, jota ei ole listattu alla, 
 
-- Tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta](/view/%%basedir%%/koti))
-- Laita viestiä [Teamsissa](/view/%%basedir%%/ohjeet/teams) (Kysymyksiä ja apua -kanava)
-- Laita viestiä opettajille: ohj1-opet@tim.jyu.fi
+TODO: Lisää linkit.
+
+- tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta]()), 
+- laita viestiä [Teamsissa]() (Kysymyksiä ja apua -kanava) tai
+- laita viestiä opettajille: ohj1-opet@tim.jyu.fi. 
 
 <details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
  
