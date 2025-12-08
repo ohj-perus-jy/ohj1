@@ -2,20 +2,6 @@
 
 Debuggauksen kuvaus ja ohjeet. Lomakkeet edelleen TIMissä.
 
-``` {settings="" id="OtKNSIptBJdA"}
-css: |!!
-.timButton a:visited {
-  color: white !important;
-}
-
-.timTableRunDiv {
-  padding: 0 !important;
-}
-!!
-```
-
-# Debuggausnäyte {id="3JGRgNvRb50n"}
-
 Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden 
 selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hallintaa:
 
@@ -28,22 +14,22 @@ selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hall
 
 Näyte arvostellaan asteikolla hyväksytty/hylätty.
 
-#- {id="NG1gAOTRUKnz"}
-**Miksi?**
+
+## Aikataulu ja takarajat
+
+| Tutkinto-opiskelijat                                                                                                                                                                                                                      | Lukiolinjat                                                                     | Avoin yliopisto                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Näyte tulee palauttaa osan 8 takarajaan mennessä. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa näytteen hylkäämiseen. | Näyte tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Näytteen palauttamiselle ei ole takarajaa, mutta se on hyväksytettävä ohjaajalla. |
+
+
+## Miksi? 
 
 Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa 
 testaus- ja debuggaustaidot ovat olennainen osa virheiden etsimisessä ja korjaamisessa. 
 Debuggeri on myös loistava työkalu ohjelman toiminnan 
 ymmärtämiseksi.
 
-**Milloin?**
-
-Debuggausnäyte on suoritettava opintojakson aikana. Näytteen suorittamiselle
-ei ole tarkkaa takarajaa, mutta sitä on suositeltavaa suorittaa opintojakson
-osan 7 jälkeen (luento 13 ja 14).
-
-#- {#valmistautuminen id="DPkraPBV9sHs"}
-**Miten valmistaudun?** 
+## Miten valmistaudun?
 
  1. Lue [monisteesta luku 10.2. Debuggaus](/view/%%basedir%%/materiaali/moniste#debuggaus), 
  2. Lue [monisteen täydennyssivu debuggauksesta](/view/kurssit/tie/ohj1/materiaali/debuggaus).
@@ -60,17 +46,14 @@ Debuggausnäytteen voivat suorittaa vain opintojaksolle ilmoittautuneet opiskeli
 Katso lisätietoja opintojaksolle ilmoittautumisesta [opintojakson kotisivulla](/view/%%basedir%%/koti).
 :::
 
-Voit suorittaa debuggausnäytteen [videona itsenäisesti]() tai [ohjauksessa]().
+Voit suorittaa debuggausnäytteen [videona itsenäisesti](#video) tai [ohjauksessa](#ohjaus).
 
 Voit suorittaa debuggausnäytteen sinulle sopivana aikana. Debuggausnäytteen
 suorittamiselle ei ole takarajaa.
 
 Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 
-#- {area="valitse-tapa" .grid-debug-tapa id="dIMYKXInZ7rb"}
-
-#- {area="valitse-tapa-video" collapse="true" toggle-group="guide" toggle-group-collection="video" id="OO8LmjkVQ2D1"}
-**Palautus videolla**
+## Palautus videolla {#video}
 
 #- {id="uLcWVpfaiByN"}
 *Merkitse jokainen vaihe valmiiksi ruksimalla.*
@@ -211,8 +194,8 @@ Saat ilmoituksen, kun työsi on tarkistettu.
 
 #- {area_end="valitse-tapa-video" id="p23bcbezcTt6"}
 
-#- {area="valitse-tapa-ohjaus" collapse="true" toggle-group="guide" toggle-group-collection="ohjaus" id="xwLwxLjxLEUs"}
-**Palautus ohjauksessa**
+
+## Palautus ohjauksessa {#ohjaus}
 
 #- {id="nJmOYbiGAmku"}
 *Merkitse jokainen vaihe valmiiksi ruksimalla.*
@@ -255,31 +238,10 @@ Näytteen hylkäämisen perusteet:
     ohjelman suoritus keskeytyy ja miksi.
 ```
 
-#- {area_end="debug-ohjaus-ohje" id="XL94pmqXYeKo"}
-
-#- {area_end="debug-ohje-ohjaus-frame" id="eqA5JG13BszU"}
-
-#- {id="8py83nh9ipt2"}
-\
-
-#- {defaultplugin="cbfield" .steps-list id="vBX2byQDYqDE"}
 - {#do2 saveSingleAnswer: true#} Lataa ja avaa DebugKoe-projekti
 
-#- {area="debug-koe-lataus-frame2" .area-frame id="4gWyh5e8O3GY"}
-
-#- {area="debug-koe-lataus2" collapse="true" .small-area id="8ePRUWsihYVJ"}
 Debuggausnäyteprojektin latausohjeet (**avaa klikkaamalla**)
 
-#- {rd="900212" rp="bMpxPE0L2Ysy" id="1ySsAMJWvAto"}
-
-#- {area_end="debug-koe-lataus2" id="GYOPR6MHo4lG"}
-
-#- {area_end="debug-koe-lataus-frame2" id="khU8tfP3QZvC"}
-
-#- {id="ulXxXrZUjtdy"}
-\
-
-#- {defaultplugin="cbfield" .steps-list id="RMHYPyS06go0"}
 - {#do3 saveSingleAnswer: true#} Tee DebugKoe-projektissa olevat tehtävät **pääteohjauksessa**
 
     * Mene pääteohjaukseen. Näet ohjausten aikataulut [kurssin kotisivulla](/view/%%basedir%%/koti#tukikanavat)
