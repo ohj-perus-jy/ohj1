@@ -17,27 +17,26 @@ Ohjelman koon kasvaessa kannattaa ottaa käyttöön sovelluskehitin eli IDE (Int
  * versionhallinnan tuki (esim. Git)
 
 IDE-ympäristöjä on useita eri ohjelmointikielille ja ympäristöille. Ohjelmointi 1 -opintojaksolla käytetään JetBrains-yhtiön tekemää Rider-kehitysympäristöä, joka on erityisesti C# ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
-Riderin asennusohjeet löytyvät Työkalut-sivulta. 
+
+>Riderin asennusohjeet löytyvät [Työkalut-sivulta.](../tyokalut.md) 
 
 Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen käytäntö ohjelmoinnin opiskelussa, kuten myös Ohjelmointi 1 -kurssilla, on asentaa kehitysympäristö omalle paikalliselle tietokoneelle. Oman kehitysympäristön käyttö on yleensä nopeampaa, edullisempaa ja joustavampaa kuin pilvipohjaiset ratkaisut. Myös työelämässä paikalliset kehitysympäristöt ovat yleensä vallitseva käytäntö.
 
-vvv --- TODO --- vvv
+## Konfigurointi ja laajennokset
 
-## Konfigurointi ja laajennokset {id="xVPO9nFG6k6c"}
-
-### Rider-asetusten muuttaaminen opintojaksolle sopivaksi {id="gN0034EhVsrO"}
+### Rider-asetusten muuttaaminen opintojaksolle sopivaksi
 
 Oletusasetukset koodin muotoilulle ja analysoinnille ovat 
 tämän kurssin näkökulmasta usein turhan aggressiivisia (ts.
 auttavat turhan innokkaasti tai väärään suuntaan), joten
 muutetaan asetuksia tämän kurssin suositusten mukaisiksi. 
 
-Jos haluat varmuuskopioida nykyiset asetuksesi, tee se valikosta File $\rightarrow$ Manage
-IDE Settings $\rightarrow$ Export Settings.
+Jos haluat varmuuskopioida nykyiset asetuksesi, tee se valikosta *File* $\rightarrow$ *Manage
+IDE Settings* $\rightarrow$ *Export Settings*.
 
 - Lataa [asetuspaketti
 (settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1) (Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
-- Avaa Rider ja valitse *Welcome to JetBrains Rider*-ikkunassa vasemmasta alalaidasta Configure []{.menu-right} Import Settings...
+- Avaa Rider ja valitse *Welcome to JetBrains Rider*-ikkunassa vasemmasta alalaidasta *Configure* $\rightarrow$ *Import Settings...*
 - Etsi ja valitse äsken haettu tiedosto
 - Klikkaa OK, sitten Import and Restart
  
@@ -46,33 +45,30 @@ Vaihtoehtoisesti voit mukauttaa asetuksia yksitellen alla olevien ohjeiden mukai
 Ja uusimmassa Riderissa joudut joka tapauksessa alla olevalla manuaaliohjeella poistamaan
 **oikoluvun** käytöstä (ainakin toistaiseksi).
 
-Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
-valitsemalla File []{.menu-right} Manage IDE Settings []{.menu-right} Settings sync.
+>Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
+valitsemalla *File* $\rightarrow$ *Manage IDE Settings* $\rightarrow$ *Settings sync*.
 
-#- {id="ctP40icdBWZs"}
 
-#### Sisäänrakennetun tekoälytäydennyksen kytkeminen pois {#rider-ai id="FXcy3kChb4ym"}
+#### Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
 
 Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka
 yrittää täydentää kirjoitetun rivin loppuun ympäröivän koodin perusteella:
 
-![alt text](images/taydennys.png)
+![AI autocompletion example](images/taydennys.png)
 
 Aivan opintojakson alussa tämä täydennys ei haittaa, mutta myöhemmin täydennys pikemmin häiritsee
 sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään se pois seuraavasti:
 
 - Avaa Rider *Welcome to JetBrains Rider* -näkymään
-- Valitse vasemmasta alalalaidasta Configure []{.menu-right} Settings
-- Mene asetuksissa kohtaan Editor []{.menu-right} General []{.menu-right} Inline Completion
+- Valitse vasemmasta alalalaidasta *Configure* $\rightarrow$ *Settings*
+- Mene asetuksissa kohtaan *Editor* $\rightarrow$ *General* $\rightarrow$ *Inline Completion*
 - Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
 - Tallenna asetukset *Save*-painikkeella
 
-#- {id="LEpqcL7eqRGY"}
-
-#- {area="rider-ui-kustomointi2" collapse="true" id="d3CaxyFqqyc1"}
+<details>
+<summary>
 Kurssin koodin muotoilu- ja analyysiasetusten ("settings.zip") selitykset (valinnaista lisätietoa)
-
-#- {id="u60sxOf4nbUl"}
+</summary>
 Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on otettu pois
 päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän kurssin kannalta. 
 Ajatus on, että on parempi, että varoituksia tulee vain niistä asioista, jotka 
@@ -106,7 +102,7 @@ alla oleva asetus `Non-private accessibility`, josta ota ruksi pois.
 sen nimen alkuun,
   paina nimeä ja vasemmalle syttyy vasaran kuva. Klikkaa vasaraa ja valitse valikosta `Inspection:
 'Declare types in namespaces'/Configure inspection severity/Do not show` kuten kuvassa alla: 
-![Poistetaan Laskuja-luokan nimen alleviivaus näkyvistä](/images/570863/image.png)
+![Poistetaan Laskuja-luokan nimen alleviivaus näkyvistä](./images/vesan_asetukset_alleviivaus.png)
 Tämän `Context Actions`-valikon saa auki myös klikkaamalla hiiren oikealla painikkeella alleviivattua
 kohtaa ja valitsemalla valikosta `Show Context Actions`. Joissain tapauksissa valikon saa auki rivinumeroiden 
 vieressä olevasta hehkulampun kuvasta.`Context Actions`-valikon saa auki kursorin kohdalla 
@@ -128,37 +124,35 @@ haluaa `Vakio` => saa vaihtaa valituksen pois)
         - muista kuitenkin välttää turhia attribuutteja (sitten kun tiedät mitä
 attribuutti tarkoittaa :-)
 
-#- {id="scSzao2SmQWx"}
 Vesan muuttamat asetukset DO NOT SHOW-asentoon:
+```
+BuiltInTypeReferenceStyle
+CheckNamespace
+ClassNeverInstantiated_002EGlobal
+ConvertIfStatementToReturnStatement
+ConvertIfStatementToSwitchStatement
+InconsistentNaming
+JoinDeclarationAndInitializer
+MemberCanBePrivate_002EGlobal
+SuggestVarOrType_005FBuiltInTypes
+SuggestVarOrType_005FElsewhere
+SuggestVarOrType_005FSimpleTypes
+UseCollectionExpression
+UseObjectOrCollectionInitializer
+```
+</details>
+<br>
 
-	BuiltInTypeReferenceStyle
-	CheckNamespace
-	ClassNeverInstantiated_002EGlobal
-	ConvertIfStatementToReturnStatement
-	ConvertIfStatementToSwitchStatement
-	InconsistentNaming
-	JoinDeclarationAndInitializer
-	MemberCanBePrivate_002EGlobal
-	SuggestVarOrType_005FBuiltInTypes
-	SuggestVarOrType_005FElsewhere
-	SuggestVarOrType_005FSimpleTypes
-	UseCollectionExpression
-	UseObjectOrCollectionInitializer
-
-#- {area_end="rider-ui-kustomointi2" id="KCkhmHQv18Ur"}
-
-#- {area="rider-ui-kustomointi" collapse="true" id="smOEpRvYDRhc"}
+<details>
+<summary>
 Suositeltavat käyttöliittymän asetukset (valinnaista lisätietoa)
-
-#- {id="Q3wbg6uAc3e1"}
-
-#- {id="yBdy8PPxurGk"}
+</summary>
 Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään
 tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta 
 näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla 
 käytettyjä asetuksia. 
 
-**Siirrä alaosan paneelit yhteen reunaan.** [Ks. esimerkki](/images/522094/rider-paneelit-vasemmalle.gif). Tämän
+**Siirrä alaosan paneelit yhteen reunaan.** ![Move panels example gif](./images/rider-paneelit-vasemmalle.gif) Tämän
 ansiosta esimerkiksi tulosteita on helpompi tarkastella hieman leveämmässä näkymässä. Joissakin tilanteissa
 (esimerkiksi debugatessa) joitakin paneeleja voi olla hyvä siirtää tarvittaessa oikeallekin. Voit
 myös piilottaa turhia paneeleja näkyviltä kun klikkaat hiiren oikealla kuvakkeen päällä ja sitten Hide.
@@ -178,21 +172,24 @@ hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liitt
 **Ulkoisen konsoli-ikkunan käyttäminen**: En itse tätä käytä, mutta jos haluat konsoliohjelman aukeavan ulkoiseen konsoliin katso 
 [How to launch console app in external window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
 
-#- {area_end="rider-ui-kustomointi" id="Eu3vz1FIjJsd"}
+</details>
 
-## Riderin peruskäyttö: solution ja projekti {#solution id="DtHojFSUcWWo"}
+## Riderin peruskäyttö: solution ja projekti
+> [!VAROITUS]
+> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää JY-käyttäjätunnuksesi, jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
 
-#- {id="plsTBV123UuV"}
 Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. 
 
 *Projekti* sisältää yhteen ohjelmaan (peliin tai konsolisovellukseen) 
 liittyvän koodin ja grafiikka- ja musiikkitiedostot.
 
 Projekti kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää
-yhden tai useampia projekteja. (Sivuhuomio: Solution on 
+yhden tai useampia projekteja.
+
+>**Sivuhuomio:** Solution on 
 [Microsoftin keksimä nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions) 
 tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti
-tarkoita mitään.)
+tarkoita mitään.
 
 Esimerkiksi yksi demokerta voi olla yksi solution joka sisältää useita 
 projekteja (demotehtäviä). Useiden projektien lisäämisessä samaan solutioniin 
@@ -201,11 +198,7 @@ näkyvillä ilman että niitä tarvitsee jatkuvasti avata tai sulkea.
 
 Riderissa tehdyt solutionit ja projektit ovat yhteensopivia Visual Studion kanssa.
 
-#- {id="pVbqHoq7HDwJ"}
 
-#- {id="OeF8gg6FkoGH"}
-
-```` {id="hPJe9KjpkJ2t" atom="true"}
 ### Suositeltava hakemistorakenne
 
 Kurssilla kannattaa kaikki kurssin asiat tehdä esimerkiksi
@@ -214,7 +207,7 @@ voi alla käyttötarkoituksesta riippuen eri paikassa:
 
 Mikroluokan koneessa 
 
-    c:\MyTemp\%%username%%\ohj1
+    c:\MyTemp\<käyttäjätunnus>\ohj1
     
 ja omassa kannettavassa esimerkiksi:
 
@@ -245,12 +238,8 @@ ohj1
 
 Eli esimerkiksi `demo1` on yksi solution jonka alla on useita
 projekteja.  Usein projekti on yksi demotehtävä.
-````
 
-#- {id="O1OfWXNH6hin"}
-%%dotenet%%
-
-### Uusi solution {#uusisolution id="Nsn4kiyXkGp3"}
+### Uusi solution
 
 Luodaan uusi solution ja siihen projekti. Tässä esimerkissä luodaan 
 demo1-niminen solution ja siihen Lumiukko-niminen projekti `demot`-alikansioon: 
@@ -259,71 +248,69 @@ Mikäli haluat lisätä projektin olemassa
 olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan solutioniin](#uusiprojekti).
 
 * Valitse `New Solution`. 
-     - Mikäli joku vanha solution on jo auki, niin sama onnistuu yläpalkista  `File/New Solution`.
-
-![Uusi solution Linuxissa](/images/734260/uusi_solution.png)
+     - Mikäli joku vanha solution on jo auki, niin sama onnistuu yläpalkista  `File/New Solution`. ![Uusi solution Linuxissa](./images/new_solution_linux.png)
 
 * Valitse vasemmalta templates-listasta `FysiikkaPeli`.
 * Anna solutionin nimeksi `demoX`, esimerkiksi `demo1`
 * Anna projektin nimi, esimerkiksi `Lumiukko` tai `Teht3Lumiukko` (Huom **Iso** alkukirjan!). 
-* Kirjoita tai selaa poluksi (`%%username%%` tilalle oma käyttäjätunnuksesi jos se on eri):
+* Kirjoita tai selaa poluksi (`<käyttäjätunnus>` tilalle oma käyttäjätunnuksesi jos se on eri):
     * oma Windows kone: `C:\kurssit\ohj1\demot`
-    * Mac: `/Users/%%username%%/kurssit/ohj1/demot`
-    * Linux: `/home/%%username%%/kurssit/ohj1/demot`
-    * mikroluokssa `C:\MyTemp\%%username%%\ohj1\demot` 
+    * Mac: `/Users/<käyttäjätunnus>/kurssit/ohj1/demot`
+    * Linux: `/home/<käyttäjätunnus>/kurssit/ohj1/demot`
+    * mikroluokssa `C:\MyTemp\<käyttäjätunnus>\ohj1\demot` 
   
-  HUOM! Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle, esim. `C:\MyTemp\%%username%%\...`. Siirrä lopuksi tiedostot U-asemallesi tai muualle talteen. 
+  HUOM! Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle, esim. `C:\MyTemp\<käyttäjätunnus>\...`. Siirrä lopuksi tiedostot U-asemallesi tai muualle talteen. 
 * Jätä `Put solution and project in the same directory`-boksi tyhjäksi.
 * `Framework`-kohtaan `net8.0`
 * Klikkaa `Create`.
 * Levylle syntyy nyt hierarkia:
-   
-      kurssit                    - kaikkien kurssien hakemisto
-        ohj1                     - ohj1 kurssin hakemisto
-          demot                  - demojen hakemisto
-            demo1                - demo1:n hakemisto
-              demo1.sln          - solutionintiedosto jossa luetellan mitä projekteja
-              Lumiukko           - hakmeisto jonka alla Lumiukko-projekti     
-                bin              - hakemisto jonne tulee ajettavaa koodia
-                obj              - hakemisto jonne tulee käännettyjä tiedostoja
-                Lumiukko.cs      - C#-tiedosto johon tulee lumiukon piirtävä koodi
-                Ohjelma.cs       - C#-pääohjelma
-                Lumiukko.csproj  - projektin tiedosto jossa kerrotaan mitä tiedotoja projektiin liittyy
-* Klikkaa Solution Explorerissa Lumiukko.cs-kooditiedostoa.  Koodissa pitäisi näkyä:
+  ```
+        kurssit                    - kaikkien kurssien hakemisto
+          ohj1                     - ohj1 kurssin hakemisto
+            demot                  - demojen hakemisto
+              demo1                - demo1:n hakemisto
+                demo1.sln          - solutionintiedosto jossa luetellan mitä projekteja
+                Lumiukko           - hakmeisto jonka alla Lumiukko-projekti     
+                  bin              - hakemisto jonne tulee ajettavaa koodia
+                  obj              - hakemisto jonne tulee käännettyjä tiedostoja
+                  Lumiukko.cs      - C#-tiedosto johon tulee lumiukon piirtävä koodi
+                  Ohjelma.cs       - C#-pääohjelma
+                  Lumiukko.csproj  - projektin tiedosto jossa kerrotaan mitä tiedotoja
+                                     projektiin liittyy
+  ```
+* Klikkaa Solution Explorerissa `Lumiukko.cs`-kooditiedostoa.  Koodissa pitäisi näkyä:
 
-    ```csharp 
-    public class Lumiukko : PhysicsGame
-    {
-        public override void Begin()
-        {
-            // Kirjoita ohjelmakoodisi tähän
+  ```csharp 
+  public class Lumiukko : PhysicsGame
+  {
+      public override void Begin()
+      {
+          // Kirjoita ohjelmakoodisi tähän
+  
+          PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+          Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+      }
+  }
+  ```
+
+* Kokeile käynnistää ohjelma `Run/Run 'Lumiukko'`, jolloin pitäisi näkyä uusi ikkuna vaaleansinisellä taustalla. Jos kaikki toimii, sulje ikkuna.
+* Pyyhi pois koko se rivi jossa lukee "`Kirjoita ohjelmakoodisi tähän`" ja kirjoita tilalle
     
-            PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
-            Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
-        }
-    }
-    ```
+  ```csharp
+          Level.Background.Color = Color.Black;
+          PhysicsObject pallo = new PhysicsObject(200, 200, Shape.Circle);
+          pallo.Color = Color.White;
+          Add(pallo);
+  ```
 
-#- {id="UoViAFISQVV8"}
-- Kokeile käynnistää ohjelma `Run/Run 'Lumiukko'`, jolloin pitäisi näkyä uusi ikkuna vaaleansinisellä taustalla. Jos kaikki toimii, sulje ikkuna.
-- Pyyhi pois koko se rivi jossa lukee "`Kirjoita ohjelmakoodisi tähän`" ja kirjoita tilalle
-    
-    ```csharp
-            Level.Background.Color = Color.Black;
-            PhysicsObject pallo = new PhysicsObject(200, 200, Shape.Circle);
-            pallo.Color = Color.White;
-            Add(pallo);
-    ```
+* Käynnistä ohjelma uudestaan ja tarkista että ohjelma muuttui.
 
-- Käynnistä ohjelma uudestaan ja tarkista että ohjelma muuttui.
+* Kirjoita luokan dokumentaatiokommentti näppäilemällä **luokan** esittelyrivin (eli`public class...`) yläpuolelle kolme kauttaviivaa
+  `///`.  Kirjoita `<summary>`-tagien väliin selvitys luokan toiminnasta (eli että
+  piirretään lumiukko)
+* Kirjoita vastaavasti `Begin`-metodin dokumentaatiokommentit.
 
-#- {id="XoS4IA7OqQky"}
-  * Kirjoita luokan dokumentaatiokommentti näppäilemällä **luokan** esittelyrivin (eli`public class...`) yläpuolelle kolme kauttaviivaa
-    `///`.  Kirjoita `<summary>`-tagien väliin selvitys luokan toiminnasta (eli että
-    piirretään lumiukko)
-  * Kirjoita vastaavasti `Begin`-metodin dokumentaatiokommentit.
-
-### Uusi projekti olemassa olevaan solutioniin {#uusiprojekti id="V1hfe5xnm1Jd"}
+### Uusi projekti olemassa olevaan solutioniin
 
 Oletetaan, että solution on jo olemassa. 
 Lisätään siihen toinen projekti olemassa olevan lisäksi. 
@@ -338,7 +325,7 @@ Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-
   hiiren oikealla ja valitse `Run HelloWorld`. Myöhemmillä kerroilla voit
   käynnistää projektin käynnistämällä yläpalkista haluamasi projektin.
 
-``` {id="yvowKoOwG5k2" atom="true"}
+
 ### Jypeli-projektit
 
 Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa `Custom Templates` -kohdasta oikean projektimallin.
@@ -352,37 +339,33 @@ Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa `Cust
 Jypeli-projektissa Main-pääohjelma menee Ohjelma.cs-tiedostoon, joten jos copy-pastetat
 koodin, joka sisältää Main-pääohjelman, niin **poista Main-pääohjelma** `Portaat`-luokan (tms. projektisi nimeä vastaava luokka)
 sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
-```
 
-#### Sisällön tuominen Jypeli-projektiin (Content-kansio) {#content id="7cC9FB921c5A"}
+
+#### Sisällön tuominen Jypeli-projektiin (Content-kansio)
 
 Kuvat ja äänet lisätään peliprojektin Content-kansioon, joka näkyy editorin tiedostolistauksessa.
 
-Content-kansion voi luoda klikkaamalla hiiren oikealla projektia -> Add -> Directory
+Content-kansion voi luoda klikkaamalla hiiren oikealla projektia $\rightarrow$ *Add* $\rightarrow$ *Directory*
 
-![Sisällön lisääminen](/images/497421/new_content_directory.jpg)
+![Sisällön lisääminen](./images/new_content_directory.jpg)
 
- 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla -> Add -> Add Existing Item
+ 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla $\rightarrow$ *Add* $\rightarrow$ *Add Existing Item*
  1. Valitse tiedosto(t) jonka haluat lisätä ja paina ok.
  1. Valitse Copy.
  1. Klikkaa tuomaasi tiedostoa Content-kansiossa hiiren oikealla ja valitse Properties
- 1. Vaihda Copy to output directory -kohtaan "Copy if newer"
-
-
-
-^^^ --- TODO --- ^^^
+ 1. Vaihda *Copy to output directory* -kohtaan "Copy if newer"
 
 
 ## Graafinen sovellus Jypeli-kirjastolla
 
 Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
 
-Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() **TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
+Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() <!--TODO-->**TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
 
 Tehdään seuraavaksi pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen ympyrä.
 
 > [!HUOMAUTUS]
-> Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut asennettuna; ohjeet löytyvät [Työkalut-sivulta]() **TODO: Linkki**. 
+> Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut asennettuna; ohjeet löytyvät [Työkalut-sivulta]() <!--TODO-->**TODO: Linkki**. 
 > Luo uusi Fysiikkapeli-projekti Riderissa ja korvaa `Begin`-metodin sisältö yllä olevalla koodilla. Suorita sitten peli painamalla vihreää "Play"-painiketta ikkunan yläreunassa.
 
 ```csharp,feature-jypeli
@@ -403,44 +386,49 @@ Voit käynnistää pelin yllä klikkaamalla oikean yläreunan vihreää "Play"-p
 
 Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 
-> [!TODO]
-> Käy läpi esimerkki
-
+Ensimmäinen rivi luo uuden muuttujan nimeltä `ympyra`, joka on tyyppiä `GameObject`. Sen leveydeksi ja korkeudeksi annetaan `50`.
 ```csharp,feature-jypeli
 //-using Jypeli;
 //-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
-        PhysicsObject pallo = new PhysicsObject(50, 50);
+        GameObject ympyra = new GameObject(50, 50);
     }
 //-}
 ```
 
+Seuraavaksi asetamme `ympyra` muuttujan muodoksi `Shape.Circle` ja sijainniksi asetetaan vektori, joka osoittaa keskipisteeseen `new Vector(0, 0)`.
 ```csharp,feature-jypeli
 //-using Jypeli;
 //-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
-        PhysicsObject pallo = new PhysicsObject(50, 50);
+        GameObject ympyra = new GameObject(50, 50);
+        ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
+        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
     }
 //-}
 ```
 
+Lopuksi lisäämme `ympyra` muuttujan näkyviin kutsumalla Jypelin `Add` metodia. `ympyra` muuttuja on siis olemassa jo heti ensimmäisen rivin jälkeen, mutta se pitää erikseen vielä lisätä "pelimaailmaan".
 ```csharp,feature-jypeli
 //-using Jypeli;
 //-public class Lumiukko : PhysicsGame {
     public override void Begin()
     {
-        PhysicsObject pallo = new PhysicsObject(50, 50);
+        GameObject ympyra = new GameObject(50, 50);
+        ympyra.Shape = Shape.Circle; 
+        ympyra.Position = new Vector(0, 0);
+        Add(ympyra); // Lisätään ympyrä peliin
     }
 //-}
 ```
 
 ## Visual Studio Code
 
-Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta]() **TODO: Linkki**
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
 
 ## Tehtävät
 
-Asenna Rider ja Jypeli omalle tietokoneellesi [Työkalut-sivulla]() **TODO: Linkki** olevia ohjeita noudattaen. 
+Asenna Rider ja Jypeli omalle tietokoneellesi [Työkalut-sivulla](../tyokalut.md) olevia ohjeita noudattaen. 
