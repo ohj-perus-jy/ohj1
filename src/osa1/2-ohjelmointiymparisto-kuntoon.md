@@ -56,7 +56,7 @@ valitsemalla File []{.menu-right} Manage IDE Settings []{.menu-right} Settings s
 Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka
 yrittää täydentää kirjoitetun rivin loppuun ympäröivän koodin perusteella:
 
-![Esimerkki Riderin tekoälypohjaisesta koodin täydennyksestä](/images/879009/image.png)
+![alt text](images/taydennys.png)
 
 Aivan opintojakson alussa tämä täydennys ei haittaa, mutta myöhemmin täydennys pikemmin häiritsee
 sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään se pois seuraavasti:
