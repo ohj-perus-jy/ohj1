@@ -22,6 +22,12 @@ Riderin asennusohjeet löytyvät [Työkalut-sivulta.](../tyokalut.md#jetbrains-r
 
 Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen käytäntö ohjelmoinnin opiskelussa, kuten myös Ohjelmointi 1 -kurssilla, on asentaa kehitysympäristö omalle paikalliselle tietokoneelle. Oman kehitysympäristön käyttö on yleensä nopeampaa, edullisempaa ja joustavampaa kuin pilvipohjaiset ratkaisut. Myös työelämässä paikalliset kehitysympäristöt ovat yleensä vallitseva käytäntö.
 
+## Visual Studio Code
+
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
+
+Alla olevat ohjeet koskevat kuitenkin vain Rideria.
+
 ## Konfigurointi ja laajennokset
 
 Oletusasetukset koodin muotoilulle ja analysoinnille ovat tämän kurssin näkökulmasta usein turhan aggressiivisia (ts. auttavat turhan innokkaasti tai väärään suuntaan), joten muutetaan asetuksia tämän kurssin suositusten mukaisiksi. 
@@ -332,46 +338,21 @@ Voit käynnistää pelin yllä klikkaamalla oikean yläreunan vihreää "Play"-p
 Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 
 Ensimmäinen rivi luo uuden muuttujan nimeltä `ympyra`, joka on tyyppiä `GameObject`. Sen leveydeksi ja korkeudeksi annetaan `50`.
-```csharp,feature-jypeli
-//-using Jypeli;
-//-public class Lumiukko : PhysicsGame {
-    public override void Begin()
-    {
-        GameObject ympyra = new GameObject(50, 50);
-    }
-//-}
+```csharp,ignore
+GameObject ympyra = new GameObject(50, 50);
 ```
 
 Seuraavaksi asetamme `ympyra` muuttujan muodoksi `Shape.Circle` ja sijainniksi asetetaan vektori, joka osoittaa keskipisteeseen `new Vector(0, 0)`.
-```csharp,feature-jypeli
-//-using Jypeli;
-//-public class Lumiukko : PhysicsGame {
-    public override void Begin()
-    {
-        GameObject ympyra = new GameObject(50, 50);
-        ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
-        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
-    }
-//-}
+```csharp,ignore
+ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
+ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
 ```
 
 Lopuksi lisäämme `ympyra` muuttujan näkyviin kutsumalla Jypelin `Add` metodia. `ympyra` muuttuja on siis olemassa jo heti ensimmäisen rivin jälkeen, mutta se pitää erikseen vielä lisätä "pelimaailmaan".
-```csharp,feature-jypeli
-//-using Jypeli;
-//-public class Lumiukko : PhysicsGame {
-    public override void Begin()
-    {
-        GameObject ympyra = new GameObject(50, 50);
-        ympyra.Shape = Shape.Circle; 
-        ympyra.Position = new Vector(0, 0);
-        Add(ympyra); // Lisätään ympyrä peliin
-    }
-//-}
+```csharp,ignore
+Add(ympyra); // Lisätään ympyrä peliin
 ```
 
-## Visual Studio Code
-
-Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
 ## Tehtävät
 
