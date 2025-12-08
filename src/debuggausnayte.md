@@ -250,10 +250,7 @@ Debuggausnäyteprojektin latausohjeet (**avaa klikkaamalla**)
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
     * Kun saat viestin `debug-koe on läpäisty!`, ruksi alla oleva kohta.
 
-#- {id="TIDSrhGZSmau"}
-\
 
-#- {defaultplugin="cbfield" .steps-list id="xKimxNC26z4g"}
 - {#do4 saveSingleAnswer: true#} Kuittaa tämä, kun olet saanut tehtävät tehtyä
 
    * Pyydä seuraavaksi ohjaajaa tarkistamaan tehtäväsi
@@ -264,19 +261,8 @@ Debuggausnäyteprojektin latausohjeet (**avaa klikkaamalla**)
 Ohjaaja kuittaa harjoitustyösi paikan päällä.
 Saat vielä erillisen kuittauksen debuggausnäytteen hyväksymisestä sähköpostitse.
 
-#- {area_end="valitse-tapa-ohjaus" id="F5oYDH8zzXyU"}
 
-#- {area="valitse-tapa-default" collapse="false" toggle-group="guide" toggle-group-collection="default" id="KyVMIpwsgkPz"}
-
-#- {id="T4XPHfgq7olA"}
-Valitse haluamasi debuggausnäytteen suoritustapa yllä olevilla painikkeilla.
-
-#- {area_end="valitse-tapa-default" id="tCgmxl9xPWqW"}
-
-#- {area_end="valitse-tapa" id="iMwXFwyM0uH5"}
-
-#- {area="teacher-form" visible="%%False|isview%%" id="3sgXr5VoMgqa"}
-
+-- vvv -- tämä siirtynee TIMiin Oma Eteneminen -sivulle ?? -- vvv --
 ### Näytteen kuittaaminen (opettaja) {id="dqscuHAHIusK"}
 
 #- {id="vy0aXDyOzjRI"}
@@ -296,112 +282,7 @@ Valitse haluamasi debuggausnäytteen suoritustapa yllä olevilla painikkeilla.
    - Voit kuitata näytteen useammalle opiskelijalle samaan aikaan ruksimalla kaikki
      kuitattavat suoritukset.
 
-#- {area="debug-vaatimukset-ohjaus" collapse="true" id="PcV5CUdSq71Q"}
-
-Debuggausnäytteen vaatimukset (palautus pääteohjauksessa)
-
-#- {rd="900212" rp="U2Uts3EE8tNH" id="G9EzVU5tqWCh"}
-
-#- {area_end="debug-vaatimukset-ohjaus" id="SLEEqF82CHR9"}
-
-#- {area="debug-vaatimukset-video" collapse="true" id="YsZu8qJ5tJSy"}
-
-Debuggausnäytteen vaatimukset (palautus videona)
-
-#- {rd="900212" rp="d02nXdKi5qrO" id="mzqVNVwu6xGS"}
-
-#- {area_end="debug-vaatimukset-video" id="5Zq1qkjA5x5N"}
-
-``` {#debug_kuittaus_taulukko plugin="tableForm" id="ZbE2IZhVdByy"}
-groups: 
- - "*"
-fields:
- - debug_url=Video URL
- - do4=Näytetty ohjauksessa
- - %%(basedir ~ "/eteneminen")|docid%%.debug=Kuittaus
-lockedFields:
- - Video URL
- - Näytetty ohjauksessa
-table: true
-report: false
-openButtonText: 
-hideButtonText: 
-open: true
-autosave: true
-maxRows: 40em 
-realnames: true
-usernames: false
-emails: false
-cbColumn: true
-nrColumn: false
-filterRow: true
-singleLine: true
-emailUsersButtonText: "Lähetä sähköpostia valituille"
-anonNames: false
-reportButton: 
-userListButtonText: "Kopioi opiskelijalista"
-showToolbar: true
-runScripts:
-  - script: "mark-debug-completed"
-    button: "Kuittaa näyte valituille"
-```
-
-``` {#mark-debug-completed plugin="jsrunner" .hide id="bxfkocChAuRu"}
-button: Kuittaa debuggasunäyte valituille
-
-groups: 
-  - "*"
-
-fields:
-  - "%%(basedir ~ '/eteneminen')|docid%%.debug=debug"
-
-updateFields:
-  - "%%(basedir ~ '/eteneminen')|docid%%.debug"
-
-program: |!!
-/**
- * @author ITKP102 devs
- * @description Computes the progress of the weekly exercises (i.e. demos) and updates the user's progress in the progress page (graphs, progress bars, etc.)
- */
-
-/**
- * @typedef {import('../lib/jsrunner').GTools} GTools
- * @typedef {import('../lib/jsrunner').Tools} Tools
- */
-
-/**
- * @type {Tools}
- */
-globalThis.tools;
-
-/**
- * @type {GTools}
- */
-globalThis.gtools;
-
-let debugOk = tools.getString("debug");
-
-if (debugOk) {
-    return;
-}
-
-// Current date in format DD.MM.YYYY
-const now = new Date();
-const currentDate = `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()}`;
-
-// Name in format "Last First" but also may contain middle names
-const realname = "%%realname%%";
-// Reformat into FirstL
-const nameParts = realname.split(" ");
-const initials = nameParts.length > 1 ? nameParts[nameParts.length - 1] + nameParts[0][0] : nameParts[0];
-
-tools.setString("debug", `${currentDate}/${initials}`);
-!!
-```
-
-#- {area_end="teacher-form" id="uNTbj8QJQLbm"}
-
-#- {area_end="debug-suoritus" id="EjoH95GaexdE"}
+-- ^^^ -- tämä siirtynee TIMiin ?? -- ^^^ --
 
 ## Vinkkejä {id="x3qWDbTMvCiW"}
 
