@@ -88,7 +88,7 @@ luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa viel
 
 Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin käyttöön alta.
 
-<details closed> <summary>**Pikainen johdatus komentorivin käyttöön** (Avaa klikkaamalla)</summary>
+<details closed> <summary>Pikainen johdatus komentorivin käyttöön (Avaa klikkaamalla)</summary>
  
 **Mikä on komentorivi?**
 
@@ -224,7 +224,7 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 ### [Windows](#tab/win)
 
  1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) tai että näytönohjaimen ajurit ovat asennettu.
- 1. Avaa PowerShell-komentorivi (*Haku-ikoni* []{.menu-right} Kirjoita *PowerShell* []{.menu-right} *Windows PowerShell*).
+ 1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell* &rarr; *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
 
     ```bash
@@ -240,14 +240,11 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
     - Kokeile ladata ja asentaa `winget`-käsin: [Lataa asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle)
       Asennuksen jälkeen sulje ja käynnistä PowerShell uudelleen.
 
- 
-Merkkaa lopuksi ruksi kohtaan "Valmistelu tehty!" tämän ohjeen alussa.
-
 ***
 
 ### [macOS](#tab/macos)
 
-1. Avaa Pääte tai Termimal (*Launchpad* []{.menu-right} *Pääte*/*Terminal*)
+1. Avaa Pääte tai Termimal (*Launchpad* &rarr; *Pääte*/*Terminal*)
 2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
 
     ```bash
@@ -319,9 +316,6 @@ Merkkaa lopuksi ruksi kohtaan "Valmistelu tehty!" tämän ohjeen alussa.
     ```
     
     Versionumero `X.X.X` voi olla mikä tahansa; olennaista on, että tuloste ilmestyy näkyviin.
-
- 
-Merkkaa lopuksi ruksi kohtaan "Valmistelu tehty!" tämän ohjeen alussa.
 
 ***
 
@@ -417,9 +411,6 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     
     Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
 
- 
-Merkkaa lopuksi ruksi kohtaan ".NET asennettu" tämän ohjeen alussa.
-
 *** 
 
 ### [Linux](#tab/linux)
@@ -481,14 +472,11 @@ Merkkaa lopuksi ruksi kohtaan ".NET asennettu" tämän ohjeen alussa.
     ```
     
     Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* []{.menu-right} Kirjoita *Git Bash* []{.menu-right} Valitse *Git Bash*.
+5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* &rarr; Kirjoita *Git Bash* &rarr; Valitse *Git Bash*.
 
-    Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:
+    Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
-    ![](/images/873318/image.png)
-
- 
-Merkkaa lopuksi ruksi kohtaan "Git asennettu" tämän ohjeen alussa.
+    ![Git bash avattu](tyokalut/images/gitbash-avattu2.png)
 
 *** 
 
@@ -582,7 +570,6 @@ Merkkaa lopuksi ruksi kohtaan "Git asennettu" tämän ohjeen alussa.
 7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
    Ohjelman asennus on valmis!
 
-
 *** 
 
 ### [macOS](#tab/macos)
@@ -626,6 +613,7 @@ Merkkaa lopuksi ruksi kohtaan "Git asennettu" tämän ohjeen alussa.
    Ohjelman asennus on valmis!
 
 ***
+
 ### [Linux](#tab/linux)
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
@@ -667,17 +655,13 @@ Merkkaa lopuksi ruksi kohtaan "Git asennettu" tämän ohjeen alussa.
 7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
    Ohjelman asennus on valmis!
 
-
 *** 
 
 ## Tekstieditori 
 
-Tälle opintojaksolle riittää mikä tahansa tekstieditori, joka
-ei ole asiakirjasovellus (eli ei Google Docs, Microsfot Word, yms. asiakirjojen laadintaan tarkoitettu).
-Vaihtoehtoja on monta; eri editorien vertailu ja latauslinkit löytyvät [Tekstieditori](/view/%%basedir%%/ohjeet/tekstieditori)-sivulla.
+Tälle opintojaksolle riittää mikä tahansa tekstieditori, joka <u>ei</u> ole toimistosovellus, eli ei Google Docs, Microsoft Word, tai muu asiakirjojen laadintaan tarkoitettu sovlelus. Vaihtoehtoja on monta. Ihmisillä on hyvin erilaisia preferenssejä tekstieditorien suhteen, joten kannattaa kokeilla erilaisia vaihtoehtoja ja valita itselle mieluisin.
 
-Alla olevissa ohjeissa asennetaan Visual Studio Code (lyhyemmin VS Code), joka
-on tekstieditori, mutta on laajennettavissa kokonaiseksi IDE:n kaltaiseksi ohjelmaksi.
+Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Studio Codea (VS Code). Se on suosittu, ilmainen, ja monipuolinen tekstieditori, jota voi laajentaa monin tavoin, jopa IDE-tasoiseksi työkaluksi lisäosien avulla. Jos haluat käyttää jotain muuta tekstieditoria, voit toki tehdä niin, mutta ohjeet on kirjoitettu VS Coden käyttöä ajatellen.
 
 ### [Windows](#tab/win)
  
@@ -707,10 +691,8 @@ on tekstieditori, mutta on laajennettavissa kokonaiseksi IDE:n kaltaiseksi ohjel
     ```bash
     code
     ```
-
     Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-    Jatkossa pääset VS Codeen myös menemällä
-    *Haku-ikoni* []{.menu-right} Kirjoita *Visual Studio Code* []{.menu-right} Valitse *Visual Studio Code*.
+    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* &rarr; Kirjoita *Visual Studio Code* &rarr; Valitse *Visual Studio Code*.
 
 ***
 
@@ -754,15 +736,15 @@ on tekstieditori, mutta on laajennettavissa kokonaiseksi IDE:n kaltaiseksi ohjel
       
       Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
       
-3. Tarkista, että VS Code toimii. Käynnistä VS Code (joko sovellusvalikosta tai `code`-komennolla). 
+3. Tarkista, että VS Code toimii. Käynnistä VS Code joko sovellusvalikosta tai `code`-komennolla. 
     Jos VS Code avautuu, olet onnistuneesti asentanut sen!
 
 ***
  
 ## JyPeli 
 
-1. Avaa käyttöjärjestelmäsi komentorivi (PowerShell, Pääte tai vastaava) ellei se ole jo
-2. Asenna JyPelin .NET-projektipohjat suorittamalla alla oleva komento:
+1. Avaa käyttöjärjestelmäsi komentorivi (PowerShell, Pääte tai vastaava).
+2. Asenna JyPeli-projektipohjat (engl. *templates*) suorittamalla alla oleva komento:
 
     ```bash
     dotnet new install Jypeli.Templates
@@ -789,21 +771,21 @@ on tekstieditori, mutta on laajennettavissa kokonaiseksi IDE:n kaltaiseksi ohjel
     dotnet run
     ```
     
-    Anna erityisesti viimeisen komennon suoriutua loppuun. 
+    Erityisesti viimeisen komennon suorittaminen voi hieman kestää. 
     Komennot tekevät seuraavat asiat:
     
-    - Komento 1 muuttaa aktiivisen hakemiston kotihakemistoksi
-    - Komento 2 tekee uuden C#-projektin, jonka pohja otetaan JyPeli tasohyppelypeliesimerkistä
-    - Komento 3 siirtää komentorivin projektikansion sisälle
-    - Komento 4 kääntää ja käynnistää pelin
-    
+     - Komento 1 muuttaa aktiivisen hakemiston kotihakemistoksi
+     - Komento 2 tekee uuden C#-projektin, jonka pohja otetaan JyPeli tasohyppelypeliesimerkistä
+     - Komento 3 siirtää komentorivin projektikansion sisälle
+     - Komento 4 kääntää ja käynnistää pelin. 
+
     Tuloksena pitäisi avautua pelattava tasohyppelypeli.
+    
     Voit kokeilla peliä tai sulkea sen.
 
 ## ComTest 
 
-ComTest on Rider-plugin, jonka avulla tällä opintojaksolla kirjoitetaan
-yksikkötestejä.
+ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yksikkötestejä.
 
  1. Avaa JetBrains Rider ja odota, kunnes pääset *Welcome to JetBrains Rider* -näkymään
  2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* &rarr; *Plugins*
@@ -875,8 +857,8 @@ Voi olla, että Rider ei löydä oikeaa .NET-versiota.
 Kokeile seuraavaa:
 
 - Avaa Rider aloitusnäkymä (jos Rider on auki, laita se kiinni ja avaa uudelleen).
-- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) []{.menu-right} *Settings*
-- Mene kohtaan *Build, Execution, Deployment*  []{.menu-right} *Toolset and Build*
+- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) &rarr; *Settings*
+- Mene kohtaan *Build, Execution, Deployment*  &rarr; *Toolset and Build*
 - Klikkaa kohdan *.NET CLI executable path* -kentän alasvetovalikkoa:
 
     ![](/images/876452/image.png)
