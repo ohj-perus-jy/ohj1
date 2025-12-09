@@ -18,38 +18,21 @@ Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti. Gi
 
 Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehnyt niin.
 
-## Mikä Git on
+## Mikä Git on?
 
-*Git* on ohjelmisto, jolla voidaan toteuttaa tiedostojen *versiohallintaa*. 
-Ohjelmistotyössä on erityisen tärkeää, että jokainen ohjelmistoon tehty
-muutos versioidaan selkeästi. Versiohallinnan käyttäminen 
-yhteistyöskentelyyn ja muutosten jäljittämiseen on normi niin teollisessa ohjelmistotuotannossa, 
-vapaan/avoimen lähdekoodin projekteissa kuin myös monien harrastajien henkilökohtaisissa
-töissä. 
+*Git* on ohjelmisto, jolla voidaan toteuttaa tiedostojen *versiohallintaa*. Ohjelmistotyössä on erityisen tärkeää, että jokainen ohjelmistoon tehty muutos versioidaan selkeästi. Versiohallinnan käyttäminen yhteistyöskentelyyn ja muutosten jäljittämiseen on normi niin teollisessa ohjelmistotuotannossa, vapaan/avoimen lähdekoodin projekteissa kuin myös monien harrastajien henkilökohtaisissa töissä. 
 
-Versiohallinta mahdollistaa myös saman koodin parissa työskentelyn eri tietokoneilta, 
-mikä sopii hyvin tälle kurssille, koska usein tehdään töitä eri tietokoneilta 
-(mikroluokka, kotikone, jne.). Toisaalta versiohallinta toimii myös varmuuskopiona työllesi. Näin 
-koodisi ei häviä, vaikka tietokoneesi hajoaisi.
+Versiohallinta mahdollistaa myös saman koodin parissa työskentelyn eri tietokoneilta, mikä sopii hyvin tälle kurssille, koska usein tehdään töitä eri tietokoneilta (mikroluokka, kotikone, jne.). Toisaalta versiohallinta toimii myös varmuuskopiona työllesi. Näin koodisi ei häviä, vaikka tietokoneesi hajoaisi.
 
-*Git-varasto* (engl. *repository*) sisältää sekä kooditiedostot että koko projektin muokkaushistorian. 
-GitLab ja GitHub ovat eräitä suosittuja internetissä toimivia palveluita, joissa 
-Git-varastoja voidaan säilyttää. 
+*Git-varasto* (engl. *repository*) sisältää sekä kooditiedostot että koko projektin muokkaushistorian. GitLab ja GitHub ovat eräitä suosittuja internetissä toimivia palveluita, joissa Git-varastoja voidaan säilyttää. 
 
-Tällä kurssilla emme käytä Dropboxia, muistitikkuja, sähköpostia tai 
-vastaavia palveluita kooditiedostojen jakamiseen, koska ne eivät sovellu 
-todelliseen yhteistyöskentelyyn. Vaikka työskentelisitkin yksin, käytä 
-versiohallintaa ohjaajien työn helpottamiseksi sekä harjoitustyön 
-esittelyn mahdollistamiseksi. 
+Tällä kurssilla emme käytä Dropboxia, muistitikkuja, sähköpostia tai vastaavia palveluita kooditiedostojen jakamiseen, koska ne eivät sovellu todelliseen yhteistyöskentelyyn. Vaikka työskentelisitkin yksin, käytä versiohallintaa ohjaajien työn helpottamiseksi sekä harjoitustyön esittelyn mahdollistamiseksi. 
 
 Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien kirjoittamisessa.
 
-### Miten saan Gitin auki?
+## Miten saan Gitin auki?
 
-Git on *komentoriviohjelma*, eli sitä käytetään komentoriviltä eikä varsinaisesti avata. Gitille on tarjolla graafisia käyttöliittymä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)),
-jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään virallista `git`-työkalua, jota käytetään komentoriviltä. Kurssilla käytettäviin perustoimintoihin (tiedostojen lataaminen, muokkaaminen ja lähettäminen yhden kehittäjän ylläpitämässä koodissa) `git`-työkalu on yksinkertaisin ratkaisu. `git`-työkalun peruskäyttötaitoa katsotaan usein myös perustaitoksi ohjelmistokehityksessä, jossa useimmiten käytetään Gitia kaikenlaiseen yhteistyöhön.
-
-Kurssilla käytetään nk. *bash*-komentorivikehotetta `git`-työkalun kanssa. Alla olevilla ohjeilla saat sopivan komentorivikehotteen auki, jonka kautta `git`-työkalun käyttö onnistuu.
+Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään komentoriviltä. Gitille on tarjolla myös graafisia käyttöliittymä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)), jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään Gitiä komentoriviltä nk. *bash*-komentokehotteesta. 
 
 Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 ### [Windows](#tab/asennus-win)
@@ -70,6 +53,8 @@ Voit testata, että `git`-työkalu löytyy suorittamalla komento
 ```bash
 git --version
 ```
+
+Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 > [!VAROITUS]
 >
@@ -101,6 +86,8 @@ Voit testata, että `git`-työkalu löytyy suorittamalla komento
 git --version
 ```
 
+Jos komento palauttaa versionumeron, niin git on asennettu oikein.
+
 ***
 
 ### [Linux](#tab/asennus-linux)
@@ -114,24 +101,26 @@ Voit testata, että `git`-työkalu löytyy suorittamalla komento
 git --version
 ```
 
+Jos komento palauttaa versionumeron, niin git on asennettu oikein.
+
 ***
 
 ## Muistilista 
 
  Alla on lyhyt muistilista tyypillisimmistä tällä kurssilla vastaan tulevista tilanteista gitin kanssa. Lue kuitenkin **ensin** tarkemmat kuvaukset tämän dokumentin seuraavista luvuista.
 
-| Tavoite                                                                           | Toimenpide                                                                                                                                                                                                               | Komento                                                                                       |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| Aloitan harjoitustyön                                                             | Teen **fork**-toiminnolla gitlab.jyu.fi-palvelussa uuden etävaraston.                                                                                                                                                    |                                                                                               |
-| Menen koneelle, jossa sisältöä ei vielä ole                                       | Haen GitLabista etävarastoni HTTPS-osoitteen ja kloonaan etävaraston omalle koneelle. Huomaa piste komennon päätteeeksi.                                                                                                 | `git clone [etävaraston osoite] .`                                                            |
-| Menen koneelle jossa sisältö jo on                                                | Päivitän etävaraston version koneelle.                                                                                                                                                                                   | `git pull`                                                                                    |
-| Muutan tai lisään tiedostoja (esimerkiksi suunnitelmakuva `suunnitelma`-kansioon) | (1) Lisään muuttuneet ja uudet tiedostot *stage*-tilaan, **ja** (2) siirrän *stage*-tilan tiedon lokaaliin varastoon, **ja** (3) "pusken" tekemäni `commit`in etävarastoon. <br /><br />Huomaa kolme erillistä komentoa. | `git add --all`<br /><br />`git commit -m "Muutoksia kuvaava viesti."`<br /><br /> `git push` |
+| Tavoite                                                                           | Toimenpide                                                                                                                                                                                                               | Komento                                                                                       | Linkki ohjeeseen |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |------------------- |
+| Aloitan harjoitustyön                                                             | Teen **fork**-toiminnolla gitlab.jyu.fi-palvelussa uuden etävaraston.                                                                                                                                                    |                                                                                               | [Hyppää ohjeeseen](#fork)
+| Menen koneelle, jossa sisältöä ei vielä ole                                       | Haen GitLabista etävarastoni HTTPS-osoitteen ja kloonaan etävaraston omalle koneelle. Huomaa piste komennon päätteeeksi.                                                                                                 | `git clone [etävaraston osoite] .`                                                            | [Hyppää ohjeeseen](#clone)
+| Menen koneelle jossa sisältö jo on                                                | Päivitän etävaraston version koneelle.                                                                                                                                                                                   | `git pull`                                                                                    | [Hyppää ohjeeseen](#pull)
+| Muutan tai lisään tiedostoja (esimerkiksi suunnitelmakuva `suunnitelma`-kansioon) | (1) Lisään muuttuneet ja uudet tiedostot *stage*-tilaan, **ja** (2) siirrän *stage*-tilan tiedon lokaaliin varastoon, **ja** (3) "pusken" tekemäni `commit`in etävarastoon. <br /><br />Huomaa kolme erillistä komentoa. | `git add --all`<br /><br />`git commit -m "Muutoksia kuvaava viesti."`<br /><br /> `git push` | [Hyppää ohjeeseen](#add-commit)
 
 Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiinnittää erityistä huomiota siihen, että tekee `pull`, `commit`- ja `push`-toimintoja riittävän usein konfliktien välttämiseksi. 
 
 `git status`-komentoa voi viljellä missä tahansa välissä. Se kertoo paikallisen varaston tilasta, muun muassa mitä tiedostoja on muutettu, poistettu tai lisätty.
 
-## Oman etävaraston luominen GitLab-palveluun 
+## Oman etävaraston luominen GitLab-palveluun{#fork}
 
 > [!HUOMAUTUS]
 > 
@@ -233,7 +222,7 @@ Jos ei tulostu virheviestiä, niin komennot ovat onnistuneet.
 
 Lisätietoa kiinnostuneille: [git config](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-## Etävaraston hakeminen omalle tietokoneelle (clone) 
+## Etävaraston hakeminen omalle tietokoneelle (clone){#clone}
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
 harjoitustyötä työstetään.** 
@@ -241,7 +230,7 @@ harjoitustyötä työstetään.**
 Seuraavaksi haetaan etävarasto omalle paikalliselle tietokoneelle. Tästä
 käytetään termiä *kloonaaminen* (engl. *clone*). Kloonattuun paikalliseen 
 tietovarastoon tehdyt muutokset voi aikanaan lähettää takaisin 
-etävarastoon; tästä kerrotaan lisää [kohdassa 8](#push). 
+etävarastoon; tästä kerrotaan lisää [myöhemmässä kohdassa](#push). 
 
 Kloonaus tehdään **tyhjään** hakemistoon.
 
@@ -260,7 +249,6 @@ mutta melkein helpompi on tässä vaiheessa:
 </details>
 
 **Valitse** alta käyttöjärjestelmästi mukainen käyttötapa.
-
 
 ### [Windows](#tab/clone-windows)
 
@@ -348,7 +336,7 @@ Lisätietoa:
 Git-ohje: [clone](https://www.git-tower.com/learn/git/commands/git-clone), 
 reference: [clone](https://git-scm.com/docs/git-clone)
 
-## Tiedostojen vieminen paikalliseen tietovarastoon (add, commit) 
+## Tiedostojen vieminen paikalliseen tietovarastoon (add, commit) {#add-commit}
 
 Kun tiedostoja lisätään, muokataan tai poistetaan, tulee kaikki nämä muutokset lisätä paikalliseen tietovarastoon.
 
@@ -385,7 +373,7 @@ rivin `.jar` perään rivi:
 
     !kerho.jar
 
-## Tehtyjen muutosten lähettäminen etävarastoon (push) 
+## Tehtyjen muutosten lähettäminen etävarastoon (push) {#push}
 
 Tässä vaiheessa paikalliseen tietovarastoon lähetetyt muutokset 
 lähetetään etävarastoon.
@@ -413,14 +401,11 @@ avainnipusta.
 Tarkista tämän jälkeen Gitlab-osoitteestasi, että sieltä löytyy lähettämäsi
 tiedostot (alkukurssista ne kuvat).
 
-## Muutosten hakeminen etävarastosta paikalliseen varastoon (pull) 
+## Muutosten hakeminen etävarastosta paikalliseen varastoon (pull) {#pull}
 
-Kun joku toinen (tai sinä jollain toisella tietokoneella) on muuttanut 
-tiedostoja ja pushannut muutokset etävarastoon,
-niin muutokset tulee hakea omalle koneelle. Yhteistyöskentelyssä on syytä
-aina työskentelyä aloittaessa antaa `pull`-komento.
+Kun sinä tai joku muu on muuttanut tiedostoja ja vienyt muutoksia etävarastoon, niin muutokset tulee hakea omalle koneelle. Yhteistyöskentelyssä on syytä aina työskentelyä aloittaessa antaa `pull`-komento.
 
-Siirry hakemistoon, johon olet kloonannut projektin (ks. [`clone`](#clone))
+Siirry hakemistoon, johon olet kloonannut projektin (ks. [clone](#clone))
 ja anna komento: 
 
     git pull
