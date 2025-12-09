@@ -207,7 +207,8 @@ käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
 Jos et keksi, minkä tyylisen pelin haluaisit tehdä, 
 katso, millaisia pelejä on tehty edellisissä toteutuksissa:
 
-[Ohj1 Kevät 22 pelejä](https://youtu.be/Coknsg_ClR4)
+- [Ohj1 Kevät 16 pelejä](https://youtu.be/-qBQ5CmF5ps)
+- [Ohj1 Kevät 22 pelejä](https://youtu.be/Coknsg_ClR4)
 
 Muista että voit tehdä muutakin kuin pelin!
 </details>
