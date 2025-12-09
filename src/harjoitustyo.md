@@ -4,20 +4,14 @@ Harkkatyön kuvaus. Lomakkeet edelleen TIMissä
 
 Harjoitustyö
 
- - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty.
-   Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada
-   arvosanan.
- - tehdään yksin tai parityönä. Mikäli luontaista paria ei löydy, ei sitä kannata ehkä etsiäkään
-   väkisin. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
- - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä.
-   Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
- - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, 
-   mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli).
-   Muita kieliä ei hyväksytä.
+ - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty. Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada arvosanan.
+ - tehdään yksin tai parityönä. Mikäli luontaista paria ei löydy, ei sitä kannata ehkä etsiäkään väkisin. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
+ - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä. Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
+ - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli). Muita kieliä ei hyväksytä.
 
 ## Vaiheet ja aikataulu
 
-Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta. 
+Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta.
 
 Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää harjoitustyösi [ohjauksessa](./tuki-ja-palaute.md) tai sopimalla erillinen ohjausaika sähköpostitse [ohj1-opet@tim.jyu.fi](mailto:ohj1-opet@tim.jyu.fi).
 
@@ -112,14 +106,11 @@ Voit katsoa vinkkejä seuraavista esimerkkisuunitelmista:
 
 ### Toiminnallisuus
 
-Pelissä pitää *tapahtua jotakin*, eli ruudulla pitää tapahtua jotain 
-järkevää. Käyttäjän tulee voida osallistua peliin interaktiivisesti 
-esimerkiksi hiiren ja/tai näppäimistön välityksellä.
+Pelissä pitää *tapahtua jotakin*, eli ruudulla pitää tapahtua jotain järkevää. Käyttäjän tulee voida osallistua peliin interaktiivisesti esimerkiksi hiiren ja/tai näppäimistön välityksellä.
 
 ### Koodi
 
-Työssä on oltava vähintään muutama aliohjelma Jypelin 
-valmiiden aliohjelmien (`Main`, `Begin`) lisäksi.
+Työssä on oltava vähintään muutama aliohjelma Jypelin valmiiden aliohjelmien (`Main`, `Begin`) lisäksi.
 
 Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa-alueet".
 
@@ -159,20 +150,13 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
 
  6. **Taulukko**: Käytetään taulukkoa tai listaa. 
  
-    Tietorakenteella täytyy olla jokin
-    tarkoitus siten, että sinne 
-    tallennetaan useita arvoja, joita todella käytetään 
-    pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja 
-    helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. 
-    Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä.
-    [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
+    Tietorakenteella täytyy olla jokin tarkoitus siten, että sinne tallennetaan useita arvoja, joita todella käytetään pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
 
  7. **Silmukka**: Ainakin yksi silmukka. 
  
     Silmukalla täytyy olla jokin tarkoitus siten, että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha)
 
- 8. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen
-käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
+ 8. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
 
       Et siis saa tehdä koodia kuten 
       ```csharp
@@ -202,8 +186,7 @@ käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
 
 ***
 
-Jos et keksi, minkä tyylisen pelin haluaisit tehdä, 
-katso, millaisia pelejä on tehty edellisissä toteutuksissa:
+Jos et keksi, minkä tyylisen pelin haluaisit tehdä, katso, millaisia pelejä on tehty edellisissä toteutuksissa:
 
 - [Ohj1 Kevät 16 pelejä](https://youtu.be/-qBQ5CmF5ps)
 - [Ohj1 Kevät 22 pelejä](https://youtu.be/Coknsg_ClR4)
@@ -216,9 +199,7 @@ Muista että voit tehdä muutakin kuin pelin!
 
 ***
 
-Kun tallennat pelin olioita tai tapahtumia listaan / taulukkoon, 
-voit käsitellä niitä yhdellä silmukalla ja paketoida logiikan omaan funktioon. 
-Näin syntyy sekä selkeää että tehokasta koodia.
+Kun tallennat pelin olioita tai tapahtumia listaan / taulukkoon, voit käsitellä niitä yhdellä silmukalla ja paketoida logiikan omaan funktioon. Näin syntyy sekä selkeää että tehokasta koodia.
 
 **Mitä pelidataa kannattaa kerätä?** Tässä esimerkkejä. 
 
@@ -254,10 +235,7 @@ Pidä laskentalogiikka omassa funktiossa, jotta peliluokka pysyy selkeänä.
 
 >Jypelin kirjaston ohjeissa on koodiesimerkkejä, joissa käytetään silmukkaa tai taulukkoa. Nämä eivät sellaisenaan riitä, vaan työssä tulee olla oman ajatustyön tulos.
 
-Mikäli omassa pelissä ei ole taulukkoa/listaa, silmukkaa tai funktiota, pitää
-ohjaajalle esittää itse tehdyn (ts. työ on tehty omatoimisesti ilman merkittävää apua ohjaajalta tai muilta opiskelijoilta) demotehtävän vastaus, missä 
-em. asioiden osaaminen on näytetty.  Tästä voi laittaa vaikka
-kommentin omaan harjoitustyöhön tyyliin:
+Mikäli omassa pelissä ei ole taulukkoa/listaa, silmukkaa tai funktiota, pitää ohjaajalle esittää itse tehdyn (ts. työ on tehty omatoimisesti ilman merkittävää apua ohjaajalta tai muilta opiskelijoilta) demotehtävän vastaus, missä em. asioiden osaaminen on näytetty.  Tästä voi laittaa vaikka kommentin omaan harjoitustyöhön tyyliin:
 
 ```csharp
 // TODO: taulukko, ks: https://tim.jyu.fi/answers/kurssit/tie/ohj1/%%vuosik%%/demot/demo7?answerNumber=1&task=matriisiensumma&user=vesal
