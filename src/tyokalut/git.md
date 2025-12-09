@@ -14,7 +14,6 @@ Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti. Gi
 > ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `kayttajatunnus`.
 > Korvaa tämä aina omalla käyttäjätunnuksellasi.
 
-
 ## Ennen kuin aloitat
 
 Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehnyt niin.
@@ -75,9 +74,7 @@ git --version
 > [!VAROITUS]
 >
 > Git Bash -tulkissa liittäminen **ei toimi** tavallisella `Ctrl+V` tai `Cmd+V`-näppäinyhdistelmällä!
-> 
 > Sen sijaan käytössä on seuraavat pikanäppäimet:
-> 
 > - Liitä kopioitu teksti bashiin: `Shift+Insert` 
 > - Kopioi valittu teksti bashista: `Ctrl+Insert` (Cmd+Insert macOS:ssa)
 > 
@@ -130,9 +127,7 @@ git --version
 | Menen koneelle jossa sisältö jo on                                                | Päivitän etävaraston version koneelle.                                                                                                                                                                                   | `git pull`                                                                                    |
 | Muutan tai lisään tiedostoja (esimerkiksi suunnitelmakuva `suunnitelma`-kansioon) | (1) Lisään muuttuneet ja uudet tiedostot *stage*-tilaan, **ja** (2) siirrän *stage*-tilan tiedon lokaaliin varastoon, **ja** (3) "pusken" tekemäni `commit`in etävarastoon. <br /><br />Huomaa kolme erillistä komentoa. | `git add --all`<br /><br />`git commit -m "Muutoksia kuvaava viesti."`<br /><br /> `git push` |
 
-Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiinnittää
-erityistä huomiota siihen, että tekee `pull`, `commit`- ja `push`-toimintoja riittävän
-usein konfliktien välttämiseksi. 
+Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiinnittää erityistä huomiota siihen, että tekee `pull`, `commit`- ja `push`-toimintoja riittävän usein konfliktien välttämiseksi. 
 
 `git status`-komentoa voi viljellä missä tahansa välissä. Se kertoo paikallisen varaston tilasta, muun muassa mitä tiedostoja on muutettu, poistettu tai lisätty.
 
@@ -444,14 +439,14 @@ Kun työskennellään ryhmässä esimerkiksi jos teet harjoitustyön parityönä
 Alla on esitetty tärkeimmät tavat, joilla vältytään ongelmilta, kun työstetään samaa haaraa ryhmänä.
 
 - Kommunikoikaa selkeästi mitä työstätte ja milloin.
-- **Aina** ennen kuin aloittaa koodaamisen, haetaan muutokset etävarastosta `--rebase` lipulla.
+- **Aina** ennen kuin aloittaa koodaamisen, haetaan muutokset etävarastosta `--rebase` lipulla, jonka ansiosta omat muutokset asetetaan paikalliseen varastoon vasta etävarastosta haettujen muutosten jälkeen. 
   ```bash
   git pull --rebase
   ```
 - Kun viette (*push*) muutoksia etävarastoon, ilmoittakaa siitä muulle ryhmälle.
 
 <details closed>
-<summary>Merge conflict esimerkki</summary>
+<summary>Esimerkki merge conflict -tilanteesta</summary>
 
 Vaikka noudattettaisiin hyviä käytänteitä, niin välillä merge conflict tulee vastaan silti. Tätä ei kuitenkaan kannata pelätä ja se saadaan ratkaistua esimerkiksi Riderissa. Tässä skenaariossa kaksi kehittäjää muokkaa samaa tiedostoa ja molemmat ovat haarassa `main`.
 
