@@ -23,8 +23,8 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 
 ## Aikataulu ja takarajat
 
-| Tutkinto-opiskelijat | Lukiolinjat | Avoin yliopisto |
-|----------------------|-------------|-----------------|
+| Tutkinto-opiskelijat                                                                                                                                                                                                                                                                                                                     | Lukiolinjat                                                                       | Avoin yliopisto                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
 
 ## Harjoitustyön vaiheiden tarkistuslista
@@ -341,26 +341,13 @@ mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään 
 
 **Pariohjelmointi**:
 
-Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)).
-Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja
-toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein -- vaihto voi
-tapahtua jopa "lennosta".
-Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon
-menee samalla tavalla kuin jos tekisi harjoitustyötä yksin.
-Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa,
-sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta.
-Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä
-"vuoron vaihtaminen" etänä on yleensä hankalaa.
+Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)). Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein -- vaihto voi tapahtua jopa "lennosta". Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon menee samalla tavalla kuin jos tekisi harjoitustyötä yksin. Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa, sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta. Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä "vuoron vaihtaminen" etänä on yleensä hankalaa.
 
 **Työskentely samanaikaisesti verkossa**:
 
-Jos työtä halutaan työstää yhtä aikaa samassa editorissa, helpoin tapa on
-käyttää Riderin Code With Me -ominaisuutta. Ominaisuuden avulla koodieditorista tulee
-Google Docs -tapainen alue, jossa kaksi tai useampaa henkilöä voi muokata koodia samanaikaisesti eri koneella.
-Muutokset tallentuvat yhdelle tietokoneelle, josta ne on helppoa ladata etävarastoon ilman konflikteja.
-Ominaisuus on Riderissa betakokeilussa.
-Valitettavasti non-commercial-lisenssillä (oletus tällä kurssilla) session enimmäisaika on 30 minuuttia.
-Jos anot opiskelijalisenssiä, saat (ilmeisesti) rajattoman käyttöajan.
+Jos työtä halutaan työstää yhtä aikaa samassa editorissa, helpoin tapa on käyttää Riderin Code With Me -ominaisuutta. Ominaisuuden avulla koodieditorista tulee Google Docs -tapainen alue, jossa kaksi tai useampaa henkilöä voi muokata koodia samanaikaisesti eri koneella. Muutokset tallentuvat yhdelle tietokoneelle, josta ne on helppoa ladata etävarastoon ilman konflikteja. Ominaisuus on Riderissa betakokeilussa. Valitettavasti non-commercial-lisenssillä (oletus tällä kurssilla) session enimmäisaika on 30 minuuttia. Jos anot opiskelijalisenssiä (ks. seuraava ohje), saat (ilmeisesti) rajattoman käyttöajan.
+
+</details>
 
 <details closed>
 <summary>Opiskelijalisenssin anominen Rideriin</summary>
@@ -415,5 +402,4 @@ Valitse yläpalkista *Tools* -> *Enable Code With Me* ja lopuksi *Enable and res
 1. Mene linkkiin, jonka session aloittaja jakoi ja paina *Join Session*. Mikäli mitään ei tapahdu, asenna sivun ohjeiden mukaan *Toolbox App*.
 
 2. Odota, että session aloittaja hyväksyy liittymispyynnön.
-</details>
 </details>
