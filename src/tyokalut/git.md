@@ -437,6 +437,59 @@ toimivan. Ohj1-kurssin osalta toimiva vaihtoehto on
 
 Lue tästä lisää esimerkiksi [StackOverflowsta](https://stackoverflow.com/questions/62653114/how-to-deal-with-this-git-warning-pulling-without-specifying-how-to-reconcile/62653400#62653400).
 
+## Git ja ryhmätyöskentely
+
+Kun työskennellään ryhmässä esimerkiksi jos teet harjoitustyön parityönä, tulee kiinnittää erityistä huomiota git:in käyttöön, jotta välttyy turhalta työltä. Kun useampi työstää samaa tiedostoa, tulee helposti tilanne, jossa on tehty eri muokkauksia samoille riveille. Tällöin git ei tiedä mitä tehdä ja konfliktit täytyy ratkaista käsin. Tälläistä tilannetta kutsutaan nimellä *Merge conflict* ja se ilmaantuu kun omia muutoksia yrittää puskea tai kun muutoksia koitetaan hakea omalle koneelle.
+
+Alla on esitetty tärkeimmät tavat, joilla vältytään ongelmilta, kun työstetään samaa haaraa ryhmänä.
+
+- Kommunikoikaa selkeästi mitä työstätte ja milloin.
+- **Aina** ennen kuin aloittaa koodaamisen, haetaan muutokset etävarastosta `--rebase` lipulla.
+  ```bash
+  git pull --rebase
+  ```
+- Kun viette (*push*) muutoksia etävarastoon, ilmoittakaa siitä muulle ryhmälle.
+
+<details closed>
+<summary>Merge conflict esimerkki</summary>
+
+Vaikka noudattettaisiin hyviä käytänteitä, niin välillä merge conflict tulee vastaan silti. Tätä ei kuitenkaan kannata pelätä ja se saadaan ratkaistua esimerkiksi Riderissa. Tässä skenaariossa kaksi kehittäjää muokkaa samaa tiedostoa ja molemmat ovat haarassa `main`.
+
+**Kehittäjä A** puskee etävarastoon seuraavan koodin:
+```csharp
+public override void Begin()
+{
+    PhysicsObject nelio = new PhysicsObject(100, 100, Shape.Rectangle);
+    Add(nelio);
+}
+```
+Tämän jälkeen **Kehittäjä B** luo oman kommitin ja yrittää puskea (*push*) oman koodinsa, jossa luodaan pallo, etävarastoon:
+```csharp
+public override void Begin()
+{
+    PhysicsObject pallo = new PhysicsObject(50, 50, Shape.Circle);
+    Add(pallo);
+}
+```
+Tämä pusku ei onnistu, sillä **Kehittäjä A** on puskenut oman muutoksensa etävarastoon ja **Kehittäjä B** ei ole hakenut näitä muutoksia itselleen lokaaliin varastoon. Komento `git push` johtaa tämän näköiseen tulosteeseen.
+![Epäonnistunut pusku merge conflictissä](./images/merge_conflict_failed_push.png)
+
+**Kehittäjä B** hakee muutokset itselleen komennolla `git pull --rebase`. Tämä komento epäonnistuu kuvassa näkyvällä tulosteella.
+![Epäonnistunut hakeminen merge conflictissä](./images/merge_conflict_failed_pull.png)
+
+Jos tämä komento ajettiin Riderin terminaalissa, niin Rider näyttää ylälaidassa varoituksen merge conflictista. Tästä ilmoituksesta voi klikata *Resolve conflicts...* nappia, jolloin avautuu Riderin näkymä konfliktien ratkomiseen.
+![Riderin merge conflict varoitus](./images/merge_conflict_rider_notification.png)
+
+#### Konfliktin ratkaiseminen editorissa
+
+Riderin *Merge conflict editor* näkymä näkyy alla olevassa kuvassa. Editorissa on kolme ikkunaa. Vasemmalla puolella on **Kehittäjän B** lokaalit muutokset, eli hänen, joka yritti hakea muutoksia etävarastosta. Oikealla puolella taas näkyy etävarastosta haettu tiedosto. Keskimmäinen ikkuna taas näyttää lopputuloksen.
+![Riderin merge conflict editori](./images/merge_conflict_editor.png)
+
+Nyt **Kehittäjän B** tulee päättää, säilytetäänkö lokaalit muutokset vai etävarastosta haetut muutokset. Tämä tapahtuu painamalla muutoksen eli punaisella näkyvän alueen kohdalla ikkunoiden välissä näkyvää nuoli symbolia joko vasemmalta(lokaali) tai oikealta(etävarasto) puolelta. Tämän jälkeen valittu muutos siirtyy keskimmäiseen ikkunaan. Kun kaikki konfliktit on ratkaistu tällä tavoin ja lopputulos(keskimmäinen ikkuna) näyttää oikealta, voidaan painaa alakulmasta *Apply* nappia ja sitten *Apply Changes and Mark Resolved*.
+
+Tehdään tämä vielä muille mahdollisille tiedostoille, joissa on konflikteja. Lopuksi kun yhtään konfliktiä ei ole enää jälellä, painetaan Riderin yläreunasta vihreää nuolikuvaketta *Continue Rebase*. Tämän jälkeen *Merge conflict* on ratkaistu ja **Kehittäjä B** voi jatkaa työskentelyä normaalisti.
+</details>
+
 ## Huomioitavaa 
 
 ### Tiedostojen koko 
