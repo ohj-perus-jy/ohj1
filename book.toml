@@ -45,3 +45,5 @@ csharp = "//-"
 
 [preprocessor.accordion]
 command = "python3 ./preprocessors/python/accordion.py"
+
+[preprocessor.embedify]
