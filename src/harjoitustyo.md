@@ -17,7 +17,7 @@ Harjoitustyö
 
 ## Vaiheet ja aikataulu
 
-Harjoitustyöhön kuuluu kolme vaihetta, jotka on listattu alla.
+Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta. 
 
 Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää harjoitustyösi [ohjauksessa](./tuki-ja-palaute.md) tai sopimalla erillinen ohjausaika sähköpostitse [ohj1-opet@tim.jyu.fi](mailto:ohj1-opet@tim.jyu.fi).
 
@@ -27,9 +27,7 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
 
-## Harjoitustyön vaiheiden tarkistuslista
-
-Alla on harjoitustyön vaiheet ja tarkistuslista kunkin vaiheen suorittamiseksi.
+## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat
 
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
@@ -71,11 +69,11 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäisen tentin mennessä** 
 
 
-- {#v3s1 saveSingleAnswer: true#} Tarkista, että työ täyttää kaikki vaaditut osa-alueet
+- Tarkista, että työ täyttää kaikki vaaditut osa-alueet
   - Näet kaikki tarkastettavat osa-alueet [vaatimuksista kohdasta "Tarkastettavat osa-alueet"](#htosat)
   - Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
 
-- {#v3s2 saveSingleAnswer: true#} Varmista, että työsi lopullinen koodi on etävarastossa
+- Varmista, että työsi lopullinen koodi on etävarastossa
    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](/view/%%basedir%%/ohjeet/git#addcommit) ja ohjeet [git-varaston lataamiseksi etävarastoon](/view/%%basedir%%/ohjeet/git#push)
    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
 
@@ -357,7 +355,7 @@ Jos työtä halutaan työstää yhtä aikaa samassa editorissa, helpoin tapa on 
 Voit anoa itsellesi maksuttoman opiskelijalisenssin käyttäen <u>student.jyu.fi</u>-sähköpostiosoitetta.
 Noudata huolellisesti alla olevia ohjeita. 
  			
- 1. Varmista, että student.jyu.fi-osoitteesi toimii. 
+ 1. Varmista, että `student.jyu.fi`-osoitteesi toimii. 
     Kannattaa lähettää itselleen testiposti jostain ulkopuolisesta osoitteesta
     (esim. Gmail tai Hotmail) ja katsoa tuleeko posti itselle perille.
     Ota varmuuden vuoksi mahdollinen edelleenohjaus pois päältä.
