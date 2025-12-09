@@ -74,7 +74,7 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
   - Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
 
 - Varmista, että työsi lopullinen koodi on etävarastossa
-   - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](/view/%%basedir%%/ohjeet/git#addcommit) ja ohjeet [git-varaston lataamiseksi etävarastoon](/view/%%basedir%%/ohjeet/git#push)
+   - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./tyokalut/git.md#tiedostojen-vieminen-paikalliseen-tietovarastoon-add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)
    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
 
 - Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
