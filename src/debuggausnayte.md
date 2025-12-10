@@ -174,7 +174,6 @@ Ohjaaja voi kysyä perustelemaan ratkaisusi tai näyttämään, miten ratkaisit 
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
     * Kun saat viestin `debug-koe on läpäisty!` voit siirtyä seuraavaan kohtaan.
 
-
 3. Kun olet saanut tehtävät tehtyä
 
    * Pyydä seuraavaksi ohjaajaa tarkistamaan tehtäväsi
