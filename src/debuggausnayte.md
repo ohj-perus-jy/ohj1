@@ -2,8 +2,7 @@
 
 Debuggauksen kuvaus ja ohjeet. Lomakkeet edelleen TIMissä.
 
-Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden 
-selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hallintaa:
+Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hallintaa:
 
 - askeltaminen aliohjelman sisään (step into)
 - aliohjelman suorittaminen yhtenä askeleena (step over)
@@ -21,12 +20,9 @@ Näyte arvostellaan asteikolla hyväksytty/hylätty.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Näyte tulee palauttaa osan 8 takarajaan mennessä. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa näytteen hylkäämiseen. | Näyte tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Näytteen palauttamiselle ei ole takarajaa, mutta se on hyväksytettävä ohjaajalla. |
 
-
 ## Miksi? 
 
-Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa 
-testaus- ja debuggaustaidot ovat olennainen osa virheiden etsimisessä ja korjaamisessa. Debuggeri on myös loistava työkalu ohjelman toiminnan 
-ymmärtämiseksi.
+Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa testaus- ja debuggaustaidot ovat olennainen osa virheiden etsimisessä ja korjaamisessa. Debuggeri on myös loistava työkalu ohjelman toiminnan ymmärtämiseksi.
 
 ## Miten valmistaudun?
 
@@ -78,14 +74,9 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 
    #### Videon jakelun vaatimukset
 
-   Laita video YouTubeen (suositus) tai Moniviestimeen. YouTubessa 
-   voit laittaa videon Unlisted-tilaan, mutta **ei** Private-tilaan. 
-   Tarkista esimerkiksi selaimen Incognito-tilassa, että video on todella 
-   katsottavissa myös kirjautumattomana käyttäjänä. Emme lataa tiedostoja esim. 
-   MediaFirestä tai vastaavista tiedostonjakopalveluista. 
+   Laita video YouTubeen (suositus) tai Moniviestimeen. YouTubessa  voit laittaa videon Unlisted-tilaan, mutta **ei** Private-tilaan. Tarkista esimerkiksi selaimen Incognito-tilassa, että video on todella katsottavissa myös kirjautumattomana käyttäjänä. Emme lataa tiedostoja esim. MediaFirestä tai vastaavista tiedostonjakopalveluista. 
    <!--TODO Minne palautus?-->
-   Kopioi videon URL-osoite tämän sivun palautuskenttään. Mikäli videosi
-   on YouTubessa, kopioi videon URL käyttäen Share-painiketta videon alapuolella.
+   Kopioi videon URL-osoite tämän sivun palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL käyttäen Share-painiketta videon alapuolella.
 
    Voit poistaa videon näytteen tarkastamisen jälkeen.
 
@@ -120,12 +111,10 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 
 3. Tee DebugKoe-projektissa olevat tehtävät ja nauhoita suorituksesi
 
-    * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa
-    olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
+    * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
 
-4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen ja liitä
-   julkinen URL-osoite alla olevaan laatikkoon.
+4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen ja liitä julkinen URL-osoite alla olevaan laatikkoon.
    - <!--TODO Minne palautus?-->
 
 Debuggausnäytteet tarkistetaan noin kerran viikossa. Saat ilmoituksen, kun työsi on tarkistettu.
@@ -134,9 +123,7 @@ Debuggausnäytteet tarkistetaan noin kerran viikossa. Saat ilmoituksen, kun työ
 
 ### [Palautus ohjauksessa](#tab/Ohjauksessa)
 
-Debuggausnäyte suoritetaan lähi- tai etäohjauksen aikana.
-Debuggausnäyte palautetaan näyttämällä ohjaajalle DebugKoe-ohjelman 
-tuloste debuggausnäytteen läpipääsystä:
+Debuggausnäyte suoritetaan lähi- tai etäohjauksen aikana. Debuggausnäyte palautetaan näyttämällä ohjaajalle DebugKoe-ohjelman tuloste debuggausnäytteen läpipääsystä:
 
 ```
 Tehtävä 1 läpäisty!
@@ -145,8 +132,7 @@ Tehtävä 2 läpäisty!
 Onnittelut, debug-koe läpäisty! Paina Enteriä poistuaksesi.
 ```
 
-Ohjaaja voi kysyä perustelemaan ratkaisusi tai näyttämään, miten
-ratkaisit tehtävät.
+Ohjaaja voi kysyä perustelemaan ratkaisusi tai näyttämään, miten ratkaisit tehtävät.
 
 #### Vaatimukset
 
@@ -158,7 +144,7 @@ ratkaisit tehtävät.
 
 1. Riderin Console-näkymässä ei näy yllä olevaa läpäisytekstiä.
 2. Opiskelija ei pysty perustelemaan ratkaisunsa.
-4. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
+3. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
 
 ### Debugnäytteen suorittaminen ohjauksessa
 1. Lataa ja avaa DebugKoe-projekti
@@ -184,8 +170,7 @@ ratkaisit tehtävät.
 2. Tee DebugKoe-projektissa olevat tehtävät **pääteohjauksessa**
 
     * Mene pääteohjaukseen. Näet ohjausten aikataulut [Tuki ja palaute sivulta](./tuki-ja-palaute.md)
-    * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa
-    olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
+    * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
     * Kun saat viestin `debug-koe on läpäisty!` voit siirtyä seuraavaan kohtaan.
 
@@ -212,14 +197,9 @@ Saat vielä erillisen kuittauksen debuggausnäytteen hyväksymisestä sähköpos
    - Tarvittaessa voi myös suodattaa opiskelijan nimen mukaan *User's name* sarakkeen hakukentällä.
    - Jos opiskelijaa ei löydy, joko hän ei palauttanut videota (jos palautus on videolla) tai hän ei ole kuitannut tehtävää tehdyksi ("Kuittaa tämä, kun olet saanut tehtävät tehtyä" -ruksi).
 2. Tarkista opiskelijan näyte. Voit katsoa vaatimukset tämän ohjeen alta.
-   - Jos tarkistat pääteohjauksessa näytettyä debuggausnäytettä, voit kysyä
-     opiskelijalta, miten hän tehtävät ratkaisi (esim. mikä keskeytyskohta oli laitettu minnekin ja miksi).
-     Pääpointti on, että tehtävän koodia ei ole muokattu, ja tehtävän ratkaisemiseksi
-     on käytetty vain debuggeria.
-3. Jos näyte täyttää vaatimukset, klikkaa opiskelijan nimen vieressä olevaa
-   ruksia ja sitten paina taulukon alapuolella olevaa *Kuittaa näyte valituille* -painiketta.
-   - Voit kuitata näytteen useammalle opiskelijalle samaan aikaan ruksimalla kaikki
-     kuitattavat suoritukset.
+   - Jos tarkistat pääteohjauksessa näytettyä debuggausnäytettä, voit kysyä opiskelijalta, miten hän tehtävät ratkaisi (esim. mikä keskeytyskohta oli laitettu minnekin ja miksi). Pääpointti on, että tehtävän koodia ei ole muokattu, ja tehtävän ratkaisemiseksi on käytetty vain debuggeria.
+3. Jos näyte täyttää vaatimukset, klikkaa opiskelijan nimen vieressä olevaa ruksia ja sitten paina taulukon alapuolella olevaa *Kuittaa näyte valituille* -painiketta.
+   - Voit kuitata näytteen useammalle opiskelijalle samaan aikaan ruksimalla kaikki kuitattavat suoritukset.
 
 -- ^^^ -- tämä siirtynee TIMiin ?? -- ^^^ --
 
