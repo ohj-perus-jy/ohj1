@@ -62,7 +62,7 @@ Debuggauksen voi lopettaa painamalla Shift + F5 tai valikosta Run -> Stop debugg
 
 Debuggaus‐näkymän **Threads & Variables**-paneelissa (tai välilehdellä) näkyy tällä hetkellä näkyvissä olevat muuttujat ja niiden arvot.
 
-![Local variables in debug view](./images/threads_and_variables.png)
+![Paikalliset muuttujat debug-näkymässä](./images/threads_and_variables.png)
 
 **Locals**-paneelissa voi myös muokata muuttujien arvoja ajonaikaisesti. Esimerkiksi muuttujan `luku`-arvoa voi muokata kaksoisklikkaamalla **Value**-sarakkeen kohdalta numeroa ja kirjoittamalla uuden luvun vanhan tilalle. Tämän jälkeen kannattaa painaa Enteriä, jotta editori ottaa muutoksen. **Riderissa** muuttujan arvoa voi locals-ikkunassa muokata painamalla F2 tai klikkaamalla hiiren oikealla ja valistemalla *Set Value*.
 
