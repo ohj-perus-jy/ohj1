@@ -1,7 +1,7 @@
 ## T3*. Mitä ohjelma tulostaa? <span class="taskPoints">(1 p.)</span>
 
-**Lue ensin monisteesta:**  [7.3.2. Muuttujan arvon
-muuttaminen](/view/%%basedir%%/materiaali/moniste#muuttujan-arvo-muuttuu-vain-kun-siihen-sijoitetaan)
+**Lue ensin monisteesta:**  [Muuttujan arvon
+muuttaminen]() TODO: Linkki
 
 Vastaa kysymyksiin 3.1&ndash;3.3. 
 
