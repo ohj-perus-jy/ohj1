@@ -26,18 +26,14 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: Suunnitelma on näytettävä ohjaajalle ennen osan 5 harjoitustehtävien takarajaa.
-
- 2. Luo oma etävarasto GitLabiin tai GitHubiin. Katso [kirjalliset ohjeet](./tyokalut/git.md#oman-etävaraston-luominen-gitlab-palveluun) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)
-
- 3. Kopioi ja liitä etävarastosi osoite [Oma eteneminen]() <!--TODO Päivitä url--> -sivulle. Etävaraston osoitteen on oltava muotoa *https://github.com/nimi/ohj1ht.git* TAI *https://gitlab.com/nimi/ohj1ht.git*. TODO: Linkki.
- 
- 4. Hae etävarasto omalle tietokoneelle Git-työkalun avulla. Sinulla tulee olla Git-työkalu asennettuna, katso [työkaluohjeet](./tyokalut.md#git). Katso git-ohjeet [omien tietojen asettamiseksi](./tyokalut/git.md#omien-tietojen-nimi-sähköposti-asettaminen) ja [etävaraston lataamiseksi omalle tietokoneelle](./tyokalut/git.md#etävaraston-hakeminen-omalle-tietokoneelle-clone). 
-
- 5. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma). Katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
- 
- 6. Lataa suunnitelmasi ja kuvasi etävarastoon. Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./tyokalut/git.md#tiedostojen-vieminen-paikalliseen-tietovarastoon-add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push). 
-
- 7. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+ 2. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
+ 3. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./tyokalut/git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 4. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle]() <!--TODO Päivitä url-->. Etävaraston osoitteen on oltava muotoa `https://github.com/nimi/ohj1ht.git` tai `https://gitlab.com/nimi/ohj1ht.git`. TODO: Linkki.
+ 5. Aseta omat Git-tiedot ([ohje](./tyokalut/git.md#gitconfig)). 
+ 6. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./tyokalut/git.md#clone)). 
+ 7. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 8. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./tyokalut/git.md#add-commit) ja [push](./tyokalut/git.md#push)). 
+ 9. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 ### Vaihe 2: Työ 50 % valmis
 
@@ -62,15 +58,11 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäisen tentin mennessä** 
 
-
-- Tarkista, että työ täyttää kaikki vaaditut osa-alueet
-  - Näet kaikki tarkastettavat osa-alueet [vaatimuksista kohdasta "Tarkastettavat osa-alueet"](#htosat)
-  - Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
-
+- Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
+- Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
 - Varmista, että työsi lopullinen koodi on etävarastossa
    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./tyokalut/git.md#tiedostojen-vieminen-paikalliseen-tietovarastoon-add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)
    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
-
 - Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
@@ -114,21 +106,15 @@ Työssä on oltava vähintään muutama aliohjelma Jypelin valmiiden aliohjelmie
 
 Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa-alueet".
 
-
-### Paritöistä
+## Paritöistä
 
 Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Ks. [Git-ohjeet](./tyokalut/git.md#git-ja-ryhmätyöskentely).
 
-#### Parityöt, työnjako
-
 Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
-
-#### Parityöt, työn vaativuus
 
 Työn on oltava vaativampi kuin yksin tehdyn työn, ja tässä työmäärä on tärkein mittari. Ohjaajat käyvät työn läpi tarkastustilaisuudessa ryhmäläisten kanssa. Yksittäistä pelin ominaisuutta joka kaikilta paritöiltä vaadittaisiin ei yleisellä tasolla voi antaa. Näiden kriteerien tarkoitus ei ole vaikeuttaa tekemistä vaan ehkäistä ennalta vapaamatkustamista.
 
-
-### Tarkastettavat osa-alueet
+## Tarkastettavat osa-alueet {#htosat}
 
 Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan harjoitustyön esittelemisen yhteydessä.
 
@@ -177,7 +163,6 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
       Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
  12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset) 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
-
 
 ## Usein kysytyt kysymykset ja muut vinkit
 

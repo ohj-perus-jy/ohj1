@@ -18,7 +18,7 @@ Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti. Gi
 
 Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehnyt niin.
 
-## Mikä Git on?
+## Mikä Git on
 
 *Git* on ohjelmisto, jolla voidaan toteuttaa tiedostojen *versiohallintaa*. Ohjelmistotyössä on erityisen tärkeää, että jokainen ohjelmistoon tehty muutos versioidaan selkeästi. Versiohallinnan käyttäminen yhteistyöskentelyyn ja muutosten jäljittämiseen on normi niin teollisessa ohjelmistotuotannossa, vapaan/avoimen lähdekoodin projekteissa kuin myös monien harrastajien henkilökohtaisissa töissä. 
 
@@ -30,7 +30,7 @@ Tällä kurssilla emme käytä Dropboxia, muistitikkuja, sähköpostia tai vasta
 
 Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien kirjoittamisessa.
 
-## Miten saan Gitin auki?
+## Miten saan Gitin auki
 
 Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään komentoriviltä. Gitille on tarjolla myös graafisia käyttöliittymiä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)), jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään Gitiä komentoriviltä nk. *bash*-komentokehotteesta. 
 
@@ -120,7 +120,7 @@ Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiin
 
 `git status`-komentoa voi viljellä missä tahansa välissä. Se kertoo paikallisen varaston tilasta, muun muassa mitä tiedostoja on muutettu, poistettu tai lisätty.
 
-## Oman etävaraston luominen GitLab-palveluun{#fork}
+## Oman etävaraston luominen GitLab-palveluun {#fork}
 
 > [!HUOMAUTUS]
 > 
@@ -198,7 +198,7 @@ Forkin tekijä antaa oikeudet muille ryhmäläisille. Tämä tapahtuu projektin 
 
 Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Tämä on otettava huomioon alempana olevissa ohjeissa, joissa tällöin näkyy "väärän" henkilön tunnus.
 
-## Omien tietojen (nimi, sähköposti) asettaminen 
+## Omien tietojen (nimi, sähköposti) asettaminen {#gitconfig}
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
 harjoitustyötä työstetään.** 
@@ -222,7 +222,7 @@ Jos ei tulostu virheviestiä, niin komennot ovat onnistuneet.
 
 Lisätietoa kiinnostuneille: [git config](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-## Etävaraston hakeminen omalle tietokoneelle (clone){#clone}
+## Etävaraston hakeminen omalle tietokoneelle (clone) {#clone}
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
 harjoitustyötä työstetään.** 
