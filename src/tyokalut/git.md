@@ -32,7 +32,7 @@ Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien 
 
 ## Miten saan Gitin auki?
 
-Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään komentoriviltä. Gitille on tarjolla myös graafisia käyttöliittymä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)), jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään Gitiä komentoriviltä nk. *bash*-komentokehotteesta. 
+Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään komentoriviltä. Gitille on tarjolla myös graafisia käyttöliittymiä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)), jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään Gitiä komentoriviltä nk. *bash*-komentokehotteesta. 
 
 Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 ### [Windows](#tab/asennus-win)
