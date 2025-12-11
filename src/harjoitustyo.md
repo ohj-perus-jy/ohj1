@@ -118,7 +118,7 @@ Työn on oltava vaativampi kuin yksin tehdyn työn, ja tässä työmäärä on t
 
 Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan harjoitustyön esittelemisen yhteydessä.
 
- 1. **Nimeäminen** on johdonmukaista ja noudattaa [kurssin koodauskäytänteitä]().
+ 1. **Koodin tyyli** on [kurssin tyylioppaan mukaista](tyyliopas.md).
  
  2. **Näkyvyys**: Aliohjelmien ja attribuuttien näkyvyys tulee olla määritelty
 (`public`, `private`). Julkisia staattisia (`public static`) muuttujia ei saa olla. 
