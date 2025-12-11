@@ -8,6 +8,7 @@
 [Harjoitustyö](./harjoitustyo.md)
 [Debuggausnäyte](./debuggausnayte.md)
 [Tentti](./tentti.md)
+[Usein kysyttyä](./ukk.md)
 
 ---
 
