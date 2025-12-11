@@ -160,8 +160,7 @@ https://github.com/käyttäjänimi/ohj1ht.git
 
 Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](). TODO: Linkki.
 
-Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta
-Clone -> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
+Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta Clone -> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
 
 <details closed><summary>✨ Valinnaista lisätietoa: Mikä fork on?</summary>
 
@@ -194,8 +193,7 @@ Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Tämä on otetta
 
 **Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla harjoitustyötä työstetään.** 
 
-Versiohallinta liittää jokaiseen muutokseen tiedot muutoksen tekijän nimestä ja sähköpostiosoitteesta. Tästä syystä Git-ohjelmalle täytyy antaa nimi ja sähköposti. 
-Aseta omat tietosi Git-asiakasohjelmaan seuraavasti.
+Versiohallinta liittää jokaiseen muutokseen tiedot muutoksen tekijän nimestä ja sähköpostiosoitteesta. Tästä syystä Git-ohjelmalle täytyy antaa nimi ja sähköposti. Aseta omat tietosi Git-asiakasohjelmaan seuraavasti.
 
 Mene komentoriville ([miten avaan komentorivin?](#miten-saan-gitin-auki)) ja aseta tietosi antamalla alla olevat komennot:
 
@@ -310,12 +308,12 @@ mutta melkein helpompi on tässä vaiheessa:
 1. Tarkista `ls -la`-komentoa käyttämällä
 että hakemistoon tuli tiedostot `.gitignore`, `README.md` sekä kansio `suunnitelma`. 
 
-     - `.gitignore`-tiedosto sisältää tiedot sellaisista tiedostoista, joita ei 
+  - `.gitignore`-tiedosto sisältää tiedot sellaisista tiedostoista, joita ei 
     oletusarvoisesti viedä versionhallintaan. 
     Näitä ovat muun muassa erilaiset väliaikaistiedostot sekä 
     käännetyt tiedostot. 
-     - `README.md` sisältää projektin kuvauksen Markdown-formaatissa. 
-     - `suunnitelma`-kansioon laitetaan pelin suunnitelmakuva (tai -kuvat).
+  - `README.md` sisältää projektin kuvauksen Markdown-formaatissa. 
+  - `suunnitelma`-kansioon laitetaan pelin suunnitelmakuva (tai -kuvat).
 
 
 ***
