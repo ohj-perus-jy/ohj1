@@ -12,6 +12,8 @@ Poista käyttämätön koodi ja kommentit. Pidä koodi siistinä ja järjestykse
 
 Projektikansiossa tulee olla vain tarpeelliset tiedostot. Poista vanhat, käyttämättömät tai väliaikaiset tiedostot.
 
+Käytä Riderin automaattisia C#-kielen koodinmuotoiluasetuksia säännöllisesti (Code <i class="bi bi-chevron-right"></i> Reformat Code...).
+
 ## Dokumentointi ja kommentointi
 
 Käytä XML-dokumentointikommentteja julkisissa metodeissa ja luokissa. Dokumentoi metodien parametrit ja paluuarvot.
