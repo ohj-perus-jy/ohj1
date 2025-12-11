@@ -23,7 +23,7 @@ Mikäli arvosanaa ei ole mahdollista määrittää muilla osilla, opiskelijan on
 
 ## Voinko korvata kurssin toisella suorittamallani ohjelmoinnin peruskurssilla?
 
-Suomalaisten yliopistojen kohdalla vastaus on lähtökohtaisesti kyllä, mutta korvaavuus saattaa vaatia lisänäyttöä. Alla on lueteltu muiden yliopistojen opintojaksoja, ja niihin vaadittavia lisänäyttöjä.
+Suomalaisten yliopistojen kohdalla vastaus on lähtökohtaisesti kyllä, mutta korvaavuus saattaa vaatia lisänäyttöä. Alla on lueteltu muiden yliopistojen opintojaksoja, ja niihin vaadittavia lisänäyttöjä. Jos omaa yliopistoasi ei ole listattu, ota yhteyttä opettajiin.
 
  * Helsingin yliopisto: Ohjelmoinnin perusteet (5 op). Korvataan, mutta vaaditaan lisänäyttönä osallistuminen Jyväskylän yliopiston Ohjelmointi 1 -kurssin tenttiin. Tentistä on saatava vähintään arvosana 1. Arvosana määräytyy tentin arvosanan perusteella.
 
