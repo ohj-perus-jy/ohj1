@@ -58,10 +58,10 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 > [!VAROITUS]
 >
-> Git Bash -tulkissa liittäminen **ei toimi** tavallisella `Ctrl+V` tai `Cmd+V`-näppäinyhdistelmällä!
+> Git Bash -tulkissa liittäminen **ei toimi** tavallisella <kbd>Ctrl</kbd> + <kbd>V</kbd> tai <kbd>Cmd</kbd> + <kbd>V</kbd>-näppäinyhdistelmällä!
 > Sen sijaan käytössä on seuraavat pikanäppäimet:
-> - Liitä kopioitu teksti bashiin: `Shift+Insert` 
-> - Kopioi valittu teksti bashista: `Ctrl+Insert` (Cmd+Insert macOS:ssa)
+> - Liitä kopioitu teksti bashiin: <kbd>Shift</kbd> + <kbd>Insert</kbd> 
+> - Kopioi valittu teksti bashista: <kbd>Ctrl</kbd> + <kbd>Insert</kbd> (<kbd>Cmd</kbd> + <kbd>Insert</kbd> macOS:ssa)
 > 
 > Vaihtoehtoisesti voit oikeaklikata päätteen kursorista ja valita *Paste* tai *Copy*.
 
@@ -92,7 +92,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [Linux](#tab/asennus-linux)
 
- 1. [Asenna Git-työkalu](/view/%%basedir%%/ohjeet/tyokalut#git) mikäli et ole vielä tehnyt niin!
+ 1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
  2. Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai *Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva tämän ohjeen kannalta.
 
 Voit testata, että `git`-työkalu löytyy suorittamalla komento
@@ -130,27 +130,33 @@ Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiin
 
 Tässä vaiheessa luodaan henkilökohtainen etävarasto (engl. *remote repository*) 
 [gitlab.jyu.fi](https://gitlab.jyu.fi)-palveluun. 
-Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen git-varastoosi kurssin alkuasetukset.
+Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen Git-varastoosi kurssin alkuasetukset.
 
 **Tämä vaihe tehdään kurssilla <u>yhden kerran</u>.** 
 
- 1. (a) Jos sinulla on JY-tunnukset: Kirjaudu gitlab.jyu-palveluun (<https://gitlab.jyu.fi/>) JY-tunnuksilla. 
-   (b) Jos sinulla ei ole JY-tunnuksia: Tee tunnukset GitHub-palveluun (<https://github.com>), ja kirjaudu sisään.
- 2. (a) JY: Avaa Ohj1-kurssin pohjaprojekti selaimessa:\
-   <https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht>
-   (b) GitHub: Avaa Ohj1-kurssin pohjaprojekti selaimessa:\
+ 1. (a) Jos sinulla on JY-tunnukset: Kirjaudu gitlab.jyu-palveluun (<https://gitlab.jyu.fi/>) JY-tunnuksilla.\ 
+    (b) Jos sinulla ei ole JY-tunnuksia: Tee tunnukset GitHub-palveluun (<https://github.com>), ja kirjaudu sisään.
+ 2. (a) JY: Avaa Ohj1-kurssin pohjaprojekti selaimessa:
+   <https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht>\
+    (b) Ei-JY: Avaa Ohj1-kurssin pohjaprojekti selaimessa:
    <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht.git>
  3. (a) JY: Valitse oikeasta ylänurkasta `fork`
-    (b) GitHub: Vastaavasti.
+    (b) Ei-JY: Vastaavasti.
  4. Valitse omaa tunnustasi vastaava `namespace` (ryhmä).
  5. Valitse näkyvyydeksi `public`. 
  6. Tarkista, että `Project slug` kohdassa lukee `ohj1ht`. Jos muutat tätä, niin tämän ohjeen myöhemmät kohdat eivät toimi oikein. 
 
-Projektisi etävaraston URL-osoite on nyt:
+Projektisi etävaraston URL-osoite on nyt (jos sinulla on JY-tunnukset):
 
 ```
 https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git
 ```
+
+tai (jos sinulla ei ole JY-tunnuksia):
+
+```
+https://github.com/käyttäjänimi/ohj1ht.git
+``` 
 
 Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](). TODO: Linkki.
 
@@ -161,27 +167,13 @@ Clone -> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa oh
 
 *Tämä teksti kannattaa lukea, kun ymmärrät, mitä commit, push ja pull tarkoittavat.*
 
-Fork on itsenäinen kopio olemassa olevasta git-varastosta.
-Fork säilyttää aikaisemman historian (commitit), ja jatkaa omaa elämäänsä 
-irrallaan alkuperäisestä projektista. 
-Tähän kopioon (fork-projektiin) tehtävät commitit eivät mene alkuperäiseen projektiin, eivätkä
-alkuperäisen projektin commitit tule kopioon. 
+Fork on itsenäinen kopio olemassa olevasta git-varastosta. Fork säilyttää aikaisemman historian (commitit), ja jatkaa omaa elämäänsä irrallaan alkuperäisestä projektista. Tähän kopioon (fork-projektiin) tehtävät commitit eivät mene alkuperäiseen projektiin, eivätkä alkuperäisen projektin commitit tule kopioon. 
 
-Käytännön elämässä fork-projekti tehdään usein tilanteessa, kun kehittäjä haluaa 
-syystä tai toisesta erottaa oman työnsä alkuperäisen projektin työstä. Kehittäjä
-voi esimerkiksi olla pettynyt projektin suuntaan ja haluaa jatkaa itsenäisesti eteenpäin. 
-Yksi esimerkki tästä ovat striimausohjelmistot OBS Studio ja Streamlabs Desktop: 
-[OBS Studio](https://github.com/obsproject/obs-studio) on maksuton, vapaan 
-lähdekoodin (Gnu GPL v2) projekti. Streamlabs forkkasi OBS-projektin 
-vuonna 2014, ja on siitä eteenpäin tuonut omaan forkkiinsa yhä enemmän 
-kaupallisia ominaisuuksia, kun taas OBS jatkaa edelleen ilmaisohjelmiston periaatteella. 
+Käytännön elämässä fork-projekti tehdään usein tilanteessa, kun kehittäjä haluaa syystä tai toisesta erottaa oman työnsä alkuperäisen projektin työstä. Kehittäjä voi esimerkiksi olla pettynyt projektin suuntaan ja haluaa jatkaa itsenäisesti eteenpäin. Yksi esimerkki tästä ovat striimausohjelmistot OBS Studio ja Streamlabs Desktop: [OBS Studio](https://github.com/obsproject/obs-studio) on maksuton, vapaan lähdekoodin (Gnu GPL v2) projekti. Streamlabs forkkasi OBS-projektin vuonna 2014, ja on siitä eteenpäin tuonut omaan forkkiinsa yhä enemmän kaupallisia ominaisuuksia, kun taas OBS jatkaa edelleen ilmaisohjelmiston periaatteella. 
 
-Tällä kurssilla forkkaaminen mahdollistaa opiskelijalle helpon tavan perustaa 
-oma git-repo GitLabiin, ja toisaalta forkin ansiosta opettaja voi samalla jakaa 
-opiskelijoille projektin pohjakoodit (suunnitelmien pohjat jne.) valmiiksi. 
+Tällä kurssilla forkkaaminen mahdollistaa opiskelijalle helpon tavan perustaa oma Git-repo GitLabiin, ja toisaalta forkin ansiosta opettaja voi samalla jakaa opiskelijoille projektin pohjakoodit (suunnitelmien pohjat jne.) valmiiksi. 
 
-Älä sotke fork-termiä `branch`-termiin. Brancheja käytetään Gitissä 
-aivan eri tarkoitukseen, vaikka myös branch usein suomennetaan "haaraksi".
+Älä sotke fork-termiä branch-termiin. Brancheja käytetään Gitissä aivan eri tarkoitukseen, vaikka myös branch usein suomennetaan *haaraksi*.
 
 Fork-projektista on viite alkuperäiseen projektiin, siis siihen, josta fork otettiin, 
 jotta alkuperäisestä projektista käsin voidaan seurata mitä haaroja siitä on tehty.
@@ -194,29 +186,25 @@ Lisätietoa kiinnostuneille: <https://help.github.com/en/github/getting-started-
 
 *Jos teet harjoitustyön yksin, voit ohittaa tämän kohdan.*
 
-Forkin tekijä antaa oikeudet muille ryhmäläisille. Tämä tapahtuu projektin vasemman reunan kohdasta `Members`. Syötä kohtaan `GitLab member or Email address` ryhmän jäsenet yksi kerrallaan. Huom! Jäsenten tulee olla tätä ennen olla kirjautunut gitlab.jyu.fi-palveluun vähintään kerran.
+Forkin tekijä antaa oikeudet muille ryhmäläisille. Tämä tapahtuu projektin vasemman reunan kohdasta *Members*. Syötä kohtaan *GitLab member or Email address* ryhmän jäsenet yksi kerrallaan. Huom! Kaikkien jäsenten tulee olla tätä ennen olla kirjautunut gitlab.jyu.fi-palveluun vähintään kerran.
 
 Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Tämä on otettava huomioon alempana olevissa ohjeissa, joissa tällöin näkyy "väärän" henkilön tunnus.
 
 ## Omien tietojen (nimi, sähköposti) asettaminen {#gitconfig}
 
-**Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
-harjoitustyötä työstetään.** 
+**Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla harjoitustyötä työstetään.** 
 
-Versiohallinta liittää jokaiseen muutokseen tiedot muutoksen tekijän nimestä
-ja sähköpostiosoitteesta. Tästä syystä git-ohjelmalle täytyy antaa 
-nimi ja sähköposti. 
-
-Aseta omat tietosi git-asiakasohjelmaan seuraavasti.
+Versiohallinta liittää jokaiseen muutokseen tiedot muutoksen tekijän nimestä ja sähköpostiosoitteesta. Tästä syystä Git-ohjelmalle täytyy antaa nimi ja sähköposti. 
+Aseta omat tietosi Git-asiakasohjelmaan seuraavasti.
 
 Mene komentoriville ([miten avaan komentorivin?](#miten-saan-gitin-auki)) ja aseta tietosi antamalla alla olevat komennot:
+
+(Korvaa lainausmerkkien sisällä olevat tiedot omilla tiedoillasi. Lainausmerkit tulee pitää mukana komennossa.)
 
 ```bash 
 git config --global user.name "Olli Opiskelija"
 git config --global user.email "olli.o.opiskelija@student.jyu.fi"
 ```
-
-Korvaathan esimerkkitiedot omilla tiedoillasi!
 
 Jos ei tulostu virheviestiä, niin komennot ovat onnistuneet.
 
@@ -487,7 +475,7 @@ jotain, jonka haluat poistaa myöhemmin, se onnistuu esimerkiksi [BFG Repo-Clean
 
 Aluksi ehdottomasti suositeltavin tapa on käyttää Gitiä komentoriviltä. On olemassa kuitenkin myös graafisia ympäristöjä Gitin käyttämiseen. Myös IDEissä on nykyään varsin asialliset Git-asiakasohjelmistot (eli käyttöliittymä Git-komentojen käyttämistä varten), joskin jokainen on aina vähän omanlaisensa ja vaatii totuttelua. Kaikkia alla mainittuja työkaluja voit kuitenkin käyttää ristiin. Kannattaa kokeilla eri tapoja. Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
 
- * [SmartGit](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/smartgit)  (Windows, Linux, macOS)
+ * [SmartGit](https://tim.jyu.fi/view/kurssit/tie/ohj2//git/smartgit)  (Windows, Linux, macOS)
  * [Fork](https://git-fork.com/) (Windows, macOS)
  * [TortoiseGit](https://tortoisegit.org/) (Windows)
  * GitHub Desktop (Windows, macOS)
@@ -648,7 +636,7 @@ perheen pienimmille mutta varsinaiset vinkit voivat pelastaa kiperistä tilantei
 
 ## Lisätietoa kiinnostuneille
 
-- [Gitin käyttö Ohjelmointi 2 -kurssilla](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/ohj2git)
+- [Gitin käyttö Ohjelmointi 2 -kurssilla](https://tim.jyu.fi/view/kurssit/tie/ohj2//git/ohj2git)
 - [Git reference](https://git-scm.com/docs): Git-yhteisön ylläpitämä dokumentaatio Git-komennoille.
 - [A curious tale - from snaphots to git](https://matthew-brett.github.io/curious-git/curious_journey.html) - tämä ja
   sen [jatko-osa](https://matthew-brett.github.io/curious-git/curious_git.html) kannattaa lukea, ne selvittävät hyvin Gitin ideaa.
