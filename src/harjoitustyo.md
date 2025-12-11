@@ -292,13 +292,7 @@ Lähtökohtaisesti on kolme tapaa, joita tällä opintojaksolla suositellaan:
 
 **Eri koneet, sama etävarasto**:
 
-Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston
-omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon.
-Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä)
-tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää
-kahden eri tekijän muutokset yhteen.
-Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)) ja ladataan ([`git pull`](./tyokalut/git.md#muutosten-hakeminen-etävarastosta-paikalliseen-varastoon-pull)) sieltä
-mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./tyokalut/git.md#git-ja-ryhmätyöskentely) osiosta.
+Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)) ja ladataan ([`git pull`](./tyokalut/git.md#muutosten-hakeminen-etävarastosta-paikalliseen-varastoon-pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./tyokalut/git.md#git-ja-ryhmätyöskentely) osiosta.
 
 **Pariohjelmointi**:
 

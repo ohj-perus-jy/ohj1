@@ -35,20 +35,20 @@ Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien 
 Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään komentoriviltä. Gitille on tarjolla myös graafisia käyttöliittymiä (ks. [Luku 11. Tapoja käyttää Gitiä](#tapoja-käyttää-gitiä)), jotka käytännössä suorittavat tarvittavia komentorivikomentoja puolestasi. Ohjelmointi 1 -kurssilla harjoittelemme käyttämään Gitiä komentoriviltä nk. *bash*-komentokehotteesta. 
 
 Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
+
 ### [Windows](#tab/asennus-win)
  
 1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 3. Kirjoita hakupalkkiin *git bash*
 4. Valitse löytyvistä tuloksista *Git Bash*
-
-![alt text](images/gitbash-startmenu.png)
+![Git bash startmenu](images/gitbash-startmenu.png)
 
 Tuloksena pitäisi avautua seuraava bash-komentorivipääte:
 
-![alt text](images/gitbash-avattu.png)
+![Git bash avattu](images/gitbash-avattu.png)
 
-Voit testata, että `git`-työkalu löytyy suorittamalla komento
+Voit testata, että Git-työkalu löytyy suorittamalla komento
 
 ```bash
 git --version
@@ -74,13 +74,13 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
  3. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
  4. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
 
-![](images/mac-terminal-1.png)
+![Mac-terminal](images/mac-terminal-1.png)
 
 Tuloksena pitäisi avautua seuraava pääteikkuna:
 
-![](images/mac-terminal-2.png)
+![Mac-Terminal](images/mac-terminal-2.png)
 
-Voit testata, että `git`-työkalu löytyy suorittamalla komento
+Voit testata, että Git-työkalu löytyy suorittamalla komento
 
 ```bash
 git --version
