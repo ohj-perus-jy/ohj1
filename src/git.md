@@ -519,8 +519,8 @@ Kurssilla käytettäviä Git-komentoja:
 
 Yleisimpiä ongelmia on lueteltu alla.
 
- {area="vaaraURL" collapse="true" id="v5JVpIErHcLd"}
-remote: The project you were looking for could not be found or you don't have permission to view it.
+<details collapsed>
+<summary>remote: The project you were looking for could not be found or you don't have permission to view it.</summary>
 
 
 Annoit git clone -komennolle väärän etävaraston URL-osoitteen. Tarkista
@@ -530,11 +530,9 @@ kohdasta Clone -> Clone with HTTPS. Anna tämä osoite git clone -komennon perä
 Syy, miksi näin kävi, johtuu todennäköisesti siitä, että forkkia tehdessäsi
 muutit Project slugia, eli projektin tunnistetta, joka muuttaa etävaraston
 URL-osoitetta.
-
- {area_end="vaaraURL" id="93Hn2pqIU2AT"}
-
- {area="pushEiOnnistu" collapse="true" id="O95CK3Hj6CQL"}
-Push ei onnistu (remote: HTTP Basic: Access denied)
+</details>
+<details collapsed>
+<summary>Push ei onnistu (remote: HTTP Basic: Access denied)</summary>
 
 **Ongelma:** Git ei anna viedä mitään etävarastoon (push ei onnistu). Antaa virheilmoituksen:
 
@@ -580,16 +578,20 @@ Kokeile nyt tehdä git push.
 5. Laajentamalla gitin kohtaa, pitäisi päästä muokkaamaan asetettuja käyttäjänimeä ja salasanaa.
 
 **Korjaus Mac:** Sama homma macOS:ssa (??): <https://help.github.com/en/github/using-git/updating-credentials-from-the-osx-keychain>
+</details>
 
-fatal: destination path ‘.’ already exists and is not an empty directory
+<details collapsed>
+<summary>fatal: destination path ‘.’ already exists and is not an empty directory</summary>
 
 `git clone` komennon jälkeen antaa tälläisen:
 
     fatal: destination path ‘.’ already exists and is not an empty directory.
     
-Korjaus: Kun tehdään clone, pitää olla tyhjässä hakemistossa.
+**Korjaus:** Kun tehdään clone, pitää olla tyhjässä hakemistossa.
+</details>
 
-'[ht]/' does not have a commit checked out, fatal: adding files failed
+<details collapsed>
+<summary>'[ht]/' does not have a commit checked out, fatal: adding files failed</summary>
 
 Poista *projektin* hakemistosta `.git`-kansio. (Huom. älä poista ylätason hakemistosta.)
 Piilotetut kansiot eivät välttämättä näy tiedostonhallinta-ikkunassa (macOS:lla Finder).
@@ -598,14 +600,15 @@ Komentorivillä tuon poisto onnistuu esim
 ```
 rm -rf .git
 ```
+</details>
+<details collapsed>
+<summary>You can't push or pull repositories using SSH until you add an SSH key to your profile</summary>
 
-You can't push or pull repositories using SSH until you add an SSH key to your profile
-
-Syy: Kloonatessasi etävarastoa olet todennäköisesti valinnut SSH-osoitteen HTTPS-osoitteen sijaan. 
+**Syy:** Kloonatessasi etävarastoa olet todennäköisesti valinnut SSH-osoitteen HTTPS-osoitteen sijaan. 
 
 Suositellaan, että otat tässä kohden työstäsi varmuuskopion.
 
-Korjaus, tapa 1: 
+**Korjaus, tapa 1**: 
 
  1. Kopioi Gitlab-palvelusta (tai muusta palvelusta) tietovarastosi HTTPS-osoite. 
  2. Avaa komentorivi.
@@ -617,9 +620,10 @@ Korjaus, tapa 1:
 git remote set-url origin UUSIOSOITE
 ```
 
-Korjaus, tapa 2: Jos tapa 1 ei toimi, voit tehdä uuden clonen uuteen kansioon käyttäen HTTPS-osoitetta, ja
+**Korjaus, tapa 2**: Jos tapa 1 ei toimi, voit tehdä uuden clonen uuteen kansioon käyttäen HTTPS-osoitetta, ja
 kopioida aikaisempaan kansioon tekemäsi muutokset tähän uuteen kansioon.
 Tämän jälkeen pitää tehdä add- ja commit-komennot uudestaan, sen jälkeen push pitäisi onnistua.
+</details>
 
 Joskus käy niin että Gitissä tulee touhuttua jotakin mikä saa hommat ihan solmuun.
 Joihinkin probleemiin vastauksia voi löytyä 
