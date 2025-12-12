@@ -1,6 +1,6 @@
 # Tyyliopas
 
-Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyyliopas perustuu suurelta osin [Microsoftin C#-kielen tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/coding-conventions).
+Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyyliopas perustuu suurelta osin [Microsoftin C#-kielen tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/identifier-names).
 
 ## Yleiset periaatteet
 
@@ -89,6 +89,8 @@ if (ehto) {
 - **Vakiot**: PascalCase (esim. `const int MaxArvo`, `const double Muunnoskerroin`)
 - **Tiedostojen nimet**: PascalCase (esim. `Laskin.cs`, `Ohjelma.cs`)
 - **Kansiot**: PascalCase (esim. `Palvelut`, `Mallit`)
+
+Vaikka skandien ja muidenkin Unicode-merkkien käyttö on teknisesti sallittua, on syytä huomata, että niiden käyttö ammattimaisessa ohjelmistokehityksesä ei välttämättä ole suositeltavaa, tai se voi olla jopa kiellettyä. Voikin olla hyödyllistä alusta asti omaksua tapa, jossa käytät nimeämisessä vain ASCII-merkkejä (a-z, A-Z, 0-9 ja _).
 
 ## Rivinvaihdot
 
