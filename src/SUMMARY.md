@@ -3,7 +3,7 @@
 [Aloitus](./index.md)
 [Suorittaminen](./suorittaminen.md)
 [Työkalut ja asentaminen](./tyokalut.md)
-[Versiohallinta ja Git](./tyokalut/git.md)
+[Versiohallinta ja Git](./git.md)
 [Tuki ja palaute](./tuki-ja-palaute.md)
 [Harjoitustyö](./harjoitustyo.md)
 [Debuggausnäyte](./debuggausnayte.md)
