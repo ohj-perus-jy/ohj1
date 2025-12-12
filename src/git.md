@@ -107,7 +107,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ## Muistilista 
 
- Alla on lyhyt muistilista tyypillisimmistä tällä kurssilla vastaan tulevista tilanteista gitin kanssa. Lue kuitenkin **ensin** tarkemmat kuvaukset tämän dokumentin seuraavista luvuista.
+Alla on lyhyt muistilista tyypillisimmistä tällä kurssilla vastaan tulevista tilanteista gitin kanssa. Lue kuitenkin **ensin** tarkemmat kuvaukset tämän dokumentin seuraavista luvuista.
 
 | Tavoite                                                                           | Toimenpide                                                                                                                                                                                                               | Komento                                                                                       | Linkki ohjeeseen |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |------------------- |
@@ -128,9 +128,7 @@ Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiin
 > [videotutoriaali](https://youtu.be/MQJ69rmd1sw). Huomaa, että videolla projektin alku tehdään käyttäen **Visual Studiota**, mutta 
 > voit käyttää myös **Rideria**.
 
-Tässä vaiheessa luodaan henkilökohtainen etävarasto (engl. *remote repository*) 
-[gitlab.jyu.fi](https://gitlab.jyu.fi)-palveluun. 
-Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen Git-varastoosi kurssin alkuasetukset.
+Tässä vaiheessa luodaan henkilökohtainen etävarasto (engl. *remote repository*) [gitlab.jyu.fi](https://gitlab.jyu.fi)-palveluun. Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen Git-varastoosi kurssin alkuasetukset.
 
 **Tämä vaihe tehdään kurssilla <u>yhden kerran</u>.** 
 
@@ -210,13 +208,9 @@ Lisätietoa kiinnostuneille: [git config](https://git-scm.com/book/en/v2/Getting
 
 ## Etävaraston hakeminen omalle tietokoneelle (clone) {#clone}
 
-**Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla 
-harjoitustyötä työstetään.** 
+**Tämä vaihe tehdään yhden kerran <u>jokaisella</u> tietokoneella jolla harjoitustyötä työstetään.** 
 
-Seuraavaksi haetaan etävarasto omalle paikalliselle tietokoneelle. Tästä
-käytetään termiä *kloonaaminen* (engl. *clone*). Kloonattuun paikalliseen 
-tietovarastoon tehdyt muutokset voi aikanaan lähettää takaisin 
-etävarastoon; tästä kerrotaan lisää [myöhemmässä kohdassa](#push). 
+Seuraavaksi haetaan etävarasto omalle paikalliselle tietokoneelle. Tästä käytetään termiä *kloonaaminen* (engl. *clone*). Kloonattuun paikalliseen tietovarastoon tehdyt muutokset voi aikanaan lähettää takaisin etävarastoon; tästä kerrotaan lisää [myöhemmässä kohdassa](#push). 
 
 Kloonaus tehdään **tyhjään** hakemistoon.
 
