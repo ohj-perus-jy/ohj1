@@ -208,7 +208,7 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 ### [Windows](#tab/win)
 
- 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) tai että näytönohjaimen ajurit ovat asennettu.
+ 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
  1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell* &rarr; *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
 
