@@ -1,15 +1,17 @@
 # Harjoitustyö
 
-Harkkatyön kuvaus. Lomakkeet edelleen TIMissä
+Tällä sivulla kerrotaan [harjoitustyön aikataulusta](#aikataulu), kuvataan [harjoitustyön vaiheet](#vaiheiden-kuvaukset), sekä kerrotaan [harjoitustyöstä tarkistettavat asiat](#vaatimukset).
 
-Harjoitustyö
+## Mikä on harjoitustyö
+
+Ohjelmointi 1 -opintojakson harjoitus työ
 
  - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty. Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada arvosanan.
  - tehdään yksin tai parityönä. Mikäli luontaista paria ei löydy, ei sitä kannata ehkä etsiäkään väkisin. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
  - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä. Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
  - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli). Muita kieliä ei hyväksytä.
 
-## Vaiheet ja aikataulu
+## Vaiheet ja aikataulu {#aikataulu}
 
 Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta.
 
@@ -21,7 +23,7 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
 
-## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat
+## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat {#vaiheiden-kuvaukset}
 
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
@@ -38,17 +40,14 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 ### Vaihe 2: Työ 50 % valmis
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: Harjoitustyön tilanne on näytettävä ohjaajalle ennen osan 8 harjoitustehtävien takarajaa.
-
  2. Tee työsi eteenpäin suunnitelman mukaan. 
     - Luo ohjelmakoodia varten [uusi solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution). 
     - Aseta *Solution directory*-kohtaan sama polku kuin 1. vaiheen Git-varastolla. Esim. `C:\kurssit\ohj1\ht`.
     - Pidä mielessä suunnitelmasi sekä harjoitustyön [vaatimukset](#vaatimukset). 
-    - Jos teet harjoitustyön parityönä, muista tehdä tarkaa tuntikirjanpito
-
+    - Jos teet harjoitustyön parityönä, muista tehdä tarkka tuntikirjanpito
  3. Varmista, että työsi koodi on ajan tasalla etävarastossa.
-    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./tyokalut/git.md#tiedostojen-vieminen-paikalliseen-tietovarastoon-add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push).
+    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./git.md#push).
     - Muista pitää etävarasto ajan tasalla mahdollisimman usein!
-
  4. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
@@ -56,20 +55,19 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
 ### Vaihe 3: Työ 100 % valmis
 
- 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäisen tentin mennessä** 
-
-- Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
-- Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
-- Varmista, että työsi lopullinen koodi on etävarastossa
-   - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./tyokalut/git.md#tiedostojen-vieminen-paikalliseen-tietovarastoon-add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)
-   - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
-- Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäiseen tentin mennessä** 
+ 2. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
+ 3. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
+ 4. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
+    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
+    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
+ 5. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
 ***
 
-## Vaatimukset
+## Vaatimukset {#vaatimukset}
 
 ### Suunnitelma
 
