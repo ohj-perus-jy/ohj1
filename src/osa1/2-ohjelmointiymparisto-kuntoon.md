@@ -141,17 +141,14 @@ hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liitt
 > Jos olet Jyväskylän yliopiston opiskelija, varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
 
 Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. 
-
+Projekti kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai useampia projekteja.
 *Projekti* sisältää yhteen ohjelmaan (peliin tai konsolisovellukseen) liittyvän koodin ja grafiikka- ja musiikkitiedostot.
 
-Projekti kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai useampia projekteja.
-
-Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions) 
 tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti tarkoita mitään.
 
 Esimerkiksi yksi demokerta voi olla yksi solution joka sisältää useita projekteja (demotehtäviä). Useiden projektien lisäämisessä samaan solutioniin on se etu, että silloin voi pitää samaan demoon liittyvät tehtävät yhtä aikaa näkyvillä ilman että niitä tarvitsee jatkuvasti avata tai sulkea.
 
-Riderissa tehdyt solutionit ja projektit ovat yhteensopivia Visual Studion kanssa.
+Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions) 
 
 ## Suositeltava hakemistorakenne
 
