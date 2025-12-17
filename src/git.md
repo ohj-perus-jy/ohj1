@@ -36,7 +36,7 @@ Git on komentoriviohjelma, eli sitä ei varsinaisesti avata vaan käytetään ko
 
 Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 
-### [Windows](#tab/asennus-win)
+### [Windows](#tab/windows)
  
 1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
@@ -67,7 +67,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ***
 
-### [macOS](#tab/asennus-macOS)
+### [macOS](#tab/macos)
 
  1. [Asenna Git-työkalu]() mikäli et ole vielä tehnyt niin!
  2. Avaa *Launchpad*
@@ -90,7 +90,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ***
 
-### [Linux](#tab/asennus-linux)
+### [Linux](#tab/linux)
 
  1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
  2. Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai *Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva tämän ohjeen kannalta.
@@ -102,6 +102,12 @@ git --version
 ```
 
 Jos komento palauttaa versionumeron, niin git on asennettu oikein.
+
+***
+
+### [Valitse](#tab/default)
+
+Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 ***
 
@@ -230,7 +236,7 @@ mutta melkein helpompi on tässä vaiheessa:
 
 **Valitse** alta käyttöjärjestelmästi mukainen käyttötapa.
 
-### [Windows](#tab/clone-windows)
+### [Windows](#tab/windows)
 
 1. Avaa `git bash`, Pääte, tai `cmd`-komentorivi.
 1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan (ts. jossa harjoitustyösi
@@ -272,7 +278,7 @@ mutta melkein helpompi on tässä vaiheessa:
 
 *** 
 
-### [macOS ja Linux](#tab/clone-macos-linux)
+### [macOS ja Linux](#tab/macos)
 
 1. Avaa komentorivi, Pääte tai Terminal.
 1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan, ts. jossa harjoitustyösi
@@ -309,6 +315,12 @@ että hakemistoon tuli tiedostot `.gitignore`, `README.md` sekä kansio `suunnit
   - `README.md` sisältää projektin kuvauksen Markdown-formaatissa. 
   - `suunnitelma`-kansioon laitetaan pelin suunnitelmakuva (tai -kuvat).
 
+
+***
+
+### [Valitse](#tab/default)
+
+Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 ***
 
@@ -399,7 +411,7 @@ Lue tästä lisää esimerkiksi [StackOverflowsta](https://stackoverflow.com/que
 
 ## Git ja ryhmätyöskentely
 
-Kun työskennellään ryhmässä esimerkiksi jos teet harjoitustyön parityönä, tulee kiinnittää erityistä huomiota git:in käyttöön, jotta välttyy turhalta työltä. Kun useampi työstää samaa tiedostoa, tulee helposti tilanne, jossa on tehty eri muokkauksia samoille riveille. Tällöin git ei tiedä mitä tehdä ja konfliktit täytyy ratkaista käsin. Tälläistä tilannetta kutsutaan nimellä *Merge conflict* ja se ilmaantuu kun omia muutoksia yrittää puskea tai kun muutoksia koitetaan hakea omalle koneelle.
+Kun työskennellään ryhmässä esimerkiksi jos teet harjoitustyön parityönä, tulee eräisiin Git-toimintoihin kiinnittää erityistä huomiota, jotta välttyy turhalta työltä. Kun useampi työstää samaa tiedostoa, tulee helposti tilanne, jossa on tehty eri muokkauksia samoille riveille. Tällöin Git ei tiedä mitä tehdä ja konfliktit täytyy ratkaista käsin. Tälläistä tilannetta kutsutaan nimellä *merge conflict* ja se ilmaantuu, kun omia muutoksia yrittää puskea tai kun muutoksia koitetaan hakea omalle koneelle.
 
 Alla on esitetty tärkeimmät tavat, joilla vältytään ongelmilta, kun työstetään samaa haaraa ryhmänä.
 
