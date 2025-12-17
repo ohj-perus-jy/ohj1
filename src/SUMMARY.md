@@ -4,7 +4,6 @@
 [Suorittaminen](./suorittaminen.md)
 [Työkalut ja asentaminen](./tyokalut.md)
 [Versiohallinta ja Git](./git.md)
-[Tuki ja palaute](./tuki-ja-palaute.md)
 [Harjoitustyö](./harjoitustyo.md)
 [Debuggausnäyte](./debuggausnayte.md)
 [Tentti](./tentti.md)
