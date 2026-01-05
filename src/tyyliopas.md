@@ -18,7 +18,7 @@ Käytä Riderin automaattisia C#-kielen koodinmuotoiluasetuksia säännöllisest
 
 Käytä XML-dokumentointikommentteja julkisissa metodeissa ja luokissa. Dokumentoi metodien parametrit ja paluuarvot.
 
-```csharp
+```csharp,ignore
 /// <summary>
 /// Laskee kahden luvun summan.
 /// </summary>
@@ -33,7 +33,7 @@ public int LaskeSumma(int a, int b)
 
 Voit käyttää tavallisia kommentteja selittämään monimutkaista logiikkaa koodissasi, mutta vältä liiallista kommentointia. Koodi pitäisi olla itsestään selittävää.
 
-```csharp
+```csharp,ignore
 // Väärin: Liian paljon kommentteja ja huonot muuttujien nimet
 int x = 10; // Määritellään muuttuja x ja asetetaan sen arvoksi 10
 int y = 20; // Määritellään muuttuja y ja asetetaan sen arvoksi 20
@@ -53,7 +53,7 @@ Käytä neljän välilyönnin sisennystä koodilohkoissa, älä käytä tabulaat
 
 (Pisteet lisätty havainnollistamaan välilyöntien määrää.)
 
-```csharp
+```csharp,ignore
 if (ehto)
 {
 ....for (int i = 0; i < 10; i++)
@@ -67,7 +67,7 @@ Avaa ja sulje aaltosulkeet omille riveilleen.
 
 Oikein: 
 
-```csharp
+```csharp,ignore
 if (ehto)
 {
     // koodia
@@ -76,7 +76,7 @@ if (ehto)
 
 Väärin:
 
-```csharp
+```csharp,ignore
 if (ehto) {
     // koodia 
 }
@@ -96,7 +96,7 @@ Vaikka skandien ja muidenkin Unicode-merkkien käyttö on teknisesti sallittua, 
 
 Jätä yksi, enintään kaksi tyhjää riviä metodien ja luokkien väliin parantamaan luettavuutta.
 
-```csharp
+```csharp,ignore
 public class Laskin
 { 
     public int LaskeSumma(int a, int b)
