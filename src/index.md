@@ -32,13 +32,17 @@ Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 
 
 ## Tuki ja palaute
 
-Kevään 2026 ohjauskauden (10.1.-30.4.) aikana on tarjolla lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
+Kevään 2026 ohjauskauden (12.1.-31.5.) aikana on tarjolla lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
+Tarkat aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
 
-| Tukikanava                                           | Aika                         | Paikka/Linkki                                                                                                                    |
-| ---------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |
-| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                      | ohj1-opet@tim.jyu.fi                                                                                                             |
+| Tukikanava                                           | Aika    | Paikka/Linkki                                                                             |
+| ---------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
+| Lähiohjaus                                           | TBD     | Agoralla, TBD                                                                             |
+| Etäohjaus                                            | TBD     | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat) |
+| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva | ohj1-opet@tim.jyu.fi                                                                      |
+
+<!--| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |-->
+<!--| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |-->
 
 Ohjaukset ovat yhteisiä ITKP102 Ohjelmointi 1-, Ohjelmointi 2- ja ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat kummankin kurssin opiskelijoita.
 
@@ -54,13 +58,13 @@ opettajille sähköpostitse.
 
    ![Image](images/sisupalkki.png)
 
-1. Skrollaa alaspäin, kunnes tulee alaotsikko *Pääteohjaus*
-2. Jos ei vielä näy, niin skrollaa alaspäin, kunnes näkyy *Muiden ryhmien tiedot* ja klikkaa sitä
-3. Nyt voit skrollaamalla alaspäin haluamiesi pääteohjauksien kohdalta klikata nappulaa *Näytä tapahtumat kalenterissa*. 
+5. Skrollaa alaspäin, kunnes tulee alaotsikko *Pääteohjaus*
+6. Jos ei vielä näy, niin skrollaa alaspäin, kunnes näkyy *Muiden ryhmien tiedot* ja klikkaa sitä
+7. Nyt voit skrollaamalla alaspäin haluamiesi pääteohjauksien kohdalta klikata nappulaa *Näytä tapahtumat kalenterissa*. 
 
    ![Image](images/tapahtumat.jpg)
 
-1. Nyt kyseisen ryhmän ohjausajat näkyvät sinulla automaattisesti. Tarvittaessa voit poistaa ryhmän tapahtumia viikkokohtaisesti Tapahtumakalenterista. 
+8. Nyt kyseisen ryhmän ohjausajat näkyvät sinulla automaattisesti. Tarvittaessa voit poistaa ryhmän tapahtumia viikkokohtaisesti Tapahtumakalenterista. 
 
 </details>
 
