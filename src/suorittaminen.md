@@ -111,6 +111,29 @@ voimassa, ja opintojakson suorittamista voi jatkaa normaalisti päivityksistä
 välittämättä. Myös opintojakson suoritusehdot pysyvät samoina muutoksista
 riippumatta.
 
-## Akateeminen rehellisyys {#akateeminen-rehellisyys}
+## Eettiset ohjeet {#eettiset-ohjeet}
 
-Tänne juttua.
+Sinun tulee tehdä kaikki osasuoritukset itse. Kopioiminen tai toisen henkilön
+työn esittäminen omanaan on kiellettyä. Ryhmätyö on sallittua, mutta jokaisen
+ryhmän jäsenen tulee antaa panoksensa työhön, ymmärtää tekemänsä asiat ja osata
+selittää ne tarvittaessa.
+
+Noudatamme [Jyväskylän yliopiston ohjeita ja linjauksia tekoälypohjaisten
+sovellusten käytössä
+opiskelussa](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintoja-ohjaavat-saadokset-ja-maaraykset/tekoalypohjaisten-sovellusten-kaytto-opiskelussa-jyu-ohjeet-ja-linjaukset).
+Alla olevat ohjeet täydentävät näitä linjauksia. 
+
+Generatiivisten tekoälytyökalujen käyttö koodin luomisessa on kiellettyä.
+Tällaisia työkaluja ovat esimerkiksi GitHub Copilot, ChatGPT, Bard ja vastaavat.
+Myös Riderin tekoälypohjaisten koodin täydentämistoimintojen käyttö on
+kiellettyä.
+
+Generatiivista tekoälyä voi käyttää apuvälineenä esimerkiksi käsitteiden
+selittämiseen, tehtävänantojen ymmärtämiseen tai materiaalissa annettujen
+esimerkkien selittämiseen. Tekoälytyökalulle annettavassa kehotteessa tulee
+huomioida, että tekoäly ei saa tuottaa suoria vastauksia tai koodia
+opintojakson tehtäviin.
+
+Menettely vilppiepäilytilanteessa on kuvattu [Jyväskylän yliopiston opintoja
+ohjaavissa säädöksissä ja
+määräyksissä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintoja-ohjaavat-saadokset-ja-maaraykset/vilppitapausten-kasittely).
