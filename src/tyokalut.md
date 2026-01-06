@@ -1,37 +1,35 @@
-# Ohjelmointi 1 -kurssin työkalut 
-
+# Työkaluohjeet
  
+**Ohjelmointi 1** -opintojaksolla käytämme seuraavia työkaluja:
 
- 
-Harjoitustehtävien ja harjoitustyön tekemiseen käytämme seuraavia työkaluja:
-
-- **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen ympäristö* (engl. runtime) C
-kielelle. 
-   .NET mahdollistaa C
-ohjelmien kääntämisen ja ajamisen. 
-   Se tarjoaa myös valmista koodia yleisempiin käyttötarkoituksiin (esim. tekstin tulostaminen näytölle, käyttöliittymien tekeminen).   
-- **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä.
-  Vähän kuin Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
-- **JetBrains Rider** - *integroitu kehitysympäristö* (engl. Integrated Development Environment, IDE).
-  IDE sisältää oleellisimmat toiminnot ohjelmien tekemiseen (koodin muokkaus, kääntäminen, ajaminen).
-  Rider on erityisesti .NET ja C
-ohjelmille tarkoitettu IDE.
-- **Tekstieditori** - jokin kevyt tekstieditori, jolla tekstipohjaisia tiedostoja (esim. koodi) voi muokata
-  avaamatta IDE-ohjelmistoa. Suosittelemme esimerkiksi *Visual Studio Code* tai *Notepad++*.
-  Microsoft Word tai Google Docs **ei ole** opintojaksolle soveltuva tekstieditori.
-- **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän yliopistossa kehitetty
-  C
-kirjasto pelien tekemiseen.
-- **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on aputyökalu, jonka avulla
-  kirjoitetulle koodille voi kirjoittaa testejä helposti luettavalla merkintätavalla.
+- **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen
+   ympäristö* (engl. runtime) C#-kielelle. .NET mahdollistaa C ohjelmien
+kääntämisen ja ajamisen. Se tarjoaa myös valmista koodia yleisempiin
+   käyttötarkoituksiin (esim. tekstin tulostaminen näytölle, käyttöliittymien
+   tekeminen).   
+- **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka
+  mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä. Vähän kuin
+  Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
+- **JetBrains Rider** - *integroitu kehitysympäristö* (engl. Integrated
+  Development Environment, IDE), jolla voi kirjoittaa, kääntää, ajaa ja debugata
+  ohjelmia. Rider on erityisesti .NET- ja C#-ohjelmille tarkoitettu IDE. Käytämme
+  ilmaista Community Edition -versiota.
+- **Tekstieditori** - ohjelma, jolla voi muokata tekstipohjaisia tiedostoja,
+  kuten lähdekoodia, voi muokata avaamatta IDE-ohjelmistoa. Suosittelemme
+  esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
+  Docs **ei ole** opintojaksolle soveltuva tekstieditori.
+- **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän
+  yliopistossa kehitetty C#-kirjasto pelien tekemiseen.
+- **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on
+  aputyökalu, jonka avulla kirjoitetulle koodille voi kirjoittaa testejä
+  helposti luettavalla merkintätavalla.
 
 Tässä dokumentissa käydään läpi yllä olevien työkalujen ja ohjelmien asentamista.
 
-Yllä olevat ohjelmat ovat valmiiksi asennettuna Agoran mikroluokissa.
-*Suosittelemme, että asennat ohjelmat lisäksi niille tietokoneille, joilla
-aiot suorittaa opintojakson.*
-Erityisesti harjoitustyön tekeminen pääteohjausten ulkopuolella on
-helpompaa, kun kaikki tarvittavat ohjelmat on myös omalla tietokoneella.
+Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran
+mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja
+2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat
+ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
 ## Ennen asentamista 
 
@@ -209,17 +207,19 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 ### [Windows](#tab/win)
 
  1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
- 1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell* &rarr; *Windows PowerShell*).
+ 1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell*
+    &rarr; *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
 
     ```bash
     winget -v
     ```
     
-    Tuloksena pitäisi tulostua `winget`-työkalun versio. Jos sen sijaan saat virheen, jossa
-    lukee *'winget' is not recognized as the name of a cmdlet, function, script file, or operable program*,
-    tarkoittaa tämä, että sinulla todennäköisesti ei ole `winget`-työkalua asennettuna.
-    Kokeile siinä tapauksessa seuraavat ratkaisut:
+    Tuloksena pitäisi tulostua `winget`-työkalun versio. Jos sen sijaan saat
+    virheen, jossa lukee *'winget' is not recognized as the name of a cmdlet,
+    function, script file, or operable program*, tarkoittaa tämä, että sinulla
+    todennäköisesti ei ole `winget`-työkalua asennettuna. Kokeile siinä
+    tapauksessa seuraavat ratkaisut:
     
     - Tarkista, että käyttöjärjestelmäsi on ajan tasalla
     - Kokeile ladata ja asentaa `winget`-käsin: [Lataa asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle)
@@ -237,13 +237,14 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
     ```
     
     Komennon suorittamisen jälkeen saatat saada seuraavanlaisen ilmoituksen:
-    *Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa työkalut nyt?*
-    (Englanniksi: *The 'xcode-select' command requires the command line developer tools. Would you like to install the tools now?*)
+    *Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa
+    työkalut nyt?* (Englanniksi: *The 'xcode-select' command requires the
+    command line developer tools. Would you like to install the tools now?*)
     
-    Jos sellainen ilmoitus ilmestyy, valitse *Asenna*/*Install* ja odota työkalujen asentumista.
-    Hyväksy tarvittaessa käyttöehdot.
-    Kun asennus on valmis, saat *Ohjelmisto asennettiin*/*The software was installed* -dialogin.
-    Klikkaa silloin *Valmis*.
+    Jos sellainen ilmoitus ilmestyy, valitse *Asenna*/*Install* ja odota
+    työkalujen asentumista. Hyväksy tarvittaessa käyttöehdot. Kun asennus on
+    valmis, saat *Ohjelmisto asennettiin*/*The software was installed*
+    -dialogin. Klikkaa silloin *Valmis*.
     
     Jos saat virheen, jossa lukee `command line tools are already installed`, sinulla
     on jo tarvittavat työkalut asennettuna ja voit jatkaa seuraavaan vaiheeseen.  
@@ -814,9 +815,9 @@ Mene Windowsin asetukset -> Päivitykset -> Valinnaiset (päivitä-nappulan alap
 Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"
 
 Jos ajuria ei löydy ja käytät kannettavaa, todennäköisesti sinulla on integroitu
-näytöonohjain, jolloin ajuri voi löytyä prosessorin
-valmistajan (Intel tai AMD) sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla
-`Intel graphics driver` tai `AMD graphics driver` prosessorin valmistajasta riippuen.
+näytöonohjain, jolloin ajuri voi löytyä prosessorin valmistajan (Intel tai AMD)
+sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla `Intel graphics driver`
+tai `AMD graphics driver` prosessorin valmistajasta riippuen.
 
 Seuraavista työkaluista voi olla hyötyä:
 
@@ -838,17 +839,16 @@ Kokeile seuraavaa:
 
     ![](/images/876452/image.png)
 
-Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain toista
-vaihtoehtoa kuin nykyinen arvo.
-Paina lopuksi *Save* ja kokeile luoda uusi solution.
-Jos virhe toistuu, kokeile jotain toista valintaa.
+Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain
+toista vaihtoehtoa kuin nykyinen arvo. Paina lopuksi *Save* ja kokeile luoda
+uusi solution. Jos virhe toistuu, kokeile jotain toista valintaa.
 
 </details>
 
 <details closed><summary> Rider on hidas tai antaa erilaisia oikeusvirheitä </summary>
  
-Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla
-hidasta haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.
+Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla hidasta
+haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.
 
 Mikäli sinulla on käytössä Microsoft Defender, Rider yleensä kysyy, haluatko
 Riderin säätävän sen asetukset automaattisesti. Muiden tuotteiden tapauksessa
@@ -860,8 +860,8 @@ asetukset tulee säätää itse.
 
 <details closed> <summary>Rider-lisenssin uudelleenaktivointi  </summary>
  
-Lisenssi täytyy mahdollisesti aika ajoin
-uudelleenaktivoida kohdasta Help -> Manage licenses -> Activate.
+Lisenssi täytyy mahdollisesti aika ajoin uudelleenaktivoida kohdasta Help ->
+Manage licenses -> Activate.
 
 </details> 
 
@@ -876,7 +876,8 @@ Katso .NET-asennusohjeet Työkalut-ohjeesta.
 Jos komentoriviltä tulee (Linux):
 
     A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist 
-  niin  ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist>
+
+niin ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist>
 
 </details>
 
