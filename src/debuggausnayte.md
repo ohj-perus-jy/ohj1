@@ -11,11 +11,10 @@ Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilantei
 
 Näyte arvostellaan asteikolla hyväksytty/hylätty.
 
-
 ## Aikataulu ja takarajat
 
-|Tutkinto-opiskelijat                                                                                                                                                                                                                      | Lukiolinjat                                                                     | Avoin yliopisto                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Tutkinto-opiskelijat                                                                                                                                                                                                                   | Lukiolinjat                                                                     | Avoin yliopisto                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Näyte tulee palauttaa osan 8 takarajaan mennessä. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa näytteen hylkäämiseen. | Näyte tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Näytteen palauttamiselle ei ole takarajaa, mutta se on hyväksytettävä ohjaajalla. |
 
 ## Miksi? 
@@ -195,9 +194,3 @@ se paikkaan, josta löydät sen.
 
 Voit pyytää harjoittelunäytteen tekemiseen apua pääteohjauksissa; ks. ajat
 etusivulta.
-
-## Vinkkejä
-
-Muistathan debugnäytteitä tehdessäsi ajaa ohjelman debug-tilassa.
-
-Debugatessa kannattaa pyrkiä selvittämään, mikä koodissa tai muuttujien arvoissa näyttää oudolta. Esimerkiksi, jos johonkin aliohjelmaan siirrytään useita kertoja yhden sijaan, voi kutsuja olla tullut liikaa.
