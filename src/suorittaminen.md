@@ -124,9 +124,11 @@ opiskelussa](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-oh
 Alla olevat ohjeet täydentävät näitä linjauksia. 
 
 Generatiivisten tekoälytyökalujen käyttö koodin luomisessa on kiellettyä.
-Tällaisia työkaluja ovat esimerkiksi GitHub Copilot, ChatGPT, Bard ja vastaavat.
-Myös Riderin tekoälypohjaisten koodin täydentämistoimintojen käyttö on
-kiellettyä.
+Ohjelmoinnin opiskelun eräinä keskeisinä osaamistavoitteina on ongelmanratkaisun
+ja päättelyn oppiminen, ja tekoälytyökalujen käyttö vääristää näitä
+osaamistavoitteita. Kiellettyjä generatiivisia työkaluja ovat esimerkiksi GitHub
+Copilot, ChatGPT, Bard ja vastaavat chat- ja agenttisovellukset. Myös Riderin
+koodin tekoälypohjainen täydennys käyttö on kiellettyä. 
 
 Generatiivista tekoälyä voi käyttää apuvälineenä esimerkiksi käsitteiden
 selittämiseen, tehtävänantojen ymmärtämiseen tai materiaalissa annettujen
