@@ -72,7 +72,7 @@ Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavill
 Valitse käyttöjärjestelmäsi yllä olevilla painikkeilla.
 
 Huomaa, että muilla käyttöjärjestelmillä voi esiintyä pieniä poikkeuksia.
-Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@tim.jyu.fi.
+Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@jyu.onmicrosoft.com.
 Vastaavasti, jos saat ohjeet toimimaan käyttöjärjestelmällä, jotka eivät ole
 yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme listan.
 
@@ -794,7 +794,7 @@ TODO: Lisää linkit.
 
 - tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta]()), 
 - laita viestiä [Teamsissa]() (Kysymyksiä ja apua -kanava) tai
-- laita viestiä opettajille: ohj1-opet@tim.jyu.fi. 
+- laita viestiä opettajille: ohj1-opet@jyu.onmicrosoft.com. 
 
 <details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
  

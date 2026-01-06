@@ -1,6 +1,6 @@
-# ITKP102 Ohjelmointi 1, Jyväskylän yliopisto
+# ITKP102 Ohjelmointi 1
 
-Tämä on Jyväskylän yliopiston järjestämän ITKP102 Ohjelmointi 1 -opintojakson oppimateriaali.
+Tämä on Jyväskylän yliopiston järjestämän **ITKP102 Ohjelmointi 1** -opintojakson oppimateriaali.
 
 *Tervetuloa opiskelemaan ohjelmointia!* 😍
 
@@ -12,21 +12,19 @@ Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. Opin
 
 Et tarvitse aiempaa ohjelmointikokemusta.
 
-
-
 ## Miten aloitan?
 
 Ennen kuin aloitat opintojakson suorittamisen, tee seuraavat asiat:
 
  * Tutustu opintojakson suorittamisen periaatteisiin (ks. [Suorittaminen](suorittaminen.md)).
  * Suosittelemme, että asennat valmiiksi tarvittavat [ohjelmistot ja työkalut](tyokalut.md). Voit kuitenkin selailla materiaalia jo ennen työkalujen asentamista.
- * Pyydämme, että käyt vastaamassa [alkukyselyyn]().
+ * Pyydämme, että käyt vastaamassa [alkukyselyyn](https://tim.jyu.fi/view/kurssit/tie/itkp102/kyselyt/esitietokysely).
 
 ## Uutiset
 
 <details><summary>1. tammikuuta 2026: Kurssimateriaalia uudistetaan keväällä 2026</summary>
 
-Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 2026 aikana. Osa materiaalista julkaistaan kurssin edetessä. Uudistamisesta johtuen sisällössä voi olla myös keskeneräisyyksiä ja virheitä. Pahoittelemme tästä mahdollisesti aiheutuvaa haittaa. Pyydämme, että ilmoitat virheistä tai parannusehdotuksista GitHubin kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin <opet@TODO>.
+Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 2026 aikana. Osa materiaalista julkaistaan kurssin edetessä. Uudistamisesta johtuen sisällössä voi olla myös keskeneräisyyksiä ja virheitä. Pahoittelemme tästä mahdollisesti aiheutuvaa haittaa. Pyydämme, että ilmoitat virheistä tai parannusehdotuksista GitHubin kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin <ohj1-opet@jyu.onmicrosoft.com>.
 
 </details>
 
@@ -35,11 +33,11 @@ Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 
 Kevään 2026 ohjauskauden (12.1.-31.5.) aikana on tarjolla lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
 Tarkat aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
 
-| Tukikanava                                           | Aika    | Paikka/Linkki                                                                             |
-| ---------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| Lähiohjaus                                           | TBD     | Agoralla, TBD                                                                             |
-| Etäohjaus                                            | TBD     | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat) |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva | ohj1-opet@tim.jyu.fi                                                                      |
+| Tukikanava                                           | Aika    | Paikka/Linkki                           |
+| ---------------------------------------------------- | ------- | --------------------------------------- |
+| Lähiohjaus                                           | TBD     | Agoralla, TBD                           |
+| Etäohjaus                                            | TBD     | [Ohjelmointi 1 Teams-kanava](#teams-jy) |
+| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva | ohj1-opet@jyu.onmicrosoft.com                    |
 
 <!--| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |-->
 <!--| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |-->
@@ -68,7 +66,7 @@ opettajille sähköpostitse.
 
 </details>
 
-## Ohjeet Teams-ohjauksiin liittymiseksi (tutkinto-opiskelijat)
+## Ohjeet Teams-ohjauksiin liittymiseksi (tutkinto-opiskelijat) {#teams-jy}
 
 1. Kirjaudu yliopiston tunnuksellasi Microsoft Teamsiin osoitteessa
     <https://teams.microsoft.com>. Käyttäjätunnus on muotoa `käyttäjätunnus@jyu.fi` (esim.
@@ -88,9 +86,9 @@ opettajille sähköpostitse.
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
 
-## Ohjeet Teams-ohjauksiin liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet)
+## Ohjeet Teams-ohjauksiin liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
 
-Lähetä sähköpostilla alla oleva pyyntö osoitteeseen `ohj1-opet@tim.jyu.fi`.
+Lähetä sähköpostilla alla oleva pyyntö osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
 
 ```plain
 Hei,
@@ -104,7 +102,7 @@ Terveisin, [oma nimi]
 
 Liitämme sinut viimeistään seuraavana arkipäivänä.
 
-## Etäohjauksiin osallistuminen ilman Teamsia
+## Etäohjauksiin osallistuminen ilman Teamsia {#zoom}
 
 Jos et millään onnistu kirjautumaan Teamsiin tai et halua olla Teams-kanavalla,
 voit pyytää etäohjausta Zoomin kautta seuraavasti: 
@@ -127,16 +125,24 @@ Tässä muutama pikavinkki tässä materiaalissa navigoimiseen:
  * Voit selata materiaalia eteen- ja taaksepäin nuolikuvakkeista sivun vasemmassa ja oikeassa laidassa (tai ihan sivun alalaidassa, jos käytät mobiililaitetta) <i class="bi bi-arrow-left-circle"></i> <i class="bi bi-arrow-right-circle"></i>.
  * Hakutoiminnon saat auki suurennuslasista oikeasta yläreunasta tai painamalla S-kirjainta näppäimistöltä <i class="bi bi-search"></i>.
 
-## Palaute ja kehittäminen
+## Palaute ja kehittäminen {#palaute}
 
 Olemme erittäin kiitollisia kaikesta palautteesta, joka auttaa meitä kehittämään opintojaksoa edelleen!
 Voit antaa palautetta ja kehitysehdotuksia opintojaksosta kolmella tavalla:
 
- 1. Keräämme jatkuvaa palautetta opintojakson aikana. Nyt, kun olemme kehittämässä opintojakson sisältöjä ja toteutusta, tämä jatkuva palaute on erityisen tärkeää. Voit antaa palautetta anonyymisti alla olevan linkin kautta: **TODO:** Norppa-linkki tähän.
+ 1. Keräämme jatkuvaa palautetta opintojakson aikana. Nyt, kun olemme
+    kehittämässä opintojakson sisältöjä ja toteutusta, tämä jatkuva palaute on
+    erityisen tärkeää. Voit antaa palautetta anonyymisti alla olevan linkin
+    kautta: **TODO:** Norppa-linkki tähän.
 
- 2. Mikäli havaitset materiaalissa virheen, epäselvyyden, tai muun ongelman, voit raportoida siitä
-    GitHubissa klikkaamalla kunkin sivun alareunassa olevia linkkejä. Voit myös ilmoittaa puutteista suoraan opettajille sähköpostitse osoitteeseen `ohj1-opet@tim.jyu.fi`.
+ 2. Mikäli havaitset materiaalissa virheen, epäselvyyden, tai muun ongelman,
+    voit raportoida siitä GitHubissa klikkaamalla kunkin sivun alareunassa
+    olevia linkkejä. Voit myös ilmoittaa puutteista suoraan opettajille
+    sähköpostitse osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
  
- 3. Opintojakson lopuksi jokainen Sisussa (tai Ilpo-portaalissa) ilmoittautunut saa henkilökohtaisen linkin kurssipalautekyselyyn, jossa voit antaa anonyymisti palautetta koko opintojaksosta.
+ 3. Opintojakson lopuksi jokainen Sisussa (tai Ilpo-portaalissa) ilmoittautunut
+    saa henkilökohtaisen linkin kurssipalautekyselyyn, jossa voit antaa
+    anonyymisti palautetta koko opintojaksosta.
 
-Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa <ohj1-opet@tim.jyu.fi>. Otamme mielellämme vastaan parannusehdotuksia! 
+Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa
+<ohj1-opet@jyu.onmicrosoft.com>. Otamme mielellämme vastaan parannusehdotuksia! 
