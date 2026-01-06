@@ -116,7 +116,8 @@ riippumatta.
 Olet vastuussa kaikista palauttamistasi töistä. Kopioiminen tai toisen henkilön
 työn esittäminen omanaan on kiellettyä. Ryhmätyö on sallittua, mutta jokaisen
 ryhmän jäsenen tulee antaa panoksensa työhön, ymmärtää tekemänsä asiat ja osata
-selittää ne tarvittaessa.
+selittää ne tarvittaessa. Ryhmätyönä tehty osa tulee aina merkitä selvästi
+palautettuun työhön, esimerkiksi koodin kommenttien avulla. 
 
 Noudatamme [Jyväskylän yliopiston ohjeita ja linjauksia tekoälypohjaisten
 sovellusten käytössä
