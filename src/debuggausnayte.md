@@ -1,13 +1,11 @@
 # Debuggausnäyte
 
-Debuggauksen kuvaus ja ohjeet. Lomakkeet edelleen TIMissä.
-
 Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hallintaa:
 
 - askeltaminen aliohjelman sisään (step into)
 - aliohjelman suorittaminen yhtenä askeleena (step over)
-- keskeytyskohdan asettaminen
-- ehdollisen keskeytyskohdan asettaminen
+- keskeytyskohdan (breakpoint) asettaminen
+- ehdollisen keskeytyskohdan (conditional breakpoint) asettaminen
 - arvon muuttaminen debuggerissa
 - muuttujan asettaminen watch-seurantaan; watch-arvon seuraaminen
 
@@ -28,7 +26,7 @@ Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa t
 
  1. Lue [osa 5.1 Debuggaus](./osa5/1-debuggaus.md)
  2. Katso [luennon debuggauksesta ja debuggerin käytöstä (kevät 2023)](https://www.youtube.com/live/2d1ErNVn9sI?feature=share&t=1095) 
- 3. Harjoittele debuggausta [Harjoitusnäytteellä](/view/%%basedir%%/ohjeet/debuggausnayte-harjoittelu)
+ 3. Tee [harjoittelunäyte](#harjoittelunayte})
 
 ## Näytteen suorittaminen
 
@@ -179,6 +177,24 @@ Ohjaaja kuittaa harjoitustyösi paikan päällä.
 Saat vielä erillisen kuittauksen debuggausnäytteen hyväksymisestä sähköpostitse.
 
 ***
+
+## Harjoittelunäyte {#harjoittelunayte}
+
+Voit harjoitella debuggausnäytettä tekemällä harjoittelunäytteen. 
+
+ 1. Lataa [Debugnayte.zip](exercises/debug-harjoittelu/DebugNayte.zip) ja pura
+se paikkaan, josta löydät sen.
+ 2. Etsi ja avaa `DebugNayte.sln`-tiedosto Riderissa. Mikäli Rider kysyy,
+    luotatko avattavaan projektiin, valitse Trust and Open.
+ 3. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
+ 4. Seuraa `DebugNayte`-luokan dokumentaatiossa olevia ohjeita ja tee siellä
+    annetut tehtävät. Kun pyydetään "ohjaajan antamaa lukua", kirjoita mikä luku
+    tahansa väliltä 600-1500.
+
+Älä muuta koodia ellei tehtävässä ole niin käsketty. 
+
+Voit pyytää harjoittelunäytteen tekemiseen apua pääteohjauksissa; ks. ajat
+etusivulta.
 
 ## Vinkkejä
 
