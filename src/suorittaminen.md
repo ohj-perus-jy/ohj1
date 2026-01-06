@@ -113,7 +113,7 @@ riippumatta.
 
 ## Eettiset ohjeet {#eettiset-ohjeet}
 
-Sinun tulee tehdä kaikki osasuoritukset itse. Kopioiminen tai toisen henkilön
+Olet vastuussa kaikista palauttamistasi töistä. Kopioiminen tai toisen henkilön
 työn esittäminen omanaan on kiellettyä. Ryhmätyö on sallittua, mutta jokaisen
 ryhmän jäsenen tulee antaa panoksensa työhön, ymmärtää tekemänsä asiat ja osata
 selittää ne tarvittaessa.
