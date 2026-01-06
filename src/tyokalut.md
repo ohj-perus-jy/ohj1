@@ -1,6 +1,7 @@
 # Työkaluohjeet
  
-**Ohjelmointi 1** -opintojaksolla käytämme seuraavia työkaluja:
+**Ohjelmointi 1** -opintojaksolla käytämme alla olevia työkaluja. Tässä
+dokumentissa opastetaan, miten nämä työkalut asennetaan. 
 
 - **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen
    ympäristö* (engl. runtime) C#-kielelle. .NET mahdollistaa C ohjelmien
@@ -23,8 +24,6 @@ kääntämisen ja ajamisen. Se tarjoaa myös valmista koodia yleisempiin
 - **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on
   aputyökalu, jonka avulla kirjoitetulle koodille voi kirjoittaa testejä
   helposti luettavalla merkintätavalla.
-
-Tässä dokumentissa käydään läpi yllä olevien työkalujen ja ohjelmien asentamista.
 
 Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran
 mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja
@@ -58,7 +57,6 @@ Valitsit macOS-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavill
 ***
 
 ### [Linux](#tab/linux)
-
  
 Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
 
@@ -75,7 +73,6 @@ Vastaavasti, jos saat ohjeet toimimaan käyttöjärjestelmällä, jotka eivät o
 yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme listan.
 
 ***
-
 
 ## Pikakurssi komentorivin käyttöön 
  
@@ -102,7 +99,7 @@ eikä niitä tässä käsitellä.
 Tämän ohjeen kannalta olennainen syy on, että yleisten ohjelmien asentaminen onnistuu nykyään jopa helpommin
 komentorivillä kuin "käsin" etismällä sopiva asennusohjelma verkosta.
 
- ***
+***
 
 **Miten avaan komentoriviin omalla tietokoneellani?**
 
@@ -783,7 +780,7 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
 
 ## Mitä seuraavaksi? 
  
-Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html) sekä materiaalin luvussa [1.2 Ohjelmointiympäristö kuntoon](). TODO: Lisää linkki.
+Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html) sekä materiaalin luvussa [1.3 Ohjelmointiympäristö kuntoon](osa1/2-ohjelmointiymparisto-kuntoon.md).
 
 Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/), joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin *Non-commercial license* -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.
 

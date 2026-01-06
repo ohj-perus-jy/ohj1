@@ -20,9 +20,9 @@
  * [Osa 1](./osa1/index.md)
    * [Luento 1: Johdatus, mitä ohjelmointi on?](./luennot/luento1.md)
    * [Luento 2: IDE, graafinen ohjelma](./luennot/luento2.md)
+   * [Ohjelmointiympäristö kuntoon](./osa1/2-ohjelmointiymparisto-kuntoon.md)
    * [Harjoitustehtävät 1](./luennot/harjoitus1.md)
 <!-- * [Ensimmäinen ohjelma](./osa1/1-ensimmainen-ohjelma.md) -->
-<!-- * [Ohjelmointiympäristö kuntoon](./osa1/2-ohjelmointiymparisto-kuntoon.md) -->
 <!-- * [Tiedon esittäminen tietokoneella](./osa1/3-tiedon-esittaminen-tietokoneella.md) -->
 <!-- * [Osan kaikki tehtävät](./osa1/tehtavat.md) -->
  * [Tiedon käsittelyä](./osa2/osa2.md) 

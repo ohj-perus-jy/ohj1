@@ -1,12 +1,21 @@
 # <span class="part-icon">🛠️</span> Ohjelmointiympäristö kuntoon
 
-Ensimmäisten viikkojen tehtävät voi periaatteessa suorittaa verkkoselaimessa, mutta varsin pian on tarpeen saada oma ohjelmointiympäristö toimimaan tietokoneella. 
+Ensimmäisten viikkojen tehtävät voi periaatteessa suorittaa verkkoselaimessa,
+mutta varsin pian on tarpeen saada oma ohjelmointiympäristö toimimaan
+tietokoneella. 
 
-Oman tietokoneen käyttöönottaminen ohjelmointia varten on tärkeä askel kohti itsenäisempää ohjelmointia. Se mahdollistaa esimerkiksi koodin kirjoittamisen, tallentamisen ja suorittamisen ilman internet-yhteyttä. Lisäksi omaa ympäristöä on helpompi mukauttaa omien tarpeiden mukaan, kuten vaihtaa värejä, fontteja ja muita asetuksia. Myöhemmin opit käyttämään versionhallintaa sekä debuggausta, jotka vaativat ohjelmointiympäristön omalla tietokoneellasi. 
+Oman tietokoneen käyttöönottaminen ohjelmointia varten on tärkeä askel kohti
+itsenäisempää ohjelmointia. Se mahdollistaa esimerkiksi koodin kirjoittamisen,
+tallentamisen ja suorittamisen ilman internet-yhteyttä. Lisäksi omaa ympäristöä
+on helpompi mukauttaa omien tarpeiden mukaan, kuten vaihtaa värejä, fontteja ja
+muita asetuksia. Myöhemmin opit käyttämään versionhallintaa sekä debuggausta,
+jotka vaativat ohjelmointiympäristön omalla tietokoneellasi. 
 
 ## Rider
 
-Ohjelman koon kasvaessa kannattaa ottaa käyttöön sovelluskehitin eli IDE (Integrated Development Environment). IDE on ohjelma, joka yhdistää yhteen paikkaan kaikki ohjelmien kehittämiseen tarvittavia ominaisuuksia, kuten:
+Ohjelman koon kasvaessa kannattaa ottaa käyttöön sovelluskehitin eli IDE
+(Integrated Development Environment). IDE on ohjelma, joka yhdistää yhteen
+paikkaan kaikki ohjelmien kehittämiseen tarvittavia ominaisuuksia, kuten:
 
  * koodin kirjoittaminen
  * koodin kääntäminen ohjelmaksi
@@ -16,21 +25,36 @@ Ohjelman koon kasvaessa kannattaa ottaa käyttöön sovelluskehitin eli IDE (Int
  * samaan asiakokonaisuuteen liittyvän koodin hallinta ("projektit")
  * versionhallinnan tuki (esim. Git)
 
-IDE-ympäristöjä on useita eri ohjelmointikielille ja ympäristöille. Ohjelmointi 1 -opintojaksolla käytetään JetBrains-yhtiön tekemää Rider-kehitysympäristöä, joka on erityisesti C# ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
+IDE-ympäristöjä on useita eri ohjelmointikielille ja ympäristöille. Ohjelmointi
+1 -opintojaksolla käytetään JetBrains-yhtiön tekemää Rider-kehitysympäristöä,
+joka on erityisesti C# ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi
+tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
 
 Riderin asennusohjeet löytyvät [Työkalut-sivulta.](../tyokalut.md#jetbrains-rider) 
 
-Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen käytäntö ohjelmoinnin opiskelussa, kuten myös Ohjelmointi 1 -kurssilla, on asentaa kehitysympäristö omalle paikalliselle tietokoneelle. Oman kehitysympäristön käyttö on yleensä nopeampaa, edullisempaa ja joustavampaa kuin pilvipohjaiset ratkaisut. Myös työelämässä paikalliset kehitysympäristöt ovat yleensä vallitseva käytäntö.
+Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja
+myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen
+käytäntö ohjelmoinnin opiskelussa, kuten myös Ohjelmointi 1 -kurssilla, on
+asentaa kehitysympäristö omalle paikalliselle tietokoneelle. Oman
+kehitysympäristön käyttö on yleensä nopeampaa, edullisempaa ja joustavampaa kuin
+pilvipohjaiset ratkaisut. Myös työelämässä paikalliset kehitysympäristöt ovat
+yleensä vallitseva käytäntö.
 
 ## Visual Studio Code
 
-Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS
+Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS
+Coden asennusohjeet löytyvät myöskin
+[Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
 Alla olevat ohjeet koskevat kuitenkin vain Rideria.
 
 ## Konfigurointi ja laajennokset
 
-Oletusasetukset koodin muotoilulle ja analysoinnille ovat tämän kurssin näkökulmasta usein turhan aggressiivisia (ts. auttavat turhan innokkaasti tai väärään suuntaan), joten muutetaan asetuksia tämän kurssin suositusten mukaisiksi. 
+Oletusasetukset koodin muotoilulle ja analysoinnille ovat tämän kurssin
+näkökulmasta usein turhan aggressiivisia (ts. auttavat turhan innokkaasti tai
+väärään suuntaan), joten muutetaan asetuksia tämän kurssin suositusten
+mukaisiksi. 
 
 Jos haluat varmuuskopioida nykyiset asetuksesi, tee se valikosta *File* &rarr; *Manage
 IDE Settings* &rarr; *Export Settings*.
@@ -51,8 +75,8 @@ Ja uusimmassa Riderissa joudut joka tapauksessa alla olevalla manuaaliohjeella p
 
 ## Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
 
-Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka
-yrittää täydentää kirjoitetun rivin loppuun ympäröivän koodin perusteella:
+Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka yrittää täydentää
+kirjoitetun rivin loppuun ympäröivän koodin perusteella:
 
 ![AI autocompletion example](images/taydennys.png)
 
@@ -67,7 +91,12 @@ sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään se pois seuraava
 
 <details closed><summary>Kurssin koodin muotoilu- ja analyysiasetusten ("settings.zip") selitykset (valinnaista lisätietoa)</summary>
 
-Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän kurssin kannalta. Ajatus on, että on parempi, että varoituksia tulee vain niistä asioista, jotka on oikeasti syytä ottaa huomioon. Kun opit ohjelmointia lisää, on noista edistyneemmistä varoituksistakin enemmän hyötyä. Kannattaa avata Riderissa joku solution, jos säädät seuraavia käsin.
+Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
+otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
+kurssin kannalta. Ajatus on, että on parempi, että varoituksia tulee vain niistä
+asioista, jotka on oikeasti syytä ottaa huomioon. Kun opit ohjelmointia lisää,
+on noista edistyneemmistä varoituksistakin enemmän hyötyä. Kannattaa avata
+Riderissa joku solution, jos säädät seuraavia käsin.
 
 - **Oikoluku:** Poistetaan valitukset suomenkielisistä nimistä: 
   `File/Settings`, kirjoita hakukentään `spell` 
@@ -140,116 +169,133 @@ hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liitt
 > [!VAROITUS]
 > Jos olet Jyväskylän yliopiston opiskelija, varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
 
-Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. 
-Projekti kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai useampia projekteja.
-*Projekti* sisältää yhteen ohjelmaan (peliin tai konsolisovellukseen) liittyvän koodin ja grafiikka- ja musiikkitiedostot.
-
-tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti tarkoita mitään.
+Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. Projekti
+kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai
+useampia projekteja. *Projekti* sisältää yhteen ohjelmaan (peliin tai
+konsolisovellukseen) liittyvän koodin ja grafiikka- ja musiikkitiedostot.
 
 Esimerkiksi yksi demokerta voi olla yksi solution joka sisältää useita projekteja (demotehtäviä). Useiden projektien lisäämisessä samaan solutioniin on se etu, että silloin voi pitää samaan demoon liittyvät tehtävät yhtä aikaa näkyvillä ilman että niitä tarvitsee jatkuvasti avata tai sulkea.
 
-Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions) 
+Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä
+nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions)
+tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti tarkoita
+mitään.
 
 ## Suositeltava hakemistorakenne
 
-Kurssilla kannattaa kaikki kurssin asiat tehdä esimerkiksi
-alikansion (hakemiston) `ohj1` alle.  Tuo ohj kansio `ohj1`
-voi alla käyttötarkoituksesta riippuen eri paikassa:
+Kaikki tämän opintojakson asiat kannattaa tehdä  esimerkiksi kansioon nimeltä
+`ohj1`. Tämä kansio kannattaa sijoittaa tietokoneellasi paikkaan joka riippuu
+hieman käyttöjärjestelmästäsi ja omista mieltymyksistäsi.
 
-Mikroluokan koneessa 
+Omassa tietokoneessa sopivia sijainteja ovat esimerkiksi:
 
-    c:\MyTemp\<käyttäjätunnus>\ohj1
-    
-ja omassa kannettavassa esimerkiksi:
+ * Windows: `C:\Users\<käyttäjätunnus>\kurssit\ohj1` tai `C:\Opiskelu\ohj1`
+ * Mac ja Linux: `~/kurssit/ohj1` 
 
-    Windows: `/c/kurssit/ohj1`    
-    Mac ja Linux: `~/kurssit/ohj1` 
+Mikroluokan koneessa: `c:\MyTemp\<käyttäjätunnus>\ohj1`
 
+Kansio voi sijaita jossain muuallakin. **Tärkeintä on, että itse tiedät missä
+kansiossa työskentelet, ja että löydät sen helposti myöhemmin.**
 
-ja sitten tuon kansion alla on alikansiota tyyliin:
+Tämän `ohj1`-kansion alle kannattaa luoda kaksi alikansiota: `demot` ja
+`harjoitustyo`.
 
-```
+Rakenne näyttäisi nyt tältä. 
+
+```bob
 ohj1
  |
  +-demot 
- |  +-demo1
- |  | +-HelloWorld
- |  | +-Lumiukko
- |  | 
- |  '-demo2
- |    +-Lumiukko2
- |    +-LukujenLaskemista
- |
- '-ohjaukset
-    +-paate1
-    | +-HelloWorld
-    | +-Lumiukko
-    '-paate2
+ '-harjoitustyo
 ```
 
-Eli esimerkiksi `demo1` on yksi solution jonka alla on useita
-projekteja.  Usein projekti on yksi demotehtävä.
+Esimerkiksi `demo1`-kansion alle tehdään yksi solution jonka alla on useita
+projekteja.  Usein projekti on yksi demotehtävä. Katsotaan tätä seuraavaksi.
 
 ## Uusi solution
 
-Luodaan uusi solution ja siihen projekti. Tässä esimerkissä luodaan demo1-niminen solution ja siihen Lumiukko-niminen projekti `demot`-alikansioon: 
+Luodaan uusi solution ja siihen projekti edellä luodun kansiorakenteen
+alaisuuteen. Tässä esimerkissä luodaan demo1-niminen solution ja siihen
+Lumiukko-niminen projekti `demot`-alikansioon. Mikäli haluat lisätä projektin
+olemassa olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan
+solutioniin](#uusi-projekti-solutioniin).
 
-Mikäli haluat lisätä projektin olemassa olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan solutioniin](#uusiprojekti).
-
-* Valitse `New Solution`. Mikäli joku vanha solution on jo auki, niin sama onnistuu yläpalkista  `File/New Solution`. ![Uusi solution Linuxissa](./images/new_solution_linux.png)
-
+* Valitse `New Solution`. Mikäli joku vanha solution on jo auki, niin sama
+  onnistuu yläpalkista  File -> New Solution`. ![Uusi solution
+  Linuxissa](./images/new_solution_linux.png)
 * Valitse vasemmalta Custom templates -listasta `FysiikkaPeli`.
 * Anna solutionin nimeksi `demoX`, esimerkiksi `demo1`
-* Anna projektin nimi, esimerkiksi `Lumiukko` tai `Teht3Lumiukko` (Huom **Iso** alkukirjan!). 
-* Kirjoita tai selaa poluksi (`<käyttäjätunnus>` tilalle oma käyttäjätunnuksesi jos se on eri):
-    * oma Windows kone: `C:\kurssit\ohj1\demot`
-    * Mac: `/Users/<käyttäjätunnus>/kurssit/ohj1/demot`
-    * Linux: `/home/<käyttäjätunnus>/kurssit/ohj1/demot`
-    * mikroluokssa `C:\MyTemp\<käyttäjätunnus>\ohj1\demot` 
+* Anna projektin nimi, esimerkiksi `Lumiukko` tai `Teht3Lumiukko` riippuen
+  tehtävästä mitä olet tekemässä (Huom **Iso** alkukirjan!). 
+* Kirjoita tai selaa poluksi edellisessä kohdassa tekemäsi kansion sijainti. Jos
+  olet tekemässä demoja, niin tähän kohtaan tulee esimerkiksi
+  `C:\Users\<käyttäjätunnus>\kurssit\ohj1` (Windows) tai
+  `~/kurssit/ohj1` (Mac ja Linux).
   
-  HUOM! Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle, esim. `C:\MyTemp\<käyttäjätunnus>\...`. Siirrä lopuksi tiedostot U-asemallesi tai muualle talteen. 
+  Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle,
+  esim. `C:\MyTemp\<käyttäjätunnus>\...`. Siirrä lopuksi tiedostot muualle
+  talteen. 
 * Jätä `Put solution and project in the same directory`-boksi tyhjäksi.
 * `Framework`-kohtaan `net8.0`
 * Klikkaa `Create`.
-* Levylle syntyy nyt hierarkia:
-  ```
-        kurssit                    - kaikkien kurssien hakemisto
-          ohj1                     - ohj1 kurssin hakemisto
-            demot                  - demojen hakemisto
-              demo1                - demo1:n hakemisto
-                demo1.sln          - solutionintiedosto jossa luetellan mitä projekteja
-                Lumiukko           - hakemisto jonka alla Lumiukko-projekti     
-                  bin              - hakemisto jonne tulee ajettavaa koodia
-                  obj              - hakemisto jonne tulee käännettyjä tiedostoja
-                  Lumiukko.cs      - C#-tiedosto johon tulee lumiukon piirtävä koodi
-                  Ohjelma.cs       - C#-pääohjelma
-                  Lumiukko.csproj  - projektin tiedosto jossa kerrotaan mitä tiedostoja
-                                     projektiin liittyy
-  ```
+* Tutki syntynyttä tiedostohierarkiaa esimerkiksi tiedostohallinnassa tai
+  Finderissa. Hierarkian pitäisi näyttää suurin piirtein tältä:
+
+```bob
+ohj1
+ |
+ +-demot 
+ |  |
+ |  '-demo1         <- tämä tehtiin nyt
+ |     |-demo1.sln  <- tämä tehtiin nyt  
+ |     '-Lumiukko   <- tämä tehtiin nyt 
+ |        |
+ |        |- bin            
+ |        |- obj            
+ |        |- Lumiukko.cs    
+ |        |- Ohjelma.cs     
+ |        '- Lumiukko.csproj
+ |
+ '-harjoitustyo
+```
+
+Lyhyt selitys demo1-kansion sisältämistä tiedostoista ja kansioista:
+
+```
+demo1                - kansio joka sisältää demo1-solutionin
+  demo1.sln          - solution-tiedosto, jossa luetellaan projektit
+  Lumiukko           - kansio, jonka alla Lumiukko-projekti     
+    bin              - kansio, jonne tulee ajettavaa koodia
+    obj              - kansio, jonne tulee käännettyjä tiedostoja
+    Lumiukko.cs      - C#-lähdekooditiedosto, johon tulee lumiukon piirtävä koodi
+    Ohjelma.cs       - C#-lähdekooditiedosto, joka sisältää pääohjelman
+    Lumiukko.csproj  - projektin asetustiedosto, jossa kerrotaan mitä tiedostoja
+                       projektiin liittyy
+```
+
 * Klikkaa Solution Explorerissa `Lumiukko.cs`-kooditiedostoa.  Koodissa pitäisi näkyä:
 
-  ```csharp 
-  public class Lumiukko : PhysicsGame
-  {
-      public override void Begin()
-      {
-          // Kirjoita ohjelmakoodisi tähän
-  
-          PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
-          Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
-      }
-  }
-  ```
+```csharp,ignore
+public class Lumiukko : PhysicsGame
+{
+    public override void Begin()
+    {
+        // Kirjoita ohjelmakoodisi tähän
+        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+    }
+}
+```
 
 * Kokeile käynnistää ohjelma `Run/Run 'Lumiukko'`, jolloin pitäisi näkyä uusi ikkuna vaaleansinisellä taustalla. Jos kaikki toimii, sulje ikkuna.
 * Pyyhi pois koko se rivi jossa lukee "`Kirjoita ohjelmakoodisi tähän`" ja kirjoita tilalle
     
-  ```csharp
-          Level.Background.Color = Color.Black;
-          PhysicsObject pallo = new PhysicsObject(200, 200, Shape.Circle);
-          pallo.Color = Color.White;
-          Add(pallo);
-  ```
+```csharp,ignore
+Level.Background.Color = Color.Black;
+PhysicsObject pallo = new PhysicsObject(200, 200, Shape.Circle);
+pallo.Color = Color.White;
+Add(pallo);
+```
 
 * Käynnistä ohjelma uudestaan ja tarkista että ohjelma muuttui.
 
@@ -258,7 +304,7 @@ Mikäli haluat lisätä projektin olemassa olevaan solutioniin, katso luku [Uusi
   piirretään lumiukko)
 * Kirjoita vastaavasti `Begin`-metodin dokumentaatiokommentit.
 
-## Uusi projekti olemassa olevaan solutioniin
+## Uusi projekti olemassa olevaan solutioniin {#uusi-projekti-solutioniin}
 
 Oletetaan, että solution on jo olemassa. 
 Lisätään siihen toinen projekti olemassa olevan lisäksi. 
@@ -272,6 +318,34 @@ Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-
 - Ensimmäisellä kerralla projekti ajetaan klikkaamalla Explorerissa sen nimeä `HelloWorld`
   hiiren oikealla ja valitse `Run HelloWorld`. Myöhemmillä kerroilla voit
   käynnistää projektin käynnistämällä yläpalkista haluamasi projektin.
+
+
+
+```bob
+ohj1
+ |
+ +-demot 
+ |  |
+ |  '-demo1
+ |  |  |
+ |  |  |-demo1.sln 
+ |  |  |-Lumiukko  
+ |  |  |  '- Lumiukko.cs jne.
+ |  |  | 
+ |  |  |-HelloWorld  <- tämä tehtiin nyt
+ |  |  | 
+ |  |  '-...         <- vastaavasti voisit tehdä lisää projekteja
+ |  |
+ |  '-demo2          <- vastaavasti voisit tehdä lisää solutioneja
+ |     |
+ |     |-Lumiukko2
+ |     |-LukujenLaskemista
+ |     '-...
+ |
+ '-harjoitustyo
+    |
+    '-...
+```
 
 
 ## Jypeli-projektit
@@ -349,8 +423,3 @@ Lopuksi lisäämme `ympyra` muuttujan näkyviin kutsumalla Jypelin `Add` metodia
 ```csharp,ignore
 Add(ympyra); // Lisätään ympyrä peliin
 ```
-
-
-## Tehtävät
-
-Asenna Rider ja Jypeli omalle tietokoneellesi [Työkalut-sivulla](../tyokalut.md) olevia ohjeita noudattaen. 
