@@ -1,5 +1,8 @@
 # <span class="part-icon">🛠️</span> Ohjelmointiympäristö kuntoon
 
+> [!VAROITUS]
+> Jos olet Jyväskylän yliopiston opiskelija, varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
+
 Ensimmäisten viikkojen tehtävät voi periaatteessa suorittaa verkkoselaimessa,
 mutta varsin pian on tarpeen saada oma ohjelmointiympäristö toimimaan
 tietokoneella. 
@@ -10,6 +13,9 @@ tallentamisen ja suorittamisen ilman internet-yhteyttä. Lisäksi omaa ympärist
 on helpompi mukauttaa omien tarpeiden mukaan, kuten vaihtaa värejä, fontteja ja
 muita asetuksia. Myöhemmin opit käyttämään versionhallintaa sekä debuggausta,
 jotka vaativat ohjelmointiympäristön omalla tietokoneellasi. 
+
+Ellet ole vielä asentanut kehitystyökaluja, tee se ensin [Työkalut-sivun](../tyokalut.md)
+ohjeiden mukaisesti.
 
 ## Rider
 
@@ -47,143 +53,9 @@ Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. 
 Coden asennusohjeet löytyvät myöskin
 [Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
-Alla olevat ohjeet koskevat kuitenkin vain Rideria.
-
-## Konfigurointi ja laajennokset
-
-Oletusasetukset koodin muotoilulle ja analysoinnille ovat tämän kurssin
-näkökulmasta usein turhan aggressiivisia (ts. auttavat turhan innokkaasti tai
-väärään suuntaan), joten muutetaan asetuksia tämän kurssin suositusten
-mukaisiksi. 
-
-Jos haluat varmuuskopioida nykyiset asetuksesi, tee se valikosta *File* &rarr; *Manage
-IDE Settings* &rarr; *Export Settings*.
-
-- Lataa [asetuspaketti
-(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1) (Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
-- Avaa Rider ja valitse *Welcome to JetBrains Rider*-ikkunassa vasemmasta alalaidasta *Configure* &rarr; *Import Settings...*
-- Etsi ja valitse äsken haettu tiedosto
-- Klikkaa OK, sitten Import and Restart
- 
-Vaihtoehtoisesti voit mukauttaa asetuksia yksitellen alla olevien ohjeiden mukaisesti. 
-
-Ja uusimmassa Riderissa joudut joka tapauksessa alla olevalla manuaaliohjeella poistamaan
-**oikoluvun** käytöstä (ainakin toistaiseksi).
-
-> [!VINKKI]
-> Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi valitsemalla *File* &rarr; *Manage IDE Settings* &rarr; *Settings sync*.
-
-## Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
-
-Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka yrittää täydentää
-kirjoitetun rivin loppuun ympäröivän koodin perusteella:
-
-![AI autocompletion example](images/taydennys.png)
-
-Aivan opintojakson alussa tämä täydennys ei haittaa, mutta myöhemmin täydennys pikemmin häiritsee
-sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään se pois seuraavasti:
-
-- Avaa Rider *Welcome to JetBrains Rider* -näkymään
-- Valitse vasemmasta alalalaidasta *Configure* &rarr; *Settings*
-- Mene asetuksissa kohtaan *Editor* &rarr; *General* &rarr; *Inline Completion*
-- Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
-- Tallenna asetukset *Save*-painikkeella
-
-<details closed><summary>Kurssin koodin muotoilu- ja analyysiasetusten ("settings.zip") selitykset (valinnaista lisätietoa)</summary>
-
-Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
-otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
-kurssin kannalta. Ajatus on, että on parempi, että varoituksia tulee vain niistä
-asioista, jotka on oikeasti syytä ottaa huomioon. Kun opit ohjelmointia lisää,
-on noista edistyneemmistä varoituksistakin enemmän hyötyä. Kannattaa avata
-Riderissa joku solution, jos säädät seuraavia käsin.
-
-- **Oikoluku:** Poistetaan valitukset suomenkielisistä nimistä: 
-  `File/Settings`, kirjoita hakukentään `spell` 
-  ja mene `Spelling` ja `.NET Languages` (tai `ReSpeller` versiosta riippuen) ja ota sen
-`Enable` pois.
-- **Huomatus nimiavaruudesta:** Kurssilla ei aina käytetä nimiavaruuksia: 
-  kirjoita asetusten hakukentään `inspection severity` ja mene asetuksissa `Editor/Inspection Settings/Inspection
-Severity/C#` valitsemalla `Inspection Severity` alla olevista kielistä C#. Pitäisi tulla näkyviin uusi valikko C#:n kielikohtaisia asetuksia.
-Kirjoita tämän uuden valikon omaan hakuun `namespace` ja ota ruksi pois kohdasta 
-`Namespace does not correspond to file location`, joka löytyy uudesta valikossa `Constraints violations`-
-alaotsikon alta.
-- **Luokasta ole luotu oliota:** Kurssilla luokkia käytetään (myös) tallentamaan
-  joukko staattisia aliohjelmia, joten tämä varoitus ei ole relevantti. Samaan tapaan 
-kuin edellisessä kohdassa, mene ensin C#:n kielikohtaisiin asetuksiin: `Editor/Inspection Settings/Inspection Severity/C#` ja kirjoita avautuvan valikon hakukentään `instantiated` ja ota ruksi pois kohdasta `Non-private accessibility`, joka on alaotsikon `Potential Code Quality Issues` ja `Class is never instantiated`-asetuksen alla.
-- **Metodi voisi olla private:** Yleiskäyttöiseksi tarkoitetut funktiot kannattaa tehdä julkisiksi, mutta koska niitä ei ole vielä mistään kutsuttu, Rider huomauttaa tästä. 
-Mene taas C#:n kielikohtaisten asetusten valikkoon `Editor/Inspection Settings/Inspection Severity/C#` edellisen kohdan tavoin.
-Hae `member` ja etsi `Common Practices and Code Improvements` alaotsikon alta `Member can be made private`-asetuksen
-alla oleva asetus `Non-private accessibility`, josta ota ruksi pois.
-- **Luokkaa ei ole määritelty nimiavaruudessa:** Koska kurssilla ei aina käytetä nimiavaruuksia:
-  Jos koodissa on jossakin kohti alleviivattuna `class`-sanan jälkeinen nimi, niin mene
-sen nimen alkuun,
-  paina nimeä ja vasemmalle syttyy vasaran kuva. Klikkaa vasaraa ja valitse valikosta `Inspection:
-'Declare types in namespaces'/Configure inspection severity/Do not show` kuten kuvassa alla: 
-![Poistetaan Laskuja-luokan nimen alleviivaus näkyvistä](./images/vesan_asetukset_alleviivaus.png)
-Tämän `Context Actions`-valikon saa auki myös klikkaamalla hiiren oikealla painikkeella alleviivattua
-kohtaa ja valitsemalla valikosta `Show Context Actions`. Joissain tapauksissa valikon saa auki rivinumeroiden 
-vieressä olevasta hehkulampun kuvasta.`Context Actions`-valikon saa auki kursorin kohdalla 
-myös painamalla `Alt + Enter`. Tällä samalla menetelmällä on helppo säätää pois häiritseviä alleviivauksia, 
-**mutta ensin on varmistuttava, että kyseinen asetus/alleviivaus/vihje ei ole itselle tarpeellinen tai huomionarvoinen**.
-- **`var`-sanan käyttö:** Pyritään oppimaan tyyppien merkitystä. Toimi kuten edellä
-silloin kun ehdotetaan esimerkiksi `int ika` tyyppisessä lausessa `int` sanan kohdalle
-että `use var`, eli poista tämä huomautus käytöstä.
-
-- `Editor/General/Code Completion` poista ruksi "Preselect the best match to
-insert it by pressing dot, parantheses, and other keys"
-- `Editor/Inlay Hints` poista ruksi "Enable Inlay Hints in .NET languages"
-
-</details>
-
-<br />
-
-<details closed><summary>Suositeltavat käyttöliittymän asetukset (valinnaista lisätietoa)</summary>
-
-Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla käytettyjä asetuksia. 
-
-**Siirrä alaosan paneelit yhteen reunaan.** ![Move panels example gif](./images/rider-paneelit-vasemmalle.gif) Tämän
-ansiosta esimerkiksi tulosteita on helpompi tarkastella hieman leveämmässä näkymässä. Joissakin tilanteissa
-(esimerkiksi debugatessa) joitakin paneeleja voi olla hyvä siirtää tarvittaessa oikeallekin. Voit
-myös piilottaa turhia paneeleja näkyviltä kun klikkaat hiiren oikealla kuvakkeen päällä ja sitten Hide.
-
-**Paneeleita voi "unpinnata"** eli piilottaa näkyvistä silloin kun ne eivät ole aktiivisia. Klikkaa paneelista kolmea pistettä ja valitse View Mode -> Dock Unpinned. Jos unpinnaat esimerkiksi Debug-paneelin, voit ajaa ConsoleMain-sovelluksen (Debug-tilassa), ja painaa ajon jälkeen Esc-näppäintä. Paneeli sulkeutuu ja fokus siirtyy takaisin editoriin. (Ei tarvitse koskea hiireen, JES! :))
-
-**Piilota onnistuneen käännöksen "balloon"-ilmoitus.** Omasta mielestäni tämä ilmoitus on täysin turha ja vain tiellä. Valitse Settings &rarr; Notifications &rarr; Build messages &rarr; No popup. Suosittelen myös poistamaan valinnan kohdasta *Show in tool window*, koska harvemmin on tarvetta tietää tarkkoja kellonaikoja milloin käännös on onnistunut tai epäonnistunut. 
-
-**Koko ruudun tilan** saat käyntiin View &rarr; Appearance &rarr; Enter Full Screen. Minulla näppäinoikotie on Ctrl+Shift+Enter, mutta 
-kuten mitä tahansa näppäinoikoteitä, tätäkin voi muuttaa kohdasta Settings &rarr; Keymap. Myös *Distraction Free Mode* on mielestäni mukava, vaikkakin se piilottaa jotain 
-hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liittyvät pikkukolmiot. 
-
-**Ns. Uuden käyttöliittymän** saat valittua Settings &rarr; New UI &rarr; Enable New UI. On kuitenkin täysin makuasia kummasta tykkää enemmän, vanhasta vai uudesta UI:sta. 
-
-**Debug/release-valikon näyttäminen New UI:ssa.** Jos käytät uutta käyttöliittymävaihtoehtoa (Settings New UI), kannattaa ns. debug/release-käännösvalikko ottaa käyttöön [tässä ohjeessa kuvatulla tavalla](https://youtrack.jetbrains.com/issue/RIDER-83004/No-Edit-Solution-Configuration-and-Build-button-in-new-UI).
-
-**Ulkoisen konsoli-ikkunan käyttäminen**: En itse tätä käytä, mutta jos haluat konsoliohjelman aukeavan ulkoiseen konsoliin katso 
-[How to launch console app in external window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
-
-</details>
-
-## Riderin peruskäyttö: solution ja projekti
-
-> [!VAROITUS]
-> Jos olet Jyväskylän yliopiston opiskelija, varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
-
-Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. Projekti
-kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai
-useampia projekteja. *Projekti* sisältää yhteen ohjelmaan (peliin tai
-konsolisovellukseen) liittyvän koodin ja grafiikka- ja musiikkitiedostot.
-
-Esimerkiksi yksi demokerta voi olla yksi solution joka sisältää useita projekteja (demotehtäviä). Useiden projektien lisäämisessä samaan solutioniin on se etu, että silloin voi pitää samaan demoon liittyvät tehtävät yhtä aikaa näkyvillä ilman että niitä tarvitsee jatkuvasti avata tai sulkea.
-
-Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä
-nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions)
-tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti tarkoita
-mitään.
-
 ## Suositeltava hakemistorakenne
 
-Kaikki tämän opintojakson asiat kannattaa tehdä  esimerkiksi kansioon nimeltä
+Kaikki tämän opintojakson asiat kannattaa tehdä esimerkiksi kansioon nimeltä
 `ohj1`. Tämä kansio kannattaa sijoittaa tietokoneellasi paikkaan joka riippuu
 hieman käyttöjärjestelmästäsi ja omista mieltymyksistäsi.
 
@@ -209,10 +81,27 @@ ohj1
  '-harjoitustyo
 ```
 
-Esimerkiksi `demo1`-kansion alle tehdään yksi solution jonka alla on useita
-projekteja.  Usein projekti on yksi demotehtävä. Katsotaan tätä seuraavaksi.
+## Riderin peruskäyttö: solution ja projekti
+
+Rider käyttää ns. *solution-projekti*-rakennetta koodin organisointiin. Projekti
+kuuluu aina johonkin *solutioniin*. Yksi solution voi sisältää yhden tai
+useampia projekteja. *Projekti* sisältää yhteen ohjelmaan (peliin tai
+konsolisovellukseen) liittyvän koodin ja grafiikka- ja musiikkitiedostot.
+
+Esimerkiksi yksi demokerta, esimerkiksi `demo1` voi olla yksi solution, ja se
+sisältää useita projekteja (demotehtäviä), kuten `Lumiukko` ja `HelloWorld`.
+Useiden projektien lisäämisessä samaan solutioniin on se etu, että silloin voi
+pitää samaan demoon liittyvät tehtävät yhtä aikaa näkyvillä ilman että niitä
+tarvitsee jatkuvasti avata tai sulkea.
+
+Sivuhuomiona mainittakoon, että solution on [Microsoftin keksimä
+nimi](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022#solutions)
+tällaiselle projekteja koostavalle kapistukselle. Sana ei varsinaisesti tarkoita
+mitään.
 
 ## Uusi solution
+
+Katsotaan nyt uuden solutionin ja projektin luomista Riderissa.
 
 Luodaan uusi solution ja siihen projekti edellä luodun kansiorakenteen
 alaisuuteen. Tässä esimerkissä luodaan demo1-niminen solution ja siihen
@@ -346,7 +235,6 @@ ohj1
     |
     '-...
 ```
-
 
 ## Jypeli-projektit
 
