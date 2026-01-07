@@ -829,11 +829,9 @@ Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pac
 
 Alla on lueteltu joitain yleisimpiä ongelmatilanteita, joita asennuksen tai työkalujen käytön yhteydessä voi tulla vastaan. Jos löydät ongelman, jota ei ole listattu alla, 
 
-TODO: Lisää linkit.
-
-- tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta]()), 
-- laita viestiä [Teamsissa]() (Kysymyksiä ja apua -kanava) tai
-- laita viestiä opettajille: ohj1-opet@jyu.onmicrosoft.com. 
+- tule pääteohjauksiin. Ajat ja paikat löytyvät [kotisivulta](index.md#tuki-ja-palaute)), 
+- laita viestiä [Teamsissa](index.md#teams-jy) (Kysymyksiä ja apua -kanava) tai
+- laita viestiä opettajille: <ohj1-opet@jyu.onmicrosoft.com>. 
 
 <details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
  
