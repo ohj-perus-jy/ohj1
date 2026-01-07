@@ -2,17 +2,22 @@
 
 *Ohjeet Ohjelmointi 1 -opintojaksolle*
 
-Tässä dokumentissa kerrotaan miten harjoitustyön suunnitelmaa, lähdekoodia 
-sekä muita tiedostoja (mm. kuvat) käsitellään Git-versiohallinnan avulla Ohjelmointi 1 -opintojaksolla.
+Tässä dokumentissa kerrotaan miten harjoitustyön suunnitelmaa, lähdekoodia sekä
+muita tiedostoja (mm. kuvat) käsitellään Git-versiohallinnan avulla Ohjelmointi
+1 -opintojaksolla.
 
-Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti. Git-versiohallinnan käyttö on olennainen osa ohjelmistokehitystä, ja sen perusteiden ymmärtäminen on tärkeää paitsi tällä opintojaksolla, myös myöhemmissä opinnoissa ja työelämässä.
+Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti.
+Git-versiohallinnan käyttö on olennainen osa ohjelmistokehitystä, ja sen
+perusteiden ymmärtäminen on tärkeää paitsi tällä opintojaksolla, myös
+myöhemmissä opinnoissa ja työelämässä.
 
 > [!VAROITUS]
-> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää JY-käyttäjätunnuksesi 
-> jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista, että tiedät käyttäjätunnuksesi,
-> ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä
-> ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `kayttajatunnus`.
-> Korvaa tämä aina omalla käyttäjätunnuksellasi.
+> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
+> JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
+> että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat
+> tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti
+> käyttäjätunnukseen tunnisteella `kayttajatunnus`. Korvaa tämä aina omalla
+> käyttäjätunnuksellasi.
 
 ## Ennen kuin aloitat
 
@@ -20,15 +25,28 @@ Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehn
 
 ## Mikä Git on
 
-*Git* on ohjelmisto, jolla voidaan toteuttaa tiedostojen *versiohallintaa*. Ohjelmistotyössä on erityisen tärkeää, että jokainen ohjelmistoon tehty muutos versioidaan selkeästi. Versiohallinnan käyttäminen yhteistyöskentelyyn ja muutosten jäljittämiseen on normi niin teollisessa ohjelmistotuotannossa, vapaan/avoimen lähdekoodin projekteissa kuin myös monien harrastajien henkilökohtaisissa töissä. 
+*Git* on ohjelmisto, jolla voidaan toteuttaa tiedostojen *versiohallintaa*.
+Ohjelmistotyössä on erityisen tärkeää, että jokainen ohjelmistoon tehty muutos
+versioidaan selkeästi. Versiohallinnan käyttäminen yhteistyöskentelyyn ja
+muutosten jäljittämiseen on normi niin teollisessa ohjelmistotuotannossa,
+vapaan/avoimen lähdekoodin projekteissa kuin myös monien harrastajien
+henkilökohtaisissa töissä. 
 
-Versiohallinta mahdollistaa myös saman koodin parissa työskentelyn eri tietokoneilta, mikä sopii hyvin tälle kurssille, koska usein tehdään töitä eri tietokoneilta (mikroluokka, kotikone, jne.). Toisaalta versiohallinta toimii myös varmuuskopiona työllesi. Näin koodisi ei häviä, vaikka tietokoneesi hajoaisi.
+Versiohallinta mahdollistaa myös saman koodin parissa työskentelyn eri
+tietokoneilta, mikä sopii hyvin tälle kurssille, koska usein tehdään töitä eri
+tietokoneilta (mikroluokka, kotikone, jne.). 
 
-*Git-varasto* (engl. *repository*) sisältää sekä kooditiedostot että koko projektin muokkaushistorian. GitLab ja GitHub ovat eräitä suosittuja internetissä toimivia palveluita, joissa Git-varastoja voidaan säilyttää. 
+*Git-varasto* (engl. *repository*) sisältää sekä kooditiedostot että koko
+projektin muokkaushistorian. GitLab ja GitHub ovat eräitä suosittuja
+internetissä toimivia palveluita, joissa Git-varastoja voidaan säilyttää. 
 
-Tällä kurssilla emme käytä Dropboxia, muistitikkuja, sähköpostia tai vastaavia palveluita kooditiedostojen jakamiseen, koska ne eivät sovellu todelliseen yhteistyöskentelyyn. Vaikka työskentelisitkin yksin, käytä versiohallintaa ohjaajien työn helpottamiseksi sekä harjoitustyön esittelyn mahdollistamiseksi. 
+Tällä kurssilla emme käytä Dropboxia, muistitikkuja, sähköpostia tai vastaavia
+palveluita kooditiedostojen jakamiseen, koska ne eivät sovellu todelliseen
+yhteistyöskentelyyn. Vaikka työskentelisitkin yksin, käytä versiohallintaa
+ohjaajien työn helpottamiseksi sekä harjoitustyön esittelyn mahdollistamiseksi. 
 
-Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien kirjoittamisessa.
+Voit hyödyntää versiohallintaa opinnoissa muutenkin, esimerkiksi tutkielmien
+kirjoittamisessa.
 
 ## Miten saan Gitin auki
 
