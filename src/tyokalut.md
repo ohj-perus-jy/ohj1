@@ -21,10 +21,7 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
   aputyökalu, jonka avulla kirjoitetulle koodille voi kirjoittaa testejä
   helposti luettavalla merkintätavalla.
 
-Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran
-mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja
-1. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat
-ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
+Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
 ## Ennen asentamista 
 
