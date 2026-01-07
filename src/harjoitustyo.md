@@ -258,7 +258,7 @@ tulee testata.
 
  - Aloita vaikka pistämällä kentälle jotakin olioita
  - [MontaPalloa.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/luento10/MontaPalloa/MontaPalloa/MontaPalloa.cs)
- - Jos peli on tasohyppelymäinen, luo uusi projekti kohdasta Jypeli -> Tasohyppely
+ - Jos peli on tasohyppelymäinen, luo uusi projekti kohdasta Jypeli <i class="bi bi-chevron-right"></i> Tasohyppely
  - Katso [sisällön tuominen peliin ](./osa1/2-ohjelmointiymparisto-kuntoon.md#sisällön-tuominen-jypeli-projektiin-content-kansio). Kuvat toimii jos:
       1. piirretty/haettu tarvittavat kuvat, muista tekijänoikeus
       2. tehty projektiin Content-niminen kansio ja kopioitu kuvat sinne
@@ -315,7 +315,7 @@ Noudata huolellisesti alla olevia ohjeita.
     (esim. Gmail tai Hotmail) ja katsoa tuleeko posti itselle perille.
     Ota varmuuden vuoksi mahdollinen edelleenohjaus pois päältä.
     Huomioi, että edelleenohjauksen deaktivoitumisessa on viivettä.
-    Jos posti ei tule perille, tarkista account.jyu.fi -> sähköpostiasetukset.
+    Jos posti ei tule perille, tarkista account.jyu.fi <i class="bi bi-chevron-right"></i> sähköpostiasetukset.
     Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
 
     **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
@@ -340,7 +340,7 @@ JetBrains lisää osoitteesi mustalle listalle, ja sen jälkeen osoitteen avaami
 - <https://rider-support.jetbrains.com/hc/en-us/requests/new>
 
 **Code With Me käyttöönotto:**
-Valitse yläpalkista *Tools* -> *Enable Code With Me* ja lopuksi *Enable and restart*
+Valitse yläpalkista *Tools*<i class="bi bi-chevron-right"></i>*Enable Code With Me* ja lopuksi *Enable and restart*
 
 **Session aloitus**
 

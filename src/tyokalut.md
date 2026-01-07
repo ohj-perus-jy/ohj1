@@ -3,23 +3,23 @@
 **Ohjelmointi 1** -opintojaksolla käytämme alla olevia työkaluja. Tässä
 dokumentissa opastetaan, miten nämä työkalut asennetaan. 
 
-- **.NET** - *ohjelmistoviitekehys* (engl. framework) mahdollistaa C#-ohjelmien kehittämisen ja valmiiden ohjelmien ajamisen. 
-- **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka
-  mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä. Vähän kuin
-  Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
-- **JetBrains Rider** - *integroitu kehitysympäristö* (engl. Integrated
-  Development Environment, IDE), jolla voi kirjoittaa, kääntää, ajaa ja debugata
-  ohjelmia. Rider on erityisesti .NET- ja C#-ohjelmille tarkoitettu IDE. Käytämme
-  ilmaista Community Edition -versiota.
-- **Tekstieditori** - ohjelma, jolla voi muokata tekstipohjaisia tiedostoja,
-  kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme esimerkiksi *Visual
-  Studio Code* tai *Notepad++*. Microsoft Word tai Google Docs **ei ole**
-  opintojaksolle soveltuva tekstieditori.
-- **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän
-  yliopistossa kehitetty C#-kirjasto pelien tekemiseen.
-- **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on
-  aputyökalu, jonka avulla kirjoitetulle koodille voi kirjoittaa testejä
-  helposti luettavalla merkintätavalla.
+- **.NET** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
+  C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. 
+- **Git** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
+  ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
+  Docsiksi.
+- **JetBrains Rider** &ndash; *integroitu kehitysympäristö*, jolla voi
+  kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
+  C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.
+- **Tekstieditori** &ndash; ohjelma, jolla voi muokata tekstipohjaisia
+  tiedostoja, kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme
+  esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
+  Docs **ei ole** opintojaksolle soveltuva tekstieditori.
+- **JyPeli** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
+  C#-kirjasto pelien tekemiseen.
+- **ComTest** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
+  avulla kirjoitetulle koodille voidaan kirjoittaa testejä helposti luettavalla
+  merkintätavalla.
 
 Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
@@ -196,8 +196,8 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
  1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia
     päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
- 1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell*
-    &rarr; *Windows PowerShell*).
+ 1. Avaa PowerShell-komentorivi (*Haku-ikoni* <i class="bi bi-chevron-right"></i> Kirjoita *PowerShell*
+    <i class="bi bi-chevron-right"></i> *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
 
     ```bash
@@ -218,7 +218,7 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 ### [macOS](#tab/macos)
 
-1. Avaa Pääte tai Termimal (*Launchpad* &rarr; *Pääte*/*Terminal*)
+1. Avaa Pääte tai Termimal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
 2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
 
     ```bash
@@ -447,7 +447,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     ```
     
     Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* &rarr; Kirjoita *Git Bash* &rarr; Valitse *Git Bash*.
+5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* <i class="bi bi-chevron-right"></i> Kirjoita *Git Bash* <i class="bi bi-chevron-right"></i> Valitse *Git Bash*.
 
     Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
@@ -539,21 +539,21 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
 
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 
 7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
    asennus on onnistunut.
 
 8. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
-   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* &rarr; *.NET
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
    languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
 
 9. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
 (settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
 (Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
-    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* &rarr; *Import Settings...*
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
     - Klikkaa OK, sitten Import and Restart
 
@@ -595,21 +595,21 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 7. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
 
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 
 8. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
    asennus on onnistunut.
 
 9. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
-   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* &rarr; *.NET
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
    languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
 
 10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
 (settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
 (Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
-    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* &rarr; *Import Settings...*
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
     - Klikkaa OK, sitten Import and Restart
 
@@ -653,20 +653,20 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
     *Start Non-Commercial license*.
 7. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 8. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
    asennus on onnistunut.
 
 9. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
-   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* &rarr; *.NET
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
    languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
 
 10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
 (settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
 (Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
-    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* &rarr; *Import Settings...*
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
     - Klikkaa OK, sitten Import and Restart
 
@@ -711,7 +711,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
     code
     ```
     Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* &rarr; Kirjoita *Visual Studio Code* &rarr; Valitse *Visual Studio Code*.
+    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* <i class="bi bi-chevron-right"></i> Kirjoita *Visual Studio Code* <i class="bi bi-chevron-right"></i> Valitse *Visual Studio Code*.
 
 ***
 
@@ -807,7 +807,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
 ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yksikkötestejä.
 
  1. Avaa JetBrains Rider ja odota, kunnes pääset *Welcome to JetBrains Rider* -näkymään
- 2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* &rarr; *Plugins*
+ 2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* <i class="bi bi-chevron-right"></i> *Plugins*
  3. Valitse *Marketplace*-välilehti ja hae hakusanalla `ComTest`
  4. Valitse Comtest Runner -pluginin kohdalta *Install*
      ![](/images/506961/rider-install-comtest.gif)
@@ -841,7 +841,7 @@ Asenna uusin GLFW-versio käyttämäsi paketinhallinnan avulla.
 <details closed><summary> System.PlatformNotSupportedException: GLFW is not supported on this platform...</summary>
  
 Voi olla että tietokoneellasi ei ole näytönohjaimen ajureita asennettuna.
-Mene Windowsin asetukset -> Päivitykset -> Valinnaiset (päivitä-nappulan alapuolella)
+Mene Windowsin asetukset <i class="bi bi-chevron-right"></i> Päivitykset <i class="bi bi-chevron-right"></i> Valinnaiset (päivitä-nappulan alapuolella)
 -> Ajurit.
 Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"
 
@@ -864,8 +864,8 @@ Voi olla, että Rider ei löydä oikeaa .NET-versiota.
 Kokeile seuraavaa:
 
 - Avaa Rider aloitusnäkymä (jos Rider on auki, laita se kiinni ja avaa uudelleen).
-- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) &rarr; *Settings*
-- Mene kohtaan *Build, Execution, Deployment*  &rarr; *Toolset and Build*
+- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) <i class="bi bi-chevron-right"></i> *Settings*
+- Mene kohtaan *Build, Execution, Deployment*  <i class="bi bi-chevron-right"></i> *Toolset and Build*
 - Klikkaa kohdan *.NET CLI executable path* -kentän alasvetovalikkoa:
 
     ![](/images/876452/image.png)
@@ -892,7 +892,7 @@ asetukset tulee säätää itse.
 <details closed> <summary>Rider-lisenssin uudelleenaktivointi  </summary>
  
 Lisenssi täytyy mahdollisesti aika ajoin uudelleenaktivoida kohdasta Help ->
-Manage licenses -> Activate.
+Manage licenses <i class="bi bi-chevron-right"></i> Activate.
 
 </details> 
 
@@ -962,7 +962,6 @@ että `use var`, eli poista tämä huomautus käytöstä.
 insert it by pressing dot, parantheses, and other keys"
 - `Editor/Inlay Hints` poista ruksi "Enable Inlay Hints in .NET languages"
 
-
 ## Valinnaista lisätietoa: Suositeltavat käyttöliittymän asetukset 
 
 Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla käytettyjä asetuksia. 
@@ -972,22 +971,25 @@ ansiosta esimerkiksi tulosteita on helpompi tarkastella hieman leveämmässä n�
 (esimerkiksi debugatessa) joitakin paneeleja voi olla hyvä siirtää tarvittaessa oikeallekin. Voit
 myös piilottaa turhia paneeleja näkyviltä kun klikkaat hiiren oikealla kuvakkeen päällä ja sitten Hide.
 
-**Paneeleita voi "unpinnata"** eli piilottaa näkyvistä silloin kun ne eivät ole aktiivisia. Klikkaa paneelista kolmea pistettä ja valitse View Mode -> Dock Unpinned. Jos unpinnaat esimerkiksi Debug-paneelin, voit ajaa ConsoleMain-sovelluksen (Debug-tilassa), ja painaa ajon jälkeen Esc-näppäintä. Paneeli sulkeutuu ja fokus siirtyy takaisin editoriin. (Ei tarvitse koskea hiireen, JES! :))
+**Paneeleita voi "unpinnata"** eli piilottaa näkyvistä silloin kun ne eivät ole aktiivisia. Klikkaa paneelista kolmea pistettä ja valitse View Mode <i class="bi bi-chevron-right"></i> Dock Unpinned. Jos unpinnaat esimerkiksi Debug-paneelin, voit ajaa ConsoleMain-sovelluksen (Debug-tilassa), ja painaa ajon jälkeen Esc-näppäintä. Paneeli sulkeutuu ja fokus siirtyy takaisin editoriin. (Ei tarvitse koskea hiireen, JES! :))
 
-**Piilota onnistuneen käännöksen "balloon"-ilmoitus.** Omasta mielestäni tämä ilmoitus on täysin turha ja vain tiellä. Valitse Settings &rarr; Notifications &rarr; Build messages &rarr; No popup. Suosittelen myös poistamaan valinnan kohdasta *Show in tool window*, koska harvemmin on tarvetta tietää tarkkoja kellonaikoja milloin käännös on onnistunut tai epäonnistunut. 
+**Piilota onnistuneen käännöksen ilmoitus.** Tämä ilmoitus on lähinnä vain tiellä. Valitse Settings <i class="bi bi-chevron-right"></i> Notifications <i class="bi bi-chevron-right"></i> Build messages <i class="bi bi-chevron-right"></i> No popup. Suosittelen myös poistamaan valinnan kohdasta *Show in tool window*, koska harvemmin on tarvetta tietää tarkkoja kellonaikoja milloin käännös on onnistunut tai epäonnistunut. 
 
-**Koko ruudun tilan** saat käyntiin View &rarr; Appearance &rarr; Enter Full Screen. Minulla näppäinoikotie on Ctrl+Shift+Enter, mutta 
-kuten mitä tahansa näppäinoikoteitä, tätäkin voi muuttaa kohdasta Settings &rarr; Keymap. Myös *Distraction Free Mode* on mielestäni mukava, vaikkakin se piilottaa jotain 
+**Koko ruudun tilan** saat käyntiin View <i class="bi bi-chevron-right"></i> Appearance <i class="bi bi-chevron-right"></i> Enter Full Screen. Minulla näppäinoikotie on Ctrl+Shift+Enter, mutta 
+kuten mitä tahansa näppäinoikoteitä, tätäkin voi muuttaa kohdasta Settings <i class="bi bi-chevron-right"></i> Keymap. Myös *Distraction Free Mode* on mielestäni mukava, vaikkakin se piilottaa jotain 
 hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liittyvät pikkukolmiot. 
 
 **Debug/release-valikon näyttäminen New UI:ssa.** Jos käytät uutta käyttöliittymävaihtoehtoa (Settings New UI), kannattaa ns. debug/release-käännösvalikko ottaa käyttöön [tässä ohjeessa kuvatulla tavalla](https://youtrack.jetbrains.com/issue/RIDER-83004/No-Edit-Solution-Configuration-and-Build-button-in-new-UI).
 
-**Ulkoisen konsoli-ikkunan käyttäminen**: En itse tätä käytä, mutta jos haluat konsoliohjelman aukeavan ulkoiseen konsoliin katso 
-[How to launch console app in external window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
-
+**Ulkoisen konsoli-ikkunan käyttäminen**: Jos haluat konsoliohjelman aukeavan
+ulkoiseen konsoliin katso 
+[How to launch console app in external
+window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
 
 > [!VINKKI]
-> Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi valitsemalla *File* &rarr; *Manage IDE Settings* &rarr; *Settings sync*.
+> Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
+> valitsemalla *File* <i class="bi bi-chevron-right"></i> *Manage IDE Settings*
+> <i class="bi bi-chevron-right"></i> *Settings sync*.
 
 ## Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
 
@@ -1001,8 +1003,8 @@ pikemmin häiritsee sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemä
 se pois seuraavasti:
 
 - Avaa Rider *Welcome to JetBrains Rider* -näkymään
-- Valitse vasemmasta alalalaidasta *Configure* &rarr; *Settings*
-- Mene asetuksissa kohtaan *Editor* &rarr; *General* &rarr; *Inline Completion*
+- Valitse vasemmasta alalalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Settings*
+- Mene asetuksissa kohtaan *Editor* <i class="bi bi-chevron-right"></i> *General* <i class="bi bi-chevron-right"></i> *Inline Completion*
 - Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
 - Tallenna asetukset *Save*-painikkeella
 

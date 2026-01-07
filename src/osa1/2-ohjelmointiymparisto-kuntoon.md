@@ -110,7 +110,7 @@ olemassa olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan
 solutioniin](#uusi-projekti-solutioniin).
 
 * Valitse `New Solution`. Mikäli joku vanha solution on jo auki, niin sama
-  onnistuu yläpalkista  File -> New Solution`. ![Uusi solution
+  onnistuu yläpalkista  File <i class="bi bi-chevron-right"></i> New Solution`. ![Uusi solution
   Linuxissa](./images/new_solution_linux.png)
 * Valitse vasemmalta Custom templates -listasta `FysiikkaPeli`.
 * Anna solutionin nimeksi `demoX`, esimerkiksi `demo1`
@@ -200,7 +200,7 @@ Lisätään siihen toinen projekti olemassa olevan lisäksi.
 Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-solutioniin. 
 
 - Klikkaa Explorer-paneelissa solutionin `demo1` nimeä hiiren oikealla (Macissa kahdella sormella).
-- Valitse `Add -> New Project`
+- Valitse `Add <i class="bi bi-chevron-right"></i> New Project`
 - Valitse vasemmalta `ConsoleMain`-projektimalli
 - Anna nimeksi `HelloWorld`
 - Paina `Create`.
@@ -256,11 +256,11 @@ sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
 
 Kuvat ja äänet lisätään peliprojektin Content-kansioon, joka näkyy editorin tiedostolistauksessa.
 
-Content-kansion voi luoda klikkaamalla hiiren oikealla projektia &rarr; *Add* &rarr; *Directory*
+Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Directory*
 
 ![Sisällön lisääminen](./images/new_content_directory.jpg)
 
- 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla &rarr; *Add* &rarr; *Add Existing Item*
+ 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Add Existing Item*
  1. Valitse tiedosto(t) jonka haluat lisätä ja paina ok.
  1. Valitse Copy.
  1. Klikkaa tuomaasi tiedostoa Content-kansiossa hiiren oikealla ja valitse Properties

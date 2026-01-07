@@ -12,14 +12,14 @@ Ohjelmointia opetellessa debuggeri on myös oiva väline askeltaa silmukoita, eh
 
  ## Debuggaustila Riderissa 
  
-*Debuggaustila* käynnistetään painamalla Run &rarr; Debug tai leppäkertun kuvaa. Tällöin ohjelma voidaan pysäyttää ns. keskeytyskohtien avulla ja tutkia ohjelman tilaa. Jos ohjelmassa ei ole yhtään keskeytyskohtaa, vaikuttaa debugtilassa ajo samanlaiselta kuin "normaalissa" suoritustilassa. 
+*Debuggaustila* käynnistetään painamalla Run <i class="bi bi-chevron-right"></i> Debug tai leppäkertun kuvaa. Tällöin ohjelma voidaan pysäyttää ns. keskeytyskohtien avulla ja tutkia ohjelman tilaa. Jos ohjelmassa ei ole yhtään keskeytyskohtaa, vaikuttaa debugtilassa ajo samanlaiselta kuin "normaalissa" suoritustilassa. 
 
 Jos ohjelma tuntuu olevan totaalisen jumissa, voidaan sen ajo pysäyttää ja katsoa, missä kohti ohjelmaa ollaan menossa ja näin ehkä voidaan ratkaista, mistä ohjelman jumi johtuu.
 
 Rider työkalupalkki:<br>
 ![Rider debug työkalupalkki](./images/rider_debug_toolbar.png)
  
-Kannattaa harjoitella käyttämään näppäinoikoteitä debuggaustilassa, sillä ne nopeuttavat debuggausta huomattavasti. Riderin näppäinoikoteitä saa tarkistettua ja muutettua `Configure -> Settings -> Keymap` tai `File -> Settings -> Keymap`.
+Kannattaa harjoitella käyttämään näppäinoikoteitä debuggaustilassa, sillä ne nopeuttavat debuggausta huomattavasti. Riderin näppäinoikoteitä saa tarkistettua ja muutettua `Configure <i class="bi bi-chevron-right"></i> Settings <i class="bi bi-chevron-right"></i> Keymap` tai `File <i class="bi bi-chevron-right"></i> Settings <i class="bi bi-chevron-right"></i> Keymap`.
 
 ## Keskeytyskohta (breakpoint) 
 
@@ -33,7 +33,7 @@ Keskeytyskohtia voi olla ohjelmassa useita. Keskeytyskohdan saa pois klikkaamall
 
 ## Debuggaustilan käynnistäminen 
 
-Ohjelma käynnistyy debuggaustilaan painamalla joko F5, klikkaamalla oikean ylälaidassa olevaa Debug painiketta tai valitsemalla valikosta *Run* &rarr; *Debug*. Tällöin ohjelman suoritus "pysähtyy" ensimmäiseen asettamaasi keskeytyskohtaan. 
+Ohjelma käynnistyy debuggaustilaan painamalla joko F5, klikkaamalla oikean ylälaidassa olevaa Debug painiketta tai valitsemalla valikosta *Run* <i class="bi bi-chevron-right"></i> *Debug*. Tällöin ohjelman suoritus "pysähtyy" ensimmäiseen asettamaasi keskeytyskohtaan. 
 
 ![Debug pysähtynyt keskeytyskohtaan](./images/debug_stopped_at_breakpoint.png)
 
@@ -56,7 +56,7 @@ Resume-toiminto jatkaa ohjelman suorittamista normaaliin tapaan. Mikäli ohjelma
 
 ## Debuggaustilan lopettaminen (ohjelman ajon lopettaminen) 
 
-Debuggauksen voi lopettaa painamalla Shift + F5 tai valikosta Run -> Stop debugging.
+Debuggauksen voi lopettaa painamalla Shift + F5 tai valikosta Run <i class="bi bi-chevron-right"></i> Stop debugging.
 
 ## Muuttuja-arvot (locals) 
 
@@ -135,7 +135,7 @@ Hit Countilla voit laittaa ehdon niin, että kun näin monennen kerran tullaan k
 
 Jos saa ison ohjelman tutkittavakseen ja pitää korjata jotakin kohtaa eikä tiedä mistä kyseiseen kohtaan tullaan, niin jälleen debuggeri on avuksi. Laita keskeytyskohta tutkittavaan kohtaan, sitten ohjelma käyntiin. Kun ohjelma pysähtyy laittamaasi keskeytyskohtaan, niin kutsupinosta (*call stack*) voidaan katsoa reitti, mistä pysäytyskohtaan on päädytty.
 
-Jos kutsupinoa ei näy Debug-näkymässä, sen saa esille valitsemalla klikkaamalla paneelin oikeassa yläreunassa olevaa ikkunan näköistä kuvaketta: *Layout settings* &rarr; *Threads Frames* &rarr; *Side by side*. 
+Jos kutsupinoa ei näy Debug-näkymässä, sen saa esille valitsemalla klikkaamalla paneelin oikeassa yläreunassa olevaa ikkunan näköistä kuvaketta: *Layout settings* <i class="bi bi-chevron-right"></i> *Threads Frames* <i class="bi bi-chevron-right"></i> *Side by side*. 
 
 ![Kutsupino Riderin Threads & Variables paneelissa](./images/call_stack.png)
 
@@ -155,7 +155,7 @@ cannot be cast to class com.intellij.ui.OnePixelSplitter
 kokeile asetusten resetointia seuraavien ohjeiden mukaisesti
 
 > [!VAROITUS]
-> Näin tekemällä menetät kaikki asetuksesi, kuten näppäinoikotiet sekä teemat. Ota asetuksistasi halutessasi varmuuskopiot *File* &rarr; *Manage IDE Settings* &rarr; *Export Settings*.
+> Näin tekemällä menetät kaikki asetuksesi, kuten näppäinoikotiet sekä teemat. Ota asetuksistasi halutessasi varmuuskopiot *File* <i class="bi bi-chevron-right"></i> *Manage IDE Settings* <i class="bi bi-chevron-right"></i> *Export Settings*.
 
  1. Paina Shift+Shift (eli kaksi kertaa Shift-painiketta) *tai* Ctrl+T,
  2. Kirjoita "*Restore Default settings*" ja valitse ko. toiminto

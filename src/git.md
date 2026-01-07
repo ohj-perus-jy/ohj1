@@ -182,7 +182,7 @@ https://github.com/käyttäjänimi/ohj1ht.git
 
 Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](). TODO: Linkki.
 
-Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta Clone -> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
+Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta Clone <i class="bi bi-chevron-right"></i> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
 
 <details closed><summary>✨ Valinnaista lisätietoa: Mikä fork on?</summary>
 
@@ -555,7 +555,7 @@ Yleisimpiä ongelmia on lueteltu alla.
 
 Annoit git clone -komennolle väärän etävaraston URL-osoitteen. Tarkista
 etävarastosi osoite gitlab.jyu.fi-palvelussa oman projektisi 
-kohdasta Clone -> Clone with HTTPS. Anna tämä osoite git clone -komennon perään. 
+kohdasta Clone <i class="bi bi-chevron-right"></i> Clone with HTTPS. Anna tämä osoite git clone -komennon perään. 
 
 Syy, miksi näin kävi, johtuu todennäköisesti siitä, että forkkia tehdessäsi
 muutit Project slugia, eli projektin tunnistetta, joka muuttaa etävaraston
