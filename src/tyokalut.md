@@ -3,11 +3,7 @@
 **Ohjelmointi 1** -opintojaksolla käytämme alla olevia työkaluja. Tässä
 dokumentissa opastetaan, miten nämä työkalut asennetaan. 
 
-- **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen
-   ympäristö* (engl. runtime) C#-kielelle. .NET mahdollistaa C ohjelmien
-kääntämisen ja ajamisen. Se tarjoaa myös valmista koodia yleisempiin
-   käyttötarkoituksiin (esim. tekstin tulostaminen näytölle, käyttöliittymien
-   tekeminen).   
+- **.NET** - *ohjelmistoviitekehys* (engl. framework) mahdollistaa C#-ohjelmien kehittämisen ja valmiiden ohjelmien ajamisen. 
 - **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka
   mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä. Vähän kuin
   Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
@@ -16,9 +12,9 @@ kääntämisen ja ajamisen. Se tarjoaa myös valmista koodia yleisempiin
   ohjelmia. Rider on erityisesti .NET- ja C#-ohjelmille tarkoitettu IDE. Käytämme
   ilmaista Community Edition -versiota.
 - **Tekstieditori** - ohjelma, jolla voi muokata tekstipohjaisia tiedostoja,
-  kuten lähdekoodia, voi muokata avaamatta IDE-ohjelmistoa. Suosittelemme
-  esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
-  Docs **ei ole** opintojaksolle soveltuva tekstieditori.
+  kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme esimerkiksi *Visual
+  Studio Code* tai *Notepad++*. Microsoft Word tai Google Docs **ei ole**
+  opintojaksolle soveltuva tekstieditori.
 - **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän
   yliopistossa kehitetty C#-kirjasto pelien tekemiseen.
 - **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on
@@ -27,7 +23,7 @@ kääntämisen ja ajamisen. Se tarjoaa myös valmista koodia yleisempiin
 
 Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran
 mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja
-2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat
+1. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat
 ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
 ## Ennen asentamista 
@@ -78,10 +74,12 @@ yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme list
  
 Tämän sivun asennusohjeet vaativat komentorivin avaamista ja käyttöä.
 
-Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana; jos
-luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa vielä hämärältä asialta.
+Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana;
+jos luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa
+vielä hämärältä asialta.
 
-Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin käyttöön alta.
+Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin
+käyttöön alta.
 
 <details closed> <summary>Pikainen johdatus komentorivin käyttöön (Avaa klikkaamalla)</summary>
  
@@ -89,15 +87,15 @@ Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentori
 
 *Komentorivi* (engl. command line) tai *pääte* (engl. terminal) on (tämän ohjeen
 puitteissa) tietokoneohjelma, jolla tietokonetta voi ohjata tekstillä.
-Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu graafisesti
-avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder),
-sama asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command),
-joka tulostaa näkyviin kansion sisällön.
+Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu
+graafisesti avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder), sama
+asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command), joka
+tulostaa näkyviin kansion sisällön.
 
 Komentorivillä työskentely on yleistä ohjelmoinnin yhteydessä. Syitä on monia,
-eikä niitä tässä käsitellä.
-Tämän ohjeen kannalta olennainen syy on, että yleisten ohjelmien asentaminen onnistuu nykyään jopa helpommin
-komentorivillä kuin "käsin" etismällä sopiva asennusohjelma verkosta.
+kuten toiston ja automaation helpottaminen. Tämän ohjeen kannalta olennainen syy
+on, että ohjelmien asentaminen onnistuu nykyään jopa helpommin komentorivillä
+kuin etsimällä sopiva asennusohjelma verkosta.
 
 ***
 
@@ -197,13 +195,12 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 </details>
 
-## Asennusohjeet tekstinä 
-
-### Valmistelu 
+## Valmistelu 
 
 ### [Windows](#tab/win)
 
- 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
+ 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia
+    päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
  1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell*
     &rarr; *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
@@ -321,7 +318,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-### .NET 
+## .NET 
 
 ### [Windows](#tab/win)
  
@@ -418,7 +415,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-### Git 
+## Git 
 
 ### [Windows](#tab/win)
  
