@@ -23,9 +23,7 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 
 Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
-## Ennen asentamista 
-
-### Käyttöjärjestelmä ja vaatimukset 
+## Käyttöjärjestelmä ja vaatimukset 
 
 Tällä sivulla olevat ohjeet riippuvat käyttöjärjestelmästä. 
 Valitse käyttöjärjestelmä alta.
