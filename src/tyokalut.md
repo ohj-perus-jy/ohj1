@@ -139,7 +139,7 @@ ls
 Tulee sinun kirjoittaa laatikossa oleva komento ja suorittaa se komentorivillä.
 Toimi seuraavasti:
 
-1. Klikkaa komentorivi aktiiviseksi ikkunaksi ellei se ole jo.
+1. Klikkaa komentorivi aktiiviseksi ikkunaksi.
 2. Kirjoita laatikossa oleva komento komentoriviin näppäimistöllä.
 3. **Tarkista, että kirjoitit komennon täysin oikein.** Huomaa, että kirjainkoolla, välilyönneillä ja muilla merkeillä on merkitystä komennon kannalta!
 4. **Kun olet varmistanut, että kirjoitit komennon oikein**, paina Enter-näppäintä.
@@ -317,7 +317,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Suorita alla oleva komento
 
     ```bash
@@ -414,7 +414,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna Git for Windows suorittamalla alla oleva komento:
 
     ```bash
@@ -500,7 +500,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna JetBrains Rider suorittamalla alla oleva komento:
 
     ```bash
@@ -684,7 +684,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna VS Code suorittamalla seuraava komento:
 
     ```bash
