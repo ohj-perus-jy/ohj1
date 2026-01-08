@@ -33,6 +33,10 @@ Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 
 Kevään 2026 ohjauskauden (12.1.-31.5.) aikana on tarjolla lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
 Tarkat aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
 
+Sisu vaatii ilmoittautumisen yhteydessä valitsemaan ohjausryhmän. Voit kuitenkin
+täysin vapaasti käyttää kaikkia ohjausaikoja ja -kanavia riippumatta siitä,
+mihin ohjausryhmään olet ilmoittautunut. 
+
 | Tukikanava                                           | Aika    | Paikka/Linkki                           |
 | ---------------------------------------------------- | ------- | --------------------------------------- |
 | Lähiohjaus                                           | TBD     | Agoralla, TBD                           |
@@ -42,7 +46,10 @@ Tarkat aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
 <!--| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |-->
 <!--| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |-->
 
-Ohjaukset ovat yhteisiä ITKP102 Ohjelmointi 1-, Ohjelmointi 2- ja ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat kummankin kurssin opiskelijoita.
+Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
+ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
+kaikkien kolmen kurssin opiskelijoita.
+
 
 Ohjausaikoja saatetaan lisätä tai poistaa kysynnän mukaan; kerro aikatoiveistasi
 opettajille sähköpostitse. 
