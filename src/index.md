@@ -30,8 +30,11 @@ Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 
 
 ## Tuki ja palaute
 
-Kevään 2026 ohjauskauden (12.1.-31.5.) aikana on tarjolla lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
-Tarkat aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
+Kevään 2026 on 12. tammikuuta &ndash; 24. huhtikuuta välisenä aikana tarjolla
+lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. Tarkat
+aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
+
+Pääsiäistauon aikana (30.3. &ndash; 6.4.) ei kuitenkaan ole ohjausta tarjolla.
 
 Sisu vaatii ilmoittautumisen yhteydessä valitsemaan ohjausryhmän. Voit kuitenkin
 täysin vapaasti käyttää kaikkia ohjausaikoja ja -kanavia riippumatta siitä,
@@ -43,16 +46,22 @@ mihin ohjausryhmään olet ilmoittautunut.
 | Etäohjaus                                            | ke 8-18, to 8-18, pe 8-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
 | Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                   | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
-<!--| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |-->
-<!--| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |-->
+<!--
+| Tukikanava                                           | Aika                        | Paikka/Linkki                           |
+| ---------------------------------------------------- | --------------------------- | --------------------------------------- |
+| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16 | [Ohjelmointi 2 Teams-kanava](#teams-jy) |
+| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                     | ohj2-opet@jyu.onmicrosoft.com           |
+--> 
 
 Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
 ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
 kaikkien kolmen kurssin opiskelijoita.
 
-
 Ohjausaikoja saatetaan lisätä tai poistaa kysynnän mukaan; kerro aikatoiveistasi
 opettajille sähköpostitse. 
+
+24.4. jälkeen ohjausta on saatavilla ajanvarauksella. Linkki ajanvaraukseen
+tulee myöhemmin saataville. 
 
 <details closed><summary>Miten saan Sisun kalenteriin ohjausaikoja näkyviin? (Avaa ohje klikkaamalla) </summary>
 
