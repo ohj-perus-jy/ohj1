@@ -37,11 +37,11 @@ Sisu vaatii ilmoittautumisen yhteydessä valitsemaan ohjausryhmän. Voit kuitenk
 täysin vapaasti käyttää kaikkia ohjausaikoja ja -kanavia riippumatta siitä,
 mihin ohjausryhmään olet ilmoittautunut. 
 
-| Tukikanava                                           | Aika    | Paikka/Linkki                           |
-| ---------------------------------------------------- | ------- | --------------------------------------- |
-| Lähiohjaus                                           | TBD     | Agoralla, TBD                           |
-| Etäohjaus                                            | TBD     | [Ohjelmointi 1 Teams-kanava](#teams-jy) |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva | ohj1-opet@jyu.onmicrosoft.com                    |
+| Tukikanava                                           | Aika                      | Paikka/Linkki                                                                                                                   |
+| ---------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus                                           | ke 8-18, to 8-18, pe 8-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus                                            | ke 8-18, to 8-18, pe 8-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
+| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                   | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
 <!--| Lähiohjaus                                           | ke 10-16, to 10-16, pe 10-16 | Agoralla luokat [Ag B213.1 Lakes](https://navi.jyu.fi/space/m118990) ja [Ag B212.2 Mountains](https://navi.jyu.fi/space/m118989) |-->
 <!--| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16  | [Ohjelmointi 1 Teams-kanava](#ohjeet-teams-ohjauksiin-liittymiseksi-tutkinto-opiskelijat)                                        |-->
