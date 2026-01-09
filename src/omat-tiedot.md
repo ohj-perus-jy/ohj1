@@ -1,5 +1,3 @@
 # Omat tiedot
 
-Linkit timiin
-
-<a href="https://tim.jyu.fi/" class="ext">Omat tiedot TIMissä</a>.
+Löydät omat etenemistietosi TIMistä osoitteesta <https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen>.

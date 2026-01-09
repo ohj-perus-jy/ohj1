@@ -143,22 +143,23 @@ Tässä muutama pikavinkki tässä materiaalissa navigoimiseen:
 
 ## Palaute ja kehittäminen {#palaute}
 
-Olemme erittäin kiitollisia kaikesta palautteesta, joka auttaa meitä kehittämään opintojaksoa edelleen!
-Voit antaa palautetta ja kehitysehdotuksia opintojaksosta kolmella tavalla:
+Olemme erittäin kiitollisia kaikesta palautteesta, joka auttaa meitä kehittämään
+opintojaksoa edelleen! Voit antaa palautetta ja kehitysehdotuksia opintojaksosta
+kolmella tavalla:
 
- 1. Keräämme jatkuvaa palautetta opintojakson aikana. Nyt, kun olemme
-    kehittämässä opintojakson sisältöjä ja toteutusta, tämä jatkuva palaute on
-    erityisen tärkeää. Voit antaa palautetta anonyymisti alla olevan linkin
-    kautta: **TODO:** Norppa-linkki tähän.
+ 1. Jyväskylän yliopiston **tutkinto-opiskelijat** voivat antaa jatkuvaa palautetta
+    opintojakson aikana
+    [Norppa-järjestelmässä](https://norppa.jyu.fi/targets/7839/feedback). Nyt,
+    kun olemme kehittämässä opintojakson sisältöjä ja toteutusta, tämä jatkuva
+    palaute on erityisen tärkeää. 
 
- 2. Mikäli havaitset materiaalissa virheen, epäselvyyden, tai muun ongelman,
-    voit raportoida siitä GitHubissa klikkaamalla kunkin sivun alareunassa
-    olevia linkkejä. Voit myös ilmoittaa puutteista suoraan opettajille
-    sähköpostitse osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
+ 2. **Kaikki opiskelijat** voivat ilmoittaa havaitsemistaan virheistä,
+    epäselvyyksistä, tai muista ongelmista tässä oppimateriaalissa. Raportoi
+    havaintosi GitHubissa klikkaamalla kunkin sivun alareunassa olevia linkkejä.
+    Voit myös ilmoittaa puutteista suoraan opettajille sähköpostitse
+    osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
  
- 3. Opintojakson lopuksi jokainen Sisussa (tai Ilpo-portaalissa) ilmoittautunut
-    saa henkilökohtaisen linkin kurssipalautekyselyyn, jossa voit antaa
+ 3. Opintojakson lopuksi kaikki **Sisussa** (tai **Ilpo-portaalissa**)
+    ilmoittautuneet (tutkinto, avoin, erilliset opinto-oikeudet, lukiolinjat)
+    saavat henkilökohtaisen linkin kurssipalautekyselyyn, jossa voit antaa
     anonyymisti palautetta koko opintojaksosta.
-
-Voit antaa palautetta myös perinteisesti sähköpostitse osoitteessa
-<ohj1-opet@jyu.onmicrosoft.com>. Otamme mielellämme vastaan parannusehdotuksia! 
