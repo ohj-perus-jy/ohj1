@@ -25,29 +25,24 @@ Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa t
 
  1. Lue [osa 5.1 Debuggaus](./osa5/1-debuggaus.md)
  2. Katso [luennon debuggauksesta ja debuggerin käytöstä (kevät 2023)](https://www.youtube.com/live/2d1ErNVn9sI?feature=share&t=1095) 
- 3. Tee [harjoittelunäyte](#harjoittelunayte})
+ 3. Tee [harjoittelunäyte](#harjoittelunayte}) (vapaaehtoinen)
 
 ## Näytteen suorittaminen
 
 Voit suorittaa debuggausnäytteen videona itsenäisesti tai ohjauksessa. Voit suorittaa debuggausnäytteen sinulle sopivana aikana. Debuggausnäytteen suorittamiselle ei ole takarajaa.
 
 Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
+
 ### [Palautus videona](#tab/Videona)
 
 1. Lataa ja avaa DebugKoe-projekti
 
 <details collapsed>
 <summary>Debuggausnäyteprojektin latausohjeet</summary>
-<br>
-> [!HUOMAUTUS]
->Jos suoritat näytteen yliopiston mikroluokassa, lataa kaikki tiedostot ja projektit seuraavaan hakemistoon:
->```
->C:\MyTemp\ohj1\<käyttäjänimi>
->```
->Muualta ei voi ajaa omia ohjelmia.
 
 1. Lataa [DebugKoe.zip](https://tim.jyu.fi/files/900302/DebugKoe.zip)
-2. Pura lataamasi zip-tiedosto paikkaan, josta löydät sen.
+2. Pura lataamasi zip-tiedosto paikkaan, josta löydät sen. Jos suoritat näytteen
+   Agoran mikroluokan tietokoneella, käytä kansiota `C:\MyTemp\ohj1\<käyttäjänimi>`.
 3. Avaa Rider. *Welcome to JetBrains Rider* -näkymässä klikkaa oikeassa yläkulmassa olevaa *Open* -painiketta.
 4. Etsi ja avaa `DebugKoe.sln`-tiedosto Riderissa. Mikäli Rider kysyy, luotatko avattavaan projektiin, valitse *Trust and Open*.
 5. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
@@ -108,7 +103,7 @@ Voit poistaa videon näytteen tarkastamisen jälkeen.
   * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
   * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
 
-4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen. Kopioi videon URL-osoite [TIMin Oma eteneminen -sivun]() debuggausnäytteen URL-osoitteen palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL-osoite käyttäen Share-painiketta videon alapuolella. TODO: Lisää linkki. 
+4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen. Kopioi videon URL-osoite [TIMin Oma eteneminen -sivun](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#debuggausn%C3%A4yte-opiskelija-t%C3%A4ytt%C3%A4%C3%A4) debuggausnäytteen URL-osoitteen palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL-osoite käyttäen Share-painiketta videon alapuolella. 
 
 Debuggausnäytteet tarkistetaan noin kerran viikossa. Saat ilmoituksen, kun työsi on tarkistettu.
 
