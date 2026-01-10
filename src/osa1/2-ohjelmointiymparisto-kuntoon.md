@@ -56,10 +56,10 @@ Coden asennusohjeet löytyvät myöskin
 ## Suositeltava hakemistorakenne
 
 Kaikki tämän opintojakson asiat kannattaa tehdä esimerkiksi kansioon nimeltä
-`ohj1`. Tämä kansio kannattaa sijoittaa tietokoneellasi paikkaan joka riippuu
-hieman käyttöjärjestelmästäsi ja omista mieltymyksistäsi.
+`ohj1`. Se, mihin tämä kansio kannattaa sijoittaa tietokoneellasi paikkaan
+riippuu käyttöjärjestelmästäsi ja omista mieltymyksistäsi.
 
-Omassa tietokoneessa sopivia sijainteja ovat esimerkiksi:
+Sopivia sijainteja ovat esimerkiksi:
 
  * Windows: `C:\Users\<käyttäjätunnus>\kurssit\ohj1` tai `C:\Opiskelu\ohj1`
  * Mac ja Linux: `~/kurssit/ohj1` 
