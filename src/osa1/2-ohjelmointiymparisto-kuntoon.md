@@ -1,7 +1,4 @@
-# <span class="part-icon">🛠️</span> Ohjelmointiympäristö kuntoon
-
-> [!VAROITUS]
-> Jos olet Jyväskylän yliopiston opiskelija, varmista, että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti käyttäjätunnukseen tunnisteella `<käyttäjätunnus>`. Korvaa tämä aina omalla käyttäjätunnuksellasi.
+# Ohjelmointiympäristö kuntoon
 
 Ensimmäisten viikkojen tehtävät voi periaatteessa suorittaa verkkoselaimessa,
 mutta varsin pian on tarpeen saada oma ohjelmointiympäristö toimimaan
@@ -36,7 +33,11 @@ IDE-ympäristöjä on useita eri ohjelmointikielille ja ympäristöille. Ohjelmo
 joka on erityisesti C# ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi
 tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
 
-Riderin asennusohjeet löytyvät [Työkalut-sivulta.](../tyokalut.md#jetbrains-rider) 
+Riderin asennusohjeet löytyvät
+[Työkalut-sivulta](../tyokalut.md#jetbrains-rider). Vaihtoehtoisesti
+voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on
+hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden
+asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
 Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja
 myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen
@@ -45,13 +46,6 @@ asentaa kehitysympäristö omalle paikalliselle tietokoneelle. Oman
 kehitysympäristön käyttö on yleensä nopeampaa, edullisempaa ja joustavampaa kuin
 pilvipohjaiset ratkaisut. Myös työelämässä paikalliset kehitysympäristöt ovat
 yleensä vallitseva käytäntö.
-
-## Visual Studio Code
-
-Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS
-Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS
-Coden asennusohjeet löytyvät myöskin
-[Työkalut-sivulta](../tyokalut.md#tekstieditori).
 
 ## Suositeltava hakemistorakenne
 
@@ -207,8 +201,6 @@ Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-
 - Ensimmäisellä kerralla projekti ajetaan klikkaamalla Explorerissa sen nimeä `HelloWorld`
   hiiren oikealla ja valitse `Run HelloWorld`. Myöhemmillä kerroilla voit
   käynnistää projektin käynnistämällä yläpalkista haluamasi projektin.
-
-
 
 ```bob
 ohj1
