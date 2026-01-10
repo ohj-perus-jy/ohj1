@@ -21,7 +21,7 @@ myöhemmissä opinnoissa ja työelämässä.
 
 ## Ennen kuin aloitat
 
-Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut), ellet ole vielä tehnyt niin.
+Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut.md), ellet ole vielä tehnyt niin.
 
 ## Mikä Git on
 
@@ -497,12 +497,6 @@ jotain, jonka haluat poistaa myöhemmin, se onnistuu esimerkiksi [BFG Repo-Clean
 
 Aluksi ehdottomasti suositeltavin tapa on käyttää Gitiä komentoriviltä. On olemassa kuitenkin myös graafisia ympäristöjä Gitin käyttämiseen. Myös IDEissä on nykyään varsin asialliset Git-asiakasohjelmistot (eli käyttöliittymä Git-komentojen käyttämistä varten), joskin jokainen on aina vähän omanlaisensa ja vaatii totuttelua. Kaikkia alla mainittuja työkaluja voit kuitenkin käyttää ristiin. Kannattaa kokeilla eri tapoja. Mikroluokista löytyy ainakin komentorivityökalut, Eclipse sekä TortoiseGit.
 
- * [SmartGit](https://tim.jyu.fi/view/kurssit/tie/ohj2//git/smartgit)  (Windows, Linux, macOS)
- * [Fork](https://git-fork.com/) (Windows, macOS)
- * [TortoiseGit](https://tortoisegit.org/) (Windows)
- * GitHub Desktop (Windows, macOS)
- * Gitiä voi käyttää myös Windows Subsystem for Linuxin läpi.
-
 ## Git termejä 
 
 - **repository**, suom. säilytyspaikka, tietovarasto tai arkisesti "repo" = Paikka jossa versioitava tieto tallennetaan, 
@@ -551,7 +545,6 @@ Yleisimpiä ongelmia on lueteltu alla.
 
 <details collapsed>
 <summary>remote: The project you were looking for could not be found or you don't have permission to view it.</summary>
-
 
 Annoit git clone -komennolle väärän etävaraston URL-osoitteen. Tarkista
 etävarastosi osoite gitlab.jyu.fi-palvelussa oman projektisi 
@@ -662,7 +655,6 @@ perheen pienimmille mutta varsinaiset vinkit voivat pelastaa kiperistä tilantei
 
 ## Lisätietoa kiinnostuneille
 
-- [Gitin käyttö Ohjelmointi 2 -kurssilla](https://tim.jyu.fi/view/kurssit/tie/ohj2//git/ohj2git)
 - [Git reference](https://git-scm.com/docs): Git-yhteisön ylläpitämä dokumentaatio Git-komennoille.
 - [A curious tale - from snaphots to git](https://matthew-brett.github.io/curious-git/curious_journey.html) - tämä ja
   sen [jatko-osa](https://matthew-brett.github.io/curious-git/curious_git.html) kannattaa lukea, ne selvittävät hyvin Gitin ideaa.
