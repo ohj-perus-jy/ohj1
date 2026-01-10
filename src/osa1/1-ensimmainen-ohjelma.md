@@ -111,7 +111,7 @@ Lähdekoodi tallennetaan tiedostoon, joka C#-kielen tapauksessa päättyy yleens
 `.cs` -tiedostopäätteeseen, kuten `Ohjelma.cs`. Tällöin käyttöjärjestelmä
 tunnistaa tiedoston C#-lähdekooditiedostoksi. 
 
-<details closed><summary>✨ Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
 
 Monet kielet C#, Java ja C++, ovat *käännettäviä*, kun taas osa, kuten Python ja
 JavaScript ovat *tulkattavia*. Tulkatuissa kielissä lähdekoodia suoritetaan
