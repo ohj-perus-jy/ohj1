@@ -1,43 +1,33 @@
 # Ohjelmointiympäristö kuntoon
 
 Ensimmäisten viikkojen tehtävät voi periaatteessa suorittaa verkkoselaimessa,
-mutta varsin pian on tarpeen saada oma ohjelmointiympäristö toimimaan
-tietokoneella. 
-
-Oman tietokoneen käyttöönottaminen ohjelmointia varten on tärkeä askel kohti
-itsenäisempää ohjelmointia. Se mahdollistaa esimerkiksi koodin kirjoittamisen,
-tallentamisen ja suorittamisen ilman internet-yhteyttä. Lisäksi omaa ympäristöä
-on helpompi mukauttaa omien tarpeiden mukaan, kuten vaihtaa värejä, fontteja ja
-muita asetuksia. Myöhemmin opit käyttämään versionhallintaa sekä debuggausta,
-jotka vaativat ohjelmointiympäristön omalla tietokoneellasi. 
-
-Ellet ole vielä asentanut kehitystyökaluja, tee se ensin [Työkalut-sivun](../tyokalut.md)
-ohjeiden mukaisesti.
-
-## Rider
-
-Ohjelman koon kasvaessa kannattaa ottaa käyttöön sovelluskehitin eli IDE
-(Integrated Development Environment). IDE on ohjelma, joka yhdistää yhteen
-paikkaan kaikki ohjelmien kehittämiseen tarvittavia ominaisuuksia, kuten:
+mutta varsin pian on tarpeen saada oma ohjelmointiin sopiva ympäristö toimimaan
+tietokoneella. Sovelluskehittimen (engl. Integrated Development Environment,
+IDE) asentaminen omalle tietokoneelle on tärkeä askel kohti itsenäisempää
+ohjelmointia. IDE mahdollistaa esimerkiksi seuraavat asiat: 
 
  * koodin kirjoittaminen
  * koodin kääntäminen ohjelmaksi
  * virheiden ja ongelmien etsiminen koodissa
- * koodin navigointi- ja refaktorointityökaluja (esim. "Etsi koodista", kirjoittamisen aikaiset ehdotukset, koodin massamuokkaaminen)
- * ohjelman virheiden jäljitys eli debuggaus
+ * koodin navigointi- ja refaktorointityökaluja, kuten "Etsi koodista",
+   kirjoittamisen aikaiset ehdotukset, koodin massamuokkaaminen
+ * ohjelman virheiden jäljitys eli *debuggaus*
  * samaan asiakokonaisuuteen liittyvän koodin hallinta ("projektit")
- * versionhallinnan tuki (esim. Git)
+ * versionhallinnan tuki
+
+Lisäksi itse asennettua IDE-ympäristöä on helpompi mukauttaa omien tarpeiden mukaan,
+kuten vaihtaa värejä, fontteja ja muita asetuksia. 
+
+Ellet ole vielä asentanut kehitystyökaluja, tee se nyt [Työkalut-sivun](../tyokalut.md)
+ohjeiden mukaisesti.
 
 IDE-ympäristöjä on useita eri ohjelmointikielille ja ympäristöille. Ohjelmointi
-1 -opintojaksolla käytetään JetBrains-yhtiön tekemää Rider-kehitysympäristöä,
-joka on erityisesti C# ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi
-tehdä niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
+1 -opintojaksolla käytetään JetBrains Rider-kehitysympäristöä, joka on
+erityisesti C#- ja .NET-ajoympäristölle tarkoitettu IDE. Riderilla voi tehdä
+niin tekstipohjaisia sovelluksia kuin Jypeli-pelejäkin. 
 
-Riderin asennusohjeet löytyvät
-[Työkalut-sivulta](../tyokalut.md#jetbrains-rider). Vaihtoehtoisesti
-voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS Code), joka on
-hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä. VS Coden
-asennusohjeet löytyvät myöskin [Työkalut-sivulta](../tyokalut.md#tekstieditori).
+Vaihtoehtoisesti voit käyttää myös **Visual Studio Code** -editoria (lyhyesti VS
+Code), joka on hyvin suosittu tekstieditori, jota voi käyttää myös IDE:nä.
 
 Sivuhuomiona mainittakoon, että kaikenlaiset pilvipalvelut ovat yleistyneet, ja
 myös pilvipohjaisia kehitysympäristöjä on olemassa. Kuitenkin edelleen yleinen
