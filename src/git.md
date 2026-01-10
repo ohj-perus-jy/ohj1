@@ -354,7 +354,8 @@ Kun tiedostoja lisätään, muokataan tai poistetaan, tulee kaikki nämä muutok
 
 Esimerkki: Suunnitelman kuvan tallentaminen. Tallenna harjoitustyösi suunnitelman sekä luonnoskuvan `suunnitelma`-kansioon. Ole tarkkana, että kuva menee oikeasti juuri tuohon kansioon. Sekä suunnitelmatekstiä varten että kuvaa varten on olemassa esimerkit `suunnitelma`-kansiossa. 
 
-Kuvan pikselikoon tulee olla enintään 1920 x 1080 pikseliä. Kuvan tiedostokoon tulee olla enintään 1 megtavu. 
+Kuvan pikselikoon tulee olla enintään 1920 x 1080 pikseliä. Kuvan tiedostokoon
+tulee mielellään olla enintään 1 megatavu. 
 
 Avaa Pääte (macOS), Git Bash (Windows) tai muu komentorivi, siirry `cd`-komentoja käyttämällä harkkatyökansioosi ja anna seuraavat kaksi komentoa:
 
