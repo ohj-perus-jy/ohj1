@@ -663,5 +663,4 @@ perheen pienimmille mutta varsinaiset vinkit voivat pelastaa kiperistä tilantei
 - [Git Handbook](https://guides.github.com/introduction/git-handbook/)
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Helsingin yliopiston Git-kurssi](https://tkt-lapio.github.io/git/)
-- [ohshitgit - ratkaisuja yleisiin virhetilanteisiin (osittain humoristisia)](https://ohshitgit.com/)
 - [git cheatsheet](https://gist.github.com/hofmannsven/6814451)
