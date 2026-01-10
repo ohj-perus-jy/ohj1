@@ -29,12 +29,12 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: Suunnitelma on näytettävä ohjaajalle ennen osan 5 harjoitustehtävien takarajaa.
  2. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 3. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./tyokalut/git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 3. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
  4. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle]() <!--TODO Päivitä url-->. Etävaraston osoitteen on oltava muotoa `https://github.com/nimi/ohj1ht.git` tai `https://gitlab.com/nimi/ohj1ht.git`. TODO: Linkki.
- 5. Aseta omat Git-tiedot ([ohje](./tyokalut/git.md#gitconfig)). 
- 6. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./tyokalut/git.md#clone)). 
+ 5. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
+ 6. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
  7. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
- 8. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./tyokalut/git.md#add-commit) ja [push](./tyokalut/git.md#push)). 
+ 8. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
  9. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 ### Vaihe 2: Työ 50 % valmis
@@ -87,13 +87,6 @@ Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitust
   8. Pelissä olevat oliot, niiden toiminnot ja missä suhteessa ne ovat toisiinsa
   9. Toteutuksen suunnitelma: mitä tekisin ja missä järjestyksessä? Millä aikataululla?
 
-Voit katsoa vinkkejä seuraavista esimerkkisuunitelmista:
-
- * [Hirsipuu](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/vesal)  (peli)
- * [AngryLego](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/vesalangry) (peli)
- * [Työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2017/syksy/ht/tyoaikaraportti) (ei-peli), 
-   katso myös [tutoriaali työaikaraporttiin](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial)
-
 ### Toiminnallisuus
 
 Pelissä pitää *tapahtua jotakin*, eli ruudulla pitää tapahtua jotain järkevää. Käyttäjän tulee voida osallistua peliin interaktiivisesti esimerkiksi hiiren ja/tai näppäimistön välityksellä.
@@ -106,7 +99,7 @@ Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa
 
 ## Paritöistä
 
-Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Ks. [Git-ohjeet](./tyokalut/git.md#git-ja-ryhmätyöskentely).
+Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Ks. [Git-ohjeet](./git.md#git-ja-ryhmätyöskentely).
 
 Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
 
@@ -221,7 +214,7 @@ Pidä laskentalogiikka omassa funktiossa, jotta peliluokka pysyy selkeänä.
 Mikäli omassa pelissä ei ole taulukkoa/listaa, silmukkaa tai funktiota, pitää ohjaajalle esittää itse tehdyn (ts. työ on tehty omatoimisesti ilman merkittävää apua ohjaajalta tai muilta opiskelijoilta) demotehtävän vastaus, missä em. asioiden osaaminen on näytetty.  Tästä voi laittaa vaikka kommentin omaan harjoitustyöhön tyyliin:
 
 ```csharp
-// TODO: taulukko, ks: https://tim.jyu.fi/answers/kurssit/tie/ohj1/%%vuosik%%/demot/demo7?answerNumber=1&task=matriisiensumma&user=vesal
+// TODO: taulukko, ks: https://tim.jyu.fi/answers/kurssit/tie/ohj1/%%vuosik%%/demot/demo7?answerNumber=1&task=matriisiensumma&user=anlakane
 ```
 
 Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä klikkaamalla sitä hiiren oikealla painikkeella, ja kopioimalla linkin osoite.
@@ -254,27 +247,11 @@ tulee testata.
 <details closed>
 <summary>Mistä aloitan pelin koodaamisen?</summary>
 
-***
+Inspiraatiota voi hakea vaikkapa Pong-pelistä tai Läpsylinnusta. 
 
- - Aloita vaikka pistämällä kentälle jotakin olioita
- - [MontaPalloa.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/luento10/MontaPalloa/MontaPalloa/MontaPalloa.cs)
- - Jos peli on tasohyppelymäinen, luo uusi projekti kohdasta Jypeli <i class="bi bi-chevron-right"></i> Tasohyppely
- - Katso [sisällön tuominen peliin ](./osa1/2-ohjelmointiymparisto-kuntoon.md#sisällön-tuominen-jypeli-projektiin-content-kansio). Kuvat toimii jos:
-      1. piirretty/haettu tarvittavat kuvat, muista tekijänoikeus
-      2. tehty projektiin Content-niminen kansio ja kopioitu kuvat sinne
-      3. klikattu hiiren oikealla kutakin kuvaa (tai valittu monta) ja Properties
-      ja sieltä valittu "Copy if newer"
-
-Esimerkkejä:
- - [LumiukkoTaulukolla.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/luento12/LumiukkoTaulukolla/LumiukkoTaulukolla/LumiukkoTaulukolla.cs)
  - [Pong-peli](https://trac.cc.jyu.fi/projects/npo/wiki/Pong/Vaihe1)
  - [Läpsylintu](https://trac.cc.jyu.fi/projects/npo/wiki/Lapsylintu)
- - [AngryLego.cs](https://trac.cc.jyu.fi/projects/ohj1/browser/esimerkit/2016s/luennot/live13/AngryLego/AngryLego/AngryLego.cs)
 
-Ei-pelin tekijöille: 
-    - [Työaikaraportit](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial)
-    - [Kuvaaja.cs](https://gitlab.jyu.fi/tie/ohj1/2022s/esimerkit/-/blob/main/demopohjat/demo7/Kuvaaja/Kuvaaja.cs)
-    - [HaeTuulet versiohistoria](https://gitlab.jyu.fi/vesal/ohj1htsaa/-/commits/main/saa)
 </details>
 
 <details closed>
@@ -290,7 +267,7 @@ Lähtökohtaisesti on kolme tapaa, joita tällä opintojaksolla suositellaan:
 
 **Eri koneet, sama etävarasto**:
 
-Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./tyokalut/git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)) ja ladataan ([`git pull`](./tyokalut/git.md#muutosten-hakeminen-etävarastosta-paikalliseen-varastoon-pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./tyokalut/git.md#git-ja-ryhmätyöskentely) osiosta.
+Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)) ja ladataan ([`git pull`](./git.md#muutosten-hakeminen-etävarastosta-paikalliseen-varastoon-pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./git.md#git-ja-ryhmätyöskentely) osiosta.
 
 **Pariohjelmointi**:
 
