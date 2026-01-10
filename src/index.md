@@ -37,8 +37,7 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 ## Tuki ja palaute
 
 Kevään 2026 on 12. tammikuuta &ndash; 24. huhtikuuta välisenä aikana tarjolla
-lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. Tarkat
-aika- ja paikkatiedot ilmestyvät tähän kurssin alettua.
+lähiohjausta Agoralla, etäohjausta Teamsin kautta, sekä sähköpostitukea. 
 
 Pääsiäistauon aikana (30.3. &ndash; 6.4.) ei kuitenkaan ole ohjausta tarjolla.
 
