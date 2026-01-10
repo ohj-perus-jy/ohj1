@@ -10,7 +10,11 @@ Ota yhteyttä vastuuopettajaan. Sairauden tai muun odottamattoman esteen takia s
 
 ## Voinko käyttää tekoälyä apuna?
 
-Tekoälyä voi käyttää tukena tietyissä tilanteissa, mutta siihen ei pidä luottaa sokeasti, eikä valmiita tehtäviä saa kopioida tekoälyn vastauksista. Tekoäly voi selittää asioita myös väärin. Tentissä tekoälyn käyttö on ehdottomasti kielletty. Tarkempi ohjeistus löytyy [eettisestä ohjeistuksesta](). TODO: Linkki. 
+Tekoälyä voi käyttää tukena tietyissä tilanteissa, mutta siihen ei pidä luottaa
+sokeasti, eikä valmiita tehtäviä saa kopioida tekoälyn vastauksista. Tekoäly voi
+selittää asioita myös väärin. Tentissä tekoälyn käyttö on ehdottomasti
+kielletty. Tarkemmat tiedot löytyvät [eettisestä
+ohjeistuksesta](./suorittaminen.md#eettiset-ohjeet).
 
 ## Voiko seuraavien viikkojen tehtäviä tehdä etukäteen?
 
