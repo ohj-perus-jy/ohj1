@@ -1,5 +1,6 @@
 # Luento 2: Integroitu kehitysympäristö, graafinen C#-ohjelma 
 
+ * 📺 Katso tallenne (Kevät 2026): ([YouTube](https://youtube.com/live/1Og4L_vsMdY?feature=share), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026)) 
  * 📺 Katso tallenne (Syksy 2025): ([YouTube](https://youtu.be/OQjxwmkQeqc), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-2))
  * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento02/Luento02.pdf)
  * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento02)
