@@ -530,7 +530,7 @@ Vaativampaan käyttöön ja viimeistään Ohjelmointi 2 -kurssilla tarvittavia t
 Kurssilla käytettäviä Git-komentoja:
 
     git config --global user.name "käyttäjätunnus"
-    git config --global user.email "%%useremail%%"    
+    git config --global user.email "tunnus@student.jyu.fi"    
     git clone https://gitlab.jyu.fi/käyttäjätunnus/ohj1ht.git .
     git status  # tätä komentoa kannattaa käyttää ahkeraan vaikka joka välissä
     git log     # samoin tätä, kunhan opit lukemaan sen sisältöä

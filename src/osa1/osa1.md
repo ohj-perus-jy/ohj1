@@ -11,7 +11,7 @@
 >  * ymmärrät, millä tavalla (tekstimuotoinen) tieto tallennetaan tietokoneeseen
 
 Harjoituksen päätteeksi sinulla pitäisi olla myös asennettuna
-[kurssin työkalut](/view/%%basedir%%/ohjeet/tyokalut), sillä kotoa käsin toimiminen
+[kurssin työkalut](../tyokalut.md), sillä kotoa käsin toimiminen
 edellyttää niiden asentamista. Apua työkalujen asentamiseen saat myös
 ohjauksissa.
 

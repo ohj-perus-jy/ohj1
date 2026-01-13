@@ -1,6 +1,6 @@
 Tässä tehtävässä harjoitellaan tekstieditorin käyttöä pelkällä näppäimistöllä. Ota sekuntikellolla aika, kauanko juuri sinulla menee alla olevien ohjeiden mukaisen tekstitiedoston kirjoittamiseen pelkkää näppäimistöä käyttämällä. Hiirtä ei saa käyttää lainkaan.
 
-Lue ensin tehtävä huolellisesti. Kun olet ensin sisäistänyt kaikki ohjeet, aloita tyhjästä tiedostosta ja käytä ainoastaan valitsemaasi [tekstieditoria](/view/%%basedir%%/ohjeet/tekstieditori). Word tai muu toimisto-ohjelma *ei* ole tekstieditori, eivätkä ne kuulu tämän kurssin sisältöön.
+Lue ensin tehtävä huolellisesti. Kun olet ensin sisäistänyt kaikki ohjeet, aloita tyhjästä tiedostosta ja käytä ainoastaan valitsemaasi [tekstieditoria](../../tyokalut.md#tekstieditori). Word tai muu toimisto-ohjelma *ei* ole tekstieditori, eivätkä ne kuulu tämän kurssin sisältöön.
 
 Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korvaa ja vastaavat. Aloita ajanotto siitä, kun kirjoitat ensimmäisen merkin, ja lopeta siihen kun viimeinen merkki on kirjoitettu. Sisällön tulee olla:
 
