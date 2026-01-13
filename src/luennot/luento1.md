@@ -7,7 +7,7 @@
 
 ## Kevät 2026
 
-  * 📺 Katso tallenne: [YouTube](https://youtube.com/live/e-fIO_2Zj4w?feature=share), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026)
+  * 📺 Katso tallenne: [YouTube](https://youtube.com/live/e-fIO_2Zj4w?feature=share), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-1)
   * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/blob/main/Luento01/Luento01.pdf?ref_type=heads)
   * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/blob/main/Luento01)
 
