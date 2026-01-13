@@ -388,7 +388,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-### [Linux](#tab/linux)
+### [Linux](#tab/linux) 
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
 2. Asenna .NET SDK -pakkaus: `dotnet-sdk-10.0`. Pakkauksen nimi on yleensä sama
