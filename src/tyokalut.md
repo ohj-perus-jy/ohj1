@@ -321,7 +321,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 2. Suorita alla oleva komento
 
     ```bash
-    winget install -e --id=Microsoft.DotNet.SDK.%%dotnet_major_version%%
+    winget install -e --id=Microsoft.DotNet.SDK.10
     ```
 
     Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
@@ -345,10 +345,10 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [C:\Program Files\dotnet\sdk]
+    10.0.XXX [C:\Program Files\dotnet\sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
@@ -361,7 +361,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     brew tap isen-ng/dotnet-sdk-versions
     ```
     ```bash
-    brew install --cask dotnet-sdk%%dotnet_major_version%%
+    brew install --cask dotnet-sdk10
     ```
     
     Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
@@ -381,17 +381,17 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    10.0.XXX [/usr/local/share/dotnet/sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
 ### [Linux](#tab/linux)
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
-2. Asenna .NET SDK -pakkaus: `dotnet-sdk-%%dotnet_major_version%%.0`. Pakkauksen nimi on yleensä sama
+2. Asenna .NET SDK -pakkaus: `dotnet-sdk-10.0`. Pakkauksen nimi on yleensä sama
    kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että .NET on asennettu suorittamalla komento:
@@ -403,10 +403,10 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    10.0.XXX [/usr/local/share/dotnet/sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
