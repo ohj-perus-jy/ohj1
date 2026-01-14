@@ -551,8 +551,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 9. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
-(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
-(Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
+(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1) 
     - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
     - Klikkaa OK, sitten Import and Restart
@@ -607,8 +606,10 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 
 10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
-(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
-(Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
+(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1).
+HUOM! Lataa tiedosto <kbd>Ctrl</kbd> + klikkaamalla <i class="bi
+bi-chevron-right"></i> Lataa linkitetty tiedosto nimellä. Muutoin tiedosto ei
+tallennu oikein. 
     - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
     - Klikkaa OK, sitten Import and Restart
