@@ -58,9 +58,9 @@
  * [Osa 5](./osa5/index.md)
    * [Luento 9: Toistolauseet ja debuggaus](./luennot/luento9.md)
    * [Luento 10: Taulukot](./luennot/luento10.md)
+   * [Debuggaus](./osa5/1-debuggaus.md)
    * [Harjoitustehtävät 5](./luennot/harjoitus5.md)
 <!--  * [Toimiikohan ohjelma?](./osa5/osa5.md) --> 
-<!--     * [Debuggaus](./osa5/1-debuggaus.md) --> 
 <!--     * [Automaattinen testaus]() --> 
 <!--     * [Osan kaikki tehtävät](./osa5/tehtavat.md) --> 
  * [Osa 6](./osa6/index.md)
