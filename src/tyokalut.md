@@ -803,7 +803,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
     
     Voit kokeilla peliä tai sulkea sen.
 
-## ComTest 
+## ComTest {#comtest}
 
 ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yksikkötestejä.
 
