@@ -48,6 +48,10 @@ Sopivia sijainteja ovat esimerkiksi:
  * Windows: `C:\Users\<käyttäjätunnus>\kurssit\ohj1` tai `C:\Opiskelu\ohj1`
  * Mac ja Linux: `~/kurssit/ohj1` 
 
+Korvaa `<käyttäjätunnus>` omalla käyttäjänimelläsi tai vastaavalla tunnisteella.
+Omalla koneella sen ei tietenkään tarvitse olla sama tunniste kuin yliopiston
+käyttäjänimi. 
+
 Mikroluokan koneessa: `c:\MyTemp\<käyttäjätunnus>\ohj1`
 
 Kansio voi sijaita jossain muuallakin. **Tärkeintä on, että itse tiedät missä
