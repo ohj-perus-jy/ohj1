@@ -5,7 +5,7 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 
 - **[.NET](#net)** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
   C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. 
-- **Git** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
+- **[Git](#git)** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
   ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
   Docsiksi.
 - **[JetBrains Rider](#jetbrains-rider)** &ndash; *integroitu kehitysympäristö*, jolla voi
