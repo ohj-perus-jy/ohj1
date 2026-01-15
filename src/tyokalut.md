@@ -211,7 +211,8 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
     tapauksessa seuraavat ratkaisut:
     
     - Tarkista, että käyttöjärjestelmäsi on ajan tasalla
-    - Kokeile ladata ja asentaa `winget`-käsin: [Lataa asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle)
+    - Kokeile ladata ja asentaa `winget`-käsin: [Lataa
+      asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle). 
       Asennuksen jälkeen sulje ja käynnistä PowerShell uudelleen.
 
 ***
