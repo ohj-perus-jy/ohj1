@@ -3,21 +3,21 @@
 **Ohjelmointi 1** -opintojaksolla käytämme alla olevia työkaluja. Tässä
 dokumentissa opastetaan, miten nämä työkalut asennetaan. 
 
-- **.NET** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
+- **[.NET](#net)** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
   C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. 
 - **Git** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
   ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
   Docsiksi.
-- **JetBrains Rider** &ndash; *integroitu kehitysympäristö*, jolla voi
+- **[JetBrains Rider](#jetbrains-rider)** &ndash; *integroitu kehitysympäristö*, jolla voi
   kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
   C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.
-- **Tekstieditori** &ndash; ohjelma, jolla voi muokata tekstipohjaisia
+- **[Tekstieditori](#tekstieditori)** &ndash; ohjelma, jolla voi muokata tekstipohjaisia
   tiedostoja, kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme
   esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
   Docs **ei ole** opintojaksolle soveltuva tekstieditori.
-- **JyPeli** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
+- **[JyPeli](#jypeli)** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
   C#-kirjasto pelien tekemiseen.
-- **ComTest** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
+- **[ComTest](#comtest)** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
   avulla kirjoitetulle koodille voidaan kirjoittaa testejä helposti luettavalla
   merkintätavalla.
 
@@ -313,7 +313,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-## .NET 
+## .NET {#net}
 
 ### [Windows](#tab/win)
  
@@ -496,7 +496,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-## JetBrains Rider 
+## JetBrains Rider {#jetbrains-rider}
 
 ### [Windows](#tab/win)
  
