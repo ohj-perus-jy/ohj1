@@ -8,6 +8,12 @@
    * Huomaa, että komentoriviohjelmassa näkyvyysmääreen perään tulee toistaiseksi staattisuusmääre,
      eli `public static`. Jypelissä taas riittää vain `public`
 
+## Kevät 2026
+
+  * 📺 Katso tallenne ([YouTube](https://youtube.com/live/lDx7xB5VLyQ?feature=share), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-4))
+  * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04/Luento04.pdf)
+  * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04)
+
 ## Syksy 2025
 
  * 📺 Katso tallenne ([YouTube](https://youtu.be/Z0J1H7euX74), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-4))
