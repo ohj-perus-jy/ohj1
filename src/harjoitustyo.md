@@ -55,7 +55,8 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
 ### Vaihe 3: Työ 100 % valmis
 
- 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ensimmäiseen tentin mennessä** 
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ennen kuin
+    menet tenttiin**
  2. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
  3. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  4. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
