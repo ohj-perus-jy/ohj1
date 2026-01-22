@@ -9,9 +9,12 @@ Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korv
 
 2) Laita 2. rivillä "muuta tämä teksti" tekstin tilalle "Ohj1 harjoitustyön ohje".
 
-3) Riviltä 6 alkaen, ``` merkeillä aloitettujen rivien väliin lisää seuraava useamman rivin kokonaisuus:
-  - Rivi 6: Kirjoita vuorotellen merkkejä: |~|~|~|~... kunnes rivillä on 49 merkkiä (rivi päättyy | merkkiin).
-  - Rivit 7-27: Numeroi rivit käyttäen parillisia lukuja seuraavasti (rivillä aina kaksi numeromerkkiä ja rivinvaihto):
+3) Riviltä 6 alkaen, ``` merkeillä aloitettujen rivien väliin lisää seuraava
+   useamman rivin kokonaisuus:
+   - Rivi 6: Kirjoita vuorotellen merkkejä: |~|~|~|~... kunnes rivillä on 
+     49 merkkiä (rivi päättyy | merkkiin).
+   - Rivit 7-27: Numeroi rivit käyttäen parillisia lukuja seuraavasti 
+     (rivillä aina kaksi numeromerkkiä ja rivinvaihto):
       02
       04
       06
@@ -20,11 +23,14 @@ Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korv
       40
   - Rivi 28: Muodosta samanlainen rivi kuin rivillä 6
 
-4) Järjestä ## Toteutuksen suunnitelma -otsikon alla oleva luettelo nousevaan numerojärjestykseen ja lisää rivien loppuun teksti " (kesken)". Esimerkki valmiin rivin muotoilusta: 1. Piirrä kuva (kesken)
+4) Järjestä ## Toteutuksen suunnitelma -otsikon alla oleva luettelo nousevaan
+   numerojärjestykseen ja lisää rivien loppuun teksti " (kesken)". 
+   Esimerkki valmiin rivin muotoilusta: 1. Piirrä kuva (kesken)
 ```
 
 TODO: Tarvitaanko seuraavaa lisäselvennystä
-Valmis tiedosto sisältää 39 riviä ja näyttää tältä: ![](#todo_lisaa_kuva).
+
+Valmis tiedosto sisältää 39 riviä ja näyttää tältä: ![](#todo_lisaa_kuva)
 
 TODO: Tarviiko ohjeen loppuosaa tästä eteenpäin muokata?
 
