@@ -5,7 +5,8 @@ Lue ensin tehtävä huolellisesti. Kun olet ensin sisäistänyt kaikki ohjeet, l
 Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korvaa ja vastaavat. Aloita ajanotto siitä, kun kirjoitat ensimmäisen merkin, ja lopeta siihen kun viimeinen merkki on kirjoitettu. Tee pohjatiedostoon seuraavat muokkaukset:
 
 ```
-1) Laita 2. rivillä #lisaa_osoite tekstin tilalle harjoitustyön ohjesivun osoite: https://ohjelmointi1.it.jyu.fi/harjoitustyo.html
+1) Laita 2. rivillä #lisaa_osoite tekstin tilalle harjoitustyön ohjesivun osoite: 
+   https://ohjelmointi1.it.jyu.fi/harjoitustyo.html
 
 2) Laita 2. rivillä "muuta tämä teksti" tekstin tilalle "Ohj1 harjoitustyön ohje".
 
