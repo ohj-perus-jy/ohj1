@@ -6,6 +6,11 @@
  * **Lue:** [9. Aliohjelman paluuarvo](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#aliohjelman-paluuarvo)
  * Lukuisia esimerkkejä funktioista
 
+## Kevät 2026
+
+ * Katso tallenne [YouTube](https://youtube.com/live/tUqZpjsDf0E?feature=share)
+
+
 ## Syksy 2025
 
  * 📺 Katso tallenne ([YouTube](https://youtu.be/WSTxO_H2bxg), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-5))  
