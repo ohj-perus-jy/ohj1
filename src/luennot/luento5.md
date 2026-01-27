@@ -8,8 +8,7 @@
 
 ## Kevät 2026
 
- * Katso tallenne [YouTube](https://youtube.com/live/tUqZpjsDf0E?feature=share)
-
+ * Valitettavasti luentotallennetta ei ole saatavilla. Katso syksyn 2025 tallenne, kalvot ja koodit alla.
 
 ## Syksy 2025
 
