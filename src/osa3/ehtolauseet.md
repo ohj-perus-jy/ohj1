@@ -1,5 +1,5 @@
 
-# ↔️ Ehtolauseet
+# Ehtolauseet
 
 **Ehtolauseet** ovat rakenteita, jotka suorittavat tiettyjä lauseita vain, jos jokin ehto on voimassa. Ehtolauseella voidaan ikään kuin hypätä sellaisen koodin yli, jota ei ole tarpeellista suorittaa. 
 
