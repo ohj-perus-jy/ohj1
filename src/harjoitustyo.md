@@ -30,7 +30,7 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
  1. **Tutkinto-opiskelijat ja lukiolinjat**: Suunnitelma on näytettävä ohjaajalle ennen osan 5 harjoitustehtävien takarajaa.
  2. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
  3. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
- 4. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle]() <!--TODO Päivitä url-->. Etävaraston osoitteen on oltava muotoa `https://github.com/nimi/ohj1ht.git` tai `https://gitlab.com/nimi/ohj1ht.git`. TODO: Linkki.
+ 4. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  5. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
  6. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
  7. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
@@ -41,17 +41,15 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: Harjoitustyön tilanne on näytettävä ohjaajalle ennen osan 8 harjoitustehtävien takarajaa.
  2. Tee työsi eteenpäin suunnitelman mukaan. 
-    - Luo ohjelmakoodia varten [uusi solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution). 
-    - Aseta *Solution directory*-kohtaan sama polku kuin 1. vaiheen Git-varastolla. Esim. `C:\kurssit\ohj1\ht`.
-    - Pidä mielessä suunnitelmasi sekä harjoitustyön [vaatimukset](#vaatimukset). 
-    - Jos teet harjoitustyön parityönä, muista tehdä tarkka tuntikirjanpito
+    - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
+      solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
+      ladattu etävarastostasi paikalliseksi git-varastoksi.
  3. Varmista, että työsi koodi on ajan tasalla etävarastossa.
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./git.md#push).
-    - Muista pitää etävarasto ajan tasalla mahdollisimman usein!
  4. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
-
 
 ### Vaihe 3: Työ 100 % valmis
 
