@@ -154,7 +154,7 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
  12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset) 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
-## Usein kysytyt kysymykset ja muut vinkit
+## Usein kysytyt kysymykset ja muut vinkit {#ukk}
 
 <details closed>
 <summary>Millaisia pelejä voi harjoitustyöksi tehdä?</summary>
