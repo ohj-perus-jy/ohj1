@@ -48,6 +48,7 @@
  * [Osa 4](./osa4/index.md)
    * [Luento 7: Testaaminen, ComTest](./luennot/luento7.md)
    * [Luento 8: Harjoitustyö, Merkkijonot](./luennot/luento8.md)
+   * [Testaaminen ComTestillä](./osa4/comtest.md)
    * [Harjoitustehtävät 4](./luennot/harjoitus4.md)
 <!-- * [Jos sataa, niin koodaa kunnes nukahdat](./osa4/osa4.md)--> 
 <!--    * [Operaattorit](./osa4/1-operaattorit.md)--> 
