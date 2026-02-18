@@ -6,10 +6,10 @@
 
 ## Kevät 2026
 
- * Katso tallenne([YouTube](https://youtube.com/live/SjAaSGBiQO0?feature=share),
-   Moniviestin)
- * Kalvot
- * Koodit
+ * 📺 Katso tallenne([YouTube](https://youtube.com/live/SjAaSGBiQO0?feature=share),
+   [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-12))
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento12/Luento12.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento12)
 
 ## Syksy 2025
 
