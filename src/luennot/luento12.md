@@ -6,7 +6,10 @@
 
 ## Kevät 2026
 
- 
+ * Katso tallenne([YouTube](https://youtube.com/live/SjAaSGBiQO0?feature=share),
+   Moniviestin)
+ * Kalvot
+ * Koodit
 
 ## Syksy 2025
 
