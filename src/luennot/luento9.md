@@ -5,10 +5,11 @@
 
 ## Kevät 2026
 
- * Aikatauluongelmien takia tämän päivän luento on nauhoite, pätkitty viime kevään luennosta. 📺 Katso tallenne ([YouTube](https://youtu.be/igR_9C24b6s), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-9))
+ * Aikatauluongelmien takia tämän päivän luento on nauhoite, pätkitty viime kevään luennosta. 
+ * 📺 Katso tallenne ([YouTube](https://youtu.be/igR_9C24b6s), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-9))
  * Kalvoja ja mallikoodeja ei ole valitettavasti saatavilla
 
-# Syksy 2025
+## Syksy 2025
 
  * Katso viime kevään luennoista:
    * Toistolauseesta:
