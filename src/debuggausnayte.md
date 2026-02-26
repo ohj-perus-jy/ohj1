@@ -58,8 +58,8 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 **Sisällölliset vaatimukset videolle**
 
    1. Opiskelijan tulee käyttää kurssilla annettua DebugKoe-tehtävää.
-   2. Videossa tulee näkyä debuggausnäytteen suorittaminen kokonaisuudessaan ja katkeamattomana. Videoa ei saa editoida.
-   3. Videolla tulee näkyä sekä ruutukaappauskuva että opiskelijan puhe selkeällä äänellä. 
+   2. Videossa tulee näkyä debuggausnäytteen suorittaminen kokonaisuudessaan ja katkeamattomana. Videota ei saa editoida.
+   3. Videolla tulee näkyä sekä ruutukaappauskuva että kuulua opiskelijan puhe selkeällä äänellä. 
    4. Opiskelijan tulee selittää jokainen tekemänsä toiminto perustellen. Selitys tulee olla 
       esimerkiksi: 
       * "Asetan riville 59 ehdollisen keskeytyskohdan, koska..." tai 
@@ -71,6 +71,13 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
    2. Tehtyjä toimia ei perustella.
    3. Opiskelija ei puhu tai puheesta ei saa selvää.
    4. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
+   5. Konsolissa ei lue lopuksi:
+```
+Tehtävä 1 läpäisty!
+Tehtävä 2 läpäisty!
+
+Onnittelut, debug-koe läpäisty! Paina Enteriä poistuaksesi.
+```
 
 **Tekniset vaatimukset videolle**
 
