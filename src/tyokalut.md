@@ -522,7 +522,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
    Testaa, että ohjelma toimii.
 
     Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
-    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Järjestelmä saattaa myös kysyä, *Rider on internetistä ladattu sovellus. Avataanko se?*.
     Siinä tapauksessa voi valita *Avaa*.
     
     Hyväksy mahdolliset Riderin käyttöehdot.
