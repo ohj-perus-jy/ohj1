@@ -62,7 +62,7 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
    </tr>
    <tr>
    <td>Vaihe 2: Työ 50 % valmis</td>
-   <td>Ennen osan 5 harjoitustehtävien takarajaa</td>   
+   <td>Ennen osan 8 harjoitustehtävien takarajaa</td>   
    </tr>
    <tr>
    <td>Vaihe 3: Työ 100 % valmis</td>
