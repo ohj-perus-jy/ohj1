@@ -13,7 +13,7 @@
 
 ---
 
-[Omat tiedot](./omat-tiedot.md)
+[Omat tiedot (TIM)<https://tim.jyu.fi>]()
 
 ---
 

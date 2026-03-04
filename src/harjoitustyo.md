@@ -19,35 +19,90 @@ Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää
 
 ## Aikataulu ja takarajat
 
-| Tutkinto-opiskelijat                                                                                                                                                                                                                                                                                                                     | Lukiolinjat                                                                       | Avoin yliopisto                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
+<!--
+| Tutkinto-opiskelijat                                                                                                                                       | Lukiolinjat                                                                       | Avoin yliopisto                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jokainen vaihe tulee palauttaa **ennen asetettua takarajaa**. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. | Vaiheet tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Vaiheiden palauttamiselle ei ole kiinteitä takarajoja, mutta vaiheet on hyväksytettävä ohjaajalla. Kun vaihe on valmis, laita harjoitustyön vaihe ajoissa versionhallintaan ja käy esittelemässä työtä ohjaajalle pääteohjaustilaisuuksissa. |
+-->
+
+<table>
+   <thead>
+   <tr>
+      <th colspan="2">Tutkinto-opiskelijat</th>
+   </tr>
+   </thead>
+   <tr>
+   <td>Yleistä</td>
+   <td>Jokainen vaihe tulee palauttaa <strong>ennen asetettua takarajaa</strong>.
+   Työn vaiheiden palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa harjoitustyön hylkäämiseen. Päätöksen tekevät opintojakson vastuuopettajat tapauskohtaisesti.</td>
+   </tr>
+   <tr>
+   <td>Vaihe 1: Suunnitelma</td>
+   <td>Ennen osan 5 harjoitustehtävien takarajaa</td>
+   </tr>
+   <tr>
+   <td>Vaihe 2: Työ 50 % valmis</td>
+   <td>Ennen osan 8 harjoitustehtävien takarajaa</td>
+   </tr>
+   <tr>
+   <td>Vaihe 3: Työ 100 % valmis</td>
+   <td>Ennen kuin menet tenttiin</td>
+   </tr>   
+   <thead>
+   <tr>
+      <th colspan="2">Lukiolinjat</th>
+   </tr>
+   </thead>
+   <tr><td>Yleistä</td>
+   <td>Jokainen vaihe tulee palauttaa <strong>ennen asetettua takarajaa</strong>. Lukiosi opettaja voi päättää aikataulupoikkeamista.</td>
+   </tr>
+   <tr>
+   <td>Vaihe 1: Suunnitelma</td>
+   <td>Ennen osan 5 harjoitustehtävien takarajaa</td>
+   </tr>
+   <tr>
+   <td>Vaihe 2: Työ 50 % valmis</td>
+   <td>Ennen osan 5 harjoitustehtävien takarajaa</td>   
+   </tr>
+   <tr>
+   <td>Vaihe 3: Työ 100 % valmis</td>
+   <td>Ennen kuin menet tenttiin</td>
+   </tr>
+   <thead>
+   <tr>
+      <th colspan="2">Avoin yliopisto</th>
+
+   </tr>
+   </thead>
+   <tr>
+   <td>Yleistä</td>
+   <td>Ei kiinteitä takarajoja, mutta jokainen vaihe hyväksytettävä ohjaajalla etä- tai lähiohjauksessa</td>
+   </tr>
+</table>
 
 ## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat {#vaiheiden-kuvaukset}
 
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
- 1. **Tutkinto-opiskelijat ja lukiolinjat**: Suunnitelma on näytettävä ohjaajalle ennen osan 5 harjoitustehtävien takarajaa.
- 2. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 3. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
- 4. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
- 5. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
- 6. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
- 7. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
- 8. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
- 9. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+ 1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
+ 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
+ 1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
+ 1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
+ 1. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
+ 1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 ### Vaihe 2: Työ 50 % valmis
 
- 1. **Tutkinto-opiskelijat ja lukiolinjat**: Harjoitustyön tilanne on näytettävä ohjaajalle ennen osan 8 harjoitustehtävien takarajaa.
- 2. Tee työsi eteenpäin suunnitelman mukaan. 
+ 1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
       solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
       ladattu etävarastostasi paikalliseksi git-varastoksi.
- 3. Varmista, että työsi koodi on ajan tasalla etävarastossa.
+ 1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./git.md#push).
- 4. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+ 1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
@@ -55,12 +110,12 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ennen kuin
     menet tenttiin**
- 2. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
- 3. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
- 4. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
+ 1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
+ 1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
+ 1. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
     - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
- 5. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+ 1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
