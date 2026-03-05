@@ -70,8 +70,10 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
    1. Videolla ei näy debuggausnäytteen suorittaminen kokonaisuudessaan.
    2. Tehtyjä toimia ei perustella.
    3. Opiskelija ei puhu tai puheesta ei saa selvää.
-   4. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
-   5. Konsolissa ei lue lopuksi:
+   4. Video on kohtuuttoman pitkä (luokkaa kymmeniä minuutteja), sisältää pitkiä pohdintoja tai lukuisia yritysten tai
+      erehdysten sarjoja. 
+   5. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
+   6. Konsolissa ei lue lopuksi:
 ```
 Tehtävä 1 läpäisty!
 Tehtävä 2 läpäisty!
