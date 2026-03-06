@@ -42,7 +42,7 @@ Muut tietotyypit:
 
 
 > [!LISATIETO]
-> ✨ Valinnaista lisätietoa: C#-kielessä on mahdollista merkitä muuttujan tyypin kohdalle sana `var`, jolloin kääntäjä päättelee tyypin automaattisesti arvon perusteella. Esimerkiksi `var luku = 5;` määrittelee `luku`-muuttujan tyypiksi `int`, koska arvo `5` on kokonaisluku. Muuttujan tyyppi on kuitenkin edelleen kiinteä, eikä sitä voi muuttaa myöhemmin. Tämä on kätevä ominaisuus, mutta tässä kurssissa keskitymme selkeyden vuoksi eksplisiittiseen tyyppimääritykseen.
+> <i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: C#-kielessä on mahdollista merkitä muuttujan tyypin kohdalle sana `var`, jolloin kääntäjä päättelee tyypin automaattisesti arvon perusteella. Esimerkiksi `var luku = 5;` määrittelee `luku`-muuttujan tyypiksi `int`, koska arvo `5` on kokonaisluku. Muuttujan tyyppi on kuitenkin edelleen kiinteä, eikä sitä voi muuttaa myöhemmin. Tämä on kätevä ominaisuus, mutta tässä kurssissa keskitymme selkeyden vuoksi eksplisiittiseen tyyppimääritykseen.
 
 ## Vakiot
 
@@ -55,5 +55,5 @@ const string TervehdysSana = "Hei"; // PascalCase-tyyli
 
 Vain sellainen tietotyyppi, jonka arvo voidaan laskea käännösaikana, voidaan määritellä vakioksi. Esimerkiksi oliotietotyypit (esim. `int[]`) ovat niin kutsuttuja viitetyyppejä (engl. *reference types*), eikä niitä voida määritellä `const`-avainsanalla. On olemassa muuttumattomia oliotietotyyppejä (esimerkiksi `ImmutableArray`), mutta emme käsittele niitä tällä kurssilla, joskin `string`-tyyppi tekee tähän poikkeuksen.
 
-✨ Valinnaista lisätietoa: Oliot, joiden arvot määräytyvät vasta ajon aikana, voidaan määritellä `readonly`-avainsanalla. Tällöin muuttujan arvo voidaan asettaa vain kerran. Tämä vastaa kutakuinkin yllä mainittujen perustietotyyppien `const`-avainsanaa. 
+<i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Oliot, joiden arvot määräytyvät vasta ajon aikana, voidaan määritellä `readonly`-avainsanalla. Tällöin muuttujan arvo voidaan asettaa vain kerran. Tämä vastaa kutakuinkin yllä mainittujen perustietotyyppien `const`-avainsanaa. 
 

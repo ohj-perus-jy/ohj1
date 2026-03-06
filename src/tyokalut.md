@@ -1,41 +1,29 @@
-# Ohjelmointi 1 -kurssin työkalut 
-
+# Työkaluohjeet
  
+**Ohjelmointi 1** -opintojaksolla käytämme alla olevia työkaluja. Tässä
+dokumentissa opastetaan, miten nämä työkalut asennetaan. 
 
- 
-Harjoitustehtävien ja harjoitustyön tekemiseen käytämme seuraavia työkaluja:
+- **[.NET](#net)** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
+  C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. 
+- **[Git](#git)** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
+  ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
+  Docsiksi.
+- **[JetBrains Rider](#jetbrains-rider)** &ndash; *integroitu kehitysympäristö*, jolla voi
+  kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
+  C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.
+- **[Tekstieditori](#tekstieditori)** &ndash; ohjelma, jolla voi muokata tekstipohjaisia
+  tiedostoja, kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme
+  esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
+  Docs **ei ole** opintojaksolle soveltuva tekstieditori.
+- **[JyPeli](#jypeli)** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
+  C#-kirjasto pelien tekemiseen.
+- **[ComTest](#comtest)** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
+  avulla kirjoitetulle koodille voidaan kirjoittaa testejä helposti luettavalla
+  merkintätavalla.
 
-- **.NET** - *ohjelmistoviitekehys* (engl. framework) sekä *ajonaikainen ympäristö* (engl. runtime) C
-kielelle. 
-   .NET mahdollistaa C
-ohjelmien kääntämisen ja ajamisen. 
-   Se tarjoaa myös valmista koodia yleisempiin käyttötarkoituksiin (esim. tekstin tulostaminen näytölle, käyttöliittymien tekeminen).   
-- **Git** - *versiohallintaohjelma* (engl. Version Control Software, VCS), joka mahdollistaa koodin versioinnin ja yhteistyön koodaajien välillä.
-  Vähän kuin Google Docsin muokkaushistoria, mutta koodaamiseen tarkoitettu.
-- **JetBrains Rider** - *integroitu kehitysympäristö* (engl. Integrated Development Environment, IDE).
-  IDE sisältää oleellisimmat toiminnot ohjelmien tekemiseen (koodin muokkaus, kääntäminen, ajaminen).
-  Rider on erityisesti .NET ja C
-ohjelmille tarkoitettu IDE.
-- **Tekstieditori** - jokin kevyt tekstieditori, jolla tekstipohjaisia tiedostoja (esim. koodi) voi muokata
-  avaamatta IDE-ohjelmistoa. Suosittelemme esimerkiksi *Visual Studio Code* tai *Notepad++*.
-  Microsoft Word tai Google Docs **ei ole** opintojaksolle soveltuva tekstieditori.
-- **JyPeli** - *pelimoottori* (engl. game engine), joka on Jyväskylän yliopistossa kehitetty
-  C
-kirjasto pelien tekemiseen.
-- **ComTest** - *yksikkötestigeneraattori* (engl. unit test generator), joka on aputyökalu, jonka avulla
-  kirjoitetulle koodille voi kirjoittaa testejä helposti luettavalla merkintätavalla.
+Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
-Tässä dokumentissa käydään läpi yllä olevien työkalujen ja ohjelmien asentamista.
-
-Yllä olevat ohjelmat ovat valmiiksi asennettuna Agoran mikroluokissa.
-*Suosittelemme, että asennat ohjelmat lisäksi niille tietokoneille, joilla
-aiot suorittaa opintojakson.*
-Erityisesti harjoitustyön tekeminen pääteohjausten ulkopuolella on
-helpompaa, kun kaikki tarvittavat ohjelmat on myös omalla tietokoneella.
-
-## Ennen asentamista 
-
-### Käyttöjärjestelmä ja vaatimukset 
+## Käyttöjärjestelmä ja vaatimukset 
 
 Tällä sivulla olevat ohjeet riippuvat käyttöjärjestelmästä. 
 Valitse käyttöjärjestelmä alta.
@@ -60,7 +48,6 @@ Valitsit macOS-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavill
 ***
 
 ### [Linux](#tab/linux)
-
  
 Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
 
@@ -72,21 +59,22 @@ Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavill
 Valitse käyttöjärjestelmäsi yllä olevilla painikkeilla.
 
 Huomaa, että muilla käyttöjärjestelmillä voi esiintyä pieniä poikkeuksia.
-Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@tim.jyu.fi.
+Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@jyu.onmicrosoft.com.
 Vastaavasti, jos saat ohjeet toimimaan käyttöjärjestelmällä, jotka eivät ole
 yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme listan.
 
 ***
 
-
 ## Pikakurssi komentorivin käyttöön 
  
 Tämän sivun asennusohjeet vaativat komentorivin avaamista ja käyttöä.
 
-Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana; jos
-luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa vielä hämärältä asialta.
+Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana;
+jos luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa
+vielä hämärältä asialta.
 
-Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin käyttöön alta.
+Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin
+käyttöön alta.
 
 <details closed> <summary>Pikainen johdatus komentorivin käyttöön (Avaa klikkaamalla)</summary>
  
@@ -94,17 +82,17 @@ Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentori
 
 *Komentorivi* (engl. command line) tai *pääte* (engl. terminal) on (tämän ohjeen
 puitteissa) tietokoneohjelma, jolla tietokonetta voi ohjata tekstillä.
-Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu graafisesti
-avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder),
-sama asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command),
-joka tulostaa näkyviin kansion sisällön.
+Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu
+graafisesti avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder), sama
+asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command), joka
+tulostaa näkyviin kansion sisällön.
 
 Komentorivillä työskentely on yleistä ohjelmoinnin yhteydessä. Syitä on monia,
-eikä niitä tässä käsitellä.
-Tämän ohjeen kannalta olennainen syy on, että yleisten ohjelmien asentaminen onnistuu nykyään jopa helpommin
-komentorivillä kuin "käsin" etismällä sopiva asennusohjelma verkosta.
+kuten toiston ja automaation helpottaminen. Tämän ohjeen kannalta olennainen syy
+on, että ohjelmien asentaminen onnistuu nykyään jopa helpommin komentorivillä
+kuin etsimällä sopiva asennusohjelma verkosta.
 
- ***
+***
 
 **Miten avaan komentoriviin omalla tietokoneellani?**
 
@@ -151,7 +139,7 @@ ls
 Tulee sinun kirjoittaa laatikossa oleva komento ja suorittaa se komentorivillä.
 Toimi seuraavasti:
 
-1. Klikkaa komentorivi aktiiviseksi ikkunaksi ellei se ole jo.
+1. Klikkaa komentorivi aktiiviseksi ikkunaksi.
 2. Kirjoita laatikossa oleva komento komentoriviin näppäimistöllä.
 3. **Tarkista, että kirjoitit komennon täysin oikein.** Huomaa, että kirjainkoolla, välilyönneillä ja muilla merkeillä on merkitystä komennon kannalta!
 4. **Kun olet varmistanut, että kirjoitit komennon oikein**, paina Enter-näppäintä.
@@ -202,34 +190,36 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 </details>
 
-## Asennusohjeet tekstinä 
-
-### Valmistelu 
+## Valmistelu 
 
 ### [Windows](#tab/win)
 
- 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia päivityksiä) tai että näytönohjaimen ajurit ovat asennettu.
- 1. Avaa PowerShell-komentorivi (*Haku-ikoni* &rarr; Kirjoita *PowerShell* &rarr; *Windows PowerShell*).
+ 1. Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia
+    päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.
+ 1. Avaa PowerShell-komentorivi (*Haku-ikoni* <i class="bi bi-chevron-right"></i> Kirjoita *PowerShell*
+    <i class="bi bi-chevron-right"></i> *Windows PowerShell*).
  2. Kokeile, että `winget`-komento on asennettu ja toimii. Suorita seuraava komento:
 
     ```bash
     winget -v
     ```
     
-    Tuloksena pitäisi tulostua `winget`-työkalun versio. Jos sen sijaan saat virheen, jossa
-    lukee *'winget' is not recognized as the name of a cmdlet, function, script file, or operable program*,
-    tarkoittaa tämä, että sinulla todennäköisesti ei ole `winget`-työkalua asennettuna.
-    Kokeile siinä tapauksessa seuraavat ratkaisut:
+    Tuloksena pitäisi tulostua `winget`-työkalun versio. Jos sen sijaan saat
+    virheen, jossa lukee *'winget' is not recognized as the name of a cmdlet,
+    function, script file, or operable program*, tarkoittaa tämä, että sinulla
+    todennäköisesti ei ole `winget`-työkalua asennettuna. Kokeile siinä
+    tapauksessa seuraavat ratkaisut:
     
     - Tarkista, että käyttöjärjestelmäsi on ajan tasalla
-    - Kokeile ladata ja asentaa `winget`-käsin: [Lataa asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle)
+    - Kokeile ladata ja asentaa `winget`-käsin: [Lataa
+      asennusohjelma](https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle). 
       Asennuksen jälkeen sulje ja käynnistä PowerShell uudelleen.
 
 ***
 
 ### [macOS](#tab/macos)
 
-1. Avaa Pääte tai Termimal (*Launchpad* &rarr; *Pääte*/*Terminal*)
+1. Avaa Pääte tai Termimal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
 2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
 
     ```bash
@@ -237,13 +227,14 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
     ```
     
     Komennon suorittamisen jälkeen saatat saada seuraavanlaisen ilmoituksen:
-    *Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa työkalut nyt?*
-    (Englanniksi: *The 'xcode-select' command requires the command line developer tools. Would you like to install the tools now?*)
+    *Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa
+    työkalut nyt?* (Englanniksi: *The 'xcode-select' command requires the
+    command line developer tools. Would you like to install the tools now?*)
     
-    Jos sellainen ilmoitus ilmestyy, valitse *Asenna*/*Install* ja odota työkalujen asentumista.
-    Hyväksy tarvittaessa käyttöehdot.
-    Kun asennus on valmis, saat *Ohjelmisto asennettiin*/*The software was installed* -dialogin.
-    Klikkaa silloin *Valmis*.
+    Jos sellainen ilmoitus ilmestyy, valitse *Asenna*/*Install* ja odota
+    työkalujen asentumista. Hyväksy tarvittaessa käyttöehdot. Kun asennus on
+    valmis, saat *Ohjelmisto asennettiin*/*The software was installed*
+    -dialogin. Klikkaa silloin *Valmis*.
     
     Jos saat virheen, jossa lukee `command line tools are already installed`, sinulla
     on jo tarvittavat työkalut asennettuna ja voit jatkaa seuraavaan vaiheeseen.  
@@ -323,15 +314,15 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-### .NET 
+## .NET {#net}
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Suorita alla oleva komento
 
     ```bash
-    winget install -e --id=Microsoft.DotNet.SDK.%%dotnet_major_version%%
+    winget install -e --id=Microsoft.DotNet.SDK.10
     ```
 
     Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
@@ -355,10 +346,10 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [C:\Program Files\dotnet\sdk]
+    10.0.XXX [C:\Program Files\dotnet\sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
@@ -371,7 +362,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     brew tap isen-ng/dotnet-sdk-versions
     ```
     ```bash
-    brew install --cask dotnet-sdk%%dotnet_major_version%%
+    brew install --cask dotnet-sdk10
     ```
     
     Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
@@ -391,17 +382,17 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    10.0.XXX [/usr/local/share/dotnet/sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
-### [Linux](#tab/linux)
+### [Linux](#tab/linux) 
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
-2. Asenna .NET SDK -pakkaus: `dotnet-sdk-%%dotnet_major_version%%.0`. Pakkauksen nimi on yleensä sama
+2. Asenna .NET SDK -pakkaus: `dotnet-sdk-10.0`. Pakkauksen nimi on yleensä sama
    kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että .NET on asennettu suorittamalla komento:
@@ -413,18 +404,18 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Jos asennus onnistui, näet seuraavanlaisen tulosteen:
     
     ```txt
-    %%dotnet_major_version%%.0.XXX [/usr/local/share/dotnet/sdk]
+    10.0.XXX [/usr/local/share/dotnet/sdk]
     ```
     
-    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `%%dotnet_major_version%%.0` ja että virhettä ei tule.
+    Huomaa, että `XXX` on joku numero; olennaista, että versiona lukee `10.0` ja että virhettä ei tule.
 
 *** 
 
-### Git 
+## Git 
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna Git for Windows suorittamalla alla oleva komento:
 
     ```bash
@@ -457,11 +448,11 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     ```
     
     Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* &rarr; Kirjoita *Git Bash* &rarr; Valitse *Git Bash*.
+5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* <i class="bi bi-chevron-right"></i> Kirjoita *Git Bash* <i class="bi bi-chevron-right"></i> Valitse *Git Bash*.
 
     Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
-    ![Git bash avattu](tyokalut/images/gitbash-avattu2.png)
+    ![Git bash avattu](images/gitbash-avattu2.png)
 
 *** 
 
@@ -506,11 +497,11 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-## JetBrains Rider 
+## JetBrains Rider {#jetbrains-rider}
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna JetBrains Rider suorittamalla alla oleva komento:
 
     ```bash
@@ -531,7 +522,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
    Testaa, että ohjelma toimii.
 
     Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
-    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Järjestelmä saattaa myös kysyä, *Rider on internetistä ladattu sovellus. Avataanko se?*.
     Siinä tapauksessa voi valita *Avaa*.
     
     Hyväksy mahdolliset Riderin käyttöehdot.
@@ -549,11 +540,24 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
 
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 
-7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
-   Ohjelman asennus on valmis!
+7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
+   asennus on onnistunut.
+
+8. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
+   languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
+
+9. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa [asetuspaketti
+(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1) 
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
+    - Etsi ja valitse äsken haettu tiedosto
+    - Klikkaa OK, sitten Import and Restart
+
+Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#rider-settings).
 
 *** 
 
@@ -588,14 +592,30 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
     *Start Non-Commercial license*.
 
-6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+7. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
 
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 
-7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
-   Ohjelman asennus on valmis!
+8. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
+   asennus on onnistunut.
+
+9. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
+   languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
+
+10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa [asetuspaketti
+(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1).
+HUOM! Lataa tiedosto <kbd>Ctrl</kbd> + klikkaamalla <i class="bi
+bi-chevron-right"></i> Lataa linkitetty tiedosto nimellä. Muutoin tiedosto ei
+tallennu oikein. 
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
+    - Etsi ja valitse äsken haettu tiedosto
+    - Klikkaa OK, sitten Import and Restart
+
+Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#rider-settings).
 
 ***
 
@@ -633,14 +653,30 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     
     Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
     *Start Non-Commercial license*.
-6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+7. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
     - Teema: Valitse haluamasi teema
-    - Näppäimistöasettelu: *Suosittelemme* vaihtoehdot Visual Studio tai VS Code
+    - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
-7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, voit sulkea sen.
-   Ohjelman asennus on valmis!
+8. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
+   asennus on onnistunut.
+
+9. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
+   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
+   languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
+
+10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa [asetuspaketti
+(settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1)
+(Linuxissa voi joutua vaihtamaan tarkentimen `.jar` latauksen jälkeen)
+    - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
+    - Etsi ja valitse äsken haettu tiedosto
+    - Klikkaa OK, sitten Import and Restart
+
+Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#rider-settings).
+
 
 *** 
+
 
 ## Tekstieditori 
 
@@ -650,7 +686,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
 
 ### [Windows](#tab/win)
  
-1. Avaa PowerShell-komentorivi ellei se ole jo
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
 2. Asenna VS Code suorittamalla seuraava komento:
 
     ```bash
@@ -677,7 +713,7 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
     code
     ```
     Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* &rarr; Kirjoita *Visual Studio Code* &rarr; Valitse *Visual Studio Code*.
+    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* <i class="bi bi-chevron-right"></i> Kirjoita *Visual Studio Code* <i class="bi bi-chevron-right"></i> Valitse *Visual Studio Code*.
 
 ***
 
@@ -768,12 +804,12 @@ Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Stu
     
     Voit kokeilla peliä tai sulkea sen.
 
-## ComTest 
+## ComTest {#comtest}
 
 ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yksikkötestejä.
 
  1. Avaa JetBrains Rider ja odota, kunnes pääset *Welcome to JetBrains Rider* -näkymään
- 2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* &rarr; *Plugins*
+ 2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* <i class="bi bi-chevron-right"></i> *Plugins*
  3. Valitse *Marketplace*-välilehti ja hae hakusanalla `ComTest`
  4. Valitse Comtest Runner -pluginin kohdalta *Install*
      ![](/images/506961/rider-install-comtest.gif)
@@ -782,7 +818,9 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
 
 ## Mitä seuraavaksi? 
  
-Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi [luennoilla](luennot.html) sekä materiaalin luvussa [1.2 Ohjelmointiympäristö kuntoon](). TODO: Lisää linkki.
+Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi luennoilla sekä
+muun uassa mmateriaalin luvussa [1.3 Ohjelmointiympäristö
+kuntoon](osa1/2-ohjelmointiymparisto-kuntoon.md).
 
 Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/), joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin *Non-commercial license* -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.
 
@@ -790,11 +828,9 @@ Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pac
 
 Alla on lueteltu joitain yleisimpiä ongelmatilanteita, joita asennuksen tai työkalujen käytön yhteydessä voi tulla vastaan. Jos löydät ongelman, jota ei ole listattu alla, 
 
-TODO: Lisää linkit.
-
-- tule pääteohjauksiin (ajat ja paikat löytyvät [kotisivulta]()), 
-- laita viestiä [Teamsissa]() (Kysymyksiä ja apua -kanava) tai
-- laita viestiä opettajille: ohj1-opet@tim.jyu.fi. 
+- tule pääteohjauksiin. Ajat ja paikat löytyvät [kotisivulta](index.md#tuki-ja-palaute)), 
+- laita viestiä [Teamsissa](index.md#teams-jy) (Kysymyksiä ja apua -kanava) tai
+- laita viestiä opettajille: <ohj1-opet@jyu.onmicrosoft.com>. 
 
 <details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
  
@@ -809,14 +845,14 @@ Asenna uusin GLFW-versio käyttämäsi paketinhallinnan avulla.
 <details closed><summary> System.PlatformNotSupportedException: GLFW is not supported on this platform...</summary>
  
 Voi olla että tietokoneellasi ei ole näytönohjaimen ajureita asennettuna.
-Mene Windowsin asetukset -> Päivitykset -> Valinnaiset (päivitä-nappulan alapuolella)
+Mene Windowsin asetukset <i class="bi bi-chevron-right"></i> Päivitykset <i class="bi bi-chevron-right"></i> Valinnaiset (päivitä-nappulan alapuolella)
 -> Ajurit.
 Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"
 
 Jos ajuria ei löydy ja käytät kannettavaa, todennäköisesti sinulla on integroitu
-näytöonohjain, jolloin ajuri voi löytyä prosessorin
-valmistajan (Intel tai AMD) sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla
-`Intel graphics driver` tai `AMD graphics driver` prosessorin valmistajasta riippuen.
+näytöonohjain, jolloin ajuri voi löytyä prosessorin valmistajan (Intel tai AMD)
+sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla `Intel graphics driver`
+tai `AMD graphics driver` prosessorin valmistajasta riippuen.
 
 Seuraavista työkaluista voi olla hyötyä:
 
@@ -832,23 +868,22 @@ Voi olla, että Rider ei löydä oikeaa .NET-versiota.
 Kokeile seuraavaa:
 
 - Avaa Rider aloitusnäkymä (jos Rider on auki, laita se kiinni ja avaa uudelleen).
-- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) &rarr; *Settings*
-- Mene kohtaan *Build, Execution, Deployment*  &rarr; *Toolset and Build*
+- Avaa asetukset menemällä *Configure* (vasemmassa alalaidassa) <i class="bi bi-chevron-right"></i> *Settings*
+- Mene kohtaan *Build, Execution, Deployment*  <i class="bi bi-chevron-right"></i> *Toolset and Build*
 - Klikkaa kohdan *.NET CLI executable path* -kentän alasvetovalikkoa:
 
     ![](/images/876452/image.png)
 
-Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain toista
-vaihtoehtoa kuin nykyinen arvo.
-Paina lopuksi *Save* ja kokeile luoda uusi solution.
-Jos virhe toistuu, kokeile jotain toista valintaa.
+Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain
+toista vaihtoehtoa kuin nykyinen arvo. Paina lopuksi *Save* ja kokeile luoda
+uusi solution. Jos virhe toistuu, kokeile jotain toista valintaa.
 
 </details>
 
 <details closed><summary> Rider on hidas tai antaa erilaisia oikeusvirheitä </summary>
  
-Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla
-hidasta haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.
+Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla hidasta
+haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.
 
 Mikäli sinulla on käytössä Microsoft Defender, Rider yleensä kysyy, haluatko
 Riderin säätävän sen asetukset automaattisesti. Muiden tuotteiden tapauksessa
@@ -860,8 +895,8 @@ asetukset tulee säätää itse.
 
 <details closed> <summary>Rider-lisenssin uudelleenaktivointi  </summary>
  
-Lisenssi täytyy mahdollisesti aika ajoin
-uudelleenaktivoida kohdasta Help -> Manage licenses -> Activate.
+Lisenssi täytyy mahdollisesti aika ajoin uudelleenaktivoida kohdasta Help ->
+Manage licenses <i class="bi bi-chevron-right"></i> Activate.
 
 </details> 
 
@@ -876,7 +911,8 @@ Katso .NET-asennusohjeet Työkalut-ohjeesta.
 Jos komentoriviltä tulee (Linux):
 
     A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist 
-  niin  ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist>
+
+niin ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist>
 
 </details>
 
@@ -888,3 +924,91 @@ suosikkikomennoillesi uudet näppäinoikotiet asetuksista:
 `File → Settings → Keymap → Editor actions`.
 
 </details>
+
+## Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset {#rider-settings}
+
+Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
+otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
+kurssin kannalta. Ajatus on, että on parempi, että varoituksia tulee vain niistä
+asioista, jotka on oikeasti syytä ottaa huomioon. Kun opit ohjelmointia lisää,
+on noista edistyneemmistä varoituksistakin enemmän hyötyä. Kannattaa avata
+Riderissa joku solution, jos säädät seuraavia käsin.
+
+- **Huomatus nimiavaruudesta:** Kurssilla ei aina käytetä nimiavaruuksia: 
+  kirjoita asetusten hakukentään `inspection severity` ja mene asetuksissa `Editor/Inspection Settings/Inspection
+Severity/C#` valitsemalla `Inspection Severity` alla olevista kielistä C#. Pitäisi tulla näkyviin uusi valikko C#:n kielikohtaisia asetuksia.
+Kirjoita tämän uuden valikon omaan hakuun `namespace` ja ota ruksi pois kohdasta 
+`Namespace does not correspond to file location`, joka löytyy uudesta valikossa `Constraints violations`-
+alaotsikon alta.
+- **Luokasta ole luotu oliota:** Kurssilla luokkia käytetään (myös) tallentamaan
+  joukko staattisia aliohjelmia, joten tämä varoitus ei ole relevantti. Samaan tapaan 
+kuin edellisessä kohdassa, mene ensin C#:n kielikohtaisiin asetuksiin: `Editor/Inspection Settings/Inspection Severity/C#` ja kirjoita avautuvan valikon hakukentään `instantiated` ja ota ruksi pois kohdasta `Non-private accessibility`, joka on alaotsikon `Potential Code Quality Issues` ja `Class is never instantiated`-asetuksen alla.
+- **Metodi voisi olla private:** Yleiskäyttöiseksi tarkoitetut funktiot kannattaa tehdä julkisiksi, mutta koska niitä ei ole vielä mistään kutsuttu, Rider huomauttaa tästä. 
+Mene taas C#:n kielikohtaisten asetusten valikkoon `Editor/Inspection Settings/Inspection Severity/C#` edellisen kohdan tavoin.
+Hae `member` ja etsi `Common Practices and Code Improvements` alaotsikon alta `Member can be made private`-asetuksen
+alla oleva asetus `Non-private accessibility`, josta ota ruksi pois.
+- **Luokkaa ei ole määritelty nimiavaruudessa:** Koska kurssilla ei aina käytetä nimiavaruuksia:
+  Jos koodissa on jossakin kohti alleviivattuna `class`-sanan jälkeinen nimi, niin mene
+sen nimen alkuun,
+  paina nimeä ja vasemmalle syttyy vasaran kuva. Klikkaa vasaraa ja valitse valikosta `Inspection:
+'Declare types in namespaces'/Configure inspection severity/Do not show` kuten kuvassa alla: 
+![Poistetaan Laskuja-luokan nimen alleviivaus näkyvistä](./images/vesan_asetukset_alleviivaus.png)
+Tämän `Context Actions`-valikon saa auki myös klikkaamalla hiiren oikealla painikkeella alleviivattua
+kohtaa ja valitsemalla valikosta `Show Context Actions`. Joissain tapauksissa valikon saa auki rivinumeroiden 
+vieressä olevasta hehkulampun kuvasta.`Context Actions`-valikon saa auki kursorin kohdalla 
+myös painamalla `Alt + Enter`. Tällä samalla menetelmällä on helppo säätää pois häiritseviä alleviivauksia, 
+**mutta ensin on varmistuttava, että kyseinen asetus/alleviivaus/vihje ei ole itselle tarpeellinen tai huomionarvoinen**.
+- **`var`-sanan käyttö:** Pyritään oppimaan tyyppien merkitystä. Toimi kuten edellä
+silloin kun ehdotetaan esimerkiksi `int ika` tyyppisessä lausessa `int` sanan kohdalle
+että `use var`, eli poista tämä huomautus käytöstä.
+
+- `Editor/General/Code Completion` poista ruksi "Preselect the best match to
+insert it by pressing dot, parantheses, and other keys"
+- `Editor/Inlay Hints` poista ruksi "Enable Inlay Hints in .NET languages"
+
+## Valinnaista lisätietoa: Suositeltavat käyttöliittymän asetukset 
+
+Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla käytettyjä asetuksia. 
+
+**Siirrä alaosan paneelit yhteen reunaan.** ![Move panels example gif](./images/rider-paneelit-vasemmalle.gif) Tämän
+ansiosta esimerkiksi tulosteita on helpompi tarkastella hieman leveämmässä näkymässä. Joissakin tilanteissa
+(esimerkiksi debugatessa) joitakin paneeleja voi olla hyvä siirtää tarvittaessa oikeallekin. Voit
+myös piilottaa turhia paneeleja näkyviltä kun klikkaat hiiren oikealla kuvakkeen päällä ja sitten Hide.
+
+**Paneeleita voi "unpinnata"** eli piilottaa näkyvistä silloin kun ne eivät ole aktiivisia. Klikkaa paneelista kolmea pistettä ja valitse View Mode <i class="bi bi-chevron-right"></i> Dock Unpinned. Jos unpinnaat esimerkiksi Debug-paneelin, voit ajaa ConsoleMain-sovelluksen (Debug-tilassa), ja painaa ajon jälkeen Esc-näppäintä. Paneeli sulkeutuu ja fokus siirtyy takaisin editoriin. (Ei tarvitse koskea hiireen, JES! :))
+
+**Piilota onnistuneen käännöksen ilmoitus.** Tämä ilmoitus on lähinnä vain tiellä. Valitse Settings <i class="bi bi-chevron-right"></i> Notifications <i class="bi bi-chevron-right"></i> Build messages <i class="bi bi-chevron-right"></i> No popup. Suosittelen myös poistamaan valinnan kohdasta *Show in tool window*, koska harvemmin on tarvetta tietää tarkkoja kellonaikoja milloin käännös on onnistunut tai epäonnistunut. 
+
+**Koko ruudun tilan** saat käyntiin View <i class="bi bi-chevron-right"></i> Appearance <i class="bi bi-chevron-right"></i> Enter Full Screen. Minulla näppäinoikotie on Ctrl+Shift+Enter, mutta 
+kuten mitä tahansa näppäinoikoteitä, tätäkin voi muuttaa kohdasta Settings <i class="bi bi-chevron-right"></i> Keymap. Myös *Distraction Free Mode* on mielestäni mukava, vaikkakin se piilottaa jotain 
+hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liittyvät pikkukolmiot. 
+
+**Debug/release-valikon näyttäminen New UI:ssa.** Jos käytät uutta käyttöliittymävaihtoehtoa (Settings New UI), kannattaa ns. debug/release-käännösvalikko ottaa käyttöön [tässä ohjeessa kuvatulla tavalla](https://youtrack.jetbrains.com/issue/RIDER-83004/No-Edit-Solution-Configuration-and-Build-button-in-new-UI).
+
+**Ulkoisen konsoli-ikkunan käyttäminen**: Jos haluat konsoliohjelman aukeavan
+ulkoiseen konsoliin katso 
+[How to launch console app in external
+window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
+
+> [!VINKKI]
+> Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
+> valitsemalla *File* <i class="bi bi-chevron-right"></i> *Manage IDE Settings*
+> <i class="bi bi-chevron-right"></i> *Settings sync*.
+
+## Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
+
+Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka yrittää täydentää
+kirjoitetun rivin loppuun ympäröivän koodin perusteella:
+
+![AI autocompletion example](images/taydennys.png)
+
+Aivan opintojakson alussa tämä täydennys ei haittaa, mutta myöhemmin täydennys
+pikemmin häiritsee sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään
+se pois seuraavasti:
+
+- Avaa Rider *Welcome to JetBrains Rider* -näkymään
+- Valitse vasemmasta alalalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Settings*
+- Mene asetuksissa kohtaan *Editor* <i class="bi bi-chevron-right"></i> *General* <i class="bi bi-chevron-right"></i> *Inline Completion*
+- Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
+- Tallenna asetukset *Save*-painikkeella
+

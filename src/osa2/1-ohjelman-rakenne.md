@@ -26,7 +26,7 @@ public class Sovellus
 }
 ```
 
-<details closed><summary>✨ Valinnaista lisätietoa: "luokaton" ohjelma</summary>
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: "luokaton" ohjelma</summary>
 
 C#:ssa (alkaen versiosta 9) voi kirjoittaa ohjelman, jossa ei ole luokkaa eikä pääohjelmaa. Tällöin aivan vasemmalle (vähiten sisennetyt rivit) kirjoitetut lauseet muodostavat niin sanotut *top-level statements* -koodin. Kääntäjä muodostaa tämän koodin perusteella luokan ja ohjelman aloituspisteen taustalla ilman, että ohjelmoijan tarvitsee sitä erikseen määritellä. Näin on periaatteessa mahdollista kirjoittaa "Hello world"-ohjelma yksinkertaisesti:
 

@@ -1,47 +1,52 @@
 # Suorittaminen
 
-Suorituksen voi saada kahdella tavalla, ja arvosana määräytyy valitun tavan mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
+Suorituksen voi saada kahdella tavalla, ja arvosana määräytyy valitun tavan
+mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
 
-> [!TODO]
-> Korjaa linkit!
-
-| Suoritustapa 1 | Suoritustapa 2 |
-| - | - |
+| Suoritustapa 1                                                             | Suoritustapa 2                                                             |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") | teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") |
-| keräät yhteensä vähintään 27 pistettä harjoitustehtävistä | keräät vähintään 5 pistettä **jokaiselta** harjoitustehtäväviikolta |
-| suoritat [debuggausnäytteen]() hyväksytysti | suoritat [debuggausnäytteen]() hyväksytysti |
-| suoritat [harjoitustyön]() hyväksytysti | suoritat [harjoitustyön]() hyväksytysti |
-| osallistut [tenttiin]() | ei tenttiä |
-| Arvosana välillä 1-5 | Arvosana 1 |
+| keräät yhteensä vähintään 27 pistettä harjoitustehtävistä                  | keräät vähintään 5 pistettä **jokaiselta** harjoitustehtäväviikolta        |
+| suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               |
+| suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     |
+| osallistut [tenttiin](tentti.md)                                           | ei tenttiä                                                                 |
+| Arvosana välillä 1-5                                                       | Arvosana 1                                                                 |
 
-Arvosana määräytyy tenttipisteistä, joita voi korottaa harjoitustehtävistä saatavilla [hyvityspisteillä](/view/basedir/ohjeet/demot#hyvitykset-tenttiin).
+Suoritustavassa 1 arvosana määräytyy tenttipisteistä, joita voi korottaa
+harjoitustehtävistä saatavilla
+[hyvityspisteillä](#hyvitykset-tenttiin).
 
 > [!VAROITUS]
-> Suoritustapa 2 ei sovellu välttämättä sinulle, jos tavoitteenasi on hakea opiskelupaikkaa [avoimen väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin) kautta.
-> Tarkista huolellisesti hakukohteesi valintaperusteet.
+> Suoritustapa 2 ei sovellu välttämättä sinulle, jos tavoitteenasi on hakea
+> opiskelupaikkaa [avoimen
+> väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin)
+> kautta. Tarkista huolellisesti hakukohteesi valintaperusteet.
 
-Näet keräämäsi viikkotehtävien pisteet ja muut osasuoritusten edistymiset [Eteneminen]()-sivulla.
+Näet harjoitustehtävistä keräämäsi pisteet ja muut osasuoritusten edistymiset
+[Eteneminen](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen)-sivulla
+TIMissä.
 
-Kaikkien suoritusten tekemisessä on noudatettava [akateemista
-rehellisyyttä]().
+Kaikkien suoritusten tekemisessä on noudatettava [opintojakson eettisiä ohjeita](#eettiset-ohjeet).
 
 Mikäli sairauden tai muun hyvän syyn vuoksi et pysty tekemään jotain osasuoritusta, ilmoita siitä heti opettajalle.
 
 ## Harjoitustehtävät
 
-Kunkin osan päätteeksi on mainittu siihen osaan liittyvät harjoitustehtävät. Harjoitustehtävien tekemiseen saa apua pääteohjauksissa; ks. ajat etusivulta. Harjoitustehtävät ovat erinomainen mahdollisuus oppia asioita omakohtaisesti. Tehtävät ovat automaattisesti arvosteltuja ellei toisin mainita. 
+Kuhunkin osan liittyy harjoitustehtäviä. Harjoitustehtävien tekemiseen saa apua
+pääteohjauksissa; ks. ajat etusivulta. 
 
-- `T`- eli *ydintehtävät* sisältävät osaamistavoitteiden kannalta keskeiset asiat,
-- `V`- eli *visuaaliset tehtävät* ovat kertausta ja harjoittelua visualisoinneilla ja simulaattoreilla,
-- `B`- eli *bonustehtävät* ovat lisätehtäviä, jotka vaativat hieman enemmän vaivaa,
-- `G`- eli *gurutehtävät* ovat edistyneitä lisätehtäviä, jotka ylittävät osaamistavoitteet ja saattavat vaatia itsenäistä lisäopiskelua.
+Harjoitustehtäviä on hieman eri tasoisia. Opintojakson osaamistavoitteiden
+kannalta keskeiset tehtävät ovat **T**-tehtäviä eli *ydintehtäviä*, ja näistä
+osa on pakollisia, jotka on merkitty tähdellä (★). Muita tehtäviä
+(bonustehtävät, gurutehtävät) on tarjolla kertausta, harjoittelua ja
+lisähaastetta varten. 
 
-*Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen*, ellei erikseen
-toisin mainita. Näet maksimipistemäärän aina tehtävän yhteydessä.
-
-*Muista tarkistaa, että viimeisin saamasi pistemäärä on oikein.* 
-Tehtävien vastausten lukumäärää ei ole rajoitettu. Pisteet lasketaan aina
-viimeisimmän tallennuksen tai ajon mukaan.
+Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen, ellei erikseen
+toisin mainita. Voit vastata niin monta kertaa kuin haluat. Pisteet lasketaan
+aina viimeisimmän tallennuksen perusteella. Osa tehtävistä on automaattisesti
+arvosteltuja, osassa asetat itse pisteesi. Lue aina tehtävänannon ohjeet
+huolellisesti ja tarkista, että viimeisin saamasi tai itse asettamasi pistemäärä
+on oikein. 
 
 Tehtävien aikataulurajoitukset ja mallivastauskäytänteet vaihtelevat opiskelijaryhmittäin seuraavasti:
 
@@ -72,72 +77,78 @@ Tehtävien aikataulurajoitukset ja mallivastauskäytänteet vaihtelevat opiskeli
     </tbody>
 </table>
 
-Mallivastauksia voivat katsoa vain opintojaksolle ilmoittautuneet opiskelijat.
-
-> [!TODO]
-> Pitäisikö palautustilaisuuksista sanoa tässä kohden jotain?
-> Vanhaa tekstiä...: Demoihin osallistuminen on suositeltavaa, mutta ei pakollista. 
-> Demoista tehdään tallenteet, jotka voi katsoa jälkikäteen. 
-> Palautustilaisuuksien aikataulu näkyy opintojakson [etusivulla]().
+Mallivastauksia sekä harjoitustehtävien palautustilaisuuksien tallenteita voivat
+katsoa vain opintojaksolle ilmoittautuneet opiskelijat. Linkit näihin löytyvät [TIMistä](https://tim.jyu.fi/view/kurssit/tie/itkp102/koti#aikataulu).
 
 Ohjelmatehtävät tehdään Riderissa tai suoraan TIMissä. Heti kun Rideria opitaan käyttämään, kannattaa ohjelmatehtävät pääsääntöisesti tehdä ko. työkalulla. Tehtävien vastaukset palautetaan aina TIM-järjestelmään.
 
-## Hyvitykset tenttiin {id="4TdyTQIm9Cap"}
+## Hyvitykset tenttiin (suoritustapa 1) {#hyvitykset-tenttiin}
 
-Tekemällä harjoitustehtäviä kerrytät hyvityspisteitä tenttiin seuraavasti:
+Tentin minimipistemäärä on 0 ja maksimipistemäärä on 24. Tekemällä
+harjoitustehtäviä kerrytät hyvityspisteitä tenttiin seuraavasti.
 
-| min. hyväksiluettuja tehtäväpisteitä | Hyvityspisteitä |
-| -: | - |
+| harjoitustehtävistä kerättyjä pisteitä vähintään | Hyvityspisteitä |
+| -----------------------------------------------: | --------------- |
+|                                               27 | 1               |
+|                                               33 | 2               |
+|                                               40 | 3               |
+|                                               47 | 4               |
+|                                               53 | 5               |
+|                                               60 | 6               |
 
-Kultakin harjoitustehtäväkerralta hyväksiluetaan **enintään demo_max_points_cap pistettä**.
-Toisin sanoin, vaikka saisit joltain harjoitustehtäväkerralla
-kerättyä lisätehtävillä enemmänkin pisteitä, hyväksiluetaan siitä vain demo_max_points_cap pistettä.
+Kultakin harjoitustehtäväkerralta hyväksiluetaan **enintään 8
+harjoitustehtäväpistettä**. Toisin sanoen, vaikka saisit joltain
+harjoitustehtäväkerralla kerättyä lisätehtävillä enemmänkin pisteitä,
+huomioidaan vain 8 harjoitustehtäväpistettä tentin hyvityspisteiden laskennassa.
 
-Hyvityspisteet lasketaan suoraan tenttipisteisiin ennen tenttiarvosanan laskemista.
-Hyvityspisteet pätevät kaikkiin opintojakson tenttikertoihin.
-
-<details closed><summary>Lisätietoja hyvityspisterajoista kiinnostuneille</summary>
-
-Hyvityspisteiden laskennassa harjoitustehtäväkerroista tehdään seuraavat oletukset:
-
-- Harjoitustehtäväkertoja ($N_{\text{d}}$) on yhteensä $demos_count$
-- Yhdessä harjoitustehtäväkerrassa *ydintehtävistä* keskimääräinen pistemäärä ($\hat{p}_{\text{d}}$) on $demo_expected_mean_points$ pistettä
-- Suurimman hyvityspistemäärän ($H_{\text{max}} = max_demo_hyvitys) saa keräämällä $90 \% kaikista ydintehtävien pisteistä pyöristettynä ylöspäin lähimpään kokonaislukuun
-- Pienimmän hyvityspistemäärän ($H_{\text{min}} = 1$) saa keräämällä demo_min_percentage \%$ kaikista ydintehtävien pisteistä pyöristettynä ylöspäin lähimpään kokonaislukuun
-- Hyvityspisteitä voidaan antaa vain kokonaisina pisteinä
-
-Huomioita:
-
-- Ajan myötä joihinkin harjoitustehtäväkertoihin on lisätty enemmän kuin $demo_expected_mean_points$ ydintehtävää, mutta tämä luku on valittu "tarpeeksi hyväksi" arvioksi yksittäisen kerran työmäärästä.
-- Lisäksi todellisuudessa harjoitustehtäväkerrassa on muitakin tehtävätyyppejä, josta saa pisteitä. Niitä ei tässä mallissa oteta huomioon.
-
-Tämän perusteella kaikkien ydintehtävien pisteiden summa on keskimäärin $N_{\text{d}} \cdot \hat{p}_{\text{d}} = demos_count * demo_expected_mean_points$ pistettä.
-Tällöin hyvityspisteiden saamiseksi tarvitaan vähintään $\left\lceil \frac{ demo_min_percentage }{100} \cdot N_{\text{d}} \cdot \hat{p}_{\text{d}} \right\rceil = (demo_min_percentage/100*demo_expected_mean_points*demos_count)|round(0, "ceil")$ pistettä.
-
-Koska hyvityspisteitä annetaan vain kokonaisina pisteitä, seuraava "hyvityspistetaso" saavutetaan aina $\dfrac{90 \% - demo_min_percentage \%}{H_{\text{max}} - H_{\text{min}}} = (100-demo_min_percentage)/max_demo_hyvitys \%$ välein.
-
-Näin ollen hyvityspistemäärää $H \in \{1,\ldots,max_demo_hyvitys\}$ varten tarvitaan vähintään
-
-$$\left\lceil \dfrac{ demo_min_percentage - (100-demo_min_percentage)/max_demo_hyvitys + H \cdot (100-demo_min_percentage)/max_demo_hyvitys }{100} \cdot N_{\text{d}} \cdot \hat{p}_{\text{d}} \right\rceil$$ pistettä.
-
-Yllä oleva taulukko lasketaan tämän kaavan avulla.
-
-</details>
+Hyvityspisteet lasketaan suoraan tenttipisteisiin ennen tenttiarvosanan
+laskemista. Hyvityspisteet otetaan lukuun **kolmeen ensimmäiseen tenttiin**,
+jotka opiskelija suorittaa, ja enintään yhden vuoden sisällä opintojakson
+viimeisestä suorituspäivästä. 
 
 ## Tehtävien muutos- ja päivityskäytänteet
 
-Opintojaksolla ei ole erillisiä "vuosiversioita", vaan samat materiaalit ovat käytettävissä kaikissa toteutuksissa.
-Opintojakson materiaaleja ja harjoitustehtäviä päivitetään 1–2 kertaa
-vuodessa.
+Opintojaksolla ei ole enää vaihtuvia versioita vuosittaisille toteutukselle,
+vaan samat materiaalit ovat käytettävissä kaikissa toteutuksissa, myös avoimen
+yliopiston toteutuksissa sekä lukioyhteistyössä. 
 
-Useimmiten päivitykset ovat pieniä, kuten kirjastojen versiopäivityksiä ja tekstien
-selkeyden parannuksia. Ajoittain voidaan kuitenkin tehdä myös suurempia muutoksia,
-esimerkiksi poistaa tehtäviä tai lisätä uusia.
+Opintojakson materiaaleja ja harjoitustehtäviä päivitetään 1–2 kertaa vuodessa.
+Useimmiten päivitykset ovat pieniä, kuten kirjastojen versiopäivityksiä ja
+tekstien selkeyden parannuksia. Ajoittain voidaan kuitenkin tehdä myös suurempia
+muutoksia, esimerkiksi poistaa tehtäviä tai lisätä uusia, tai tehdä isompia
+päivityksiä oppimateriaaleihin.
 
-Muutoksista huolimatta kaikki jo kerätyt harjoitustehtäväpisteet pysyvät voimassa, ja
-opintojakson suorittamista voi jatkaa normaalisti päivityksistä välittämättä. Myös
-opintojakson suoritusehdot pysyvät samoina muutoksista riippumatta.
+Muutoksista huolimatta kaikki jo kerätyt harjoitustehtäväpisteet pysyvät
+voimassa, ja opintojakson suorittamista voi jatkaa normaalisti päivityksistä
+välittämättä. Myös opintojakson suoritusehdot pysyvät samoina muutoksista
+riippumatta.
 
-## Akateeminen rehellisyys
+## Eettiset ohjeet {#eettiset-ohjeet}
 
-Tänne juttua.
+Olet vastuussa kaikista palauttamistasi töistä. Kopioiminen tai toisen henkilön
+työn esittäminen omanaan on kiellettyä. Ryhmätyö on sallittua, mutta jokaisen
+ryhmän jäsenen tulee antaa panoksensa työhön, ymmärtää tekemänsä asiat ja osata
+selittää ne tarvittaessa. Ryhmätyönä tehty osa tulee aina merkitä selvästi
+palautettuun työhön, esimerkiksi koodin kommenttien avulla. 
+
+Noudatamme [Jyväskylän yliopiston ohjeita ja linjauksia tekoälypohjaisten
+sovellusten käytössä
+opiskelussa](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintoja-ohjaavat-saadokset-ja-maaraykset/tekoalypohjaisten-sovellusten-kaytto-opiskelussa-jyu-ohjeet-ja-linjaukset).
+Alla olevat ohjeet täydentävät näitä linjauksia. 
+
+Generatiivisten tekoälytyökalujen käyttö koodin luomisessa on kiellettyä.
+Ohjelmoinnin opiskelun eräinä keskeisinä osaamistavoitteina on ongelmanratkaisun
+ja päättelyn oppiminen, ja tekoälytyökalujen käyttö vääristää näitä
+osaamistavoitteita. Kiellettyjä generatiivisia työkaluja ovat esimerkiksi GitHub
+Copilot, ChatGPT, Bard ja vastaavat chat- ja agenttisovellukset. Myös Riderin
+koodin tekoälypohjainen täydennys käyttö on kiellettyä. 
+
+Generatiivista tekoälyä voi käyttää apuvälineenä esimerkiksi käsitteiden
+selittämiseen, tehtävänantojen ymmärtämiseen tai materiaalissa annettujen
+esimerkkien selittämiseen. Tekoälytyökalulle annettavassa kehotteessa tulee
+huomioida, että tekoäly ei saa tuottaa suoria vastauksia tai koodia
+opintojakson tehtäviin.
+
+Menettely vilppiepäilytilanteessa on kuvattu [Jyväskylän yliopiston opintoja
+ohjaavissa säädöksissä ja
+määräyksissä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintoja-ohjaavat-saadokset-ja-maaraykset/vilppitapausten-kasittely).
