@@ -1,6 +1,8 @@
 # Debuggausnäyte
 
-Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden hallintaa:
+Debuggausnäytteessä osoitat, että osaat käyttää debuggeria ongelmatilanteiden
+selvittämiseen. Näytteessä testataan muun muassa seuraavien osa-alueiden
+hallintaa:
 
 - askeltaminen aliohjelman sisään (step into)
 - aliohjelman suorittaminen yhtenä askeleena (step over)
@@ -13,9 +15,16 @@ Näyte arvostellaan asteikolla hyväksytty/hylätty.
 
 ## Aikataulu ja takarajat
 
+<!-- 
 | Tutkinto-opiskelijat                                                                                                                                                                                                                   | Lukiolinjat                                                                     | Avoin yliopisto                                                                   |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Näyte tulee palauttaa osan 8 takarajaan mennessä. Mahdollisista aikataulujoustoista (esim. sairauden takia) on aina sovittava ohjaajan kanssa. Palauttaminen myöhässä ilman ennalta sovittua joustoa voi johtaa näytteen hylkäämiseen. | Näyte tulee palauttaa valitsemasi opintojaksototeutuksen aikataulun mukaisesti. | Näytteen palauttamiselle ei ole takarajaa, mutta se on hyväksytettävä ohjaajalla. |
+--> 
+
+Näyte tulee olla tehtynä ja hyväksyttynä ennen tenttiin osallistumista.
+Huomioithan, että näytteen tekeminen ja hyväksyttäminen voi viedä aikaa, joten
+aloita ajoissa. Suosittelemme, että teet näytteen viimeistään osan 8 takarajaan
+mennessä. 
 
 ## Miksi? 
 
@@ -30,7 +39,8 @@ Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa t
 
 ## Näytteen suorittaminen
 
-Voit suorittaa debuggausnäytteen videona itsenäisesti tai ohjauksessa. Voit suorittaa debuggausnäytteen sinulle sopivana aikana. Debuggausnäytteen suorittamiselle ei ole takarajaa.
+Voit suorittaa debuggausnäytteen videona itsenäisesti tai ohjauksessa. Voit
+suorittaa debuggausnäytteen sinulle sopivana aikana. 
 
 Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 
