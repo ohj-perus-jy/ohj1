@@ -4,11 +4,12 @@ Lukuvuonna 2025-2026 tenttejä järjestetään seuraavasti
 
 | Tentti  | Päivämäärä | Aika      | Paikka       | Ilmoittautumislinkki |
 | ------- | ---------- | --------- | ------------ | -------------------- |
-| Kevät 1 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
-| Kevät 2 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
-| Kevät 3 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
-| Kesä 1  | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
-| Kesä 2  | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
+| Kevät 1 | 10.4.2026  | klo 16-20 | Agora / Zoom | Ilmoittaudu          |
+| Kevät 2 | 29.4.2026  | klo 12-16 | Agora / Zoom | Ilmoittaudu          |
+| Kevät 3 | 27.5.2026  | klo 12-16 | Agora / Zoom | Ilmoittaudu          |
+| Kesä 1  | 18.6.2026  | klo 12-16 | Agora / Zoom | Ilmoittaudu          |
+| Kesä 2  | 5.8.2026   | klo 12-16 | Agora / Zoom | Ilmoittaudu          |
+| Kesä 3  | 10.9.2026  | klo 16-20 | Agora / Zoom | Ilmoittaudu          |
 | Syksy 1 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
 | Syksy 2 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
 | Syksy 3 | pp.kk.2026 | klo xx-xx | Agora / Zoom | Ilmoittaudu          |
