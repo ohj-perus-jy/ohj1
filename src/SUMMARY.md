@@ -92,7 +92,8 @@
 <!--     * [Pino ja kutsupino]() --> 
 <!--     * [Osan kaikki tehtävät](./osa8/tehtavat.md) --> 
  * [Osa 9](./osa9/index.md)
-    * [Luento 17: Kertaus, tietoa tentistä](./luennot/luento17.md)
+    * [Luento 17: Rekursio / Kertaus, tietoa tentistä](./luennot/luento17.md)
+    * [Luento 18: Kertaus, tietoa tentistä](./luennot/luento18.md)
     * [Harjoitustehtävät 9](./luennot/harjoitus9.md)
 <!-- * [Pelin tekemistä!](./osa9/osa9.md) -->
 <!--    * [Graafinen ohjelmointi]() -->
