@@ -44,7 +44,7 @@ yhteydenottotavoista:
  - **Etänä:** Jätä avunpyyntö lomakkeella: Avunpyyntö etätentissä (linkki tulee
    tähän hyvissä ajoin ennen tenttiä)
  - Laita viesti osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`
- - Soita numeroon `teacher_phone_number`
+ - Soita numeroon `040 805 3276`
  - Muista, että ongelman sattuessa ei ole kiirettä tai syytä paniikkiin.
    Vastuuopettaja voi tarvittaessa myöntää lisäaikaa tenttiin.
 
