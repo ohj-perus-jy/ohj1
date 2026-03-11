@@ -1,1 +1,11 @@
 # Luento 18
+
+ * Tentistä
+ * Kertaus
+ * Rekursio
+
+## Kevät 2026
+
+ * 📺 Katso tallenne ([YouTube](https://youtube.com/live/By0F25AgHj0?feature=share), Moniviestin
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento18/Luento18.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento18)
