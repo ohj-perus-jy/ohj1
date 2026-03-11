@@ -27,8 +27,7 @@ Vain tunnistettujen opiskelijoiden suorituksen arvostellaan.
 
 Tenttiaika on **4 tuntia**. Ilmoita ilmoittautumisen yhteydessä, mikäli sinulle
 on esimerkiksi myönnetty lisäaikaa tentteihin 
-[yksilöllisenä järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/
-opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
+[yksilöllisenä järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
 
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 
