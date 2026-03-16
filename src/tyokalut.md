@@ -677,9 +677,7 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 
 *** 
 
-## Riderin tekoälyasetusten kytkeminen pois päältä
-
-#### Tekoälytäydennyksen kytkeminen pois {#rider-ai}
+## Riderin tekoälyasetusten kytkeminen pois päältä {#rider-ai}
 
 Riderissa on parikin erilaista tekoälypohjainen täydennysominaisuutta: *AI
 Asisstant* ja *Inline Completion*. Näiden
