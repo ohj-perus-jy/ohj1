@@ -677,6 +677,29 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 
 *** 
 
+## Riderin tekoälyasetusten kytkeminen pois päältä
+
+#### Tekoälytäydennyksen kytkeminen pois {#rider-ai}
+
+Riderissa on parikin erilaista tekoälypohjainen täydennysominaisuutta: *AI
+Asisstant* ja *Inline Completion*. Näiden
+avulla Rider yrittää täydentää kirjoitettua koodia. Esimerkki Riderin
+tekoälypohjaisesta koodin täydennyksestä: 
+
+![](images/rider-ai.png)
+
+Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.
+
+1. AI Assistantin kytkeminen pois
+   - Settings <i class="bi bi-chevron-right"></i> Plugins
+   - Valitse Installed-välilehti
+   - Etsi *AI Assistant* ja poista plugin käytöstä (Disable) tai poista se kokonaan (Uninstall)
+2. Inline Completion -täydennyksen kytkeminen pois
+   - Avaa Rider *Welcome to JetBrains Rider* -näkymään
+   - Valitse vasemmasta alalalaidasta Configure <i class="bi bi-chevron-right"></i> Settings
+   - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Inline Completion
+   - Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
+   - Tallenna asetukset *Save*-painikkeella
 
 ## Tekstieditori 
 
