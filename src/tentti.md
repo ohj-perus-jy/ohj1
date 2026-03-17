@@ -4,9 +4,9 @@ Lukuvuonna 2025-2026 tenttejä järjestetään seuraavasti
 
 | Tentti  | Päivämäärä   | Aika      | Paikka                   | Ilmoittautumislinkki                                                      |
 | ------- | ------------ | --------- | ------------------------ | ------------------------------------------------------------------------- |
-| Kevät 1 | pe 10.4.2026 | klo 16-20 | Agora Auditorio 1 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/teacher/kurssit/tie/itkp102/tentti/koti) |
-| Kevät 2 | ke 29.4.2026 | klo 12-16 | Agora Auditorio 1 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/teacher/kurssit/tie/itkp102/tentti/koti) |
-| Kevät 3 | ke 27.5.2026 | klo 12-16 | Agora Auditorio 2 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/teacher/kurssit/tie/itkp102/tentti/koti) |
+| Kevät 1 | pe 10.4.2026 | klo 16-20 | Agora Auditorio 1 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti) |
+| Kevät 2 | ke 29.4.2026 | klo 12-16 | Agora Auditorio 1 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti) |
+| Kevät 3 | ke 27.5.2026 | klo 12-16 | Agora Auditorio 2 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti) |
 | Kesä 1  | 18.6.2026    | klo 12-16 | Agora / Zoom             | Ilmoittaudu                                                               |
 | Kesä 2  | 5.8.2026     | klo 12-16 | Agora / Zoom             | Ilmoittaudu                                                               |
 | Kesä 3  | 10.9.2026    | klo 16-20 | Agora / Zoom             | Ilmoittaudu                                                               |
