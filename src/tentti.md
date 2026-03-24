@@ -17,13 +17,13 @@ Lukuvuonna 2025-2026 tenttejä järjestetään seuraavasti
 Voit osallistua tenttiin joko Agoran luentosalissa tai etänä Zoomin kautta. 
 
 Tenttiin tulee ilmoittautua <u>viimeistään 72 tuntia</u> ennen tentin
-alkuhetkeä. Ilmoittautumisen yhteydessä opiskelijan valitsee tentin
+alkuhetkeä. Ilmoittautumisen yhteydessä opiskelija valitsee tentin
 suoritustavan (salitentti tai etätentti) ja hyväksyy tentin säännöt (kuvattu
 alla). 
 
-Tenttiaika on **4 tuntia**. Ilmoita ilmoittautumisen yhteydessä, mikäli sinulle
-on esimerkiksi myönnetty lisäaikaa tentteihin 
-[yksilöllisenä järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
+Ilmoita ilmoittautumisen yhteydessä, mikäli sinulle on esimerkiksi myönnetty
+lisäaikaa tentteihin [yksilöllisenä
+järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
 
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 
@@ -33,16 +33,17 @@ ohjeet opintojakson Ohjelmointi 1 (ITKP102) -tenttiin](./tenttiohjeet.md) ennen
 tenttiin ilmoittautumista. Jos yliopiston ohjeiden ja opintojakson tarkentavien
 ohjeiden välillä on ristiriita, opintojakson ohjeet pätevät.
 
-## Tekniset ongelmat tentin aikana
+## Ongelmat tentin aikana
 
-Jos tentin aikana ilmenee teknisiä ongelmia, käytä jotakin seuraavista
+Jos tentin aikana ilmenee ongelmia, käytä jotakin seuraavista
 yhteydenottotavoista:
 
  - **Salissa:** Nosta kätesi ylös ja odota, että valvoja tulee luoksesi.
  - **Etänä:** Jätä avunpyyntö lomakkeella: Avunpyyntö etätentissä (linkki tulee
    tähän hyvissä ajoin ennen tenttiä)
- - Laita viesti osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`
- - Soita numeroon `040 805 3276`
+ - Vaihtoehtoisesti laita sähköposti osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
+ - Vaihtoehtoisesti soita numeroon 040 805 3276 (Antti-Jussi Lakanen). Ei
+      tekstiviestejä. 
  - Muista, että ongelman sattuessa ei ole kiirettä tai syytä paniikkiin.
    Vastuuopettaja voi tarvittaessa myöntää lisäaikaa tenttiin.
 
