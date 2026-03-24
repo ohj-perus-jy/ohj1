@@ -21,10 +21,6 @@ alkuhetkeä. Ilmoittautumisen yhteydessä opiskelijan valitsee tentin
 suoritustavan (salitentti tai etätentti) ja hyväksyy tentin säännöt (kuvattu
 alla). 
 
-Opiskelijan on todistettava henkilöllisyytensä ennen tentistä poistumista.
-Henkilöllisyyden todistamiseksi hyväksytään passi, henkilökortti tai ajokortti.
-Vain tunnistettujen opiskelijoiden suorituksen arvostellaan.
-
 Tenttiaika on **4 tuntia**. Ilmoita ilmoittautumisen yhteydessä, mikäli sinulle
 on esimerkiksi myönnetty lisäaikaa tentteihin 
 [yksilöllisenä järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
