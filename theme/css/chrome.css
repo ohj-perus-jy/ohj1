@@ -38,6 +38,7 @@ a>.hljs {
     right: auto;
     bottom: auto;
     height: 100vh;
+    /*height: 100dvh;*/ /* We don't need this after all? */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: var(--sidebar-width);
@@ -822,7 +823,7 @@ html:not(.sidebar-resizing) .sidebar {
 }
 
 .sidebar .sidebar-scrollbox {
-    min-height: 100%;
+    min-height: calc(100%-10px);
 }
 
 html.toc-ready .sidebar .sidebar-scrollbox {
@@ -865,6 +866,12 @@ html:not(.js) .chapter li+li>ol.section {
     .spacer {
         margin: 10px 0;
     }
+}
+
+.sidebar .sidebar-scrollbox::after {
+    content: "";
+    display: block;
+    height: 6em;
 }
 
 .section {

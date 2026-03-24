@@ -74,13 +74,26 @@ h6:target::before {
 }
 
 details {
-    background: var(--code-bg);
+    background: var(--quote-bg);
     /* add drop shadow to details to make it stand out */
     /* box-shadow: 0 2px 2px var(--details-border); */    
     border: 1px solid var(--details-border);
     padding: 1em;
     overflow: hidden;
-} 
+    margin-block: 1em;
+}
+
+details {
+    h1, h2, h3, h4, h5, h6 {
+        &:first-child {
+            display: inline;
+
+            a {
+                pointer-events: none;
+            }
+        }
+    }
+}
 
 details summary {
     user-select: none;
@@ -387,4 +400,38 @@ div:has(> svg.svgbob) {
 
 svg.svgbob {
     width: initial !important;
+}
+
+/* svgbob inline-SVG: korjaa ää / äö-kerning */
+svg.svgbob text {
+  font-family: "DejaVu Sans Mono",
+               "Noto Sans Mono",
+               "JetBrains Mono",
+               ui-monospace,
+               SFMono-Regular,
+               Menlo,
+               Consolas,
+               "Liberation Mono",
+               monospace !important;
+
+  font-kerning: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "kern" 0, "liga" 0, "calt" 0;
+  letter-spacing: 0;
+}
+
+div.ht-reqs {
+    counter-reset: section;
+    .req {
+        counter-increment: section;
+        
+        ol {
+            padding-inline-start: 1.5em;
+        }
+
+        ol > li::marker {
+            content: counter(section) "." counter(list-item) " ";
+            font-weight: bold;
+        }
+    }
 }
