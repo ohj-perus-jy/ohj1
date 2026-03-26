@@ -435,3 +435,8 @@ div.ht-reqs {
         }
     }
 }
+
+/* Hide tenttiohjeet from sidebar TOC, keep page buildable and directly accessible */
+.sidebar a[href$="tenttiohjeet.html"] {
+  display: none !important;
+}

@@ -9,7 +9,7 @@
 [Tentti](./tentti.md)
 [Tyyliopas](./tyyliopas.md)
 [Usein kysyttyä](./ukk.md)
-[](./tenttiohjeet.md)
+[Tenttiohjeet](./tenttiohjeet.md)
 
 ---
 
