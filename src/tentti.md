@@ -28,8 +28,8 @@ järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 
 Ennen kuin ilmoittaudut tenttiin, lue huolellisesti (i) [Jyväskylän yliopiston
-ohjeet verkkotenttien suorittamiseen](./tenttiohjeet.md) ja (ii) [Tarkentavat
-ohjeet opintojakson Ohjelmointi 1 (ITKP102) -tenttiin](./tenttiohjeet.md) ennen
+ohjeet verkkotenttien suorittamiseen](./tenttiohjeet.md#jy-tenttiohjeet) ja (ii) [Tarkentavat
+ohjeet opintojakson Ohjelmointi 1 (ITKP102) -tenttiin](./tenttiohjeet.md#ohj1-tenttiohjeet) ennen
 tenttiin ilmoittautumista. Jos yliopiston ohjeiden ja opintojakson tarkentavien
 ohjeiden välillä on ristiriita, opintojakson ohjeet pätevät.
 
