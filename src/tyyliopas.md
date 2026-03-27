@@ -56,10 +56,10 @@ Käytä neljän välilyönnin sisennystä koodilohkoissa, älä käytä tabulaat
 ```csharp,ignore
 if (ehto)
 {
-....for (int i = 0; i < 10; i++)
-....{
-........Console.WriteLine(i);
-....}
+····for (int i = 0; i < 10; i++)
+····{
+········Console.WriteLine(i);
+····}
 }
 ```
 
@@ -85,7 +85,10 @@ if (ehto) {
 ## Nimeämiskäytännöt
 
 - **Luokat ja metodit**: PascalCase (esim. `Laskin`, `LaskeSumma`, `HäiriönKäsittely` tai `HairionKasittely`). 
-- **Muuttujat ja kentät**: camelCase (esim. `laskettavaLuku`, `tulos`)
+- **Muuttujat**: camelCase (esim. `laskettavaLuku`, `tulos`).
+- **Attribuutit**: Suosittelemme etumerkin `_` käyttöä nimen edessä (esim.
+  `_laskettavaLuku`, `_tulos`). Tämä auttaa erottamaan attribuutit muista
+  muuttujista.
 - **Vakiot**: PascalCase (esim. `const int MaxArvo`, `const double Muunnoskerroin`)
 - **Tiedostojen nimet**: PascalCase (esim. `Laskin.cs`, `Ohjelma.cs`)
 - **Kansiot**: PascalCase (esim. `Palvelut`, `Mallit`)
