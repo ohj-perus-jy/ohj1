@@ -108,20 +108,18 @@ viimeisestä suorituspäivästä.
 
 ## Tehtävien muutos- ja päivityskäytänteet
 
-Opintojaksolla ei ole enää vaihtuvia versioita vuosittaisille toteutukselle,
-vaan samat materiaalit ovat käytettävissä kaikissa toteutuksissa, myös avoimen
-yliopiston toteutuksissa sekä lukioyhteistyössä. 
+Opintojaksolla ei ole enää vaihtuvia versioita eri toteutuksille (syksy, kevät,
+jne.), vaan samat materiaalit ovat käytettävissä kaikissa toteutuksissa, myös
+avoimen yliopiston toteutuksissa sekä lukioyhteistyössä. 
 
 Opintojakson materiaaleja ja harjoitustehtäviä päivitetään 1–2 kertaa vuodessa.
 Useimmiten päivitykset ovat pieniä, kuten kirjastojen versiopäivityksiä ja
 tekstien selkeyden parannuksia. Ajoittain voidaan kuitenkin tehdä myös suurempia
 muutoksia, esimerkiksi poistaa tehtäviä tai lisätä uusia, tai tehdä isompia
-päivityksiä oppimateriaaleihin.
-
-Muutoksista huolimatta kaikki jo kerätyt harjoitustehtäväpisteet pysyvät
-voimassa, ja opintojakson suorittamista voi jatkaa normaalisti päivityksistä
-välittämättä. Myös opintojakson suoritusehdot pysyvät samoina muutoksista
-riippumatta.
+päivityksiä oppimateriaaleihin. Nämä isommat päivitykset ajoittuvat
+tyypillisesti lukukauden vaihteeseen, kun tutkinto-opiskelijoiden uudet
+toteutukset aloittavat. Jos olet saanut pisteitä tehtävästä, joka myöhemmin on
+poistettu tai merkittävästi muutettu, järjestelmä muistaa kyllä saamasi pisteet. 
 
 ## Eettiset ohjeet {#eettiset-ohjeet}
 
