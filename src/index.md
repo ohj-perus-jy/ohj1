@@ -45,11 +45,15 @@ Sisu vaatii ilmoittautumisen yhteydessä valitsemaan ohjausryhmän. Voit kuitenk
 täysin vapaasti käyttää kaikkia ohjausaikoja ja -kanavia riippumatta siitä,
 mihin ohjausryhmään olet ilmoittautunut. 
 
-| Tukikanava                                           | Aika                      | Paikka/Linkki                                                                                                                   |
-| ---------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus                                           | ke 8-18, to 8-18, pe 8-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
-| Etäohjaus                                            | ke 8-18, to 8-18, pe 8-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                   | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
+Ohjausajat 7.4. alkaen:
+
+| Tukikanava                                           | Aika                        | Paikka/Linkki                                                                                                                   |
+| ---------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus                                           | ke 10-18, to 10-18, pe 8-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus                                            | ke 10-18, to 10-18, pe 8-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                            |
+| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                     | ohj1-opet@jyu.onmicrosoft.com                                                                                                      |
+
+(Ke klo 8-10 ja to 8-10 pudotettu pois 30.3. alkaen.)
 
 <!--
 | Tukikanava                                           | Aika                        | Paikka/Linkki                           |
