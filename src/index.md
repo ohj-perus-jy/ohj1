@@ -20,8 +20,10 @@ Ennen kuin aloitat opintojakson suorittamisen, tee seuraavat asiat:
  * Suosittelemme, että asennat valmiiksi tarvittavat [ohjelmistot ja työkalut](tyokalut.md). Voit kuitenkin selailla materiaalia jo ennen työkalujen asentamista.
  * Pyydämme, että käyt vastaamassa [alkukyselyyn](https://tim.jyu.fi/view/kurssit/tie/itkp102/kyselyt/esitietokysely).
 
-Voit selata materiaalia vapaasti, mutta tehtävien tekeminen vaatii
-ilmoittautumisen opintojakson toteutukselle Sisu- tai Ilpo-portaalissa. 
+Voit palauttaa tehtäviä vain, jos olet ilmoittautunut opintojaksolle Sisu- tai
+Ilpo-järjestelmässä. Oman etenemisesi tilanteen (harjoitustehtävien pisteet,
+harjoitustyön hyväksyminen, tenttitulokset) näet
+[TIM-järjestelmästä](https://tim.jyu.fi/view/kurssit/tie/itkp102/koti).
 
 ## Uutiset
 
