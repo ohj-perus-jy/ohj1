@@ -20,6 +20,9 @@ Ennen kuin aloitat opintojakson suorittamisen, tee seuraavat asiat:
  * Suosittelemme, että asennat valmiiksi tarvittavat [ohjelmistot ja työkalut](tyokalut.md). Voit kuitenkin selailla materiaalia jo ennen työkalujen asentamista.
  * Pyydämme, että käyt vastaamassa [alkukyselyyn](https://tim.jyu.fi/view/kurssit/tie/itkp102/kyselyt/esitietokysely).
 
+Voit selata materiaalia vapaasti, mutta tehtävien tekeminen vaatii
+ilmoittautumisen opintojakson toteutukselle Sisu- tai Ilpo-portaalissa. 
+
 ## Uutiset
 
 <details><summary>1. tammikuuta 2026: Kurssimateriaalia uudistetaan keväällä 2026</summary>
