@@ -1,6 +1,4 @@
-# <span class="part-icon">👨🏻‍💻</span> Ensimmäinen ohjelma
-
-## Lähdekoodin kirjoittaminen
+# Ensimmäinen ohjelma
 
 Tietokoneohjelma on joukko ohjeita, jotka tietokone suorittaa. Ohjelmoija
 kirjoittaa nämä ohjeet käyttäen ohjelmointikieltä, kuten C#. Tätä kirjoitettua
@@ -74,6 +72,30 @@ Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (eng
 
 Meillä on enää jäljellä kaksi sulkevaa aaltosulkua. Kuten jo mainitsimme, ne kertovat mihin aliohjelma, ja sitten luokka, päättyvät. 
 
+## Mitä nuo väritykset tarkoittavat? Entä välilyönnit rivien alussa?
+
+Koodilohkossa näet, että eri osat lähdekoodista on värikoodattu. Esimerkiksi
+`public`, `class`, `static`, `void` ja `System.Console.WriteLine` on korostettu
+sinisellä, kun taas `"Heippa, maailma!"` on korostettu vihreällä. Nämä
+väritykset auttavat hahmottamaan, mikä osa koodista on mitäkin -- esimerkiksi
+sinisellä korostettu teksti kertoo, että kyseessä on C#-kielen avainsana tai
+sisäänrakennettu toiminto, kun taas vihreällä korostettu teksti on merkkijono,
+eli tekstiä, joka halutaan tulostaa.
+
+Värit eivät vaikuta ohjelman toimintaan, eivätkä itse asiassa kuulu C#-kieleen
+lainkaan -- ne ovat vain ohjelmointiympäristön ominaisuus, joka on lisätty
+koodilohkon esitystapaan, jotta koodin lukeminen olisi helpompaa.
+
+Samoin välilyönnit, joita kutsutaan *sisennyksiksi* (engl. *indentation*), eivät
+vaikuta ohjelman toimintaan, mutta ne auttavat hahmottamaan koodin rakennetta.
+Esimerkiksi aliohjelman `Main` sisällä oleva rivi on sisennetty, mikä kertoo,
+että se kuuluu `Main`-aliohjelmaan. Sisennykset ovat siis visuaalisia
+apuvälineitä, jotka tekevät koodista helpommin luettavaa ja ymmärrettävää.
+
+Ohjelmointikielestä riippuen on mahdollista kirjoittaa koodia ilman sisennyksiä,
+mutta se tekee koodista vaikeammin luettavaa. Siksi on suositeltavaa käyttää
+sisennyksiä, vaikka ne eivät olisikaan pakollisia.
+
 ## Mitä lähdekoodille oikeastaan tapahtuu?
 
 Kun olet kirjoittanut lähdekoodin, se täytyy muuntaa sellaiseen muotoon, että
@@ -129,18 +151,20 @@ kehittäjäyhteisöstä.
 
 </details>
 
-## Käännösvirheet
+## Mitä tapahtuu, jos ohjelmassa on virheitä?
 
 Ohjelma ei toimi, jos siinä on virheitä. Virheet luokitellaan yleensä kahteen
 kategoriaan: käännösaikaisiin virheisiin (engl. *compilation errors*) ja
-suorituksen aikaisiin virheisiin (engl. *runtime errors*). 
+suorituksenaikaisiin virheisiin (engl. *runtime errors*). 
 
 Käännösvirheet havaitaan siinä vaiheessa, kun ohjelma käännetään lähdekoodista
 suoritettavaksi ohjelmaksi. Ohjelma ei käänny, jos se sisältää käännöksen
-estäviä virheitä, kuten syntaksivirheitä. Tällöin kääntäminen ei onnistu eikä
-ohjelmaa voi ajaa. Virheet on korjattava ennen uutta kääntämistä. Käännösvirheet
-näkyvät kääntäjän antamina virheilmoituksina. Esimerkiksi
-Rider-sovelluskehittimessä virheet näkyvät alareunassa olevassa
+estäviä virheitä. Eräs tavallinen käännösvirhe on syntaksivirhe, joka
+tarkoittaa, että lähdekoodi ei noudata C#-kielen sääntöjä. Esimerkiksi jos
+unohdat kirjoittaa puolipisteen lauseen lopusta, saat käännösvirheen. Tällöin
+kääntäminen ei onnistu eikä ohjelmaa voi ajaa. Virheet on korjattava ennen uutta
+kääntämistä. Käännösvirheet näkyvät kääntäjän antamina virheilmoituksina.
+Esimerkiksi Rider-sovelluskehittimessä virheet näkyvät alareunassa olevassa
 *Errors*-välilehdessä.
 
 Alla olevassa ohjelmassa on virhe. Klikkaa Play-painiketta nähdäksesi virheilmoitukset.
@@ -181,7 +205,7 @@ public class Ohjelma
 }
 ```
 
-## 📝 Tehtävät
+## Tehtävät
 
 <task>
   <task-title>Tehtävä T1*: Tulostaminen <points>1 p.</points> </task-title>

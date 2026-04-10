@@ -13,19 +13,21 @@
 
 ---
 
+[Luennot](./luennot/index.md)
 [Omat tiedot (TIM)<https://tim.jyu.fi>]()
 
 ---
 
- * [Osa 1](./osa1/index.md)
+ * [Ohjelmoinnin aloittaminen ja ohjelmointiympäristö](./osa1/index.md)
    * [Luento 1: Johdatus, mitä ohjelmointi on?](./luennot/luento1.md)
    * [Luento 2: IDE, graafinen ohjelma](./luennot/luento2.md)
+   * [Ensimmäinen ohjelma](./osa1/1-ensimmainen-ohjelma.md)
    * [Ohjelmointiympäristö kuntoon](./osa1/2-ohjelmointiymparisto-kuntoon.md)
    * [Harjoitustehtävät 1](./luennot/harjoitus1.md)
+   * [Osan kaikki tehtävät](./osa1/tehtavat.md)
 <!-- * [Ensimmäinen ohjelma](./osa1/1-ensimmainen-ohjelma.md) -->
 <!-- * [Tiedon esittäminen tietokoneella](./osa1/3-tiedon-esittaminen-tietokoneella.md) -->
-<!-- * [Osan kaikki tehtävät](./osa1/tehtavat.md) -->
- * [Osa 2](./osa2/index.md)
+ * [Muuttujat, aliohjelmat](./osa2/index.md)
    * [Luento 3: Muuttujat](./luennot/luento3.md)
    * [Luento 4: Aliohjelmat](./luennot/luento4.md)
    * [Harjoitustehtävät 2](./luennot/harjoitus2.md)
