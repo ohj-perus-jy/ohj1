@@ -47,7 +47,7 @@ Ajalla 24.4.-31.5. ohjausta on saatavana vain ajanvarauksella.
 | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled)        |
 | Santtu  | [Varaa aika](https://bookings.cloud.microsoft/book/OhjAjanvarausSanttuSalo@bookings.jyu.fi/?ismsaljsauthenabled) |
-| Karri   | Linkki tulossa                                                                                                   |
+| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                               |
 
 <!-- 
 
