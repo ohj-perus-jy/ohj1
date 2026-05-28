@@ -27,35 +27,27 @@ harjoitustyön hyväksyminen, tenttitulokset) näet
 
 ## Uutiset
 
-<details><summary>Kesän 2026 toteutus, katso harjoitustehtävien palautusten takarajat tästä</summary>
+<details>
+<summary>
+Kesän 2026 toteutus, katso harjoitustehtävien ja harjoitustyön palautusten takarajat tästä
+</summary>
 
 Kesätoteutus alkaa 1.6.2026. Ilmoittaudu Sisussa. 
 
-Harjoitustehtävien palautusten takarajat ovat seuraavat: 
-
- * Harjoitustehtävät 1: ma 15.6.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 2: ma 15.6.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 3: ma 29.6.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 4: ma 29.6.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 5: ma 13.7.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 6: ma 13.7.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 7: ma 27.7.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 8: ma 27.7.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 9: ma 27.8.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 10: ma 10.8.2026 klo 11:59 (keskipäivä)
- * Harjoitustehtävät 11: ma 10.8.2026 klo 11:59 (keskipäivä)
-
-Harjoitustyön palautuksen takaraja pe 14.8.2026
+Harjoitustehtäville ja harjoitustyölle on yksi takaraja, 4.8.2026 klo 11:59
+(keskipäivällä). Voit tehdä tehtävät omaan tahtiisi, mutta kaikki tehtävät tulee
+palauttaa viimeistään tuohon mennessä.
 
 Tenttien ajankohdat löydät tenttisivulta.
 
-Kuten huomaat, aikataulu on tiukempi kuin kevään 2026 toteutuksessa. Jos haluat
-osallistua elokuun tenttiin, sinun tulee palauttaa harjoitustehtävät ja
-harjoitustyö viimeistään 4.8.2026.
+Kuten huomaat, aikataulu on tiukempi kuin kevään 2026 toteutuksessa. Toisaalta
+harjoitustehtäville on vain yksi takaraja, mikä antaa opiskelijalle
+liikkumavaraa tehtävien tekemiseen.
 
 </details>
 
-<details><summary>1. tammikuuta 2026: Kurssimateriaalia uudistetaan keväällä 2026</summary>
+<details>
+<summary>1. tammikuuta 2026: Kurssimateriaalia uudistetaan keväällä 2026</summary>
 
 Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 2026
 aikana. Osa materiaalista julkaistaan kurssin edetessä, osa on vielä TIMissä ja
@@ -69,7 +61,7 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 
 ## Tuki ja palaute
 
-Ajalla 1.6.-14.8. ohjausta on saatavina etä- ja lähiohjauksena. Ajat: TODO. 
+Ajalla 1.6.-4.8. ohjausta on saatavina etä- ja lähiohjauksena. Ajat: TODO. 
 
 Ajalla 24.4.-31.5. ohjausta on saatavana vain ajanvarauksella.
 
