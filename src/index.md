@@ -61,8 +61,21 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 
 ## Tuki ja palaute
 
-Ajalla 1.6.-4.8. ohjausta on saatavina etä- ja lähiohjauksena. Ajat: TODO. 
+Ajalla 1.6.-31.7. ohjausta on saatavana seuraavasti:
 
+| Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
+| ---------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus | tiistaista torstaihin klo 15-17 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | tiistaista torstaihin klo 15-17 | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
+| Sähköposti | Rajoitetusti kesäaikana         | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
+
+Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
+ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
+kaikkien kolmen kurssin opiskelijoita.
+
+Varaamme oikeuden ohjausajankohtien muuttamiseen.
+
+<!-- 
 Ajalla 24.4.-31.5. ohjausta on saatavana vain ajanvarauksella.
 
 | Ohjaaja | Ajanvarauslinkki                                                                                                 |
@@ -70,6 +83,8 @@ Ajalla 24.4.-31.5. ohjausta on saatavana vain ajanvarauksella.
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled)        |
 | Santtu  | [Varaa aika](https://bookings.cloud.microsoft/book/OhjAjanvarausSanttuSalo@bookings.jyu.fi/?ismsaljsauthenabled) |
 | Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                               |
+
+-->
 
 <!-- 
 
