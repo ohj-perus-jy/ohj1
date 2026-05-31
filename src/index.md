@@ -29,12 +29,12 @@ harjoitustyön hyväksyminen, tenttitulokset) näet
 
 <details>
 <summary>
-Kesän 2026 toteutus, katso harjoitustehtävien ja harjoitustyön palautusten takarajat tästä
+Kesän 2026 toteutus, katso harjoitustehtävien, harjoitustyön ja debuggausnäytteen palautusten takarajat tästä
 </summary>
 
 Kesätoteutus alkaa 1.6.2026. Ilmoittaudu Sisussa. 
 
-Harjoitustehtäville ja harjoitustyölle on yksi takaraja, 4.8.2026 klo 11:59
+Harjoitustehtäville, harjoitustyölle ja debuggausnäytteelle on yksi takaraja, 4.8.2026 klo 11:59
 (keskipäivällä). Voit tehdä tehtävät omaan tahtiisi, mutta kaikki tehtävät tulee
 palauttaa viimeistään tuohon mennessä.
 
