@@ -4,22 +4,60 @@
 
 ## Alustus
 
-- Asenna Rust ja Cargo (esim. rustup) TAI käytä mukana olevaa DevContaineria
-- Aja ´update-mdbook.sh´ asentaakseen tarvittavat laajennokset
+Materiaali on toteutettu **mdBookilla**. Suositeltu tapa on käyttää mukana
+olevaa DevContaineria. Se käyttää valmista GHCR-kuvaa
+`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest`, jossa mdBook ja
+tarvittavat laajennokset ovat valmiiksi asennettuina.
+
+Jos et käytä DevContaineria, tarvitset [Rust & Cargon](https://www.rust-lang.org/tools/install)
+ja voit asentaa mdBook-työkalut fallback-skriptillä:
+
+```bash
+bash ./update-mdbook.sh
+```
 
 ## Kehittäminen
 
+Käynnistä kehityspalvelin projektin juuresta:
 
 ```bash
 bash ./start.sh
 ```
 
-tai
+Tämä avaa materiaalin selaimeesi (oletuksena localhost:3000) ja päivittää näkymän
+automaattisesti, kun tallennat muutoksia.
+
+Vaihtoehtoisesti voit käyttää pelkkää mdBook-työkalukuvaa ilman DevContaineria.
+Esimerkiksi materiaalin koko rakentaminen yhdellä komennolla:
 
 ```bash
-bash ./update-mdbook.sh
-mdbook serve --hostname 0.0.0.0 --port 3000 --open
+docker run --rm -v .:/workspace \
+  ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest \
+  build
 ```
+
+tai materiaalin avaaminen paikallisesti:
+
+```bash
+docker run --rm -it -v .:/workspace -p 3000:3000 \
+  ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest \
+  serve --hostname 0.0.0.0 --port 3000
+```
+
+### mdBook-työkalukuvan päivittäminen
+
+DevContainer käyttää valmista GHCR-kuvaa
+`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest`. Jos mdBook-työkaluja
+tai esikäsittelijöitä pitää päivittää, tee muutokset repossa
+`ohj-perus-jy/ohj-mdbook-tooling` ja pushaa ne `main`-haaraan. `:devcontainer-latest`
+on liikkuva tagi: jo käynnissä oleva DevContainer ei päivity automaattisesti.
+Päivitetty kuva otetaan käyttöön esimerkiksi komennolla:
+
+```bash
+docker pull ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest
+```
+
+tai VS Codessa komennolla `Dev Containers: Rebuild and Reopen in Container`.
 
 - [mdBook-ohjeet](https://rust-lang.github.io/mdBook/index.html)
 
