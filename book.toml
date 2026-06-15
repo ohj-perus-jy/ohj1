@@ -49,10 +49,7 @@ csharp = "//-"
 [preprocessor.codeblock-tabs]
 
 [preprocessor.accordion]
-command = "python3 ./preprocessors/python/accordion.py"
-
-[preprocessor.embedify]
-
+command = "mdbook-accordion"
 
 [preprocessor.plantuml]
 plantuml-cmd="https://www.plantuml.com/plantuml"

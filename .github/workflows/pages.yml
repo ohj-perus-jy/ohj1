@@ -28,24 +28,10 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Cache Cargo
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cargo
-            ~/.cargo-target-cache
-            preprocessors/rust/**/target
-
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml', 'update-mdbook.sh') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
-      - name: Install mdBook
-        run: |
-          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
-          rustup update
-          bash update-mdbook.sh
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
