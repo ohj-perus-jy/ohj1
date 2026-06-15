@@ -2,7 +2,7 @@
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-Tämä on Jyväskylän yliopiston Ohjelmointi 1 -kurssin oppimateriaali.
+Tämä on Jyväskylän yliopiston Ohjelmointi 1 -kurssin oppimateriaali. 
 Materiaali on katseltavissa osoitteessa <https://ohjelmointi1.it.jyu.fi>. 
 
 Tehtävien palauttaminen vaatii opintojaksolle
