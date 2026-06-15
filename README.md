@@ -9,12 +9,10 @@ olevaa DevContaineria. Se käyttää valmista GHCR-kuvaa
 `ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest`, jossa mdBook ja
 tarvittavat laajennokset ovat valmiiksi asennettuina.
 
-Jos et käytä DevContaineria, tarvitset [Rust & Cargon](https://www.rust-lang.org/tools/install)
-ja voit asentaa mdBook-työkalut fallback-skriptillä:
-
-```bash
-bash ./update-mdbook.sh
-```
+Jos et halua käyttää DevContaineria (esimerkiksi nopeita muokkauksia tai et
+halua ladata isoa DevContainer-kuvaa), voit sen sijaan käyttää pelkästään
+mdBook-työkalun ja sen laajennokset sisältävää Docker-kuvaa
+`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest` (ks. [Kehittäminen](#kehittäminen)).
 
 ## Kehittäminen
 
