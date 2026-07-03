@@ -61,12 +61,12 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 
 ## Tuki ja palaute
 
-Ajalla 22.6.-31.7. ohjausta on saatavana seuraavasti (huomaa muuttuneet ajat!):
+Aikavälillä 6.7.-31.7. ohjausta on saatavana seuraavasti (huomaa muuttuneet ajat!):
 
 | Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
 | ---------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus | tiistaista torstaihin klo 13-15 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
-| Etäohjaus  | tiistaista torstaihin klo 13-15 | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
+| Lähiohjaus | Vain ajanvarauksella toistaiseksi | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | Vain ajanvarauksella toistaiseksi | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
 | Sähköposti | Rajoitetusti kesäaikana         | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
 Lisäksi ohjausta annetaan ajanvarauksella: 
