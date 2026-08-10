@@ -1,12 +1,10 @@
 {
 	"name": "Ohj1 mdBook",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bullseye",
+	"image": "ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest",
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/eitsupi/devcontainer-features/mdbook:1": {},
-		"ghcr.io/devcontainers/features/python:1": {}
-	 },
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
 
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
@@ -21,12 +19,7 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [36742],
-	"appPort": [36743],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
-	"postCreateCommand": "bash ./update-mdbook.sh",
+	"forwardPorts": [3000],
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -36,7 +29,4 @@
 			]
 		}
 	}
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }

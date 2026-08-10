@@ -61,19 +61,38 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 
 ## Tuki ja palaute
 
-Ajalla 1.6.-31.7. ohjausta on saatavana seuraavasti:
+Aikavälillä 6.7.-31.7. ohjausta on saatavana seuraavasti (huomaa muuttuneet ajat!):
 
 | Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
 | ---------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus | tiistaista torstaihin klo 15-17 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
-| Etäohjaus  | tiistaista torstaihin klo 15-17 | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
+| Lähiohjaus | Vain ajanvarauksella toistaiseksi | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | Vain ajanvarauksella toistaiseksi | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
 | Sähköposti | Rajoitetusti kesäaikana         | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
+
+Lisäksi ohjausta annetaan ajanvarauksella: 
+
+| Ohjaaja | Ajanvarauslinkki                                                                                                 |
+| ------- | ---------------------------------------------------------------------------------------------------------------- |
+| Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled)        |
+| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                               |
+
+[Tenttipäivinä](tentti.md) ei kuitenkaan pidetä ohjauksia. 
 
 Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
 ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
 kaikkien kolmen kurssin opiskelijoita.
 
 Varaamme oikeuden ohjausajankohtien muuttamiseen.
+
+<!--
+Ajalla 1.6.-21.6. ohjausta on saatavana seuraavasti
+
+| Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
+| ---------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus | tiistaista torstaihin klo 15-17 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | tiistaista torstaihin klo 15-17 | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
+| Sähköposti | Rajoitetusti kesäaikana         | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
+-->
 
 <!-- 
 Ajalla 24.4.-31.5. ohjausta on saatavana vain ajanvarauksella.
