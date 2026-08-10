@@ -1,30 +1,20 @@
 # Tentti
 
-Lukuvuonna 2025-2026 tenttejä järjestetään seuraavasti
-
-| Tentti  | Päivämäärä   | Aika      | Paikka                    | Ilmoittautumislinkki                                                                        |
-| ------- | ------------ | --------- | ------------------------- | ------------------------------------------------------------------------------------------- |
-| Kevät 1 | pe 10.4.2026 | klo 16-20 | Agora Auditorio 1 / Zoom  | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti)                      |
-| Kevät 2 | ke 29.4.2026 | klo 12-16 | Agora Auditorio 1 / Zoom  | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti)                      |
-| Kevät 3 | ke 27.5.2026 | klo 12-16 | Ruusupuisto Juho D101     | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/koti)                      |
-| Kesä 1  | 18.6.2026    | klo 12-16 | Ag Aud3  / Zoom           | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/tentti-aloitus-2026-06-18) |
-| Kesä 2  | 5.8.2026     | klo 12-16 | Ag Aud3 / Zoom            | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/tentti-aloitus-2026-08-05-12-00) |
-
 Lukuvuonna 2026-2027 tenttejä järjestetään seuraavasti. **Tentin kesto tulee
 olemaan 3 tuntia. Alla näkyy tentin kestona 4 tuntia, johon sisältyy mahdollinen yksilöllisen järjestelyn mukainen lisäaika.**
 
-| Tentti  | Päivämäärä | Aika        | Paikka         | Ilmoittaudu | Muuta     |
-| ------- | ---------- | ----------- | -------------- | ----------- | --------- |
-| Kesä 3  | 10.9.2026  | 16-20       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Syksy 1 | 27.11.2026 | 14-18       | Ag Aud1 / Zoom | Ilmoittaudu |           |
-| Syksy 2 | 17.12.2026 | 10-14       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Syksy 3 | 14.1.2027  | 16-20       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Kevät 1 | 9.4.2027   | 10-14       | Ag Aud3 / Zoom | Ilmoittaudu |           |
-| Kevät 2 | 28.4.2027  | 16:30-20:30 | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Kevät 3 | 25.5.2027  | 10-14       | Ag Aud2 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Kesä 1  | 17.6.2027  | 12-16       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Kesä 2  | 4.8.2027   | 12-16       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
-| Kesä 3  | 9.9.2027   | 16-20       | Ag Aud3 / Zoom | Ilmoittaudu | Myös Ohj2 |
+| Tentti  | Päivämäärä | Aika        | Paikka         | Ilmoittaudu                                          | Muuta     |
+| ------- | ---------- | ----------- | -------------- | ---------------------------------------------------- | --------- |
+| Kesä 3  | 10.9.2026  | 16-20       | Ag Aud3 / Zoom | [Ilmoittaudu](https://tim.pm/ohj1-tentti-2026-09-10) | Myös Ohj2 |
+| Syksy 1 | 27.11.2026 | 14-18       | Ag Aud1 / Zoom |                                                      |           |
+| Syksy 2 | 17.12.2026 | 10-14       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Syksy 3 | 14.1.2027  | 16-20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kevät 1 | 9.4.2027   | 10-14       | Ag Aud3 / Zoom |                                                      |           |
+| Kevät 2 | 28.4.2027  | 16:30-20:30 | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kevät 3 | 25.5.2027  | 10-14       | Ag Aud2 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 1  | 17.6.2027  | 12-16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 2  | 4.8.2027   | 12-16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 3  | 9.9.2027   | 16-20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
 
 Voit osallistua tenttiin joko Agoran luentosalissa tai etänä Zoomin kautta. 
 
@@ -33,9 +23,10 @@ alkuhetkeä. Ilmoittautumisen yhteydessä opiskelija valitsee tentin
 suoritustavan (salitentti tai etätentti) ja hyväksyy tentin säännöt (kuvattu
 alla). 
 
-Ilmoita ilmoittautumisen yhteydessä, mikäli sinulle on esimerkiksi myönnetty
+Mikäli sinulle on esimerkiksi myönnetty
 lisäaikaa tentteihin [yksilöllisenä
-järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus).
+järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus),
+ilmoita siitä lomakkeella tenttiin ilmoittautumisen yhteydessä.
 
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 
