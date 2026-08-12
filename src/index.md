@@ -182,7 +182,7 @@ tulee myöhemmin saataville.
 
  3. Teams-sovelluksessa klikkaa *Teams* <i class="bi bi-chevron-right"></i> *Join or create team* <i class="bi bi-chevron-right"></i> *Join a team with a code*
 
- 4. Syötä koodi `fb8q3qa` 
+ 4. Syötä koodi `hg8ia8z` 
 
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
