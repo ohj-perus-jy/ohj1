@@ -5,7 +5,7 @@
     function get_playgrounds() {
         return Array.from(document.querySelectorAll(`pre:has(> .language-${PLAYGROUND_LANG}:not(.noplayground):not(.ignore))`));
     }
-    
+
     function fetch_with_timeout(url, options, timeout = 6000) {
         return Promise.race([
             fetch(url, options),
@@ -28,7 +28,7 @@
         const text = playground_text(code_block);
 
         let code_area = code_block.querySelector(`.language-${PLAYGROUND_LANG}`);
-        
+
         let language = PLAYGROUND_LANG;
 
         for (const cls of code_area.classList) {
@@ -44,7 +44,7 @@
 
         result_block.innerText = 'Running...';
 
-        fetch_with_timeout('https://tim03.it.jyu.fi/executor/execute', {
+        fetch_with_timeout('https://lakane.it.jyu.fi/executor/execute', {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -120,7 +120,7 @@
         runCodeButton.addEventListener('click', () => {
             run_code(pre_block);
         });
-        
+
 
         const code_block = pre_block.querySelector('code');
 
@@ -146,7 +146,7 @@
                     exec: _editor => run_code(pre_block),
                 });
             }
-            
+
 
             const undoChangesButton = document.createElement('button');
             undoChangesButton.className = 'fa fa-history reset-button';
