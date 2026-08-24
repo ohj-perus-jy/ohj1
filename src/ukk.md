@@ -18,7 +18,9 @@ ohjeistuksesta](./suorittaminen.md#eettiset-ohjeet).
 
 ## Voiko seuraavien viikkojen tehtäviä tehdä etukäteen?
 
-Voi. Keväällä 2026 joitain tehtäviä uudistetaan, joten on mahdollista että jotkin tehtävät muuttuvat. Jos näin käy, niin vanha versio jää kuitenkin näkyviin sivun alareunaan tämän lukuvuoden 2025-2026 ajaksi. 
+Voi. Opintojakson kuluessa joitain tehtäviä uudistetaan, joten on mahdollista
+että jotkin tehtävät muuttuvat. Jos näin käy, niin vanha versio jää kuitenkin
+näkyviin sivun alareunaan tämän lukuvuoden 2026-2027 ajaksi. 
 
 ## Toimiiko kurssi Macilla tai Linuxilla?
 

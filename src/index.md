@@ -61,6 +61,8 @@ kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
 
 ## Tuki ja palaute
 
+Syksyn 2026 ohjausaikataulut julkaistaan lähipäivinä.
+
 Aikavälillä 6.7.-31.7. ohjausta on saatavana seuraavasti (huomaa muuttuneet ajat!):
 
 | Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
