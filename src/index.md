@@ -27,37 +27,10 @@ harjoitustyön hyväksyminen, tenttitulokset) näet
 
 ## Uutiset
 
-<details>
-<summary>
-Kesän 2026 toteutus, katso harjoitustehtävien, harjoitustyön ja debuggausnäytteen palautusten takarajat tästä
-</summary>
+Syksyn 2026 toteutus alkaa 31.8. Muista ilmoittautua!
 
-Kesätoteutus alkaa 1.6.2026. Ilmoittaudu Sisussa. 
-
-Harjoitustehtäville, harjoitustyölle ja debuggausnäytteelle on yksi takaraja, 4.8.2026 klo 11:59
-(keskipäivällä). Voit tehdä tehtävät omaan tahtiisi, mutta kaikki tehtävät tulee
-palauttaa viimeistään tuohon mennessä.
-
-Tenttien ajankohdat löydät tenttisivulta.
-
-Kuten huomaat, aikataulu on tiukempi kuin kevään 2026 toteutuksessa. Toisaalta
-harjoitustehtäville on vain yksi takaraja, mikä antaa opiskelijalle
-liikkumavaraa tehtävien tekemiseen.
-
-</details>
-
-<details>
-<summary>1. tammikuuta 2026: Kurssimateriaalia uudistetaan keväällä 2026</summary>
-
-Teemme kokonaisvaltaisen uudistuksen oppimateriaaliin sekä tehtäviin kevään 2026
-aikana. Osa materiaalista julkaistaan kurssin edetessä, osa on vielä TIMissä ja
-osa siirretty uuteen materiaaliin. Uudistamisesta johtuen sisällössä voi olla
-myös keskeneräisyyksiä ja virheitä. Pahoittelemme tästä mahdollisesti aiheutuvaa
-haittaa. Pyydämme, että ilmoitat virheistä tai parannusehdotuksista GitHubin
-kautta (katso tämän sivun alareuna) tai suoraan opettajien sähköpostiin
-<ohj1-opet@jyu.onmicrosoft.com>.
-
-</details>
+Jos ilmoittautumisessa on ongelmia tai et pääse kurssialueelle, ota yhteyttä
+opettajiin sähköpostitse <ohj1-opet@jyu.onmicrosoft.com>.
 
 ## Tuki ja palaute
 
