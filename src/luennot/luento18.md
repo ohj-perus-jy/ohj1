@@ -4,6 +4,10 @@
  * Kertaus
  * Rekursio
 
+## Syksy 2026
+
+ * Tulossa
+
 ## Kevät 2026
 
  * 📺 Katso tallenne ([YouTube](https://youtube.com/live/By0F25AgHj0?feature=share), Moniviestin

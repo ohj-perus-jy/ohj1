@@ -10,12 +10,12 @@
    * Oikeasti fyysisellä CPU-piirillä olevien rekisterien määrä on hyvinkin mallikohtainen
    * Asiaa sekoittaa sekin, että x86-64 arkkitehtuurille on olemassa kaksi päätoteutusta, joilla on pieniä yksityiskohtaeroja: Intel x86-64 ja AMD64
 
+## Syksy 2026
+
+ * Tulossa
+
 ## Kevät 2026
 
- * Ei live-luentoa: Katso syksyn 2025 luento alta.
-
-## Syksy 2025
-
- * 📺 Katso tallenne ([YouTube](https://youtu.be/-foKfrDMp9s), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-15))
+ * 📺 Katso syksyn 2025 tallenne ([YouTube](https://youtu.be/-foKfrDMp9s), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-15))
  * [📊 Kalvot (lyhennetty)](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento15/Luento15-mini.pdf), [📊 Kalvot (täydet)](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento15/Luento15.pdf)
  * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento15)
