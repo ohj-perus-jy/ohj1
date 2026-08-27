@@ -34,30 +34,37 @@ opettajiin sähköpostitse <ohj1-opet@jyu.onmicrosoft.com>.
 
 ## Tuki ja palaute
 
-Syksyn 2026 ohjausaikataulut julkaistaan lähipäivinä.
+Aikavälillä 31.8.-27.11. ohjausta on saatavana seuraavasti:
 
-Aikavälillä 6.7.-31.7. ohjausta on saatavana seuraavasti (huomaa muuttuneet ajat!):
-
-| Tukikanava | Aika                            | Paikka/Linkki                                                                                                                   |
-| ---------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus | Vain ajanvarauksella toistaiseksi | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
-| Etäohjaus  | Vain ajanvarauksella toistaiseksi | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
-| Sähköposti | Rajoitetusti kesäaikana         | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
-
-Lisäksi ohjausta annetaan ajanvarauksella: 
-
-| Ohjaaja | Ajanvarauslinkki                                                                                                 |
-| ------- | ---------------------------------------------------------------------------------------------------------------- |
-| Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled)        |
-| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                               |
+| Tukikanava | Aika                         | Paikka/Linkki                                                                                                                   |
+| ---------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus | ke 12-16, to 12-16, pe 12-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | ke 12-16, to 12-16, pe 10-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
+| Sähköposti | Jatkuva                      | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
 [Tenttipäivinä](tentti.md) ei kuitenkaan pidetä ohjauksia. 
 
-Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
-ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
-kaikkien kolmen kurssin opiskelijoita.
+Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2- ja ITKP102 Ohjelmointi 1
+-opintojaksojen kanssa. Ohjaajat auttavat kummankin kurssin opiskelijoita.
 
-Varaamme oikeuden ohjausajankohtien muuttamiseen.
+Varaamme oikeuden ohjausajankohtien muuttamiseen. 27.11. jälkeen ohjausta on
+saatavilla ajanvarauksella. Linkki ajanvaraukseen tulee myöhemmin saataville. 
+
+<!-- 
+| Tukikanava | Aika                              | Paikka/Linkki                                                                                                                   |
+| ---------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Lähiohjaus | Vain ajanvarauksella toistaiseksi | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Etäohjaus  | Vain ajanvarauksella toistaiseksi | [Ohjelmointi 1 Teams-kanva](#teams)                                                                                             |
+| Sähköposti | Rajoitetusti kesäaikana           | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
+
+Lisäksi ohjausta annetaan ajanvarauksella: 
+
+| Ohjaaja | Ajanvarauslinkki                                                                                          |
+| ------- | --------------------------------------------------------------------------------------------------------- |
+| Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled) |
+| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |
+
+-->
 
 <!--
 Ajalla 1.6.-21.6. ohjausta on saatavana seuraavasti
@@ -93,37 +100,7 @@ mihin ohjausryhmään olet ilmoittautunut.
 
 --> 
 
-<!-- 
-Ohjausajat 7.4. alkaen:
-
-| Tukikanava                                           | Aika                        | Paikka/Linkki                                                                                                                   |
-| ---------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus                                           | ke 10-18, to 10-18, pe 8-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
-| Etäohjaus                                            | ke 10-18, to 10-18, pe 8-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                     | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
-
-(Ke klo 8-10 ja to 8-10 pudotettu pois 30.3. alkaen.)
--->
-
-<!--
-| Tukikanava                                           | Aika                        | Paikka/Linkki                           |
-| ---------------------------------------------------- | --------------------------- | --------------------------------------- |
-| Etäohjaus                                            | ke 10-16, to 8-18, pe 10-16 | [Ohjelmointi 2 Teams-kanava](#teams-jy) |
-| Vastuuopettajien ja tuntiopettajien sähköpostiosoite | Jatkuva                     | ohj2-opet@jyu.onmicrosoft.com           |
-
-Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2, ITKP102 Ohjelmointi 1- ja
-ITKA2004 Tietokannat ja tiedonhallinta -opintojaksojen kanssa. Ohjaajat auttavat
-kaikkien kolmen kurssin opiskelijoita.
-
-Ohjausaikoja saatetaan lisätä tai poistaa kysynnän mukaan; kerro aikatoiveistasi
-opettajille sähköpostitse. 
-
-24.4. jälkeen ohjausta on saatavilla ajanvarauksella. Linkki ajanvaraukseen
-tulee myöhemmin saataville. 
-
---> 
-
-<details closed><summary>Miten saan Sisun kalenteriin ohjausaikoja näkyviin? (Avaa ohje klikkaamalla) </summary>
+<!-- details closed><summary>Miten saan Sisun kalenteriin ohjausaikoja näkyviin? (Avaa ohje klikkaamalla) </summary>
 
 1. Kirjaudu Sisuun
 2. Jos olet jo ilmoittautunut kurssille, klikkaa ylhäällä välilehteä *Opintokalenteri* tai klikkaa sitä hampurilaisvalikosta
@@ -140,9 +117,9 @@ tulee myöhemmin saataville.
 
 8. Nyt kyseisen ryhmän ohjausajat näkyvät sinulla automaattisesti. Tarvittaessa voit poistaa ryhmän tapahtumia viikkokohtaisesti Tapahtumakalenterista. 
 
-</details>
+</details -->
 
-## Ohjeet Teams-ohjauksiin liittymiseksi (tutkinto-opiskelijat) {#teams-jy}
+## Ohjeet Teams-etäohjaukseen liittymiseksi (tutkinto-opiskelijat) {#teams-jy}
 
 1. Kirjaudu yliopiston tunnuksellasi Microsoft Teamsiin osoitteessa
     <https://teams.microsoft.com>. Käyttäjätunnus on muotoa `käyttäjätunnus@jyu.fi` (esim.
@@ -162,7 +139,7 @@ tulee myöhemmin saataville.
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
 
-## Ohjeet Teams-ohjauksiin liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
+## Ohjeet Teams-etäohjaukseen liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
 
 Lähetä sähköpostilla alla oleva pyyntö osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
 
