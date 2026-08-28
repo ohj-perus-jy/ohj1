@@ -15,7 +15,11 @@ Ohjelmointi 1 -opintojakson harjoitus työ
 
 Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta.
 
-Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle. Voit esittää harjoitustyösi ensisijaisesti [ohjauksessa](./index.md#tuki-ja-palaute) tai tarvittaessa sopimalla erillinen ohjausaika sähköpostitse [ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
+Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle joko etä- tai
+lähiohjauksessa. Sähköpostin kautta palauttaminen ilman esittelyä on mahdollista
+vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
+(./index.md#tuki-ja-palaute)[etusivu]), sovi ohjausaika sähköpostitse
+[ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
 
 ## Aikataulu ja takarajat
 
