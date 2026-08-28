@@ -38,7 +38,7 @@ Aikavälillä 31.8.-27.11. ohjausta on saatavana seuraavasti:
 
 | Tukikanava | Aika                         | Paikka/Linkki                                                                                                                   |
 | ---------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Lähiohjaus | ke 12-16, to 12-16, pe 12-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
+| Lähiohjaus | ke 12-16, to 12-16, pe 10-14 | Agoralla luokat [Ag B212.1 Finland](https://navi.jyu.fi/space/m118988) ja [Ag B211.1 Sovjet](https://navi.jyu.fi/space/m118987) |
 | Etäohjaus  | ke 12-16, to 12-16, pe 10-14 | [Ohjelmointi 1 Teams-kanava](#teams-jy)                                                                                         |
 | Sähköposti | Jatkuva                      | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
