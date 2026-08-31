@@ -1015,21 +1015,3 @@ window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/1150001622
 > Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
 > valitsemalla *File* <i class="bi bi-chevron-right"></i> *Manage IDE Settings*
 > <i class="bi bi-chevron-right"></i> *Settings sync*.
-
-## Sisäänrakennetun tekoälytäydennyksen kytkeminen pois
-
-Riderissa on sisäänrakennettu tekoälypohjainen täydennys, joka yrittää täydentää
-kirjoitetun rivin loppuun ympäröivän koodin perusteella:
-
-![AI autocompletion example](images/taydennys.png)
-
-Aivan opintojakson alussa tämä täydennys ei haittaa, mutta myöhemmin täydennys
-pikemmin häiritsee sen rajoittuneisuuden vuoksi. Siispä suosittelemme kytkemään
-se pois seuraavasti:
-
-- Avaa Rider *Welcome to JetBrains Rider* -näkymään
-- Valitse vasemmasta alalalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Settings*
-- Mene asetuksissa kohtaan *Editor* <i class="bi bi-chevron-right"></i> *General* <i class="bi bi-chevron-right"></i> *Inline Completion*
-- Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
-- Tallenna asetukset *Save*-painikkeella
-
