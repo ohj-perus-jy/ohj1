@@ -9,6 +9,8 @@
 
   * 📺 Katso: [YouTube](https://www.youtube.com/watch?v=yimcT93Vdks),
     Moniviestin (tulossa)
+  * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/blob/main/Luento01/Luento01.pdf?ref_type=heads)
+  * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/blob/main/Luento01)
 
 ## Kevät 2026
 
