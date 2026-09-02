@@ -20,6 +20,7 @@ additional-css = [
   "theme/codeblock-tabs.css",
   "theme/code-highlights.css",
   "theme/tasks.css",
+  "theme/visa.css",
 ]
 default-theme = "jyu-light"
 preferred-dark-theme = "jyu-dark"

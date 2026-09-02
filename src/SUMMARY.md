@@ -17,88 +17,80 @@
 
 ---
 
- * [Osa 1](./osa1/index.md)
-   * [Luento 1: Johdatus, mitä ohjelmointi on?](./luennot/luento1.md)
-   * [Luento 2: IDE, graafinen ohjelma](./luennot/luento2.md)
-   * [Ohjelmointiympäristö kuntoon](./osa1/2-ohjelmointiymparisto-kuntoon.md)
-   * [Harjoitustehtävät 1](./luennot/harjoitus1.md)
-<!-- * [Ensimmäinen ohjelma](./osa1/1-ensimmainen-ohjelma.md) -->
-<!-- * [Tiedon esittäminen tietokoneella](./osa1/3-tiedon-esittaminen-tietokoneella.md) -->
-<!-- * [Osan kaikki tehtävät](./osa1/tehtavat.md) -->
- * [Osa 2](./osa2/index.md)
-   * [Luento 3: Muuttujat](./luennot/luento3.md)
-   * [Luento 4: Aliohjelmat](./luennot/luento4.md)
-   * [Harjoitustehtävät 2](./luennot/harjoitus2.md)
-<!--* [Tiedon käsittelyä](./osa2/osa2.md)  -->
-<!--  * [Ohjelman rakenne](./osa2/1-ohjelman-rakenne.md) -->
-<!--  * [Lauseet ja lausekkeet](./osa2/2-lauseet-ja-lausekkeet.md) -->
-<!--  * [Arvojen laskeminen](./osa2/3-arvojen-laskeminen.md) -->
-<!--  * [Muuttujat ja tietotyypit](./osa2/4-muuttujat-ja-tietotyypit.md) -->
-<!--  * [Osan kaikki tehtävät](./osa2/tehtavat.md) -->
- * [Osa 3](./osa3/index.md)
-   * [Luento 5: muuttujat, operaattorit, aliohjelman paluuarvo](./luennot/luento5.md)
-   * [Luento 6: aliohjelman kuormittaminen, ehtolauseet](./luennot/luento6.md)
-   * [Harjoitustehtävät 3](./luennot/harjoitus3.md)
- <!--* [Osista rakentamista](./osa3/osa3.md) -->
- <!--  * [Aliohjelmat](./osa3/1-aliohjelmat.md) -->
- <!--  * [Parametrit ja paluuarvo]() -->
- <!--  * [Aliohjelman kuormittaminen]() -->
- <!--  * [Dokumentointi]() -->
- <!--  * [Osan kaikki tehtävät](./osa3/tehtavat.md) -->
- * [Osa 4](./osa4/index.md)
-   * [Luento 7: Testaaminen, ComTest](./luennot/luento7.md)
-   * [Luento 8: Harjoitustyö, Merkkijonot](./luennot/luento8.md)
-   * [Testaaminen ComTestillä](./osa4/comtest.md)
-   * [Harjoitustehtävät 4](./luennot/harjoitus4.md)
-<!-- * [Jos sataa, niin koodaa kunnes nukahdat](./osa4/osa4.md)--> 
-<!--    * [Operaattorit](./osa4/1-operaattorit.md)--> 
-<!--    * [Ehtolauseet](./osa4/2-ehtolauseet.md)--> 
-<!--    * [Toistolauseet]()--> 
-<!--    * [Merkkijonot]()--> 
-<!--    * [Osan kaikki tehtävät](./osa4/tehtavat.md)--> 
- * [Osa 5](./osa5/index.md)
-   * [Luento 9: Toistolauseet ja debuggaus](./luennot/luento9.md)
-   * [Luento 10: Taulukot](./luennot/luento10.md)
-   * [Debuggaus](./osa5/1-debuggaus.md)
-   * [Harjoitustehtävät 5](./luennot/harjoitus5.md)
-<!--  * [Toimiikohan ohjelma?](./osa5/osa5.md) --> 
-<!--     * [Automaattinen testaus]() --> 
-<!--     * [Osan kaikki tehtävät](./osa5/tehtavat.md) --> 
- * [Osa 6](./osa6/index.md)
-    * [Luento 11: Tyyppimuunnokset, kertaus operaattoreista](./luennot/luento11.md)
-    * [Luento 12: Taulukkoja ja silmukoita](./luennot/luento12.md)
-    * [Harjoitustehtävät 6](./luennot/harjoitus6.md)
-<!--  * [Asioiden kokoamista yhteen](./osa6/osa6.md) -->
-<!--     * [Taulukot]() -->
-<!--     * [Listat]()     -->
-<!--     * [Tyyppimuunnokset]() -->
-<!--     * [Osan kaikki tehtävät](./osa6/tehtavat.md) -->
- * [Osa 7](./osa7/index.md)
-    * [Luento 13: Muokattavat merkkijonot, moniulotteiset taulukot, dynaamiset tietorakenteet](./luennot/luento13.md)
-    * [Luento 14: Luokat ja oliot](./luennot/luento14.md)
-    * [Harjoitustehtävät 7](./luennot/harjoitus7.md)
-<!--  * [Lisää kokoamista!](./osa7/osa7.md) -->
-<!--     * [Moniulotteiset taulukot]() -->
-<!--     * [Sanakirjat]() -->
-<!--     * [Enumeraatiot]() -->
-<!--     * [C#-kielen tyyppijärjestelmästä]() -->
-<!--     * [Osan kaikki tehtävät](./osa7/tehtavat.md) -->
- * [Osa 8](./osa8/index.md)
-    * [Luento 15: C#-kielen tyyppijärjestelmästä](./luennot/luento15.md)
-    * [Luento 16: `switch`-lause, attribuutit, rekursio](./luennot/luento16.md)
-    * [Harjoitustehtävät 8](./luennot/harjoitus8.md)
-<!--  * [Rekursio? Ks. rekursio.](./osa8/osa8.md) --> 
-<!--     * [Rekursio]() --> 
-<!--     * [Pino ja kutsupino]() --> 
-<!--     * [Osan kaikki tehtävät](./osa8/tehtavat.md) --> 
- * [Osa 9](./osa9/index.md)
-    * [Luento 17: Rekursio / Kertaus, tietoa tentistä](./luennot/luento17.md)
-    * [Luento 18: Kertaus, tietoa tentistä](./luennot/luento18.md)
-    * [Harjoitustehtävät 9](./luennot/harjoitus9.md)
-<!-- * [Pelin tekemistä!](./osa9/osa9.md) -->
-<!--    * [Graafinen ohjelmointi]() -->
- * [Osa 10](./osa10/index.md)
-    * [Harjoitustehtävät 10](./luennot/harjoitus10.md)
- * [Osa 11](./osa11/index.md)
-    * [Harjoitustehtävät 11](./luennot/harjoitus11.md)
- * [Extrat](./luennot/extra.md)
+- [Ensimmäinen ohjelma](./osa1/index.md)
+  - [Mitä ohjelmointi on?](./osa1/1-mita-ohjelmointi-on.md)
+  - [Ensimmäinen ohjelma](./osa1/2-ensimmainen-ohjelma.md)
+  - [Ohjelmointiympäristö kuntoon](./osa1/3-ohjelmointiymparisto-kuntoon.md)
+  - [Ensimmäinen graafinen ohjelma](./osa1/4-ensimmainen-graafinen-ohjelma.md)
+  - [Osan 1 tehtävät](./osa1/tehtavat.md)
+- [Muuttujat, laskenta ja päätökset](./osa2/index.md)
+  - [Ohjelman rakenne](./osa2/1-ohjelman-rakenne.md)
+  - [Lauseet ja lausekkeet](./osa2/2-lauseet-ja-lausekkeet.md)
+  - [Muuttujat ja tietotyypit](./osa2/3-muuttujat-ja-tietotyypit.md)
+  - [Operaattorit ja laskutoimitukset](./osa2/4-operaattorit.md)
+  - [Ehtolauseet](./osa2/5-ehtolauseet.md)
+  - [Osan 2 tehtävät](./osa2/tehtavat.md)
+- [Aliohjelmat ja Jypeli](./osa3/index.md)
+  - [Aliohjelmat](./osa3/1-aliohjelmat.md)
+  - [Parametrit ja argumentit](./osa3/2-parametrit-ja-argumentit.md)
+  - [Muuttujien näkyvyys](./osa3/3-muuttujien-nakyvyys.md)
+  - [Kommentointi ja dokumentointi](./osa3/4-kommentointi-ja-dokumentointi.md)
+  - [Jypeli ja oliot](./osa3/5-jypeli-ja-oliot.md)
+  - [Osan 3 tehtävät](./osa3/tehtavat.md)
+- [Funktiot, testaaminen ja toisto](./osa4/index.md)
+  - [Aliohjelman paluuarvo](./osa4/1-aliohjelman-paluuarvo.md)
+  - [Aliohjelman kuormittaminen](./osa4/2-aliohjelman-kuormittaminen.md)
+  - [Testaaminen ComTestillä](./osa4/3-testaaminen-comtestilla.md)
+  - [Toistolauseet](./osa4/4-toistolauseet.md)
+  - [Merkkijonot](./osa4/5-merkkijonot.md)
+  - [Osan 4 tehtävät](./osa4/tehtavat.md)
+- [Taulukot ja debuggaus](./osa5/index.md)
+  - [Taulukot](./osa5/1-taulukot.md)
+  - [Taulukot ja silmukat](./osa5/2-taulukot-ja-silmukat.md)
+  - [Debuggaus](./osa5/3-debuggaus.md)
+  - [Osan 5 tehtävät](./osa5/tehtavat.md)
+- [Kokoelmat](./osa6/index.md)
+  - [Listat](./osa6/1-listat.md)
+  - [Sanakirjat](./osa6/2-sanakirjat.md)
+  - [Arvotyypit ja viitetyypit](./osa6/3-arvotyypit-ja-viitetyypit.md)
+  - [Osan 6 tehtävät](./osa6/tehtavat.md)
+- [Rekursio ja poikkeukset](./osa7/index.md)
+  - [Rekursio](./osa7/1-rekursio.md)
+  - [Poikkeukset](./osa7/2-poikkeukset.md)
+  - [Osan 7 tehtävät](./osa7/tehtavat.md)
+- [Tiedon lukeminen ja kertaus](./osa8/index.md)
+  - [Tiedostojen lukeminen ja kirjoittaminen](./osa8/1-tiedostot.md)
+  - [Satunnaisluvut](./osa8/2-satunnaisluvut.md)
+  - [Kertaus ja tenttiin valmistautuminen](./osa8/3-kertaus.md)
+  - [Osan 8 tehtävät](./osa8/tehtavat.md)
+
+---
+
+- [Liitteet](./liitteet/index.md)
+  - [Tiedon esittäminen tietokoneessa](./liitteet/tiedon-esittaminen-tietokoneella.md)
+  - [Moniulotteiset taulukot](./liitteet/moniulotteiset-taulukot.md)
+  - [Muokattavat merkkijonot: StringBuilder](./liitteet/stringbuilder.md)
+  - [Lambda-lausekkeet](./liitteet/lambda-lausekkeet.md)
+  - [C#-kielen tyyppijärjestelmästä](./liitteet/tyyppijarjestelma.md)
+  - [Yleisimmät virheilmoitukset](./liitteet/virheilmoitukset.md)
+  - [Sanasto](./liitteet/sanasto.md)
+- [Luennot](./luennot/index.md)
+  - [Luento 1: Johdatus, mitä ohjelmointi on?](./luennot/luento1.md)
+  - [Luento 2: Kehitysympäristö, graafinen C#-ohjelma](./luennot/luento2.md)
+  - [Luento 3: Muuttujat](./luennot/luento3.md)
+  - [Luento 4: Aliohjelmat](./luennot/luento4.md)
+  - [Luento 5: Muuttujat, operaattorit, aliohjelman paluuarvo](./luennot/luento5.md)
+  - [Luento 6: Aliohjelman kuormittaminen, ehtolauseet](./luennot/luento6.md)
+  - [Luento 7: Muuttujien näkyvyys, testaaminen, ComTest](./luennot/luento7.md)
+  - [Luento 8: Harjoitustyö, merkkijonot](./luennot/luento8.md)
+  - [Luento 9: Toistolauseet ja debuggaus](./luennot/luento9.md)
+  - [Luento 10: Taulukot](./luennot/luento10.md)
+  - [Luento 11: Tyyppimuunnokset, kertaus operaattoreista](./luennot/luento11.md)
+  - [Luento 12: Taulukkoja ja silmukoita](./luennot/luento12.md)
+  - [Luento 13: StringBuilder, moniulotteiset taulukot, dynaamiset tietorakenteet](./luennot/luento13.md)
+  - [Luento 14: Tietorakenteita, harjoitustyön tekemisestä](./luennot/luento14.md)
+  - [Luento 15: C#-kielen tyyppijärjestelmästä](./luennot/luento15.md)
+  - [Luento 16: `switch`-lause, attribuutit, rekursio](./luennot/luento16.md)
+  - [Luento 17: Rekursio, tietoa tentistä](./luennot/luento17.md)
+  - [Luento 18: Kertaus, tietoa tentistä](./luennot/luento18.md)
+  - [Extrat](./luennot/extra.md)

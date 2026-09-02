@@ -2,8 +2,7 @@
  
  * **Lue:** [7.7. Operaattorit](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#operaattorit)
  * **Lue:** [13.3. Vertailuoperaattorit](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#operaattorit)
- * **Lue:** [8.8. Tyyppimuunnokset](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/
- moniste#tyyppimuunnokset)
+ * **Lue:** [8.8. Tyyppimuunnokset](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#tyyppimuunnokset)
 
 ## Syksy 2026
 

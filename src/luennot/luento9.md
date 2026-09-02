@@ -1,7 +1,7 @@
 # 9. luento: Toistolauseet ja debuggaus 
 
  * **Lue:** [16. Toistorakenteet](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#toistorakenteet-silmukat)
- * **Lue:** [Debuggaus-materiaali](../osa5/1-debuggaus.md)
+ * **Lue:** [Debuggaus-materiaali](../osa5/3-debuggaus.md)
 
 ## Syksy 2026
 

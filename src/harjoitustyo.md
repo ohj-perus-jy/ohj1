@@ -101,7 +101,7 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
-      solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      solution](./osa1/3-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
       ladattu etävarastostasi paikalliseksi git-varastoksi.
  1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
@@ -210,7 +210,7 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
 11. **Funktio**: Pelissä on funktio.
 
       Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
- 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset) 
+ 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#rider-settings) 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
 ## Usein kysytyt kysymykset ja muut vinkit {#ukk}

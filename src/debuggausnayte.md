@@ -32,7 +32,7 @@ Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa t
 
 ## Miten valmistaudun?
 
- 1. Lue [osa 5.1 Debuggaus](./osa5/1-debuggaus.md)
+ 1. Lue [luku 5.3 Debuggaus](./osa5/3-debuggaus.md)
  2. Katso [luennon debuggauksesta ja debuggerin käytöstä](https://www.youtube.com/live/2d1ErNVn9sI?feature=share&t=1095) 
  3. Tee [Osan 5 harjoitustehtävä 4](https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo5#KeLJyCC2zOjx)
  4. Tee [harjoittelunäyte](#harjoittelunayte) (vapaaehtoinen)

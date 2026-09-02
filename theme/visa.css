@@ -1,0 +1,21 @@
+/* "Testaa tietosi" -visat: <visa> kääre ja sen sisällä <details>-kysymykset. */
+visa {
+    display: block;
+    margin-block: 1em;
+}
+
+visa > details {
+    background-color: var(--quote-bg);
+    border-inline-start: 0.4em solid var(--task-bg, var(--icons));
+    padding: 0.5em 1em;
+    margin-block: 0.75em;
+}
+
+visa > details > summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+visa > details[open] > summary {
+    margin-block-end: 0.5em;
+}

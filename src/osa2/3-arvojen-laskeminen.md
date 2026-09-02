@@ -1,1 +1,0 @@
-# Arvojen laskeminen
