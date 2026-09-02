@@ -77,7 +77,7 @@ ohjelmoida. Loppu on yksityiskohtia. Tosin yksityiskohtia on aika paljon.
 Tietokoneen sydän on *prosessori*, joka ymmärtää vain *konekieltä*: jonoja
 ykkösiä ja nollia, joista kukin ryhmä tarkoittaa jotakin hyvin pientä
 toimenpidettä, kuten "laske kaksi lukua yhteen" tai "siirry ohjeeseen numero
-4711". Konekielinen ohjelma näyttää suunnilleen tältä:
+4711". Konekielinen ohjelma voisi näyttää suunnilleen tältä:
 
 ```text
 10111000 00000001 00000000 00000000 00000000
@@ -92,6 +92,12 @@ kirjoitettavaksi ja luettavaksi. Sama asia C#-kielellä:
 ```csharp,ignore
 int summa = 1 + 2;
 ```
+
+Tuo ykkösten ja nollien jono ei ole siis satunnaista bittipuuroa, vaan (erään
+prosessoriarkkitehtuurilla varustetun) tietokoneen näkökulmasta juuri se
+komentojen sarja, joka laskee yhteen luvut 1 ja 2 ja tallentaa tuloksen
+muistiin. Meidän kannaltamme ohjelmointikielellä ilmaistu komento on tietenkin
+paljon helpompi ymmärtää ja tarvittaessa myös muuttaa. 
 
 Ohjelmointikielellä kirjoitettua tekstiä kutsutaan *lähdekoodiksi*. Jotta
 prosessori voisi suorittaa sen, lähdekoodi täytyy *kääntää* konekielelle.
