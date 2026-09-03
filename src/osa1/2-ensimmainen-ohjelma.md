@@ -39,7 +39,7 @@ Olemme kirjoittaneet sinulle valmiiksi pienen C#-ohjelman, joka tulostaa tekstin
 Play-napin muotoista painiketta ajaaksesi ohjelman. Ohjelman pitäisi näyttää
 teksti `Heippa, maailma!`.
 
-```csharp
+```csharp,
 public class Ohjelma
 {
     public static void Main()
@@ -56,7 +56,7 @@ ohjelmia itse -- mutta aloitetaan pienestä.
 
 Käydään läpi, mitä ohjelma tekee rivi riviltä:
 
-```csharp
+```csharp,noplayground
 public class Ohjelma
 ```
 
@@ -64,7 +64,7 @@ Tämä rivi määrittelee uuden *luokan* (engl. *class*) nimeltä `Ohjelma`.
 C#-kielessä kaikki koodi kirjoitetaan luokkien sisälle. Luokka on kuin säiliö,
 joka voi sisältää tietoa ja toiminnallisuutta.
 
-```csharp
+```csharp,noplayground
 {
 ```
 
@@ -72,14 +72,14 @@ Tämä aaltosulku `{` kertoo, mistä luokan varsinainen sisältö alkaa. Kaikki,
 luokan sisällä tehdään, kirjoitetaan tämän ja vastaavan sulkevan aaltosulun `}`
 väliin.
 
-```csharp
+```csharp,noplayground
     public static void Main()
 ```
 
 Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 3](../osa3/1-aliohjelmat.md), mutta lyhyesti: 
 aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste -- tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
 
-```csharp
+```csharp,noplayground
     {
 ```
 
@@ -87,7 +87,7 @@ Vastaavasti kuin luokan kohdalla, tämä aaltosulku kertoo, mistä aliohjelman
 sisältö alkaa. Kaikki aliohjelman sisällä tehtävä kirjoitetaan tämän ja
 vastaavan sulkevan aaltosulun `}` väliin.
 
-```csharp
+```csharp,noplayground
         System.Console.WriteLine("Heippa, maailma!");
 ```
 
@@ -95,7 +95,7 @@ Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, m
 
 Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi luvussa [Lauseet ja lausekkeet](../osa2/2-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
 
-```csharp
+```csharp,noplayground
     }
 }
 ```
