@@ -695,8 +695,8 @@ Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.
 2. Inline Completion -täydennyksen kytkeminen pois
    - Avaa Rider *Welcome to JetBrains Rider* -näkymään
    - Valitse vasemmasta alalalaidasta Configure <i class="bi bi-chevron-right"></i> Settings
-   - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Inline Completion
-   - Ota ruksi **pois** kohdasta *Enable local Full Line completion suggestions*
+   - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Code Completion <i class="bi bi-chevron-right"></i> Inline
+   - Ota ruksi **pois** kohdasta *Enable inline completion using language models*
    - Tallenna asetukset *Save*-painikkeella
 
 ## Tekstieditori 
