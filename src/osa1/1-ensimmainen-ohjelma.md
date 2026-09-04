@@ -184,7 +184,7 @@ public class Ohjelma
 ## 📝 Tehtävät
 
 <task>
-  <task-title>Tehtävä T1*: Tulostaminen <points>1 p.</points> </task-title>
+  <task-title num="T1*">Tulostaminen <points>1 p.</points></task-title>
   <handout>
 
   {{#include ../exercises/1-1-1-tulostaminen/handout.md}}
@@ -194,7 +194,7 @@ public class Ohjelma
 </task>
 
 <task>
-  <task-title>Tehtävä T2*: Ensimmäinen oma ohjelma <points>1 p.</points> </task-title>
+  <task-title num="T2*">Ensimmäinen oma ohjelma <points>1 p.</points></task-title>
   <handout>
 
   {{#include ../exercises/1-1-2-oma_ohjelma/handout.md}}
