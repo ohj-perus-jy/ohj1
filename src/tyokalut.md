@@ -679,12 +679,12 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 
 ## Riderin tekoälyasetusten kytkeminen pois päältä {#rider-ai}
 
-Riderissa on parikin erilaista tekoälypohjainen täydennysominaisuutta: *AI
+Riderissa on parikin erilaista tekoälypohjaista täydennysominaisuutta: *AI
 Asisstant* ja *Inline Completion*. Näiden
 avulla Rider yrittää täydentää kirjoitettua koodia. Esimerkki Riderin
-tekoälypohjaisesta koodin täydennyksestä: 
+tekoälypohjaisesta koodin täydennyksestä, jossa parin sanan kirjoittamisen jälkeen Rider ehdottaa useamman rivin valmista koodia himmennettynä tekstinä: 
 
-![](images/rider-ai.png)
+![](images/rider-ai-inline-completion.gif)
 
 Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.
 
