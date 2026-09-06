@@ -10,11 +10,14 @@
 
 ## Syksy 2026
 
- * Tulossa
+ * 📺 Katso: [YouTube](https://youtube.com/live/qTPxRDzAa88?feature=share),
+     Moniviestin (tulossa)
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento04/Luento04.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento04)
 
 ## Kevät 2026
 
-  * 📺 Katso tallenne ([YouTube](https://www.youtube.com/live/lDx7xB5VLyQ?si=OCSdePzw-EYCEi3i&t=176), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-4))
-  * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04/Luento04.pdf)
-  * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04)
+ * 📺 Katso tallenne ([YouTube](https://www.youtube.com/live/lDx7xB5VLyQ?si=OCSdePzw-EYCEi3i&t=176), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-4))
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04/Luento04.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026k/esimerkit/-/tree/main/Luento04)
 
