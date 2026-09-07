@@ -139,6 +139,8 @@ mihin ohjausryhmään olet ilmoittautunut.
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
 
+Opettaja lähettää Teams-kanavalle linkin, jonka avulla voit lähettää ohjauspyynnön.
+
 ## Ohjeet Teams-etäohjaukseen liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
 
 Lähetä sähköpostilla alla oleva pyyntö osoitteeseen `ohj1-opet@jyu.onmicrosoft.com`.
