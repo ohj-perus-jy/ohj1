@@ -256,7 +256,7 @@ Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi
 
 Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
 
-Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä]() <!--TODO-->**TODO: Linkki**, jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
+Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä](https://tim.jyu.fi/view/kurssit/jypeli/wiki), jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
 
 Tehdään seuraavaksi pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen ympyrä.
 
