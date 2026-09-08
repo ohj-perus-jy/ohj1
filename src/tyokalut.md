@@ -11,10 +11,6 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 - **[JetBrains Rider](#jetbrains-rider)** &ndash; *integroitu kehitysympäristö*, jolla voi
   kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
   C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.
-- **[Tekstieditori](#tekstieditori)** &ndash; ohjelma, jolla voi muokata tekstipohjaisia
-  tiedostoja, kuten lähdekoodia avaamatta IDE-ohjelmistoa. Suosittelemme
-  esimerkiksi *Visual Studio Code* tai *Notepad++*. Microsoft Word tai Google
-  Docs **ei ole** opintojaksolle soveltuva tekstieditori.
 - **[JyPeli](#jypeli)** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
   C#-kirjasto pelien tekemiseen.
 - **[ComTest](#comtest)** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
@@ -698,90 +694,6 @@ Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.
    - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Code Completion <i class="bi bi-chevron-right"></i> Inline
    - Ota ruksi **pois** kohdasta *Enable inline completion using language models*
    - Tallenna asetukset *Save*-painikkeella
-
-## Tekstieditori 
-
-Tälle opintojaksolle riittää mikä tahansa tekstieditori, joka <u>ei</u> ole toimistosovellus, eli ei Google Docs, Microsoft Word, tai muu asiakirjojen laadintaan tarkoitettu sovlelus. Vaihtoehtoja on monta. Ihmisillä on hyvin erilaisia preferenssejä tekstieditorien suhteen, joten kannattaa kokeilla erilaisia vaihtoehtoja ja valita itselle mieluisin.
-
-Koska jokin tekstieditori täytyy valita, käytämme tässä ohjeessa Visual Studio Codea (VS Code). Se on suosittu, ilmainen, ja monipuolinen tekstieditori, jota voi laajentaa monin tavoin, jopa IDE-tasoiseksi työkaluksi lisäosien avulla. Jos haluat käyttää jotain muuta tekstieditoria, voit toki tehdä niin, mutta ohjeet on kirjoitettu VS Coden käyttöä ajatellen.
-
-### [Windows](#tab/win)
- 
-1. Avaa PowerShell-komentorivi ellei se ole jo auki.
-2. Asenna VS Code suorittamalla seuraava komento:
-
-    ```bash
-    winget install -e --id=Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
-    ```
-    
-    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
-    Jos näet komentorivillä kysymyksen, kuten:
-    
-    ```
-    Do you agree to all the source agreements terms?
-    [Y] Yes [N] No:
-    ```
-    
-    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
-    
-    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
-
-3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
-
-3. Kokeile käynnistää VS Code suorittamalla komento:
-
-    ```bash
-    code
-    ```
-    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* <i class="bi bi-chevron-right"></i> Kirjoita *Visual Studio Code* <i class="bi bi-chevron-right"></i> Valitse *Visual Studio Code*.
-
-***
-
-### [macOS](#tab/macos)
-
- 1. Avaa Pääte ellei se ole jo
-2. Asenna VS Code suorittamalla alla oleva komento:
-
-    ```bash
-    brew install --cask visual-studio-code
-    ```
-    
-    Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
-    macOS-käyttäjän salasanaa `Password:`-kentässä. Kirjoita silloin
-    salasana paikalle ja paina Enter-näppäintä.
-
-3. Tarkista, että VS Code toimii. Avaa Launchpad ja käynnistä sieltä *Visual Studio Code*.
-
-    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-
-
-***
-
-### [Linux](#tab/linux)
- 
-1.  Avaa jakelusi pääteohjelma ellei se ole jo
-2.  Asenna Visual Studio Code. Asennustapa vaihtelee jakelun mukaan:
-
-    - Arch: Asenna [`visual-studio-code-bin`](https://aur.archlinux.org/packages/visual-studio-code-bin)-pakkaus AUR:sta. Voit asentaa sen
-      käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
-      
-      ```bash
-      yay -S visual-studio-code-bin
-      ```
-      
-    - Muut jakelut: Suosittelemme asentamaan [code-snapin](https://snapcraft.io/code) käyttäen `snap`-työkalua:
-    
-      ```bash
-      snap install code --classic
-      ```
-      
-      Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
-      
-3. Tarkista, että VS Code toimii. Käynnistä VS Code joko sovellusvalikosta tai `code`-komennolla. 
-    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
-
-***
  
 ## JyPeli 
 
@@ -946,7 +858,7 @@ suosikkikomennoillesi uudet näppäinoikotiet asetuksista:
 
 </details>
 
-## Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset {#rider-settings}
+<details closed><summary> Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset </summary>
 
 Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
 otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
@@ -987,7 +899,9 @@ että `use var`, eli poista tämä huomautus käytöstä.
 insert it by pressing dot, parantheses, and other keys"
 - `Editor/Inlay Hints` poista ruksi "Enable Inlay Hints in .NET languages"
 
-## Valinnaista lisätietoa: Suositeltavat käyttöliittymän asetukset 
+</details>
+
+<details closed><summary>Valinnaista lisätietoa: Suositeltavat käyttöliittymän asetukset </summary>
 
 Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla käytettyjä asetuksia. 
 
@@ -1015,3 +929,95 @@ window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/1150001622
 > Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
 > valitsemalla *File* <i class="bi bi-chevron-right"></i> *Manage IDE Settings*
 > <i class="bi bi-chevron-right"></i> *Settings sync*.
+
+</details>
+
+## Valinnaiset työkalut
+
+## Tekstieditori 
+
+Halutessasi voit asentaa myös tekstieditorin, joka on monen ohjelmoijan
+perustyökalu. Opintojaksolla tarvitaan tekstieditoria lähinnä yksittäisissä
+bonus-tehtävissä, joten pakollista sen asentaminen ei ole. 
+
+Käytämme tässä ohjeessa Visual Studio Codea (VS Code). Jos haluat käyttää jotain
+muuta tekstieditoria, voit toki tehdä niin, mutta ohjeet on kirjoitettu VS Coden
+käyttöä ajatellen.
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
+2. Asenna VS Code suorittamalla seuraava komento:
+
+    ```bash
+    winget install -e --id=Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
+    ```
+    
+    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+    Jos näet komentorivillä kysymyksen, kuten:
+    
+    ```
+    Do you agree to all the source agreements terms?
+    [Y] Yes [N] No:
+    ```
+    
+    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
+    
+    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
+
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
+
+3. Kokeile käynnistää VS Code suorittamalla komento:
+
+    ```bash
+    code
+    ```
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+    Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin *Hae-ikonia* <i class="bi bi-chevron-right"></i> Kirjoita *Visual Studio Code* <i class="bi bi-chevron-right"></i> Valitse *Visual Studio Code*.
+
+***
+
+### [macOS](#tab/macos)
+
+ 1. Avaa Pääte ellei se ole jo
+2. Asenna VS Code suorittamalla alla oleva komento:
+
+    ```bash
+    brew install --cask visual-studio-code
+    ```
+    
+    Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+    macOS-käyttäjän salasanaa `Password:`-kentässä. Kirjoita silloin
+    salasana paikalle ja paina Enter-näppäintä.
+
+3. Tarkista, että VS Code toimii. Avaa Launchpad ja käynnistä sieltä *Visual Studio Code*.
+
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+
+
+***
+
+### [Linux](#tab/linux)
+ 
+1.  Avaa jakelusi pääteohjelma ellei se ole jo
+2.  Asenna Visual Studio Code. Asennustapa vaihtelee jakelun mukaan:
+
+    - Arch: Asenna [`visual-studio-code-bin`](https://aur.archlinux.org/packages/visual-studio-code-bin)-pakkaus AUR:sta. Voit asentaa sen
+      käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
+      
+      ```bash
+      yay -S visual-studio-code-bin
+      ```
+      
+    - Muut jakelut: Suosittelemme asentamaan [code-snapin](https://snapcraft.io/code) käyttäen `snap`-työkalua:
+    
+      ```bash
+      snap install code --classic
+      ```
+      
+      Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
+      
+3. Tarkista, että VS Code toimii. Käynnistä VS Code joko sovellusvalikosta tai `code`-komennolla. 
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+
+***
