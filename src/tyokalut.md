@@ -523,30 +523,35 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
     
     Hyväksy mahdolliset Riderin käyttöehdot.
 
-4. Kun JetBrains Rider kysyy lisenssiä, valitse **Free Non-Commercial License**.
+4. Ikkunaan ilmestyy mainos tekoälylisäkkeestä: *JetBrains Rider goes AI*. Paina
+   kulmasta X, **älä** paina Let's go. Saat nyt ilmoituksen *Free trial has
+   started ..xx days left.* 
+5. Paina oikeasta alakulmasta Trial, ja valitse *Free for Learning and hobby*, 
+   ja sen jälkeen *Learning and self-education*.
 
-5. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
-   Valitse *Continue with email* ja tee itsellesi tunnus.
+6. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse *Continue with email* ja tee itsellesi tunnus. Tunnuksen ei tarvitse
+   liittyä yliopistoon mitenkään.
 
-6. Kun olet rekisteröitynyt, avaa Rider ja valitse *Log in for Non-Commercial License*.
+7. Kun olet rekisteröitynyt, saatat mahdollisesti joutua kirjautumaan uudelleen. Valitse silloin *Log in for Non-Commercial License*.
     
     Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
-    *Start Non-Commercial license*.
+    *Start Non-Commercial license*. (TODO: Tämä vaihe on muuttunut syksyllä 2026. Jos tämä ohje ei vastaa tilannetta, muokkaa tätä ohjetta tai ilmoita opettajille.)
 
-6. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
+8. Suorita asetusten asettaminen loppuun. Suositellut asetukset:
 
     - Teema: Valitse haluamasi teema
     - Näppäimistöasettelu: *Suosittelemme* vaihtoehtoja Visual Studio tai VS Code
     - Pluginit: valitse *Continue without Plugins*
 
-7. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
+9. Kun olet valmis ja pääset *Welcome to JetBrains Rider* -ikkunaan, ohjelman
    asennus on onnistunut.
 
-8. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
+10. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
    *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* <i class="bi bi-chevron-right"></i> *.NET
    languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
 
-9. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+11. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
    Lataa [asetuspaketti
 (settings.zip)](https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1) 
     - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* <i class="bi bi-chevron-right"></i> *Import Settings...*
