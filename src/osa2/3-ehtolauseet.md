@@ -21,7 +21,7 @@ jotka tekevät ohjelmasta muutakin kuin listan käskyjä.
 
 Ehto on aina *totuusarvoinen lauseke*: jotakin, jonka arvo on `true` tai
 `false`. Edellisen luvun [vertailu- ja loogiset
-operaattorit](./4-operaattorit.md#vertailuoperaattorit) ovat juuri sitä
+operaattorit](./2-operaattorit.md#vertailuoperaattorit) ovat juuri sitä
 varten.
 
 ## `if`-lause

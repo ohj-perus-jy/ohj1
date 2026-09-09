@@ -384,5 +384,5 @@ tulostuisi vaihtoehto a.
 ## Tehtävät
 
 <!-- Vaiheessa B: T-tehtävät "Määrittele muuttujat"
-     (exercises/2-3-1-mita_tulostaa), "Mitä ohjelma tulostaa?" (sijoitusten
+     (exercises/2-1-1-mita_tulostaa), "Mitä ohjelma tulostaa?" (sijoitusten
      jäljitys), "Painoindeksi". -->

@@ -22,6 +22,13 @@ käytettävissä. Asia tulee vastaan heti, kun ohjelmassa on useita aliohjelmia.
 <!-- Parametrin muuttaminen ei muuta kutsujan muuttujaa (arvotyypeillä).
      Viitetyypit käsitellään luvussa 6.3. -->
 
+## Attribuutit
+
+Vaikka tällä kurssilla ei käsitellä olio-ohjelmointia, Jypeli-ohjelmissa
+käytämme luokan attribuutteja. Attribuutit ovat muuttujia, jotka määritellään
+luokan sisällä, mutta aliohjelmien ulkopuolella. Attribuutit ovat olemassa koko
+luokan elinkaaren ajan, ja ne näkyvät kaikissa luokan aliohjelmissa. 
+
 ## Virhe: muuttujaa ei ole olemassa nykyisessä kontekstissa
 
 <!-- CS0103. Tyypillinen syy: muuttuja määritelty toisessa aliohjelmassa tai

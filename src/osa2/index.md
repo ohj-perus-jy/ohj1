@@ -1,23 +1,26 @@
-# Osa 2: Muuttujat, laskenta ja päätökset
+# Osa 2: Muuttujat, ehdot ja aliohjelmat
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
->   järjestyksessä ne suoritetaan
 > * osaat määritellä muuttujia, valita niille sopivan tietotyypin ja sijoittaa
 >   niihin arvoja
 > * osaat laskea aritmeettisia lausekkeita ja tiedät, miten tietotyyppi
 >   vaikuttaa laskun tulokseen
 > * osaat kirjoittaa ehtolauseita vertailu- ja loogisilla operaattoreilla
+> * osaat jakaa ohjelman aliohjelmiin ja kutsua niitä
+> * erotat lauseen ja lausekkeen toisistaan
+> * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
+>   järjestyksessä ne suoritetaan
 
 ## Luvut
 
-1. [Ohjelman rakenne](./1-ohjelman-rakenne.md)
-2. [Lauseet ja lausekkeet](./2-lauseet-ja-lausekkeet.md)
-3. [Muuttujat ja tietotyypit](./3-muuttujat-ja-tietotyypit.md)
-4. [Operaattorit ja laskutoimitukset](./4-operaattorit.md)
-5. [Ehtolauseet](./5-ehtolauseet.md)
+1. [Muuttujat ja tietotyypit](./1-muuttujat-ja-tietotyypit.md)
+2. [Operaattorit ja laskutoimitukset](./2-operaattorit.md)
+3. [Ehtolauseet](./3-ehtolauseet.md)
+4. [Aliohjelmat](./4-aliohjelmat.md)
+5. [Lauseet ja lausekkeet](./5-lauseet-ja-lausekkeet.md)
+6. [Ohjelman rakenne](./6-ohjelman-rakenne.md)
 
 ## Luennot
 
@@ -25,6 +28,7 @@ Luentojen numerointi on kevään 2026 toteutuksen mukainen. Uuden toteutuksen
 luennot päivitetään tähän.
 
 * [Luento 3: Muuttujat](../luennot/luento3.md)
+* [Luento 4: Aliohjelmat](../luennot/luento4.md)
 * [Luento 5: Muuttujat, operaattorit, suoritusjärjestys](../luennot/luento5.md)
 * [Luento 6: Ehtolauseet](../luennot/luento6.md)
 * [Luento 11: Tyyppimuunnokset, kertaus operaattoreista](../luennot/luento11.md)

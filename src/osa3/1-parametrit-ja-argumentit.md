@@ -49,8 +49,40 @@ parametriin kutsun alussa.
 ## Parametrit Jypeli-ohjelmassa
 
 <!-- Vaiheessa B: aliohjelma PiirraPallo(double x, double y, double sade),
-     jota kutsutaan Begin-metodista useita kertoja. Yhdistää luvun 3.5
+     jota kutsutaan Begin-metodista useita kertoja. Yhdistää luvun 3.4
      olioihin. -->
+
+<details closed id="kuormittaminen"><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Aliohjelman kuormittaminen</summary>
+
+Samannimisiä aliohjelmia voi olla useita, kunhan niiden parametrilistat
+eroavat toisistaan. Tätä kutsutaan *kuormittamiseksi* (engl. *overloading*).
+Olet jo käyttänyt kuormitettua aliohjelmaa: `Console.WriteLine` hyväksyy
+argumentikseen niin kokonaisluvun, merkkijonon kuin liukuluvunkin.
+
+```csharp
+public static void TulostaSumma(int a, int b)
+{
+    Console.WriteLine(a + b);
+}
+
+public static void TulostaSumma(double a, double b)
+{
+    Console.WriteLine(a + b);
+}
+```
+
+Kääntäjä valitsee kutsuttavan version argumenttien lukumäärän ja tyyppien
+perusteella: `TulostaSumma(3, 5)` kutsuu `int`-versiota ja
+`TulostaSumma(1.5, 2.5)` `double`-versiota. Pelkkä paluuarvon tyyppi ei riitä
+erottamaan versioita toisistaan.
+
+Kuormittamista ei tarvita tällä kurssilla omissa ohjelmissa, mutta sen
+tunnistaminen auttaa lukemaan kirjastojen dokumentaatiota, jossa samalla
+nimellä on usein monta versiota. Toinen tapa saada sama aliohjelma toimimaan eri
+määrällä argumentteja on antaa parametreille oletusarvot; ks. liite
+[Valinnaiset parametrit ja oletusarvot](../liitteet/oletusarvot.md).
+
+</details>
 
 ## Tehtävät
 

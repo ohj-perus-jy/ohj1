@@ -19,7 +19,7 @@ Erottelu tulee vastaan jatkuvasti:
 * Kun mietit, voiko tulostuskäskyn sisään kirjoittaa laskun
   (`Console.WriteLine(2 + 3)`), vastaus on kyllä: tulostuskäsky odottaa
   lauseketta, ja `2 + 3` on lauseke.
-* Kun osassa 4 kirjoitat funktion, joka palauttaa arvon, sen kutsu on lauseke,
+* Kun osassa 3 kirjoitat funktion, joka palauttaa arvon, sen kutsu on lauseke,
   ja sitä voi käyttää kaikkialla, missä arvoa tarvitaan.
 
 ## Lause
@@ -36,8 +36,8 @@ Console.WriteLine("Hyvää syntymäpäivää!"); // aliohjelmakutsu
 
 Myös ehtolause (`if`) ja toistolause (`while`, `for`) ovat lauseita. Ne eivät
 pääty puolipisteeseen vaan sisältävät aaltosulkujen rajaaman lohkon, jossa on
-lisää lauseita. Niihin tutustutaan luvussa [Ehtolauseet](./5-ehtolauseet.md) ja
-osassa 4.
+lisää lauseita. Ehtolauseet käsiteltiin luvussa
+[Ehtolauseet](./3-ehtolauseet.md), ja toistolauseisiin tutustutaan osassa 4.
 
 ## Lauseke
 
@@ -57,8 +57,8 @@ isommiksi lausekkeiksi.
 | `ika + 1` | yhtä suurempi kuin `ika` | `int` |
 
 Jokaisella lausekkeella on arvon lisäksi *tyyppi*, joka kertoo, millainen arvo
-on kyseessä. Tyyppeihin tutustutaan seuraavassa luvussa
-[Muuttujat ja tietotyypit](./3-muuttujat-ja-tietotyypit.md).
+on kyseessä. Tyypit esiteltiin luvussa
+[Muuttujat ja tietotyypit](./1-muuttujat-ja-tietotyypit.md).
 
 ## Lauseke lauseen sisällä
 
@@ -95,7 +95,7 @@ public class Lausekkeet
 Lauseke voi olla myös aliohjelmakutsu, joka palauttaa arvon. Alla
 `Math.Max(3, 7)` on lauseke, jonka arvo on 7. Omia arvon palauttavia
 aliohjelmia opitaan kirjoittamaan luvussa [Aliohjelman
-paluuarvo](../osa4/1-aliohjelman-paluuarvo.md).
+paluuarvo](../osa3/2-aliohjelman-paluuarvo.md).
 
 ```csharp,ignore
 int suurempi = Math.Max(3, 7); // Sijoituslause, jossa lauseke on kutsu
@@ -116,8 +116,8 @@ int b = a++;           // Lausekkeena: b saa arvon 4, ja a on sen jälkeen 5.
 
 Jälkimmäinen rivi on laillista C#:a, mutta sitä kannattaa välttää: lukija
 joutuu pysähtymään miettimään, kumpi arvo `b`:hen päätyi. Operaattoreista ja
-`++`:n kahdesta muodosta kerrotaan lisää luvussa
-[Operaattorit ja laskutoimitukset](./4-operaattorit.md).
+`++`:n kahdesta muodosta kerrottiin luvussa
+[Operaattorit ja laskutoimitukset](./2-operaattorit.md).
 
 Tässä esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus. Se, mihin
 "lokeroon" jokin koodinpätkä kuuluu, vaihtelee ohjelmointikielen mukaan.

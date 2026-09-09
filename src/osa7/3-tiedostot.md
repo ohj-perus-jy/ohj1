@@ -4,7 +4,9 @@
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Ohjelman tiedot katoavat, kun ohjelma suljetaan, ellei niitä tallenneta. Tässä luvussa opitaan lukemaan tekstitiedosto riveiksi, käsittelemään rivit ja kirjoittamaan tiedostoon.
+Ohjelman tiedot katoavat, kun ohjelma suljetaan, ellei niitä tallenneta. Tässä luvussa opitaan lukemaan tekstitiedosto riveiksi, käsittelemään rivit ja kirjoittamaan tiedostoon. Tiedoston lukeminen on myös luontevin paikka
+soveltaa edellisen luvun [poikkeuksia](./2-poikkeukset.md): tiedosto voi puuttua
+tai sen sisältö voi olla väärän muotoista.
 
 ## Tiedosto ja polku
 

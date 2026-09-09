@@ -233,7 +233,7 @@ Lisää vielä *dokumentaatiokommentit*: kirjoita luokan esittelyrivin
 Rider luo `<summary>`-rungon. Kirjoita tagien väliin, mitä ohjelma tekee. Tee
 sama `Begin`-aliohjelmalle. Dokumentaatiokommentit ovat kurssilla pakollisia,
 ja niistä kerrotaan tarkemmin luvussa [Kommentointi ja
-dokumentointi](../osa3/4-kommentointi-ja-dokumentointi.md).
+dokumentointi](../osa4/3-kommentointi-ja-dokumentointi.md).
 
 ```csharp,ignore
 /// <summary>

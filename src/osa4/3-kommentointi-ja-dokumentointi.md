@@ -7,7 +7,7 @@
 Tässä luvussa opitaan kirjoittamaan kommentteja ja dokumentoimaan aliohjelmat
 niin, että sekä ihminen että kehitysympäristö hyötyvät niistä.
 Dokumentaatiokommentit ovat myös pohja ComTest-testeille, joihin tutustutaan
-luvussa [Testaaminen ComTestillä](../osa4/3-testaaminen-comtestilla.md).
+luvussa [Testaaminen ComTestillä](./4-testaaminen-comtestilla.md).
 
 ## Rivi- ja lohkokommentit
 

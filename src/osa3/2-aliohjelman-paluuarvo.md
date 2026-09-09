@@ -2,12 +2,11 @@
 
 Tähän asti aliohjelmamme ovat tehneet jotakin, esimerkiksi tulostaneet tekstiä,
 mutta eivät ole antaneet tulosta takaisin kutsujalle. Aliohjelma voi kuitenkin
-myös *palauttaa* arvon. Arvon palauttavaa aliohjelmaa kutsutaan tällä
-kurssilla *funktioksi*.
+myös *palauttaa* arvon. Arvon palauttavaa aliohjelmaa voidaan kutsua myös *funktioksi*.
 
-## Funktion määrittely
+## Aliohjelman paluuarvon määrittely
 
-Alla oleva funktio laskee kahden luvun summan ja palauttaa sen. Paluuarvon
+Alla oleva aliohjelma laskee kahden luvun summan ja palauttaa sen. Paluuarvon
 tyyppi (`int`) kirjoitetaan `void`-sanan tilalle, ja arvo palautetaan
 `return`-lauseella.
 
@@ -18,20 +17,20 @@ public static int Summa(int a, int b)
 }
 ```
 
-## Funktion kutsuminen
+## Aliohjelman kutsuminen
 
-Funktion kutsu on *lauseke*, jonka arvo on funktion palauttama arvo. Paluuarvon
+Arvon palauttavan aliohjelman kutsu on *lauseke*, jonka arvo on aliohjelman palauttama arvo. Paluuarvon
 voi sijoittaa muuttujaan, tulostaa tai käyttää osana laskua.
 
 ```csharp
-int summa = Summa(3, 5);
+int summa = Summa(3, 5); // Summa(3, 5) palauttaa arvon 8, joka sijoitetaan muuttujaan summa
 Console.WriteLine(summa);            // Tulostaa 8
 Console.WriteLine(Summa(1, 2) * 10); // Tulostaa 30
 ```
 
 ## `return` päättää suorituksen
 
-Kun `return`-lause suoritetaan, funktion suoritus päättyy heti ja suoritus
+Kun `return`-lause suoritetaan, aliohjelman suoritus päättyy heti ja suoritus
 palaa kutsukohtaan. `return`-lauseen jälkeisiä lauseita ei suoriteta.
 
 Jos aliohjelman paluuarvon tyypiksi on määritelty jotain muuta kuin `void`,
@@ -55,7 +54,7 @@ public static int Summa(int a, int b)
 ## Funktio, joka ei tulosta
 
 <!-- Vaiheessa B: laskenta ja tulostus erotetaan toisistaan; funktiota on
-     helpompi testata (luku 4.3) ja käyttää uudelleen. -->
+     helpompi testata (luku 4.4) ja käyttää uudelleen. -->
 
 ## Tehtävät
 

@@ -11,7 +11,7 @@ Asenna ComTest [Työkalut-sivun](../tyokalut.md#comtest) ohjeiden mukaan.
 ## Testit dokumentaatiokommenteissa
 
 ComTest-testit kirjoitetaan
-[dokumentaatiokommenteiksi](../osa3/4-kommentointi-ja-dokumentointi.md)
+[dokumentaatiokommenteiksi](./3-kommentointi-ja-dokumentointi.md)
 testattavan funktion lähdekoodiin. Testitapaukset ympäröidään `<example>`- ja
 `<pre name="test">`-tageilla. Alla esimerkki, jossa määritellään testitapaukset
 `Summa`-funktiolle, joka laskee kahden kokonaisluvun summan.

@@ -8,7 +8,7 @@ käyttäminen käytännössä tarkoittaa.
 
 Luvussa käytetään olioita (`new`, ominaisuudet, `Add`) selittämättä niitä
 vielä tarkasti. Olioihin palataan kunnolla luvussa [Jypeli ja
-oliot](../osa3/5-jypeli-ja-oliot.md). Nyt riittää, että saat jotakin näkyviin
+oliot](../osa3/4-jypeli-ja-oliot.md). Nyt riittää, että saat jotakin näkyviin
 ja uskallat muuttaa sitä.
 
 ## Miksi pelikirjasto?

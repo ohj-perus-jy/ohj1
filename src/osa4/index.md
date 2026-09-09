@@ -1,32 +1,29 @@
-# Osa 4: Funktiot, testaaminen ja toisto
+# Osa 4: Toisto, merkkijonot ja testaaminen
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * osaat kirjoittaa funktion, joka palauttaa arvon, ja käyttää paluuarvoa
->   lausekkeessa
-> * osaat testata funktion ComTestillä
 > * osaat kirjoittaa toistolauseita `while`- ja `for`-rakenteilla
 > * osaat käsitellä merkkijonoja valmiilla metodeilla
+> * osaat kommentoida koodia ja dokumentoida aliohjelman
+>   dokumentaatiokommenteilla
+> * osaat testata funktion ComTestillä
 
 ## Luvut
 
-1. [Aliohjelman paluuarvo](./1-aliohjelman-paluuarvo.md)
-2. [Aliohjelman kuormittaminen](./2-aliohjelman-kuormittaminen.md)
-3. [Testaaminen ComTestillä](./3-testaaminen-comtestilla.md)
-4. [Toistolauseet](./4-toistolauseet.md)
-5. [Merkkijonot](./5-merkkijonot.md)
+1. [Toistolauseet](./1-toistolauseet.md)
+2. [Merkkijonot](./2-merkkijonot.md)
+3. [Kommentointi ja dokumentointi](./3-kommentointi-ja-dokumentointi.md)
+4. [Testaaminen ComTestillä](./4-testaaminen-comtestilla.md)
 
 ## Luennot
 
 Luentojen numerointi on kevään 2026 toteutuksen mukainen. Uuden toteutuksen
 luennot päivitetään tähän.
 
-* [Luento 5: Aliohjelman paluuarvo](../luennot/luento5.md)
-* [Luento 6: Aliohjelman kuormittaminen](../luennot/luento6.md)
-* [Luento 7: Testaaminen, ComTest](../luennot/luento7.md)
-* [Luento 8: Harjoitustyö, merkkijonot](../luennot/luento8.md)
 * [Luento 9: Toistolauseet](../luennot/luento9.md)
+* [Luento 8: Harjoitustyö, merkkijonot](../luennot/luento8.md)
+* [Luento 7: Testaaminen, ComTest](../luennot/luento7.md)
 
 ## Tehtävät
 

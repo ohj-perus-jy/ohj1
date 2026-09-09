@@ -3,11 +3,10 @@
 Tässä luvussa tarkastelemme ohjelmaa kokonaisuutena: mistä osista se koostuu ja
 missä järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
 *top-down*-tavalla; katselemme ensin ohjelman rakennetta kokonaisuutena ja sitten tarkastelemme yksittäisiä osia.
-Niinpä vaikka emme vielä ole tutkineet
-aliohjelmia, emmekä oikein tiedä mitä se tarkoittaa, käytämme aliohjelman käsitettä, jotta
-voimme erottaa ohjelman osat toisistaan. Aliohjelmien sisältöön, parametreihin
-ja paluuarvoihin pureudumme tarkemmin osassa 3, luvussa
-[Aliohjelmat](../osa3/1-aliohjelmat.md).
+Aliohjelmat on jo käsitelty luvussa
+[Aliohjelmat](./4-aliohjelmat.md), joten tässä luvussa keskitytään siihen,
+miten ohjelman osat asettuvat kokonaisuudeksi. Parametreihin ja paluuarvoihin
+pureudutaan osassa 3.
 
 ## Miksi rakenteesta pitää välittää?
 
@@ -108,7 +107,7 @@ public static void Main()
 
 `Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta -- riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
 
-`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Mitä määreet `public`, `static` ja `void` tarkoittavat, käsitellään luvussa [Aliohjelmat](../osa3/1-aliohjelmat.md).
+`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Mitä määreet `public`, `static` ja `void` tarkoittavat, käsiteltiin luvussa [Aliohjelmat](./4-aliohjelmat.md).
 
 Ohjelmassa saa olla vain yksi aloituspiste. Jos ohjelmassa on useita luokkia, `Main` kirjoitetaan vain yhteen niistä.
 
@@ -213,7 +212,7 @@ Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka `Console
 > täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
 > *kutsutaan*.
 
-Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Aliohjelmien kutsumiseen palataan tarkemmin luvussa [Aliohjelmat](../osa3/1-aliohjelmat.md).
+Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Aliohjelmien kutsumista käsiteltiin luvussa [Aliohjelmat](./4-aliohjelmat.md).
 
 ## Lohkot ja sisennykset
 

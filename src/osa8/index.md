@@ -1,17 +1,15 @@
-# Osa 8: Tiedon lukeminen ja kertaus
+# Osa 8: Satunnaisluvut ja kertaus
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * osaat lukea tietoa tiedostosta ja kirjoittaa tiedostoon
 > * osaat käyttää satunnaislukuja ohjelmassa
 > * osaat kerrata kurssin keskeiset asiat ja valmistautua tenttiin
 
 ## Luvut
 
-1. [Tiedostojen lukeminen ja kirjoittaminen](./1-tiedostot.md)
-2. [Satunnaisluvut](./2-satunnaisluvut.md)
-3. [Kertaus ja tenttiin valmistautuminen](./3-kertaus.md)
+1. [Satunnaisluvut](./1-satunnaisluvut.md)
+2. [Kertaus ja tenttiin valmistautuminen](./2-kertaus.md)
 
 ## Luennot
 

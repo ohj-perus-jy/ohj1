@@ -7,6 +7,7 @@ suorittamiseen, mutta ne syventävät ymmärrystä ja niihin viitataan lukujen
 * [Tiedon esittäminen tietokoneessa](./tiedon-esittaminen-tietokoneella.md):
   binääriluvut, liukuluvut ja merkistöt (liittyy osaan 2)
 * [Moniulotteiset taulukot](./moniulotteiset-taulukot.md) (liittyy osaan 5)
+* [Valinnaiset parametrit ja oletusarvot](./oletusarvot.md) (liittyy osaan 3)
 * [Muokattavat merkkijonot: StringBuilder](./stringbuilder.md) (liittyy osaan 4)
 * [Lambda-lausekkeet](./lambda-lausekkeet.md) (liittyy osaan 6)
 * [C#-kielen tyyppijärjestelmästä](./tyyppijarjestelma.md) (liittyy osaan 6)

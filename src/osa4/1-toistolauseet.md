@@ -2,7 +2,9 @@
 
 **Toistolauseilla** (eli *silmukoilla*) voidaan toistaa jonkin lauseen tai
 lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistolauseita
-ovat `while`, `do-while`, `for` ja `foreach`.
+ovat `while`, `do-while` ja `for`. Neljäs toistolause, `foreach`, esitellään
+osassa 5 luvussa [Taulukot ja silmukat](../osa5/2-taulukot-ja-silmukat.md),
+koska se tarvitsee taulukon tai kokoelman, jonka alkiot käydään läpi.
 
 ## `while`-silmukka
 
@@ -56,27 +58,6 @@ silmukan suorituskertojen määrä ei ole tiedossa etukäteen.
 (`i <= 10`), päivitys (`i++`) ja runko-osa (aaltosulkeiden rajaama osa). Mikä
 tahansa näistä osista voi olla tyhjä, mutta puolipisteet on silti
 kirjoitettava.
-
-## `foreach`-silmukka
-
-`foreach`-silmukkaa käytetään, kun halutaan käydä läpi kaikki taulukon tai
-kokoelman alkiot. Taulukoihin tutustutaan osassa 5 ja kokoelmiin, kuten
-[listoihin](../osa6/1-listat.md) ja [sanakirjoihin](../osa6/2-sanakirjat.md),
-osassa 6.
-
-```csharp
-int[] luvut = { 7, 3, 1, -5, 9 };
-foreach (int luku in luvut)
-{
-    Console.WriteLine(luku);
-}
-```
-
-Huomaa erityisesti, että `foreach`-silmukassa ei ole erikseen alustus- ja
-päivityslauseita. `foreach`-silmukka soveltuu hyvin tilanteisiin, joissa
-taulukon tai kokoelman alkiot halutaan käydä läpi ilman, että niiden indeksejä
-tarvitaan. `foreach`-silmukkaa ei voi käyttää, jos taulukon tai kokoelman
-alkioita halutaan muuttaa.
 
 ## Sisäkkäiset silmukat
 

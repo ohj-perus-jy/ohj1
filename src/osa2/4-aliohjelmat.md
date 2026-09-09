@@ -9,6 +9,10 @@ Olet jo käyttänyt aliohjelmia: `Main` on aliohjelma, ja `Console.WriteLine` on
 valmis aliohjelma, jota olet kutsunut. Tässä luvussa opit kirjoittamaan omia
 aliohjelmia.
 
+## Toistuvat tehtävät
+
+(Motivaatio siitä että miksi aliohjelmia ylipäätään tarvitaan.)
+
 ## Aliohjelman määrittely
 
 Ennen aliohjelman käyttöä se tulee määritellä. Määrittelyssä kerrotaan
@@ -31,11 +35,12 @@ public static void OmaAliohjelma()
 - `void` tarkoittaa, että aliohjelma ei palauta arvoa. Jos aliohjelma
   palauttaisi arvon, `void`-sanan tilalla olisi jokin muu tietotyyppi, kuten
   `int`, `string` tai `bool`. Paluuarvoihin palataan luvussa
-  [Aliohjelman paluuarvo](../osa4/1-aliohjelman-paluuarvo.md).
+  [Aliohjelman paluuarvo](../osa3/2-aliohjelman-paluuarvo.md).
 - `OmaAliohjelma` on aliohjelman nimi.
 - Sulkeiden `()` sisällä olisi mahdolliset parametrit, joita aliohjelma ottaa
   vastaan. Tässä esimerkissä aliohjelma ei ota parametreja. Parametreihin
-  tutustutaan luvussa [Parametrit ja argumentit](./2-parametrit-ja-argumentit.md).
+  tutustutaan osan 3 luvussa
+  [Parametrit ja argumentit](../osa3/1-parametrit-ja-argumentit.md).
 
 ## Aliohjelman kutsuminen
 
@@ -51,8 +56,8 @@ public static void Main()
 
 Kun aliohjelmaa kutsutaan, ohjelman suoritus siirtyy aliohjelman sisälle.
 Kun aliohjelman viimeinen lause on suoritettu, suoritus palaa kutsun jälkeiseen
-lauseeseen. Suoritusjärjestystä on havainnollistettu luvussa
-[Ohjelman rakenne](../osa2/1-ohjelman-rakenne.md#suoritusjärjestys).
+lauseeseen. Suoritusjärjestystä havainnollistetaan tarkemmin luvussa
+[Ohjelman rakenne](./6-ohjelman-rakenne.md#suoritusjärjestys).
 
 ## `void`-aliohjelma ja `return`
 

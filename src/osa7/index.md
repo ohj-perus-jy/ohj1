@@ -1,4 +1,4 @@
-# Osa 7: Rekursio ja poikkeukset
+# Osa 7: Rekursio, poikkeukset ja tiedostot
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
@@ -6,11 +6,13 @@
 > * osaat kirjoittaa rekursiivisen funktion ja tunnistat sen lopetusehdon
 > * osaat käsitellä poikkeuksen `try`-`catch`-rakenteella ja tiedät, milloin
 >   se kannattaa
+> * osaat lukea tietoa tiedostosta ja kirjoittaa tiedostoon
 
 ## Luvut
 
 1. [Rekursio](./1-rekursio.md)
 2. [Poikkeukset](./2-poikkeukset.md)
+3. [Tiedostojen lukeminen ja kirjoittaminen](./3-tiedostot.md)
 
 ## Luennot
 

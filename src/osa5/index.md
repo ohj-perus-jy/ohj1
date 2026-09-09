@@ -3,7 +3,8 @@
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * osaat luoda taulukon, viitata sen alkioihin ja käydä sen läpi silmukalla
+> * osaat luoda taulukon, viitata sen alkioihin ja käydä sen läpi `for`- ja
+>   `foreach`-silmukalla
 > * osaat kirjoittaa ja testata taulukkoa käsittelevän funktion
 > * osaat etsiä ohjelman virheitä debuggerilla
 

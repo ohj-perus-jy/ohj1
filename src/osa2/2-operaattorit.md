@@ -203,25 +203,19 @@ järkeään.
 
 ### Merkkijonosta luvuksi
 
-Käyttäjän kirjoittama syöte on aina merkkijono, vaikka se näyttäisi luvulta.
-`"42"` ja `42` ovat eri asioita: `"42" + 1` on `"421"`. Merkkijono muunnetaan
-luvuksi `int.Parse`- tai `double.Parse`-aliohjelmalla.
+Merkkijono ja luku ovat eri asioita, vaikka ne näyttäisivät samalta: `"42" + 1`
+on `"421"`, ei `43`. Merkkijono muunnetaan luvuksi `int.Parse`- tai
+`double.Parse`-aliohjelmalla, ja luku merkkijonoksi `ToString`-metodilla tai
+interpoloimalla `$"{luku}"`.
 
 ```csharp,ignore
-Console.Write("Anna ikäsi: ");
-string syote = Console.ReadLine();      // esim. "20"
-int ika = int.Parse(syote);             // 20
-Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
+int ika = int.Parse("20");             // 20
+string teksti = (ika + 1).ToString();  // "21"
 ```
 
-`Console.ReadLine` lukee käyttäjän kirjoittaman rivin. Kokeile tätä Riderissä;
-selaimen koodilaatikko ei osaa kysyä syötettä. Jos käyttäjä kirjoittaa jotakin,
-mikä ei ole luku, `int.Parse` heittää poikkeuksen ja ohjelma kaatuu. Tähän
-palataan luvuissa [Merkkijonot](../osa4/5-merkkijonot.md) ja
-[Poikkeukset](../osa7/2-poikkeukset.md).
-
-Toiseen suuntaan muunnos on helppo: interpoloitu merkkijono `$"{ika}"` tai
-`ika.ToString()` tekee luvusta tekstin.
+Tähän riittää nyt tämä. Muunnoksiin palataan tarkemmin luvussa
+[Merkkijonot](../osa4/2-merkkijonot.md), jossa käsitellään myös käyttäjän
+syötteen lukeminen ja se, mitä tapahtuu, kun teksti ei olekaan luku.
 
 ## Vertailuoperaattorit
 
@@ -286,7 +280,7 @@ public class Loogiset
 ```
 
 Loogisten operaattoreiden totuustaulut ja käyttö ehdoissa käsitellään
-tarkemmin luvussa [Ehtolauseet](./5-ehtolauseet.md).
+tarkemmin luvussa [Ehtolauseet](./3-ehtolauseet.md).
 
 ## Sijoitusoperaattorit
 
