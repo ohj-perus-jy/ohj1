@@ -121,6 +121,8 @@ mihin ohjausryhmään olet ilmoittautunut.
 
 ## Ohjeet Teams-etäohjaukseen liittymiseksi (tutkinto-opiskelijat) {#teams-jy}
 
+Jos olet Jyväskylän yliopiston tutkinto-opiskelija (joko IT-tiedekunnan tai muiden tiedekuntien opiskelija), voit liittyä Ohjelmointi 1 -kurssin Teams-kanavalle seuraavasti:
+
 1. Kirjaudu yliopiston tunnuksellasi Microsoft Teamsiin osoitteessa
     <https://teams.microsoft.com>. Käyttäjätunnus on muotoa `käyttäjätunnus@jyu.fi` (esim.
     `mameikal@jyu.fi`). Tunnuksen muoto `student.jyu.fi` ei käy. 
@@ -139,7 +141,7 @@ mihin ohjausryhmään olet ilmoittautunut.
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
 
-Opettaja lähettää Teams-kanavalle linkin, jonka avulla voit lähettää ohjauspyynnön.
+Opettaja lähettää Ohjaus-kanavalle linkin, jonka avulla voit lähettää ohjauspyynnön.
 
 ## Ohjeet Teams-etäohjaukseen liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
 
