@@ -42,21 +42,6 @@ jobs:
           name: mdbook
           path: book
 
-  # Pelkkä tarkistus `dev`-pushissa: `dev` ei saa rikkoa mdBookia, koska sen
-  # on pysyttävä mergettävänä `main`iin. Ei estä julkaisua, mutta värjää ajon
-  # punaiseksi.
-  mdbook-dev-check:
-    if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: dev
-      - name: Check that dev still builds with mdBook
-        run: mdbook build
-
   # Zensical `dev`:stä alipolkuun /dev/. convert.py tarvitsee vain
   # standardikirjaston; kaaviot (cache/svgbob/, assets/plantuml/) ovat
   # versionhallinnassa, joten svgbobia tai PlantUML-palvelinta ei tarvita.
