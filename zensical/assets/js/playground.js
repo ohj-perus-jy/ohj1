@@ -110,23 +110,28 @@
   };
 
   /* Tulosteen kuvat (Jypeli): data-URI:t pois tekstistä ja <img>-elementeiksi
-   * tulostelaatikon perään; edellisen ajon kuvat pois ensin. */
-  const showImages = (output, text) => {
-    const box = output.closest(".jyu-result");
+   * tulostelaatikon perään; edellisen ajon kuvat pois ensin.
+   * -> [loppu teksti, kuvien määrä] */
+  const showImages = (box, text) => {
     box.querySelectorAll("img.jyu-result-image").forEach((img) => img.remove());
-    return text.replace(DATA_URI_RE, (_, uri) => {
+    let images = 0;
+    const rest = text.replace(DATA_URI_RE, (_, uri) => {
       const img = document.createElement("img");
       img.src = uri;
       img.className = "jyu-result-image";
       box.append(img);
+      images += 1;
       return "";
     });
+    return [rest, images];
   };
 
   const run = async (anchor, blocks, buttons) => {
     const output = outputFor(anchor);
+    const box = output.closest(".jyu-result");
     const set = anchor.classList.contains("tabbed-set") ? anchor : null;
     buttons.forEach((button) => (button.disabled = true));
+    box.classList.remove("jyu-result-image-only");
     say(output, "Suoritetaan…");
 
     /* Aikaraja katkaisee myös pyynnön; nappi palaa käyttöön ja tuloste kertoo syyn. */
@@ -151,9 +156,13 @@
       /* Kuten mdBookissa: virheet ensin, muuten tuloste. Kääntäjän virheet
        * tulevat output-kentässä. Lopun rivinvaihto pois, koska se näkyisi
        * laatikossa tyhjänä rivinä. */
-      const text = showImages(output, body.errors || body.output || "")
-        .replace(/\n+$/, "");
-      say(output, text || "Ei tulostetta", !text);
+      const [rest, images] = showImages(box, body.errors || body.output || "");
+      const text = rest.replace(/\n+$/, "");
+      /* Pelkkä kuva (Jypelin ikkuna) on tuloste sekin: tekstilaatikko jää
+       * pois, ettei kuvan yllä lue "Ei tulostetta" kuten mdBookissa. */
+      const imageOnly = !text && images > 0;
+      box.classList.toggle("jyu-result-image-only", imageOnly);
+      say(output, text || (imageOnly ? "" : "Ei tulostetta"), !text && !imageOnly);
     } catch (error) {
       say(output, error.name === "AbortError"
         ? `Ohjelma ei vastannut ${TIMEOUT / 1000} sekunnissa.`

@@ -5,7 +5,7 @@
 mukaisesti. `main` on mdBook, Zensical elää `dev`-haarassa. Mitä kopioon on
 muutettu ohj1:tä varten: `zensical/README.md`, kohta "Ohj1-kohtaiset
 muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy ilman
-varoituksia, `./zensical/run.sh test` menee läpi (213 passed, 3 skipped).
+varoituksia, `./zensical/run.sh test` menee läpi (220 passed, 3 skipped).
 
 ## Vaihe 1 — `dev`-haara ja julkaisu `/dev/`:iin
 
@@ -127,17 +127,27 @@ Zensicalin ongelmia ja tehdään `dev`:ssä (vaihe 4).
 
 ## Vaihe 3 — C#-ominaisuuksien todennus
 
-Testikirja (`zensical/tests/book`) on Java, joten ohj1:n C#-erityispiirteet
-eivät ole testien piirissä.
+Testikirja (`zensical/tests/book`) on ohj2:n Java-kirja, joten ohj1:n
+C#-erityispiirteet eivät olleet testien piirissä; nyt ne ovat omalla
+sivullaan `osa1/csharp.md`.
 
 - [x] Ajonappi oikeaa suorituspalvelinta vasten: tavallinen ` ```csharp `
       (2026-09-11, ks. vaihe 1).
-- [ ] Sama ` ```csharp,feature-jypeli `-lohkolle (kieleksi lähtee
-      `csharp-jypeli`).
-- [ ] Jypelin kuvatuloste (`@@@DATA_URI_BEGIN@@@`) näkyy `<img>`-elementtinä;
-      anna sille tyyli (`img.jyu-result-image`, `assets/css/playground.css`).
-- [ ] Lisää koekirjaan C#-lohko (piilorivit `//-`, `ignore`, `feature-jypeli`)
-      ja testit `test_playground.py`:hyn.
+- [x] Sama ` ```csharp,feature-jypeli `-lohkolle: aineiston ainoa
+      (`osa1/2-ohjelmointiymparisto-kuntoon.md`) ajettu `/dev/`:ssä
+      Playwrightilla. Kieleksi lähtee `csharp-jypeli`, ja palvelin palauttaa
+      ikkunan 1024×768 PNG:nä; mdBookissa sama (2026-09-11).
+- [x] Jypelin kuvatuloste: `.jyu-result-image` lohkona ja koodilohkon
+      kulmin (`.4rem`), leveys teemalta. Pelkän kuvan yllä ei enää lue "Ei
+      tulostetta" (mdBookissa "No output"), vaan tekstilaatikko jää pois.
+      Todennettu oikeaa palvelinta vasten korvaamalla `/dev/`:n
+      `playground.js` ja `.css` paikallisilla, vaalea ja tumma teema;
+      tavallinen C#-lohko toimii ennallaan (2026-09-11).
+- [x] Koekirjaan `osa1/csharp.md` (piilorivit `//-`, `ignore`,
+      `feature-jypeli`) SUMMARY.md:n ulkopuolelle, jotta ohj2:n testien
+      laskemat luvut ja lohkot eivät muutu; 7 testiä `test_playground.py`:n
+      loppuun. Vanhalla koodilla kuvatestit kaatuvat. `run.sh test`:
+      220 passed, 3 skipped (2026-09-11).
 
 ## Vaihe 4 — Uusi materiaali `dev`:ssä (säännöt kurssin loppuun)
 

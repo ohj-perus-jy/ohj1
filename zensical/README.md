@@ -248,6 +248,13 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   kuten ../theme/playground_ext.js. `multifile`-kenttä vain
   monitiedostolohkolle: palvelimen C#-polku aikakatkaisee pyynnön, jossa on
   `multifile: false`, eikä ohj1:n mdBook-skripti lähetä kenttää lainkaan.
+  Pelkän kuvan tulosteessa (Jypelin ikkuna ilman tekstiä) tekstilaatikko jää
+  pois (`.jyu-result-image-only`); mdBookissa kuvan yllä lukee "No output".
+- `assets/css/playground.css`: kuvatuloste `.jyu-result-image` lohkona ja
+  koodilohkon kulmin, `.jyu-result-image-only > pre` piiloon.
+- `tests/book/src/osa1/csharp.md`: C#-lohkot (piilorivit, `ignore`,
+  `feature-jypeli`) SUMMARY.md:n ulkopuolella, jotta ohj2:n testien laskemat
+  luvut ja lohkot eivät muutu. Testit `tests/test_playground.py`:n lopussa.
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n
