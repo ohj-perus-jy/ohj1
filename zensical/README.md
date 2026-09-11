@@ -6,8 +6,9 @@ eikä `../book.toml`:iin — `bash ../start.sh` toimii koko ajan entiseen tapaan
 
 **Tämä hakemisto on kopio ohj2:n `zensical/`-hakemistosta** (ohj2:n `dev`,
 commit `164510d`, 2026-09-11) ohj2:n KAYTTOONOTTO.md:n vaiheen 7 mukaisesti.
-Ohj1-kohtaiset muutokset kopioon ja se, mikä ohj1:ssä ei vielä toimi, ovat
-tiedostossa [../TODO.md](../TODO.md). Kolme muuta dokumenttia ovat ohj2:n
+Mikä ohj1:ssä on vielä tekemättä: [../TODO.md](../TODO.md). Mitä kopioon on
+muutettu ohj1:tä varten: kohta "Ohj1-kohtaiset muutokset" tämän tiedoston
+lopussa. Kolme muuta dokumenttia ovat ohj2:n
 sellaisenaan ja kuvaavat ohj2:n aineistoa ja työjärjestystä; ohj1:ssä ne
 ovat perusteluiden lähde, eivät tilanneraportti:
 
@@ -213,3 +214,41 @@ pitää pystyä perustelemaan jollakin mdBookin ominaisuudella, jota oikeasti
 tarvitaan. Perustelut ovat [PERUSTELUT.md](PERUSTELUT.md):ssä ja tiedostojen
 omissa alkukommenteissa. Aiempi, täysin viritetty versio on tallessa branchissa
 `spike/mkdocs`.
+
+## Ohj1-kohtaiset muutokset
+
+Mitä ohj2:n kopioon on muutettu. *Yleiskäyttöinen* = kannattaa viedä myös
+ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
+
+- `mkdocs.yml`: `site_name`, `copyright` (tekijät ../README.md:n
+  License-kohdasta), `repo_url`.
+- `convert.py`:
+  - `HIDELINE_LANGUAGES` ja `HIGHLIGHT_LANGUAGES`: `csharp` mukaan; java ja
+    javascript jäävät koekirjan ja testien takia.
+  - `ALERT_KINDS`: `lisatieto`. `ICON_MAP`: `bi-arrow-left-circle` ja
+    `bi-arrow-right-circle` (glyfit `icons/material/`). `PLANTUML_AGENT`.
+  - `SUMMARY_LINK_RE` hyväksyy `*`-luettelomerkin, ja `build_nav` laskee
+    tason sisennyspinosta (ohj1: 1, 3 ja 4 välilyöntiä) eikä jakamalla
+    kahdella; etulinkki on aina ylin taso. *Yleiskäyttöinen.*
+  - Uusi `convert_moved_links`: linkit NEST_UNDER-siirrettyihin sivuihin
+    (`index.md` ja `suorittaminen.md` → `tentti.md`) ja siirretyn sivun
+    omat suhteelliset linkit. ohj2:ssa kukaan ei linkitä `tentti.md`:hen,
+    joten puute ei näkynyt. *Yleiskäyttöinen.*
+  - Uusi `dedent_headings`: 1–3 välilyönnillä sisennetty otsikko, jonka
+    CommonMark sallii mutta Python-Markdown ei (ohj1: `osa5/1-debuggaus.md`,
+    `luennot/luento16.md`). *Yleiskäyttöinen.*
+- `assets/js/playground.js`: `csharp` kieliin; `feature-*`-määre kielen
+  perään (`csharp-jypeli`) ja tulosteen data-URI-kuvat `<img>`-elementeiksi
+  kuten ../theme/playground_ext.js.
+- `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
+  `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
+  käytä (*yleiskäyttöinen*), ohj1:n `KNOWN_BROKEN_IMAGES` ja
+  `KNOWN_DEAD_ANCHORS`.
+- `cache/svgbob/`: ohj1:n kolme bob-kaaviota (svgbob_cli 0.7.6, asennettu
+  `cargo install svgbob_cli@0.7.6`); ohj2:n kaaviot ja `assets/plantuml/`
+  jätetty pois.
+- Tämä README: johdanto ja tämä kohta. PERUSTELUT.md, PURKUSUUNNITELMA.md ja
+  KAYTTOONOTTO.md sellaisenaan.
+- `zensical/`-hakemiston ulkopuolella: `../.gitignore` (`zensical/`-rivit),
+  `../.devcontainer/devcontainer.json` (portti 8001),
+  `../.github/workflows/pages.yml` (ohj2:n kaksoisjulkaisu).
