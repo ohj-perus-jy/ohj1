@@ -628,9 +628,9 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
     - Arch: Asenna [`rider`](https://aur.archlinux.org/packages/rider)-pakkaus AUR:sta.
       Voit asentaa sen käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
       
-      ```bash
-      yay -S rider
-      ```
+        ```bash
+        yay -S rider
+        ```
       
     - Muut jakelut: Suosittelemme asentamaan [Rider-snapin](https://snapcraft.io/rider) käyttäen `snap`-pakkaustenhallintaa:
     
@@ -1012,17 +1012,17 @@ käyttöä ajatellen.
     - Arch: Asenna [`visual-studio-code-bin`](https://aur.archlinux.org/packages/visual-studio-code-bin)-pakkaus AUR:sta. Voit asentaa sen
       käsin tai käyttämällä [yay](https://github.com/Jguer/yay)-työkalua:
       
-      ```bash
-      yay -S visual-studio-code-bin
-      ```
+        ```bash
+        yay -S visual-studio-code-bin
+        ```
       
     - Muut jakelut: Suosittelemme asentamaan [code-snapin](https://snapcraft.io/code) käyttäen `snap`-työkalua:
     
-      ```bash
-      snap install code --classic
-      ```
+        ```bash
+        snap install code --classic
+        ```
       
-      Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
+        Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla [virallisia asennusohjeita](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
       
 3. Tarkista, että VS Code toimii. Käynnistä VS Code joko sovellusvalikosta tai `code`-komennolla. 
     Jos VS Code avautuu, olet onnistuneesti asentanut sen!

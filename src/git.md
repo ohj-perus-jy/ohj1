@@ -260,8 +260,8 @@ mutta melkein helpompi on tässä vaiheessa:
 1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan (ts. jossa harjoitustyösi
    tulee sijaitsemaan tietokoneella jossa työskentelet). 
 
-   Omalla koneellasi hyvä kansionimi voisi olla esimerkiksi (levykirjain saattaa olla muukin) `C:\Users\Käyttäjä\ohj1\ht`. 
-   Agoran mikroluokassa kansio voi olla esimerkiksi `C:\MyTemp\OmaEtunimi\ht`.
+    Omalla koneellasi hyvä kansionimi voisi olla esimerkiksi (levykirjain saattaa olla muukin) `C:\Users\Käyttäjä\ohj1\ht`. 
+    Agoran mikroluokassa kansio voi olla esimerkiksi `C:\MyTemp\OmaEtunimi\ht`.
    
 > [!HUOMAUTUS] 
 > Tärkeää: Paina tarkasti mieleen kansion sijainti, sillä tulet tarvitsemaan sitä useita kertoja harkkatyötä tehdessä! 
@@ -270,12 +270,12 @@ mutta melkein helpompi on tässä vaiheessa:
 
         cd C:\Users\Käyttäjä\ohj1\ht
 
-   git bash -komentorivillä komento vaihtamiseen on:
+    git bash -komentorivillä komento vaihtamiseen on:
 
         cd /c/Users/Käyttäjä/ohj1/ht
 
-   Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston nimen voi vaihtaa myöhemminkin.
-   Kyseinen kansio toimii nyt projektin juurikansiona. Jatkossa kaikki komennot annetaan tässä kansiossa. 
+    Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston nimen voi vaihtaa myöhemminkin.
+    Kyseinen kansio toimii nyt projektin juurikansiona. Jatkossa kaikki komennot annetaan tässä kansiossa. 
 
  2. Anna komentoriviltä tässä kansiossa komento. Huomaa välilyönti ja piste lopussa, nekin on annettava.
 
