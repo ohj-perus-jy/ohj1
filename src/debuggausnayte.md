@@ -120,8 +120,8 @@ Voit poistaa videon näytteen tarkastamisen jälkeen.
 
 3. Tee DebugKoe-projektissa olevat tehtävät ja nauhoita suorituksesi, ks. ohjeet yllä. 
 
-  * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
-  * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
+    * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
+    * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
 
 4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen. Kopioi videon URL-osoite [TIMin Oma eteneminen -sivun](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#debuggausn%C3%A4yte-opiskelija-t%C3%A4ytt%C3%A4%C3%A4) debuggausnäytteen URL-osoitteen palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL-osoite käyttäen Share-painiketta videon alapuolella. 
 
@@ -158,34 +158,34 @@ Ohjaaja voi kysyä perustelemaan ratkaisusi tai näyttämään, miten ratkaisit 
 
 1. Lataa ja avaa DebugKoe-projekti
 
-   <details collapsed>
-   <summary>Debuggausnäyteprojektin latausohjeet</summary>
-   <br>
-   > [!HUOMAUTUS]
-   >Jos suoritat näytteen yliopiston mikroluokassa, lataa kaikki tiedostot ja projektit seuraavaan hakemistoon:
-   >```
-   >C:\MyTemp\ohj1\<käyttäjänimi>
-   >```
-   >Muualta ei voi ajaa omia ohjelmia.
+    <details collapsed>
+    <summary>Debuggausnäyteprojektin latausohjeet</summary>
+    <br>
 
-   1. Lataa [DebugKoe.zip](https://tim.jyu.fi/files/900302/DebugKoe.zip)
-   2. Pura lataamasi .zip tiedosto paikkaan, josta löydät sen.
-   3. Avaa Rider. *Welcome to JetBrains Rider* -näkymässä klikkaa oikeassa yläkulmassa olevaa *Open* -painiketta.
-   4. Etsi ja avaa `DebugKoe.sln`-tiedosto Riderissa. Mikäli Rider kysyy, luotatko avattavaan projektiin, valitse *Trust and Open*.
-   5. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
-   </details>
+    > **Huomautus:** Jos suoritat näytteen yliopiston mikroluokassa, lataa kaikki tiedostot ja projektit seuraavaan hakemistoon:
+    >```
+    >C:\MyTemp\ohj1\<käyttäjänimi>
+    >```
+    >Muualta ei voi ajaa omia ohjelmia.
+
+    1. Lataa [DebugKoe.zip](https://tim.jyu.fi/files/900302/DebugKoe.zip)
+    2. Pura lataamasi .zip tiedosto paikkaan, josta löydät sen.
+    3. Avaa Rider. *Welcome to JetBrains Rider* -näkymässä klikkaa oikeassa yläkulmassa olevaa *Open* -painiketta.
+    4. Etsi ja avaa `DebugKoe.sln`-tiedosto Riderissa. Mikäli Rider kysyy, luotatko avattavaan projektiin, valitse *Trust and Open*.
+    5. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
+    </details>
 
 2. Tee DebugKoe-projektissa olevat tehtävät **pääteohjauksessa**
 
-    * Mene pääteohjaukseen. Näet ohjausten aikataulut [Tuki ja palaute sivulta](./tuki-ja-palaute.md)
+    * Mene pääteohjaukseen. Näet ohjausten aikataulut [Tuki ja palaute sivulta](./index.md#tuki-ja-palaute)
     * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
     * Kun saat viestin `debug-koe on läpäisty!` voit siirtyä seuraavaan kohtaan.
 
 3. Kun olet saanut tehtävät tehtyä
 
-   * Pyydä seuraavaksi ohjaajaa tarkistamaan tehtäväsi
-   * Valmistaudu perustelemaan ratkaisusi ohjaajalle tarvittaessa
+    * Pyydä seuraavaksi ohjaajaa tarkistamaan tehtäväsi
+    * Valmistaudu perustelemaan ratkaisusi ohjaajalle tarvittaessa
 
 Ohjaaja kuittaa harjoitustyösi paikan päällä.
 Saat vielä erillisen kuittauksen debuggausnäytteen hyväksymisestä sähköpostitse.

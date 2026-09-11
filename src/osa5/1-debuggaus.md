@@ -10,7 +10,7 @@ Jos ohjelmassa on jotakin vikaa (ohjelmointivirhe eli *bug*), debuggeri on usein
 
 Ohjelmointia opetellessa debuggeri on myös oiva väline askeltaa silmukoita, ehtoja ja aliohjelmia ja näin havainnollistaa ohjelman kulkua itselleen.
 
- ## Debuggaustila Riderissa 
+## Debuggaustila Riderissa
  
 *Debuggaustila* käynnistetään painamalla Run <i class="bi bi-chevron-right"></i> Debug tai leppäkertun kuvaa. Tällöin ohjelma voidaan pysäyttää ns. keskeytyskohtien avulla ja tutkia ohjelman tilaa. Jos ohjelmassa ei ole yhtään keskeytyskohtaa, vaikuttaa debugtilassa ajo samanlaiselta kuin "normaalissa" suoritustilassa. 
 

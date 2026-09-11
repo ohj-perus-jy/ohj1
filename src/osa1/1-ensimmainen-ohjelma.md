@@ -88,7 +88,7 @@ kääntämistä varten.
 Käännetty ohjelma voidaan sitten *ajaa* (engl. *run*), eli käynnistää
 tietokoneella. C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö,
 joka sisältää tarvittavat työkalut -- asennusohjeen löydät
-[Työkalut](../tyokalut/tyokalut.md)-kohdasta. .NET-ympäristön asentamisen
+[Työkalut](../tyokalut.md)-kohdasta. .NET-ympäristön asentamisen
 jälkeen kääntäminen-ajaminen&ndash;prosessi voidaan tehdä komentoriviltä
 seuraavasti. Alla on kaksi komentoa, jotka syötetään komentoriville siinä
 kansiossa, missä projekti on tehty. 

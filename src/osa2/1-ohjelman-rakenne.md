@@ -2,7 +2,7 @@
 
 C#-kieli on [*olioperusteinen ohjelmointikieli*](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction), mikä tarkoittaa, että kaikki koodi kirjoitetaan luokkien sisälle. Jokaisessa ohjelmassa täytyy tavallisesti olla vähintään yksi luokka. Luokassa tulee olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä -- siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia. Pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
 
-Puhumme aliohjelmista osassa [3.1 Aliohjelmat](../osa3/1-aliohjelmat.md); tässä osassa keskitymme kuitenkin ohjelman rakenteeseen kokonaisuutena.
+Puhumme aliohjelmista osassa [Aliohjelmat](./aliohjelmat.md); tässä osassa keskitymme kuitenkin ohjelman rakenteeseen kokonaisuutena.
 
 Alla oleva sovellus koostuu yhdestä luokasta, joka sisältää pääohjelman ja yhden aliohjelman (`Tervehdys`), siis yhteensä kaksi aliohjelmaa. Käytäntö on, että yksi tiedosto sisältää yhden luokan, ja että luokan nimi on sama kuin tiedoston nimi.
 

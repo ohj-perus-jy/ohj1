@@ -41,8 +41,11 @@ Muut tietotyypit:
 
 
 
-> [!LISATIETO]
-> <i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: C#-kielessä on mahdollista merkitä muuttujan tyypin kohdalle sana `var`, jolloin kääntäjä päättelee tyypin automaattisesti arvon perusteella. Esimerkiksi `var luku = 5;` määrittelee `luku`-muuttujan tyypiksi `int`, koska arvo `5` on kokonaisluku. Muuttujan tyyppi on kuitenkin edelleen kiinteä, eikä sitä voi muuttaa myöhemmin. Tämä on kätevä ominaisuus, mutta tässä kurssissa keskitymme selkeyden vuoksi eksplisiittiseen tyyppimääritykseen.
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Tyypin päättely <code>var</code>-sanalla</summary>
+
+C#-kielessä on mahdollista merkitä muuttujan tyypin kohdalle sana `var`, jolloin kääntäjä päättelee tyypin automaattisesti arvon perusteella. Esimerkiksi `var luku = 5;` määrittelee `luku`-muuttujan tyypiksi `int`, koska arvo `5` on kokonaisluku. Muuttujan tyyppi on kuitenkin edelleen kiinteä, eikä sitä voi muuttaa myöhemmin. Tämä on kätevä ominaisuus, mutta tässä kurssissa keskitymme selkeyden vuoksi eksplisiittiseen tyyppimääritykseen.
+
+</details>
 
 ## Vakiot
 

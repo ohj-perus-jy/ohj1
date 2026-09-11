@@ -2,7 +2,7 @@
  
  * [Harjoitustyön ohjeet](../harjoitustyo.md)
  * **Lue:** [12. Merkkijonot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#merkkijonot)
-   * Erityisesti [12.2.2. Merkkijonometodeja](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#merkkijonometodeja)
+    * Erityisesti [12.2.2. Merkkijonometodeja](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#merkkijonometodeja)
 
 ## Syksy 2026
 
