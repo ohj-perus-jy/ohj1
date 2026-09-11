@@ -312,12 +312,12 @@ mutta melkein helpompi on tässä vaiheessa:
 
         cd /Users/MunKayttaja/ohj1/ht
 
-   Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston
-   nimen voi vaihtaa myöhemminkin.
+    Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston
+    nimen voi vaihtaa myöhemminkin.
 
-   Kyseinen kansio toimii nyt projektin juurikansiona. 
-   Jatkossa kaikki komennot annetaan tässä kansiossa. Paina tarkasti mieleen 
-   kansion sijainti, sillä tulet tarvitsemaan sitä useita kertoja harkkatyötä tehdessä! 
+    Kyseinen kansio toimii nyt projektin juurikansiona. 
+    Jatkossa kaikki komennot annetaan tässä kansiossa. Paina tarkasti mieleen 
+    kansion sijainti, sillä tulet tarvitsemaan sitä useita kertoja harkkatyötä tehdessä! 
 
 1. Anna komentoriviltä tässä kansiossa komento. Huomaa välilyönti ja piste lopussa, nekin on annettava.
 
