@@ -14,9 +14,9 @@ muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy,
       `dev` lisätty (2026-09-11).
 - [x] `dev` pushattu originiin; vanha, eri sisältöinen `origin/dev`
       (2026-04-10) korvattu (2026-09-11).
-- [ ] `.github/workflows/pages.yml` `main`iin (PR tai suoraan), sitten
-      `main` → `dev`. Tiedoston on oltava sama molemmissa: `main`-push ajaa
-      `main`in version, ja vanha versio pyyhkisi `/dev/`:n.
+- [x] `.github/workflows/pages.yml` `main`iin (cherry-pick `15a640f`,
+      mukana `.gitignore` ja portti 8001 kuten ohj2:n vaihe 0), sitten
+      `main` → `dev` (`b9d4582`). Tiedosto on sama molemmissa (2026-09-11).
 - [x] Todenna `dev`-pushin ajo: neljä jobia vihreitä, myös
       `mdbook-dev-check` (ajo 34589621298, 2026-09-11).
 - [x] Todenna `ohjelmointi1.it.jyu.fi/dev/` (sivusto on omassa domainissaan
@@ -27,7 +27,9 @@ muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy,
       suorituspalvelimen C#-polku ei siedä kenttää `multifile: false`, jota
       ohj2:n skripti lähetti aina (Java sietää). Korjattu: kenttä lähtee
       vain monitiedostolohkoille (2026-09-11).
-- [ ] Todenna `main`-pushin jälkeen, että `/dev/` säilyy.
+- [x] Todenna `main`-pushin jälkeen, että `/dev/` säilyy: ajo 34590494841
+      vihreä (`mdbook`, `zensical`, `deploy`; `mdbook-dev-check` ohitetaan
+      `main`issa), juuri on mdBook ja `/dev/` vastaa 200 (2026-09-11).
 
 ## Vaihe 2 — Aineiston korjaukset `main`iin
 
