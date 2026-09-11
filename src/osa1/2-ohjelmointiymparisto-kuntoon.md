@@ -109,9 +109,9 @@ solutioniin](#uusi-projekti-solutioniin).
   `C:\Users\<käyttäjätunnus>\kurssit\ohj1` (Windows) tai
   `~/kurssit/ohj1` (Mac ja Linux).
   
-  Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle,
-  esim. `C:\MyTemp\<käyttäjätunnus>\...`. Siirrä lopuksi tiedostot muualle
-  talteen. 
+    Yliopiston mikroluokissa projekti tulee tehdä ensin tietokoneen kiintolevylle,
+    esim. `C:\MyTemp\<käyttäjätunnus>\...`. Siirrä lopuksi tiedostot muualle
+    talteen. 
 * Jätä `Put solution and project in the same directory`-boksi tyhjäksi.
 * `Framework`-kohtaan `net8.0`
 * Klikkaa `Create`.
