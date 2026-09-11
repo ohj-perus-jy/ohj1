@@ -17,6 +17,7 @@ Generoitu docs/ on kertakäyttöinen — tämä skripti on totuus.
 import contextlib
 import fcntl
 import filecmp
+import fnmatch
 import hashlib
 import io
 import os
@@ -50,6 +51,14 @@ SUMMARY_LINK_RE = re.compile(
 NEST_UNDER = {
     "tenttiohjeet.md": "tentti.md",
 }
+
+# Markdown-tiedostot, jotka eivät ole sivuja (fnmatch lähdepuun polusta).
+# mdBook kääntää vain SUMMARY.md:n luvut, Zensical jokaisen .md:n. ohj1:
+# tehtävän aloituspohja on opiskelijalle annettava tiedosto, jonka linkki
+# #lisaa_osoite on paikkamerkki ja siksi aina rikki. Ks. is_page.
+NOT_PAGES = (
+    "exercises/*/starter/*.md",
+)
 
 # Osiot, jotka kuvaavat mdBookin käyttöliittymää (laitanuolet) eivätkä pidä
 # Zensicalissa paikkaansa. Lähteeseen ei kosketa, joten poisto tehdään tässä.
@@ -162,9 +171,6 @@ ALERT_KINDS = {
     "varoitus": ("warning", "Varoitus"),
     "todo": ("info", "Todo"),
     "wip": ("danger", "WIP"),
-    # ohj1:n oma tunnus (yksi esiintymä); mdBookin alerts-style.css ei tunne
-    # sitä, joten värillä ei ole esikuvaa.
-    "lisatieto": ("info", "Lisätieto"),
 }
 
 # Tuntematon tunnus säilyy otsikkona sellaisenaan; tyypiksi tulee neutraalein.
@@ -360,6 +366,17 @@ def nest_moves() -> dict[str, str]:
         moves[parent] = f"{folder}/index.md"
         moves[child] = f"{folder}/{Path(child).name}"
     return moves
+
+
+def is_page(source_path: str) -> bool:
+    """Tuleeko lähdepuun Markdown-tiedostosta (polku lähdepuusta) sivu.
+
+    SUMMARY.md on navigaatio (build_nav), NOT_PAGES tiedostoja, joita mdBook ei
+    julkaise. Kumpaakaan ei kirjoiteta docs/:iin, joten sync_docs poistaa
+    aiemman ajon kopion jäänteenä.
+    """
+    return source_path != "SUMMARY.md" and not any(
+        fnmatch.fnmatchcase(source_path, pattern) for pattern in NOT_PAGES)
 
 
 def prune_diagrams(folder: Path, used: set[str], complete: bool = True) -> int:
@@ -1492,7 +1509,7 @@ def sync_docs() -> set[Path]:
         if not file.is_file():
             continue
         relative = file.relative_to(SRC).as_posix()
-        if relative == "SUMMARY.md":
+        if file.suffix == ".md" and not is_page(relative):
             continue
         target = DOCS / moves.get(relative, relative)
         fresh.add(target)
@@ -1550,8 +1567,7 @@ def main() -> int:
     # raakana paikalleen (turha kirjoitus on vahdille tapahtuma).
     for origin in sorted(SRC.rglob("*.md")):
         source_path = origin.relative_to(SRC).as_posix()
-        if source_path == "SUMMARY.md":
-            # Navigaatio, ei sivu: ks. build_nav.
+        if not is_page(source_path):
             continue
         # Sivu kirjoitetaan NEST_UNDER-siirron jälkeiseen paikkaan, mutta
         # sisällytykset ja DROP_SECTIONS ratkeavat lähdepuun polusta.

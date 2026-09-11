@@ -4,8 +4,8 @@
 `164510d`, 2026-09-11) ohj2:n `zensical/KAYTTOONOTTO.md`:n vaiheen 7
 mukaisesti. `main` on mdBook, Zensical elää `dev`-haarassa. Mitä kopioon on
 muutettu ohj1:tä varten: `zensical/README.md`, kohta "Ohj1-kohtaiset
-muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy,
-`./zensical/run.sh test` menee läpi (209 passed, 3 skipped).
+muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy ilman
+varoituksia, `./zensical/run.sh test` menee läpi (213 passed, 3 skipped).
 
 ## Vaihe 1 — `dev`-haara ja julkaisu `/dev/`:iin
 
@@ -56,38 +56,74 @@ sisällytetty mihinkään). Korjaus kuuluu `src`:ään ja `main`iin, sitten
   - [x] `exercises/1-8-1-bonus_editorin_kayttaminen/handout.md`:
         `#todo_lisaa_kuva` tekstiksi
   - [x] `osa4/osa4.md`: `#-sanakirja`: osiota ei ole, linkki pois
-- [ ] `exercises/1-8-1-…/starter/pohja.md`: `#lisaa_osoite` on tehtävän
+- [x] `exercises/1-8-1-…/starter/pohja.md`: `#lisaa_osoite` on tehtävän
       paikkamerkki, jonka opiskelija korvaa, joten `src`:hen ei kosketa.
       Zensical tekee jokaisesta `.md`:stä sivun, mdBook vain SUMMARY:n
-      luvuista: jätä `exercises/*/starter/` pois Zensicalin käännöksestä
-      (`dev`, `zensical/`).
+      luvuista: `convert.py`:n `NOT_PAGES` (`exercises/*/starter/*.md`)
+      jättää sen pois; Zensical 0.0.60 ei tunne `exclude_docs`:ia
+      (`dev`, 2026-09-11).
 - [x] `.gitignore`: `book` osui myös koekirjaan `zensical/tests/book`, joka
       ei siksi ollut gitissä, ja `run.sh test` kaatui puhtaassa checkoutissa.
       `book` → `/book` kuten ohj2:ssa (`2c05e5a`), mukana `af8c653`:ssa;
       koekirja palautettu ohj2:n `164510d`:stä `dev`iin (2026-09-11).
-- [ ] Sivut, joita ei ole:
-  - [ ] `debuggausnayte.md` → `tuki-ja-palaute.md`
-  - [ ] `osa1/1-ensimmainen-ohjelma.md` → `../tyokalut/tyokalut.md`
-  - [ ] `osa2/1-ohjelman-rakenne.md` → `../osa3/1-aliohjelmat.md`
-  - [ ] `osa4/index.md` → `osa4/comtest.md` (pitäisi olla `comtest.md`)
-- [ ] Kuvat, joita ei ole (`tyokalut.md`, absoluuttinen polku):
-  - [ ] `/images/506961/rider-install-comtest.gif`
-  - [ ] `/images/876452/image.png`
-- [ ] `harjoitustyo.md`: käänteinen linkkisyntaksi
-      `(./index.md#tuki-ja-palaute)[etusivu]` näkyy tekstinä.
-- [ ] Sisäkkäiset listat: Python-Markdown vaatii alakohdalle 4 välilyöntiä,
-      mdBook hyväksyy 2–3, joten `luennot/*.md` ja `harjoitustyo.md`
-      litistyvät Zensicalissa. Joko sisennys 4:ään `src`:ssä (toimii
-      mdBookissakin) tai `mdx_truly_sane_lists` `mkdocs.yml`:n
-      `markdown_extensions`-listaan (ei kokeiltu). Sama puute ohj2:ssa.
-- [ ] Sisennetyt otsikot (` ## …`) pois `osa5/1-debuggaus.md`:stä ja
-      `luennot/luento16.md`:stä. `convert.py`:n `dedent_headings` hoitaa
-      ne jo, joten tämä on vain siisteyttä.
-- [ ] `> [!LISATIETO]` (yksi esiintymä): tarkista ulkoasu (`info`-tyyppi,
-      ei esikuvaa mdBookin CSS:ssä) tai vaihda tunnus `src`:ssä.
-- [ ] Kun korjattu: poista vastaavat poikkeukset
-      `zensical/tests/test_book.py`:stä. `KNOWN_DEAD_ANCHORS` poistettu
-      (2026-09-11); `KNOWN_BROKEN_IMAGES` odottaa kuvia.
+- [x] Sivut, joita ei ole: `e816bc7` `main`iin, `main` → `dev`
+      (`9f5fc1a`, 2026-09-11). mdBookin rikkinäiset linkit ja kuvat 5 → 0,
+      Zensicalin varoitukset 5 → 0.
+  - [x] `debuggausnayte.md` → `tuki-ja-palaute.md`: `index.md#tuki-ja-palaute`
+  - [x] `osa1/1-ensimmainen-ohjelma.md` → `../tyokalut/tyokalut.md`: `../tyokalut.md`
+  - [x] `osa2/1-ohjelman-rakenne.md` → `../osa3/1-aliohjelmat.md`: sivu
+        siirtyi `osa2/aliohjelmat.md`:ksi (`9c18110`)
+  - [x] `osa4/index.md` → `osa4/comtest.md`: `./comtest.md`
+  - [x] Lisäksi `harjoitustyo.md` "Janat-haaste" → `ht/janat` (TIMin
+        suhteellinen polku): TIMin täysi osoite `…/ohj1/harjoitustyo/janat`
+- [x] Kuvat, joita ei ole (`tyokalut.md`, absoluuttinen polku): haettu
+      TIMistä `src/images/`:iin (`rider-install-comtest.gif`,
+      `rider-dotnet-cli-path.png`), linkit suhteellisiksi, alt-tekstit.
+- [x] `harjoitustyo.md`: käänteinen linkkisyntaksi
+      `(./index.md#tuki-ja-palaute)[etusivu]` näkyi tekstinä.
+- [x] Sisäkkäiset listat: Python-Markdown vaatii alakohdalle ja alkion
+      jatkoriveille 4 välilyöntiä, mdBook hyväksyy 2–3. Sisennys 4:ään
+      `src`:ssä: alakohdat `e816bc7` (`tyokalut.md`, `debuggausnayte.md`,
+      `luento3`, `4`, `7`, `8`, `15`), jatkokappaleet ja koodilohkot
+      `49da85e`, `909fed0` (`git.md`, `osa1/2-ohjelmointiymparisto-kuntoon.md`,
+      `tyokalut.md`). Mitattu molempien HTML:stä: sisäkkäiset listat ja
+      tekstin listasyvyys täsmäävät, ja jatkorivien korjaus ei muuttanut
+      mdBookin HTML:ää. Ainoa ero: `debuggausnayte.md`:n videovälilehden
+      läpäisytuloste on Zensicalissa kohdan 6 alla, mdBookissa listan
+      jälkeen; jätetty. `harjoitustyo.md` ei ollut rikki.
+      `mdx_truly_sane_lists` hylätty: Zensicalin `markdown_extensions`
+      korvaa koko oletuslistan, ja 2 välilyönnin sisennys muuttaisi
+      nykyisten 4 välilyönnin listojen tulkinnan. Sama puute ohj2:ssa.
+- [x] Sisennetyt otsikot (` ## …`) pois `osa5/1-debuggaus.md`:stä ja
+      `luennot/luento16.md`:stä (`e816bc7`). `dedent_headings` jää.
+- [x] `> [!LISATIETO]` (ainoa esiintymä, `osa2/4-muuttujat-ja-tietotyypit.md`)
+      → `<details>`-lohko kuten muut "Valinnaista lisätietoa" -kohdat
+      (`e816bc7`); `lisatieto` pois `convert.py`:n `ALERT_KINDS`:sta.
+- [x] Lisäksi `debuggausnayte.md`, ohjauksessa-välilehden latausohjeet:
+      `> [!HUOMAUTUS]` `<details>`-lohkossa ilman tyhjää riviä näkyi
+      mdBookissa raakatekstinä. Listan sisään sisennettyä alerttia ei
+      tunnista mdBook eikä `convert.py`, joten tavallinen lainaus
+      `> **Huomautus:**` (`e816bc7`).
+- [x] Poikkeukset pois `zensical/tests/test_book.py`:stä:
+      `KNOWN_DEAD_ANCHORS` ja `KNOWN_BROKEN_IMAGES` (2026-09-11).
+- [ ] Numeroitu lista, joka katkeaa (kappale, kuva tai `<details>` kohtien
+      välissä rivin alussa): mdBook jatkaa numerointia (`<ol start>`),
+      Python-Markdown aloittaa aina ykkösestä (`lazy_ol`). Rikki
+      Zensicalissa: `debuggausnayte.md`, videovälilehti (1, 1, 1, 2 eikä
+      1, 2, 3, 4), ja `git.md`, tunnistetietojen korjaus (1, 2, 3, 1, 1).
+      Vaihtoehdot: (a) `sane_lists` `mkdocs.yml`:ään: kokeiltu, numerointi
+      täsmää mdBookiin eikä muiden sivujen HTML muutu, mutta koko
+      22 laajennuksen oletuslista pitää kirjoittaa `mkdocs.yml`:ään
+      (~35 riviä, verrattava Zensical-päivityksissä), sama ohj2:een.
+      (b) `src`:ssä: `git.md`:n kuvat kohtiensa alle (2 riviä),
+      `debuggausnayte.md`:n kaksi `<details>`-lohkoa kohtien 1 ja 2 alle
+      (~65 riviä, sisäkkäisten listojen ja koodiaidan sisennykset
+      säädettävä, ettei mdBook tee niistä koodilohkoja).
+- [ ] `<details>` välilehden sisällä: `convert_tabs` sisentää välilehden
+      sisällön, eikä `md_in_html` käsittele sisennettyä HTML:ää, joten
+      tulosteeseen jää `<p><details … markdown="1">` (`debuggausnayte.md`,
+      3 lohkoa). Selain avaa lohkot silti oikein. `convert.py`:n puute,
+      tarkista myös ohj2 (`dev`, `zensical/`).
 
 ## Vaihe 3 — C#-ominaisuuksien todennus
 

@@ -44,15 +44,6 @@ def chapter_titles() -> list[str]:
             for href in order]
 
 
-# ohj1: tyokalut.md viittaa kahteen kuvaan absoluuttisella polulla (/images/...),
-# joita ei ole lähdepuussa. Sama virhe on mdBookin käännöksessä: korjataan
-# ../src:ssä, ei täällä. (ohj2:ssa vastaava oli osa4/images/adventure.png.)
-KNOWN_BROKEN_IMAGES = {
-    "images/506961/rider-install-comtest.gif",
-    "images/876452/image.png",
-}
-
-
 def source_uses(pattern: str) -> bool:
     """Käyttääkö lähdepuu ominaisuutta. Kirjoja on kaksi (ohj1, ohj2) eivätkä
     ne käytä samoja mdBookin ominaisuuksia; ominaisuuden testi ohitetaan
@@ -215,12 +206,11 @@ def test_requirement_numbers_come_from_the_counter(printed):
 
 
 def test_every_image_is_loaded(printed):
-    """Tulostus odottaa kuvia, joten yksikään ei saa jäädä tyhjäksi laatikoksi
-    paitsi tunnetun poikkeuksen verran."""
+    """Tulostus odottaa kuvia, joten yksikään ei saa jäädä tyhjäksi laatikoksi."""
     broken = printed.evaluate("""() => [...document.querySelectorAll('img')]
       .filter(img => !img.complete || img.naturalWidth === 0)
       .map(img => new URL(img.src, location.href).pathname.slice(1))""")
-    assert set(broken) <= KNOWN_BROKEN_IMAGES
+    assert broken == []
 
 
 def test_every_recording_is_drawn(printed):
@@ -254,9 +244,7 @@ def test_tab_sets_stay_independent(printed):
 
 
 def test_no_console_errors(printed):
-    """Tunnetun puuttuvan kuvan 404 on ainoa sallittu virhe."""
-    assert [error for error in printed.errors
-            if not any(image in error for image in KNOWN_BROKEN_IMAGES)] == []
+    assert printed.errors == []
 
 
 # --- Sivusto ilman selainta --------------------------------------------------

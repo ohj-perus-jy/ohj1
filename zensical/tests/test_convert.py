@@ -994,6 +994,20 @@ def test_convert_tabs_keeps_paragraphs_apart():
     assert converted == "edellinen\n\nseuraava\n"
 
 
+# --- Tiedostot, jotka eivät ole sivuja ---------------------------------------
+
+@pytest.mark.parametrize("source_path, page", [
+    ("index.md", True),
+    ("exercises/1-1-1-tulostaminen/handout.md", True),
+    ("SUMMARY.md", False),
+    ("exercises/1-8-1-bonus_editorin_kayttaminen/starter/pohja.md", False),
+])
+def test_is_page(source_path, page):
+    """SUMMARY.md on navigaatio ja tehtävän aloituspohja opiskelijan tiedosto;
+    muut .md-tiedostot ovat sivuja, myös SUMMARY.md:n ulkopuoliset."""
+    assert convert.is_page(source_path) is page
+
+
 # --- Navigaatio (README kohdat 10, 11 ja Tenttiohjeet) -----------------------
 
 def test_build_nav(book_src):

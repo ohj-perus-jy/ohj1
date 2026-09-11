@@ -225,8 +225,14 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
 - `convert.py`:
   - `HIDELINE_LANGUAGES` ja `HIGHLIGHT_LANGUAGES`: `csharp` mukaan; java ja
     javascript jäävät koekirjan ja testien takia.
-  - `ALERT_KINDS`: `lisatieto`. `ICON_MAP`: `bi-arrow-left-circle` ja
-    `bi-arrow-right-circle` (glyfit `icons/material/`). `PLANTUML_AGENT`.
+  - `ICON_MAP`: `bi-arrow-left-circle` ja `bi-arrow-right-circle` (glyfit
+    `icons/material/`). `PLANTUML_AGENT`. (`ALERT_KINDS`:iin lisätty
+    `lisatieto` poistettu: ainoa esiintymä on nyt `<details>`-lohko,
+    `src` e816bc7.)
+  - Uusi `NOT_PAGES` ja `is_page`: `exercises/*/starter/*.md` ei tule
+    sivuksi. mdBook kääntää vain SUMMARY.md:n luvut, Zensical jokaisen
+    `.md`:n, ja tehtävän aloituspohjan paikkamerkkilinkki (`#lisaa_osoite`)
+    on tarkoituksella rikki. Mekanismi *yleiskäyttöinen*, kuvio ohj1:n.
   - `SUMMARY_LINK_RE` hyväksyy `*`-luettelomerkin, ja `build_nav` laskee
     tason sisennyspinosta (ohj1: 1, 3 ja 4 välilyöntiä) eikä jakamalla
     kahdella; etulinkki on aina ylin taso. *Yleiskäyttöinen.*
@@ -235,8 +241,8 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
     omat suhteelliset linkit. ohj2:ssa kukaan ei linkitä `tentti.md`:hen,
     joten puute ei näkynyt. *Yleiskäyttöinen.*
   - Uusi `dedent_headings`: 1–3 välilyönnillä sisennetty otsikko, jonka
-    CommonMark sallii mutta Python-Markdown ei (ohj1: `osa5/1-debuggaus.md`,
-    `luennot/luento16.md`). *Yleiskäyttöinen.*
+    CommonMark sallii mutta Python-Markdown ei (ohj1:ssä kaksi, korjattu
+    myös `src`:ssä e816bc7). *Yleiskäyttöinen.*
 - `assets/js/playground.js`: `csharp` kieliin; `feature-*`-määre kielen
   perään (`csharp-jypeli`) ja tulosteen data-URI-kuvat `<img>`-elementeiksi
   kuten ../theme/playground_ext.js. `multifile`-kenttä vain
@@ -244,7 +250,8 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   `multifile: false`, eikä ohj1:n mdBook-skripti lähetä kenttää lainkaan.
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
-  käytä (*yleiskäyttöinen*), ohj1:n `KNOWN_BROKEN_IMAGES`.
+  käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n
+  kuvat on korjattu `src`:ssä (ohj2:ssa yhä `osa4/images/adventure.png`).
 - `cache/svgbob/`: ohj1:n kolme bob-kaaviota (svgbob_cli 0.7.6, asennettu
   `cargo install svgbob_cli@0.7.6`); ohj2:n kaaviot ja `assets/plantuml/`
   jätetty pois.
