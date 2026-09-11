@@ -1,0 +1,5 @@
+Ohjelmointi on ongelmanratkaisua. Ensin ongelma pilkotaan pieniin osiin, sitten jokainen osa ratkaistaan erikseen ja lopuksi osat kootaan yhteen toimivaksi ohjelmaksi.
+Pienet osat ovat aliohjelmia. Hyvä aliohjelma tekee yhden asian ja tekee sen hyvin. Sitä on helppo testata, koska sille voi antaa syötteen ja tarkistaa tuloksen.
+Kun aliohjelmat on testattu, niistä voi rakentaa suurempia kokonaisuuksia luottavaisin mielin. Virheet löytyvät varhain, ja niiden korjaaminen on halpaa.
+Silmukka toistaa saman työn monta kertaa. Taulukko ja lista pitävät tiedon tallessa, jotta silmukka voi käydä sen läpi. Funktio jalostaa tiedon tulokseksi.
+Näistä palasista syntyy jokainen ohjelma, olipa kyseessä peli, laskuri tai tekstin analysoija. Harjoitustyössä nämä palaset tulevat tutuiksi omassa työssä.
