@@ -31,13 +31,13 @@ varoituksia, `./zensical/run.sh test` menee läpi (213 passed, 3 skipped).
       vihreä (`mdbook`, `zensical`, `deploy`; `mdbook-dev-check` ohitetaan
       `main`issa), juuri on mdBook ja `/dev/` vastaa 200 (2026-09-11).
 
-## Vaihe 2 — Aineiston korjaukset `main`iin
+## Vaihe 2 — Aineiston korjaukset
 
 Alla olevat ovat rikki myös mdBookissa (tarkistettu `mdbook build`in
 tulosteesta 2026-09-11), paitsi sivut, joita mdBook ei julkaise lainkaan
 (`osa4/osa4.md` on kommentoitu pois SUMMARY:stä, `exercises/1-8-1-…` ei ole
-sisällytetty mihinkään). Korjaus kuuluu `src`:ään ja `main`iin, sitten
-`main` → `dev`.
+sisällytetty mihinkään). Tehdyt menivät `main`iin; kaksi avointa ovat vain
+Zensicalin ongelmia ja tehdään `dev`:ssä (vaihe 4).
 
 - [x] Ankkurit, joita ei ole: `af8c653` suoraan `main`iin, `main` → `dev`
       (`06b6001`, 2026-09-11). mdBookissa rikkinäisiä 11 → 0, Zensicalissa varoituksia
@@ -139,22 +139,28 @@ eivät ole testien piirissä.
 - [ ] Lisää koekirjaan C#-lohko (piilorivit `//-`, `ignore`, `feature-jypeli`)
       ja testit `test_playground.py`:hyn.
 
-## Vaihe 4 — `dev` pysyy mergettävänä (säännöt, kuten ohj2:n vaihe 3)
+## Vaihe 4 — Uusi materiaali `dev`:ssä (säännöt kurssin loppuun)
 
-- [ ] `main` → `dev` vähintään viikoittain ja aina ennen isompaa työtä.
-      Ei rebasea, `dev` on julkaistu.
-- [ ] Zensicalin työ pysyy `zensical/`-hakemistossa.
-- [ ] `src/`:hen vain muutoksia, jotka toimivat myös mdBookissa; ne ensin
-      `main`iin.
-- [ ] mdBookin tiedostoihin ei kosketa `dev`:ssä (`book.toml`, `theme/`,
-      `highlight/`, `mermaid/`, `start.sh`); `pages.yml` vain `main`in kautta.
-- [ ] Yleiskäyttöiset `convert.py`-korjaukset viedään käsin myös ohj2:een
-      (lista `zensical/README.md`:ssä).
+`main` (juuri, mdBook) on vanha materiaali käynnissä olevalle kurssille ja
+muuttuu vain vähän. `dev` (`/dev/`, Zensical) on uusi materiaali.
+
+- [ ] Vanhan materiaalin korjaukset `main`iin, uusi materiaali suoraan
+      `dev`:iin. `dev`:n ei tarvitse toimia mdBookissa.
+- [ ] `main` → `dev` viikoittain, ei rebasea. Konfliktissa uusi teksti jää;
+      `main`in korjaus käsin, jos se koskee yhä.
+- [ ] Merkinnät kuten nyt (`> [!VINKKI]`, `//-`, `HIGHLIGHT`, `<task>`);
+      Zensicalin omaa syntaksia vain, kun vastinetta ei ole. Ei purkua ennen
+      vaihtoa.
+- [ ] `./zensical/run.sh test` mergen ja isompien muutosten jälkeen.
+- [ ] mdBookin tiedostoihin ei kosketa `dev`:ssä; `pages.yml` vain `main`in
+      kautta.
+- [ ] Yleiskäyttöiset `convert.py`-korjaukset käsin myös ohj2:een.
+- [x] `mdbook-dev-check` pois `pages.yml`:stä (`e6d0172`, 2026-09-11).
 
 ## Vaihe 5 — Vaihto ja purku (ohj2:n KAYTTOONOTTO.md vaiheet 5–6)
 
-Portti: `git merge-tree --write-tree origin/main origin/dev` → 0,
-`mdbook-dev-check` vihreä, `run.sh test` läpi, juuri ja `/dev/` toimivat.
+Portti: kurssi päättynyt, `git merge-tree --write-tree origin/main origin/dev`
+→ 0, `run.sh test` läpi, juuri ja `/dev/` toimivat.
 
 - [ ] PR `dev` → `main`; `pages.yml`: Zensical `main`ista juureen, mdBook-job pois.
 - [ ] Vanhat `.html`-osoitteet menevät rikki (TIMin linkit, kirjanmerkit):

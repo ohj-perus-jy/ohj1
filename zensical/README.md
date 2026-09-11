@@ -260,4 +260,5 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
 - `zensical/`-hakemiston ulkopuolella: `../.gitignore` (`zensical/`-rivit ja
   `book` → `/book`, jottei koekirja `tests/book` jää sen alle),
   `../.devcontainer/devcontainer.json` (portti 8001),
-  `../.github/workflows/pages.yml` (ohj2:n kaksoisjulkaisu).
+  `../.github/workflows/pages.yml` (ohj2:n kaksoisjulkaisu ilman
+  `mdbook-dev-check`iä).
