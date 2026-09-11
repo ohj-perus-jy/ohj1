@@ -1,12 +1,12 @@
 # 4. luento: Aliohjelmat 
 
  * **Lue:** [6. Aliohjelmat](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#aliohjelmat)
-   * Oletusnäkyvyys aliohjelmille on `private`. Tällä kurssilla tehdään kuitenkin
-     käytännössä aina `public`-aliohjelmia, joten `public` kirjoitetaan
-     aliohjelmien (ja luokan) eteen aina manuaalisesti. Asiasta lisää
-     Ohjelmointi 2 -kurssilla.
-   * Huomaa, että komentoriviohjelmassa näkyvyysmääreen perään tulee toistaiseksi staattisuusmääre,
-     eli `public static`. Jypelissä taas riittää vain `public`
+    * Oletusnäkyvyys aliohjelmille on `private`. Tällä kurssilla tehdään kuitenkin
+      käytännössä aina `public`-aliohjelmia, joten `public` kirjoitetaan
+      aliohjelmien (ja luokan) eteen aina manuaalisesti. Asiasta lisää
+      Ohjelmointi 2 -kurssilla.
+    * Huomaa, että komentoriviohjelmassa näkyvyysmääreen perään tulee toistaiseksi staattisuusmääre,
+      eli `public static`. Jypelissä taas riittää vain `public`
 
 ## Syksy 2026
 

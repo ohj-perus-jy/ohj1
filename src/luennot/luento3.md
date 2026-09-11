@@ -2,7 +2,7 @@
 
  * **Lue:** [7. Muuttujat](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#muuttujat)
  * **Lue:** [26.1. -- 26.3 Binääriluvut: 10-järjestelmä ja 2-järjestelmä, lukujen esitys tietokoneessa](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#WbRwxc1yrw0v)
-   * Lue omatoimisesti ylläolevat monisteen luvut 26.1 -- 26.3.
+    * Lue omatoimisesti ylläolevat monisteen luvut 26.1 -- 26.3.
 
 ## Syksy 2026
 

@@ -18,7 +18,7 @@ Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50
 Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle joko etä- tai
 lähiohjauksessa. Sähköpostin kautta palauttaminen ilman esittelyä on mahdollista
 vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
-(./index.md#tuki-ja-palaute)[etusivu]), sovi ohjausaika sähköpostitse
+[etusivu](./index.md#tuki-ja-palaute)), sovi ohjausaika sähköpostitse
 [ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
 
 ## Aikataulu ja takarajat
@@ -285,7 +285,7 @@ Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä kl
 
 **Kyllä, vaihtoehtoja ovat esimerkiksi:**
 
- * [Janat-haaste](ht/janat)
+ * [Janat-haaste](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/janat)
  * [työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial )
  * [Tuulet netistä](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2022/syksy/ht/vesalsaa)
 

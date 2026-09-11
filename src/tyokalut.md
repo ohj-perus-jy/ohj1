@@ -690,15 +690,15 @@ tekoälypohjaisesta koodin täydennyksestä, jossa parin sanan kirjoittamisen j�
 Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.
 
 1. AI Assistantin kytkeminen pois
-   - Settings <i class="bi bi-chevron-right"></i> Plugins
-   - Valitse Installed-välilehti
-   - Etsi *AI Assistant* ja poista plugin käytöstä (Disable) tai poista se kokonaan (Uninstall)
+    - Settings <i class="bi bi-chevron-right"></i> Plugins
+    - Valitse Installed-välilehti
+    - Etsi *AI Assistant* ja poista plugin käytöstä (Disable) tai poista se kokonaan (Uninstall)
 2. Inline Completion -täydennyksen kytkeminen pois
-   - Avaa Rider *Welcome to JetBrains Rider* -näkymään
-   - Valitse vasemmasta alalalaidasta Configure <i class="bi bi-chevron-right"></i> Settings
-   - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Code Completion <i class="bi bi-chevron-right"></i> Inline
-   - Ota ruksi **pois** kohdasta *Enable inline completion using language models*
-   - Tallenna asetukset *Save*-painikkeella
+    - Avaa Rider *Welcome to JetBrains Rider* -näkymään
+    - Valitse vasemmasta alalalaidasta Configure <i class="bi bi-chevron-right"></i> Settings
+    - Mene asetuksissa kohtaan Editor <i class="bi bi-chevron-right"></i> General <i class="bi bi-chevron-right"></i> Code Completion <i class="bi bi-chevron-right"></i> Inline
+    - Ota ruksi **pois** kohdasta *Enable inline completion using language models*
+    - Tallenna asetukset *Save*-painikkeella
  
 ## JyPeli 
 
@@ -750,7 +750,7 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
  2. Klikkaa ikkunan vasemmassa alalaidassa oleva *Configure* <i class="bi bi-chevron-right"></i> *Plugins*
  3. Valitse *Marketplace*-välilehti ja hae hakusanalla `ComTest`
  4. Valitse Comtest Runner -pluginin kohdalta *Install*
-     ![](/images/506961/rider-install-comtest.gif)
+     ![ComTest Runner -lisäosan asentaminen Riderissa](./images/rider-install-comtest.gif)
  5. Paina *Save*
  6. Sulje JetBrains Rider
 
@@ -885,7 +885,7 @@ Kokeile seuraavaa:
 - Mene kohtaan *Build, Execution, Deployment*  <i class="bi bi-chevron-right"></i> *Toolset and Build*
 - Klikkaa kohdan *.NET CLI executable path* -kentän alasvetovalikkoa:
 
-    ![](/images/876452/image.png)
+    ![.NET CLI executable path -kentän alasvetovalikko](./images/rider-dotnet-cli-path.png)
 
 Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain
 toista vaihtoehtoa kuin nykyinen arvo. Paina lopuksi *Save* ja kokeile luoda
