@@ -239,3 +239,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Zensical-koeputki (zensical/): generoitua, ei versioida
+zensical/.venv*/
+zensical/docs/
+zensical/site/
+zensical/nav.yml
+zensical/.cache/
+zensical/.convert.lock
