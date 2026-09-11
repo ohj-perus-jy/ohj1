@@ -33,7 +33,7 @@ For- ja while-silmukoilla voidaan periaatteessa tehdä ihan samat asiat. Tavalli
 
 For-silmukkaan kuuluu osat alustus (yllä `int i = 1`), toistoehto (`i <= 10`), päivitys (`i++`) ja runko-osa (aaltosulkeiden rajaama osa). Mikä tahansa näistä osista voi olla tyhjä, mutta puolipisteet on silti kirjoitettava. While-silmukassa on vain toistoehto ja runko-osa. Alustuksesta ja päivityksestä on huolehdittava itse. 
 
-**Foreach**-silmukkaa käytetään erityisesti kokoelmien, kuten listojen ja [sanakirjojen](#-sanakirja) kanssa. Foreach-silmukkaa käytetään erityisesti tilanteissa, kun halutaan käydä läpi kaikki taulukon tai kokoelman alkiot. Myöhemmillä kursseilla käydään myös läpi abstrakteja tietorakenteita, joissa foreach-silmukka on kätevä tai jopa ainoa tapa käydä läpi tietorakenteen alkiot.
+**Foreach**-silmukkaa käytetään erityisesti kokoelmien, kuten listojen ja sanakirjojen kanssa. Foreach-silmukkaa käytetään erityisesti tilanteissa, kun halutaan käydä läpi kaikki taulukon tai kokoelman alkiot. Myöhemmillä kursseilla käydään myös läpi abstrakteja tietorakenteita, joissa foreach-silmukka on kätevä tai jopa ainoa tapa käydä läpi tietorakenteen alkiot.
 
 ```csharp
 int[] luvut = { 7, 3, 1, -5, 9};

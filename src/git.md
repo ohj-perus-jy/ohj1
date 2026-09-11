@@ -402,7 +402,7 @@ Anna käyttäjätunnus **lyhyessä muodossa** `käyttäjätunnus` ilman @-merkki
 ja loppuosaa. Salasana on se, jota käytät JY-verkossa. 
 
 Mikäli annat salasanan väärin, 
-joudut muokkaamaan kirjautumistietojasi, ks. kohta [12](#credentials).
+joudut muokkaamaan kirjautumistietojasi, ks. [Push ei onnistu (remote: HTTP Basic: Access denied)](#credentials).
 
 MacOS-käyttäjät huomatkaa, että salasana on KIRJOITETTAVA vaikka sen kohdalla näkyisi
 avaimen kuva. Kun salasanaa kirjoitetaan, ei näyttöön tule mitään.  Lopuksi
@@ -555,7 +555,7 @@ Syy, miksi näin kävi, johtuu todennäköisesti siitä, että forkkia tehdessä
 muutit Project slugia, eli projektin tunnistetta, joka muuttaa etävaraston
 URL-osoitetta.
 </details>
-<details collapsed>
+<details collapsed id="credentials">
 <summary>Push ei onnistu (remote: HTTP Basic: Access denied)</summary>
 
 **Ongelma:** Git ei anna viedä mitään etävarastoon (push ei onnistu). Antaa virheilmoituksen:

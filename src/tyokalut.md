@@ -763,7 +763,7 @@ kuntoon](osa1/2-ohjelmointiymparisto-kuntoon.md).
 Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/), joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin *Non-commercial license* -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.
 
 
-<details closed><summary> Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset </summary>
+<details closed id="rider-settings"><summary> Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset </summary>
 
 Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
 otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
