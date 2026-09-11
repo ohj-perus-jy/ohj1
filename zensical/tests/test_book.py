@@ -53,18 +53,6 @@ KNOWN_BROKEN_IMAGES = {
 }
 
 
-# ohj1: sivun sisäiset linkit, joiden kohdetta ei ole. Rikki myös mdBookissa
-# (tarkistettu mdbook buildin tulosteesta 2026-09-11): korjataan ../src:ssä,
-# ei täällä. Ks. ../TODO.md. (ohj2 korjasi omansa PR:llä #118.)
-KNOWN_DEAD_ANCHORS = {
-    "rider-settings",           # tyokalut.md, 3 linkkiä
-    "credentials",              # git.md
-    "muukuinpeli",              # harjoitustyo.md
-    "miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-"
-    "funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha",  # harjoitustyo.md, 3
-}
-
-
 def source_uses(pattern: str) -> bool:
     """Käyttääkö lähdepuu ominaisuutta. Kirjoja on kaksi (ohj1, ohj2) eivätkä
     ne käytä samoja mdBookin ominaisuuksia; ominaisuuden testi ohitetaan
@@ -119,8 +107,7 @@ def test_internal_anchors_resolve(printed):
         .filter(target => target && !ids.has(target));
     }""")
     # Luvun etuliite riisutaan, jotta virheilmoitus näyttää itse ankkurin.
-    assert [anchor.split("--", 1)[-1] for anchor in dead
-            if anchor.split("--", 1)[-1] not in KNOWN_DEAD_ANCHORS] == []
+    assert [anchor.split("--", 1)[-1] for anchor in dead] == []
 
 
 def test_every_include_is_expanded(printed):

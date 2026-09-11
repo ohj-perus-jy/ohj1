@@ -33,22 +33,38 @@ muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy,
 
 ## Vaihe 2 — Aineiston korjaukset `main`iin
 
-Kaikki alla olevat ovat rikki myös mdBookissa (tarkistettu `mdbook build`in
-tulosteesta 2026-09-11), joten korjaus kuuluu `src`:ään ja `main`iin omana
-PR:nä (ohj2: PR #118), sitten `main` → `dev`.
+Alla olevat ovat rikki myös mdBookissa (tarkistettu `mdbook build`in
+tulosteesta 2026-09-11), paitsi sivut, joita mdBook ei julkaise lainkaan
+(`osa4/osa4.md` on kommentoitu pois SUMMARY:stä, `exercises/1-8-1-…` ei ole
+sisällytetty mihinkään). Korjaus kuuluu `src`:ään ja `main`iin, sitten
+`main` → `dev`.
 
-- [ ] Ankkurit, joita ei ole:
-  - [ ] `tyokalut.md`: `#rider-settings` (3 linkkiä)
-  - [ ] `git.md`: `#credentials`
-  - [ ] `harjoitustyo.md`: `#muukuinpeli`
-  - [ ] `harjoitustyo.md`: `#miten-saan-taulukon-...-idprt6kcamnzha` (3 linkkiä)
-  - [ ] `harjoitustyo.md` → `osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset`
-  - [ ] `harjoitustyo.md` → `git.md#tehtyjen-muutosten-lahettaminen-etavarastoon-push`
-        ja `#muutosten-hakeminen-etavarastosta-paikalliseen-varastoon-pull`
-        (otsikoilla on omat tunnukset `{#push}` ja `{#pull}`)
-  - [ ] `exercises/1-8-1-bonus_editorin_kayttaminen/`: `#todo_lisaa_kuva`,
-        `#lisaa_osoite`
-  - [ ] `osa4/osa4.md`: `#-sanakirja`
+- [x] Ankkurit, joita ei ole: `af8c653` suoraan `main`iin, `main` → `dev`
+      (`06b6001`, 2026-09-11). mdBookissa rikkinäisiä 11 → 0, Zensicalissa varoituksia
+      14 → 1 (`pohja.md`, alla).
+  - [x] `tyokalut.md`: `#rider-settings` (3 linkkiä): otsikosta oli tullut
+        `<details>` (`db3bf52`); `id` lohkoon
+  - [x] `git.md`: `#credentials`: `id` lohkoon "Push ei onnistu"
+  - [x] `harjoitustyo.md`: `#muukuinpeli`: `id` UKK-lohkoon
+  - [x] `harjoitustyo.md`: `#miten-saan-taulukon-...-idprt6kcamnzha` (3 linkkiä):
+        `#taulukko-silmukka-funktio`
+  - [x] `harjoitustyo.md` → `osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset`:
+        osio siirtyi (`9a763f0`), nyt `tyokalut.md#jetbrains-rider`
+  - [x] `harjoitustyo.md` → `git.md#tehtyjen-muutosten-lahettaminen-etavarastoon-push`
+        ja `#muutosten-hakeminen-etavarastosta-paikalliseen-varastoon-pull`:
+        nyt `#push` ja `#pull`
+  - [x] `exercises/1-8-1-bonus_editorin_kayttaminen/handout.md`:
+        `#todo_lisaa_kuva` tekstiksi
+  - [x] `osa4/osa4.md`: `#-sanakirja`: osiota ei ole, linkki pois
+- [ ] `exercises/1-8-1-…/starter/pohja.md`: `#lisaa_osoite` on tehtävän
+      paikkamerkki, jonka opiskelija korvaa, joten `src`:hen ei kosketa.
+      Zensical tekee jokaisesta `.md`:stä sivun, mdBook vain SUMMARY:n
+      luvuista: jätä `exercises/*/starter/` pois Zensicalin käännöksestä
+      (`dev`, `zensical/`).
+- [x] `.gitignore`: `book` osui myös koekirjaan `zensical/tests/book`, joka
+      ei siksi ollut gitissä, ja `run.sh test` kaatui puhtaassa checkoutissa.
+      `book` → `/book` kuten ohj2:ssa (`2c05e5a`), mukana `af8c653`:ssa;
+      koekirja palautettu ohj2:n `164510d`:stä `dev`iin (2026-09-11).
 - [ ] Sivut, joita ei ole:
   - [ ] `debuggausnayte.md` → `tuki-ja-palaute.md`
   - [ ] `osa1/1-ensimmainen-ohjelma.md` → `../tyokalut/tyokalut.md`
@@ -70,8 +86,8 @@ PR:nä (ohj2: PR #118), sitten `main` → `dev`.
 - [ ] `> [!LISATIETO]` (yksi esiintymä): tarkista ulkoasu (`info`-tyyppi,
       ei esikuvaa mdBookin CSS:ssä) tai vaihda tunnus `src`:ssä.
 - [ ] Kun korjattu: poista vastaavat poikkeukset
-      `zensical/tests/test_book.py`:stä (`KNOWN_DEAD_ANCHORS`,
-      `KNOWN_BROKEN_IMAGES`).
+      `zensical/tests/test_book.py`:stä. `KNOWN_DEAD_ANCHORS` poistettu
+      (2026-09-11); `KNOWN_BROKEN_IMAGES` odottaa kuvia.
 
 ## Vaihe 3 — C#-ominaisuuksien todennus
 

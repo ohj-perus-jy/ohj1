@@ -244,13 +244,13 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   `multifile: false`, eikä ohj1:n mdBook-skripti lähetä kenttää lainkaan.
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
-  käytä (*yleiskäyttöinen*), ohj1:n `KNOWN_BROKEN_IMAGES` ja
-  `KNOWN_DEAD_ANCHORS`.
+  käytä (*yleiskäyttöinen*), ohj1:n `KNOWN_BROKEN_IMAGES`.
 - `cache/svgbob/`: ohj1:n kolme bob-kaaviota (svgbob_cli 0.7.6, asennettu
   `cargo install svgbob_cli@0.7.6`); ohj2:n kaaviot ja `assets/plantuml/`
   jätetty pois.
 - Tämä README: johdanto ja tämä kohta. PERUSTELUT.md, PURKUSUUNNITELMA.md ja
   KAYTTOONOTTO.md sellaisenaan.
-- `zensical/`-hakemiston ulkopuolella: `../.gitignore` (`zensical/`-rivit),
+- `zensical/`-hakemiston ulkopuolella: `../.gitignore` (`zensical/`-rivit ja
+  `book` → `/book`, jottei koekirja `tests/book` jää sen alle),
   `../.devcontainer/devcontainer.json` (portti 8001),
   `../.github/workflows/pages.yml` (ohj2:n kaksoisjulkaisu).
