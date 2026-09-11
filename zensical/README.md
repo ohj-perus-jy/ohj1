@@ -239,7 +239,9 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
     `luennot/luento16.md`). *Yleiskäyttöinen.*
 - `assets/js/playground.js`: `csharp` kieliin; `feature-*`-määre kielen
   perään (`csharp-jypeli`) ja tulosteen data-URI-kuvat `<img>`-elementeiksi
-  kuten ../theme/playground_ext.js.
+  kuten ../theme/playground_ext.js. `multifile`-kenttä vain
+  monitiedostolohkolle: palvelimen C#-polku aikakatkaisee pyynnön, jossa on
+  `multifile: false`, eikä ohj1:n mdBook-skripti lähetä kenttää lainkaan.
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*), ohj1:n `KNOWN_BROKEN_IMAGES` ja

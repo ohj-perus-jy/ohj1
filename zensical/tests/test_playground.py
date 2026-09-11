@@ -85,13 +85,14 @@ def test_button_is_added_to_runnable_blocks_only(chapter):
 
 
 def test_request_is_the_same_as_mdbook_sends(chapter):
-    """Pyyntö on kenttä kentältä sama kuin mdBookissa."""
+    """Pyyntö on kenttä kentältä sama kuin ohj1:n mdBookissa: yhden lohkon
+    pyynnössä ei ole multifile-kenttää, koska suorituspalvelimen C#-polku
+    aikakatkaisee pyynnön, jossa on multifile: false."""
     chapter.answer(output="Hei, maailma!\n")
     assert chapter.run(SINGLE) == "Hei, maailma!"
     assert chapter.requests == [{
         "language": "java",
         "code": 'void main() {\nIO.println("Hei, maailma!");\n}\n',
-        "multifile": False,
     }]
 
 

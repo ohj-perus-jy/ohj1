@@ -17,11 +17,16 @@ muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy,
 - [ ] `.github/workflows/pages.yml` `main`iin (PR tai suoraan), sitten
       `main` → `dev`. Tiedoston on oltava sama molemmissa: `main`-push ajaa
       `main`in version, ja vanha versio pyyhkisi `/dev/`:n.
-- [ ] Todenna `dev`-pushin ajo: neljä jobia vihreitä, myös
-      `mdbook-dev-check`.
-- [ ] Todenna `ohj-perus-jy.github.io/ohj1/dev/`: tyylit ja skriptit
-      latautuvat alipolussa (`curl .../dev/assets/css/layout.css`), ajonappi
-      tulostaa, `tentti/` ja `tulosta/` toimivat. Juuri on yhä mdBook.
+- [x] Todenna `dev`-pushin ajo: neljä jobia vihreitä, myös
+      `mdbook-dev-check` (ajo 34589621298, 2026-09-11).
+- [x] Todenna `ohjelmointi1.it.jyu.fi/dev/` (sivusto on omassa domainissaan
+      kuten ohj2, `ohj-perus-jy.github.io/ohj1/` ohjaa sinne): tyylit ja
+      skriptit latautuvat, `tentti/` ja `tulosta/` vastaavat 200, juuri on
+      yhä mdBook (2026-09-11).
+- [x] Ajonappi tulostaa `/dev/`:ssä. Ensimmäinen yritys aikakatkaistui:
+      suorituspalvelimen C#-polku ei siedä kenttää `multifile: false`, jota
+      ohj2:n skripti lähetti aina (Java sietää). Korjattu: kenttä lähtee
+      vain monitiedostolohkoille (2026-09-11).
 - [ ] Todenna `main`-pushin jälkeen, että `/dev/` säilyy.
 
 ## Vaihe 2 — Aineiston korjaukset `main`iin
@@ -71,8 +76,10 @@ PR:nä (ohj2: PR #118), sitten `main` → `dev`.
 Testikirja (`zensical/tests/book`) on Java, joten ohj1:n C#-erityispiirteet
 eivät ole testien piirissä.
 
-- [ ] Ajonappi oikeaa suorituspalvelinta vasten: tavallinen ` ```csharp `
-      ja ` ```csharp,feature-jypeli ` (kieleksi lähtee `csharp-jypeli`).
+- [x] Ajonappi oikeaa suorituspalvelinta vasten: tavallinen ` ```csharp `
+      (2026-09-11, ks. vaihe 1).
+- [ ] Sama ` ```csharp,feature-jypeli `-lohkolle (kieleksi lähtee
+      `csharp-jypeli`).
 - [ ] Jypelin kuvatuloste (`@@@DATA_URI_BEGIN@@@`) näkyy `<img>`-elementtinä;
       anna sille tyyli (`img.jyu-result-image`, `assets/css/playground.css`).
 - [ ] Lisää koekirjaan C#-lohko (piilorivit `//-`, `ignore`, `feature-jypeli`)

@@ -140,7 +140,10 @@
         body: JSON.stringify({
           language: executorLanguage(blocks[0]),
           code: set ? JSON.stringify(files(set)) : source(blocks[0]),
-          multifile: Boolean(set),
+          /* multifile vain monitiedostolohkolle: ohj1:n mdBook-skripti ei
+           * lähetä kenttää lainkaan, ja palvelimen C#-polku aikakatkaisee
+           * pyynnön, jossa on multifile: false (Java sietää sen). */
+          ...(set ? { multifile: true } : {}),
         }),
         signal: abort.signal,
       });
