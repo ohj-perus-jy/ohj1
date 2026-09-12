@@ -1,0 +1,164 @@
+**Lue ensin monisteesta:**  [Lukujen esitys
+tietokoneessa](). TODO: Linkki
+
+
+Binäärilukujärjestelmässä on kaksi numeroa, nolla ja yksi. Yhtä tällaista arvoa 
+sanotaan bitiksi (*bit*, binary digit). Vähiten merkitsevä eli 
+viimeisimmäksi kirjoitettu bitti tarkoittaa 10-järjestelmän lukua yksi, 
+toiseksi vähiten merkitsevä bitti lukua kaksi, kolmanneksi vähiten 
+merkitsevä lukumäärää neljä ja niin edelleen aina kakkosen potensseja 
+jatkaen (8, 16, 32, 64, ...). Kokonaisen binääriluvun ilmoittama lukumäärä 
+saadaan kun summataan nämä yksittäisten bittien ilmoittamat lukumäärät toisiinsa. 
+Esimerkiksi binääriluku 1000101 olisi kymmenjärjestelmässä
+
+```
+1*64 + 0*32 + 0*16 + 0*8 + 1*4 + 0*2 + 1*1 == 69
+
+```
+
+**Arviointi:** Yhteenlaskettu maksimipistemäärä on 1 p. 
+Kysymyskohtaiset pisteet näkyvät kysymysten yhteydessä.
+
+``` {#tehtava_binaarilukuja_1 plugin="csPlugin"}
+%%DEMO_TASK_BASE%%
+
+modelAnswer:
+  %%MODEL_ANSWER_BASE%%
+  answer: |!!
+[**Katso mallivastausvideo**](){target=mallivideo} TODO: Linkki
+
+~~~
+----------------------
+               1 0110   = 16 + 4 + 2                       = 22
+         10 1111 0001   = 512 + 128 + 64 + 32 + 16 + 1     = 753
+  1000 0000 0000 0001   = 32768 + 1                        = 32769
+  1010 1010 1010 1110   = 32768+8192+2048+512+128+32+8+4+2 = 43694
+1 0000 0000 0000 0011   = 65536 + 2 + 1                    = 65539
+1 0000 1000 0000 0010   = 65536 + 2048  + 2                = 67586
+1 0000 0000 0001 0011   = 65536 + 16  + 2 + 1              = 65555
+----------------------
+~~~
+!!
+
+type: text
+stem: |!!
+md:
+
+Muunna alla olevat binääriluvut ihmiselle tutumpaan 10-järjestelmään. **(0,4 p.)**
+
+~~~
+10110 
+1011110001 
+1000000000000001  
+1010101010101110 
+10000000000010011 
+10000100000000010 
+10000000000000011
+~~~
+
+Muista vastaukseen laittaa myös aukilaskettuna se, miten sait tuloksen. Pelkkä numero ei riitä.
+**Aloita jokainen vastaus uudelta riviltä.**
+
+!!
+pointsRule: 
+    allowUserMin: 0
+    allowUserMax: 0.4
+    maxPoints: 0.4
+    code: 0.4
+    expectCode: |
+      (.*\n){6,}.*
+button: Tallenna
+rows: 10
+placeholder: "Kirjoita vastauksesi tähän"
+```
+
+``` {#tehtava_binaarilukuja_2 plugin="csPlugin"}
+%%DEMO_TASK_BASE%%
+
+modelAnswer:
+  %%MODEL_ANSWER_BASE%%
+  answer: |!!
+[**Katso mallivastausvideo**](){target=mallivideo} TODO: Linkki
+
+Suurin neljään tavuun mahtuva luku on
+
+~~~
+1111 1111 1111 1111 1111 1111 1111 1111 = 2^32 - 1 = 65536 - 1 = 4294967295
+~~~
+!!
+
+type: text
+stem: |!!
+md:
+
+Nykytietokoneissa on tyypillistä jakaa muisti kahdeksan 
+bitin mittaisiin tallennuspaikkoihin  eli tavuihin (byte). Mikä on 
+suurin kokonaisluku, jonka voit tallentaa neljän tavun (eli 32 bitin) 
+kokoiseen tilaan (oletetaan että negatiivisia lukuja ei tarvitse esittää)?
+Vastaus pitää antaa 10-järjestelmän lukuna.
+
+!!
+pointsRule: 
+    allowUserMin: 0
+    allowUserMax: 0.3
+    maxPoints: 0.3 p
+    code: 0.3 
+    expectCode: (.*\n)*.*4294967295.*
+button: Tallenna
+rows: 2
+placeholder: "Kirjoita vastauksesi tähän"
+```
+
+``` {#tehtava_binaarilukuja_3 plugin="csPlugin"}
+%%DEMO_TASK_BASE%%
+
+modelAnswer:
+  %%MODEL_ANSWER_BASE%%
+  answer: |!!
+[**Katso mallivastausvideo**](){target=mallivideo} TODO: Linkki
+
+Jos käytetään suoraa tulkitaa (merkitsevin bitti määrää neg/pos), niin
+suurin on
+
+~~~
+0111 1111 1111 1111 1111 1111 1111 1111 = 2147483648-1  =  2147483647
+~~~
+
+ja pienin
+
+~~~
+1111 1111 1111 1111 1111 1111 1111 1111 = -2147483646+1 = -2147483647
+~~~
+
+Suorassa tulkinnassa on nollalle on kaksi esitystapaa. 
+Sen sijaan 2-komplementissa nollalle on vain yksi esitystapa, jolloin
+saadaan tilaa yhdelle negaatiiviselle luvulle lisää, eli
+silloin pienin on `-2147483648`.
+
+!!
+
+type: text
+stem: |!!
+md:
+
+Entä jos pitää voida esittää positiivisia ja negatiivisia 
+lukuja: mikä silloin on toisaalta pienin ja toisaalta suurin luku, 
+joka neljän tavun kokoiseen tilaan mahtuu?
+**Kirjoita ensin isoin luku ja sen jälkeen pienin.** 
+Tässäkin vastaus annetaan
+10-järjestelmän lukuina. 
+
+Huom: Voit tehdä itse valinnan, onko negatiivisille
+luvuille käytössä suora tulkinta, yhden komplementti vai kahden komplementti. 
+Vastaus hyväksytään minkä tahansa oletuksen mukaisesti.
+!!
+pointsRule: 
+    allowUserMin: 0
+    allowUserMax: 0.3
+    maxPoints: 0.3 p
+    code: 0.3 
+    expectCode: (.*\n)*.*(2147483647)(.*\n)*.*(-2147483647|-2147483648)(.*\n)*
+button: Tallenna
+rows: 10
+placeholder: "Kirjoita vastauksesi tähän"
+```
