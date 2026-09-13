@@ -19,7 +19,8 @@
   container-type: inline-size;
 }
 
-/* Esityksessä näkyy vain nykyinen vaihe; luvun nimi on sen yläpuolella. */
+/* Esityksessä näkyy vain nykyinen vaihe ohjainten alla, viivan takana; luvun
+ * nimi on aikajanan pillerissä. */
 .jyu-walk--live:not(.jyu-walk--text) > h2,
 .jyu-walk--live:not(.jyu-walk--text) > .jyu-step:not(.jyu-step--current) {
   display: none;
@@ -34,8 +35,13 @@
   padding-bottom: 0.4rem;
 }
 
+.jyu-walk--live:not(.jyu-walk--text) > .jyu-step {
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
 .jyu-walk--live:not(.jyu-walk--text) > .jyu-step > :first-child {
-  margin-top: 0.2em;
+  margin-top: 0;
 }
 
 .jyu-walk--text .jw-stage,
@@ -66,6 +72,8 @@
   outline-offset: 2px;
 }
 
+/* Ohjainrivi: napit oikeassa reunassa yhtenä ryhmänä; ilmoitus (tekstinä
+ * puhelimella) omalla rivillään. */
 .jw-top {
   display: flex;
   flex-wrap: wrap;
@@ -75,51 +83,12 @@
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
-/* Luvut vievät rivin vapaan tilan ja rivittyvät keskenään; napit pysyvät
- * yhtenä ryhmänä oikeassa reunassa eivätkä valu yksitellen seuraavalle
- * riville. */
-.jw-chapters {
-  display: flex;
-  flex: 1 1 0;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  min-width: 0;
-}
-
 .jw-actions {
   display: flex;
   flex: none;
   align-items: center;
   gap: 0.8rem;
   margin-left: auto;
-}
-
-.jw-chapters button {
-  padding: 0.3rem 0.6rem;
-  border: 0;
-  border-radius: 1rem;
-  background: var(--md-default-fg-color--lightest);
-  color: var(--md-default-fg-color--light);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.jw-chapters button:hover,
-.jw-chapters button:focus-visible {
-  background: var(--md-accent-fg-color--transparent);
-  color: var(--md-accent-fg-color);
-}
-
-.jw-chapters button[aria-current="true"] {
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-}
-
-.jw-chapters button[aria-current="true"]:hover,
-.jw-chapters button[aria-current="true"]:focus-visible {
-  background: var(--md-accent-fg-color);
-  color: var(--md-accent-bg-color);
 }
 
 .jw-mode {
@@ -250,11 +219,66 @@
   color: var(--md-accent-bg-color);
 }
 
-/* Painikkeen näkyvä palkki on 6 px, osuma-alue 22 px (sormi). */
+/* Aikajana kohtauksen alla luvuittain (walkthrough.js: parts): ylärivillä
+ * luvun pilleri ja alarivillä luvun vaiheet. Sarakkeet (skriptistä, Nfr)
+ * jakavat leveyden vaiheiden määrän suhteessa, mutta sarake on vähintään
+ * pillerin pisimmän sanan levyinen: yhden vaiheen luku saa leveän palkin, ja
+ * pitkä nimi rivittyy kahdelle riville, jolloin pillerien rivi on kaikilla
+ * yhtä korkea. Osan rivit ovat aikajanan rivit (subgrid), jotta pillerit ja
+ * vaiheet pysyvät omillaan, vaikka osalta puuttuisi pilleri (vaiheet ennen
+ * ensimmäistä lukua). */
+.jw-timeline {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2px 6px;
+  padding: 0.5rem 0.8rem 0;
+}
+
+.jw-part {
+  display: grid;
+  grid-row: 1 / 3;
+  grid-template-rows: subgrid;
+}
+
+/* Pilleri on pieni versaaliotsake harvalla kirjainvälillä. Valitsin on
+ * tarkempi kuin .jw-ui button, joka nollaa kirjasimen (font: inherit). */
+.jw-timeline .jw-pill {
+  padding: 0.15rem 0.5rem;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jw-pill:hover,
+.jw-pill:focus-visible {
+  background: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+}
+
+.jw-pill[aria-current="true"] {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.jw-pill[aria-current="true"]:hover,
+.jw-pill[aria-current="true"]:focus-visible {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+/* Painikkeen näkyvä palkki on 6 px, nykyisen vaiheen 10 px, osuma-alue 22 px
+ * (sormi). Palkki on täytteen sisällä (background-clip), joten sen korkeus
+ * on 22 px miinus täytteet. */
 .jw-ticks {
   display: flex;
+  grid-row: 2;
   gap: 3px;
-  padding: 0.2rem 0.8rem 0;
 }
 
 .jw-tick {
@@ -268,15 +292,12 @@
   background-clip: content-box;
 }
 
-.jw-tick--chapter {
-  margin-left: 6px;
-}
-
 .jw-tick--done {
   background-color: color-mix(in srgb, var(--md-primary-fg-color) 45%, transparent);
 }
 
 .jw-tick--current {
+  padding-block: 6px;
   background-color: var(--md-primary-fg-color);
 }
 
@@ -348,24 +369,48 @@
   cursor: default;
 }
 
-.jw-chapter {
-  margin: 0;
-  padding: 0.7rem 0.8rem 0;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
-  color: var(--md-default-fg-color--light);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+/* Leveä palsta: nimet mahtuvat yhdelle riville, joten pilleri ei rivity vaan
+ * levittää kapeankin sarakkeen nimensä levyiseksi. Raja on leveys, jolla
+ * harjoitustyön ohjeen kuusi luvun nimeä mahtuvat rivittymättä (mitattu
+ * 38 rem); rem, koska nimien leveys seuraa teeman kirjasinkokoa, joka kasvaa
+ * 1600 px:n ikkunasta alkaen. */
+@container (min-width: 39rem) {
+  .jw-pill {
+    white-space: nowrap;
+  }
 }
 
-/* Kapea palsta (puhelin): napit lukujen alle, Edellinen ja Seuraava puoliksi
- * omalle rivilleen, esityksen avausnappi näkyväksi napiksi ilmoituksen alle. */
-@container (max-width: 520px) {
-  .jw-chapters {
-    flex-basis: 100%;
+/* Kapea palsta (puhelin): luvun nimet pois, koska ne eivät mahdu vaiheidensa
+ * päälle; selataan vaiheista ja Edellinen- ja Seuraava-napeilla. Vaiheet ovat
+ * yhdessä rivissä, ja luvut erottaa isompi rako; osan leveys vaiheiden määrän
+ * mukaan (flex-grow skriptistä). Raja on leveys, jolla ohjeen kuusi luvun
+ * nimeä vielä mahtuvat rivitettyinä (mitattu 31 rem; tavallinen palsta on
+ * 33 rem). */
+@container (max-width: 32rem) {
+  .jw-timeline {
+    display: flex;
+    gap: 6px;
+    padding-top: 0.2rem;
   }
 
+  .jw-part {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .jw-pill {
+    display: none;
+  }
+
+  .jw-ticks {
+    flex: 1;
+  }
+}
+
+/* Kapea palsta (puhelin): Edellinen ja Seuraava puoliksi omalle rivilleen,
+ * esityksen avausnappi näkyväksi napiksi ilmoituksen alle. */
+@container (max-width: 520px) {
   .jyu-walk--text .jw-actions {
     margin-left: 0;
   }
@@ -395,8 +440,8 @@
 
 /* Koko ruutu (walkthrough.js: setFull). Kehys ja ohjainrivi hajotetaan
  * (display: contents), jotta niiden osat asettuvat ruudukkoon: ylhäällä
- * luvut ja napit, vasemmalla kohtaus, aikajana ja siirtymisnapit, oikealla
- * vaiheen teksti omalla vierityksellään. Kohtaus sovitetaan kehykseensä
+ * napit, vasemmalla kohtaus, aikajana ja siirtymisnapit, oikealla vaiheen
+ * teksti omalla vierityksellään. Kohtaus sovitetaan kehykseensä
  * leveyden tai korkeuden mukaan (160cqh = korkeus × 8/5). Pystynäytöllä
  * teksti tulee kohtauksen alle. */
 /* Teeman html:n scrollbar-gutter: stable varaisi vierityspalkin tilan
@@ -429,8 +474,7 @@
   grid-column: 1 / -1;
 }
 
-.jyu-walk--full .jw-mode,
-.jyu-walk--full .jw-chapter {
+.jyu-walk--full .jw-mode {
   display: none;
 }
 
@@ -448,7 +492,7 @@
   width: min(100cqw, 160cqh);
 }
 
-.jyu-walk--full .jw-ticks {
+.jyu-walk--full .jw-timeline {
   grid-row: 3;
   grid-column: 1;
 }
@@ -463,6 +507,7 @@
   grid-column: 2;
   overflow-y: auto;
   padding: 0.4rem 1.2rem 1rem;
+  border-top: 0;
   border-left: 1px solid var(--md-default-fg-color--lightest);
 }
 
@@ -1582,18 +1627,23 @@
   text-align: center;
 }
 
-.jw-tim table {
+/* Taulukolla on luokka, jotta teeman ja tables.css:n table:not([class])
+ * -säännöt eivät osu siihen: ne tekisivät taulusta sisältönsä levyisen ja
+ * keskitetyn, jolloin se venyisi osoitetta kirjoitettaessa, ja antaisivat
+ * sille teeman taustan (tummassa teemassa musta) ja täytteet. Taulu on koko
+ * sivun levyinen, joten osoitekenttä on alusta asti osoitteen levyinen. */
+.jw-tim-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
 }
 
-.jw-tim td {
+.jw-tim-table td {
   padding: 6px 8px;
   border: 1px solid #d9d9d9;
 }
 
-.jw-tim td:first-child {
+.jw-tim-table td:first-child {
   width: 190px;
   background: #f4f6fa;
   font-weight: 600;

@@ -70,7 +70,7 @@ def test_one_step_is_shown_at_a_time(opened):
     assert shown(page) == ["avaa-sivu"]
     assert page.inner_text(".jw-count") == "Vaihe 1 / 3"
     assert page.eval_on_selector_all(
-        ".jw-chapters button", "buttons => buttons.map(b => b.textContent)") == ["Alku", "Loppu"]
+        ".jw-pill", "buttons => buttons.map(b => b.textContent)") == ["Alku", "Loppu"]
     assert page.locator(".jw-tick").count() == 3
     assert page.is_disabled(".jw-prev")
     assert not page.is_disabled(".jw-next")
@@ -129,7 +129,7 @@ def test_hidden_element_is_gone_when_the_step_is_finished(opened):
     """data-hide: elementti tulee näkyviin ja poistuu kohdassaan, ja valmiissa
     vaiheessa se on poissa; kursori katoaa, kun klikattavaa ei jää."""
     page, errors = opened()
-    page.click(".jw-tick:nth-child(3)")
+    page.click(".jw-tick >> nth=2")
     assert "jw-gone" in page.get_attribute(".koe-ikkuna", "class")
     assert page.is_visible(".koe-lopuksi")
     assert not page.is_visible(".jw-cursor")
@@ -147,7 +147,7 @@ def test_scroll_moves_the_content_up(opened):
     vieritys on heti paikallaan."""
     page, errors = opened()
     scrolled = "getComputedStyle(document.querySelector('.koe-vieritys')).transform"
-    page.click(".jw-tick:nth-child(3)")
+    page.click(".jw-tick >> nth=2")
     assert page.evaluate(scrolled) == "matrix(1, 0, 0, 1, 0, -40)"
     page.click(".jw-replay")
     assert page.evaluate(scrolled) == "none"
@@ -221,11 +221,11 @@ def test_contents_link_plays_the_step_from_the_start(opened):
 def test_chapter_button_plays_the_first_step_of_the_chapter(opened):
     """Luvun nappi avaa luvun ensimmäisen vaiheen ja toistaa sen alusta."""
     page, errors = opened()
-    page.click(".jw-chapters button:has-text('Loppu')")
+    page.click(".jw-pill:has-text('Loppu')")
     assert shown(page) == ["kirjaudu"]
     assert page.locator(".koe-lopuksi.jw-hidden").count() == 1
-    assert page.get_attribute(".jw-chapters button:has-text('Loppu')", "aria-current") == "true"
-    assert page.get_attribute(".jw-chapters button:has-text('Alku')", "aria-current") == "false"
+    assert page.get_attribute(".jw-pill:has-text('Loppu')", "aria-current") == "true"
+    assert page.get_attribute(".jw-pill:has-text('Alku')", "aria-current") == "false"
     assert errors == []
 
 
@@ -301,7 +301,7 @@ def test_speaker_reads_each_step_aloud(opened):
     page.click(".jw-next")
     page.click(".jw-replay")
     assert page.evaluate("played") == ["selain.mp3", "piilotus.mp3", "piilotus.mp3"]
-    page.click(".jw-tick:nth-child(3)")
+    page.click(".jw-tick >> nth=2")
     paused = page.evaluate("paused")
     page.click(".jw-speak")
     assert page.get_attribute(".jw-speak", "aria-pressed") == "false"

@@ -23,7 +23,7 @@
  *   data-order="n"  numeroidut ensin pienimmästä alkaen, sitten muut
  *                   dokumenttijärjestyksessä; saman elementin tapahtumat
  *                   järjestyksessä show, click, type
- * Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle, luvun nappi ja linkki
+ * Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle, luvun pilleri ja linkki
  * vaiheeseen (sisällysluettelo) animoivat. Edellinen ja aikajana näyttävät
  * vaiheen heti valmiina, samoin jaetusta osoitteesta avautuva vaihe ja aina,
  * jos lukija on pyytänyt vähemmän liikettä (prefers-reduced-motion).
@@ -451,15 +451,21 @@
         if (!chapters.length) chapters.push({ title: "", heading: null, first: 0 });
         const heading = child.querySelector("h2, h3, h4, h5, h6");
         steps.push({
-          el: child, heading, scene: child.dataset.scene,
+          el: child, heading, scene: child.dataset.scene, index: steps.length,
           chapter: chapters.length - 1, title: heading ? headingText(heading) : "",
         });
       }
     }
     if (!steps.length) return;
 
-    const named = chapters.map((chapter, index) => ({ ...chapter, index }))
-      .filter((chapter) => chapter.title && chapter.first < steps.length);
+    /* Aikajana on kohtauksen alla luvuittain: luvun pilleri ja sen alla luvun
+     * vaiheet, osan leveys vaiheiden määrän mukaan (walkthrough.css:
+     * .jw-timeline; sarakkeet ja kapean palstan flex-grow tästä). Vaiheet
+     * ennen ensimmäistä lukua ovat osa ilman pilleriä; luku ilman vaiheita
+     * ei näy. */
+    const parts = chapters.map((chapter, index) => ({
+      ...chapter, index, steps: steps.filter((step) => step.chapter === index),
+    })).filter((part) => part.steps.length);
 
     const spoken = steps.some((step) => step.el.dataset.audio);
 
@@ -467,8 +473,6 @@
     shell.className = "jw-ui";
     shell.innerHTML =
       `<div class="jw-top">`
-      + `<div class="jw-chapters" role="group" aria-label="Luvut">${named.map((chapter) =>
-        `<button type="button" data-chapter="${chapter.index}">${esc(chapter.title)}</button>`).join("")}</div>`
       + `<p class="jw-notice" hidden>Kuvallinen esitys on tehty tietokoneen näytölle, `
       + `joten ohje näytetään tässä tekstinä.</p>`
       + `<div class="jw-actions">`
@@ -478,14 +482,17 @@
       + `<button type="button" class="jw-full" aria-pressed="false">Koko ruutu</button></div></div>`
       + `<div class="jw-screen"><div class="jw-stage"><div class="jw-canvas" aria-hidden="true"></div>`
       + `<button type="button" class="jw-zoom" hidden>Koko kuva</button></div></div>`
-      + `<div class="jw-live"><div class="jw-ticks">${steps.map((step, i) =>
-        `<button type="button" class="jw-tick${i && step.chapter !== steps[i - 1].chapter ? " jw-tick--chapter" : ""}"`
-        + ` aria-label="Vaihe ${i + 1}: ${esc(step.title)}" title="${i + 1}. ${esc(step.title)}"></button>`).join("")}</div>`
+      + `<div class="jw-live"><div class="jw-timeline" role="group" aria-label="Luvut ja vaiheet"`
+      + ` style="grid-template-columns: ${parts.map((part) => `${part.steps.length}fr`).join(" ")}">${parts.map((part) =>
+        `<div class="jw-part" style="flex-grow: ${part.steps.length}">`
+        + (part.title ? `<button type="button" class="jw-pill" data-chapter="${part.index}">${esc(part.title)}</button>` : "")
+        + `<div class="jw-ticks">${part.steps.map((step) =>
+          `<button type="button" class="jw-tick" aria-label="Vaihe ${step.index + 1}: ${esc(step.title)}"`
+          + ` title="${step.index + 1}. ${esc(step.title)}"></button>`).join("")}</div></div>`).join("")}</div>`
       + `<div class="jw-bar"><span class="jw-count" aria-live="polite"></span>`
       + `<button type="button" class="jw-replay">Toista</button>`
       + `<button type="button" class="jw-prev">← Edellinen</button>`
-      + `<button type="button" class="jw-next">Seuraava →</button></div>`
-      + `<p class="jw-chapter"></p></div>`;
+      + `<button type="button" class="jw-next">Seuraava →</button></div></div>`;
     root.prepend(shell);
     root.classList.add("jyu-walk--live");
     root.tabIndex = -1;
@@ -571,7 +578,6 @@
       $(".jw-count").textContent = `Vaihe ${current + 1} / ${steps.length}`;
       $(".jw-prev").disabled = current === 0;
       $(".jw-next").disabled = current === steps.length - 1;
-      $(".jw-chapter").textContent = chapters[step.chapter].title;
       for (const button of chapterButtons) {
         button.setAttribute("aria-current", String(Number(button.dataset.chapter) === step.chapter));
       }
@@ -682,11 +688,7 @@
     $(".jw-replay").addEventListener("click", () => go(current, true));
     ticks.forEach((tick, i) => tick.addEventListener("click", () => go(i, false)));
     for (const button of chapterButtons) {
-      button.addEventListener("click", () => {
-        const chapter = chapters[Number(button.dataset.chapter)];
-        if (textMode()) chapter.heading.scrollIntoView({ block: "start" });
-        else go(chapter.first, true);
-      });
+      button.addEventListener("click", () => go(chapters[Number(button.dataset.chapter)].first, true));
     }
     modeButton.addEventListener("click", () => setMode(!textMode()));
     fullButton.addEventListener("click", () => setFull(!full));
