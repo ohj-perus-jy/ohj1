@@ -81,24 +81,26 @@ Oma kopiosi on nyt valmis. Avaa **Code**-valikko ja kopioi **Clone with HTTPS**
 
 ### Windows: avaa Git Bash
 
+(macOS:ssä voit ohittaa tämän vaiheen.)
+
+
 Paina tehtäväpalkin **Haku**-kenttää, kirjoita `git bash` ja valitse
 hakutuloksista **Git Bash**. Avautuu komentorivi, jolla annetaan tämän ohjeen
 komennot.
 
-Jos Git Bashia ei löydy, asenna ensin [Git](tyokalut.md#git). macOS:ssä voit
-ohittaa tämän vaiheen.
-
+Jos Git Bashia ei löydy, asenna ensin [Git](tyokalut.md#git). 
 </step>
 
 <step scene="avaa-macos">
 
 ### macOS: avaa Pääte
 
+(Windowsissa voit ohittaa tämän vaiheen.)
+
 Avaa Dockista **Launchpad**, kirjoita hakukenttään `Pääte` (englanninkielisessä
 järjestelmässä `Terminal`) ja avaa **Pääte**. Linuxissa käytä jakelusi omaa
 päätettä, ks. [Miten saan Gitin auki](git.md#miten-saan-gitin-auki).
 
-Windowsissa voit ohittaa tämän vaiheen.
 
 </step>
 
@@ -125,9 +127,9 @@ Tämä tehdään kerran jokaisella tietokoneella, jolla teet harjoitustyötä.
 Tee kansio, jossa harjoitustyösi on tällä koneella, ja siirry sinne. Jatkossa
 kaikki git-komennot annetaan tässä kansiossa.
 
-> [!HUOMAUTUS]
-> Jos olet jo aiemmin tehnyt kurssia varten `ohj1`-kansion tai vastaavan
-> muualle, esimerkiksi demoja varten, siirry ensin sinne `cd`-komennolla ja
+> [!HUOMAUTUS] 
+> Jos olet jo aiemmin tehnyt kurssia varten `ohj1`-kansion (tai
+> muun itse nimeämäsi kansion) muualle, siirry ensin sinne `cd`-komennolla ja
 > tee harjoitustyön kansio vasta sitten. Git Bashissa Windowsin polku
 > kirjoitetaan kauttaviivoin, esimerkiksi `C:\Opiskelu\ohj1` on
 > `/c/Opiskelu/ohj1` (macOS: esimerkiksi `~/kurssit/ohj1`):
@@ -204,6 +206,8 @@ Kuva saa olla enintään 1920 × 1080 pikseliä ja mieluiten alle 1 Mt.
 
 ### Windows: avaa suunnitelma.md
 
+(macOS:ssä voit ohittaa tämän vaiheen.)
+
 Tuplaklikkaa tiedostonhallinnassa `suunnitelma.md`-tiedostoa. Windows ei
 tunnista .md-tiedostoja valmiiksi, joten se kysyy, millä tiedosto avataan:
 valitse **Muistio** ja paina **OK**. Jos koneellasi on jo Markdown-tiedostoille
@@ -216,13 +220,13 @@ siinä, ja sekin käy.
 > (Näytä-valikosta tai ikkunan oikeasta alakulmasta), jotta näet merkinnät ja
 > voit kirjoittaa niitä.
 
-macOS:ssä voit ohittaa tämän vaiheen.
-
 </step>
 
 <step scene="avaa-md-macos">
 
 ### macOS: avaa suunnitelma.md
+
+(Windowsissa voit ohittaa tämän vaiheen.)
 
 Tuplaklikkaa Finderissa `suunnitelma.md`-tiedostoa. Se aukeaa TextEditissä.
 
@@ -230,8 +234,6 @@ Tuplaklikkaa Finderissa `suunnitelma.md`-tiedostoa. Se aukeaa TextEditissä.
 > Ota TextEditissä pois **Muokkaa › Korvaukset › Älykkäät lainausmerkit**
 > ennen kirjoittamista. Muuten TextEdit muuttaa lainausmerkit kaareviksi
 > (“ ”), eikä kuvalinkki toimi.
-
-Windowsissa voit ohittaa tämän vaiheen.
 
 </step>
 
@@ -267,7 +269,7 @@ ensin tiedoston nimi ja sen perään lainausmerkeissä otsikko.
 
 <step scene="add-status">
 
-### Muutosten vieminen paikalliseen varastoon 1/2
+### Muutosten vieminen paikalliseen varastoon 1 / 2 
 
 `git add --all` merkitsee kaikki muutokset mukaan seuraavaan committiin.
 Tarkista heti perään `git status`-komennolla, että mukana on vain se, mitä
@@ -282,7 +284,7 @@ git status
 
 <step scene="commit">
 
-### Muutosten vieminen paikalliseen varastoon 2/2
+### Muutosten vieminen paikalliseen varastoon 2 / 2
 
 Commit tallentaa muutokset paikalliseen varastoon. Kirjoita lainausmerkkeihin
 viesti, josta näkee, mitä muutit.

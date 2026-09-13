@@ -252,7 +252,7 @@ def test_full_screen_puts_the_text_beside_the_scene(opened):
     assert "jyu-walk--full" in page.get_attribute(".jyu-walk", "class")
     assert page.inner_text(".jw-full") == "Sulje koko ruutu"
     page.wait_for_function("document.querySelector('.jw-stage').clientWidth > 700")
-    stage = page.locator(".jw-stage").bounding_box()
+    stage = page.locator(".jyu-walk .jw-stage").bounding_box()
     text = page.locator(".jyu-step--current").bounding_box()
     height = page.evaluate("innerHeight")
     assert page.locator(".jyu-walk").bounding_box()["width"] == page.evaluate("innerWidth")
@@ -378,3 +378,71 @@ def test_without_scenes_the_walkthrough_stays_text(opened):
     page, _ = opened(block="**/images/vaiheet.js", ready=False)
     assert page.locator(".jw-ui").count() == 0
     assert shown(page) == EVERYTHING
+
+
+# --- Yksittäinen animaatio (<animation>, walkthrough.js: enhanceAnimation) ----
+# Koesivun lopussa toisella välilehdellä listan kohdassa, varakuvana kuva.png.
+
+ANIMATION_TEXT = "document.querySelector('.koe-anim-teksti').textContent"
+
+
+def open_animation_tab(page):
+    """Toinen välilehti auki ja animaatio näkyviin."""
+    page.click(".tabbed-labels label:has-text('Toka')")
+    page.locator(".jyu-anim .jw-stage").scroll_into_view_if_needed()
+
+
+def test_animation_plays_when_it_comes_into_view(opened):
+    """Kohtaus tulee varasisällön tilalle ja odottaa alussaan, kun sen
+    välilehti on piilossa; välilehti auki ja näkyviin, niin se soi loppuun."""
+    page, errors = opened()
+    page.wait_for_selector(".jyu-anim--live", state="attached")
+    page.wait_for_timeout(600)
+    assert page.evaluate(ANIMATION_TEXT) == ""
+    open_animation_tab(page)
+    assert page.eval_on_selector(".jyu-anim > p", "p => p.getBoundingClientRect().height") <= 1
+    page.wait_for_function(f"{ANIMATION_TEXT} === 'Moi'")
+    page.wait_for_selector(".jyu-anim .jw-ring")
+    assert "jw-on" in page.get_attribute(".koe-anim-nappi", "class")
+    assert errors == []
+
+
+def test_animation_replay_starts_from_the_beginning(opened):
+    """Toista: kohtaus alkaa alusta ja soi uudelleen loppuun."""
+    page, errors = opened()
+    open_animation_tab(page)
+    page.wait_for_selector(".jyu-anim .jw-ring")
+    page.click(".jyu-anim .jw-replay")
+    assert page.evaluate(ANIMATION_TEXT) == ""
+    assert page.locator(".jyu-anim .jw-ring").count() == 0
+    page.wait_for_selector(".jyu-anim .jw-ring")
+    assert page.evaluate(ANIMATION_TEXT) == "Moi"
+    assert errors == []
+
+
+def test_reduced_motion_shows_the_finished_animation(opened):
+    """prefers-reduced-motion: kohtaus valmiina, kun se tulee näkyviin."""
+    page, errors = opened(reduced_motion="reduce")
+    open_animation_tab(page)
+    page.wait_for_selector(".jyu-anim .jw-ring")
+    assert page.evaluate(ANIMATION_TEXT) == "Moi"
+    assert "jw-on" in page.get_attribute(".koe-anim-nappi", "class")
+    assert errors == []
+
+
+def test_printed_animation_shows_its_content(opened):
+    """Tulosteessa kohtauksen tilalla on tagin sisältö."""
+    page, errors = opened()
+    page.wait_for_selector(".jyu-anim--live", state="attached")
+    page.emulate_media(media="print")
+    assert page.eval_on_selector(".jw-anim", "e => getComputedStyle(e).display") == "none"
+    assert page.eval_on_selector(".jyu-anim > p", "p => getComputedStyle(p).position") == "static"
+    assert errors == []
+
+
+def test_without_scenes_the_animation_shows_its_content(opened):
+    """Kohtaustiedosto ei latautunut: animaatiota ei tehdä, ja varakuva näkyy."""
+    page, _ = opened(block="**/images/vaiheet.js", ready=False)
+    page.click(".tabbed-labels label:has-text('Toka')")
+    assert page.locator(".jyu-anim--live").count() == 0
+    assert page.is_visible(".jyu-anim img")

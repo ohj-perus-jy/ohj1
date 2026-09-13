@@ -37,3 +37,25 @@ git status
 </step>
 
 </walkthrough>
+
+## Animaatio
+
+Yksittäinen animaatio toisella välilehdellä listan kohdassa.
+
+### [Eka](#tab/eka)
+
+Ensimmäinen välilehti.
+
+***
+
+### [Toka](#tab/toka)
+
+1. Kohta
+
+    <animation scenes="images/vaiheet.js" scene="animaatio">
+
+    ![Varakuva](../images/kuva.png)
+
+    </animation>
+
+***

@@ -264,7 +264,11 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   lukeminen: `<walkthrough audio="kansio">`, äänet tekee `puhe.py` (Azure
   Speech, `./run.sh puhe ../src/sivu.md`), ja `walkthrough_audio` jättää
   vanhasta tekstistä tehdyn äänen pois ja varoittaa; testit
-  `tests/test_puhe.py`. *Yleiskäyttöinen.*
+  `tests/test_puhe.py`. Yksittäinen animaatio tavalliselle sivulle:
+  `<animation scenes scene>` (`convert_animations` convert_tabsin jälkeen,
+  tagin sisältö varalla ilman skriptiä ja tulosteessa), git.md ja tyokalut.md
+  käyttävät git-ht-ohjeen `avaa-windows`-kohtausta; koesivun lopussa
+  välilehdellä, testit samoissa tiedostoissa. *Yleiskäyttöinen.*
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n

@@ -243,45 +243,80 @@
           </div>`,
     }),
 
-    /* Windows 11: tehtäväpalkin haku (1), hakupaneeli (2), "git bash" (3),
-     * tulokset (4), Git Bash (5), paneeli pois ja ikkuna auki (6). */
-    "avaa-windows": () => `
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0b3d91,#3a7bd5 60%,#9cc3ee)"></div>
-      <div style="position:absolute;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;justify-content:center;gap:12px;background:#1f1f1f">
-        <span style="display:grid;grid-template-columns:1fr 1fr;gap:2px;width:22px;height:22px"><i style="background:#4cc2ff"></i><i style="background:#4cc2ff"></i><i style="background:#4cc2ff"></i><i style="background:#4cc2ff"></i></span>
-        <span style="display:flex;align-items:center;width:180px;height:30px;padding:0 12px;border-radius:15px;background:#2d2d2d;color:#bbb;font-size:12px" data-click data-order="1">⌕&nbsp; Haku</span>
-        <span style="width:22px;height:18px;border-radius:3px;background:#f2c14e"></span>
-        <span style="width:22px;height:22px;border-radius:50%;background:#2fa0e8"></span>
-      </div>
-      <div style="position:absolute;left:130px;bottom:52px;width:540px;height:330px;padding:14px;border-radius:8px;background:#2b2b2b;box-shadow:0 12px 30px rgb(0 0 0 / 45%);color:#eee" data-show data-order="2" data-hide="6">
-        <div class="jw-input" style="border-color:#5a5a5a;background:#1f1f1f;color:#eee">⌕&nbsp; <span data-type data-order="3">git bash</span></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
-          <div data-show data-order="4">
-            <div style="margin-bottom:6px;color:#aaa;font-size:12px">Paras vastine</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:6px;background:#3b3b3b" data-click data-order="5">
-              <span style="width:32px;height:32px;border-radius:6px;background:#111 radial-gradient(circle,#f05133 35%,transparent 36%)"></span>
-              <div><b>Git Bash</b><div style="color:#aaa;font-size:12px">Sovellus</div></div>
+    /* Windows 11, tumma teema: tehtäväpalkin haku (1), hakupaneeli (2),
+     * "git bash" (3), tulokset (4), Git Bash (5), paneeli pois ja ikkuna auki
+     * (6). Hakupaneeli on kuvakaappauksen src/images/gitbash-startmenu.png
+     * mukainen suomennettuna (walkthrough.css: .jw-w11). Sama kohtaus on
+     * animaationa myös sivuilla git.md ja tyokalut.md (<animation>). */
+    "avaa-windows": () => {
+      const icon = (size, paths) => `<svg viewBox="0 0 16 16" width="${size}" height="${size}" fill="none"`
+        + ' stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"'
+        + ` aria-hidden="true">${paths}</svg>`;
+      const magnifier = (size) => icon(size, '<circle cx="6.5" cy="6.5" r="4.5"/><path d="m10 10 4 4"/>');
+      const pin = '<path d="M9.8 2 14 6.2l-2.4.9-2.8 2.8.3 2.6-1 1-4.6-4.6 1-1 2.6.3 2.8-2.8zM5.8 10.2 2 14"/>';
+      /* Git for Windowsin kuvake: neljä pyöristettyä neliötä vinossa ja
+       * niiden päällä haarautuva viiva kolmella solmulla. */
+      const gitLogo = (size) => `<svg viewBox="0 0 44 44" width="${size}" height="${size}" aria-hidden="true">`
+        + '<g transform="rotate(45 22 22)">'
+        + '<rect x="6.45" y="6.45" width="14.55" height="14.55" rx="3" fill="#f47a7a"/>'
+        + '<rect x="23" y="6.45" width="14.55" height="14.55" rx="3" fill="#7ccf5c"/>'
+        + '<rect x="23" y="23" width="14.55" height="14.55" rx="3" fill="#fbdc7a"/>'
+        + '<rect x="6.45" y="23" width="14.55" height="14.55" rx="3" fill="#78acf5"/></g>'
+        + '<g fill="#262626" stroke="#262626" stroke-width="1.7">'
+        + '<path d="M13.8 8.2 22.6 12.4 21.4 31.5M22.6 12.4l8.7 9.8" fill="none"/>'
+        + '<circle cx="22.6" cy="12.4" r="2.6"/><circle cx="31.3" cy="22.2" r="2.6"/>'
+        + '<circle cx="21.4" cy="31.5" r="2.6"/></g></svg>';
+      const chips = ["Kaikki", "Sovellukset", "Tiedostot", "Verkko", "Asetukset", "Kansiot"];
+      const suggestions = ["download", "commands", "windows", "windows 11"];
+      const actions = [
+        ['<path d="M9.5 2.5h4v4M13.5 2.5 8 8M12 9.5v3a1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3"/>', "Avaa"],
+        ['<rect x="2" y="2.5" width="9" height="8" rx="1"/><path d="M11.5 8.5 14 9.4v2.1c0 1.5-1 2.5-2.5 3-1.5-.5-2.5-1.5-2.5-3V9.4z" fill="currentColor"/>',
+          "Suorita järjestelmänvalvojana"],
+        ['<path d="M2 4.5a1 1 0 0 1 1-1h3.2l1.5 1.5H13a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>', "Avaa tiedoston sijainti"],
+        [pin, "Kiinnitä aloitusvalikkoon"],
+        [pin, "Kiinnitä tehtäväpalkkiin"],
+        ['<path d="M2.5 4h11M6 4V2.5h4V4M4 4l.7 9a1 1 0 0 0 1 .9h4.6a1 1 0 0 0 1-.9L12 4M6.8 6.5v5M9.2 6.5v5"/>', "Poista asennus"],
+      ];
+
+      return `<div class="jw-w11">
+        <div class="jw-w11-taskbar">
+          <span class="jw-w11-start"><b><i></i><i></i><i></i><i></i></b></span>
+          <span class="jw-w11-search" data-click data-order="1">${magnifier(14)}Haku</span>
+          <span class="jw-w11-run"><i style="width:22px;height:17px;border-radius:2px 2px 3px 3px;background:linear-gradient(#ffd66b,#eeaa22)"></i></span>
+          <span class="jw-w11-run"><i style="width:22px;height:22px;border-radius:50%;background:conic-gradient(from 200deg,#1b8fe0,#39c3f2,#52d37e,#1b8fe0)"></i></span>
+          <span><i style="width:18px;height:22px;border-radius:3px;background:linear-gradient(#6cc0ff,#2b7fd8)"></i></span>
+          <span><i style="display:grid;place-items:center;width:22px;height:18px;border-radius:3px;background:#333;box-shadow:inset 0 0 0 1px #5a5a5a;color:#ddd;font:9px/1 var(--jw-mono)">&gt;_</i></span>
+          <span class="jw-w11-run" data-show data-order="6">${gitLogo(24)}</span>
+        </div>
+        <div class="jw-w11-panel" data-show data-order="2" data-hide="6">
+          <div class="jw-w11-query">${magnifier(15)}<span data-type data-order="3">git bash</span></div>
+          <div class="jw-w11-chips"><span class="jw-w11-back">←</span>${chips.map((chip, i) =>
+            `<span${i ? "" : ' class="jw-w11-on"'}>${chip}</span>`).join("")}<span class="jw-w11-back">▶</span></div>
+          <div class="jw-w11-results" data-show data-order="4">
+            <div>
+              <div class="jw-w11-heading">Paras vastine</div>
+              <div class="jw-w11-best" data-click data-order="5">${gitLogo(26)}<div>Git Bash<small>Sovellus</small></div></div>
+              <div class="jw-w11-heading">Hae verkosta</div>
+              <div class="jw-w11-row">${magnifier(12)}<span>git bash <small>– Näytä lisää hakutuloksia</small></span>›</div>
+              ${suggestions.map((rest) =>
+                `<div class="jw-w11-row">${magnifier(12)}<span>git bash <b>${rest}</b></span>›</div>`).join("")}
             </div>
-            <div style="margin:14px 0 6px;color:#aaa;font-size:12px">Hae verkosta</div>
-            <div style="padding:6px 10px;font-size:12px">⌕&nbsp; git bash – Näytä verkkotulokset</div>
-          </div>
-          <div style="padding-left:14px;border-left:1px solid #3b3b3b;text-align:center" data-show data-order="4">
-            <span style="display:inline-block;width:56px;height:56px;margin:10px 0 6px;border-radius:10px;background:#111 radial-gradient(circle,#f05133 35%,transparent 36%)"></span>
-            <div style="font-size:16px;font-weight:600">Git Bash</div>
-            <div style="margin-bottom:12px;color:#aaa;font-size:12px">Sovellus</div>
-            <div style="padding:6px;border-top:1px solid #3b3b3b;text-align:left;font-size:12px">Avaa</div>
-            <div style="padding:6px;text-align:left;font-size:12px">Suorita järjestelmänvalvojana</div>
-            <div style="padding:6px;text-align:left;font-size:12px">Avaa tiedostosijainti</div>
+            <div class="jw-w11-card">
+              ${gitLogo(52)}<b>Git Bash</b><small>Sovellus</small>
+              <div class="jw-w11-actions">${actions.map(([paths, label]) =>
+                `<div>${icon(14, paths)}${label}</div>`).join("")}</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="jw-win jw-win--terminal" style="top:40px;left:100px;width:600px;height:360px" data-show data-order="6">
-        <div class="jw-titlebar"><span class="jw-dots"><i></i><i></i><i></i></span><span class="jw-title">MINGW64:/c/Users/olli</span></div>
-        <div class="jw-terminal" style="justify-content:flex-start" data-ring>
-          <div><span class="jw-t-green">olli@kannettava</span> <span class="jw-t-magenta">MINGW64</span> <span class="jw-t-yellow">~</span></div>
-          <div>$ <span class="jw-caret"></span></div>
+        <div class="jw-win jw-win--terminal" style="top:40px;left:100px;width:600px;height:360px" data-show data-order="6">
+          <div class="jw-titlebar"><span class="jw-dots"><i></i><i></i><i></i></span><span class="jw-title">MINGW64:/c/Users/olli</span></div>
+          <div class="jw-terminal" style="justify-content:flex-start" data-ring>
+            <div><span class="jw-t-green">olli@kannettava</span> <span class="jw-t-magenta">MINGW64</span> <span class="jw-t-yellow">~</span></div>
+            <div>$ <span class="jw-caret"></span></div>
+          </div>
         </div>
-      </div>`,
+      </div>`;
+    },
 
     /* macOS: Dockin Launchpad (1), Launchpad (2), "Pääte" (3), tulos (4),
      * Pääte (5), Launchpad pois ja ikkuna auki (6). */

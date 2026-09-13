@@ -24,5 +24,12 @@
         + '<div style="height:40px;overflow:hidden"><div class="koe-vieritys" data-scroll="40" data-order="7">'
         + "<div style=\"height:40px\">Yksi</div><div style=\"height:40px\">Kaksi</div></div></div>",
     }),
+
+    /* Yksittäinen animaatio (<animation>) samalla sivulla. */
+    animaatio: () => ui.window({
+      title: "Animaatio",
+      body: '<p class="koe-anim-teksti" data-type>Moi</p>'
+        + '<p><span class="jw-btn koe-anim-nappi" data-click data-on="jw-on" data-ring>OK</span></p>',
+    }),
   };
 });

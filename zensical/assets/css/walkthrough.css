@@ -11,8 +11,6 @@
 /* --- Esityksen kehys ------------------------------------------------------ */
 
 .jyu-walk--live {
-  --jw-mark: #e8a317;
-  --jw-mark-soft: rgb(232 163 23 / 28%);
   margin: 1.5em 0;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 0.2rem;
@@ -509,13 +507,303 @@
   }
 }
 
+/* --- Yksittäinen animaatio (walkthrough.js: enhanceAnimation) ------------ */
+
+/* Kohtaus ja sen alla Toista-nappi. Tagin sisältö (kuvakaappaukset) jää
+ * sivulle ruudunlukijaa varten mutta piiloutuu näytöltä; tulosteessa se on
+ * kohtauksen tilalla. */
+.jyu-anim--live {
+  position: relative;
+  margin: 1em 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+}
+
+@media screen {
+  .jyu-anim--live > :not(.jw-anim) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.jw-anim-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2rem 0.4rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.jw-anim-bar button {
+  padding: 0.35rem 0.8rem;
+  border: 0;
+  background: none;
+  color: var(--md-default-fg-color--light);
+  font: 0.7rem var(--md-text-font-family);
+  cursor: pointer;
+}
+
+.jw-anim-bar button:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+@media print {
+  .jw-anim {
+    display: none;
+  }
+
+  .jyu-anim--live {
+    border: 0;
+  }
+}
+
 /* --- Kohtausten ikkunat (kiinteät värit) --------------------------------- */
 
+/* --jw-mark: korostuskehyksen ja klikkauksen merkin väri (.jw-ring, .jw-pulse). */
 .jw-canvas {
+  --jw-mark: #e8a317;
+  --jw-mark-soft: rgb(232 163 23 / 28%);
   --jw-sans: var(--md-text-font-family, "Source Sans 3"), "Segoe UI", Helvetica, Arial, sans-serif;
   --jw-mono: var(--md-code-font-family, "Roboto Mono"), Consolas, monospace;
   color: #1f1e24;
   font: 13px/1.45 var(--jw-sans);
+}
+
+/* Windows 11 tummalla teemalla: työpöytä, tehtäväpalkki ja haku
+ * (git-ht-ohje/scenes.js: avaa-windows). Hakupaneeli kuvakaappauksen
+ * mittasuhteissa noin 0,6-kertaisena. */
+
+.jw-w11 {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(130% 100% at 80% 90%, #3b8cff, #0e4fd8 30%, #062a7a 60%, #030b26);
+  color: #fff;
+}
+
+.jw-w11-taskbar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 44px;
+  border-top: 1px solid #333;
+  background: #1f1f1f;
+}
+
+.jw-w11-taskbar > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+}
+
+.jw-w11-taskbar i {
+  display: block;
+}
+
+.jw-w11-start b {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.jw-w11-start i {
+  border-radius: 1px;
+  background: linear-gradient(135deg, #1e9bf0, #78d6ff);
+}
+
+.jw-w11-taskbar > .jw-w11-search {
+  gap: 8px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 170px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #3a3a3a;
+  border-radius: 16px;
+  background: #2b2b2b;
+  color: #cfcfcf;
+  font-size: 12px;
+}
+
+.jw-w11-search svg,
+.jw-w11-query svg {
+  color: #4cc2ff;
+}
+
+/* Käynnissä olevan sovelluksen merkki kuvakkeen alla. */
+.jw-w11-run::after {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 6px;
+  height: 3px;
+  margin-left: -3px;
+  border-radius: 2px;
+  background: #9d9d9d;
+  content: "";
+}
+
+.jw-w11-panel {
+  position: absolute;
+  bottom: 52px;
+  left: 90px;
+  box-sizing: border-box;
+  width: 620px;
+  padding: 14px 16px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #2a2a2c, #202022 55%, #23243a);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 50%);
+  font-size: 12px;
+}
+
+.jw-w11-query {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid #3d3d3d;
+  border-radius: 17px;
+  background: #1b1b1b;
+  font-size: 14px;
+}
+
+.jw-w11-chips {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  white-space: nowrap;
+}
+
+.jw-w11-chips span {
+  padding: 2px 12px;
+  border: 1px solid #3d3d3d;
+  border-radius: 13px;
+  background: #2b2b2b;
+}
+
+.jw-w11-chips .jw-w11-on {
+  border-color: #4cc2ff;
+  background: #4cc2ff;
+  color: #000;
+}
+
+.jw-w11-chips .jw-w11-back {
+  padding: 2px 6px;
+  border: 0;
+  background: none;
+}
+
+.jw-w11-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.jw-w11-heading {
+  margin: 0 0 6px 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.jw-w11-best {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: #3a3a3c;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+/* Valitun tuloksen korostusviiva vasemmassa reunassa. */
+.jw-w11-best::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3px;
+  height: 16px;
+  margin-top: -8px;
+  border-radius: 2px;
+  background: #4cc2ff;
+  content: "";
+}
+
+.jw-w11 small {
+  display: block;
+  color: #c5c5c5;
+  font-size: 11px;
+}
+
+.jw-w11-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 26px;
+  padding: 0 6px 0 8px;
+}
+
+.jw-w11-row span {
+  flex: 1;
+}
+
+.jw-w11-row small {
+  display: inline;
+}
+
+.jw-w11-card {
+  padding: 14px 10px 6px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 4%);
+  text-align: center;
+}
+
+.jw-w11-card > svg {
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.jw-w11-card > b {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.jw-w11-actions {
+  margin-top: 10px;
+  padding-top: 6px;
+  border-top: 1px solid #3d3d3d;
+  text-align: left;
+}
+
+.jw-w11-actions div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 24px;
+  padding-left: 8px;
 }
 
 .jw-win {
