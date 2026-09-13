@@ -1,27 +1,39 @@
 # Harjoitustyö
 
-Tällä sivulla kerrotaan [harjoitustyön aikataulusta](#aikataulu), kuvataan [harjoitustyön vaiheet](#vaiheiden-kuvaukset), kerrotaan [harjoitustyöstä tarkistettavat asiat](#vaatimukset) ja ehdotetaan [aiheita muuhun kuin peliin](#aiheita).
+Tällä sivulla kerrotaan [harjoitustyön vaiheistuksesta](#aikataulu) sekä
+kuvataan työn [vaatimukset](./harjoitustyo/vaatimukset.md).
 
-## Mikä on harjoitustyö
+
+Tällä sivulla kuvataan seuraavat asiat: 
+
+<!-- no toc -->
+ - [Mikä on harjoitustyö](#mikä-on-harjoitustyö)
+ - [Aikataulu](#aikataulu)
+ - [Vaiheiden tarkistuslistat](#vaiheiden-tarkistuslistat)
+ - [Aihe](#aihe)
+   - [Peli](#peli)
+   - [Komentoriviohjelma](#komentoriviohjelma)
+ - [Vaatimukset](#vaatimukset)
+ - [Usein kysytyt kysymykset ja muut vinkit {#ukk}](#usein-kysytyt-kysymykset-ja-muut-vinkit-ukk)
+
+## Mikä on harjoitustyö?
 
 Ohjelmointi 1 -opintojakson harjoitus työ
 
  - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty. Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada arvosanan.
- - tehdään yksin tai parityönä. Mikäli luontaista paria ei löydy, ei sitä kannata ehkä etsiäkään väkisin. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
- - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä. Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
- - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli). Katso [valmiit aihe-ehdotukset](#aiheita). Muita kieliä ei hyväksytä.
+ - tehdään yksin tai parityönä. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
+ - on Jypeli-työkaluilla tehty
+   peli taiC#-kielellä tehty komentoriviohjelma. Muita kieliä tai työkaluja ei hyväksytä.
 
 ## Vaiheet ja aikataulu {#aikataulu}
 
 Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50 % valmis) ja Vaihe 3 (työ 100 % valmis). Vaiheiden tarkemmat kuvaukset löytyvät alta.
 
-Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle joko etä- tai
+Kukin vaihe palautetaan esittelemällä se ohjaajalle joko etä- tai
 lähiohjauksessa. Sähköpostin kautta palauttaminen ilman esittelyä on mahdollista
 vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 [etusivu](./index.md#tuki-ja-palaute)), sovi ohjausaika sähköpostitse
 [ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
-
-## Aikataulu ja takarajat
 
 <!--
 | Tutkinto-opiskelijat                                                                                                                                       | Lukiolinjat                                                                       | Avoin yliopisto                                                                                                                                                                                                                              |
@@ -84,7 +96,7 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
    </tr>
 </table>
 
-## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat {#vaiheiden-kuvaukset}
+## Harjoitustyön vaiheiden tarkistuslistat {#vaiheiden-tarkistuslistat}
 
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
@@ -93,7 +105,12 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
  1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
- 1. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Jos teet
+    pelin, katso [suunnitelman
+    vaatimukset](#suunnitelma) ja
+    [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+    Komentoriviohjelman tapauksessa suunnitelmaksi riittää aiheen valinta ja
+    kuvaus ohjelman toiminnasta.
  1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
  1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
@@ -114,7 +131,7 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ennen kuin
     menet tenttiin**
- 1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
+ 1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#vaatimukset)
  1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  1. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
@@ -123,14 +140,22 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
 
 Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
-***
+## Aihe
 
-## Vaatimukset {#vaatimukset}
+Voit valita aiheeksi [pelin](#peli) tai
+[komentoriviohjelman](#komentoriviohjelma).
 
-### Suunnitelma
+Valitsitpa minkä aiheen tahansa, koodin tulee noudattaa [tyylioppaan ohjeita](../tyyliopas.md).
+
+### Peli
+
+Peli on Jypeli-työkaluilla tehty 2D-peli, jossa voi olla mukana fysiikkaa. Voit
+käyttää pohjana Jypelin mukana tulevaa Fysiikkapelin tai
+Tasohyppelypelin pohjaa. 
+[Katso inspiraatiota vanhoista harkkatöistä](https://youtu.be/Coknsg_ClR4). 
 
 Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan hyväksymä.
-Suunnitelmat tallennetaan GitLabiin, ks. yläpuolelta vaiheen 1 tarkistuslista.
+Suunnitelmat tallennetaan GitLabiin, ks. [vaiheen 1 tarkistuslista](../harjoitustyo.md#vaiheiden-kuvaukset).
 
 Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitustyöhön):
 
@@ -145,87 +170,25 @@ Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitust
   8. Pelissä olevat oliot, niiden toiminnot ja missä suhteessa ne ovat toisiinsa
   9. Toteutuksen suunnitelma: mitä tekisin ja missä järjestyksessä? Millä aikataululla?
 
-### Toiminnallisuus
-
 Pelissä pitää *tapahtua jotakin*, eli ruudulla pitää tapahtua jotain järkevää. Käyttäjän tulee voida osallistua peliin interaktiivisesti esimerkiksi hiiren ja/tai näppäimistön välityksellä.
-
-### Koodi
 
 Työssä on oltava vähintään muutama aliohjelma Jypelin valmiiden aliohjelmien (`Main`, `Begin`) lisäksi.
 
 Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa-alueet".
 
-## Paritöistä
-
-Kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta. Ks. [Git-ohjeet](./git.md#git-ja-ryhmätyöskentely).
+**Jos teet pelin parityönä:** Kumpikin käyttää samaa etävaraston osoitetta. Ks. [Git-ohjeet](../git.md#git-ja-ryhmätyöskentely).
 
 Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
 
 Työn on oltava vaativampi kuin yksin tehdyn työn, ja tässä työmäärä on tärkein mittari. Ohjaajat käyvät työn läpi tarkastustilaisuudessa ryhmäläisten kanssa. Yksittäistä pelin ominaisuutta joka kaikilta paritöiltä vaadittaisiin ei yleisellä tasolla voi antaa. Näiden kriteerien tarkoitus ei ole vaikeuttaa tekemistä vaan ehkäistä ennalta vapaamatkustamista.
 
-## Tarkastettavat osa-alueet {#htosat}
+### Komentoriviohjelma
 
-Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan harjoitustyön esittelemisen yhteydessä.
+Alla on seitsemän aihetta komentoriviohjelmaksi. Jokaisesta aiheesta on kuvattu idea, aineiston muoto, kohdat joissa [tarkastettavat osa-alueet](#vaatimukset) syntyvät luontevasti, sekä laajennus parityölle. Aiheita saa muokata ja yhdistellä, ja oman aiheen voi ehdottaa. Suunnitelma hyväksytetään ohjaajalla aina. 
 
- 1. **Koodin tyyli** on [kurssin tyylioppaan mukaista](tyyliopas.md).
- 
- 2. **Näkyvyys**: Aliohjelmien ja attribuuttien näkyvyys tulee olla määritelty
-(`public`, `private`). Julkisia staattisia (`public static`) muuttujia ei saa olla. 
- 3. **Ei turhia peliluokan attribuutteja**. 
+Useimmille aiheille on valmis pohjaprojekti, jossa ovat valmiina aineisto ja mahdollinen valmis luokka. Pohjat löytyvät [ht-pohjat-varastosta](https://gitlab.jyu.fi/tie/ohj1/ht-pohjat). Esimerkkiaineistot ovat keksittyjä. Tiedostoissa erotin on puolipiste, desimaalierotin piste, ja ensimmäinen rivi on otsikkorivi.
 
-    Jos joitain koko peliluokkaan näkyviä arvoja tarvitaan, pyritään käyttämään vakioita (`const`). Kuvat, äänet, animaatiot ja muut raskaat resurssit on kuitenkin hyvä pitää attribuutteina, jolloin ne ladataan vain kerran pelin aikana. Esim. kuvien olioviitteet voi kiinnittää muuttumattomaksi `static readonly` määreellä.
-
- 4. **Toimii**: Ohjelma toimii, ei kaadu ja päättyy asiallisesti. 
-
-    Pelissä pitää tapahtua jotakin järkevää, johon käyttäjä voi osallistua interaktiivisesti. Pelissä pitää myös olla tavoite, haaste tai tarina.
-
- 5. **Ei toistoa**, joka olisi voitu tehdä silmukoilla tai aliohjelmilla. 
-
-    Myöskään aliohjelmien välillä ei saa olla toistoa: esimerkiksi `LuoVihu1` ja `LuoVihu2`, joissa olisi lähes sama koodi kahteen kertaan.
-
- 6. **Taulukko**: Käytetään taulukkoa tai listaa. 
- 
-    Tietorakenteella täytyy olla jokin tarkoitus siten, että sinne tallennetaan useita arvoja, joita todella käytetään pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä. [Esimerkkejä.](#taulukko-silmukka-funktio) 
-
- 7. **Silmukka**: Ainakin yksi silmukka. 
- 
-    Silmukalla täytyy olla jokin tarkoitus siten, että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. [Esimerkkejä.](#taulukko-silmukka-funktio)
-
- 8. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
-
-      Et siis saa tehdä koodia kuten 
-      ```csharp
-      if (y < 18)
-      ```
-   
-      jossa 18 on hyvin todennäköisesti turha literaali. Sen tilalle tulee laittaa muuttuja tai vakio, kuten
-      ```csharp
-      int pisteraja = 18
-      ``` 
-      Vakiot ilmaistaan `const`-määreellä. 
- 9. **`}` + 2 tyhjää**: Aliohjelmien loppusulun `}` jälkeen tasan kaksi tyhjää riviä.
- 10. **Dokumentaatio**: Luokat, aliohjelmat ja attribuutit tulee dokumentoida.
-
-      Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne sen tekevät. Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`). Myös attribuutit dokumentoidaan `summary`-tagein. 
-11. **Funktio**: Pelissä on funktio.
-
-      Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#taulukko-silmukka-funktio) 
- 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#jetbrains-rider) 
- 13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
-
-## Aiheita muuhun kuin peliin {#aiheita}
-
-Harjoitustyön ei tarvitse olla peli. Alla on kahdeksan aihetta komentoriviohjelmaksi. Jokaisesta on kuvattu idea, aineiston muoto, kohdat joissa [tarkastettavat osa-alueet](#htosat) syntyvät luontevasti, sekä laajennus parityölle. Aiheita saa muokata ja yhdistellä, ja oman aiheen voi ehdottaa. Suunnitelma hyväksytetään ohjaajalla aina.
-
-Ei-pelissä vaatimukset tulkitaan näin:
-
- - **Interaktiivisuus**: ohjelma reagoi käyttäjän syötteeseen. Helpoin tapa on valikko, joka pyörii silmukassa, kunnes käyttäjä lopettaa. Ohjelma voi myös lukea syötteensä komentoriviargumenteista (`Main`-aliohjelman `args`-taulukko) ja tulostaa tuloksen.
- - **Tavoite, haaste tai tarina**: ohjelmalla on selkeä käyttötarkoitus, ja se tuottaa käyttäjälle hyödyllisen tuloksen.
- - **Testit**: laskenta tehdään funktioissa, jotka saavat syötteen parametrina ja palauttavat tuloksen. Ne testataan [ComTestillä](./osa4/comtest.md). Konsolitulostusta ja tiedoston lukemista ei tarvitse testata.
-
-Esimerkkiaineistot ovat keksittyjä. Tiedostoissa erotin on puolipiste, desimaalierotin piste, ja ensimmäinen rivi on otsikkorivi.
-
-### Tiedoston lukeminen
+<details closed><summary>Tiedoston lukeminen</summary>
 
 Tiedoston lukemista ei käsitellä kurssimateriaalissa, mutta seuraava pätkä riittää kaikkiin tämän sivun aiheisiin. `File.ReadAllLines` lukee tiedoston rivit merkkijonotaulukkoon, ja `Split` pilkkoo rivin kenttiin.
 
@@ -245,7 +208,7 @@ for (int i = 1; i < rivit.Length; i++) // rivi 0 on otsikkorivi
 }
 ```
 
-`CultureInfo.InvariantCulture` tarvitaan, koska aineistoissa desimaalierotin on piste ja suomenkielinen Windows odottaisi pilkkua. Kopioi aineisto projektin kansioon ja lisää projektitiedostoon (`.csproj`) seuraava, jolloin tiedosto löytyy ajettaessa:
+`CultureInfo.InvariantCulture` tarvitaan, koska aineistoissa desimaalierotin on piste ja suomenkielinen Windows odottaisi pilkkua. Pohjaprojektin projektitiedostossa (`.csproj`) on seuraava määritys, joka kopioi aineiston ajokansioon, jolloin tiedosto löytyy ajettaessa. Jos lisäät projektiin oman tiedoston, lisää sille samanlainen rivi.
 
 ```xml
 <ItemGroup>
@@ -253,69 +216,459 @@ for (int i = 1; i < rivit.Length; i++) // rivi 0 on otsikkorivi
 </ItemGroup>
 ```
 
-### Kulutusseuranta
+Jos tiedostoa ei ole, `File.ReadAllLines` kaataa ohjelman. Tarkista siksi ensin `File.Exists("kulut.csv")`, joka palauttaa `true`, jos tiedosto on olemassa.
 
-Ohjelma pitää kirjaa menoista. Käyttäjä lisää valikosta menon (päivä, luokka, summa, kuvaus) tai lukee menot tiedostosta. Ohjelma laskee luokkakohtaiset summat, suurimman yksittäisen menon ja kuukauden kokonaismenot sekä tulostaa yhteenvedon.
+</details>
 
- - **Aineisto**: [kulut.csv](harjoitustyo-aineistot/kulut.csv), rivit muotoa `2025-09-04;Ruoka;23.50;Kauppa`.
- - **Vaatimukset**: menot listaan (oma luokka `Meno` tai rinnakkaiset listat); silmukka laskee summat; funktiot esim. `LuokanSumma(menot, luokka)`, `SuurinMeno(menot)` ja `KuukaudenSumma(menot, "2025-09")`. Funktiot ovat testattavissa ilman tiedostoa.
- - **Laajennus parityölle**: luokkakohtaiset budjettirajat ja varoitus ylityksestä, kuukausien vertailu ja menojen tallennus takaisin tiedostoon.
+<details closed><summary>Valmiit luokat </summary>
 
-### Polttoainepäiväkirja
+Kun aineiston rivillä on useita tietoja, rivi tallennetaan valmiin luokan olioksi. Luokat ovat `Meno` (Kulutusseuranta), `Tankkaus` (Polttoainepäiväkirja), `Lenkki` (Juoksupäiväkirja) ja `Ehdokas` (Vaalitulos), ja ne ovat valmiina aiheen pohjaprojektissa. Luokkaa käytetään kuten Jypelin valmiita luokkia: olio luodaan `new`-lauseella, ja sen tietoihin viitataan pisteellä. Tietoja ei voi muuttaa olion luomisen jälkeen.
 
-Ohjelma laskee auton polttoaineenkulutuksen tankkauksista. Kulutus kahden tankkauksen välillä on litrat jaettuna ajetuilla kilometreillä kertaa sata. Ohjelma näyttää keskikulutuksen, kilometrikustannuksen, kalleimman tankkauksen ja kulutuksen kehityksen. Käyttäjä lisää tankkauksen tai pyytää yhteenvedon.
+```csharp
+List<Meno> menot = new List<Meno>();
+// tiedoston lukusilmukassa (ks. yllä)
+menot.Add(new Meno(osat[0], luokka, summa, osat[3]));
 
- - **Aineisto**: [tankkaukset.csv](harjoitustyo-aineistot/tankkaukset.csv), rivit muotoa `2025-03-12;154867;45.19;81.75` (päivä, mittarilukema, litrat, hinta euroina).
- - **Vaatimukset**: tankkaukset listaan; silmukka käy läpi peräkkäiset tankkausparit; funktiot `Kulutus(km, litrat)`, `Keskikulutus(tankkaukset)` ja `KustannusPerKm(tankkaukset)`. Ensimmäiselle tankkaukselle ei voi laskea kulutusta, mikä on hyvä testattava erikoistapaus.
- - **Laajennus parityölle**: useampi auto samassa tiedostossa, litrahinnan vaihtelun analyysi ja konsolipylväskaavio kulutuksen kehityksestä.
+// myöhemmin
+foreach (Meno meno in menot)
+{
+    Console.WriteLine(meno.Luokka + ": " + meno.Summa);
+}
+```
 
-### Tekstitilastot
+ComTest-testeissä olion voi luoda suoraan, esim. `new Meno("2025-09-04", "Ruoka", 23.50, "Kauppa")`.
 
-Ohjelma lukee tekstitiedoston ja laskee siitä tilastoja: sanojen ja lauseiden määrä, yleisimmät sanat, pisin sana, keskimääräinen sanan pituus ja kirjainten esiintymistiheydet. Käyttäjä valitsee tiedoston ja tilaston valikosta.
+</details>
 
- - **Aineisto**: [nayteteksti.txt](harjoitustyo-aineistot/nayteteksti.txt) kehityksen ajaksi. Lopulliseen ajoon sopii klassikkoteos, esim. Aleksis Kiven teokset [Project Gutenbergista](https://www.gutenberg.org/ebooks/search/?query=aleksis+kivi).
- - **Vaatimukset**: sanat taulukkoon (`Split`) ja kirjainmäärät taulukkoon, jossa on yksi alkio kutakin aakkosta kohti; silmukka; funktiot `PisinSana(sanat)`, `YleisinSana(sanat)` ja `KirjainMaarat(teksti)`. Välimerkkien poisto ja pieniksi kirjaimiksi muuttaminen kannattaa tehdä omassa funktiossa `Siivoa(sana)`, jota on helppo testata.
- - **Laajennus parityölle**: kahden tekstin vertailu, hukkasanalista (ja, on, ei, ...) jonka sanat ohitetaan, sekä sanojen pituusjakauma konsolihistogrammina.
+<details closed id="kulutusseuranta">
+<summary><strong>Aihe 1: Kulutusseuranta</strong> – menot tiedostosta, yhteenveto luokittain ja kuukausittain</summary>
 
-### Säädata
+Ohjelma lukee menot tiedostosta ja tulostaa niistä yhteenvedon. Sen jälkeen
+ohjelma kysyy silmukassa kuukautta ja tulostaa yhteenvedon kuukauden menoista.
+Ohjelma päättyy, kunnes käyttäjä antaa tyhjän rivin.
 
-Ohjelma lukee päivittäiset lämpötilat ja laskee kuukausikeskiarvot, kylmimmän ja lämpimimmän päivän, pisimmän hellejakson (peräkkäiset päivät, joina lämpötila ylittää rajan) ja ensimmäisen pakkaspäivän. Käyttäjä antaa rajat ja valitsee tarkasteltavan kuukauden.
+ - **Aineisto**: `kulut.csv` sisältää 86 menoriviä syys–marraskuulta 2025. Rivit ovat muotoa `2025-09-04;Ruoka;23.50;Kauppa`: päivä, luokka, summa euroina ja kuvaus.
+ - **Tietorakenne**: menot listaan `List<Meno>` valmiin luokan `Meno` olioina.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Euromäärät tulostetaan kahdella desimaalilla ja yksikkönä `EUR`, koska €-merkki ei näy Windowsin konsolissa ilman lisäasetuksia.
 
- - **Aineisto**: [lampotilat.csv](harjoitustyo-aineistot/lampotilat.csv), rivit muotoa `2025-08-03;28.3`, ajalta 1.8.–31.10.2025. Oikeaa dataa saa [Ilmatieteen laitoksen havaintojen latauspalvelusta](https://www.ilmatieteenlaitos.fi/havaintojen-lataus).
- - **Vaatimukset**: lämpötilat `double`-taulukkoon ja päivämäärät omaan taulukkoon; silmukka; funktiot `Keskiarvo(lampotilat)`, `PisinJakso(lampotilat, raja)` ja `EnsimmainenAlle(lampotilat, raja)`. Jaksofunktio on hyvä testikohde: tyhjä taulukko, ei yhtään päivää yli rajan, jakso taulukon lopussa.
- - **Laajennus parityölle**: kahden vuoden vertailu, liukuva keskiarvo ja kuukausikeskiarvot konsolipylväskaaviona.
+Nauhoitus näyttää, miten ohjelma toimii:
 
-### Juoksupäiväkirja
+<asciinema src="harjoitustyo/images/kulutusseuranta.cast" rows="21" poster="npt:10.9" controls></asciinema>
 
-Ohjelma lukee juoksulenkit (päivä, matka, aika) ja laskee jokaiselle lenkille vauhdin minuutteina kilometriä kohti, viikoittaiset ja kuukausittaiset kilometrit, pisimmän lenkin ja parhaan vauhdin. Käyttäjä lisää lenkin tai pyytää yhteenvedon.
+ - Luokat tulostetaan aakkosjärjestyksessä. Jos suurimpia menoja on useita, tulostetaan niistä ensimmäinen.
+ - Tiedoston otsikkorivi ja rivit, joilla ei ole neljää kenttää, ohitetaan. 
+ - Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy. Jos kuukaudella ei ole menoja, ohjelma tulostaa `Ei menoja.`
 
- - **Aineisto**: [juoksut.csv](harjoitustyo-aineistot/juoksut.csv), rivit muotoa `2025-09-06;10.0;59:15`. Aika on muodossa `mm:ss` tai yli tunnin lenkeillä `h:mm:ss`.
- - **Vaatimukset**: lenkit listaan; silmukka; funktiot `AikaSekunneiksi("59:15")`, `SekunnitAjaksi(3555)`, `Vauhti(matka, sekunnit)` ja `Yhteensa(lenkit)`. Ajan jäsentäminen on erinomainen ComTest-kohde, koska siinä on monta muotoa ja erikoistapausta.
- - **Laajennus parityölle**: useampi juoksija ja heidän vertailunsa, viikkotavoite ja sen seuranta sekä tavoiteajan laskuri ("millä vauhdilla 10 km alle 50 minuutin").
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
 
-### Vaalitulos d'Hondtin menetelmällä
+| Funktio                           | Palauttaa                                           | Testattavia erikoistapauksia              |
+| --------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+| `RivitMenoiksi(rivit)`            | listan tiedoston rivien menoista                    | otsikkorivi, virheellinen rivi            |
+| `Yhteensa(menot)`                 | menojen summan                                      | tyhjä lista                               |
+| `LuokanSumma(menot, luokka)`      | luokan menojen summan                               | luokka, jossa ei ole menoja               |
+| `Luokat(menot)`                   | listan luokista aakkosjärjestyksessä, kunkin kerran | tyhjä lista, sama luokka useasti          |
+| `SuurinMeno(menot)`               | suurimman menon, tai `null`, jos menoja ei ole      | tyhjä lista                               |
+| `KuukaudenMenot(menot, kuukausi)` | listan kuukauden menoista                           | `2025-1` ei saa palauttaa lokakuun menoja |
 
-Ohjelma lukee vaalipiirin äänet ehdokkaittain, laskee puolueiden yhteisäänet ja jakaa paikat [d'Hondtin menetelmällä](https://fi.wikipedia.org/wiki/D%27Hondtin_menetelm%C3%A4), jota käytetään Suomen eduskuntavaaleissa: puolueen eniten ääniä saanut ehdokas saa vertailuluvukseen puolueen koko äänimäärän, toinen puolet siitä, kolmas kolmasosan ja niin edelleen. Paikat menevät suurimmille vertailuluvuille. Käyttäjä antaa paikkamäärän ja näkee valitut ehdokkaat.
+#### Laajennus parityölle {#kulutusseuranta-pari}
 
- - **Aineisto**: [aanet.csv](harjoitustyo-aineistot/aanet.csv), rivit muotoa `Aurinkopuolue;Sara Salo;1451`. Puolueet ja ehdokkaat ovat keksittyjä.
- - **Vaatimukset**: ehdokkaat listaan; silmukka; funktiot `PuolueenAanet(ehdokkaat, puolue)`, `Vertailuluku(puolueenAanet, sija)` ja `ValitseEhdokkaat(ehdokkaat, paikat)`; ehdokkaiden järjestäminen äänimäärän mukaan. Pienet käsin laskettavat esimerkit sopivat testeiksi.
- - **Laajennus parityölle**: Sainte-Laguën menetelmä vertailuun, äänikynnys, vaaliliitot ja tuloksen tallennus tiedostoon.
+Ennen yhteenvetoa ohjelma kysyy uusia menoja: päivän, luokan, summan ja kuvauksen. Kysely toistuu, kunnes käyttäjä jättää päivän tyhjäksi. Summan desimaalierotin voi olla piste tai pilkku. Meno hyväksytään, jos päivä on olemassa oleva päivämäärä muodossa vvvv-kk-pp, luokka ei ole tyhjä, summa on positiivinen luku eikä luokassa tai kuvauksessa ole puolipistettä. Hyväksytty meno lisätään listaan ja tiedoston loppuun samassa muodossa kuin aineiston rivit, joten se on mukana myös seuraavalla ajokerralla. Virheellisestä menosta ohjelma ilmoittaa eikä lisää sitä. Päivämäärän voi tarkistaa pilkkomalla tekstin `Substring`-metodilla, ja `DateTime.DaysInMonth(vuosi, kuukausi)` kertoo, montako päivää kuukaudessa on.
 
-### Tarkistesummat
+<asciinema src="harjoitustyo/images/kulutusseuranta-pari.cast" rows="30" poster="npt:29.9" controls></asciinema>
 
-Ohjelma tarkistaa henkilötunnuksen, IBAN-tilinumeron ja laskun viitenumeron oikeellisuuden ja osaa laskea puuttuvan tarkisteen. Käyttäjä syöttää tunnuksen tai antaa tiedoston, ja ohjelma kertoo, onko tunnus oikein ja mikä siinä on vialla. Menetelmät: henkilötunnuksessa syntymäajan ja yksilönumeron muodostama luku jaetaan 31:llä ja jakojäännös haetaan merkkitaulukosta `0123456789ABCDEFHJKLMNPRSTUVWXY`. Viitenumerossa numerot kerrotaan oikealta lukien painoilla 7, 3 ja 1, ja tarkiste täydentää summan seuraavaan täyteen kymmeneen. IBANissa neljä ensimmäistä merkkiä siirretään loppuun, kirjaimet muutetaan luvuiksi (A=10, ..., Z=35) ja tuloksen jakojäännös 97:llä on 1. Luku on liian suuri `long`-tyypille, joten jakojäännös lasketaan silmukassa pala kerrallaan.
+Tiedoston loppuun tulee rivi `2025-10-31;Ruoka;12.50;Lounas`. Rivin saa lisättyä
+lauseella `File.AppendAllText("kulut.csv", rivi + Environment.NewLine);`.
+Ohjelma kirjoittaa ajokansiossa (`bin/Debug/net10.0`) olevaan tiedostoon, ei
+projektin kansiossa olevaan, joten alkuperäinen aineisto säilyy koskemattomana,
+eikä sitä tarvitse puskea versiohallintaan.
 
- - **Aineisto**: [tarkisteet.txt](harjoitustyo-aineistot/tarkisteet.txt), rivit muotoa `hetu;010190-901R`, mukana myös virheellisiä tunnuksia. Henkilötunnukset ovat keksittyjä: yksilönumerot 900–999 on varattu testikäyttöön.
- - **Vaatimukset**: tarkistemerkit ja painot taulukoihin; silmukka; funktiot `HetuOk(hetu)`, `ViiteTarkiste(pohja)` ja `IbanOk(iban)`. Aihe on luonnostaan testattava: jokaiselle funktiolle löytyy oikeita ja vääriä syötteitä.
- - **Laajennus parityölle**: ISBN- ja EAN-koodit, koko tiedoston tarkistus ja virheraportti sekä arvaus siitä, mikä merkki on todennäköisimmin näppäilty väärin.
+Laskennan lisäfunktiot ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
 
-### Salakirjoitustyökalu
+| Funktio                  | Palauttaa                                                      | Testattavia erikoistapauksia                |
+| ------------------------ | -------------------------------------------------------------- | ------------------------------------------- |
+| `OnkoPaivamaara(teksti)` | `true`, jos teksti on olemassa oleva päivä muodossa vvvv-kk-pp | `2025-02-29`, `2025-9-4`                    |
+| `TekstiSummaksi(teksti)` | summan, tai 0, jos luku ei ole positiivinen                    | `12.50` ja `12,50`, `-5`                    |
+| `MenoRiviksi(meno)`      | menon tiedoston rivinä, esim. `2025-09-04;Ruoka;23.50;Kauppa`  | tyhjä kuvaus, pyöristys kahteen desimaaliin |
 
-Ohjelma salaa ja purkaa tekstiä Caesarin menetelmällä (kirjaimia siirretään aakkostossa), Vigenèren menetelmällä (siirto vaihtelee avainsanan mukaan) ja ROT13:lla. Lisäksi ohjelma murtaa Caesar-salauksen ilman avainta: kokeillaan kaikki siirrot ja valitaan se, jolla tekstin yleisimmät kirjaimet vastaavat parhaiten suomen yleisimpiä kirjaimia (a, i, t, n, e). Käyttäjä valitsee toiminnon valikosta ja antaa tekstin tai tiedoston.
+</details>
 
- - **Aineisto**: [viesti.txt](harjoitustyo-aineistot/viesti.txt) on Caesarilla salattu suomenkielinen viesti. Aakkosto on `abcdefghijklmnopqrstuvwxyzåäö`; välimerkit ja isot kirjaimet säilyvät.
- - **Vaatimukset**: aakkosto merkkijonona ja kirjainmäärät taulukkona; silmukka; funktiot `Salaa(teksti, siirto)`, `Pura(teksti, siirto)`, `KirjainMaarat(teksti)` ja `ArvaaSiirto(teksti)`. Testeiksi sopii esim. `Pura(Salaa("moi", 3), 3) === "moi"` ja aakkoston ympäri kiertävät tapaukset.
- - **Laajennus parityölle**: Vigenèren murtaminen (avaimen pituuden arvaus), tiedostojen salaus ja purku sekä morsetus.
+<details closed id="polttoainepaivakirja">
+<summary><strong>Aihe 2: Polttoainepäiväkirja</strong> – tankkaukset tiedostosta, kulutus ja kilometrikustannus</summary>
+
+Ohjelma lukee auton tankkaukset tiedostosta ja tulostaa kulutuksen jokaiselta tankkausväliltä, keskikulutuksen, kilometrikustannuksen ja kalleimman tankkauksen. Sen jälkeen ohjelma kysyy matkan pituutta ja arvioi, paljonko matkaan kuluu polttoainetta ja rahaa, kunnes käyttäjä antaa tyhjän rivin.
+
+ - **Aineisto**: `tankkaukset.csv` sisältää 14 tankkausta maalis–elokuulta 2025. Rivit ovat muotoa `2025-03-12;154867;45.19;81.75`: päivä, mittarilukema kilometreinä, litrat ja hinta euroina. Auto on tankattu joka kerta täyteen.
+ - **Tietorakenne**: tankkaukset listaan `List<Tankkaus>` valmiin luokan `Tankkaus` olioina.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Litrat, kulutus ja euromäärät tulostetaan kahdella desimaalilla ja kilometrikustannus kolmella.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/polttoainepaivakirja.cast" rows="25" poster="npt:6.3" controls></asciinema>
+
+ - Tankkausvälin kulutus on välin lopussa tankatut litrat jaettuna välillä ajetuilla kilometreillä kertaa 100. Rivin päivä on välin lopun tankkauspäivä, joten ensimmäiselle tankkaukselle ei tule riviä.
+ - Keskikulutus lasketaan kaikista tankkauksista ensimmäistä lukuun ottamatta: litrat yhteensä jaettuna ajetuilla kilometreillä (viimeinen mittarilukema miinus ensimmäinen) kertaa 100. Ensimmäisen tankkauksen polttoaine on ajettu ennen seurannan alkua. Kilometrikustannus lasketaan samoin hinnoista.
+ - Matkaan kuluu matka kertaa keskikulutus jaettuna 100:lla litraa, ja hinta on matka kertaa kilometrikustannus. Jos matka ei ole positiivinen, ohjelma ilmoittaa siitä.
+ - Tiedoston otsikkorivi ohitetaan, samoin rivit, joilla ei ole neljää kenttää. Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy.
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                        | Palauttaa                                                  | Testattavia erikoistapauksia   |
+| ------------------------------ | ---------------------------------------------------------- | ------------------------------ |
+| `RivitTankkauksiksi(rivit)`    | listan tiedoston rivien tankkauksista                      | otsikkorivi, virheellinen rivi |
+| `Kulutus(km, litrat)`          | kulutuksen l/100 km, tai 0, jos kilometrejä ei ole         | 0 km                           |
+| `AjetutKm(tankkaukset)`        | ajetut kilometrit ensimmäisestä tankkauksesta viimeiseen   | tyhjä lista                    |
+| `Keskikulutus(tankkaukset)`    | keskikulutuksen l/100 km                                   | yksi tankkaus                  |
+| `KustannusPerKm(tankkaukset)`  | polttoaineen hinnan euroina kilometriä kohti               | tyhjä lista                    |
+| `KalleinTankkaus(tankkaukset)` | kalleimman tankkauksen, tai `null`, jos tankkauksia ei ole | tyhjä lista                    |
+
+#### Laajennus parityölle {#polttoainepaivakirja-pari}
+
+Ennen yhteenvetoa ohjelma kysyy uusia tankkauksia: päivän, mittarilukeman, litrat ja hinnan. Kysely toistuu, kunnes käyttäjä jättää päivän tyhjäksi. Desimaalierotin voi olla piste tai pilkku. Tankkaus hyväksytään, jos päivä on olemassa oleva päivämäärä muodossa vvvv-kk-pp, mittarilukema on suurempi kuin edellisen tankkauksen ja litrat ja hinta ovat positiivisia lukuja. Hyväksytty tankkaus lisätään listaan ja tiedoston loppuun samassa muodossa kuin aineiston rivit, kuten [Kulutusseurannassa](#kulutusseuranta-pari). Virheellisestä tankkauksesta ohjelma ilmoittaa eikä lisää sitä. Päivämäärän voi tarkistaa pilkkomalla tekstin `Substring`-metodilla, ja `DateTime.DaysInMonth(vuosi, kuukausi)` kertoo, montako päivää kuukaudessa on.
+
+<asciinema src="harjoitustyo/images/polttoainepaivakirja-pari.cast" rows="35" poster="npt:29.3" controls></asciinema>
+
+Laskennan lisäfunktiot ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
+
+| Funktio                        | Palauttaa                                                           | Testattavia erikoistapauksia       |
+| ------------------------------ | ------------------------------------------------------------------- | ---------------------------------- |
+| `OnkoPaivamaara(teksti)`       | `true`, jos teksti on olemassa oleva päivä muodossa vvvv-kk-pp      | `2025-02-29`, `2025-9-4`           |
+| `TekstiLuvuksi(teksti)`        | luvun, tai 0, jos luku ei ole positiivinen                          | `36.50` ja `36,50`, `-5`           |
+| `ViimeinenLukema(tankkaukset)` | viimeisen tankkauksen mittarilukeman, tai 0, jos tankkauksia ei ole | tyhjä lista                        |
+| `TankkausRiviksi(tankkaus)`    | tankkauksen tiedoston rivinä, esim. `2025-09-02;162410;36.50;64.20` | pyöristys kahteen desimaaliin      |
+
+</details>
+
+<details closed id="tekstitilastot">
+<summary><strong>Aihe 3: Tekstitilastot</strong> – sanat ja lauseet tekstitiedostosta</summary>
+
+Ohjelma lukee tekstitiedoston ja tulostaa sanojen ja lauseiden määrän, sanan keskipituuden sekä pisimmän ja yleisimmän sanan. Sen jälkeen ohjelma kysyy sanaa ja kertoo, montako kertaa se esiintyy tekstissä, kunnes käyttäjä antaa tyhjän rivin.
+
+ - **Aineisto**: `nayteteksti.txt` on 105 sanan suomenkielinen teksti. Valmiin ohjelman voi ajaa myös pitkälle tekstille, esim. Aleksis Kiven teoksille [Project Gutenbergista](https://www.gutenberg.org/ebooks/search/?query=aleksis+kivi).
+ - **Tietorakenne**: tekstin sanat listaan `List<string>`. Valmista luokkaa ei tarvita.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Keskipituus tulostetaan kahdella desimaalilla.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/tekstitilastot.cast" rows="14" poster="npt:13.1" controls></asciinema>
+
+ - Sanat erotetaan välilyöntien ja rivinvaihtojen kohdalta. Sanan alusta ja lopusta poistetaan välimerkit `. , ; : ! ? " ( ) -`, ja sana muutetaan pieniksi kirjaimiksi. Pelkistä välimerkeistä koostuva osa, kuten yksinäinen viiva, ei ole sana.
+ - Lauseiden määrä on lauseen päättävien merkkien `. ! ?` määrä.
+ - Jos pisimpiä tai yleisimpiä sanoja on useita, tulostetaan niistä tekstissä ensimmäinen.
+ - Kysytty sana siivotaan samoin, joten `Ohjelma` löytää sanan `ohjelma`. Taivutusmuotoja ei yhdistetä: `ohjelma` ja `ohjelmaksi` ovat eri sanoja.
+ - Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy.
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                       | Palauttaa                                       | Testattavia erikoistapauksia                |
+| ----------------------------- | ----------------------------------------------- | ------------------------------------------- |
+| `Siivoa(sana)`                | sanan ilman välimerkkejä pienillä kirjaimilla   | `Ohjelmointi.`, `(peli,`, pelkät välimerkit |
+| `Sanat(teksti)`               | listan tekstin sanoista siivottuina             | rivinvaihto, yksinäinen viiva, tyhjä teksti |
+| `LauseidenMaara(teksti)`      | lauseen päättävien merkkien määrän              | teksti ilman loppumerkkiä                   |
+| `PisinSana(sanat)`            | pisimmän sanan, tai tyhjän, jos sanoja ei ole   | kaksi yhtä pitkää                           |
+| `KeskimaarainenPituus(sanat)` | sanojen keskipituuden merkkeinä                 | tyhjä lista                                 |
+| `Esiintymat(sanat, sana)`     | sanan esiintymien määrän                        | sana, jota ei ole                           |
+| `YleisinSana(sanat)`          | yleisimmän sanan, tai tyhjän, jos sanoja ei ole | tasapeli, tyhjä lista                       |
+
+#### Laajennus parityölle {#tekstitilastot-pari}
+
+Yleisin sana on yleensä *ja* tai *on*, joka ei kerro tekstin sisällöstä mitään. Parityössä ohjelma tulostaa tilastojen jälkeen myös yleisimmän sanan, kun hukkasanat ohitetaan, sekä sanojen pituusjakauman pylväinä. Hukkasanat ovat ohjelmassa vakiotaulukossa: *ja, on, ei, se, sen, voi, kun, tai, että, niin*. Pituusjakaumassa on rivi jokaiselle pituudelle yhdestä pisimmän sanan pituuteen, myös pituuksille, joita ei esiinny. Pylväs on rivi `#`-merkkejä, jonka saa lausekkeella `new string('#', leveys)`. Leveys on määrä kertaa 40 jaettuna suurimmalla määrällä, jolloin suurin pylväs on 40 merkkiä leveä. Nollaa suurempi määrä saa kuitenkin vähintään yhden merkin.
+
+<asciinema src="harjoitustyo/images/tekstitilastot-pari.cast" rows="29" poster="npt:7.0" controls></asciinema>
+
+Laajennuksen tuloste tekstinä:
+
+```text
+Yleisin sana hukkasanat ohittaen: jokainen (2 kertaa)
+Sanojen pituusjakauma:
+   1 |  0
+   2 | ###################### 9
+   3 | #################### 8
+   4 | ###################### 9
+   5 | ######################################## 16
+   6 | ##################################### 15
+...
+  16 |  0
+  17 | ## 1
+```
+
+Laskennan lisäfunktiot ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
+
+| Funktio                   | Palauttaa                                                  | Testattavia erikoistapauksia              |
+| ------------------------- | ---------------------------------------------------------- | ----------------------------------------- |
+| `IlmanHukkasanoja(sanat)` | listan sanoista ilman hukkasanoja                          | pelkkiä hukkasanoja                       |
+| `PituusJakauma(sanat)`    | taulukon, jonka alkiossa i on i-kirjaimisten sanojen määrä | tyhjä lista                               |
+| `Suurin(luvut)`           | taulukon suurimman luvun, tai 0, jos taulukko on tyhjä     | tyhjä taulukko                            |
+| `Pylvas(maara, suurin)`   | pylvään `#`-merkkeinä                                      | määrä 0, pieni määrä suhteessa suurimpaan |
+
+</details>
+
+<details closed id="saadata">
+<summary><strong>Aihe 4: Säädata</strong> – päivittäiset lämpötilat, keskiarvot ja ääripäät</summary>
+
+Ohjelma lukee päivittäiset lämpötilat tiedostosta ja tulostaa havaintojen
+määrän, keskilämpötilan, kylmimmän ja lämpimimmän päivän, pisimmän hellejakson
+ja ensimmäisen pakkaspäivän. Sen jälkeen ohjelma kysyy silmukassa kuukautta ja tulostaa
+kuukauden keskilämpötilan, kunnes käyttäjä antaa tyhjän rivin.
+
+ - **Aineisto**: `lampotilat.csv` sisältää 92 päivän lämpötilat 1.8.–31.10.2025. Rivit ovat muotoa `2025-08-03;28.3`: päivä ja lämpötila celsiusasteina. Oikeaa dataa saa [Ilmatieteen laitoksen havaintojen latauspalvelusta](https://www.ilmatieteenlaitos.fi/havaintojen-lataus).
+ - **Tietorakenne**: päivät taulukkoon `string[]` ja lämpötilat taulukkoon `double[]` samaan järjestykseen. Valmista luokkaa ei tarvita. Jos virheelliset rivit ohitetaan, rivit kannattaa lukea ensin listoihin ja muuttaa listat sitten taulukoiksi metodilla `ToArray()`.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Lämpötilat tulostetaan yhdellä desimaalilla. Suomenkielinen Windows näyttää negatiivisen luvun miinusmerkin konsolissa kysymysmerkkinä, ellei ohjelman alussa aseteta `Console.OutputEncoding = System.Text.Encoding.UTF8;`. Pohjaprojektissa rivi on valmiina.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/saadata.cast" rows="14" poster="npt:10.5" controls></asciinema>
+
+ - Hellejakso on jakso peräkkäisiä päiviä, joina lämpötila on yli 25,0 °C. Pakkaspäivä on päivä, jona lämpötila on alle 0,0 °C. Rajat ovat ohjelmassa vakioina.
+ - Jaksot lasketaan tiedoston peräkkäisistä riveistä, joten päivien oletetaan olevan aikajärjestyksessä.
+ - Jos kylmimpiä tai lämpimimpiä päiviä on useita, tulostetaan niistä ensimmäinen. Jos pakkaspäiviä ei ole, ohjelma kertoo sen.
+ - Tiedoston otsikkorivi ohitetaan, samoin rivit, joilla ei ole kahta kenttää. Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy.
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                                             | Palauttaa                                                                | Testattavia erikoistapauksia                           |
+| --------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| `Keskiarvo(luvut)`                                  | lukujen keskiarvon, tai 0, jos lukuja ei ole                             | negatiiviset luvut, tyhjä taulukko                     |
+| `PienimmanIndeksi(luvut)`                           | pienimmän luvun indeksin, tai -1, jos lukuja ei ole                      | kaksi yhtä pientä, tyhjä taulukko                      |
+| `SuurimmanIndeksi(luvut)`                           | suurimman luvun indeksin, tai -1, jos lukuja ei ole                      | kaksi yhtä suurta, tyhjä taulukko                      |
+| `PisinJakso(luvut, raja)`                           | pisimmän rajaa suurempien peräkkäisten lukujen jakson pituuden           | jakso lopussa, luku täsmälleen rajalla, tyhjä taulukko |
+| `EnsimmainenAlle(luvut, raja)`                      | ensimmäisen rajaa pienemmän luvun indeksin, tai -1, jos sellaista ei ole | luku täsmälleen rajalla                                |
+| `KuukaudenLampotilat(paivat, lampotilat, kuukausi)` | taulukon kuukauden lämpötiloista                                         | `2025-1` ei saa palauttaa lokakuun lämpötiloja         |
+
+#### Laajennus parityölle {#saadata-pari}
+
+Ennen tilastoja ohjelma kysyy uusia havaintoja: päivän ja lämpötilan. Kysely toistuu, kunnes käyttäjä jättää päivän tyhjäksi. Desimaalierotin voi olla piste tai pilkku. Havainto hyväksytään, jos päivä on olemassa oleva päivämäärä muodossa vvvv-kk-pp ja myöhempi kuin edellisen havainnon päivä. Muodossa vvvv-kk-pp olevia päiviä voi verrata merkkijonoina, koska niiden aakkosjärjestys on sama kuin aikajärjestys. Hyväksytty havainto lisätään listoihin ja tiedoston loppuun samassa muodossa kuin aineiston rivit, kuten [Kulutusseurannassa](#kulutusseuranta-pari). Virheellisestä havainnosta ohjelma ilmoittaa eikä lisää sitä. Päivämäärän voi tarkistaa pilkkomalla tekstin `Substring`-metodilla, ja `DateTime.DaysInMonth(vuosi, kuukausi)` kertoo, montako päivää kuukaudessa on.
+
+<asciinema src="harjoitustyo/images/saadata-pari.cast" rows="19" poster="npt:20.9" controls></asciinema>
+
+Tiedoston loppuun tulee rivi `2025-11-01;-2.5`. Laskennan lisäfunktiot
+ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
+
+| Funktio                             | Palauttaa                                                      | Testattavia erikoistapauksia               |
+| ----------------------------------- | -------------------------------------------------------------- | ------------------------------------------ |
+| `OnkoPaivamaara(teksti)`            | `true`, jos teksti on olemassa oleva päivä muodossa vvvv-kk-pp | `2025-02-29`, `2025-11-1`                  |
+| `OnkoMyohempi(paiva, edellinen)`    | `true`, jos päivä on edellistä myöhempi                        | sama päivä, aiempi päivä                   |
+| `HavaintoRiviksi(paiva, lampotila)` | havainnon tiedoston rivinä, esim. `2025-11-01;-2.5`            | kokonaisluku, pyöristys yhteen desimaaliin |
+
+</details>
+
+<details closed id="juoksupaivakirja">
+<summary><strong>Aihe 5: Juoksupäiväkirja</strong> – lenkkien vauhdit ja kuukausittaiset yhteenvedot</summary>
+
+Ohjelma lukee juoksulenkit tiedostosta ja tulostaa lenkkien määrän, yhteismatkan, pisimmän lenkin ja parhaan vauhdin. Sen jälkeen ohjelma kysyy silmukassa kuukautta ja tulostaa kuukauden lenkit vauhteineen sekä saman yhteenvedon kuukauden lenkeistä, kunnes käyttäjä antaa tyhjän rivin.
+
+ - **Aineisto**: `juoksut.csv` sisältää 24 lenkkiä syys–marraskuulta 2025. Rivit ovat muotoa `2025-09-06;10.0;59:15`: päivä, matka kilometreinä ja aika. Aika on muodossa `mm:ss` tai yli tunnin lenkeillä `h:mm:ss`.
+ - **Tietorakenne**: lenkit listaan `List<Lenkki>` valmiin luokan `Lenkki` olioina. Luokka pitää ajan tekstinä samassa muodossa kuin tiedostossa, joten laskemista varten aika muutetaan sekunneiksi funktiolla `AikaSekunneiksi`.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Matkat tulostetaan yhdellä desimaalilla ja vauhdit muodossa `m:ss min/km`.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/juoksupaivakirja.cast" rows="23" poster="npt:8.5" controls></asciinema>
+
+ - Vauhti on lenkin aika sekunteina jaettuna matkalla, pyöristettynä lähimpään sekuntiin, ja se tulostetaan funktiolla `SekunnitAjaksi`. Esimerkiksi 10,0 km ajassa 53:38 on 3218 sekuntia, joten vauhti on 322 sekuntia kilometrillä eli 5:22 min/km.
+ - Jos pisimpiä lenkkejä tai parhaita vauhteja on useita, tulostetaan niistä ensimmäinen.
+ - Tiedoston otsikkorivi ja rivit, joilla ei ole kolmea kenttää, ohitetaan. Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy. Jos kuukaudella ei ole lenkkejä, ohjelma tulostaa `Ei lenkkejä.`
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                             | Palauttaa                                                                 | Testattavia erikoistapauksia                |
+| ----------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------- |
+| `RivitLenkeiksi(rivit)`             | listan tiedoston rivien lenkeistä                                         | otsikkorivi, virheellinen rivi              |
+| `AikaSekunneiksi(aika)`             | ajan sekunteina, esim. `59:15` → 3555                                     | `mm:ss` ja `h:mm:ss`, etunolla `05:03`      |
+| `SekunnitAjaksi(sekunnit)`          | ajan tekstinä, alle tunnin muodossa `m:ss`, muuten `h:mm:ss`              | `5:03`, tasan tunti `1:00:00`               |
+| `Vauhti(lenkki)`                    | vauhdin sekunteina kilometriä kohti, tai 0, jos matka ei ole positiivinen | pyöristys, matka 0                          |
+| `Yhteensa(lenkit)`                  | lenkkien yhteismatkan                                                     | tyhjä lista                                 |
+| `PisinLenkki(lenkit)`               | pisimmän lenkin, tai `null`, jos lenkkejä ei ole                          | tyhjä lista, kaksi yhtä pitkää              |
+| `NopeinLenkki(lenkit)`              | lenkin, jonka vauhti on paras, tai `null`, jos lenkkejä ei ole            | tyhjä lista, kaksi yhtä nopeaa              |
+| `KuukaudenLenkit(lenkit, kuukausi)` | listan kuukauden lenkeistä                                                | `2025-1` ei saa palauttaa lokakuun lenkkejä |
+
+#### Laajennus parityölle {#juoksupaivakirja-pari}
+
+Ennen yhteenvetoa ohjelma kysyy uusia lenkkejä: päivän, matkan ja ajan. Kysely toistuu, kunnes käyttäjä jättää päivän tyhjäksi. Matkan desimaalierotin voi olla piste tai pilkku. Lenkki hyväksytään, jos päivä on olemassa oleva päivämäärä muodossa vvvv-kk-pp, matka on positiivinen luku ja aika on nollaa suurempi ja muodossa `mm:ss` tai `h:mm:ss`, jossa sekunnit ja `h:mm:ss`-muodossa myös minuutit ovat kaksinumeroisia ja alle 60. Aika tallennetaan samaan muotoon kuin aineistossa muuttamalla se sekunneiksi ja takaisin, joten esim. `75:00` tallentuu muotoon `1:15:00`. Hyväksytty lenkki lisätään listaan ja tiedoston loppuun samassa muodossa kuin aineiston rivit, kuten [Kulutusseurannassa](#kulutusseuranta-pari). Virheellisestä lenkistä ohjelma ilmoittaa eikä lisää sitä. Päivämäärän voi tarkistaa pilkkomalla tekstin `Substring`-metodilla, ja `DateTime.DaysInMonth(vuosi, kuukausi)` kertoo, montako päivää kuukaudessa on.
+
+<asciinema src="harjoitustyo/images/juoksupaivakirja-pari.cast" rows="24" poster="npt:18.3" controls></asciinema>
+
+Tiedoston loppuun tulee rivi `2025-11-08;10.5;52:30`. Laskennan lisäfunktiot
+ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
+
+| Funktio                  | Palauttaa                                                                 | Testattavia erikoistapauksia |
+| ------------------------ | ------------------------------------------------------------------------- | ---------------------------- |
+| `OnkoPaivamaara(teksti)` | `true`, jos teksti on olemassa oleva päivä muodossa vvvv-kk-pp            | `2025-02-29`, `2025-11-8`    |
+| `OnkoAika(teksti)`       | `true`, jos teksti on nollaa suurempi aika muodossa `mm:ss` tai `h:mm:ss` | `5:3`, `1:75:00`, `0:00`     |
+| `TekstiMatkaksi(teksti)` | matkan, tai 0, jos luku ei ole positiivinen                               | `10.5` ja `10,5`, `-5`       |
+| `LenkkiRiviksi(lenkki)`  | lenkin tiedoston rivinä, esim. `2025-11-08;10.5;52:30`                    | pyöristys yhteen desimaaliin |
+
+</details>
+
+<details closed id="viitenumerot">
+<summary><strong>Aihe 6: Viitenumerogeneraattori ja tarkistaja</strong> – viitenumeroiden tarkistus ja muodostus</summary>
+
+Ohjelma lukee viitenumerot tiedostosta, tarkistaa ne ja tulostaa kelvollisten
+määrän sekä virheelliset viitenumerot. Sen jälkeen ohjelma kysyy silmukassa
+viitenumeron runkoa ja tulostaa siitä valmiin viitenumeron, kunnes käyttäjä
+antaa tyhjän rivin. Runko on viitenumeron alkuosa eli kaikki muut numerot kuin
+viimeinen, joka on tarkistenumero: viitenumeron `12344` runko on `1234`.
+Laskuttaja valitsee rungon itse, esimerkiksi asiakas- tai laskunumeron
+perusteella, ja rungon perään lisätään siitä laskettu tarkistenumero.
+
+ - **Aineisto**: `viitteet.txt` sisältää 16 viitenumeroa, joista osa on virheellisiä. Rivillä on yksi viitenumero. Osa on kirjoitettu laskujen tapaan viiden numeron ryhmissä, esim. `2 02509 00011`. Viitenumerot ovat keksittyjä.
+ - **Tietorakenne**: viitenumerot listaan `List<string>`. Valmista luokkaa ei tarvita.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/viitenumerot.cast" rows="22" poster="npt:5.9" controls></asciinema>
+
+ - Viitenumerossa on 4–20 numeroa: ensin runko ja lopuksi yksinumeroinen tarkistenumero. Tarkistenumero lasketaan rungon numeroista: ne kerrotaan oikealta vasemmalle kertoimilla 7, 3, 1, 7, 3, 1 ja niin edelleen, tulot lasketaan yhteen, ja tarkistenumero on se luku, jolla summa täydentyy seuraavaan kymmeneen. Rungosta `1234` summa on 4·7 + 3·3 + 2·1 + 1·7 = 46, joten tarkistenumero on 4 ja viitenumero `12344`. Jos summa on tasan jaollinen kymmenellä, tarkistenumero on 0.
+ - Välilyönnit eivät kuulu viitenumeroon, vaan ne poistetaan ennen tarkistusta. Muut merkit kuin numerot tekevät viitenumerosta virheellisen.
+ - Aineistossa on myös viitenumeroita, joiden tarkistenumero on oikein mutta jotka ovat silti virheellisiä, koska ne ovat liian lyhyitä tai liian pitkiä.
+ - Viitenumeron runko saa olla 3–19 numeroa, jolloin valmiissa viitenumerossa on 4–20 numeroa. Muusta syötteestä ohjelma ilmoittaa.
+ - Tiedoston otsikkorivi ja tyhjät rivit ohitetaan. Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy.
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                    | Palauttaa                                                        | Testattavia erikoistapauksia                          |
+| -------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------- |
+| `Siivoa(viite)`            | viitenumeron ilman välilyöntejä                                  | ryhmitelty `2 02509 00011`, pelkkiä välilyöntejä      |
+| `RivitViitteiksi(rivit)`   | listan tiedoston viitenumeroista siivottuina                     | otsikkorivi, tyhjä rivi                               |
+| `Tarkistenumero(runko)`    | rungon tarkistenumeron                                           | `1234`, `55` (summa jaollinen kymmenellä), kirjaimia  |
+| `OnkoViitenumero(arvo)`    | `true`, jos arvo on kelvollinen viitenumero                      | liian lyhyt `550`, liian pitkä, väärä tarkiste `12346` |
+| `Kelvolliset(viitteet)`    | listan kelvollisista viitenumeroista                             | tyhjä lista, pelkkiä virheellisiä                     |
+| `Muodosta(runko)`          | rungosta valmiin viitenumeron, tai tyhjän, jos runko ei kelpaa   | liian lyhyt runko, kirjaimia rungossa                 |
+
+#### Laajennus parityölle {#viitenumerot-pari}
+
+Parityössä ohjelma käsittelee myös kansainvälistä RF-viitettä (ISO 11649),
+jollaista käytetään ulkomaille maksettaessa: se on kotimainen viitenumero,
+jonka eteen on lisätty `RF` ja kaksinumeroinen tarkisteluku, esim. `12344` →
+`RF0812344`. Tarkisteluku lasketaan lisäämällä viitenumeron perään `RF00`,
+korvaamalla kirjaimet numeroilla (`A` = 10, `B` = 11, ..., `Z` = 35) ja
+vähentämällä saadun luvun jakojäännös 97:llä luvusta 98. RF-viite kelpaa, jos
+sen neljä ensimmäistä merkkiä siirretään loppuun ja numeroiksi muutetun luvun
+jakojäännös 97:llä on 1. Pisimmistä viitenumeroista luku ei mahdu `long`-tyyppiin, johon
+mahtuu 19-numeroinen luku, joten jakojäännös lasketaan numero kerrallaan: jakojäännös
+alkaa nollasta, ja jokaisella numerolla lasketaan
+`jaannos = (jaannos * 10 + numero) % 97`. Ohjelma tulostaa muodostamansa
+viitenumeron myös RF-muodossa, kertoo RF-viitteestä, kelpaako se, ja tallentaa
+muodostetut viitenumerot tiedoston loppuun, kuten
+[Kulutusseurannassa](#kulutusseuranta-pari).
+
+<asciinema src="harjoitustyo/images/viitenumerot-pari.cast" rows="24" poster="npt:6.7" controls></asciinema>
+
+Laskennan lisäfunktiot ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä):
+
+| Funktio                        | Palauttaa                                                      | Testattavia erikoistapauksia                     |
+| ------------------------------ | -------------------------------------------------------------- | ------------------------------------------------ |
+| `Numeroiksi(teksti)`           | numerosarjan, jossa kirjaimet on korvattu numeroilla           | pienet kirjaimet, muu merkki kuin kirjain tai numero |
+| `Jakojaannos(numerot, jakaja)` | numerosarjan jakojäännöksen                                    | numerosarja, joka ei mahdu `long`-tyyppiin       |
+| `RfViite(viite)`               | viitenumeron RF-muodossa, esim. `12344` → `RF0812344`          | tarkisteluku alle 10 (etunolla), virheellinen viitenumero |
+| `OnkoRfViite(arvo)`            | `true`, jos arvo on kelvollinen RF-viite                       | väärä tarkisteluku, viite ilman `RF`-alkua       |
+
+</details>
+
+<details closed id="vaalitulos">
+<summary><strong>Aihe 7: Vaalitulos d'Hondtin menetelmällä</strong> – äänistä puolueiden paikkajakoon</summary>
+
+Ohjelma lukee vaalipiirin äänet ehdokkaittain tiedostosta ja tulostaa puolueiden yhteisäänet. Sen jälkeen ohjelma kysyy silmukassa paikkojen määrää ja tulostaa valitut ehdokkaat vertailulukuineen sekä puolueiden paikkamäärät, kunnes käyttäjä antaa tyhjän rivin. Paikat jaetaan [d'Hondtin menetelmällä](https://fi.wikipedia.org/wiki/D%27Hondtin_menetelm%C3%A4), jota käytetään Suomen eduskuntavaaleissa: puolueen eniten ääniä saanut ehdokas saa vertailuluvukseen puolueen koko äänimäärän, toinen puolet siitä, kolmas kolmasosan ja niin edelleen. Paikat menevät suurimmille vertailuluvuille.
+
+ - **Aineisto**: `aanet.csv` sisältää viiden puolueen 18 ehdokkaan äänet. Rivit ovat muotoa `Aurinkopuolue;Sara Salo;1451`: puolue, ehdokas ja äänimäärä. Puolueet ja ehdokkaat ovat keksittyjä.
+ - **Tietorakenne**: ehdokkaat listaan `List<Ehdokas>` valmiin luokan `Ehdokas` olioina ja vertailuluvut taulukkoon `double[]` samaan järjestykseen kuin ehdokkaat.
+ - **Tulosteet**: asettelu saa poiketa esimerkistä, kunhan samat tiedot näkyvät. Vertailuluvut tulostetaan kahdella desimaalilla.
+
+Nauhoitus näyttää, miten ohjelma toimii:
+
+<asciinema src="harjoitustyo/images/vaalitulos.cast" rows="26" poster="npt:10.7" controls></asciinema>
+
+ - Ehdokkaan sija on järjestysnumero puolueen ehdokkaiden joukossa äänimäärän mukaan: eniten ääniä saanut on sijalla 1. Vertailuluku on puolueen äänet jaettuna sijalla. Jos puolueen ehdokkailla on yhtä monta ääntä, tiedostossa ensin oleva saa paremman sijan. Oikeissa vaaleissa järjestys arvottaisiin.
+ - Valitut ehdokkaat tulostetaan vertailuluvun mukaan suurimmasta alkaen. Jos vertailuluvut ovat yhtä suuret, tiedostossa ensin oleva ehdokas valitaan ensin.
+ - Puolueet tulostetaan siinä järjestyksessä kuin ne ovat tiedostossa.
+ - Paikkoja pitää olla vähintään yksi ja enintään yhtä monta kuin ehdokkaita. Muusta paikkamäärästä ohjelma ilmoittaa.
+ - Tiedoston otsikkorivi ohitetaan, samoin rivit, joilla ei ole kolmea kenttää. Jos tiedostoa ei löydy, ohjelma ilmoittaa siitä ja päättyy.
+
+Laskenta tehdään seuraavissa funktioissa, ja jokaisella on ComTest-testit:
+
+| Funktio                               | Palauttaa                                                                      | Testattavia erikoistapauksia                               |
+| ------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `RivitEhdokkaiksi(rivit)`             | listan tiedoston rivien ehdokkaista                                            | otsikkorivi, virheellinen rivi                             |
+| `Puolueet(ehdokkaat)`                 | listan puolueista tiedoston järjestyksessä, kunkin kerran                      | tyhjä lista, sama puolue useasti                           |
+| `PuolueenAanet(ehdokkaat, puolue)`    | puolueen ehdokkaiden äänten summan                                             | puolue, jolla ei ole ehdokkaita                            |
+| `Sija(ehdokkaat, indeksi)`            | ehdokkaan sijan puolueensa ehdokkaista äänten mukaan, eniten ääniä saaneella 1 | puolueen ainoa ehdokas, yhtä monta ääntä                   |
+| `Vertailuluvut(ehdokkaat)`            | taulukon ehdokkaiden vertailuluvuista samassa järjestyksessä                   | vertailuluku, joka ei ole kokonaisluku, tyhjä lista        |
+| `ValitseEhdokkaat(ehdokkaat, paikat)` | listan valituista ehdokkaista vertailuluvun mukaan suurimmasta alkaen          | tasapeli vertailuluvussa, paikkoja enemmän kuin ehdokkaita |
+| `PuolueenPaikat(valitut, puolue)`     | puolueen valittujen ehdokkaiden määrän                                         | puolue, joka ei saa paikkoja                               |
+
+#### Laajennus parityölle {#vaalitulos-pari}
+
+Parityössä ohjelma ottaa paikkajaossa huomioon vaaliliitot. Vaaliliiton puolueet ovat paikkajaossa yksi ryhmä: liiton kaikki ehdokkaat järjestetään yhdessä äänimäärän mukaan, ja vertailuluku on liiton puolueiden yhteisäänet jaettuna ehdokkaan sijalla liitossa. Puolue, joka ei ole liitossa, on oma ryhmänsä. Ryhmää kutsutaan sen ensimmäisen puolueen nimellä.
+
+Liitot luetaan tiedostosta `liitot.csv`, jonka rivillä on yhden liiton puolueet, esim. `Kotiseutuliitto;Rauhanpuolue`, ja tallennetaan listaan `List<string[]>`, jonka alkio on yhden liiton puolueiden taulukko. Otsikkorivi ohitetaan, samoin rivit, joilla on alle kaksi puoluetta. Muuten tiedoston oletetaan olevan kunnossa: sen puolueet ovat aineistossa, eikä sama puolue ole kahdessa liitossa. Jos tiedostoa ei löydy, paikat jaetaan ilman liittoja. Ohjelma tulostaa liitot puolueiden yhteisäänten jälkeen, ja valitut ehdokkaat ja puolueiden paikkamäärät lasketaan liitot huomioiden.
+
+<asciinema src="harjoitustyo/images/vaalitulos-pari.cast" rows="28" poster="npt:7.7" controls></asciinema>
+
+Aineiston liitto muuttaa tulosta: kolmella paikalla Rauhanpuolue saa paikan Tulevaisuusliikkeen sijaan, ja seitsemällä paikalla liiton puolueet saavat yhteensä kaksi paikkaa kuten ilman liittoakin, mutta molemmat menevät Rauhanpuolueelle.
+
+Laskennan lisäfunktiot ComTest-testeineen (näitä ei tarvitse tehdä, jos ei tee parityötä). Perusversion `Sija`, `Vertailuluvut` ja `ValitseEhdokkaat` voi toteuttaa kutsumalla lisäfunktioita tyhjällä liittolistalla, jolloin samaa laskentaa ei kirjoiteta kahdesti.
+
+| Funktio                                       | Palauttaa                                                                 | Testattavia erikoistapauksia                            |
+| --------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `RivitLiitoiksi(rivit)`                       | listan liitoista, kunkin liiton puolueet taulukkona                       | otsikkorivi, rivi, jolla on yksi puolue                 |
+| `Ryhma(puolue, liitot)`                       | liiton ensimmäisen puolueen, tai puolueen itsensä, jos se ei ole liitossa | liiton toinen puolue, puolue, joka ei ole liitossa      |
+| `Sija(ehdokkaat, indeksi, liitot)`            | ehdokkaan sijan ryhmänsä ehdokkaista äänten mukaan                        | liiton eri puolueiden ehdokkaat                         |
+| `Vertailuluvut(ehdokkaat, liitot)`            | taulukon ehdokkaiden vertailuluvuista liitot huomioiden                   | tyhjä liittolista antaa perusversion luvut              |
+| `ValitseEhdokkaat(ehdokkaat, paikat, liitot)` | listan valituista ehdokkaista liitot huomioiden                           | liitto saa paikan, jota kumpikaan puolue ei saisi yksin |
+
+</details>
+
+## Vaatimukset
+
+Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan harjoitustyön esittelemisen yhteydessä.
+
+ 1. **Koodin tyyli** on [kurssin tyylioppaan mukaista](../tyyliopas.md).
+ 
+ 2. **Näkyvyys**: Aliohjelmien ja attribuuttien näkyvyys tulee olla määritelty
+(`public`, `private`). Julkisia staattisia (`public static`) muuttujia ei saa olla. 
+ 3. **Ei turhia attribuutteja**. 
+
+    Jos joitain koko peliluokkaan näkyviä arvoja tarvitaan, pyritään käyttämään vakioita (`const`). Kuvat, äänet, animaatiot ja muut raskaat resurssit on kuitenkin hyvä pitää attribuutteina, jolloin ne ladataan vain kerran pelin aikana. Esim. kuvien olioviitteet voi kiinnittää muuttumattomaksi `static readonly` määreellä.
+
+ 4. **Toimii**: Ohjelma toimii, ei kaadu ja päättyy asiallisesti. 
+
+    Pelissä pitää tapahtua jotakin järkevää, johon käyttäjä voi osallistua
+    interaktiivisesti. Pelissä pitää myös olla tavoite, haaste tai tarina.
+    Komentoriviohjelman tulee toteuttaa kuvauksen mukainen toiminta. 
+
+ 5. **Ei toistoa**, joka olisi voitu tehdä silmukoilla tai aliohjelmilla. 
+
+    Myöskään aliohjelmien välillä ei saa olla toistoa: esimerkiksi `LuoVihu1` ja `LuoVihu2`, joissa olisi lähes sama koodi kahteen kertaan.
+
+ 6. **Taulukko**: Käytetään taulukkoa tai listaa. 
+ 
+    Tietorakenteella täytyy olla jokin tarkoitus siten, että sinne tallennetaan useita arvoja, joita todella käytetään pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä. [Esimerkkejä.](../harjoitustyo.md#taulukko-silmukka-funktio) 
+
+ 7. **Silmukka**: Ainakin yksi silmukka. 
+ 
+    Silmukalla täytyy olla jokin tarkoitus siten, että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. [Esimerkkejä.](../harjoitustyo.md#taulukko-silmukka-funktio)
+
+ 8. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
+
+      Et siis saa tehdä koodia kuten 
+      ```csharp
+      if (y < 18)
+      ```
+   
+      jossa 18 on hyvin todennäköisesti turha literaali. Sen tilalle tulee laittaa muuttuja tai vakio, kuten
+      ```csharp
+      int pisteraja = 18
+      ``` 
+      Vakiot ilmaistaan `const`-määreellä. 
+ 9. **`}` + 2 tyhjää**: Aliohjelmien loppusulun `}` jälkeen tasan kaksi tyhjää riviä.
+ 10. **Dokumentaatio**: Luokat, aliohjelmat ja attribuutit tulee dokumentoida.
+
+      Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne sen tekevät. Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`). Myös attribuutit dokumentoidaan `summary`-tagein. 
+11. **Funktio**: Pelissä on funktio.
+
+      Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](../harjoitustyo.md#taulukko-silmukka-funktio) 
+ 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](../tyokalut.md#jetbrains-rider) 
+ 13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
 ## Usein kysytyt kysymykset ja muut vinkit {#ukk}
 
@@ -387,7 +740,7 @@ Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä kl
 
 ***
 
-**Kyllä.** Tällä sivulla on [kahdeksan valmista aihe-ehdotusta esimerkkiaineistoineen](#aiheita). Muita vaihtoehtoja ovat esimerkiksi:
+**Kyllä.** Yllä kohdassa [Komentoriviohjelma](#komentoriviohjelma) on seitsemän valmista aihe-ehdotusta esimerkkiaineistoineen. Muita vaihtoehtoja ovat esimerkiksi:
 
  * [Janat-haaste](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/janat)
  * [työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial )

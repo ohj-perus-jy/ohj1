@@ -754,6 +754,14 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
  5. Paina *Save*
  6. Sulje JetBrains Rider
 
+> [!HUOMAUTUS]
+> ComTestin luoma testiprojekti voi aiheuttaa käännöksessä varoituksen
+> *Newtonsoft.Json 9.0.1 contains vulnerabilities* (`NU1903`). Varoitus tulee
+> testityökalun (`Microsoft.NET.Test.Sdk`) vanhan version mukanaan tuomasta
+> apukirjastosta, eikä se estä ohjelman kääntämistä tai testien ajamista.
+> Varoituksen saa pois päivittämällä testiprojektin `Microsoft.NET.Test.Sdk`
+> -paketin uusimpaan versioon.
+
 ## Mitä seuraavaksi? 
  
 Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi luennoilla sekä
