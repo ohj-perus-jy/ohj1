@@ -255,6 +255,16 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
 - `tests/book/src/osa1/csharp.md`: C#-lohkot (piilorivit, `ignore`,
   `feature-jypeli`) SUMMARY.md:n ulkopuolella, jotta ohj2:n testien laskemat
   luvut ja lohkot eivät muutu. Testit `tests/test_playground.py`:n lopussa.
+- Vaiheittainen ohje (`src/git-ht-ohje.md`): `convert.py`:n uusi
+  `convert_walkthroughs` (`<walkthrough scenes>` → `.jyu-walk`-div ja
+  kohtaustiedosto `<script>`-tagina, `<step scene>` → `.jyu-step`-section),
+  `assets/js/walkthrough.js` ja `assets/css/walkthrough.css`; `NEST_UNDER`:
+  `git-ht-ohje.md` → `git.md`. Koesivu `tests/book/src/osa1/vaiheet.md`
+  SUMMARY.md:n ulkopuolella, testit `tests/test_walkthrough.py`. Ääneen
+  lukeminen: `<walkthrough audio="kansio">`, äänet tekee `puhe.py` (Azure
+  Speech, `./run.sh puhe ../src/sivu.md`), ja `walkthrough_audio` jättää
+  vanhasta tekstistä tehdyn äänen pois ja varoittaa; testit
+  `tests/test_puhe.py`. *Yleiskäyttöinen.*
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n

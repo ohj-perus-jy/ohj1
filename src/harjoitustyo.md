@@ -89,7 +89,7 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [vaiheittainen ohje](./git-ht-ohje.md)).
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
  1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 

@@ -104,6 +104,9 @@ extra_css:
 
   - assets/css/print.css
 
+  # Vaiheittainen ohje (assets/js/walkthrough.js).
+  - assets/css/walkthrough.css
+
 extra_javascript:
   # Alalukujen avaaminen ei vieritä valikkoa; ks. assets/js/nav-scroll.js.
   - assets/js/nav-scroll.js
@@ -127,3 +130,7 @@ extra_javascript:
   # Terminaalinauhoitusten soitin; soitin ja tyyli haetaan vasta sivulla,
   # jolla on nauhoitus.
   - assets/js/asciinema.js
+
+  # Vaiheittainen ohje. Sivun oma kohtaustiedosto on sisällössä <script>-tagina
+  # (convert.py: convert_walkthroughs), joten se on ajettu ennen tätä.
+  - assets/js/walkthrough.js

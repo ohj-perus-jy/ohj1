@@ -2280,6 +2280,13 @@ riittää molemmissa teemoissa: selaimessa mitattuna erotin on vaaleassa
 taustaa `rgb(11, 12, 15)` vasten (6,3:1). Sääntöjä on tasan yksi
 (`assets/css/icons.css`).
 
+Uudemmissa lähteissä merkki on kirjoitettu suoraan tekstiin
+(`**Access › Personal access tokens**`), koska ohjeen puhe lukee lähdetekstiä
+ja tulkitsee `›`:n tauoksi. Ilman kääremuunnosta tällainen erotin jäisi
+täyteen tekstiväriin, joten `convert_icons` käärii myös sen samaan spaniin.
+Inline-koodi, HTML-tagit ja valmis kääre ohitetaan, joten koodiesimerkki ja
+attribuutti säilyvät ennallaan ja muunnoksen voi ajaa uudelleen.
+
 **Kuvake otetaan sieltä, mistä sivusto ottaa omansa.** Loput 22 tagia ovat
 oikeita kuvakkeita, ja niissä jokaisessa teksti osoittaa nappiin, jota lukija
 etsii ruudulta ("ajopainikkeesta (`<i class="bi bi-play-fill">`)"). Silloin
