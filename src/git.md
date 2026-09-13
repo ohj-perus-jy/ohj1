@@ -60,11 +60,16 @@ Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 3. Kirjoita hakupalkkiin *git bash*
 4. Valitse löytyvistä tuloksista *Git Bash*
+
+<animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
 ![Git bash startmenu](images/gitbash-startmenu.png)
 
 Tuloksena pitäisi avautua seuraava bash-komentorivipääte:
 
 ![Git bash avattu](images/gitbash-avattu.png)
+
+</animation>
 
 Voit testata, että Git-työkalu löytyy suorittamalla komento
 

@@ -448,7 +448,11 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
     Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
+    <animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
     ![Git bash avattu](images/gitbash-avattu2.png)
+
+    </animation>
 
 *** 
 
