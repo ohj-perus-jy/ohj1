@@ -415,10 +415,10 @@ ei voi enää lähettää muutoksia salasanaa käyttäen.
     luomaan uuden.
 
 Tunnusta ei tarvitse tallentaa minnekään: Windowsissa ja macOS:ssä Git muistaa
-sen tällä koneella ensimmäisen pushin jälkeen. Jos teet harjoitustyötä myös
-toisella koneella, luot sille oman tunnuksen samalla tavalla. Jos kone katoaa, poista
-sen tunnus GitLabin tunnuslistasta (**Revoke**); muiden koneiden tunnukset
-toimivat edelleen.
+sen tällä koneella ensimmäisen pushin jälkeen. Jos hävität tunnuksen, taikka
+teet harjoitustyötä myös toisella koneella, luot uuden tunnuksen samalla
+tavalla kuin yllä. Jos kone katoaa, poista sen tunnus GitLabin tunnuslistasta
+(**Revoke**); muiden koneiden tunnukset toimivat edelleen.
 
 > [!VAROITUS]
 > Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
