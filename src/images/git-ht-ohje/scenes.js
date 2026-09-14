@@ -734,7 +734,7 @@
         <h4>Oma eteneminen</h4>
         <div class="jw-label" style="font-size:14px;margin:6px 0">Harjoitustyö</div>
         <table class="jw-tim-table">
-          <tr><td>Git-varaston URL-osoite</td><td><div class="jw-input jw-input--mono" data-type data-ring>${REMOTE}</div></td></tr>
+          <tr><td>Git-etävaraston URL-osoite</td><td><div class="jw-input jw-input--mono" data-type data-ring>${REMOTE}</div></td></tr>
           <tr><td>Vaihe 1: suunnitelma</td><td style="color:#777">Ei vielä hyväksytty</td></tr>
           <tr><td>Vaihe 2: työ 50 % valmis</td><td style="color:#777">–</td></tr>
         </table>

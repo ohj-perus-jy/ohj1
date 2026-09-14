@@ -23,8 +23,8 @@
  *   data-order="n"  numeroidut ensin pienimmästä alkaen, sitten muut
  *                   dokumenttijärjestyksessä; saman elementin tapahtumat
  *                   järjestyksessä show, click, type
- * Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle, luvun pilleri ja linkki
- * vaiheeseen (sisällysluettelo) animoivat. Edellinen ja aikajana näyttävät
+ * Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle, luvun pilleri, aikajanan
+ * merkki ja linkki vaiheeseen (sisällysluettelo) animoivat. Edellinen näyttää
  * vaiheen heti valmiina, samoin jaetusta osoitteesta avautuva vaihe ja aina,
  * jos lukija on pyytänyt vähemmän liikettä (prefers-reduced-motion).
  *
@@ -686,7 +686,7 @@
     $(".jw-next").addEventListener("click", next);
     $(".jw-prev").addEventListener("click", previous);
     $(".jw-replay").addEventListener("click", () => go(current, true));
-    ticks.forEach((tick, i) => tick.addEventListener("click", () => go(i, false)));
+    ticks.forEach((tick, i) => tick.addEventListener("click", () => go(i, true)));
     for (const button of chapterButtons) {
       button.addEventListener("click", () => go(chapters[Number(button.dataset.chapter)].first, true));
     }

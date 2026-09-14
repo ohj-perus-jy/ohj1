@@ -330,13 +330,14 @@ ja **write_repository**, vieritä lomakkeen loppuun ja paina **Generate token**.
 ### Kopioi pääsytunnus
 
 GitLab näyttää tunnuksen vain tämän kerran. Kopioi se leikepöydälle ja pidä
-sivu auki, kunnes push on seuraavassa vaiheessa onnistunut. Et voi kopioida tunnusta myöhemmin, vaan joudut luomaan uuden.
+sivu auki, kunnes push on seuraavassa vaiheessa onnistunut. 
 
 Tunnusta ei tarvitse tallentaa minnekään: Windowsissa ja macOS:ssä Git muistaa
 sen tällä koneella ensimmäisen pushin jälkeen (joka tehdään kohta). Jos teet
-harjoitustyötä myös toisella koneella, luo sille oma tunnus samalla tavalla. Jos
-kone katoaa, poista sen tunnus GitLabin tunnuslistasta (**Revoke**); muiden
-koneiden tunnukset toimivat edelleen.
+harjoitustyötä myös toisella koneella (tai suljet vahingossa sivun kopioimatta
+pääsykoodia), joudut luomaan sille oma tunnus samalla tavalla. Jos kone katoaa,
+poista sen tunnus GitLabin tunnuslistasta (**Revoke**); muiden koneiden
+tunnukset toimivat edelleen.
 
 > [!VAROITUS]
 > Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
