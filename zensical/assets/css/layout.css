@@ -3,7 +3,8 @@
  * sisällön mukana ensimmäiset vierityspikselit ja pysähtyy nytkähtäen, ja
  * katkeaa terävästi sumennettuun yläpalkkiin; kiskossa ei ole mitään, mikä
  * liikkuisi tai katkeaisi. Vain työpöydällä: kapeilla näytöillä valikko on
- * Zensicalin oma laatikko (drawer), johon ei kosketa. */
+ * Zensicalin oma laatikko (drawer), josta muutetaan vain avausnuolen suunta
+ * (ks. alempana). */
 
 :root {
   /* Rako kiskon ja sisällön väliin: sama kuin sisällysluettelon tekstin
@@ -138,6 +139,29 @@
   content: "";
 }
 
+/* Avausnuoli alas (suljettu) ja ylös (avattu) kaikilla leveyksillä. Teeman
+ * oletus on oikealle ja avattuna alas, mutta alaluvut aukeavat saman listan
+ * sisään niin kiskossa kuin kapean näytön laatikossakin, joten nuoli osoittaa
+ * siihen suuntaan, johon lista liikkuu. Kulmat lähtevät chevron-rightistä.
+ * --indeterminate on tila, jonka Zensical antaa avoinna olevalle luvulle
+ * sivun latautuessa. */
+.md-sidebar--primary .md-nav__item--nested .md-nav__icon:after {
+  transform: rotate(90deg);
+}
+
+.md-sidebar--primary
+  .md-nav__item--nested
+  .md-nav__toggle:checked
+  ~ .md-nav__link
+  .md-nav__icon:after,
+.md-sidebar--primary
+  .md-nav__item--nested
+  .md-toggle--indeterminate
+  ~ .md-nav__link
+  .md-nav__icon:after {
+  transform: rotate(-90deg);
+}
+
 @media screen and (min-width: 76.25em) {
 
   /* 1. Kisko: kiinteä, koko korkeus, oma tausta ja erotinviiva. Yläosaan jää
@@ -234,29 +258,6 @@
   .md-nav--primary > .md-nav__list > .md-nav__item:has(
       a[href^="https://tim.jyu.fi"])::after {
     margin-right: -0.6rem;
-  }
-
-  /* Avausnuoli alas (suljettu) ja ylös (avattu). Teeman oletus osoittaa
-   * oikealle, mikä sopii mobiilin liukuvaan paneeliin; kiskossa alikohdat
-   * aukeavat saman listan sisään, joten nuoli osoittaa siihen suuntaan,
-   * johon lista liikkuu. Kulmat lähtevät chevron-rightistä. --indeterminate
-   * on tila, jonka Zensical antaa avoinna olevalle luvulle sivun
-   * latautuessa. */
-  .md-sidebar--primary .md-nav__item--nested .md-nav__icon:after {
-    transform: rotate(90deg);
-  }
-
-  .md-sidebar--primary
-    .md-nav__item--nested
-    .md-nav__toggle:checked
-    ~ .md-nav__link
-    .md-nav__icon:after,
-  .md-sidebar--primary
-    .md-nav__item--nested
-    .md-toggle--indeterminate
-    ~ .md-nav__link
-    .md-nav__icon:after {
-    transform: rotate(-90deg);
   }
 
   /* 2. Muu sisältö alkaa kiskon oikealta puolelta. Padding .md-mainille eikä
