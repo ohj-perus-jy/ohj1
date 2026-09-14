@@ -31,7 +31,7 @@ Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korv
 
 TODO: Tarvitaanko seuraavaa lisäselvennystä
 
-Valmis tiedosto sisältää 39 riviä ja näyttää tältä: ![](#todo_lisaa_kuva)
+Valmis tiedosto sisältää 39 riviä ja näyttää tältä: (TODO: lisää kuva)
 
 TODO: Tarviiko ohjeen loppuosaa tästä eteenpäin muokata?
 

@@ -1,6 +1,6 @@
 # 16. luento
  
- ## Syksy 2026
+## Syksy 2026
 
  * Tulossa
 

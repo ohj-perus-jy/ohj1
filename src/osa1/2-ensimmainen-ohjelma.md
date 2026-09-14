@@ -302,7 +302,7 @@ toisistaan, eikä jälkimmäistä ole olemassa.
 ## 📝 Tehtävät
 
 <task>
-  <task-title>Tehtävä T1*: Tulostaminen <points>1 p.</points> </task-title>
+  <task-title num="T1*">Tulostaminen <points>1 p.</points></task-title>
   <handout>
 
   {{#include ../exercises/1-2-1-tulostaminen/handout.md}}
@@ -312,7 +312,7 @@ toisistaan, eikä jälkimmäistä ole olemassa.
 </task>
 
 <task>
-  <task-title>Tehtävä T2*: Ensimmäinen oma ohjelma <points>1 p.</points> </task-title>
+  <task-title num="T2*">Ensimmäinen oma ohjelma <points>1 p.</points></task-title>
   <handout>
 
   {{#include ../exercises/1-2-2-oma_ohjelma/handout.md}}

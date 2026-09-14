@@ -18,7 +18,7 @@ Harjoitustyöhön kuuluu kolme vaihetta: Vaihe 1 (suunnitelma), Vaihe 2 (työ 50
 Harjoitustyön vaiheet palautetaan esittelemällä ne ohjaajalle joko etä- tai
 lähiohjauksessa. Sähköpostin kautta palauttaminen ilman esittelyä on mahdollista
 vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
-(./index.md#tuki-ja-palaute)[etusivu]), sovi ohjausaika sähköpostitse
+[etusivu](./index.md#tuki-ja-palaute)), sovi ohjausaika sähköpostitse
 [ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
 
 ## Aikataulu ja takarajat
@@ -89,7 +89,7 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 ### Vaihe 1: Suunnitelma versiohallinnassa
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [vaiheittainen ohje](./git-ht-ohje.md)).
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
  1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
@@ -185,11 +185,11 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
 
  6. **Taulukko**: Käytetään taulukkoa tai listaa. 
  
-    Tietorakenteella täytyy olla jokin tarkoitus siten, että sinne tallennetaan useita arvoja, joita todella käytetään pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
+    Tietorakenteella täytyy olla jokin tarkoitus siten, että sinne tallennetaan useita arvoja, joita todella käytetään pelissä. Tietorakenteen käytön tulee parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. Keinotekoisia tai vailla käyttötarkoitusta olevia tietorakenteita ei hyväksytä. [Esimerkkejä.](#taulukko-silmukka-funktio) 
 
  7. **Silmukka**: Ainakin yksi silmukka. 
  
-    Silmukalla täytyy olla jokin tarkoitus siten, että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha)
+    Silmukalla täytyy olla jokin tarkoitus siten, että rakenteen avulla luetaan ja/tai käsitellään tietoa. Ei riitä että lisätään "tähtiä taivaalle silmukassa 10 kpl." Silmukalla tulee olla merkitys, joka parantaa koodin laatua ja helpottaa koodin lukemista, kirjoittamista tai edelleenkehittämistä. [Esimerkkejä.](#taulukko-silmukka-funktio)
 
  8. **Ei turhia literaaleja**: Kiinteiden lukuarvojen tai muiden sellaisten arvojen käyttö, jotka heikentävät koodin ylläpidettävyyttä, on kielletty.
 
@@ -209,8 +209,8 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
       Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne sen tekevät. Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`). Myös attribuutit dokumentoidaan `summary`-tagein. 
 11. **Funktio**: Pelissä on funktio.
 
-      Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#miten-saan-taulukon-silmukan-tai-funktion-peliini-taulukko-silmukka-funktio-areaqa-taulukko-silmukka-collapsetrue-idprt6kcamnzha) 
- 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#rider-settings) 
+      Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#taulukko-silmukka-funktio) 
+ 12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#jetbrains-rider) 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
 ## Usein kysytyt kysymykset ja muut vinkit {#ukk}
@@ -228,7 +228,7 @@ Jos et keksi, minkä tyylisen pelin haluaisit tehdä, katso, millaisia pelejä o
 Muista että voit tehdä muutakin kuin pelin!
 </details>
 
-<details closed>
+<details closed id="taulukko-silmukka-funktio">
 <summary>Miten saan taulukon, silmukan tai funktion peliini?</summary>
 
 ***
@@ -278,14 +278,14 @@ Mikäli omassa pelissä ei ole taulukkoa/listaa, silmukkaa tai funktiota, pitä�
 Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä klikkaamalla sitä hiiren oikealla painikkeella, ja kopioimalla linkin osoite.
 </details>
 
-<details closed>
+<details closed id="muukuinpeli">
 <summary>Voinko tehdä jotain muuta kuin peli?</summary>
 
 ***
 
 **Kyllä, vaihtoehtoja ovat esimerkiksi:**
 
- * [Janat-haaste](ht/janat)
+ * [Janat-haaste](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/janat)
  * [työaikaraportti](https://tim.jyu.fi/view/kurssit/tie/ohj1/harjoitustyo/tyoaikaraportti-tutorial )
  * [Tuulet netistä](https://tim.jyu.fi/view/kurssit/tie/ohj1/v/2022/syksy/ht/vesalsaa)
 
@@ -325,7 +325,7 @@ Lähtökohtaisesti on kolme tapaa, joita tällä opintojaksolla suositellaan:
 
 **Eri koneet, sama etävarasto**:
 
-Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./git.md#tehtyjen-muutosten-lähettäminen-etävarastoon-push)) ja ladataan ([`git pull`](./git.md#muutosten-hakeminen-etävarastosta-paikalliseen-varastoon-pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./git.md#git-ja-ryhmätyöskentely) osiosta.
+Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./git.md#push)) ja ladataan ([`git pull`](./git.md#pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./git.md#git-ja-ryhmätyöskentely) osiosta.
 
 **Pariohjelmointi**:
 

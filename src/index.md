@@ -27,9 +27,7 @@ harjoitustyön hyväksyminen, tenttitulokset) näet
 
 ## Uutiset
 
-Syksyn 2026 toteutus alkaa 31.8. Muista ilmoittautua!
-
-Jos ilmoittautumisessa on ongelmia tai et pääse kurssialueelle, ota yhteyttä
+Syksyn 2026 toteutus alkoi 31.8. Jos ilmoittautumisessa on ongelmia tai et pääse kurssialueelle, ota yhteyttä
 opettajiin sähköpostitse <ohj1-opet@jyu.onmicrosoft.com>.
 
 ## Tuki ja palaute
@@ -100,26 +98,9 @@ mihin ohjausryhmään olet ilmoittautunut.
 
 --> 
 
-<!-- details closed><summary>Miten saan Sisun kalenteriin ohjausaikoja näkyviin? (Avaa ohje klikkaamalla) </summary>
-
-1. Kirjaudu Sisuun
-2. Jos olet jo ilmoittautunut kurssille, klikkaa ylhäällä välilehteä *Opintokalenteri* tai klikkaa sitä hampurilaisvalikosta
-3. Selaa oikealla oikea kurssi näkyville, eli tässä tapauksessa Ohjelmointi 1
-4. Klikkaa oikealla olevaa oikealle osoittavaa väkästä Ohjelmointi 1 -kurssin kohdalla
-
-   ![Image](images/sisupalkki.png)
-
-5. Skrollaa alaspäin, kunnes tulee alaotsikko *Pääteohjaus*
-6. Jos ei vielä näy, niin skrollaa alaspäin, kunnes näkyy *Muiden ryhmien tiedot* ja klikkaa sitä
-7. Nyt voit skrollaamalla alaspäin haluamiesi pääteohjauksien kohdalta klikata nappulaa *Näytä tapahtumat kalenterissa*. 
-
-   ![Image](images/tapahtumat.jpg)
-
-8. Nyt kyseisen ryhmän ohjausajat näkyvät sinulla automaattisesti. Tarvittaessa voit poistaa ryhmän tapahtumia viikkokohtaisesti Tapahtumakalenterista. 
-
-</details -->
-
 ## Ohjeet Teams-etäohjaukseen liittymiseksi (tutkinto-opiskelijat) {#teams-jy}
+
+Jos olet Jyväskylän yliopiston tutkinto-opiskelija (joko IT-tiedekunnan tai muiden tiedekuntien opiskelija), voit liittyä Ohjelmointi 1 -kurssin Teams-kanavalle seuraavasti:
 
 1. Kirjaudu yliopiston tunnuksellasi Microsoft Teamsiin osoitteessa
     <https://teams.microsoft.com>. Käyttäjätunnus on muotoa `käyttäjätunnus@jyu.fi` (esim.
@@ -138,6 +119,8 @@ mihin ohjausryhmään olet ilmoittautunut.
 
  5. Testaa kaverin kanssa, että puhelu ja ruudun jakaminen toimii. Sinun tulee
 tarvittaessa sallia oikeudet käyttöjärjestelmäsi asetuksista. 
+
+Opettaja lähettää Ohjaus-kanavalle linkin, jonka avulla voit lähettää ohjauspyynnön.
 
 ## Ohjeet Teams-etäohjaukseen liittymiseksi (avoin yliopisto, erilliset opinto-oikeudet) {#teams-avoimet}
 

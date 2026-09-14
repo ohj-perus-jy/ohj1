@@ -24,7 +24,8 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000],
+	// 3000 = start.sh (mdbook serve), 8001 = zensical/run.sh
+	"forwardPorts": [3000, 8001],
 
 	// Configure tool-specific properties.
 	"customizations": {

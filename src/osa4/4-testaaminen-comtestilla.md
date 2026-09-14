@@ -44,6 +44,12 @@ oikealla puolella arvo, joka kutsun tulee palauttaa.
 <!-- Vaiheessa B: ComTest-valikko, testien tulosten lukeminen, epäonnistuneen
      testin tulkinta. Kuvat. -->
 
+Nyt voit Riderissa klikata Tests › Comtest: Generate Tests. Tämä luo ohjelmasi
+rinnalle testiprojektin. Testiprojektin ajaminen suorittaa kaikki määritellyt
+testitapaukset ja raportoi mahdolliset virheet. Aja testiprojekti klikkaamalla
+Tests › Run All Tests from Solution. Hetken odottelun jälkeen alareunassa
+pitäisi näkyä punainen merkki, ja teksti Passed.
+
 ## Testit ensin: tynkä, testit, toteutus
 
 <!-- Vaiheessa B: työtapa, jossa kirjoitetaan ensin dokumentaatio ja testit,
