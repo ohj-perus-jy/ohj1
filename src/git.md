@@ -56,7 +56,7 @@ Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 
 ### [Windows](#tab/windows)
  
-1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin.
+1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin.
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 3. Kirjoita hakupalkkiin *git bash*
 4. Valitse löytyvistä tuloksista *Git Bash*
@@ -92,7 +92,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [macOS](#tab/macos)
 
- 1. [Asenna Git-työkalu]() mikäli et ole vielä tehnyt niin
+ 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Avaa *Launchpad*
  3. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
  4. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
@@ -115,7 +115,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [Linux](#tab/linux)
 
- 1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin
+ 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai *Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva tämän ohjeen kannalta.
 
 Voit testata, että `git`-työkalu löytyy suorittamalla komento
