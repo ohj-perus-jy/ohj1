@@ -35,7 +35,8 @@ Muut tietotyypit:
 
 
 | Tietotyyppi | Kuvaus                          | Esimerkkejä arvoista          |
-| `string`    | Merkkijono                      |  | `"Hei!"`, `"12345"`           |
+| ----------- | ------------------------------- | ----------------------------- |
+| `string`    | Merkkijono                      | `"Hei!"`, `"12345"`           |
 | `bool`      | Totuusarvo                      | `true`, `false`               |
 | `char`      | Yksittäinen merkki              | `'a'`, `'1'`, `'#'`           |
 
