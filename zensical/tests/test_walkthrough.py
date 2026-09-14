@@ -79,6 +79,33 @@ def test_one_step_is_shown_at_a_time(opened):
     assert errors == []
 
 
+def test_the_walkthrough_opens_waiting_for_the_play_button(opened):
+    """Sivun avautuessa vaihe on alussaan ja näyttämöllä on iso toistonappi,
+    josta animaatio lähtee; Seuraava ottaa napin pois, ja tekstistä palatessa
+    esitys odottaa taas. Jaettu osoite avaa vaiheensa samoin."""
+    page, errors = opened()
+    typed = "document.querySelector('.koe-teksti').textContent"
+    assert page.is_visible(".jw-play")
+    assert page.evaluate(typed) == ""
+    assert page.locator(".jw-ring").count() == 0
+    page.click(".jw-play")
+    assert not page.is_visible(".jw-play")
+    page.wait_for_function(f"{typed} === 'Hei'")
+    page.wait_for_selector(".jw-ring")
+    page.click(".jw-mode")
+    page.click(".jw-mode")
+    assert page.is_visible(".jw-play")
+    assert page.evaluate(typed) == ""
+    page.click(".jw-next")
+    assert not page.is_visible(".jw-play")
+    other, other_errors = opened("#kirjaudu")
+    assert shown(other) == ["kirjaudu"]
+    assert other.is_visible(".jw-play")
+    assert other.locator(".koe-lopuksi.jw-hidden").count() == 1
+    assert other_errors == []
+    assert errors == []
+
+
 def test_markdown_inside_a_step_is_converted(opened):
     """markdown="1": aita ja alertti vaiheen sisällä käännetään kuten muualla."""
     page, errors = opened()
@@ -117,8 +144,12 @@ def test_previous_shows_the_finished_step_at_once(opened):
 
 
 def test_reduced_motion_shows_the_finished_step(opened):
-    """prefers-reduced-motion: Seuraavakin näyttää vaiheen valmiina."""
+    """prefers-reduced-motion: vaihe on heti valmiina ilman toistonappia, ja
+    Seuraavakin näyttää vaiheen valmiina."""
     page, errors = opened(reduced_motion="reduce")
+    assert not page.is_visible(".jw-play")
+    assert page.inner_text(".koe-teksti") == "Hei"
+    assert page.locator(".jw-ring").count() == 1
     page.click(".jw-next")
     assert "$ git status" in page.inner_text(".jw-terminal")
     assert page.locator(".jw-terminal .jw-hidden").count() == 0
@@ -202,19 +233,17 @@ def test_the_address_follows_the_step(opened):
 
 
 def test_contents_link_plays_the_step_from_the_start(opened):
-    """Sisällysluettelon linkki vaiheeseen toistaa sen animaation alusta, myös
-    nykyisen vaiheen linkki; jaettu osoite avaa vaiheen valmiina."""
+    """Sisällysluettelon linkki vaiheeseen toistaa sen animaation alusta heti
+    ilman toistonappia, myös nykyisen vaiheen linkki."""
     page, errors = opened()
     link = ".md-sidebar--secondary a[href='#kirjaudu']"
     page.click(link)
     page.wait_for_selector(".koe-lopuksi.jw-hidden", state="attached")
     assert shown(page) == ["kirjaudu"]
+    assert not page.is_visible(".jw-play")
     page.wait_for_selector(".koe-lopuksi:not(.jw-hidden)", state="attached")
     page.click(link)
     page.wait_for_selector(".koe-lopuksi.jw-hidden", state="attached")
-    other, other_errors = opened("#kirjaudu")
-    assert other.locator(".jw-hidden").count() == 0
-    assert other_errors == []
     assert errors == []
 
 
@@ -286,12 +315,14 @@ def test_speaker_reads_each_step_aloud(opened):
     """Kaiutin päälle: vaihe alkaa alusta kuten Toista-napista, ja sen oma ääni
     soi heti ja jokaisessa vaiheessa, johon siirrytään. Vanhasta tekstistä
     tehty ääni ei soi (koekirjan komento). Pois päältä ääni pysähtyy, mutta
-    vaihe ei ala alusta. Valinta muistetaan, mutta sivun avautuessa ääni ei ala
-    itsestään. Tekstinä kaiutinta ei ole."""
+    vaihe ei ala alusta. Valinta muistetaan, mutta sivun avautuessa (osoitteen
+    vaiheeseen) ääni alkaa vasta toistonapista. Tekstinä kaiutinta ei ole."""
     page, errors = opened(init=RECORD_AUDIO)
     typed = "document.querySelector('.koe-teksti').textContent"
     assert page.get_attribute(".jw-speak", "aria-pressed") == "false"
-    assert page.evaluate(typed) == "Hei"
+    page.click(".jw-play")
+    page.wait_for_function(f"{typed} === 'Hei'")
+    assert page.evaluate("played") == []
     page.click(".jw-speak")
     assert page.get_attribute(".jw-speak", "aria-pressed") == "true"
     assert page.evaluate("played") == ["selain.mp3"]
@@ -312,6 +343,8 @@ def test_speaker_reads_each_step_aloud(opened):
     page.wait_for_selector(LIVE)
     assert page.get_attribute(".jw-speak", "aria-pressed") == "true"
     assert page.evaluate("played") == []
+    page.click(".jw-play")
+    assert page.evaluate("played") == ["piilotus.mp3"]
     page.click(".jw-mode")
     assert not page.is_visible(".jw-speak")
     assert errors == []
@@ -346,6 +379,7 @@ def test_phone_opens_the_walkthrough_as_text(opened):
     assert not page.is_visible(".jw-stage")
     page.click(".jw-mode")
     assert shown(page) == ["avaa-sivu"]
+    assert page.is_visible(".jw-play")
     assert page.is_visible(".jw-zoom")
     assert page.inner_text(".jw-zoom") == "Koko kuva"
     assert page.evaluate(CANVAS_PER_STAGE) > 1.3
@@ -357,6 +391,8 @@ def test_close_up_keeps_the_marked_spot_in_view(opened):
     Koko kuva -napista kohtaus palaa näyttämön levyiseksi. Ikkunan
     kaventaminen esityksen ollessa auki ei vaihda tekstiin."""
     page, errors = opened()
+    page.click(".jw-play")
+    page.wait_for_selector(".jw-ring")
     page.set_viewport_size({"width": 420, "height": 800})
     page.wait_for_selector(".jw-zoom:not([hidden])")
     assert shown(page) == ["avaa-sivu"]
