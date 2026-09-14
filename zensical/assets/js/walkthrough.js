@@ -34,12 +34,14 @@
  * seuraa tapahtumaa eli keskittää kirjoitettavan, klikattavan tai korostetun
  * kohdan. Näyttämön kulman napista saa koko kuvan.
  *
- * Koko ruutu -napista esitys täyttää näytön: kohtaus vasemmalla ja vaiheen
- * teksti oikealla, jottei tekstiä tarvitse vierittää kuvan alta. Esc sulkee.
+ * Näyttämön oikeassa alakulmassa ovat kuvakkeet kuten videosoittimissa.
+ * Koko ruutu -kuvakkeesta esitys täyttää näytön: kohtaus vasemmalla ja
+ * vaiheen teksti oikealla, jottei tekstiä tarvitse vierittää kuvan alta.
+ * Sama kuvake tai Esc sulkee.
  *
  * Ääneen lukeminen: jos vaiheilla on äänitiedosto (<section data-audio>,
- * convert.py: walkthrough_audio; äänet tekee zensical/puhe.py), yläpalkissa
- * on kaiutin, josta lukemisen saa päälle ja pois.
+ * convert.py: walkthrough_audio; äänet tekee zensical/puhe.py), kulmassa on
+ * myös kaiutin, josta lukemisen saa päälle ja pois.
  *
  * Yksittäinen animaatio: tavallisen sivun <animation scenes="..." scene="...">
  * (convert.py: convert_animations) on yksi kohtaus ilman vaiheita, esim.
@@ -63,14 +65,22 @@
   /* Yksittäinen animaatio alkaa, kun näyttämöstä näkyy tämä osuus. */
   const IN_VIEW = 0.5;
 
-  /* Ääneen lukemisen kaiutin: aallot päällä, risti pois päältä
-   * (walkthrough.css näyttää niistä toisen). Valinta muistetaan selaimessa. */
+  /* Ääneen lukemisen kaiutin näyttämön kulmassa: aallot päällä, risti pois
+   * päältä (walkthrough.css näyttää niistä toisen). Valinta muistetaan
+   * selaimessa. */
   const SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true">'
     + '<path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/>'
     + '<path class="jw-speak-on" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
     + '<path class="jw-speak-off" d="M16 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
     + "</svg>";
   const SPEAK_KEY = "jyu-walk-speak";
+
+  /* Koko ruudun kuvake näyttämön kulmassa: nuolet ulos, kun koko ruutu ei ole
+   * päällä, ja sisään, kun on (walkthrough.css näyttää niistä toisen). */
+  const FULL = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+    + '<path class="jw-full-on" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+    + '<path class="jw-full-off" d="M9 4v5H4M15 4v5h5M20 15h-5v5M4 15h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+    + "</svg>";
 
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -476,12 +486,14 @@
       + `<p class="jw-notice" hidden>Kuvallinen esitys on tehty tietokoneen näytölle, `
       + `joten ohje näytetään tässä tekstinä.</p>`
       + `<div class="jw-actions">`
+      + `<button type="button" class="jw-mode">Näytä tekstinä</button></div></div>`
+      + `<div class="jw-screen"><div class="jw-stage"><div class="jw-canvas" aria-hidden="true"></div>`
+      + `<button type="button" class="jw-zoom" hidden>Koko kuva</button>`
+      + `<div class="jw-controls">`
       + (spoken ? `<button type="button" class="jw-speak" aria-pressed="false"`
         + ` aria-label="Lue ääneen" title="Lue ääneen">${SPEAKER}</button>` : "")
-      + `<button type="button" class="jw-mode">Näytä tekstinä</button>`
-      + `<button type="button" class="jw-full" aria-pressed="false">Koko ruutu</button></div></div>`
-      + `<div class="jw-screen"><div class="jw-stage"><div class="jw-canvas" aria-hidden="true"></div>`
-      + `<button type="button" class="jw-zoom" hidden>Koko kuva</button></div></div>`
+      + `<button type="button" class="jw-full" aria-pressed="false"`
+      + ` aria-label="Koko ruutu" title="Koko ruutu">${FULL}</button></div></div></div>`
       + `<div class="jw-live"><div class="jw-timeline" role="group" aria-label="Luvut ja vaiheet"`
       + ` style="grid-template-columns: ${parts.map((part) => `${part.steps.length}fr`).join(" ")}">${parts.map((part) =>
         `<div class="jw-part" style="flex-grow: ${part.steps.length}">`
@@ -658,8 +670,9 @@
       else speak();
     }
 
-    /* Koko ruutu: kohtaus vasemmalla ja vaiheen teksti oikealla
-     * (walkthrough.css: .jyu-walk--full). Selaimen koko näytön tila, kun se
+    /* Koko ruutu (näyttämön kulman kuvake): kohtaus vasemmalla ja vaiheen
+     * teksti oikealla (walkthrough.css: .jyu-walk--full). Selaimen koko
+     * näytön tila, kun se
      * onnistuu; muuten, esimerkiksi iPhonella, ikkunan täyttävä kerros.
      * native: koko näytön tila on päällä, joten sen päättyminen (Esc
      * selaimelle) sulkee myös kerroksen. */
@@ -668,7 +681,9 @@
       full = on;
       root.classList.toggle("jyu-walk--full", on);
       document.documentElement.classList.toggle("jw-full-open", on);
-      fullButton.textContent = on ? "Sulje koko ruutu" : "Koko ruutu";
+      const label = on ? "Sulje koko ruutu (Esc)" : "Koko ruutu";
+      fullButton.setAttribute("aria-label", label);
+      fullButton.title = label;
       fullButton.setAttribute("aria-pressed", String(on));
       if (on) {
         root.requestFullscreen?.().then(() => { native = full; }, () => {});

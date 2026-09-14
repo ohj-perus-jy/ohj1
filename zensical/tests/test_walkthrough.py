@@ -245,12 +245,20 @@ def test_text_mode_shows_the_whole_walkthrough(opened):
 
 
 def test_full_screen_puts_the_text_beside_the_scene(opened):
-    """Koko ruutu: kohtaus vasemmalla koko korkeudeltaan näkyvissä ja vaiheen
-    teksti sen oikealla puolella; napista ja Escistä takaisin sivulle."""
+    """Koko ruutu näyttämön oikean alakulman kuvakkeesta: kohtaus vasemmalla
+    koko korkeudeltaan näkyvissä ja vaiheen teksti sen oikealla puolella;
+    kuvakkeesta ja Escistä takaisin sivulle."""
     page, errors = opened()
+    stage = page.locator(".jyu-walk .jw-stage").bounding_box()
+    button = page.locator(".jw-full").bounding_box()
+    assert page.get_attribute(".jw-full", "aria-label") == "Koko ruutu"
+    assert button["x"] + button["width"] <= stage["x"] + stage["width"]
+    assert button["y"] + button["height"] <= stage["y"] + stage["height"]
+    assert button["x"] > stage["x"] + stage["width"] / 2
+    assert button["y"] > stage["y"] + stage["height"] / 2
     page.click(".jw-full")
     assert "jyu-walk--full" in page.get_attribute(".jyu-walk", "class")
-    assert page.inner_text(".jw-full") == "Sulje koko ruutu"
+    assert page.get_attribute(".jw-full", "aria-label") == "Sulje koko ruutu (Esc)"
     page.wait_for_function("document.querySelector('.jw-stage').clientWidth > 700")
     stage = page.locator(".jyu-walk .jw-stage").bounding_box()
     text = page.locator(".jyu-step--current").bounding_box()
@@ -266,7 +274,7 @@ def test_full_screen_puts_the_text_beside_the_scene(opened):
     page.keyboard.press("Escape")
     page.wait_for_function(
         "!document.querySelector('.jyu-walk').classList.contains('jyu-walk--full')")
-    assert page.inner_text(".jw-full") == "Koko ruutu"
+    assert page.get_attribute(".jw-full", "aria-label") == "Koko ruutu"
     assert errors == []
 
 
