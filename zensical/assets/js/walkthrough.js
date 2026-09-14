@@ -23,10 +23,12 @@
  *   data-order="n"  numeroidut ensin pienimmästä alkaen, sitten muut
  *                   dokumenttijärjestyksessä; saman elementin tapahtumat
  *                   järjestyksessä show, click, type
- * Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle, luvun pilleri, aikajanan
- * merkki ja linkki vaiheeseen (sisällysluettelo) animoivat. Edellinen näyttää
- * vaiheen heti valmiina, samoin jaetusta osoitteesta avautuva vaihe ja aina,
- * jos lukija on pyytänyt vähemmän liikettä (prefers-reduced-motion).
+ * Esitys avautuu odottamaan (sivun avautuessa, myös jaetusta osoitteesta, ja
+ * tekstistä palatessa): vaihe on alussaan ja näyttämöllä on iso toistonappi,
+ * josta animaatio lähtee. Seuraava-nappi, →-näppäin, pyyhkäisy vasemmalle,
+ * luvun pilleri, aikajanan merkki ja linkki vaiheeseen (sisällysluettelo)
+ * animoivat heti. Edellinen näyttää vaiheen heti valmiina, ja vähemmän
+ * liikettä pyytäneelle (prefers-reduced-motion) vaihe on aina valmiina.
  *
  * Kohtaus on piirretty tietokoneen näytölle. Kapeassa palstassa (puhelin)
  * ohje avautuu siksi tekstinä, ja esityksen saa napista. Jos esityksen avaa
@@ -81,6 +83,10 @@
     + '<path class="jw-full-on" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
     + '<path class="jw-full-off" d="M9 4v5H4M15 4v5h5M20 15h-5v5M4 15h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
     + "</svg>";
+
+  /* Iso toistonappi näyttämöllä, kun esitys odottaa alkamista (go). */
+  const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+    + '<path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
 
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -488,6 +494,7 @@
       + `<div class="jw-actions">`
       + `<button type="button" class="jw-mode">Näytä tekstinä</button></div></div>`
       + `<div class="jw-screen"><div class="jw-stage"><div class="jw-canvas" aria-hidden="true"></div>`
+      + `<button type="button" class="jw-play" aria-label="Aloita esitys" hidden>${PLAY}</button>`
       + `<button type="button" class="jw-zoom" hidden>Koko kuva</button>`
       + `<div class="jw-controls">`
       + (spoken ? `<button type="button" class="jw-speak" aria-pressed="false"`
@@ -513,6 +520,7 @@
     const stage = $(".jw-stage");
     const canvas = $(".jw-canvas");
     const zoomButton = $(".jw-zoom");
+    const playButton = $(".jw-play");
     const modeButton = $(".jw-mode");
     const fullButton = $(".jw-full");
     const speakButton = $(".jw-speak");
@@ -528,6 +536,8 @@
     let native = false;
     let speaking = false;
     let started = false;
+    /* Odottavan animaation käynnistys (go "wait"), kun toistonappi näkyy. */
+    let startPlay = null;
     let camera = { x: WIDTH / 2, y: HEIGHT / 2 };
 
     /* Piirrosalustan skaala ja siirto. Lähikuvassa camera on kohtauksen piste,
@@ -582,6 +592,9 @@
       applyCamera(false);
     };
 
+    /* animate: false näyttää vaiheen valmiina, true animoi, "wait" jättää
+     * vaiheen alkuunsa ja näyttämölle ison toistonapin, josta animaatio ja
+     * ääni lähtevät (open). Muu siirtyminen ottaa napin pois. */
     function go(index, animate, remember = true) {
       current = Math.max(0, Math.min(steps.length - 1, index));
       const step = steps[current];
@@ -602,26 +615,48 @@
        * hashchangea. */
       if (remember && step.heading?.id) history.replaceState(null, "", `#${step.heading.id}`);
 
-      scene.show(render(scenes, step.scene), { animate });
-      speak();
+      /* Edellinen odottava animaatio päästetään lupauksestaan vasta nyt,
+       * jolloin seuraava kohtaus on jo alkanut ja soitin keskeyttää sen. */
+      startPlay?.();
+      startPlay = null;
+      const wait = animate === "wait";
+      const ready = wait ? new Promise((resolve) => { startPlay = resolve; }) : undefined;
+      playButton.hidden = !wait;
+      scene.show(render(scenes, step.scene), { animate: Boolean(animate), ready });
+      if (!wait) speak();
     }
 
     const textMode = () => root.classList.contains("jyu-walk--text");
 
-    /* Linkki vaiheen tai luvun otsikkoon (sisällysluettelo, jaettu osoite).
-     * animate: sisällysluettelosta vaihe alkaa alusta; sivun avautuessa ja
-     * tekstistä palatessa se on valmiina. */
-    function followHash(animate = false) {
-      if (textMode()) return false;
+    /* Osoitteen vaihe: linkki vaiheen tai luvun otsikkoon (sisällysluettelo,
+     * jaettu osoite). -> vaiheen numero tai -1. */
+    function hashIndex() {
       const id = decodeURIComponent(location.hash.slice(1));
       const target = id && document.getElementById(id);
-      if (!target || !root.contains(target) || shell.contains(target)) return false;
+      if (!target || !root.contains(target) || shell.contains(target)) return -1;
       let index = steps.findIndex((step) => step.el.contains(target));
       if (index < 0) index = chapters.find((chapter) => chapter.heading === target)?.first ?? -1;
-      if (index < 0 || index >= steps.length) return false;
-      go(index, animate, false);
+      return index < steps.length ? index : -1;
+    }
+
+    /* Sisällysluettelon linkki: vaihe alkaa alusta. -> osuiko osoite vaiheeseen. */
+    function followHash() {
+      if (textMode()) return false;
+      const index = hashIndex();
+      if (index < 0) return false;
+      go(index, true, false);
       root.scrollIntoView({ block: "start" });
       return true;
+    }
+
+    /* Esityksen avaus sivun avautuessa ja tekstistä palatessa: osoitteen
+     * vaihe tai nykyinen, alussaan odottamassa toistonappia (go "wait").
+     * Vähemmän liikettä pyytäneelle vaihe on heti valmiina, koska animaatiota
+     * ei olisi. */
+    function open() {
+      const index = hashIndex();
+      go(index < 0 ? current : index, reducedMotion.matches ? false : "wait", false);
+      if (index >= 0) root.scrollIntoView({ block: "start" });
     }
 
     /* Tekstinä tai esityksenä. Esitykseen palatessa näyttämö tulee näkyviin,
@@ -636,14 +671,16 @@
       notice.hidden = !(text && root.clientWidth < SMALL_WIDTH);
       if (text) return;
       fit();
-      if (!followHash()) go(current, false);
+      open();
     }
 
     /* Ääneen lukeminen: kun kaiutin on päällä, vaiheen oma äänitiedosto soi
      * alusta aina vaiheeseen siirryttäessä. Vaiheelta, jonka ääni puuttuu tai
      * on tehty vanhasta tekstistä, ei kuulu mitään (convert.py:
-     * walkthrough_audio). Sivun avautuessa ääni ei ala itsestään (started):
-     * selain estäisi sen ennen lukijan ensimmäistä painallusta. */
+     * walkthrough_audio). Sivun avautuessa ääni alkaa vasta toistonapista
+     * (open), ja vähemmän liikettä pyytäneelle, jolle vaihe on heti valmiina,
+     * ei itsestään ollenkaan (started): selain estäisi sen ennen lukijan
+     * ensimmäistä painallusta. */
     function speak() {
       voice.pause();
       const src = steps[current].el.dataset.audio;
@@ -701,6 +738,15 @@
     $(".jw-next").addEventListener("click", next);
     $(".jw-prev").addEventListener("click", previous);
     $(".jw-replay").addEventListener("click", () => go(current, true));
+    /* Toistonappi: odottava animaatio ja ääni alkavat. Painallus on lukijan
+     * ele, joten selain sallii äänen. Klikkaus jatkaa näyttämölle, joka
+     * kohdistaa ohjeen nuolinäppäimiä varten. */
+    playButton.addEventListener("click", () => {
+      playButton.hidden = true;
+      startPlay?.();
+      startPlay = null;
+      speak();
+    });
     ticks.forEach((tick, i) => tick.addEventListener("click", () => go(i, true)));
     for (const button of chapterButtons) {
       button.addEventListener("click", () => go(chapters[Number(button.dataset.chapter)].first, true));
@@ -757,13 +803,13 @@
     });
     stage.addEventListener("pointercancel", () => { swipe = null; });
 
-    addEventListener("hashchange", () => followHash(true));
+    addEventListener("hashchange", followHash);
     /* Linkki nykyiseen vaiheeseen ei muuta osoitetta eikä laukaise
      * hashchangea, joten klikkaus toistaa vaiheen tässä. */
     document.addEventListener("click", (event) => {
       if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       const link = event.target.closest("a[href^='#']");
-      if (link && link.hash === location.hash) followHash(true);
+      if (link && link.hash === location.hash) followHash();
     });
 
     new ResizeObserver(() => {
@@ -776,7 +822,7 @@
       setMode(true);
     } else {
       fit();
-      if (!followHash()) go(0, false, false);
+      open();
     }
     started = true;
     /* Kehykset mitataan tekstistä, joka voi vaihtaa kirjasinta latauksen jälkeen. */

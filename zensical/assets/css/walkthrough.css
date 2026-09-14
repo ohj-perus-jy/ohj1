@@ -156,6 +156,53 @@
   color: var(--md-accent-bg-color);
 }
 
+/* Iso toistonappi (walkthrough.js: go "wait"): esitys avautuu odottamaan
+ * sitä. Nappi peittää koko näyttämön, joten kohtausta klikkaamalla esitys
+ * alkaa; näkyvä ympyrä on keskellä kuten videosoittimissa, värit kuin
+ * .jw-zoom. Kohdistuskehys ympyrään: koko näyttämön ympärillä se jäisi
+ * näyttämön overflow: hiddenin alle. Lähikuvan nappi (.jw-zoom) on päällä. */
+.jw-play {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.jw-play[hidden] {
+  display: none;
+}
+
+.jw-play svg {
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 60%);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+  transition: color 125ms, background-color 125ms;
+}
+
+.jw-play:hover svg,
+.jw-play:focus-visible svg {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+.jw-ui .jw-play:focus-visible {
+  outline: none;
+}
+
+.jw-play:focus-visible svg {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
 /* Kuvakkeet näyttämön oikeassa alakulmassa kuten videosoittimissa: kaiutin
  * (walkthrough.js: SPEAKER, setSpeaking) ja koko ruutu (FULL, setFull);
  * sama tumma pohja kuin lähikuvan napilla. Kaiuttimessa aallot, kun lukeminen
