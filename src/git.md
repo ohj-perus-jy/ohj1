@@ -263,26 +263,27 @@ mutta melkein helpompi on tässä vaiheessa:
 
 ### [Windows](#tab/windows)
 
-1. Avaa `git bash`, Pääte, tai `cmd`-komentorivi.
-1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan (ts. jossa harjoitustyösi
-   tulee sijaitsemaan tietokoneella jossa työskentelet). 
-
-    Omalla koneellasi hyvä kansionimi voisi olla esimerkiksi (levykirjain saattaa olla muukin) `C:\Users\Käyttäjä\ohj1\ht`. 
-    Agoran mikroluokassa kansio voi olla esimerkiksi `C:\MyTemp\OmaEtunimi\ht`.
+1. Avaa `git bash`, Pääte, tai `cmd`-komentorivi. Suosittelemme git bashia. 
+1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan, ts. jossa
+   harjoitustyösi tulee sijaitsemaan. Kansion nimi voisi olla esimerkiksi
+   `C:\Users\MunKayttaja\ohj1\ht`. Alla on esimerkki uuden kansion
+   luontikomennosta. Vaihda `MunKayttaja`-sanan kohdalle todellinen
+   kotihakemistosi nimi omassa käyttöjärjestelmässäsi. Se ei ole sama kuin
+   JY-käyttäjänimesi. Jos et tiedä mikä kotihakemistosi nimi on, kirjoita
+   avattuasi git bash aivan ensimmäiseksi komento `pwd`, joka tulostaa koko
+   kotihakemistosi polun. Sitten kirjoita: 
    
-> [!HUOMAUTUS] 
-> Tärkeää: Paina tarkasti mieleen kansion sijainti, sillä tulet tarvitsemaan sitä useita kertoja harkkatyötä tehdessä! 
-   
-1. Siirry tekemääsi kansioon `cd`-komentoja käyttämällä. Jos käytät Pääte-komentoriviä, komento vaihtamiseen on (vaihda `C:\...` jne kohdalle äsken luomasi kansion polku): 
+        mkdir /c/Users/MunKayttaja/ohj1/ht
 
-        cd C:\Users\Käyttäjä\ohj1\ht
+1. Siirry tekemääsi kansioon `cd`-komentoja käyttämällä esimerkiksi seuraavasti:
 
-    git bash -komentorivillä komento vaihtamiseen on:
+        cd /c/Users/MunKayttaja/ohj1/ht
 
-        cd /c/Users/Käyttäjä/ohj1/ht
-
-    Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston nimen voi vaihtaa myöhemminkin.
-    Kyseinen kansio toimii nyt projektin juurikansiona. Jatkossa kaikki komennot annetaan tässä kansiossa. 
+    Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi sanan
+    `harjoitustyo´ tai pelin nimen. Kansion nimen voi vaihtaa myöhemminkin.
+    Kyseinen kansio toimii nyt projektin juurikansiona. Jatkossa kaikki komennot
+    annetaan tässä kansiossa. Paina tarkasti mieleen kansion sijainti, sillä
+    tulet tarvitsemaan sitä useita kertoja harkkatyötä tehdessä! 
 
  2. Anna komentoriviltä tässä kansiossa komento. Huomaa välilyönti ja piste lopussa, nekin on annettava.
 
@@ -306,12 +307,13 @@ mutta melkein helpompi on tässä vaiheessa:
 ### [macOS ja Linux](#tab/macos)
 
 1. Avaa komentorivi, Pääte tai Terminal.
-1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan, ts. jossa harjoitustyösi
-   tulee sijaitsemaan. macOS:ssa ja Linuxissa hakemisto järkevintä lienee tehdä hakemisto kotihakemiston alle.
-   Alla on esimerkki uuden kansion luontikomennosta. 
-   Vaihda `MunKayttaja`-sanan kohdalle todellinen kotihakemistosi nimi.
-   Jos et tiedä mikä kotihakemistosi nimi on, kirjoita avattuasi Pääte aivan ensimmäiseksi 
-   komento `pwd`, joka tulostaa koko kotihakemistosi polun.
+1. Tee uusi hakemisto, jonka haluat menevän versionhallintaan, ts. jossa
+   harjoitustyösi tulee sijaitsemaan. Järkevintä lienee tehdä hakemisto
+   kotihakemiston alle. Alla on esimerkki uuden kansion luontikomennosta. Vaihda
+   `MunKayttaja`-sanan kohdalle todellinen kotihakemistosi nimi omassa
+   käyttöjärjestelmässäsi. Se ei ole sama kuin JY-käyttäjänimesi. Jos et tiedä
+   mikä kotihakemistosi nimi on, kirjoita avattuasi Pääte aivan ensimmäiseksi
+   komento `pwd`, joka tulostaa koko kotihakemistosi polun. Sitten kirjoita:
 
         mkdir /Users/MunKayttaja/ohj1/ht
 
