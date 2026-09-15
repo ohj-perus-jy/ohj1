@@ -215,7 +215,7 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 ### [macOS](#tab/macos)
 
-1. Avaa Pääte tai Termimal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
+1. Avaa Pääte tai Terminal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
 2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
 
     ```bash
@@ -448,7 +448,11 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
     Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
+    <animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
     ![Git bash avattu](images/gitbash-avattu2.png)
+
+    </animation>
 
 *** 
 

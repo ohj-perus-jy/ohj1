@@ -6,22 +6,26 @@ Tässä dokumentissa kerrotaan miten harjoitustyön suunnitelmaa, lähdekoodia s
 muita tiedostoja (mm. kuvat) käsitellään Git-versiohallinnan avulla Ohjelmointi
 1 -opintojaksolla.
 
+Tämä ohje koskee vain niitä opiskelijoita, jotka palauttavat harjoitustyönsä
+Git-etävarastoon. Jos haluat palauttaa harjoitustyön ZIP-pakettina, voit ohittaa tämän
+ohjeen. **Palauttaminen Git-muodossa on erittäin suositeltavaa niille, jotka
+jatkavat seuraaville ohjelmointikursseille.**
+
 Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti.
 Git-versiohallinnan käyttö on olennainen osa ohjelmistokehitystä, ja sen
 perusteiden ymmärtäminen on tärkeää paitsi tällä opintojaksolla, myös
-myöhemmissä opinnoissa ja työelämässä.
-
-> [!VAROITUS]
-> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
-> JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
-> että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat
-> tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti
-> käyttäjätunnukseen tunnisteella `kayttajatunnus`. Korvaa tämä aina omalla
-> käyttäjätunnuksellasi.
+myöhemmissä tietojenkäsittelyn opinnoissa ja ohjelmistoalan työssä.
 
 ## Ennen kuin aloitat
 
 Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut.md), ellet ole vielä tehnyt niin.
+
+Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
+JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
+että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat
+tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti
+käyttäjätunnukseen tunnisteella `kayttajatunnus`. Korvaa tämä aina omalla
+käyttäjätunnuksellasi.
 
 ## Mikä Git on
 
@@ -56,15 +60,20 @@ Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 
 ### [Windows](#tab/windows)
  
-1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
+1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin.
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 3. Kirjoita hakupalkkiin *git bash*
 4. Valitse löytyvistä tuloksista *Git Bash*
+
+<animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
 ![Git bash startmenu](images/gitbash-startmenu.png)
 
 Tuloksena pitäisi avautua seuraava bash-komentorivipääte:
 
 ![Git bash avattu](images/gitbash-avattu.png)
+
+</animation>
 
 Voit testata, että Git-työkalu löytyy suorittamalla komento
 
@@ -87,7 +96,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [macOS](#tab/macos)
 
- 1. [Asenna Git-työkalu]() mikäli et ole vielä tehnyt niin!
+ 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Avaa *Launchpad*
  3. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
  4. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
@@ -110,7 +119,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [Linux](#tab/linux)
 
- 1. [Asenna Git-työkalu](tyokalut.md) mikäli et ole vielä tehnyt niin!
+ 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai *Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva tämän ohjeen kannalta.
 
 Voit testata, että `git`-työkalu löytyy suorittamalla komento
@@ -133,33 +142,35 @@ Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 Alla on lyhyt muistilista tyypillisimmistä tällä kurssilla vastaan tulevista tilanteista gitin kanssa. Lue kuitenkin **ensin** tarkemmat kuvaukset tämän dokumentin seuraavista luvuista.
 
-| Tavoite                                                                           | Toimenpide                                                                                                                                                                                                               | Komento                                                                                       | Linkki ohjeeseen |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |------------------- |
-| Aloitan harjoitustyön                                                             | Teen **fork**-toiminnolla gitlab.jyu.fi-palvelussa uuden etävaraston.                                                                                                                                                    |                                                                                               | [Hyppää ohjeeseen](#fork)
-| Menen koneelle, jossa sisältöä ei vielä ole                                       | Haen GitLabista etävarastoni HTTPS-osoitteen ja kloonaan etävaraston omalle koneelle. Huomaa piste komennon päätteeeksi.                                                                                                 | `git clone [etävaraston osoite] .`                                                            | [Hyppää ohjeeseen](#clone)
-| Menen koneelle jossa sisältö jo on                                                | Päivitän etävaraston version koneelle.                                                                                                                                                                                   | `git pull`                                                                                    | [Hyppää ohjeeseen](#pull)
-| Muutan tai lisään tiedostoja (esimerkiksi suunnitelmakuva `suunnitelma`-kansioon) | (1) Lisään muuttuneet ja uudet tiedostot *stage*-tilaan, **ja** (2) siirrän *stage*-tilan tiedon lokaaliin varastoon, **ja** (3) "pusken" tekemäni `commit`in etävarastoon. <br /><br />Huomaa kolme erillistä komentoa. | `git add --all`<br /><br />`git commit -m "Muutoksia kuvaava viesti."`<br /><br /> `git push` | [Hyppää ohjeeseen](#add-commit)
+| Tavoite                                                                           | Toimenpide                                                                                                               | Komento                                                                | Linkki ohjeeseen                                                     |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Aloitan harjoitustyön                                                             | Teen **fork**-toiminnolla gitlab.jyu.fi-palvelussa uuden etävaraston.                                                    |                                                                        | [Hyppää ohjeeseen](#fork)                                            |
+| Menen koneelle, jossa sisältöä ei vielä ole                                       | Haen GitLabista etävarastoni HTTPS-osoitteen ja kloonaan etävaraston omalle koneelle. Huomaa piste komennon päätteeeksi. | `git clone [etävaraston osoite] .`                                     | [Hyppää ohjeeseen](#clone)                                           |
+| Menen koneelle jossa sisältö jo on                                                | Päivitän etävaraston version koneelle.                                                                                   | `git pull`                                                             | [Hyppää ohjeeseen](#pull)                                            |
+| Muutan tai lisään tiedostoja (esimerkiksi suunnitelmakuva `suunnitelma`-kansioon) | (1) Lisään muuttuneet ja uudet tiedostot *stage*-tilaan, **ja** (2) siirrän *stage*-tilan tiedon lokaaliin varastoon     | `git add --all`<br /><br />`git commit -m "Muutoksia kuvaava viesti."` | [Hyppää ohjeeseen](#add-commit)                                      |
+| Lähetän muutokset etävarastoon                                                    | Luon tarvittaessa pääsytunnuksen GitLabiin. Sitten lähetän paikallisen varaston muutokset etävarastoon.                  | `git push`                                                             | [Hyppää ohjeeseen (token)](#token), [Hyppää ohjeeseen (push)](#push) |
 
 Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiinnittää erityistä huomiota siihen, että tekee `pull`, `commit`- ja `push`-toimintoja riittävän usein konfliktien välttämiseksi. 
 
 `git status`-komentoa voi viljellä missä tahansa välissä. Se kertoo paikallisen varaston tilasta, muun muassa mitä tiedostoja on muutettu, poistettu tai lisätty.
 
-## Oman etävaraston luominen GitLab-palveluun {#fork}
 
 > [!HUOMAUTUS]
 > 
-> Harjoitustyön suunnitelman viemisestä versiohallintaan on myös 
-> [videotutoriaali](https://youtu.be/MQJ69rmd1sw). Huomaa, että videolla projektin alku tehdään käyttäen **Visual Studiota**, mutta 
-> voit käyttää myös **Rideria**.
+> Harjoitustyön pohjan viemisestä versiohallintaan 
+> on myös [vaiheittainen kuvitettu ohje](git-ht-ohje.md). Voit seurata joko tätä tekstipohjaista ohjetta tai
+> kuvitettua ohjetta. Molempia ei tarvitse lukea.
+
+## Oman etävaraston luominen GitLab-palveluun {#fork}
 
 Tässä vaiheessa luodaan henkilökohtainen etävarasto (engl. *remote repository*) [gitlab.jyu.fi](https://gitlab.jyu.fi)-palveluun. Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen Git-varastoosi kurssin alkuasetukset.
 
 **Tämä vaihe tehdään kurssilla <u>yhden kerran</u>.** 
 
- 1. (a) Jos sinulla on JY-tunnukset: Kirjaudu gitlab.jyu-palveluun (<https://gitlab.jyu.fi/>) JY-tunnuksilla.\ 
+ 1. (a) Jos sinulla on JY-tunnukset: Kirjaudu gitlab.jyu-palveluun (<https://gitlab.jyu.fi/>) JY-tunnuksilla. 
     (b) Jos sinulla ei ole JY-tunnuksia: Tee tunnukset GitHub-palveluun (<https://github.com>), ja kirjaudu sisään.
  2. (a) JY: Avaa Ohj1-kurssin pohjaprojekti selaimessa:
-   <https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht>\
+   <https://gitlab.jyu.fi/tie/ohj1/ohj1ht>
     (b) Ei-JY: Avaa Ohj1-kurssin pohjaprojekti selaimessa:
    <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht.git>
  3. (a) JY: Valitse oikeasta ylänurkasta `fork`
@@ -386,6 +397,40 @@ rivin `.jar` perään rivi:
 
     !kerho.jar
 
+## Pääsytunnuksen (token) luominen GitLabiin {#token}
+
+GitLabin etävarastoon ei voi lähettää muutoksia ilman tunnistautumista. Jotta
+GitLab tietää, kuka olet, luodaan *pääsytunnus* (engl. *personal access token*),
+jonka annat ensimmäisellä pushilla (seuraava vaihe) salasanan sijaan. GitLabiin
+ei voi enää lähettää muutoksia salasanaa käyttäen. 
+
+**Tämä vaihe tehdään <u>jokaisella</u> tietokoneella ennen ensimmäistä pushia.**
+
+ 1. Kirjaudu gitlab.jyu.fi-palveluun ja valitse oikeasta yläkulmasta oman
+    kuvakkeesi alta **Preferences**.
+ 2. Valitse vasemmasta valikosta **Access › Personal access tokens**.
+ 3. Avaa **Generate token** -valikko ja valitse **Legacy token**.
+ 4. Anna tunnukselle nimi, josta tunnistat koneen, esimerkiksi `ohj1-kotikone`.
+ 5. Vaihda **Expiration date** -kohtaan päivä noin vuoden päähän. Oletuksena
+    tunnus vanhenee jo kuukauden kuluttua.
+ 6. Valitse oikeuksista (**Select scopes**) **read_repository** ja
+    **write_repository**.
+ 7. Vieritä lomakkeen loppuun ja paina **Generate token**.
+ 8. Kopioi tunnus leikepöydälle kentän vieressä olevalla kopiointipainikkeella.
+    GitLab näyttää tunnuksen vain tämän kerran, joten pidä sivu auki, kunnes
+    push on onnistunut. Et voi kopioida tunnusta myöhemmin, vaan joudut
+    luomaan uuden.
+
+Tunnusta ei tarvitse tallentaa minnekään: Windowsissa ja macOS:ssä Git muistaa
+sen tällä koneella ensimmäisen pushin jälkeen. Jos hävität tunnuksen, taikka
+teet harjoitustyötä myös toisella koneella, luot uuden tunnuksen samalla
+tavalla kuin yllä. Jos kone katoaa, poista sen tunnus GitLabin tunnuslistasta
+(**Revoke**); muiden koneiden tunnukset toimivat edelleen.
+
+> [!VAROITUS]
+> Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
+> suunnitelmaan, koodiin tai viestiin.
+
 ## Tehtyjen muutosten lähettäminen etävarastoon (push) {#push}
 
 Tässä vaiheessa paikalliseen tietovarastoon lähetetyt muutokset 
@@ -397,19 +442,28 @@ Avaa Pääte (macOS), Git Bash (Windows) tai muu komentorivi. Siirry harjoitusty
 
     git push
 
-Ensimmäisellä kerralla sinulta kysytään käyttäjätunnusta ja salasanaa.
-Valitse kirjautumisikkunassa muodoksi Salasana (Password), **ei** Token.
+Ensimmäisellä kerralla Git kysyy käyttäjätunnustasi ja
+[pääsytunnusta](#token). Anna käyttäjätunnus **lyhyessä muodossa**
+`käyttäjätunnus` ilman @-merkkiä ja loppuosaa.
 
-Anna käyttäjätunnus **lyhyessä muodossa** `käyttäjätunnus` ilman @-merkkiä 
-ja loppuosaa. Salasana on se, jota käytät JY-verkossa. 
+- **Windows**: Git Credential Manager avaa kirjautumisikkunan. Valitse
+  **Token** ja kirjoita käyttäjätunnuksesi. Pääsytunnusta ei kirjoiteta vaan
+  liitetään: napsauta **Personal access token** -kenttää hiiren oikealla
+  painikkeella ja valitse **Paste** (tai paina <kbd>Ctrl</kbd> + <kbd>V</kbd>).
+  Kenttään tulee pelkkiä pisteitä. Windows muistaa tunnuksen, eikä sitä kysytä
+  uudelleen.
+- **macOS**: kirjautumisikkunaa ei ole, eikä tunnuksen ja salasanan välillä
+  valita. Pääte kysyy ensin `Username`, johon kirjoitat käyttäjätunnuksesi, ja
+  sitten `Password`, johon liität pääsytunnuksen (<kbd>Cmd</kbd> +
+  <kbd>V</kbd> ja <kbd>Enter</kbd>). Liitetty tunnus ei näy ruudulla. macOS
+  tallentaa sen avainnippuun, eikä sitä kysytä uudelleen.
+- **Linux**: kuten macOS:ssä, mutta Git kysyy tunnukset jokaisella pushilla,
+  ellei tunnusten tallennusta ole otettu käyttöön.
 
-Mikäli annat salasanan väärin, 
-joudut muokkaamaan kirjautumistietojasi, ks. [Push ei onnistu (remote: HTTP Basic: Access denied)](#credentials).
-
-MacOS-käyttäjät huomatkaa, että salasana on KIRJOITETTAVA vaikka sen kohdalla näkyisi
-avaimen kuva. Kun salasanaa kirjoitetaan, ei näyttöön tule mitään.  Lopuksi
-on painettava enter. Jos tässä tulee virhe, niin gitlab-salasana on poistettava
-avainnipusta.
+Mikäli annat tunnukset väärin, joudut muokkaamaan kirjautumistietojasi, ks.
+[Push ei onnistu (remote: HTTP Basic: Access denied)](#credentials). Sama
+virhe tulee, kun pääsytunnus vanhenee vuoden päästä. Luo silloin uusi tunnus ja
+vaihda se vanhan tilalle.
 
 Tarkista tämän jälkeen Gitlab-osoitteestasi, että sieltä löytyy lähettämäsi
 tiedostot (alkukurssista ne kuvat).
@@ -570,7 +624,10 @@ URL-osoitetta.
 Huomaa, että virheilmoitus voi näyttää hieman erilaiselta riippuen siitä
 käytätkö komentoriviä vai jotain muuta Git-asiakasohjelmaa.
 
-**Syy (vaihtoehto 1):** Etävaraston url-osoitteesta puuttuu lopusta osa `.git`.
+**Syy (vaihtoehto 1):** Yrität pushata käyttäen JY-salasanaasi. GitLab ei enää
+hyväksy salasanoja, vaan sinun tulee käyttää [pääsytunnusta](#token), eli token-kirjautumista.
+
+**Syy (vaihtoehto 2):** Etävaraston url-osoitteesta puuttuu lopusta osa `.git`.
 
 **Korjaus:** Anna git bashissa / Päätteessä komento `git remote -v`
 
@@ -587,23 +644,6 @@ git remote set-url URL
 
 Kokeile nyt tehdä git push.
 
-**Syy (vaihtoehto 2):** Olet kirjautumisikkunassa kirjoittanut käyttäjätunnuksesi tai salasanasi väärin. 
-
-**Korjaus Windowsilla:** Tarkistetaan käyttäjänimi ja kirjoitetaan salasana uudelleen.
-
-1. Avaa Control panel (ohjauspaneeli). 
-2. Valitse 'User accounts' (käyttäjätilit).
-3. Valitse 'Manage your credentials' (Tunnistetietojen hallinta).
-
-![Win credman 1](images/win-credman-1.png)
-
-4. Valitse 'Windows credentials' (Windows-tunnistetiedot). 
-
-![Win credman 2](images/win-credman-2.png)
-
-5. Laajentamalla gitin kohtaa, pitäisi päästä muokkaamaan asetettuja käyttäjänimeä ja salasanaa.
-
-**Korjaus Mac:** Sama homma macOS:ssa (??): <https://help.github.com/en/github/using-git/updating-credentials-from-the-osx-keychain>
 </details>
 
 <details collapsed>

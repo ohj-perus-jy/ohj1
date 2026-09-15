@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="384" class="svgbob">
+  <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
+  stroke: var(--md-default-fg-color);
+  stroke-width: 2;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+}
+
+.svgbob text {
+  white-space: pre;
+  fill: var(--md-default-fg-color);
+  font-family: var(--md-code-font-family);
+  font-size: 14px;
+}
+
+.svgbob rect.backdrop {
+  stroke: none;
+  fill: transparent;
+}
+
+.svgbob .broken {
+  stroke-dasharray: 8;
+}
+
+.svgbob .filled {
+  fill: var(--md-default-fg-color);
+}
+
+.svgbob .bg_filled {
+  fill: transparent;
+  stroke-width: 1;
+}
+
+.svgbob .nofill {
+  fill: transparent;
+}
+
+.svgbob .end_marked_arrow {
+  marker-end: url(#arrow);
+}
+
+.svgbob .start_marked_arrow {
+  marker-start: url(#arrow);
+}
+
+.svgbob .end_marked_diamond {
+  marker-end: url(#diamond);
+}
+
+.svgbob .start_marked_diamond {
+  marker-start: url(#diamond);
+}
+
+.svgbob .end_marked_circle {
+  marker-end: url(#circle);
+}
+
+.svgbob .start_marked_circle {
+  marker-start: url(#circle);
+}
+
+.svgbob .end_marked_open_circle {
+  marker-end: url(#open_circle);
+}
+
+.svgbob .start_marked_open_circle {
+  marker-start: url(#open_circle);
+}
+
+.svgbob .end_marked_big_open_circle {
+  marker-end: url(#big_open_circle);
+}
+
+.svgbob .start_marked_big_open_circle {
+  marker-start: url(#big_open_circle);
+}
+
+</style>
+  <defs>
+    <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 0,4 4,2 0,0"></polygon>
+    </marker>
+    <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+    </marker>
+    <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="2" class="filled"></circle>
+    </marker>
+    <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+    </marker>
+    <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+    </marker>
+  </defs>
+  <rect class="backdrop" x="0" y="0" width="536" height="384"></rect>
+  <text x="2" y="12" >ohj1</text>
+  <text x="26" y="44" >demot</text>
+  <text x="50" y="76" >demo1</text>
+  <text x="74" y="108" >demo1.sln</text>
+  <text x="74" y="124" >Lumiukko</text>
+  <text x="82" y="140" >&#39;</text>
+  <line x1="88" y1="136" x2="96" y2="136" class="solid"></line>
+  <text x="106" y="140" >Lumiukko.cs</text>
+  <text x="74" y="172" >HelloWorld</text>
+  <text x="74" y="204" >...</text>
+  <text x="50" y="236" >demo2</text>
+  <text x="74" y="268" >Lumiukko2</text>
+  <text x="74" y="284" >LukujenLaskemista</text>
+  <text x="74" y="300" >...</text>
+  <text x="26" y="332" >harjoitustyo</text>
+  <text x="50" y="364" >...</text>
+  <text x="202" y="140" >jne.</text>
+  <polygon points="176,164 168,168 176,172" class="filled"></polygon>
+  <line x1="176" y1="168" x2="184" y2="168" class="solid"></line>
+  <text x="234" y="172" >tehtiin</text>
+  <text x="298" y="172" >nyt</text>
+  <polygon points="176,196 168,200 176,204" class="filled"></polygon>
+  <line x1="176" y1="200" x2="184" y2="200" class="solid"></line>
+  <text x="194" y="204" >vastaavasti</text>
+  <text x="290" y="204" >voisit</text>
+  <text x="346" y="204" >tehdä</text>
+  <text x="442" y="204" >projekteja</text>
+  <polygon points="176,228 168,232 176,236" class="filled"></polygon>
+  <line x1="176" y1="232" x2="184" y2="232" class="solid"></line>
+  <text x="194" y="236" >vastaavasti</text>
+  <text x="290" y="236" >voisit</text>
+  <text x="346" y="236" >tehdä</text>
+  <text x="442" y="236" >solutioneja</text>
+  <g>
+    <line x1="12" y1="16" x2="12" y2="324" class="solid"></line>
+    <line x1="12" y1="40" x2="24" y2="40" class="solid"></line>
+    <path d="M 12,324 A 4,4 0,0,0 16,328" class="nofill"></path>
+    <line x1="16" y1="328" x2="24" y2="328" class="solid"></line>
+  </g>
+  <g>
+    <line x1="36" y1="48" x2="36" y2="68" class="solid"></line>
+    <path d="M 36,68 A 4,4 0,0,0 40,72" class="nofill"></path>
+    <line x1="40" y1="72" x2="48" y2="72" class="solid"></line>
+  </g>
+  <g>
+    <line x1="36" y1="80" x2="36" y2="228" class="solid"></line>
+    <path d="M 36,228 A 4,4 0,0,0 40,232" class="nofill"></path>
+    <line x1="40" y1="232" x2="48" y2="232" class="solid"></line>
+  </g>
+  <g>
+    <line x1="60" y1="80" x2="60" y2="196" class="solid"></line>
+    <line x1="60" y1="104" x2="72" y2="104" class="solid"></line>
+    <line x1="60" y1="120" x2="72" y2="120" class="solid"></line>
+    <line x1="60" y1="168" x2="72" y2="168" class="solid"></line>
+    <path d="M 60,196 A 4,4 0,0,0 64,200" class="nofill"></path>
+    <line x1="64" y1="200" x2="72" y2="200" class="solid"></line>
+  </g>
+  <g>
+    <line x1="60" y1="240" x2="60" y2="292" class="solid"></line>
+    <line x1="60" y1="264" x2="72" y2="264" class="solid"></line>
+    <line x1="60" y1="280" x2="72" y2="280" class="solid"></line>
+    <path d="M 60,292 A 4,4 0,0,0 64,296" class="nofill"></path>
+    <line x1="64" y1="296" x2="72" y2="296" class="solid"></line>
+  </g>
+  <g>
+    <line x1="36" y1="336" x2="36" y2="356" class="solid"></line>
+    <path d="M 36,356 A 4,4 0,0,0 40,360" class="nofill"></path>
+    <line x1="40" y1="360" x2="48" y2="360" class="solid"></line>
+  </g>
+  <g>
+    <text x="194" y="172">tä</text>
+    <text x="210" y="172">mä</text>
+  </g>
+  <g>
+    <text x="394" y="204">lisä</text>
+    <text x="426" y="204">ä</text>
+  </g>
+  <g>
+    <text x="394" y="236">lisä</text>
+    <text x="426" y="236">ä</text>
+  </g>
+</svg>
