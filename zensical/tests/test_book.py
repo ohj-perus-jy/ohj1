@@ -36,6 +36,11 @@ def chapter_titles() -> list[str]:
         if href.endswith(".md"):
             order.append(href)
     for child, parent in convert.NEST_UNDER.items():
+        # Kuten convert.build_nav: siirto koskee vain SUMMARY.md:n lukuja.
+        # Sivu voi olla poissa käytöstä (pois SUMMARY.md:stä) vaikka siirto
+        # on yhä convert.py:ssä.
+        if child not in order or parent not in order:
+            continue
         order.remove(child)
         order.insert(order.index(parent) + 1, child)
     return [next(line[2:].strip()
