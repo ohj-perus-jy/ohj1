@@ -1,6 +1,6 @@
 # Harjoitustyö
 
-Tällä sivulla kerrotaan [harjoitustyön aikataulusta](#aikataulu), [palautustavan valinnasta](#palautustapa), kuvataan [harjoitustyön vaiheet](#vaiheiden-kuvaukset), sekä kerrotaan [harjoitustyöstä tarkistettavat asiat](#vaatimukset).
+Tällä sivulla kerrotaan [harjoitustyön aikataulusta](#aikataulu), kuvataan [harjoitustyön vaiheet](#vaiheiden-kuvaukset), sekä kerrotaan [harjoitustyöstä tarkistettavat asiat](#vaatimukset).
 
 ## Mikä on harjoitustyö
 
@@ -21,33 +21,6 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 [etusivu](./index.md#tuki-ja-palaute)), sovi ohjausaika sähköpostitse
 [ohj1-opet@jyu.onmicrosoft.com](mailto:ohj1-opet@jyu.onmicrosoft.com).
 
-## Palautustapa: Git-etävarasto tai ZIP-paketti {#palautustapa}
-
-Harjoitustyön voi palauttaa kahdella tavalla: Git-etävarastona tai
-ZIP-pakettina. Valitse palautustapa alta. Käytä samaa palautustapaa
-kaikissa kolmessa vaiheessa.
-
-#### [Git-etävarasto](#tab/git)
-
-Valitsit palautustavaksi Git-etävaraston. Harjoitustyö tallennetaan
-GitLab- tai GitHub-palvelussa olevaan omaan etävarastoon, jonka osoite
-ilmoitetaan TIMin [Oma eteneminen -sivulla](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
-
-**Tämä tapa on erittäin suositeltava, jos jatkat seuraaville
-ohjelmointikursseille**, sillä Git-versiohallinta on käytössä myöhemmillä ohjelmointikursseilla.
-***
-
-#### [ZIP-paketti](#tab/zip)
-
-Valitsit palautustavaksi ZIP-paketin. Harjoitustyökansio pakataan
-ZIP-tiedostoksi ja ladataan TIMin
-[Oma eteneminen -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
-Git-työkalua ei tarvita, ja voit ohittaa [Git-ohjeen](./git.md) kokonaan.
-
-Huomaa, että ZIP-paketti pitää ladata TIMiin uudelleen jokaisessa vaiheessa. Ota
-itse säännöllisesti varmuuskopioita työstäsi.
-
-***
 
 ## Aikataulu ja takarajat
 
@@ -114,6 +87,32 @@ itse säännöllisesti varmuuskopioita työstäsi.
 
 ## Harjoitustyön vaiheiden kuvaukset ja tarkistuslistat {#vaiheiden-kuvaukset}
 
+Harjoitustyön voi palauttaa kahdella tavalla: Git-etävarastona tai
+ZIP-pakettina. Valitse palautustapa alta. Käytä samaa palautustapaa
+kaikissa kolmessa vaiheessa.
+
+#### [Git-etävarasto](#tab/git) 
+
+Valitsit palautustavaksi Git-etävaraston. Harjoitustyö tallennetaan
+GitLab- tai GitHub-palvelussa olevaan omaan etävarastoon, jonka osoite
+ilmoitetaan TIMin [Oma eteneminen -sivulla](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
+
+**Tämä tapa on erittäin suositeltava, jos jatkat seuraaville
+ohjelmointikursseille**, sillä Git-versiohallinta on käytössä myöhemmillä ohjelmointikursseilla.
+***
+
+#### [ZIP-paketti](#tab/zip)
+
+Valitsit palautustavaksi ZIP-paketin. Harjoitustyökansio pakataan
+ZIP-tiedostoksi ja ladataan TIMin
+[Oma eteneminen -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
+Git-työkalua ei tarvita, ja voit ohittaa [Git-ohjeen](./git.md) kokonaan.
+
+Huomaa, että ZIP-paketti pitää ladata TIMiin uudelleen jokaisessa vaiheessa. Ota
+itse säännöllisesti varmuuskopioita työstäsi.
+
+***
+
 ### Vaihe 1: Suunnitelma {#vaihe-1-suunnitelma-versiohallinnassa}
 
 #### [Git-etävarasto](#tab/git)
@@ -140,9 +139,10 @@ itse säännöllisesti varmuuskopioita työstäsi.
     `C:\Users\kayttajatunnus\ohj1ht` (Windows) tai
     `~/ohj1/ht` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
     harjoitustyön tiedostot tallennetaan sen sisälle.
- 1. Kirjoita harjoitustyön suunnitelma harjoitustyökansion `suunnitelma`-alikansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Kirjoita harjoitustyön suunnitelma harjoitustyökansion `suunnitelma`-alikansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje alla](#zip-pakkaaminen)).
- 1. Lataa ZIP-tiedosto [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
+ 1. Lataa ZIP-tiedosto [Oma
+    eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen) suunnitelma-kohtaan.
  1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 <details closed id="zip-pakkaaminen">
@@ -154,8 +154,9 @@ suunnitelma kuvineen sekä kaikki ohjelmakoodi.
 
 Poista ennen pakkaamista solution-kansiosta `bin`- ja `obj`-alikansiot. Rider
 luo ne uudelleen käännettäessä, ja ne kasvattavat paketin kokoa turhaan. Älä
-käytä liian suuria kuvia, ääniä tai muita resursseja, sillä ne voivat tehdä
-paketista liian suuren. Pienennä kuvia, ääniä tai muita resursseja tarvittaessa ennen pakkaamista.
+käytä liian suurikokoisia kuvia, ääniä tai muita resursseja (~ useita
+megatavuja per kpl), sillä ne voivat tehdä paketista liian suuren. Pienennä kuvia, ääniä
+tai muita resursseja tarvittaessa ennen pakkaamista.
 
 Pakkaaminen käyttöjärjestelmittäin:
 
@@ -197,9 +198,8 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
       Varmista, että solution on tallennettu nimenomaan harjoitustyökansioon,
       jonka purit vaiheessa 1.
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja
-    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
-    Uusi paketti korvaa vaiheessa 1 palautetun.
- 1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).    
+ 2. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 ***
 
@@ -215,7 +215,7 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
  1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  1. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
-    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
+    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävaraston omalle tietokoneelle eri kansioon ja yrittää ajaa solutionin.
  1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 ***
@@ -227,11 +227,10 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
  1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
  1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja
-    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
-    Uusi paketti korvaa aiemmin palautetun.
+    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).    
     - Huomaa, että paketissa olevan työn tulee olla <u>toimiva</u>! Pura paketti
-      eri kansioon, avaa solution sieltä Riderissa ja kokeile, että ohjelma
-      kääntyy ja käynnistyy.
+      eri kansioon (tai lähetä kaverille), avaa solution sieltä Riderissa ja kokeile, että ohjelma
+      kääntyy ja käynnistyy. 
  1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 ***
@@ -244,8 +243,9 @@ Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla o
 
 ### Suunnitelma
 
-Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan hyväksymä.
-Suunnitelma palautetaan valitsemallasi [palautustavalla](#palautustapa) (Git-etävarasto tai ZIP-paketti), ks. yläpuolelta vaiheen 1 tarkistuslista.
+Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan
+hyväksymä. Suunnitelma palautetaan valitsemallasi palautustavalla
+(Git-etävarasto tai ZIP-paketti), ks. yläpuolelta vaiheen 1 tarkistuslista.
 
 Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitustyöhön):
 
