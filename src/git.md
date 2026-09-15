@@ -6,22 +6,26 @@ Tässä dokumentissa kerrotaan miten harjoitustyön suunnitelmaa, lähdekoodia s
 muita tiedostoja (mm. kuvat) käsitellään Git-versiohallinnan avulla Ohjelmointi
 1 -opintojaksolla.
 
+Tämä ohje koskee vain niitä opiskelijoita, jotka palauttavat harjoitustyönsä
+Git-etävarastoon. Jos haluat palauttaa harjoitustyön ZIP-pakettina, voit ohittaa tämän
+ohjeen. **Palauttaminen Git-muodossa on erittäin suositeltavaa niille, jotka
+jatkavat seuraaville ohjelmointikursseille.**
+
 Ohje on pitkän puoleinen, mutta on tärkeää, että luet sen huolellisesti.
 Git-versiohallinnan käyttö on olennainen osa ohjelmistokehitystä, ja sen
 perusteiden ymmärtäminen on tärkeää paitsi tällä opintojaksolla, myös
 myöhemmissä tietojenkäsittelyn opinnoissa ja ohjelmistoalan työssä.
 
-> [!VAROITUS]
-> Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
-> JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
-> että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat
-> tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti
-> käyttäjätunnukseen tunnisteella `kayttajatunnus`. Korvaa tämä aina omalla
-> käyttäjätunnuksellasi.
-
 ## Ennen kuin aloitat
 
 Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut.md), ellet ole vielä tehnyt niin.
+
+Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
+JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
+että tiedät käyttäjätunnuksesi, ja kirjoita se muistiin ennen kuin aloitat
+tämän ohjeen seuraamisen. Tässä ohjeessa viitataan toistuvasti
+käyttäjätunnukseen tunnisteella `kayttajatunnus`. Korvaa tämä aina omalla
+käyttäjätunnuksellasi.
 
 ## Mikä Git on
 
