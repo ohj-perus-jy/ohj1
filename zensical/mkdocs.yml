@@ -80,6 +80,10 @@ extra_css:
   # Sivustovalikko yläpalkissa (assets/js/sitemenu.js).
   - assets/css/sitemenu.css
 
+  # Hakuikkunan tekstikoot ja suodatinpaneelin piilotus. Ikkuna on shadow
+  # DOM:issa, johon assets/js/search.js liittää tämän tiedoston.
+  - assets/css/search.css
+
   # Alerttilaatikot classic-variantin ilmeeseen; miksi ei theme.variant, ks. tiedoston alku.
   - assets/css/admonitions.css
 
@@ -136,6 +140,9 @@ extra_javascript:
 
   # Sivustovalikon avaus ja sulkeminen.
   - assets/js/sitemenu.js
+
+  # Hakuikkunan tyyli (assets/css/search.css) shadow DOM:iin.
+  - assets/js/search.js
 
   # C#-ohjelmien ajonapit (mdBookin theme/playground_ext.js).
   - assets/js/playground.js

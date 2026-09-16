@@ -274,6 +274,13 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   pois (`.jyu-result-image-only`); mdBookissa kuvan yllä lukee "No output".
 - `assets/css/playground.css`: kuvatuloste `.jyu-result-image` lohkona ja
   koodilohkon kulmin, `.jyu-result-image-only > pre` piiloon.
+- Uudet `assets/css/search.css` ja `assets/js/search.js`: hakuikkunan
+  tekstikoot teeman rem-portaina (Zensicalin omat ovat kiinteät 12–14 px, kun
+  leipäteksti on 15–18 px) ja tyhjä "Filters / Tags" -paneeli painikkeineen
+  piiloon. Ikkuna on shadow DOM:issa, johon sivun CSS ei ulotu, joten skripti
+  liittää tyylitiedoston sinne `<link>`-elementtinä. Luokkanimet ovat
+  Zensicalin minifioituja; `tests/test_search.py` kertoo, jos ne vaihtuvat.
+  *Yleiskäyttöinen.*
 - `tests/book/src/osa1/csharp.md`: C#-lohkot (piilorivit, `ignore`,
   `feature-jypeli`) SUMMARY.md:n ulkopuolella, jotta ohj2:n testien laskemat
   luvut ja lohkot eivät muutu. Testit `tests/test_playground.py`:n lopussa.
