@@ -151,6 +151,9 @@ sivullaan `osa1/csharp.md`.
 
 ## Vaihe 4 — Uusi materiaali `dev`:ssä (säännöt kurssin loppuun)
 
+Voimassa 2026-09-11 – 2026-09-15. Vaihdon (vaihe 5) jälkeen mdBook-säännöt
+raukesivat; `main` → `dev` -sääntö jää. Uudet säännöt vaiheen 5 alussa.
+
 `main` (juuri, mdBook) on vanha materiaali käynnissä olevalle kurssille ja
 muuttuu vain vähän. `dev` (`/dev/`, Zensical) on uusi materiaali.
 
@@ -169,12 +172,27 @@ muuttuu vain vähän. `dev` (`/dev/`, Zensical) on uusi materiaali.
 
 ## Vaihe 5 — Vaihto ja purku (ohj2:n KAYTTOONOTTO.md vaiheet 5–6)
 
-Portti: kurssi päättynyt, `git merge-tree --write-tree origin/main origin/dev`
-→ 0, `run.sh test` läpi, juuri ja `/dev/` toimivat.
+Säännöt vaihdon jälkeen (päätetty 2026-09-15): `main` on tuotanto (juuri),
+`dev` on työhaara ja esikatselu `/dev/`:ssä. Julkaisu PR:llä `dev` → `main`
+merge-committina (ei squash, ei rebase), heti perään `main` → `dev`, jotta
+`pages.yml` on sama molemmissa (`main`-push ajaa `main`in version).
 
-- [ ] PR `dev` → `main`; `pages.yml`: Zensical `main`ista juureen, mdBook-job pois.
-- [ ] Vanhat `.html`-osoitteet menevät rikki (TIMin linkit, kirjanmerkit):
-      päätä kuten ohj2:ssa.
+Portti tarkistettu 2026-09-15: `git merge-tree --write-tree origin/main
+origin/dev` → 0, `run.sh test` 265 passed, 3 skipped, viimeiset ajot vihreitä,
+juuri mdBook ja `/dev/` Zensical.
+
+- [x] Vaihto 2026-09-15. `main` → `dev` (`4fadc1a`), haara `vaihto` `dev`:n
+      päälle pelkällä `pages.yml`-muutoksella (`a7cbcc2`: `zensical`-job
+      matriisina `main` → juuri ja `dev` → `/dev/`, `mdbook`-job pois), PR #34
+      `vaihto` → `main` merge-committina (`d276dfd`), sitten `main` → `dev`
+      (fast-forward). Ajot 34982369347 (`main`) ja 34983082503 (`dev`)
+      vihreitä. Todennettu: juuri ja `/dev/` Zensical 0.0.62, 10 otossivua ja
+      27 css/js-tiedostoa 200, ajonappi tulostaa oikeaa palvelinta vasten
+      (Playwright), vanha `.html`-osoite 404, 404-sivu Zensicalin.
+      `/dev/`-esikatselu jää: `dev` on työhaara.
+- [x] Vanhat `.html`-osoitteet menevät rikki (TIMin linkit, kirjanmerkit).
+      Päätetty 2026-09-15 kuten ohj2:ssa: ei ohjaussivuja, TIMin linkit
+      korjataan käsin hakemistomuotoon (`osa1/1-ensimmainen-ohjelma/`).
 - [ ] Poista mdBook: `book.toml`, `theme/`, `highlight/`, `mermaid/`,
       `start.sh`, `.vscode/tasks.json`:n ja `launch.json`:n mdBook-kohdat,
       devcontainerin nimi "Ohj1 mdBook" ja portti 3000.
