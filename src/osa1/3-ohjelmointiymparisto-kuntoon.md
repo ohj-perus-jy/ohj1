@@ -65,9 +65,9 @@ Tämän kurssin tiedostojesi kotipesä on kansio nimeltä `ohj1`.
 
 Sopivia sijainteja `ohj1`-kansiolle ovat esimerkiksi:
 
- * Windows: `C:\Users\<käyttäjätunnus>\kurssit\ohj1` tai `C:\Opiskelu\ohj1`
- * Mac ja Linux: `~/kurssit/ohj1` (tai `/Users/<käyttäjätunnus>/kurssit/ohj1`)
- * Yliopiston mikroluokassa: `C:\MyTemp\<käyttäjätunnus>\ohj1`
+ * Windows: `C:\Users\<käyttäjätunnus>\ohj1` tai `C:\Opiskelu\ohj1`
+ * Mac ja Linux: `~/ohj1` (tai `/Users/<käyttäjätunnus>/ohj1`)
+ * Agoran tietokoneluokassa: `C:\MyTemp\<käyttäjätunnus>\ohj1`
 
 Korvaa `<käyttäjätunnus>` omalla käyttäjänimelläsi. Omalla koneella sen ei
 tarvitse olla sama kuin yliopiston tunnus. Kansio voi sijaita muuallakin.
@@ -133,8 +133,8 @@ Jos solution on jo olemassa ja haluat lisätä siihen projektin, katso kohta
    kirjaimella**, koska siitä tulee myös luokan nimi. Tehtävissä nimi voi olla
    myös esimerkiksi `Teht3Lumiukko`.
 5. Kirjoita tai selaa poluksi `demot`-kansion sijainti, esimerkiksi
-   `C:\Users\<käyttäjätunnus>\kurssit\ohj1\demot` (Windows) tai
-   `~/kurssit/ohj1/demot` (Mac ja Linux). Yliopiston mikroluokissa projekti
+   `C:\Users\<käyttäjätunnus>\ohj1\demot` (Windows) tai
+   `~/ohj1/demot` (Mac ja Linux). Yliopiston mikroluokissa projekti
    tehdään ensin kiintolevylle kansioon `C:\MyTemp\<käyttäjätunnus>\...` ja
    siirretään lopuksi talteen.
 6. Jätä `Put solution and project in the same directory` -valinta tyhjäksi.
