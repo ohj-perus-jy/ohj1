@@ -136,10 +136,10 @@ itse säännöllisesti varmuuskopioita työstäsi.
     *Code* <i class="bi bi-chevron-right"></i> *zip* (GitHubissa *Code*
     <i class="bi bi-chevron-right"></i> *Download ZIP*).
  1. Pura ladattu paketti paikkaan, josta löydät sen, esimerkiksi kansioon
-    `C:\Users\kayttajatunnus\ohj1ht` (Windows) tai
-    `~/ohj1/ht` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
+    `C:\Users\kayttajatunnus\ohj1\harjoitustyo` (Windows) tai
+    `~/ohj1/harjoitustyo` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
     harjoitustyön tiedostot tallennetaan sen sisälle.
- 1. Kirjoita harjoitustyön suunnitelma harjoitustyökansion `suunnitelma`-alikansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Kirjoita harjoitustyön suunnitelma lataamasi harjoitustyöpohjan `suunnitelma/suunnitelma.md`-tiedostoon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje alla](#zip-pakkaaminen)).
  1. Lataa ZIP-tiedosto [Oma
     eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen) suunnitelma-kohtaan.
@@ -148,7 +148,7 @@ itse säännöllisesti varmuuskopioita työstäsi.
 <details closed id="zip-pakkaaminen">
 <summary>Harjoitustyökansion pakkaaminen ZIP-tiedostoksi</summary>
 
-Pakkaa aina **koko harjoitustyökansio** (esim. `ohj1ht`), ei pelkkää
+Pakkaa aina **koko harjoitustyökansio** (esim. `harjoitustyo`), ei pelkkää
 solution-kansiota tai yksittäisiä tiedostoja. Paketissa tulee olla mukana
 suunnitelma kuvineen sekä kaikki ohjelmakoodi.
 
@@ -374,7 +374,6 @@ Pidä laskentalogiikka omassa funktiossa, jotta peliluokka pysyy selkeänä.
  * Kenttä vaihtuu
  * Aikaraja ylittyy
  * Peli alkaa alusta
-
 
 **Hyödynnä tulokset pelissä** Tässä esimerkkejä.
 
