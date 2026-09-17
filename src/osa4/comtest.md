@@ -32,5 +32,5 @@ Nyt voit Riderissa klikata Tests › Comtest: Generate Tests. Tämä luo ohjelma
 rinnalle testiprojektin. Testiprojektin ajaminen suorittaa kaikki määritellyt
 testitapaukset ja raportoi mahdolliset virheet. Aja testiprojekti klikkaamalla
 Tests › Run All Tests from Solution. Hetken odottelun jälkeen alareunassa
-pitäisi näkyä punainen merkki, ja teksti Passed. 
+pitäisi näkyä vihreä merkki, ja teksti Passed. 
 
