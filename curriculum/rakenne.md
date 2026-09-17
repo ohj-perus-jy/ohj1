@@ -1,11 +1,51 @@
-# Ohjelmointi 1 – oppimateriaalin rakenne (8 osaa)
+# Ohjelmointi 1 ITKP102, Ohjelmointi 1, 6 opintopistettä
 
-Tämä on `ensimmainen-suunnitelma.md`:n pohjalta 2.9.2026 tehty tarkennettu
-rakenne, jota on tasapainotettu 9.9.2026 (osat 2–4, foreach, tiedostot,
-tyyppimuunnokset). mdBook on jatkossa kurssin ainoa lukumateriaali; TIM-monistetta ei
-siirretä, vaan teksti kirjoitetaan uusiksi. Osa on aihekokonaisuus ja
-tutkinto-opiskelijalle yksi viikko. TIM-demot numeroidaan osien mukaan
-(demo1–demo8).
+Ohjelmoinnin perusteet C#:lla.
+
+Tässä on suunnitelma sisällön uudistamiseksi keväästä 2027 alkaen. 
+
+Kukin osa on aihekokonaisuus ja tutkinto-opiskelijalle yksi viikko. TIM-demot
+numeroidaan osien mukaan (demo1–demo8).
+
+## Rakenne
+
+| Osa                                      | Luku                                                                                                    | Sisältö                                                                                           | Tila                                    |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **1 Ensimmäinen ohjelma**                | 1.1 Mitä ohjelmointi on?                                                                                | algoritmi, ohjelma, kieli, kirjasto, työtapa                                                      | valmis, tehtävät puuttuvat              |
+|                                          | 1.2 Ensimmäinen ohjelma                                                                                 | lähdekoodi, Hello World, lohkot ja sisennys lyhyesti, kääntäminen ja suorittaminen, virhetyypit   | valmis                                  |
+|                                          | 1.3 Ohjelmointiympäristö kuntoon                                                                        | Rider, hakemistorakenne, solution, projekti                                                       | valmis, tehtävät puuttuvat              |
+|                                          | 1.4 Ensimmäinen graafinen ohjelma                                                                       | Jypeli-esimerkki, projektimallit, Main, Content                                                   | valmis, tehtävät puuttuvat              |
+| **2 Muuttujat, ehdot ja aliohjelmat**    | 2.1 Muuttujat ja tietotyypit                                                                            | muuttuja, tyypit, var, vakiot                                                                     | valmis, tehtävät puuttuvat              |
+|                                          | 2.2 Operaattorit ja laskutoimitukset                                                                    | aritmetiikka, kokonaislukujako, laskujärjestys, cast lyhyesti, vertailu, loogiset, sijoitus, Math | valmis, tehtävät puuttuvat              |
+|                                          | 2.3 Ehtolauseet                                                                                         | if, else if, else, vertailu, loogiset, switch                                                     | valmis, tehtävät puuttuvat              |
+|                                          | 2.4 Aliohjelmat                                                                                         | määrittely, kutsu, void, terminologia                                                             | osittain (yhteenveto ja visa puuttuvat) |
+|                                          | 2.5 Lauseet ja lausekkeet                                                                               | lause vs. lauseke                                                                                 | valmis, tehtävät puuttuvat              |
+|                                          | 2.6 Ohjelman rakenne                                                                                    | luokka, Main, using, suoritusjärjestys, lohkot, rakennevirheet                                    | valmis                                  |
+| **3 Funktiot ja Jypeli**                 | 3.1 Parametrit ja argumentit                                                                            | parametri, argumentti, useita parametreja, Jypeli-esimerkki; kuormittaminen `<details>`-lohkona   | osittain                                |
+|                                          | 3.2 Aliohjelman paluuarvo                                                                               | return, kutsu lausekkeena, CS0161, useita returneja                                               | osittain                                |
+|                                          | 3.3 Muuttujien näkyvyys                                                                                 | paikalliset muuttujat, lohko, parametrit, CS0103                                                  | runko                                   |
+|                                          | 3.4 Jypeli ja oliot                                                                                     | olio, new, ominaisuudet, metodikutsu, PhysicsGame/Begin, omat aliohjelmat Jypelissä               | runko                                   |
+| **4 Toisto, merkkijonot ja testaaminen** | 4.1 Toistolauseet                                                                                       | while, do-while, for, sisäkkäiset, break/continue                                                 | osittain (yhteenveto ja visa puuttuvat) |
+|                                          | 4.2 Merkkijonot                                                                                         | indeksointi, metodit, muotoilu, Split/Trim, syöte ja Parse syventäen, TryParse, kulttuuri         | runko                                   |
+|                                          | 4.3 Kommentointi ja dokumentointi                                                                       | //, /* */, ///, luokan dokumentointi, tyyliopas                                                   | runko                                   |
+|                                          | 4.4 Testaaminen ComTestillä                                                                             | testit dokumentaatiokommenteissa, ajaminen, testit ensin, liukuluvut                              | osittain                                |
+| **5 Taulukot ja debuggaus**              | 5.1 Taulukot                                                                                            | luonti, indeksointi, pituus, viite, parametrina                                                   | runko                                   |
+|                                          | 5.2 Taulukot ja silmukat                                                                                | läpikäynti for ja foreach, summa/keskiarvo/suurin, kopiointi, testaus, Jypeli                     | runko                                   |
+|                                          | 5.3 Debuggaus                                                                                           | Riderin debuggeri, breakpointit, watch, kutsupino                                                 | valmis                                  |
+| **6 Kokoelmat**                          | 6.1 Listat                                                                                              | List<T>, lisäys/poisto, läpikäynti, metodit, testaus                                              | runko                                   |
+|                                          | 6.2 Sanakirjat                                                                                          | Dictionary, avain–arvo, haku, läpikäynti                                                          | runko                                   |
+|                                          | 6.3 Arvotyypit ja viitetyypit                                                                           | sijoitus, parametrin välitys, ==, string, null                                                    | runko                                   |
+| **7 Rekursio, poikkeukset ja tiedostot** | 7.1 Rekursio                                                                                            | lopetusehto, kertoma, kutsupino, Sierpinski                                                       | runko                                   |
+|                                          | 7.2 Poikkeukset                                                                                         | virheilmoitus, try-catch, tyypit, finally, milloin                                                | runko                                   |
+|                                          | 7.3 Tiedostojen lukeminen ja kirjoittaminen                                                             | File.ReadAllLines, Split/Parse, kirjoitus, poikkeukset                                            | runko                                   |
+| **8 Satunnaisluvut ja kertaus**          | 8.1 Satunnaisluvut                                                                                      | Random, RandomGen, testaus                                                                        | runko                                   |
+|                                          | 8.2 Kertaus ja tenttiin valmistautuminen                                                                | käsitteet, virheet, tentti, jatko                                                                 | runko                                   |
+| **Liitteet**                             | Tiedon esittäminen tietokoneessa                                                                        | binääri, liukuluku, merkistöt                                                                     | valmis                                  |
+|                                          | Valinnaiset parametrit ja oletusarvot                                                                   | oletusarvo, säännöt, oletusarvot vai kuormittaminen                                               | valmis                                  |
+|                                          | Moniulotteiset taulukot, StringBuilder, Lambda-lausekkeet, Tyyppijärjestelmä, Virheilmoitukset, Sanasto |                                                                                                   | runko                                   |
+
+Jokaisella osalla on `index.md` (osaamistavoitteet, luvut, luennot, tehtävät,
+harjoitustyön/debuggausnäytteen vaihe) ja `tehtavat.md` (kokoava lista).
 
 ## Päätökset ja perustelut
 
@@ -54,72 +94,20 @@ tutkinto-opiskelijalle yksi viikko. TIM-demot numeroidaan osien mukaan
   perässä, ja kokoava lista `osaN/tehtavat.md`. Tehtävänannot kansiossa
   `src/exercises/<osa>-<luku>-<nro>-<slug>/`.
 
-## Rakenne
-
-| Osa                                        | Luku                                                                                                    | Sisältö                                                                                           | Tila                       |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------- |
-| **1 Ensimmäinen ohjelma**                  | 1.1 Mitä ohjelmointi on?                                                                                | algoritmi, ohjelma, kieli, kirjasto, työtapa                                                      | valmis, tehtävät puuttuvat |
-|                                            | 1.2 Ensimmäinen ohjelma                                                                                 | lähdekoodi, Hello World, lohkot ja sisennys lyhyesti, kääntäminen ja suorittaminen, virhetyypit   | valmis                     |
-|                                            | 1.3 Ohjelmointiympäristö kuntoon                                                                        | Rider, hakemistorakenne, solution, projekti                                                       | valmis, tehtävät puuttuvat |
-|                                            | 1.4 Ensimmäinen graafinen ohjelma                                                                       | Jypeli-esimerkki, projektimallit, Main, Content                                                   | valmis, tehtävät puuttuvat |
-| **2 Muuttujat, ehdot ja aliohjelmat**      | 2.1 Muuttujat ja tietotyypit                                                                            | muuttuja, tyypit, var, vakiot                                                                     | valmis, tehtävät puuttuvat |
-|                                            | 2.2 Operaattorit ja laskutoimitukset                                                                    | aritmetiikka, kokonaislukujako, laskujärjestys, cast lyhyesti, vertailu, loogiset, sijoitus, Math | valmis, tehtävät puuttuvat |
-|                                            | 2.3 Ehtolauseet                                                                                         | if, else if, else, vertailu, loogiset, switch                                                     | valmis, tehtävät puuttuvat |
-|                                            | 2.4 Aliohjelmat                                                                                         | määrittely, kutsu, void, terminologia                                                             | osittain (yhteenveto ja visa puuttuvat) |
-|                                            | 2.5 Lauseet ja lausekkeet                                                                               | lause vs. lauseke                                                                                 | valmis, tehtävät puuttuvat |
-|                                            | 2.6 Ohjelman rakenne                                                                                    | luokka, Main, using, suoritusjärjestys, lohkot, rakennevirheet                                    | valmis                     |
-| **3 Funktiot ja Jypeli**                   | 3.1 Parametrit ja argumentit                                                                            | parametri, argumentti, useita parametreja, Jypeli-esimerkki; kuormittaminen `<details>`-lohkona   | osittain                   |
-|                                            | 3.2 Aliohjelman paluuarvo                                                                               | return, kutsu lausekkeena, CS0161, useita returneja                                               | osittain                   |
-|                                            | 3.3 Muuttujien näkyvyys                                                                                 | paikalliset muuttujat, lohko, parametrit, CS0103                                                  | runko                      |
-|                                            | 3.4 Jypeli ja oliot                                                                                     | olio, new, ominaisuudet, metodikutsu, PhysicsGame/Begin, omat aliohjelmat Jypelissä               | runko                      |
-| **4 Toisto, merkkijonot ja testaaminen**   | 4.1 Toistolauseet                                                                                       | while, do-while, for, sisäkkäiset, break/continue                                                 | osittain (yhteenveto ja visa puuttuvat) |
-|                                            | 4.2 Merkkijonot                                                                                         | indeksointi, metodit, muotoilu, Split/Trim, syöte ja Parse syventäen, TryParse, kulttuuri         | runko                      |
-|                                            | 4.3 Kommentointi ja dokumentointi                                                                       | //, /* */, ///, luokan dokumentointi, tyyliopas                                                   | runko                      |
-|                                            | 4.4 Testaaminen ComTestillä                                                                             | testit dokumentaatiokommenteissa, ajaminen, testit ensin, liukuluvut                              | osittain                   |
-| **5 Taulukot ja debuggaus**                | 5.1 Taulukot                                                                                            | luonti, indeksointi, pituus, viite, parametrina                                                   | runko                      |
-|                                            | 5.2 Taulukot ja silmukat                                                                                | läpikäynti for ja foreach, summa/keskiarvo/suurin, kopiointi, testaus, Jypeli                     | runko                      |
-|                                            | 5.3 Debuggaus                                                                                           | Riderin debuggeri, breakpointit, watch, kutsupino                                                 | valmis                     |
-| **6 Kokoelmat**                            | 6.1 Listat                                                                                              | List<T>, lisäys/poisto, läpikäynti, metodit, testaus                                              | runko                      |
-|                                            | 6.2 Sanakirjat                                                                                          | Dictionary, avain–arvo, haku, läpikäynti                                                          | runko                      |
-|                                            | 6.3 Arvotyypit ja viitetyypit                                                                           | sijoitus, parametrin välitys, ==, string, null                                                    | runko                      |
-| **7 Rekursio, poikkeukset ja tiedostot**   | 7.1 Rekursio                                                                                            | lopetusehto, kertoma, kutsupino, Sierpinski                                                       | runko                      |
-|                                            | 7.2 Poikkeukset                                                                                         | virheilmoitus, try-catch, tyypit, finally, milloin                                                | runko                      |
-|                                            | 7.3 Tiedostojen lukeminen ja kirjoittaminen                                                             | File.ReadAllLines, Split/Parse, kirjoitus, poikkeukset                                            | runko                      |
-| **8 Satunnaisluvut ja kertaus**            | 8.1 Satunnaisluvut                                                                                      | Random, RandomGen, testaus                                                                        | runko                      |
-|                                            | 8.2 Kertaus ja tenttiin valmistautuminen                                                                | käsitteet, virheet, tentti, jatko                                                                 | runko                      |
-| **Liitteet**                               | Tiedon esittäminen tietokoneessa                                                                        | binääri, liukuluku, merkistöt                                                                     | valmis                     |
-|                                            | Valinnaiset parametrit ja oletusarvot                                                                   | oletusarvo, säännöt, oletusarvot vai kuormittaminen                                               | valmis                     |
-|                                            | Moniulotteiset taulukot, StringBuilder, Lambda-lausekkeet, Tyyppijärjestelmä, Virheilmoitukset, Sanasto |                                                                                                   | runko                      |
-
-Jokaisella osalla on `index.md` (osaamistavoitteet, luvut, luennot, tehtävät,
-harjoitustyön/debuggausnäytteen vaihe) ja `tehtavat.md` (kokoava lista).
-
 ## Kurssin muut osasuoritukset osien kohdalla
 
-| Osa | Osasuoritus                                           |
-| --- | ----------------------------------------------------- |
-| 1   | työkalujen asennus, esitietokysely                    |
-| 4   | harjoitustyön vaihe 1 (suunnitelma versiohallinnassa) |
-| 5   | debuggausnäyte                                        |
-| 7   | harjoitustyön vaihe 2 (50 %)                          |
-| 8   | harjoitustyön vaihe 3 (100 %), tentti                 |
+| Osa | Osasuoritus                           |
+| --- | ------------------------------------- |
+| 1   | työkalujen asennus, esitietokysely    |
+| 4   | harjoitustyön vaihe 1                 |
+| 7   | harjoitustyön vaihe 2 (50 %)          |
+| 8   | harjoitustyön vaihe 3 (100 %), tentti |
+|     | Debuggausnäyte ennen tenttiä          |
 
 ## Luennot
 
-Luentosivut (`src/luennot/luentoN.md`) on säilytetty kevään 2026
-numeroinnilla ja linkitetty osiin aiheen mukaan (`src/luennot/index.md`).
-Uuden toteutuksen luentosuunnitelma tehdään erikseen; tavoite on 2 luentoa
-osaa kohti.
-
-## Seuraavat askeleet (vaihe B)
-
-1. Osat 1–2: täydennä 1.1, laajenna 2.1–2.3 (suoritusjärjestys,
-   totuustaulut), täydennä 2.4 (yhteenveto, visa), kirjoita tehtävät
-   `<task>`-lohkoina.
-2. Osa 3: kirjoita 3.1–3.2 loppuun, 3.3–3.4.
-3. Osa 4: täydennä 4.1 (yhteenveto, visa), kirjoita 4.2–4.3, 4.4 loppuun.
-4. Osat 5–8 ja liitteet.
-5. TIM: demot 1–8 uuden jaon mukaan; tehtävien TIM-linkit lukuihin.
+Luentosivut numeroidaan entisen tavan mukaisesti (`src/luennot/luentoN.md`).
+Tavoite on 2 luentoa osaa kohti.
 
 ## Luvun rakenne
 
