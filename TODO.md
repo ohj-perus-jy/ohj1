@@ -206,7 +206,8 @@ juuri mdBook ja `/dev/` Zensical.
       `postCreateCommand`iin `git submodule update --init &&
       zensical/tyokalut/setup.sh`. Nykyisessä kuvassa
       `python3`:sta puuttuu `ensurepip`, `setup.sh` asentaa sen aptilla.
-- [ ] `README.md`, `CONTRIBUTING.md`: mdBook-maininnat pois, Zensical tilalle.
+- [x] `README.md`: mdBook-maininnat pois, Zensical ja työkalujen submodule
+      tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
 - [ ] KaTeX: `src`:ssä ei ole kaavoja, joten `mdbook-katex` jää pois ilman
       korvaajaa; jos kaavoja tulee, `pymdownx.arithmatex` + KaTeX.
 - [ ] Harkitse ohj2:n `links.yml` (lychee) ja `.lycheeignore` kopiointia.

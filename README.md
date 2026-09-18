@@ -10,60 +10,57 @@ Tehtävien palauttaminen vaatii opintojaksolle
 
 ## Materiaalin kehittäminen omalla koneella
 
-Materiaali on toteutettu **mdBookilla**. Suositeltu tapa on käyttää mukana
-olevaa DevContaineria. Se käyttää valmista GHCR-kuvaa
-`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest`, jossa mdBook ja
-tarvittavat laajennokset ovat valmiiksi asennettuina.
-
-Jos et halua käyttää DevContaineria (esimerkiksi nopeita muokkauksia tai et
-halua ladata isoa DevContainer-kuvaa), voit sen sijaan käyttää pelkästään
-mdBook-työkalun ja sen laajennokset sisältävää Docker-kuvaa
-`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest`.
-
-Käynnistä kehityspalvelin projektin juuresta:
+Sivusto rakennetaan **[Zensicalilla](https://zensical.org)**. Materiaali on
+kansiossa `src/`. Työkalut (muunnos, tyylit, skriptit, testit) ovat
+git-submodule `zensical/tyokalut`, repo
+[kirjatyokalut](https://github.com/ohj-perus-jy/kirjatyokalut), joka on yhteinen
+Ohjelmointi 2:n ja Jypeli-ohjeiden kanssa.
 
 ```bash
-bash ./start.sh
+git clone --recurse-submodules https://github.com/ohj-perus-jy/ohj1.git
+cd ohj1
+git config submodule.recurse true    # git pull ja git switch päivittävät jatkossa myös työkalut
 ```
 
-Tämä avaa materiaalin selaimeesi (oletuksena localhost:3000) ja päivittää näkymän
-automaattisesti, kun tallennat muutoksia.
-
-Vaihtoehtoisesti voit käyttää pelkkää mdBook-työkalukuvaa ilman DevContaineria.
-Esimerkiksi materiaalin koko rakentaminen yhdellä komennolla:
+Suositeltu tapa on käyttää mukana olevaa DevContaineria. Käynnistä
+kehityspalvelin projektin juuresta:
 
 ```bash
-docker run --rm -v .:/workspace \
-  ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest \
-  build
+./zensical/run.sh            # http://localhost:8001, seuraa src/:n muutoksia
+./zensical/run.sh 8003       # eri portti
+./zensical/run.sh build      # pelkkä rakennus zensical/site/-hakemistoon
+./zensical/run.sh test       # testit (pytest + Playwright)
 ```
 
-tai materiaalin avaaminen paikallisesti:
+Ensimmäinen ajo hakee submodulen, jos se puuttuu, ja asentaa Zensicalin
+hakemistoon `zensical/.venv` (tarvittaessa myös `python3-venv`-paketin, mihin
+tarvitaan sudo). Ilman DevContaineria riittää Python 3.11 tai uudempi;
+ASCII-kaavioiden (`bob`-koodilohkot) piirtämiseen tarvitaan lisäksi
+`svgbob_cli` (`cargo install svgbob_cli@0.7.6`).
 
-```bash
-docker run --rm -it -v .:/workspace -p 3000:3000 \
-  ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:runner-latest \
-  serve --hostname 0.0.0.0 --port 3000
-```
+**Muokattava sisältö on kansiossa `src/`.** `zensical/docs/` ja
+`zensical/site/` ovat generoituja.
 
-### mdBook-työkalukuvan päivittäminen
+Haarat ja julkaisu: `main` on tuotanto (<https://ohjelmointi1.it.jyu.fi>),
+`dev` on työhaara ja esikatselu osoitteessa
+<https://ohjelmointi1.it.jyu.fi/dev/>. GitHub Actions julkaisee molemmat joka
+työnnöllä. Muutokset viedään `dev` → `main` merge-committina.
 
-DevContainer käyttää valmista GHCR-kuvaa
-`ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest`. Jos mdBook-työkaluja
-tai esikäsittelijöitä pitää päivittää, tee muutokset repossa
-`ohj-perus-jy/ohj-mdbook-tooling` ja pushaa ne `main`-haaraan. `:devcontainer-latest`
-on liikkuva tagi: jo käynnissä oleva DevContainer ei päivity automaattisesti.
-Päivitetty kuva otetaan käyttöön esimerkiksi komennolla:
+Lisää:
 
-```bash
-docker pull ghcr.io/ohj-perus-jy/ohj-mdbook-tooling:devcontainer-latest
-```
-
-tai VS Codessa komennolla `Dev Containers: Rebuild and Reopen in Container`.
-
-- [mdBook-ohjeet](https://rust-lang.github.io/mdBook/index.html)
+- [zensical/README.md](zensical/README.md): tämän kirjan asetukset
+  (`kirja.toml`, `mkdocs.yml`, kaaviot) ja työkalujen päivittäminen
+- [kirjatyokalut/README.md](https://github.com/ohj-perus-jy/kirjatyokalut#readme):
+  rakenne, asetukset, työkalujen muuttaminen ja testit
+- [TODO.md](TODO.md): mitä siirrossa mdBookista on vielä tekemättä. Repossa on
+  yhä mdBookin aikaisia tiedostoja (`book.toml`, `theme/`, `start.sh` ym.);
+  niitä ei enää käytetä.
 
 ## Pikaohje kirjoittamiseen
+
+Sivut kirjoitetaan Markdownilla samalla merkkauksella kuin mdBookin aikana;
+työkalut muuntavat sen Zensicalille. Navigaatio on tiedostossa
+`src/SUMMARY.md`.
 
 Koodiesimerkit voivat sisältää useita tiedostoja. Käytä `// FILE: filename`- ja 
 `// FILE_END`-merkintöjä erottaaksesi eri tiedostot.
@@ -139,8 +136,10 @@ tehtävänannon ja linkin TIM-tehtävään.
 
 ### Katso myös
 
-- [mdBook-ohjeet](https://rust-lang.github.io/mdBook/index.html)
-- [KaTeX-ohjeet](https://katex.org/docs/supported)
+- [Työkalujen tukema merkkaus](https://github.com/ohj-perus-jy/kirjatyokalut/blob/main/TAUSTA.md):
+  alertit, välilehdet, piilorivit, kaaviot, terminaalinauhoitukset,
+  vaiheittainen ohje, Testaa tietosi -visa
+- [Zensicalin ohjeet](https://zensical.org/docs/)
 
 ## License
 
