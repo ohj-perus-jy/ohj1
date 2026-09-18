@@ -53,7 +53,7 @@ def source_uses(pattern: str) -> bool:
     """Käyttääkö lähdepuu ominaisuutta. Kirjoja on kaksi (ohj1, ohj2) eivätkä
     ne käytä samoja mdBookin ominaisuuksia; ominaisuuden testi ohitetaan
     kirjassa, jossa ominaisuutta ei ole, eikä sitä väitetä olemattomaksi."""
-    finder = re.compile(pattern)
+    finder = re.compile(pattern, re.MULTILINE)
     return any(finder.search(page.read_text(encoding="utf-8"))
                for page in SRC.rglob("*.md"))
 
@@ -130,6 +130,18 @@ def test_every_diagram_is_drawn(printed):
     if source_uses(r"^\s*```bob"):
         assert diagrams["svgbob"] > 0
     assert diagrams["emptyBob"] == 0
+
+
+def test_diagram_text_fits_the_svgbob_grid(printed):
+    """svgbob sijoittaa sanat ja ä:n jälkeen katkaisemansa palat 8 px:n
+    ruutuihin. Koodikirjasimen merkki on 0,6 em, joten svgbobin omalla 14 px:n
+    koolla palat menivät päällekkäin ("tapahtumankäsittelijät")."""
+    if not source_uses(r"^\s*```bob"):
+        pytest.skip("kirjassa ei ole ascii-kaavioita")
+    sizes = printed.evaluate("""() => [...new Set(
+      [...document.querySelectorAll('div.svgbob text')]
+        .map(text => parseFloat(getComputedStyle(text).fontSize)))]""")
+    assert sizes and all(size * 0.6 <= 8.001 for size in sizes), sizes
 
 
 def test_no_raw_markdown_leaks_into_the_page(printed):
