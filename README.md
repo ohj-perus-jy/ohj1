@@ -52,9 +52,7 @@ Lisää:
   (`kirja.toml`, `mkdocs.yml`, kaaviot) ja työkalujen päivittäminen
 - [kirjatyokalut/README.md](https://github.com/ohj-perus-jy/kirjatyokalut#readme):
   rakenne, asetukset, työkalujen muuttaminen ja testit
-- [TODO.md](TODO.md): mitä siirrossa mdBookista on vielä tekemättä. Repossa on
-  yhä mdBookin aikaisia tiedostoja (`book.toml`, `theme/`, `start.sh` ym.);
-  niitä ei enää käytetä.
+- [TODO.md](TODO.md): mitä siirrossa mdBookista on vielä tekemättä
 
 ## Pikaohje kirjoittamiseen
 
