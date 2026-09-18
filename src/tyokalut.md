@@ -389,7 +389,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
 2. Asenna .NET SDK -pakkaus: `dotnet-sdk-10.0`. Pakkauksen nimi on yleensä sama
-   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että .NET on asennettu suorittamalla komento:
 
@@ -479,7 +479,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
 2. Asenna Git-pakkaus: `git`. Pakkauksen nimi on yleensä sama
-   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että `git`-komento on asennettu suorittamalla komento:
 

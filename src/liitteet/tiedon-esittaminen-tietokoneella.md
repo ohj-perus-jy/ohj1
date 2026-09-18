@@ -8,19 +8,19 @@ On hyvä ymmärtää, miten tekstiä, lukuja ja muuta informaatiota esitetään 
 
 ## Kokonaislukujen esittäminen binäärimuodossa
 
-Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0–9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Numeron paikka luvussa määrittää sen arvon: esimerkiksi 345 tarkoittaa $3 \cdot 10^2 + 4 \cdot 10^1 + 5 \cdot 10^0$. Voidaan ajatella, että jokaisella numerolla on paikka, joka kertoo sen painoarvon kymmenen potenssina (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla numero 5 on paikassa 0, numero 4 paikassa 1 ja numero 3 paikassa 2.
+Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0–9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Numeron paikka luvussa määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 · 10<sup>2</sup> + 4 · 10<sup>1</sup> + 5 · 10<sup>0</sup>. Voidaan ajatella, että jokaisella numerolla on paikka, joka kertoo sen painoarvon kymmenen potenssina (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla numero 5 on paikassa 0, numero 4 paikassa 1 ja numero 3 paikassa 2.
 
-Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä numeron paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa $1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 5$ kymmenjärjestelmässä.
+Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä numeron paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa 1 · 2<sup>2</sup> + 0 · 2<sup>1</sup> + 1 · 2<sup>0</sup> = 5 kymmenjärjestelmässä.
 
 Kun luku halutaan tallentaa tietokoneeseen, on ensiksi sovittava, kuinka monta bittiä luvun esittämiseen käytetään. Käytämme alla olevissa esimerkeissä 8-bittisiä lukuja, jotta luvut pysyvät yksinkertaisina.
 
 Esimerkiksi luku 7 on 8-bittisessä binäärimuodossa `00000111`, koska
 
-$7 = 0 \cdot 2^7 + 0 \cdot 2^6 + 0 \cdot 2^5 + 0 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0$
+7 = 0 · 2<sup>7</sup> + 0 · 2<sup>6</sup> + 0 · 2<sup>5</sup> + 0 · 2<sup>4</sup> + 0 · 2<sup>3</sup> + 1 · 2<sup>2</sup> + 1 · 2<sup>1</sup> + 1 · 2<sup>0</sup>
 
 Negatiivisten lukujen esittämiseen käytetään yleisesti ns. **kahden komplementin** menetelmää. Siinä luvun vastaluku saadaan kääntämällä ensin luvun kaikki bitit (0 -> 1 ja 1 -> 0) ja lisäämällä sitten tulokseen 1.
 
-Esimerkiksi luku -7 on kahden komplementin esityksessä `11111001`. Se saadaan luvusta 7 seuraavasti:
+Esimerkiksi luku −7 on kahden komplementin esityksessä `11111001`. Se saadaan luvusta 7 seuraavasti:
 
 ```
 7 = 00000111
@@ -30,9 +30,9 @@ Esimerkiksi luku -7 on kahden komplementin esityksessä `11111001`. Se saadaan l
 ~7 + 1 = 11111001
 ```
 
-Kahden komplementin esityksessä ylin eli vasemmanpuoleisin bitti kertoo luvun etumerkin: jos se on 1, luku on negatiivinen. 8-bittisellä luvulla voidaan siten esittää 256 eri arvoa eli kokonaisluvut -128:sta 127:ään. Jos laskutoimituksen tulos ylittää lukualueen ylärajan, se "pyörähtää ympäri" lukualueen alkuun: esimerkiksi 127 + 1 antaa 8-bittisenä tuloksen -128.
+Kahden komplementin esityksessä ylin eli vasemmanpuoleisin bitti kertoo luvun etumerkin: jos se on 1, luku on negatiivinen. 8-bittisellä luvulla voidaan siten esittää 256 eri arvoa eli kokonaisluvut −128:sta 127:ään. Jos laskutoimituksen tulos ylittää lukualueen ylärajan, se "pyörähtää ympäri" lukualueen alkuun: esimerkiksi 127 + 1 antaa 8-bittisenä tuloksen −128.
 
-Käytännössä 8-bittisiä kokonaislukuja käytetään harvemmin; useimmiten käytetään 32-bittisiä (C#:ssa `int`) tai 64-bittisiä (`long`) lukuja. Sama periaate pätee kuitenkin myös niihin: esimerkiksi `int`-tyypin pienin arvo on $-2^{31}$ ja suurin $2^{31} - 1$ eli 2 147 483 647.
+Käytännössä 8-bittisiä kokonaislukuja käytetään harvemmin; useimmiten käytetään 32-bittisiä (C#:ssa `int`) tai 64-bittisiä (`long`) lukuja. Sama periaate pätee kuitenkin myös niihin: esimerkiksi `int`-tyypin pienin arvo on −2<sup>31</sup> ja suurin 2<sup>31</sup> − 1 eli 2 147 483 647.
 
 ## Desimaalilukujen esittäminen binäärimuodossa
 
