@@ -146,6 +146,7 @@ selaimen systeemikirjastot: [PERUSTELUT.md](PERUSTELUT.md).
 | 24 | Tulostuspainike: koko kirja yhdeksi PDF:ksi  | joka sivu                 | **tehty** — `assets/js/print.js`, `print.css`, runko `convert.py`:stä, yläpalkin malli                             |
 | 25 | `<div class="ht-reqs">` vaatimuslohkot       | 9                         | **tehty** — `convert_divs` + `assets/css/requirements.css`; numerointi 1.1, 1.2, ... CSS-laskurista               |
 | 26 | Leipätekstin kirjasinvalikko yläpalkissa     | joka sivu                 | **tehty** — ei mdBookissa, lisätty pyynnöstä; `header.html`, `typography.css`, `fontmenu.css`, `fontmenu.js`; Source Serif 4 (oletus), Atkinson Hyperlegible Next, Literata; valinta muistetaan selaimessa |
+| 27 | Sivustovalikko kurssin nimen vieressä        | joka sivu                 | **tehty** — ei mdBookissa, lisätty pyynnöstä; `header.html`, `sitemenu.css`, `sitemenu.js`; kohdat `mkdocs.yml`:n `extra.sites`-listasta (Ohjelmointi 1, Jypeli-ohjeet); oma sivusto tunnistetaan `site_name`sta ja vie omalle etusivulle, joten sama lista kelpaa sellaisenaan sisarsivustolle |
 
 Zensical antaa itse ilman mitään lisäystä: oikean reunan sisällysluettelon,
 haun ja responsiivisen navigaation.

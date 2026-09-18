@@ -59,6 +59,16 @@ theme:
         icon: material/weather-sunny
         name: Vaihda vaaleaan teemaan
 
+# Sivustovalikko yläpalkissa kurssin nimen vieressä (overrides/partials/
+# header.html). Kohta, jonka nimi on site_name, on tämä sivusto ja vie omalle
+# etusivulle; muut vievät url-osoitteeseen. nav.yml:n extra yhdistyy tähän.
+extra:
+  sites:
+    - name: Ohjelmointi 1
+      url: https://ohjelmointi1.it.jyu.fi/
+    - name: Jypeli-ohjeet
+      url: https://ohj-perus-jy.github.io/jypelidocs/
+
 extra_css:
   # Leipätekstin kirjasin; miksi ei theme.font.text, ks. tiedoston alku.
   - assets/css/typography.css
@@ -66,6 +76,9 @@ extra_css:
   # Kirjasinvalikko yläpalkissa (overrides/partials/header.html, assets/js/fontmenu.js).
   - assets/css/fontmenu.css
   - assets/css/layout.css
+
+  # Sivustovalikko yläpalkissa (assets/js/sitemenu.js).
+  - assets/css/sitemenu.css
 
   # Alerttilaatikot classic-variantin ilmeeseen; miksi ei theme.variant, ks. tiedoston alku.
   - assets/css/admonitions.css
@@ -120,6 +133,9 @@ extra_javascript:
 
   # Kirjasinvalikon toiminta.
   - assets/js/fontmenu.js
+
+  # Sivustovalikon avaus ja sulkeminen.
+  - assets/js/sitemenu.js
 
   # C#-ohjelmien ajonapit (mdBookin theme/playground_ext.js).
   - assets/js/playground.js
