@@ -32,11 +32,12 @@ kehityspalvelin projektin juuresta:
 ./zensical/run.sh test       # testit (pytest + Playwright)
 ```
 
-Ensimmäinen ajo hakee submodulen, jos se puuttuu, ja asentaa Zensicalin
-hakemistoon `zensical/.venv` (tarvittaessa myös `python3-venv`-paketin, mihin
-tarvitaan sudo). Ilman DevContaineria riittää Python 3.11 tai uudempi;
-ASCII-kaavioiden (`bob`-koodilohkot) piirtämiseen tarvitaan lisäksi
-`svgbob_cli` (`cargo install svgbob_cli@0.7.6`).
+DevContainer hakee submodulen ja asentaa Zensicalin hakemistoon
+`zensical/.venv` jo kontin luonnissa. Ilman DevContaineria saman tekee
+ensimmäinen ajo (tarvittaessa myös `python3-venv`-paketin asennuksen, mihin
+tarvitaan sudo); Python 3.11 tai uudempi riittää. ASCII-kaavioiden
+(`bob`-koodilohkot) piirtämiseen tarvitaan lisäksi `svgbob_cli`
+(`cargo install svgbob_cli@0.7.6`, DevContainerissa Rust on valmiina).
 
 **Muokattava sisältö on kansiossa `src/`.** `zensical/docs/` ja
 `zensical/site/` ovat generoituja.
