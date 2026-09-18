@@ -11,7 +11,8 @@ varoituksia, `./zensical/run.sh test` menee läpi (220 passed, 3 skipped).
 `zensical/tyokalut/` (repo kirjatyokalut), yhteinen ohj2:n ja Jypeli-ohjeiden
 kanssa; kirjan omat asetukset ovat `zensical/kirja.toml`issa. Alla mainitut
 `zensical/README.md`:n kohdat ovat nyt `zensical/tyokalut/TAUSTA.md`:ssä ja
-`zensical/tests` polussa `zensical/tyokalut/tests`.
+`zensical/tests` polussa `zensical/tyokalut/tests`. mdBookin tiedostot
+(`book.toml`, `theme/`, `start.sh` ym.) poistettiin 2026-09-18.
 
 ## Vaihe 1 — `dev`-haara ja julkaisu `/dev/`:iin
 
@@ -199,18 +200,23 @@ juuri mdBook ja `/dev/` Zensical.
 - [x] Vanhat `.html`-osoitteet menevät rikki (TIMin linkit, kirjanmerkit).
       Päätetty 2026-09-15 kuten ohj2:ssa: ei ohjaussivuja, TIMin linkit
       korjataan käsin hakemistomuotoon (`osa1/1-ensimmainen-ohjelma/`).
-- [ ] Poista mdBook: `book.toml`, `theme/`, `highlight/`, `mermaid/`,
+- [x] Poista mdBook: `book.toml`, `theme/`, `highlight/`, `mermaid/`,
       `start.sh`, `.vscode/tasks.json`:n ja `launch.json`:n mdBook-kohdat,
-      devcontainerin nimi "Ohj1 mdBook" ja portti 3000.
+      devcontainerin nimi "Ohj1 mdBook" ja portti 3000 (kaikki haarat,
+      2026-09-18). VS Coden F5 käynnistää nyt `zensical/run.sh`:n samaan
+      porttiin 36743. Lisäksi `.gitignore`:sta `/book` ja GitHubin
+      Rust-pohjan rivit (Cargo, rustfmt), jotka olivat mukana mdBookin takia.
 - [ ] Devcontainer-kuva → `mcr.microsoft.com/devcontainers/python:3.11-bookworm`,
       `postCreateCommand`iin `git submodule update --init &&
       zensical/tyokalut/setup.sh`. Nykyisessä kuvassa
       `python3`:sta puuttuu `ensurepip`, `setup.sh` asentaa sen aptilla.
 - [x] `README.md`: mdBook-maininnat pois, Zensical ja työkalujen submodule
       tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
-- [ ] KaTeX: `src`:ssä ei ole kaavoja, joten `mdbook-katex` jää pois ilman
-      korvaajaa; jos kaavoja tulee, `pymdownx.arithmatex` + KaTeX.
+- [x] KaTeX: ei kaavojen renderöintiä (päätetty 2026-09-18). Eksponentit
+      kirjoitetaan `<sup>`-tageilla (`2<sup>31</sup>`), kertomerkki `·`.
 - [ ] Harkitse ohj2:n `links.yml` (lychee) ja `.lycheeignore` kopiointia.
 - [ ] Purku PURKUSUUNNITELMA.md:n järjestyksessä, sitten
       `grep -r mdbook-tooling .github .devcontainer` tyhjä ja
-      `ohj-mdbook-tooling` arkistoon.
+      `ohj-mdbook-tooling` arkistoon. Muunnokset ovat yhteisissä
+      työkaluissa ja ohj2 käyttää vielä mdBookia (myös kuvaa
+      `ohj-mdbook-tooling`), joten purku odottaa ohj2:n vaihtoa.

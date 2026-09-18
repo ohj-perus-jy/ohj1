@@ -6,7 +6,8 @@
 # Molemmat rakennetaan jokaisella pushilla kumpaan tahansa haaraan, koska
 # Pages-sivusto on yksi kokonaisuus: osittainen julkaisu pyyhkisi toisen.
 # Tämän tiedoston on oltava sama `main`issa ja `dev`:ssä; `main`-push ajaa
-# `main`in version. mdBook poistui 2026-09-15 (TODO.md, vaihe 5).
+# `main`in version. mdBook-julkaisu päättyi 2026-09-15 ja sen tiedostot
+# poistettiin 2026-09-18 (TODO.md, vaihe 5).
 name: Deploy site to Pages
 
 on:
