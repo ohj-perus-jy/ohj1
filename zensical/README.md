@@ -17,8 +17,11 @@ yhteinen ohj2:n ja Jypeli-ohjeiden kanssa:
 Mitä ohj1:ssä on vielä tekemättä: [../TODO.md](../TODO.md).
 [KAYTTOONOTTO.md](KAYTTOONOTTO.md) ja [PURKUSUUNNITELMA.md](PURKUSUUNNITELMA.md)
 ovat ohj2:n alkuperäiset: työjärjestys tuotantoon ja se, mitä `convert.py`:stä
-poistuu, kun mdBook puretaan. Niiden viittaukset README:n tarkistuslistaan ja
-PERUSTELUT.md:hen tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
+voi poistaa, kun mdBookia ei enää tarvita. ohj1:stä mdBook on poistettu
+(2026-09-18), mutta työkalut ovat yhteiset ohj2:n kanssa, joten
+mdBook-merkkauksen muunnokset jäävät, kunnes ohj2kin on vaihtanut.
+Dokumenttien viittaukset README:n tarkistuslistaan ja PERUSTELUT.md:hen
+tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
 
 ## Käynnistys
 
