@@ -102,6 +102,9 @@
   <polygon points="160,20 168,24 160,28" class="filled"></polygon>
   <polygon points="304,20 312,24 304,28" class="filled"></polygon>
   <polygon points="64,60 68,48 72,60" class="filled"></polygon>
+  <text x="194" y="28" >Käännä</text>
+  <text x="90" y="76" >käännösvirhe</text>
+  <text x="234" y="76" >väärä tulos</text>
   <g>
     <path d="M 24,8 A 4,4 0,0,0 20,12" class="nofill"></path>
     <line x1="20" y1="12" x2="20" y2="36" class="solid"></line>
@@ -125,10 +128,6 @@
     <path d="M 260,36 A 4,4 0,0,1 256,40" class="nofill"></path>
   </g>
   <g>
-    <text x="194" y="28">Kän</text>
-    <text x="210" y="28">änä</text>
-  </g>
-  <g>
     <line x1="68" y1="60" x2="68" y2="84" class="solid"></line>
     <path d="M 68,84 A 4,4 0,0,0 72,88" class="nofill"></path>
     <line x1="72" y1="88" x2="208" y2="88" class="solid"></line>
@@ -138,14 +137,5 @@
     <line x1="216" y1="88" x2="344" y2="88" class="solid"></line>
     <line x1="348" y1="48" x2="348" y2="84" class="solid"></line>
     <path d="M 348,84 A 4,4 0,0,1 344,88" class="nofill"></path>
-  </g>
-  <g>
-    <text x="90" y="76">kän</text>
-    <text x="106" y="76">änö</text>
-    <text x="138" y="76">svirhe</text>
-  </g>
-  <g>
-    <text x="242" y="76">vär</text>
-    <text x="258" y="76">äätulos</text>
   </g>
 </svg>

@@ -669,6 +669,48 @@ def test_convert_svgbob_keeps_the_fence_without_the_tool(monkeypatch):
     assert convert.convert_svgbob(text) == (text, 0, set())
 
 
+@pytest.mark.parametrize("art, svg, problem", [
+    # svgbob 0.7.6:n oikea tuloste: palat menevät päällekkäin, ä ja n puuttuvat.
+    ("| Käännä |\n", '<text x="18" y="12">Kän</text><text x="34" y="12">änä</text>',
+     "teksti sotkeutuu: | Käännä |"),
+    ('| "Käännä" |\n', '<text x="18" y="12" >Käännä</text>', None),
+    ("  Main()\n", '<text x="18" y="12" >Main</text>',
+     "sulut piirtyvät kaarina: Main()"),
+    ('  "Main()"\n', '<text x="18" y="12" >Main()</text>', None),
+    ("( )\n", "", None),
+])
+def test_svgbob_problems(art, svg, problem):
+    """Kumpaakaan vikaa ei näe ilman kuvaa, ja lainausmerkit korjaavat
+    molemmat; pelkkä piirrosmerkkinä käytetty sulku ei ole vika."""
+    assert convert.svgbob_problems(art, svg) == ([problem] if problem else [])
+
+
+@pytest.mark.parametrize("texts, size", [
+    # Lainattu teksti oikealla ja alla: svgbob 0.7.6 mitoittaa vain laatikon.
+    ('<text x="74" y="12" >pitka teksti tassa</text>', (232, 64)),
+    ('<text x="18" y="76" >alla</text>', (58, 96)),
+    ('<text x="18" y="28" >a</text>', (56, 64)),
+    ("", (56, 64)),
+])
+def test_svgbob_fit_text(texts, size):
+    """Koko kasvaa sekä <svg>:ssä että taustassa, muttei piirroksen laatikossa
+    eikä koskaan pienene."""
+    svg = ('<svg width="56" height="64" class="svgbob">'
+           '<rect class="backdrop" x="0" y="0" width="56" height="64"></rect>'
+           f'<rect x="20" y="8" width="24" height="32"></rect>{texts}</svg>')
+    fitted = convert.svgbob_fit_text(svg)
+    assert fitted.count('width="%d" height="%d"' % size) == 2
+    assert 'width="24" height="32"' in fitted
+
+
+def test_convert_svgbob_warns_with_the_page(monkeypatch, capsys):
+    monkeypatch.setattr(convert, "svgbob_svg",
+                        lambda art: '<svg><text x="2" y="12" >Main</text></svg>')
+    convert.convert_svgbob("```bob\nMain()\n```\n", "osa2/sivu.md")
+    assert ("varoitus: osa2/sivu.md: svgbob-kaavio, sulut piirtyvät kaarina: Main()"
+            in capsys.readouterr().err)
+
+
 # --- Vaatimusdivit (README kohta 25) -----------------------------------------
 
 def test_convert_divs_marks_the_block_for_markdown():
@@ -1146,6 +1188,113 @@ def test_walkthrough_audio_uses_only_audio_made_from_the_current_text(tmp_path):
     assert convert.walkthrough_audio(source, "git-ht-ohje.md", tmp_path) == (
         {"a": "../../images/git-ht-ohje/puhe/a.mp3"}, ["b", "c"])
     assert convert.walkthrough_audio(WALK, "osa1/vaiheet.md", tmp_path) == ({}, [])
+
+
+# --- Testaa tietosi -visa (assets/js/visa.js) --------------------------------
+
+QUIZ = """\
+<visa>
+
+**Totta vai tarua?**
+
+<vaittama vastaus="tarua">
+Käännösvirhe ilmenee vasta, kun `ohjelmaa` ajetaan.
+<perustelu>
+**Tarua.** Käännösvirhe estää kääntämisen.
+</perustelu>
+</vaittama>
+
+<kysymys>
+Mitä koodi tulostaa?
+
+```csharp,ignore
+- [x] tämä on koodia
+```
+
+- [ ] `Iso luku`
+- [x] Ei mitään, koska ehto on epätosi ja rivi on niin pitkä, että se
+  jatkuu toiselle riville
+- [ ] Käännösvirheen
+
+<perustelu>
+**b.** Ehto on epätosi.
+</perustelu>
+</kysymys>
+
+</visa>
+"""
+
+
+def test_convert_quizzes_turns_a_claim_into_a_true_false_question():
+    """Väittämän vaihtoehdot kirjoittaa muunnos; vastaus tulee tagista ja
+    perustelu on ilman skriptiä tavallinen <details>."""
+    text, questions = convert.convert_quizzes(QUIZ)
+    assert questions == 2
+    assert re.search(
+        r'<div class="jyu-visa-q" data-vastaus="tarua" data-id="[0-9a-f]{8}" markdown="1">\n\n'
+        + re.escape(
+            'Käännösvirhe ilmenee vasta, kun `ohjelmaa` ajetaan.\n\n'
+            '<ul class="jyu-visa-vaihtoehdot jyu-visa-tt">\n'
+            '<li data-arvo="totta">Totta</li>\n<li data-arvo="tarua">Tarua</li>\n</ul>\n\n'
+            '<details markdown="1">\n<summary>Näytä vastaus</summary>\n\n'
+            '**Tarua.** Käännösvirhe estää kääntämisen.\n\n</details>\n\n</div>\n'), text)
+
+
+def test_convert_quizzes_reads_the_answer_from_the_marked_option():
+    """Oikea vastaus on [x]-rivin kirjain. Lista tulee vaihtoehtojen paikalle
+    koodilohkon jälkeen, sisennetty jatkorivi kuuluu vaihtoehtoon, ja aidan
+    sisällä oleva [x] on koodia."""
+    text, _ = convert.convert_quizzes(QUIZ)
+    assert 'data-vastaus="b"' in text
+    assert ('```csharp,ignore\n- [x] tämä on koodia\n```\n\n'
+            '<ol class="jyu-visa-vaihtoehdot" type="a" markdown="1">\n'
+            '<li data-arvo="a" markdown="1">`Iso luku`</li>\n'
+            '<li data-arvo="b" markdown="1">Ei mitään, koska ehto on epätosi ja rivi on'
+            ' niin pitkä, että se jatkuu toiselle riville</li>\n'
+            '<li data-arvo="c" markdown="1">Käännösvirheen</li>\n</ol>\n\n'
+            '<details markdown="1">') in text
+
+
+def test_convert_quizzes_wraps_the_quiz_and_leaves_no_tags():
+    text, _ = convert.convert_quizzes(QUIZ)
+    assert text.startswith('<div class="jyu-visa" markdown="1">\n\n**Totta vai tarua?**\n\n')
+    assert text.endswith("</div>\n\n</div>\n")
+    assert not re.search(r"</?(visa|vaittama|kysymys|perustelu)\b", text)
+
+
+def test_convert_quizzes_identifies_a_question_by_its_text():
+    """Tallennettu vastaus seuraa kysymystä, ei sen paikkaa: tunniste säilyy,
+    kun perustelu tai järjestys muuttuu, ja vaihtuu, kun kysymys muuttuu."""
+    def identifiers(text):
+        return re.findall(r'data-id="([0-9a-f]{8})"', convert.convert_quizzes(text)[0])
+
+    first, second = identifiers(QUIZ)
+    assert first != second
+    assert identifiers(QUIZ.replace("Ehto on epätosi.", "Toinen perustelu.")) == [first, second]
+    assert identifiers(QUIZ.replace("Mitä koodi tulostaa?", "Mitä tämä tulostaa?")) != [first, second]
+
+
+def test_convert_quizzes_is_repeatable():
+    once, _ = convert.convert_quizzes(QUIZ)
+    assert convert.convert_quizzes(once) == (once, 0)
+
+
+def test_convert_quizzes_ignores_tags_inside_code():
+    text = "```html\n<visa>\n<kysymys>\n- [x] a\n</kysymys>\n</visa>\n```\n"
+    assert convert.convert_quizzes(text) == (text, 0)
+
+
+@pytest.mark.parametrize("question, problem", [
+    ("<kysymys>\nKumpi?\n\n- [ ] a\n- [ ] b\n</kysymys>\n", "täsmälleen yksi [x]"),
+    ("<kysymys>\nKumpi?\n\n- [x] a\n- [x] b\n</kysymys>\n", "täsmälleen yksi [x]"),
+    ('<vaittama vastaus="ehka">\nOnko?\n</vaittama>\n', "pitää olla totta tai tarua"),
+    ('<vaittama vastaus="totta">\nOnko?\n', "jää sulkematta"),
+])
+def test_convert_quizzes_warns_about_a_question_without_one_answer(capsys, question, problem):
+    """Vastaukseton kysymys näyttäisi jokaisen valinnan vääräksi."""
+    convert.convert_quizzes(f"<visa>\n\n{question}\n</visa>\n", "osa1/sivu.md")
+    warning = capsys.readouterr().err
+    assert warning.startswith("varoitus: osa1/sivu.md: ") and problem in warning
 
 
 # --- Käyttöjärjestelmävälilehdet (README kohta 23) ---------------------------

@@ -136,65 +136,68 @@ spesifikaatioon](https://docs.microsoft.com/en-us/dotnet/csharp/language-referen
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="totta"><summary>1. Jokaisella lausekkeella on arvo ja tyyppi.</summary>
-
+<vaittama vastaus="totta">
+Jokaisella lausekkeella on arvo ja tyyppi.
+<perustelu>
 **Totta.** `3 + 4` on `int`-tyyppinen lauseke, jonka arvo on 7, ja `"Moi"` on
 `string`-lauseke. Juuri siksi lausekkeen voi sijoittaa muuttujaan tai antaa
 aliohjelmalle.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>2. <code>Console.WriteLine("Moi");</code> on lauseke.</summary>
-
+<vaittama vastaus="tarua">
+`Console.WriteLine("Moi");` on lauseke.
+<perustelu>
 **Tarua.** Se on lause: se saa jotakin tapahtumaan eikä tuota arvoa. Sen
 sisällä oleva `"Moi"` on lauseke.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>3. Sama koodinpätkä voi olla sekä lauseke että lause.</summary>
-
+<vaittama vastaus="totta">
+Sama koodinpätkä voi olla sekä lauseke että lause.
+<perustelu>
 **Totta.** `a++` on lauseke, koska sillä on arvo, ja puolipisteellä
 päätettynä `a++;` on myös lause.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mikä seuraavista **ei** ole lauseke?
+<kysymys>
+Mikä seuraavista **ei** ole lauseke?
 
-a) `5 * 2`\
-b) `pisteet`\
-c) `int pisteet = 10;`\
-d) `Math.Max(3, 7)`
+- [ ] `5 * 2`
+- [ ] `pisteet`
+- [x] `int pisteet = 10;`
+- [ ] `Math.Max(3, 7)`
 
-<details data-vastaus="c"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **c.** Muuttujan määrittely on lause. Muut ovat lausekkeita, joilla on arvo:
 10, muuttujan `pisteet` arvo ja 7.
+</perustelu>
+</kysymys>
 
-</details>
+<kysymys>
+Mitä kääntäjä sanoo rivistä `3 + 4;`?
 
-**5.** Mitä kääntäjä sanoo rivistä `3 + 4;`?
+- [ ] Ei mitään, rivi tulostaa 7
+- [x] Se on virhe, koska pelkkä laskutoimitus ei kelpaa lauseeksi
+- [ ] Ei mitään, tulos 7 tallennetaan muistiin myöhempää käyttöä varten
+- [ ] Ei mitään, rivi kääntyy ja tekee hiljaa ei mitään
 
-a) Ei mitään, rivi tulostaa 7\
-b) Se on virhe, koska pelkkä laskutoimitus ei kelpaa lauseeksi\
-c) Ei mitään, tulos 7 tallennetaan muistiin myöhempää käyttöä varten\
-d) Ei mitään, rivi kääntyy ja tekee hiljaa ei mitään
-
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Lauseke tarvitsee lauseen, jossa sitä käytetään: sijoituksen, kutsun
 tai vastaavan. Kääntäjä ilmoittaa `CS0201: Only assignment, call, increment,
 decrement, await, and new object expressions can be used as a statement`.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

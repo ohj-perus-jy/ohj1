@@ -377,66 +377,69 @@ olisivat kokonaislukuja.
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Lauseke <code>7 / 2</code> antaa tuloksen 3.5.</summary>
-
+<vaittama vastaus="tarua">
+Lauseke `7 / 2` antaa tuloksen 3.5.
+<perustelu>
 **Tarua.** Kun molemmat luvut ovat kokonaislukuja, C# tekee kokonaislukujaon
 ja tulos on 3. Jos haluat 3.5, tee toisesta luvusta liukuluku: `7 / 2.0`.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>2. <code>17 % 5</code> on 2.</summary>
-
+<vaittama vastaus="totta">
+`17 % 5` on 2.
+<perustelu>
 **Totta.** Jakojäännös kertoo, mitä jää yli: 17 = 3 · 5 + 2. Samalla
 operaattorilla selviää esimerkiksi parillisuus: `luku % 2 == 0`.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. <code>Math.Round(2.5)</code> antaa tuloksen 3.</summary>
-
+<vaittama vastaus="tarua">
+`Math.Round(2.5)` antaa tuloksen 3.
+<perustelu>
 **Tarua**, vaikka koulussa opetettiin toisin. C# pyöristää tasan puolikkaat
 lähimpään parilliseen, joten tulos on 2. `Math.Round(3.5)` on puolestaan 4.
 Kokeile vaikka.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mitä lauseke `(double)(7 / 2)` tuottaa?
+<kysymys>
+Mitä lauseke `(double)(7 / 2)` tuottaa?
 
-a) `3.5`\
-b) `3.0`\
-c) `3`\
-d) Käännösvirheen
+- [ ] `3.5`
+- [x] `3.0`
+- [ ] `3`
+- [ ] Käännösvirheen
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Sulkujen sisällä oleva jako lasketaan ensin kokonaislukuina, joten
 tulos on 3, ja vasta se muunnetaan liukuluvuksi 3.0. Jos haluat 3.5, muunna
 ennen jakoa: `(double)7 / 2`.
+</perustelu>
+</kysymys>
 
-</details>
+<kysymys>
+Muuttujassa `a` on 5. Mikä on lausekkeen `a == 5 && a != 5` arvo?
 
-**5.** Muuttujassa `a` on 5. Mikä on lausekkeen `a == 5 && a != 5` arvo?
+- [ ] `true`
+- [x] `false`
+- [ ] `5`
+- [ ] Käännösvirhe
 
-a) `true`\
-b) `false`\
-c) `5`\
-d) Käännösvirhe
-
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** `a == 5` on tosi ja `a != 5` epätosi, ja `&&` vaatii molemmat tosiksi.
 Lauseke on itse asiassa epätosi `a`:n arvosta riippumatta, ja Rider saattaa
 jopa huomauttaa siitä.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

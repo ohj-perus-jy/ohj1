@@ -63,9 +63,9 @@ Ohjelman rakennetta voi havainnollistaa seuraavasti. Uloimpana on tiedosto, sen 
  |
  '-- class Sovellus              <- luokka
       |
-      +-- Main()                 <- aloituspiste
+      +-- "Main()"               <- aloituspiste
       |
-      '-- Tervehdys()            <- muu aliohjelma
+      '-- "Tervehdys()"          <- muu aliohjelma
 ```
 
 Käydään osat läpi yksi kerrallaan.
@@ -191,7 +191,7 @@ Ohjelma tulostaa:
 Suorituksen kulku näyttää tältä:
 
 ```bob
-   Main()                    Tervehdys()
+  "Main()"              "Tervehdys()"
      |
      | 1. "Ohjelma alkaa"
      |
@@ -317,65 +317,69 @@ Top-level statements -ohjelmat voivat olla käteviä pikkuohjelmissa ja skriptei
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Ohjelman suoritus alkaa tiedoston ensimmäiseltä riviltä.</summary>
-
+<vaittama vastaus="tarua">
+Ohjelman suoritus alkaa tiedoston ensimmäiseltä riviltä.
+<perustelu>
 **Tarua.** Suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta
 riippumatta siitä, missä kohtaa tiedostoa `Main` on. `using`-rivit ja luokan
 otsikko ovat kääntäjälle tarkoitettua tietoa, eivät suoritettavia lauseita.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>2. Sisennys ei vaikuta siihen, miten C#-ohjelma suoritetaan.</summary>
-
+<vaittama vastaus="totta">
+Sisennys ei vaikuta siihen, miten C#-ohjelma suoritetaan.
+<perustelu>
 **Totta.** Lohkot määräävät aaltosulut, eivät sisennykset. Sisennys on ihmistä
 varten, ja juuri siksi se on tyyliohjeessa pakollinen. *Reformat Code* hoitaa
 sen puolestasi.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. Aliohjelman voi kirjoittaa toisen aliohjelman sisään.</summary>
-
+<vaittama vastaus="tarua">
+Aliohjelman voi kirjoittaa toisen aliohjelman sisään.
+<perustelu>
 **Tarua.** Aliohjelmat kirjoitetaan luokan sisään toistensa rinnalle.
 Sisäkkäin kirjoitettu `public static void` -aliohjelma on käännösvirhe.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mitä rivi `using System;` tekee?
+<kysymys>
+Mitä rivi `using System;` tekee?
 
-a) Käynnistää ohjelman\
-b) Sallii `System`-nimiavaruuden luokkiin viittaamisen pelkällä nimellä, esimerkiksi `Console`\
-c) Lataa .NET-ympäristön koneelle\
-d) Tulostaa tekstin `System`
+- [ ] Käynnistää ohjelman
+- [x] Sallii `System`-nimiavaruuden luokkiin viittaamisen pelkällä nimellä,
+  esimerkiksi `Console`
+- [ ] Lataa .NET-ympäristön koneelle
+- [ ] Tulostaa tekstin `System`
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Ilman sitä pitäisi kirjoittaa `System.Console.WriteLine`. Rider lisää
 `using`-rivit yleensä automaattisesti, kun alat kirjoittaa luokan nimeä.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Kääntäjä ilmoittaa `CS5001: Program does not contain a static 'Main'
+<kysymys>
+Kääntäjä ilmoittaa `CS5001: Program does not contain a static 'Main'
 method suitable for an entry point`. Mikä seuraavista on todennäköisin syy?
 
-a) Pääohjelma on nimetty `main` pienellä alkukirjaimella\
-b) Ohjelmassa on liikaa `using`-rivejä\
-c) Luokan nimi ei ole `Sovellus`\
-d) Tiedostossa on liian monta kommenttia
+- [x] Pääohjelma on nimetty `main` pienellä alkukirjaimella
+- [ ] Ohjelmassa on liikaa `using`-rivejä
+- [ ] Luokan nimi ei ole `Sovellus`
+- [ ] Tiedostossa on liian monta kommenttia
 
-<details data-vastaus="a"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **a.** Aloituspisteen nimen on oltava täsmälleen `Main`. Luokan nimi saa olla
 mikä tahansa, eivätkä `using`-rivit tai kommentit vaikuta asiaan.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>

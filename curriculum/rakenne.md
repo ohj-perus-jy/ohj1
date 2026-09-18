@@ -126,13 +126,48 @@ Jokainen luku etenee samalla kaavalla:
 6. **Testaa tietosi**: 2–3 totta/tarua-väittämää ja 1–2
    monivalintaa (yksi oikein neljästä). Eivät ole tehtäviä eivätkä anna
    pisteitä; tarkoitus on kohdistaa tunnettuihin väärinkäsityksiin. Noin
-   puolet väittämistä tosia. Vastaus ja lyhyt selitys `<details>`-lohkossa.
-   Markup: koko osio `<visa>`-kääreen sisällä, jokaisessa
-   `<details data-vastaus="totta|tarua|a–d">`; väittämä on `<summary>`-rivi,
-   monivalinnassa kysymys ja vaihtoehdot a)–d) markdownina (rivinvaihto
-   `\`-merkillä) ja `<summary>Näytä vastaus</summary>`. Tyylit
-   `theme/visa.css`. `<visa>`-kääre ja `data-vastaus` mahdollistavat
-   myöhemmin JS-interaktiivisuuden ilman lukujen muokkaamista.
+   puolet väittämistä tosia. Lukija valitsee vastauksen, ja sivu näyttää
+   oikean vastauksen ja lyhyen perustelun; valinta jää selaimen muistiin.
+   Markup: koko osio `<visa>`-kääreen sisällä, kukin tagi omalla rivillään.
+   Väittämä on `<vaittama vastaus="totta|tarua">`, monivalinta `<kysymys>`,
+   jonka vaihtoehdot ovat tehtävälistan rivejä: `- [x]` oikea, `- [ ]` väärä
+   (pitkä vaihtoehto jatkuu kahdella välilyönnillä sisennettynä). Kysymyksen
+   koodilohko tulee ennen vaihtoehtoja. Kummankin lopussa `<perustelu>`.
+   Numerot ja kirjaimet a)–d) tulevat sivustolta, joten niitä ei kirjoiteta;
+   perustelu alkaa silti oikealla vastauksella (`**Tarua.**`, `**b.**`).
+   Toteutus: `zensical/convert.py` (`convert_quizzes`),
+   `zensical/assets/js/visa.js` ja `zensical/assets/css/visa.css`.
+
+   ```markdown
+   <visa>
+
+   **Totta vai tarua?**
+
+   <vaittama vastaus="tarua">
+   Käännösvirhe ilmenee vasta, kun ohjelmaa ajetaan.
+   <perustelu>
+   **Tarua.** Käännösvirhe estää kääntämisen, joten ohjelmaa ei voi edes ajaa.
+   </perustelu>
+   </vaittama>
+
+   **Monivalinta.** Yksi vaihtoehto on oikein.
+
+   <kysymys>
+   Mitä kääntäjän virheilmoitus `CS1002: ; expected` tarkoittaa?
+
+   - [ ] Ohjelma kaatui puolipisteeseen ajon aikana
+   - [x] Jostakin lauseesta puuttuu puolipiste
+   - [ ] Ohjelmassa on liikaa puolipisteitä
+   - [ ] Puolipiste on kirjoitettu väärällä fontilla
+
+   <perustelu>
+   **b.** *Expected* tarkoittaa, että kääntäjä odotti puolipistettä eikä
+   löytänyt sitä.
+   </perustelu>
+   </kysymys>
+
+   </visa>
+   ```
 7. **Tehtävät**: `<task>`-lohkot.
 
 Sävy: asiallinen mutta rento. Kevyt huumori ja hauskat tosiasiat ovat

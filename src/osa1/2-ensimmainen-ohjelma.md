@@ -234,68 +234,73 @@ public class Ohjelma
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Lähdekoodin voi kirjoittaa Wordilla ja tallentaa <code>.docx</code>-tiedostona, kunhan teksti on oikein.</summary>
-
+<vaittama vastaus="tarua">
+Lähdekoodin voi kirjoittaa Wordilla ja tallentaa `.docx`-tiedostona, kunhan
+teksti on oikein.
+<perustelu>
 **Tarua.** Word-tiedostoon tallentuu tekstin lisäksi fontti- ja
 asettelutietoa, jota kääntäjä ei ymmärrä. Lähdekoodi on pelkkää tekstiä
 `.cs`-tiedostossa, ja sen kirjoittamiseen käytetään tekstieditoria tai Rideriä.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>2. Jos muutat lähdekoodia, muutokset näkyvät ajettavassa ohjelmassa vasta uuden kääntämisen jälkeen.</summary>
-
+<vaittama vastaus="totta">
+Jos muutat lähdekoodia, muutokset näkyvät ajettavassa ohjelmassa vasta uuden
+kääntämisen jälkeen.
+<perustelu>
 **Totta.** Ajettava ohjelma on käännöksen tulos, eikä se tiedä lähdekoodin
 muutoksista mitään. Riderin *Run* kääntää tarvittaessa uudelleen
 automaattisesti, joten asiaa ei arjessa huomaa.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. Käännösvirhe ilmenee vasta, kun ohjelmaa ajetaan.</summary>
-
+<vaittama vastaus="tarua">
+Käännösvirhe ilmenee vasta, kun ohjelmaa ajetaan.
+<perustelu>
 **Tarua.** Käännösvirhe estää kääntämisen, joten ohjelmaa ei voi edes ajaa.
 Vasta ajettaessa ilmenevät virheet ovat suorituksenaikaisia virheitä, kuten
 jakaminen nollalla.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mitä kääntäjän virheilmoitus `CS1002: ; expected` tarkoittaa?
+<kysymys>
+Mitä kääntäjän virheilmoitus `CS1002: ; expected` tarkoittaa?
 
-a) Ohjelma kaatui puolipisteeseen ajon aikana\
-b) Jostakin lauseesta puuttuu puolipiste\
-c) Ohjelmassa on liikaa puolipisteitä\
-d) Puolipiste on kirjoitettu väärällä fontilla
+- [ ] Ohjelma kaatui puolipisteeseen ajon aikana
+- [x] Jostakin lauseesta puuttuu puolipiste
+- [ ] Ohjelmassa on liikaa puolipisteitä
+- [ ] Puolipiste on kirjoitettu väärällä fontilla
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** *Expected* tarkoittaa, että kääntäjä odotti puolipistettä eikä
 löytänyt sitä. Rivi- ja sarakenumero kertovat, mistä katsoa. Ohjelma ei ole
 ajossa, koska se ei kääntynyt.
+</perustelu>
+</kysymys>
 
-</details>
+<kysymys>
+Mikä seuraavista tulostaa rivin `Moi!` ja kääntyy virheettä?
 
-**5.** Mikä seuraavista tulostaa rivin `Moi!` ja kääntyy virheettä?
+- [ ] `Console.WriteLine(Moi!);`
+- [ ] `Console.WriteLine("Moi!")`
+- [x] `Console.WriteLine("Moi!");`
+- [ ] `console.writeline("Moi!");`
 
-a) `Console.WriteLine(Moi!);`\
-b) `Console.WriteLine("Moi!")`\
-c) `Console.WriteLine("Moi!");`\
-d) `console.writeline("Moi!");`
-
-<details data-vastaus="c"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **c.** Vaihtoehdosta a puuttuvat lainausmerkit, b:stä puolipiste, ja d:ssä
 isot ja pienet kirjaimet ovat väärin. C# erottaa `Console`n ja `console`n
 toisistaan, eikä jälkimmäistä ole olemassa.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

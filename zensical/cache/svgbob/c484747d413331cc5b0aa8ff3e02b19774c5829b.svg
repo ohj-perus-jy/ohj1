@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="144" class="svgbob">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="208" class="svgbob">
   <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
   stroke: var(--md-default-fg-color);
   stroke-width: 2;
@@ -95,7 +95,9 @@
       <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
     </marker>
   </defs>
-  <rect class="backdrop" x="0" y="0" width="560" height="144"></rect>
+  <rect class="backdrop" x="0" y="0" width="560" height="208"></rect>
+  <rect x="188" y="88" width="168" height="32" class="solid nofill" rx="4"></rect>
+  <text x="202" y="108" >Console.WriteLine</text>
   <text x="66" y="12" >argumentti</text>
   <text x="386" y="12" >paluuarvo</text>
   <line x1="56" y1="40" x2="184" y2="40" class="solid"></line>
@@ -104,16 +106,19 @@
   <polygon points="488,36 496,40 488,44" class="filled"></polygon>
   <text x="26" y="44" >16</text>
   <text x="506" y="44" >4.0</text>
-  <text x="354" y="92" >.</text>
   <line x1="64" y1="104" x2="176" y2="104" class="solid"></line>
   <polygon points="176,100 184,104 176,108" class="filled"></polygon>
-  <text x="202" y="108" >Console.WriteLine</text>
-  <line x1="348" y1="96" x2="348" y2="112" class="solid"></line>
-  <text x="354" y="124" >&#39;</text>
-  <text x="378" y="108" >ei</text>
-  <text x="402" y="108" >paluuarvoa,</text>
+  <text x="386" y="108" >ei</text>
+  <text x="410" y="108" >paluuarvoa,</text>
   <text x="386" y="124" >teksti</text>
   <text x="490" y="124" >ruudulla</text>
+  <line x1="64" y1="168" x2="176" y2="168" class="solid"></line>
+  <polygon points="176,164 184,168 176,172" class="filled"></polygon>
+  <text x="242" y="172" >Math.Max</text>
+  <polygon points="488,164 496,168 488,172" class="filled"></polygon>
+  <text x="2" y="172" >3</text>
+  <text x="42" y="172" >8</text>
+  <text x="506" y="172" >8</text>
   <text x="10" y="108" >Hei!</text>
   <g>
     <path d="M 200,24 A 4,4 0,0,0 196,28" class="nofill"></path>
@@ -127,14 +132,18 @@
     <path d="M 356,52 A 4,4 0,0,1 352,56" class="nofill"></path>
   </g>
   <g>
-    <path d="M 196,88 A 8,8 0,0,0 188,96" class="nofill"></path>
-    <line x1="196" y1="88" x2="352" y2="88" class="solid"></line>
-    <line x1="188" y1="96" x2="188" y2="112" class="solid"></line>
-    <path d="M 188,112 A 8,8 0,0,0 196,120" class="nofill"></path>
-    <line x1="196" y1="120" x2="352" y2="120" class="solid"></line>
-  </g>
-  <g>
     <text x="442" y="124">nä</text>
     <text x="458" y="124">kyy</text>
+  </g>
+  <g>
+    <path d="M 192,152 A 4,4 0,0,0 188,156" class="nofill"></path>
+    <line x1="188" y1="156" x2="188" y2="180" class="solid"></line>
+    <line x1="192" y1="152" x2="352" y2="152" class="solid"></line>
+    <path d="M 352,152 A 4,4 0,0,1 356,156" class="nofill"></path>
+    <line x1="356" y1="156" x2="356" y2="180" class="solid"></line>
+    <line x1="356" y1="168" x2="488" y2="168" class="solid"></line>
+    <path d="M 188,180 A 4,4 0,0,0 192,184" class="nofill"></path>
+    <line x1="192" y1="184" x2="352" y2="184" class="solid"></line>
+    <path d="M 356,180 A 4,4 0,0,1 352,184" class="nofill"></path>
   </g>
 </svg>

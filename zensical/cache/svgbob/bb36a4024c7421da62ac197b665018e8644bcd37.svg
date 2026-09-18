@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="176" class="svgbob">
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="96" class="svgbob">
   <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
   stroke: var(--md-default-fg-color);
   stroke-width: 2;
@@ -95,27 +95,19 @@
       <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
     </marker>
   </defs>
-  <rect class="backdrop" x="0" y="0" width="360" height="176"></rect>
-  <text x="162" y="12" >y</text>
-  <polygon points="160,28 164,16 168,28" class="filled"></polygon>
-  <line x1="164" y1="28" x2="164" y2="160" class="solid"></line>
-  <line x1="16" y1="88" x2="312" y2="88" class="solid"></line>
-  <polygon points="312,84 320,88 312,92" class="filled"></polygon>
-  <path d="M 184,96 A 16,16 0,0,0 184,112" class="nofill"></path>
-  <text x="186" y="108" >0,</text>
-  <text x="210" y="108" >0</text>
-  <path d="M 216,96 A 16,16 0,0,1 216,112" class="nofill"></path>
-  <path d="M 48,32 A 16,16 0,0,0 48,48" class="nofill"></path>
-  <line x1="48" y1="40" x2="56" y2="40" class="solid"></line>
-  <text x="58" y="44" >150,</text>
-  <text x="82" y="60" >o</text>
-  <text x="98" y="44" >100</text>
-  <path d="M 120,32 A 16,16 0,0,1 120,48" class="nofill"></path>
-  <text x="330" y="92" >x</text>
-  <text x="250" y="140" >o</text>
-  <path d="M 272,128 A 16,16 0,0,0 272,144" class="nofill"></path>
-  <text x="274" y="140" >150,</text>
-  <line x1="312" y1="136" x2="320" y2="136" class="solid"></line>
-  <text x="322" y="140" >100</text>
-  <path d="M 344,128 A 16,16 0,0,1 344,144" class="nofill"></path>
+  <rect class="backdrop" x="0" y="0" width="136" height="96"></rect>
+  <text x="10" y="12" >demo1</text>
+  <text x="50" y="44" >Lumiukko</text>
+  <text x="50" y="60" >HelloWorld</text>
+  <text x="50" y="76" >...</text>
+  <text x="58" y="12" >(solution)</text>
+  <text x="138" y="44" >(projekti)</text>
+  <text x="138" y="60" >(projekti)</text>
+  <g>
+    <line x1="20" y1="16" x2="20" y2="68" class="solid"></line>
+    <line x1="20" y1="40" x2="40" y2="40" class="solid"></line>
+    <line x1="20" y1="56" x2="40" y2="56" class="solid"></line>
+    <path d="M 20,68 A 4,4 0,0,0 24,72" class="nofill"></path>
+    <line x1="24" y1="72" x2="40" y2="72" class="solid"></line>
+  </g>
 </svg>

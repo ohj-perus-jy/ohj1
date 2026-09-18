@@ -38,15 +38,13 @@ bool peliOhi = false;     // peliOhi-muuttujaan voi tallentaa totuusarvoja
 
 Muuttujaa voi ajatella laatikkona, jonka kylkeen on kirjoitettu nimi ja jonka
 sisällä on arvo. Laatikon muoto eli tyyppi kertoo, mitä siihen mahtuu:
-kokonaislukulaatikkoon ei mahdu tekstiä.
+kokonaislukulaatikkoon ei mahdu tekstiä. Esimerkin kolme laatikkoa:
 
-```bob
-  pisteet        nimi           peliOhi
- .-------.     .---------.     .-------.
- |   0   |     | "Maija" |     | false |
- '-------'     '---------'     '-------'
-   int          string          bool
-```
+| Nimi (kyljessä) | Arvo (sisällä) | Tyyppi (muoto) |
+| --------------- | -------------- | -------------- |
+| `pisteet`       | `0`            | `int`          |
+| `nimi`          | `"Maija"`      | `string`       |
+| `peliOhi`       | `false`        | `bool`         |
 
 Ensimmäinen muuttuja nimeltä `pisteet` on tyypiltään `int`, eli kokonaisluku.
 Muita kokonaislukuja voisivat olla esimerkiksi `-10`, `0` ja `67`.
@@ -313,71 +311,76 @@ on kirjoitettu eri tavalla kuin määrittelyssä (`Pisteet` vs. `pisteet`).
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Muuttujan tyypin voi vaihtaa kesken ohjelman sijoittamalla siihen erityyppisen arvon.</summary>
-
+<vaittama vastaus="tarua">
+Muuttujan tyypin voi vaihtaa kesken ohjelman sijoittamalla siihen erityyppisen
+arvon.
+<perustelu>
 **Tarua.** Tyyppi lukitaan määrittelyssä. `int`-muuttujaan ei voi sijoittaa
 merkkijonoa, ja kääntäjä ilmoittaa siitä virheellä CS0029.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>2. Sijoitus <code>b = a;</code> kopioi <code>a</code>:n arvon, joten <code>a</code>:n muuttaminen myöhemmin ei vaikuta <code>b</code>:hen.</summary>
-
+<vaittama vastaus="totta">
+Sijoitus `b = a;` kopioi `a`:n arvon, joten `a`:n muuttaminen myöhemmin ei
+vaikuta `b`:hen.
+<perustelu>
 **Totta.** Perustietotyyppien muuttujat ovat toisistaan riippumattomia
 laatikoita. Sijoitus kopioi arvon, ei yhdistä laatikoita.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. <code>'a'</code> ja <code>"a"</code> ovat C#:ssa sama asia.</summary>
-
+<vaittama vastaus="tarua">
+`'a'` ja `"a"` ovat C#:ssa sama asia.
+<perustelu>
 **Tarua.** `'a'` on `char` eli yksi merkki, `"a"` on `string` eli yhden
 merkin pituinen merkkijono. Tyypit ovat eri, eikä toista voi sijoittaa toisen
 paikalle.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mikä seuraavista on kelvollinen ja tyyliohjeen mukainen muuttujan nimi?
+<kysymys>
+Mikä seuraavista on kelvollinen ja tyyliohjeen mukainen muuttujan nimi?
 
-a) `Painoindeksi`\
-b) `paino_indeksi`\
-c) `painoindeksi`\
-d) `2paino`
+- [ ] `Painoindeksi`
+- [ ] `paino_indeksi`
+- [x] `painoindeksi`
+- [ ] `2paino`
 
-<details data-vastaus="c"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **c.** Muuttujat nimetään camelCase-tyylillä pienellä alkukirjaimella. Iso
 alkukirjain on varattu luokille ja aliohjelmille, alaviiva ei kuulu kurssin
 tyyliin, ja numerolla alkava nimi ei edes käänny.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Mitä seuraava koodi tulostaa?
+<kysymys>
+Mitä seuraava koodi tulostaa?
 
 ```csharp,ignore
 int pisteet = 42;
 Console.WriteLine($"Pisteitä: {pisteet}");
 ```
 
-a) `Pisteitä: {pisteet}`\
-b) `Pisteitä: 42`\
-c) `Pisteitä: pisteet`\
-d) Käännösvirheen, koska merkkijonossa on aaltosulkuja
+- [ ] `Pisteitä: {pisteet}`
+- [x] `Pisteitä: 42`
+- [ ] `Pisteitä: pisteet`
+- [ ] Käännösvirheen, koska merkkijonossa on aaltosulkuja
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Dollarimerkki merkkijonon edessä tekee siitä interpoloidun:
 aaltosulkujen sisällä oleva lauseke korvataan arvollaan. Ilman `$`-merkkiä
 tulostuisi vaihtoehto a.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

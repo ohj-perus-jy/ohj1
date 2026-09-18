@@ -203,6 +203,12 @@ juuri mdBook ja `/dev/` Zensical.
 - [ ] KaTeX: `src`:ssä ei ole kaavoja, joten `mdbook-katex` jää pois ilman
       korvaajaa; jos kaavoja tulee, `pymdownx.arithmatex` + KaTeX.
 - [ ] Harkitse ohj2:n `links.yml` (lychee) ja `.lycheeignore` kopiointia.
+- [ ] Vahti (`convert.py --watch`) ajaa muunnoksen omassa prosessissaan, joten
+      muutettu `convert.py` tulee voimaan vasta `run.sh`:n uudelleenkäynnistyksessä;
+      siihen asti vahti kirjoittaa `docs/`:n vanhalla koodilla (2026-09-18: uusi
+      `convert_quizzes` jäi ajamatta ja visat näkyivät raakoina tehtävälistoina).
+      Harkitse: vahti seuraa myös `convert.py`:tä ja käynnistää itsensä
+      uudelleen (`os.execv`). Yleiskäyttöinen.
 - [ ] Purku PURKUSUUNNITELMA.md:n järjestyksessä, sitten
       `grep -r mdbook-tooling .github .devcontainer` tyhjä ja
       `ohj-mdbook-tooling` arkistoon.

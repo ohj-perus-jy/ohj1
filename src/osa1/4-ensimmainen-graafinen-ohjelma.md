@@ -123,13 +123,13 @@ mieleen.
 ```bob
                     y
                     ^
-     (-150, 100)    |
+     "(-150, 100)"  |
           o         |
                     |
   ------------------+------------------> x
-                    | (0, 0)
+                    | "(0, 0)"
                     |
-                    |          o (150, -100)
+                    |          o "(150, -100)"
                     |
 ```
 
@@ -225,66 +225,69 @@ Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Jypelissä origo <code>(0, 0)</code> on ikkunan vasemmassa yläkulmassa.</summary>
-
+<vaittama vastaus="tarua">
+Jypelissä origo `(0, 0)` on ikkunan vasemmassa yläkulmassa.
+<perustelu>
 **Tarua.** Origo on ikkunan keskellä, ja y kasvaa ylöspäin kuten
 matematiikassa. Monessa muussa grafiikkakirjastossa asia on toisin, joten
 sekaannus on ymmärrettävä.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>2. <code>Begin</code>-aliohjelma suoritetaan kerran, kun peli käynnistyy.</summary>
-
+<vaittama vastaus="totta">
+`Begin`-aliohjelma suoritetaan kerran, kun peli käynnistyy.
+<perustelu>
 **Totta.** Siihen kirjoitetaan pelin alkutilanne: taustaväri, oliot ja niiden
 lisääminen peliin.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. Kun olio on luotu <code>new</code>-sanalla, se näkyy ruudulla heti.</summary>
-
+<vaittama vastaus="tarua">
+Kun olio on luotu `new`-sanalla, se näkyy ruudulla heti.
+<perustelu>
 **Tarua.** Luotu olio on vain muistissa, kunnes se lisätään peliin
 `Add`-kutsulla. Unohtunut `Add` on yleisin syy tyhjään ruutuun.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mikä rivi saa pallon näkymään pelissä?
+<kysymys>
+Mikä rivi saa pallon näkymään pelissä?
 
-a) `pallo.Color = Color.White;`\
-b) `Add(pallo);`\
-c) `new PhysicsObject(200, 200, Shape.Circle);`\
-d) `Level.Background.Color = Color.Black;`
+- [ ] `pallo.Color = Color.White;`
+- [x] `Add(pallo);`
+- [ ] `new PhysicsObject(200, 200, Shape.Circle);`
+- [ ] `Level.Background.Color = Color.Black;`
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Vaihtoehto c luo olion muistiin, mutta ei lisää sitä peliin. a asettaa
 pallon värin ja d taustan värin. Ilman `Add`-kutsua kumpikaan ei näy missään.
+</perustelu>
+</kysymys>
 
-</details>
+<kysymys>
+Olion sijainniksi asetetaan x = 0 ja y = `Screen.Top`. Missä olio näkyy?
 
-**5.** Olion sijainniksi asetetaan x = 0 ja y = `Screen.Top`. Missä olio näkyy?
+- [ ] Ikkunan keskellä
+- [x] Ikkunan yläreunassa keskellä
+- [ ] Ikkunan alareunassa keskellä
+- [ ] Ikkunan oikeassa reunassa
 
-a) Ikkunan keskellä\
-b) Ikkunan yläreunassa keskellä\
-c) Ikkunan alareunassa keskellä\
-d) Ikkunan oikeassa reunassa
-
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** x = 0 on vaakasuunnassa keskellä, ja `Screen.Top` on yläreunan
 y-koordinaatti. Koska y kasvaa ylöspäin, yläreuna on positiivisella puolella.
 Puolet oliosta jää tosin reunan taakse piiloon, sillä sijainti tarkoittaa olion
 keskipistettä.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

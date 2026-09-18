@@ -6,8 +6,8 @@ rivejä päässään kerralla. Siksi ohjelma jaetaan *aliohjelmiin*: nimettyihin
 palasiin, joista jokainen tekee yhden asian. Aliohjelma kirjoitetaan kerran,
 ja sen jälkeen sitä voi käyttää eli *kutsua* niin monta kertaa kuin haluaa.
 
-Olet jo käyttänyt aliohjelmia, vaikka et ehkä ole ajatellut asiaa: `Main` on
-aliohjelma, Jypelin `Begin` on aliohjelma, ja `Console.WriteLine` on valmis
+Olet jo käyttänyt aliohjelmia, vaikka et ehkä ajatellut asiaa: `Main` on
+aliohjelma ja Jypelin `Begin` on aliohjelma. Myös `Console.WriteLine` on valmis
 aliohjelma, jota olet kutsunut. Tässä luvussa opit, mitä kutsussa oikeastaan
 tapahtuu, ja kirjoitat ensimmäiset omat aliohjelmasi.
 
@@ -17,7 +17,7 @@ Kuvittele, että selität ystävälle, miten hänen luokseen tullaan kylään.
 Et sano: "Nosta oikea jalka, siirrä sitä eteenpäin, laske se alas, nosta
 vasen jalka..." Sanot: "Kävele bussipysäkille, ota bussi 12, jää pois
 torilla." Jokainen ohje on nimi kokonaiselle toimintosarjalle, jonka kumpikin
-tuntee. *Kävele* on aliohjelma, ja niin on *ota bussi 12* -kin. Ihmiset
+tuntee. *Kävele* on aliohjelma, ja niin on myös *ota bussi 12*. Ihmiset
 ajattelevat aliohjelmilla luonnostaan. Ohjelmoinnissa ne pitää vain kirjoittaa
 näkyviin.
 
@@ -27,14 +27,14 @@ Ohjelmissa aliohjelmia tarvitaan kolmesta syystä.
   ja jokainen tarvitsee saman viiden rivin luontikoodin. Tulostetaan otsikko
   kehyksineen ohjelman kolmessa kohdassa. Copy-paste toimii mainiosti, kunnes
   huomaat koodissa virheen ja korjaat sen kymmeneen kohtaan. Löydät niistä
-  yhdeksän.
+  hyvällä tuurilla yhdeksän.
 * **Ohjelma pitää jakaa osiin.** Pelin `Begin` voi olla kolmesataa riviä
   sekaisin kentän piirtämistä, pelaajan luomista ja näppäinten asettamista.
   Tai se voi olla kolme riviä: `LuoKentta();`, `LuoPelaaja();` ja
   `AsetaOhjaimet();`. Jälkimmäisestä näkee yhdellä silmäyksellä, mitä ohjelma
   tekee, ja kun kenttä on rikki, tiedät, mistä vika löytyy.
 * **Nimi kertoo, mitä koodi tekee.** Kymmenen riviä laskentaa vaatii lukijalta
-  pysähtymisen. Kutsu `LaskePainoindeksi()` ei vaadi. Hyvin nimetty aliohjelma
+  pysähtymisen. Kutsu `LaskePintaAla()` ei vaadi. Hyvin nimetty aliohjelma
   on kuin hyvin nimetty muuttuja: se säästää kommentin ja lukijan hermot.
 
 Ilman aliohjelmia ohjelma on yksi pitkä lauseiden jono, joka suoritetaan
@@ -43,13 +43,14 @@ on nimi ja tehtävä, ja pääohjelma, joka kokoaa osat yhteen.
 
 ## Aliohjelman kutsuminen
 
-Aloitetaan käyttämisestä, koska sitä olet jo tehnyt. Kutsu koostuu aliohjelman
-nimestä ja suluista. Sulkujen sisään kirjoitetaan tiedot, joita aliohjelma
-tarvitsee tehtäväänsä.
+Aloitetaan käyttämisestä, koska sitä olet jo tehnyt. Aliohjelman *kutsu* koostuu
+aliohjelman nimestä ja suluista. Sulkujen sisään kirjoitetaan tiedot, joita
+aliohjelma tarvitsee tehtäväänsä.
 
 ```csharp,ignore
-Console.WriteLine("Hei!");    // WriteLine tarvitsee tulostettavan tekstin
-double juuri = Math.Sqrt(16); // Sqrt tarvitsee luvun ja antaa takaisin sen neliöjuuren
+Console.WriteLine("Hei!");     // WriteLine tarvitsee tulostettavan tekstin
+double juuri = Math.Sqrt(16);  // Sqrt tarvitsee luvun ja antaa takaisin sen neliöjuuren
+int suurempi = Math.Max(3, 8); // Max tarvitsee kaksi lukua ja antaa takaisin suuremman
 ```
 
 Kutsuessa kannattaa ajatella aliohjelmaa laatikkona, jonka sisältöä ei tarvitse
@@ -57,8 +58,8 @@ tuntea. Riittää tietää kaksi asiaa:
 
 1. **Mitä tietoa aliohjelma tarvitsee?** Tiedot annetaan sulkujen sisällä
    kutsussa. Niitä sanotaan *argumenteiksi*. `Console.WriteLine` tarvitsee
-   tulostettavan tekstin, `Math.Sqrt` tarvitsee luvun, `Math.Max` tarvitsee
-   kaksi lukua.
+   tulostettavan tekstin, `Math.Sqrt` (antaa luvun neliöjuuren) tarvitsee luvun,
+   `Math.Max` (antaa suuremman kahdesta luvusta) tarvitsee kaksi lukua.
 2. **Antaako aliohjelma jotakin takaisin?** Jos antaa, tulosta sanotaan
    *paluuarvoksi*, ja kutsua voi käyttää kuten mitä tahansa arvoa: sijoittaa
    muuttujaan, tulostaa tai käyttää laskussa. `Math.Sqrt(16)` antaa takaisin
@@ -71,9 +72,14 @@ tuntea. Riittää tietää kaksi asiaa:
    16  ---------------->|     Math.Sqrt     |----------------> 4.0
                         '-------------------'
 
-                        .-------------------.
- "Hei!" -------------->| Console.WriteLine |   ei paluuarvoa,
-                        '-------------------'   teksti näkyy ruudulla
+                       .--------------------.
+ "Hei!" -------------->| Console.WriteLine  |   ei paluuarvoa,
+                       '--------------------'   teksti näkyy ruudulla
+
+                       .--------------------.
+3    8  -------------->|      Math.Max      |----------------> 8
+                       '--------------------'
+
 ```
 
 Sama asia taulukkona muutamasta tutusta aliohjelmasta:
@@ -249,12 +255,13 @@ Suoritus kulkee näin: `Main` kutsuu `TulostaKehys`-aliohjelmaa, joka kutsuu
 `Main`-aliohjelman toiselle riville.
 
 ```bob
-   Main()            TulostaKehys()        TulostaViiva()
+  "Main()"         "TulostaKehys()"     "TulostaViiva()"
      |
      +---- kutsu ------->+
      |                   +---- kutsu ------->+
      |                   |                   | "======"
      |                   +<---- paluu -------+
+     |                   |
      |                   +---- kutsu ------->+
      |                   |                   | "======"
      |                   +<---- paluu -------+
@@ -463,41 +470,45 @@ vain, jos aliohjelmaa kutsutaan. Tarkista, että `Main`-aliohjelmassa on kutsu.
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Aliohjelma suoritetaan heti, kun se on määritelty.</summary>
-
+<vaittama vastaus="tarua">
+Aliohjelma suoritetaan heti, kun se on määritelty.
+<perustelu>
 **Tarua.** Määrittely vain kertoo, mitä aliohjelma tekee. Runko suoritetaan
 vasta, kun aliohjelmaa kutsutaan. Aliohjelma, jota ei koskaan kutsuta, ei
 tee koskaan mitään.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>2. Aliohjelma pitää määritellä tiedostossa ennen kohtaa, jossa sitä kutsutaan.</summary>
-
+<vaittama vastaus="tarua">
+Aliohjelma pitää määritellä tiedostossa ennen kohtaa, jossa sitä kutsutaan.
+<perustelu>
 **Tarua.** Luokan sisällä aliohjelmien järjestyksellä ei ole väliä.
 `TulostaViiva` voi olla `Main`-aliohjelman jälkeen, vaikka `Main` kutsuu
 sitä. Muuttujat ovat eri juttu: ne pitää määritellä ennen käyttöä.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>3. Kutsu <code>Math.Sqrt(25)</code> on arvo, jonka voi sijoittaa muuttujaan.</summary>
-
+<vaittama vastaus="totta">
+Kutsu `Math.Sqrt(25)` on arvo, jonka voi sijoittaa muuttujaan.
+<perustelu>
 **Totta.** `Math.Sqrt` palauttaa arvon, joten kutsua voi käyttää kuten mitä
 tahansa lauseketta: `double juuri = Math.Sqrt(25);` tallentaa muuttujaan
 luvun `5`. `Console.WriteLine`-kutsua ei voi sijoittaa muuttujaan, koska se
 ei palauta mitään.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mitä seuraava ohjelma tulostaa?
+<kysymys>
+Mitä seuraava ohjelma tulostaa?
 
 ```csharp,ignore
 public static void Main()
@@ -513,34 +524,33 @@ public static void Tervehdi()
 }
 ```
 
-a) `A`, `C`, `B`\
-b) `A`, `B`, `C`\
-c) `B`, `A`, `C`\
-d) `A`, `C`
+- [ ] `A`, `C`, `B`
+- [x] `A`, `B`, `C`
+- [ ] `B`, `A`, `C`
+- [ ] `A`, `C`
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Kun suoritus saapuu kutsuun `Tervehdi();`, se hyppää aliohjelmaan,
 tulostaa `B` ja palaa kutsun jälkeiselle riville tulostamaan `C`. Sillä ei
 ole väliä, että `Tervehdi` on kirjoitettu tiedostoon viimeiseksi.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Mikä seuraavista on oikein kirjoitettu ja tyyliohjeen mukainen
+<kysymys>
+Mikä seuraavista on oikein kirjoitettu ja tyyliohjeen mukainen
 aliohjelman määrittely konsoliohjelmassa?
 
-a) `public static void tulostaViiva() { ... }`\
-b) `public static void TulostaViiva { ... }`\
-c) `public static void TulostaViiva() { ... }`\
-d) `TulostaViiva();`
+- [ ] `public static void tulostaViiva() { ... }`
+- [ ] `public static void TulostaViiva { ... }`
+- [x] `public static void TulostaViiva() { ... }`
+- [ ] `TulostaViiva();`
 
-<details data-vastaus="c"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **c.** Aliohjelman nimi alkaa isolla kirjaimella (a on muuttujatyyliä), ja
 nimen perään tulevat sulut myös silloin, kun aliohjelma ei tarvitse mitään
 tietoa (b:stä ne puuttuvat). Vaihtoehto d on kutsu, ei määrittely.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

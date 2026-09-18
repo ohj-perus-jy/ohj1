@@ -353,38 +353,42 @@ näyttää oikealta, mutta vain ensimmäinen lause kuuluu ehtoon.
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. <code>if (luku = 5)</code> tarkistaa, onko <code>luku</code> viisi.</summary>
-
+<vaittama vastaus="tarua">
+`if (luku = 5)` tarkistaa, onko `luku` viisi.
+<perustelu>
 **Tarua.** Yksi `=` on sijoitus, vertailu kirjoitetaan `==`. Tämä ei edes
 käänny, koska sijoituksen tulos on `int` eikä `bool`. Kääntäjä ilmoittaa
 CS0029.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>2. <code>else if</code> -ketjusta suoritetaan kaikki haarat, joiden ehto on tosi.</summary>
-
+<vaittama vastaus="tarua">
+`else if` -ketjusta suoritetaan kaikki haarat, joiden ehto on tosi.
+<perustelu>
 **Tarua.** Vain ensimmäinen tosi haara suoritetaan, loput ohitetaan. Siksi
 järjestyksellä on väliä: arvosanaketjussa on testattava suurin raja ensin.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>3. <code>else</code>-haaralle ei kirjoiteta ehtoa.</summary>
-
+<vaittama vastaus="totta">
+`else`-haaralle ei kirjoiteta ehtoa.
+<perustelu>
 **Totta.** `else` suoritetaan, kun mikään edeltävä ehto ei ollut tosi. Ehto on
 siis "kaikki muu".
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mitä seuraava koodi tulostaa?
+<kysymys>
+Mitä seuraava koodi tulostaa?
 
 ```csharp,ignore
 int luku = 2;
@@ -394,20 +398,20 @@ if (luku > 5);
 }
 ```
 
-a) `Iso luku`\
-b) Ei mitään\
-c) Käännösvirheen\
-d) `2`
+- [x] `Iso luku`
+- [ ] Ei mitään
+- [ ] Käännösvirheen
+- [ ] `2`
 
-<details data-vastaus="a"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **a**, vaikka luku on pieni. Puolipiste `if`-rivin perässä on tyhjä lause, ja
 se on koko `if`-lauseen runko. Aaltosulkulohko ei enää kuulu ehtoon, joten se
 suoritetaan aina. Kääntäjä antaa varoituksen CS0642, mutta kääntää ohjelman.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Muuttujassa `paiva` on 7. Mitä alla oleva `switch` tulostaa?
+<kysymys>
+Muuttujassa `paiva` on 7. Mitä alla oleva `switch` tulostaa?
 
 ```csharp,ignore
 switch (paiva)
@@ -425,17 +429,16 @@ switch (paiva)
 }
 ```
 
-a) `Maanantai`\
-b) `Viikonloppu!`\
-c) `Arkipäivä`\
-d) `Viikonloppu!` ja `Arkipäivä`
+- [ ] `Maanantai`
+- [x] `Viikonloppu!`
+- [ ] `Arkipäivä`
+- [ ] `Viikonloppu!` ja `Arkipäivä`
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Peräkkäiset `case 6:` ja `case 7:` jakavat saman haaran. `break`
 lopettaa `switch`-lauseen, joten `default`-haaraa ei suoriteta.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

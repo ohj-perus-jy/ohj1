@@ -104,10 +104,10 @@ jokainen tehtävä on oma projektinsa. Solution `demo1` sisältää siis projekt
 aikaa näkyvillä ilman jatkuvaa avaamista ja sulkemista.
 
 ```bob
- demo1 (solution)
+ demo1 "(solution)"
   |
-  +-- Lumiukko   (projekti)
-  +-- HelloWorld (projekti)
+  +-- Lumiukko   "(projekti)"
+  +-- HelloWorld "(projekti)"
   '-- ...
 ```
 
@@ -275,10 +275,11 @@ ohj1
  |
  +-demot 
  |  |
- |  '-demo1
+ |  |-demo1
  |  |  |
  |  |  |-demo1.sln 
  |  |  |-Lumiukko  
+ |  |  |  |
  |  |  |  '- Lumiukko.cs jne.
  |  |  | 
  |  |  |-HelloWorld  <- tämä tehtiin nyt
@@ -366,69 +367,73 @@ ohjelma](./4-ensimmainen-graafinen-ohjelma.md).
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="totta"><summary>1. Solution voi sisältää monta projektia, ja jokainen projekti on oma ohjelmansa.</summary>
-
+<vaittama vastaus="totta">
+Solution voi sisältää monta projektia, ja jokainen projekti on oma ohjelmansa.
+<perustelu>
 **Totta.** Kurssilla demo on solution ja jokainen tehtävä on projekti sen
 sisällä. Solution on siis kansio ohjelmille, ei itse ohjelma.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>2. <em>Run</em>-painike ajaa aina sen tiedoston, joka on auki editorissa.</summary>
-
+<vaittama vastaus="tarua">
+*Run*-painike ajaa aina sen tiedoston, joka on auki editorissa.
+<perustelu>
 **Tarua.** *Run* ajaa yläpalkin pudotusvalikossa valitun projektin. Jos
 muutokset "eivät näy", tarkista ensin, että valittuna on oikea projekti. Tämä
 on kurssin epävirallinen perinne, johon jokainen osallistuu ainakin kerran.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>3. Projektin voi turvallisesti pitää OneDrive- tai Dropbox-kansiossa, koska silloin se on aina varmuuskopioitu.</summary>
-
+<vaittama vastaus="tarua">
+Projektin voi turvallisesti pitää OneDrive- tai Dropbox-kansiossa, koska silloin
+se on aina varmuuskopioitu.
+<perustelu>
 **Tarua.** Pilvisynkronointi lukitsee tiedostoja kesken kääntämisen ja
 aiheuttaa satunnaisia, vaikeasti selitettäviä virheitä. Pidä projektit
 tavallisessa kansiossa ja hoida varmuuskopiointi [Gitillä](../git.md).
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Missä kurssin demotehtävien solutionit kannattaa ohjeen mukaan pitää?
+<kysymys>
+Missä kurssin demotehtävien solutionit kannattaa ohjeen mukaan pitää?
 
-a) Työpöydällä, jotta ne löytää helposti\
-b) Kansiossa `ohj1/demot`\
-c) Riderin asennuskansiossa\
-d) Kansiossa `bin`
+- [ ] Työpöydällä, jotta ne löytää helposti
+- [x] Kansiossa `ohj1/demot`
+- [ ] Riderin asennuskansiossa
+- [ ] Kansiossa `bin`
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Kurssin työt kootaan `ohj1`-kansioon, jossa on alikansiot `demot` ja
 `harjoitustyo`. `bin`-kansio on kääntäjän tuotoksia varten, ja sen voi
 huoletta poistaa. Omaa koodia sinne ei koskaan tallenneta.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Kääntäjä ilmoittaa, että ohjelmassa on kaksi `Main`-pääohjelmaa. Mikä on
+<kysymys>
+Kääntäjä ilmoittaa, että ohjelmassa on kaksi `Main`-pääohjelmaa. Mikä on
 todennäköisin syy?
 
-a) Tiedosto on tallennettu kahdesti\
-b) Samassa projektissa on kaksi tiedostoa, joissa kummassakin on `Main`\
-c) Rider on vanhentunut\
-d) Solutionissa on kaksi projektia
+- [ ] Tiedosto on tallennettu kahdesti
+- [x] Samassa projektissa on kaksi tiedostoa, joissa kummassakin on `Main`
+- [ ] Rider on vanhentunut
+- [ ] Solutionissa on kaksi projektia
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Projektissa saa olla vain yksi aloituspiste. Tyypillisesti uusi tehtävä
 on vahingossa luotu vanhan projektin sisään erillisen projektin sijaan. Kaksi
 projektia samassa solutionissa on sen sijaan täysin normaalia, ja juuri niin
 demot rakennetaan.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 

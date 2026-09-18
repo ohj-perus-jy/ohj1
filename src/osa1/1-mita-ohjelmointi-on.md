@@ -153,10 +153,10 @@ nappia. Se on kehä, jota kierretään monta kertaa:
 
 ```bob
   .-----------.      .----------.      .-------.
-  | Kirjoita  |----->|  Käännä  |----->|  Aja  |
+  | Kirjoita  |----->|  "Käännä"|----->|  Aja  |
   '-----------'      '----------'      '-------'
         ^                 |                |
-        |  käännösvirhe   |   väärä tulos  |
+        |  "käännösvirhe" |  "väärä tulos" |
         '-----------------'----------------'
 ```
 
@@ -188,67 +188,70 @@ Kurssin käytännöt (tehtävät, harjoitustyö, tentti) on kuvattu sivulla
 
 ## Testaa tietosi
 
-Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
-kohdat paljastuvat.
+Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
+mutta hämärät kohdat paljastuvat.
 
 <visa>
 
 **Totta vai tarua?**
 
-<details data-vastaus="tarua"><summary>1. Algoritmi ja tietokoneohjelma ovat sama asia.</summary>
-
+<vaittama vastaus="tarua">
+Algoritmi ja tietokoneohjelma ovat sama asia.
+<perustelu>
 **Tarua.** Algoritmi on mikä tahansa täsmällinen, vaiheittainen ohje, vaikka
 kahvinkeitto-ohje paperilla. Ohjelma on algoritmi, joka on kirjoitettu
 ohjelmointikielellä tietokoneen suoritettavaksi.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="tarua"><summary>2. Tietokoneen prosessori suorittaa C#-lähdekoodia sellaisenaan.</summary>
-
+<vaittama vastaus="tarua">
+Tietokoneen prosessori suorittaa C#-lähdekoodia sellaisenaan.
+<perustelu>
 **Tarua.** Prosessori ymmärtää vain konekieltä. Kääntäjä muuntaa lähdekoodin
 siihen muotoon, ja vasta käännetty ohjelma voidaan ajaa.
+</perustelu>
+</vaittama>
 
-</details>
-
-<details data-vastaus="totta"><summary>3. Jypeli on kirjasto: valmista koodia, jota oma ohjelma käyttää.</summary>
-
+<vaittama vastaus="totta">
+Jypeli on kirjasto: valmista koodia, jota oma ohjelma käyttää.
+<perustelu>
 **Totta.** Ikkuna, piirtäminen ja fysiikka tulevat Jypelistä valmiina. Itse
 kirjoitat vain sen osan, joka tekee pelistä juuri sinun pelisi.
-
-</details>
+</perustelu>
+</vaittama>
 
 **Monivalinta.** Yksi vaihtoehto on oikein.
 
-**4.** Mikä seuraavista on kääntäjän tehtävä?
+<kysymys>
+Mikä seuraavista on kääntäjän tehtävä?
 
-a) Korjata lähdekoodin kirjoitusvirheet automaattisesti\
-b) Muuntaa lähdekoodi konekieleksi\
-c) Avata ikkuna ja piirtää siihen pallo\
-d) Keksiä algoritmi ohjelmoijan puolesta
+- [ ] Korjata lähdekoodin kirjoitusvirheet automaattisesti
+- [x] Muuntaa lähdekoodi konekieleksi
+- [ ] Avata ikkuna ja piirtää siihen pallo
+- [ ] Keksiä algoritmi ohjelmoijan puolesta
 
-<details data-vastaus="b"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **b.** Kääntäjä muuntaa lähdekoodin konekieleksi. Virheitä se ei korjaa, vaan
 huomauttaa niistä äidinkielenopettajan tarkkuudella. Ikkunan ja pallon hoitaa
 kirjasto, ja algoritmin keksiminen on ohjelmoijan hommaa.
+</perustelu>
+</kysymys>
 
-</details>
-
-**5.** Kahvinkeitto-ohjeessa lukee: "Lisää mittalusikallinen kahvia, kunnes
+<kysymys>
+Kahvinkeitto-ohjeessa lukee: "Lisää mittalusikallinen kahvia, kunnes
 lusikallisia on neljä." Mikä ohjelmoinnin perusrakenne tämä on?
 
-a) Peräkkäisyys\
-b) Valinta\
-c) Toisto\
-d) Kääntäminen
+- [ ] Peräkkäisyys
+- [ ] Valinta
+- [x] Toisto
+- [ ] Kääntäminen
 
-<details data-vastaus="c"><summary>Näytä vastaus</summary>
-
+<perustelu>
 **c.** Sana *kunnes* paljastaa toiston: samaa vaihetta toistetaan, kunnes ehto
 täyttyy. Peräkkäisyys olisi vaiheita järjestyksessä ja valinta
 *jos–niin–muuten*-rakenne. Kääntäminen ei ole algoritmin rakenne lainkaan.
-
-</details>
+</perustelu>
+</kysymys>
 
 </visa>
 
