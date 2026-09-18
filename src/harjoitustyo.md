@@ -421,8 +421,8 @@ tulee testata.
 
 Inspiraatiota voi hakea vaikkapa Pong-pelistä tai Läpsylinnusta. 
 
- - [Pong-peli](https://trac.cc.jyu.fi/projects/npo/wiki/Pong/Vaihe1)
- - [Läpsylintu](https://trac.cc.jyu.fi/projects/npo/wiki/Lapsylintu)
+ - [Pong-peli](https://jypeli.it.jyu.fi/tutoriaalit/pong/)
+ - [Läpsylintu](https://jypeli.it.jyu.fi/tutoriaalit/lapsylintu/)
 
 </details>
 

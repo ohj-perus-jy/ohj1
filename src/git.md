@@ -191,7 +191,7 @@ tai (jos sinulla ei ole JY-tunnuksia):
 https://github.com/käyttäjänimi/ohj1ht.git
 ``` 
 
-Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](). TODO: Linkki.
+Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#harjoitusty%C3%B6).
 
 Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta Clone <i class="bi bi-chevron-right"></i> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
 
