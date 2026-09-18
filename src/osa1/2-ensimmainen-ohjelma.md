@@ -1,4 +1,4 @@
-# <span class="part-icon">👨🏻‍💻</span> Ensimmäinen ohjelma
+# 👨🏻‍💻 Ensimmäinen ohjelma
 
 Tässä luvussa kirjoitetaan, käännetään ja ajetaan ensimmäinen C#-ohjelma.
 Ohjelma tulostaa yhden rivin tekstiä, mutta siinä on jo kaikki samat osat kuin
