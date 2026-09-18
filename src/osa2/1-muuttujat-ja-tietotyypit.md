@@ -1,4 +1,4 @@
-# 💾 Muuttujat ja tietotyypit
+# Muuttujat ja tietotyypit
 
 Ohjelman on muistettava asioita: pelaajan pisteet, käyttäjän nimi, kuinka monta
 kertaa nappia on painettu. Muistamiseen käytetään *muuttujia*. Muuttuja on
@@ -311,7 +311,7 @@ on kirjoitettu eri tavalla kuin määrittelyssä (`Pisteet` vs. `pisteet`).
 * Nimeä muuttujat kuvaavasti camelCase-tyylillä. Kiinteät arvot vakioiksi
   `const`-avainsanalla.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

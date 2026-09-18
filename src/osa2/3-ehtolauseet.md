@@ -1,4 +1,4 @@
-# 🔀 Ehtolauseet
+# Ehtolauseet
 
 Tähän asti ohjelmamme ovat tehneet joka kerta täsmälleen saman asian. Se on
 harvoin tarpeeksi. *Ehtolauseella* ohjelma tekee valinnan: jos ehto on
@@ -351,7 +351,7 @@ näyttää oikealta, mutta vain ensimmäinen lause kuuluu ehtoon.
 * Kirjoita `==` vertailuun, älä laita puolipistettä `if`-rivin perään ja
   käytä aina aaltosulkuja.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

@@ -1,4 +1,4 @@
-# 👨🏻‍💻 Ensimmäinen ohjelma
+# Ensimmäinen ohjelma
 
 Tässä luvussa kirjoitetaan, käännetään ja ajetaan ensimmäinen C#-ohjelma.
 Ohjelma tulostaa yhden rivin tekstiä, mutta siinä on jo kaikki samat osat kuin
@@ -232,7 +232,7 @@ public class Ohjelma
   Suorituksenaikainen virhe ilmenee vasta ajettaessa.
 * `Console.WriteLine` tulostaa rivin tekstiä.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.
@@ -299,7 +299,7 @@ toisistaan, eikä jälkimmäistä ole olemassa.
 
 </visa>
 
-## 📝 Tehtävät
+## Tehtävät
 
 <task>
   <task-title num="T1*">Tulostaminen <points>1 p.</points></task-title>

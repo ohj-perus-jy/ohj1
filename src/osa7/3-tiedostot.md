@@ -1,4 +1,4 @@
-# 📂 Tiedostojen lukeminen ja kirjoittaminen
+# Tiedostojen lukeminen ja kirjoittaminen
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

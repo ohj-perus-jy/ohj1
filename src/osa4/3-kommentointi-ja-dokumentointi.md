@@ -1,4 +1,4 @@
-# 📝 Kommentointi ja dokumentointi
+# Kommentointi ja dokumentointi
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

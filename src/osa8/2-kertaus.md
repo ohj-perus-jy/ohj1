@@ -1,4 +1,4 @@
-# 🎓 Kertaus ja tenttiin valmistautuminen
+# Kertaus ja tenttiin valmistautuminen
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

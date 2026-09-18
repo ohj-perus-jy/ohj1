@@ -1,4 +1,4 @@
-# 📨 Parametrit ja argumentit
+# Parametrit ja argumentit
 
 Aliohjelma voi ottaa vastaan tietoa *parametreina*. Parametrit tekevät
 aliohjelmasta yleiskäyttöisen: sama aliohjelma voi tulostaa eri tervehdyksen

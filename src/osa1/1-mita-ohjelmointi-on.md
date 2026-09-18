@@ -1,4 +1,4 @@
-# 🧭 Mitä ohjelmointi on?
+# Mitä ohjelmointi on?
 
 Ohjelmointi on ohjeiden kirjoittamista tietokoneelle. Tietokone on äärimmäisen
 nopea ja äärimmäisen tunnollinen: se tekee täsmälleen sen, mitä sille sanotaan,
@@ -186,7 +186,7 @@ Kurssin käytännöt (tehtävät, harjoitustyö, tentti) on kuvattu sivulla
   pelikirjasto.
 * Ohjelmointi on kirjoittamisen, kääntämisen, ajamisen ja korjaamisen kehä.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

@@ -1,4 +1,4 @@
-# 🔁 Aliohjelman paluuarvo
+# Aliohjelman paluuarvo
 
 Tähän asti aliohjelmamme ovat tehneet jotakin, esimerkiksi tulostaneet tekstiä,
 mutta eivät ole antaneet tulosta takaisin kutsujalle. Aliohjelma voi kuitenkin

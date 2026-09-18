@@ -1,4 +1,4 @@
-# 🛝 Lauseet ja lausekkeet
+# Lauseet ja lausekkeet
 
 Ohjelma koostuu *lauseista*, ja lauseet sisältävät *lausekkeita*. Ero kuulostaa
 saivartelulta, mutta se selittää suuren osan siitä, mitä kääntäjä hyväksyy ja
@@ -134,7 +134,7 @@ spesifikaatioon](https://docs.microsoft.com/en-us/dotnet/csharp/language-referen
 * Lauseke käytetään aina jossakin lauseessa: sijoitetaan muuttujaan tai
   annetaan aliohjelmalle.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

@@ -1,4 +1,4 @@
-# ✅ Testaaminen ComTestillä
+# Testaaminen ComTestillä
 
 ComTest on Jyväskylän yliopistossa kehitetty yksikkötestaustyökalu, joka
 mahdollistaa pienten koodinpätkien, kuten funktioiden, testaamisen erikseen

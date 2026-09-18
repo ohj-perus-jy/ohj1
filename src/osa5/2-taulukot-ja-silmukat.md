@@ -1,4 +1,4 @@
-# 🔄 Taulukot ja silmukat
+# Taulukot ja silmukat
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

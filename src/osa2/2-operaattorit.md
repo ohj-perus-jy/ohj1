@@ -1,4 +1,4 @@
-# ➕ Operaattorit ja laskutoimitukset
+# Operaattorit ja laskutoimitukset
 
 *Operaattorit* ovat merkkejä, jotka tekevät jotakin arvoille: laskevat yhteen,
 vertaavat, yhdistävät. Tässä luvussa opitaan laskemaan C#:lla ja samalla
@@ -375,7 +375,7 @@ olisivat kokonaislukuja.
 * Vertailut tuottavat `bool`-arvon; `&&`, `||` ja `!` yhdistävät niitä.
 * `+=` ja `++` lyhentävät tavallisimmat sijoitukset.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

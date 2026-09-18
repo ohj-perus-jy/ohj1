@@ -1,4 +1,4 @@
-# 📋 Listat
+# Listat
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

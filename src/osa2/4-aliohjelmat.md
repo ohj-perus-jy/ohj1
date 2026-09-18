@@ -1,4 +1,4 @@
-# 🧩 Aliohjelmat
+# Aliohjelmat
 
 Ohjelmat kasvavat nopeasti. Pieni peli, jossa on pelaaja, muutama vihollinen
 ja pistelaskuri, on helposti satoja rivejä, eikä kukaan pysty pitämään satoja
@@ -461,7 +461,7 @@ vain, jos aliohjelmaa kutsutaan. Tarkista, että `Main`-aliohjelmassa on kutsu.
 * Nimi on PascalCase-tyylinen verbi: `TulostaViiva`, `LuoPelaaja`.
 * Konsolissa `public static void`, Jypelissä `public void`.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

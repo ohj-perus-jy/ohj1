@@ -1,4 +1,4 @@
-# ➿ Toistolauseet
+# Toistolauseet
 
 **Toistolauseilla** (eli *silmukoilla*) voidaan toistaa jonkin lauseen tai
 lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistolauseita

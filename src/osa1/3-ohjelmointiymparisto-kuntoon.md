@@ -1,4 +1,4 @@
-# 🧰 Ohjelmointiympäristö kuntoon
+# Ohjelmointiympäristö kuntoon
 
 Ensimmäisten viikkojen tehtävät voi periaatteessa tehdä verkkoselaimessa, mutta
 varsin pian on aika ottaa käyttöön oikea työkalu: *sovelluskehitin* eli IDE
@@ -364,7 +364,7 @@ ohjelma](./4-ensimmainen-graafinen-ohjelma.md).
   polku `demot`-kansioon, `net8.0`, Create.
 * Run ajaa yläpalkissa valitun projektin. Reformat Code ennen palautusta.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

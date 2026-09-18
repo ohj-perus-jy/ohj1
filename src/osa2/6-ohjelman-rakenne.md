@@ -1,4 +1,4 @@
-# 🏗️ Ohjelman rakenne
+# Ohjelman rakenne
 
 Tässä luvussa tarkastelemme ohjelmaa kokonaisuutena: mistä osista se koostuu ja
 missä järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
@@ -315,7 +315,7 @@ Top-level statements -ohjelmat voivat olla käteviä pikkuohjelmissa ja skriptei
 
 </details>
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.

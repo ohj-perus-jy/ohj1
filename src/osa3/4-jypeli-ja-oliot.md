@@ -1,4 +1,4 @@
-# 🕹️ Jypeli ja oliot
+# Jypeli ja oliot
 
 > [!HUOMAUTUS]
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen

@@ -1,4 +1,4 @@
-# 🎮 Ensimmäinen graafinen ohjelma
+# Ensimmäinen graafinen ohjelma
 
 Konsoliohjelmat ovat hyvä tapa oppia, mutta tunnustetaan: tekstiä tulostava
 ohjelma ei ole se, minkä takia useimmat haluavat oppia ohjelmoimaan. Tässä
@@ -223,7 +223,7 @@ Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi
   asetetaan pisteellä, ja se lisätään peliin `Add`-kutsulla.
 * Origo on ikkunan keskellä ja y kasvaa ylöspäin.
 
-## 🤔 Testaa tietosi
+## Testaa tietosi
 
 Päätä vastaus ensin ja avaa se vasta sitten. Pisteitä ei jaeta, mutta hämärät
 kohdat paljastuvat.
