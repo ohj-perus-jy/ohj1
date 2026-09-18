@@ -206,10 +206,16 @@ juuri mdBook ja `/dev/` Zensical.
       2026-09-18). VS Coden F5 käynnistää nyt `zensical/run.sh`:n samaan
       porttiin 36743. Lisäksi `.gitignore`:sta `/book` ja GitHubin
       Rust-pohjan rivit (Cargo, rustfmt), jotka olivat mukana mdBookin takia.
-- [ ] Devcontainer-kuva → `mcr.microsoft.com/devcontainers/python:3.11-bookworm`,
-      `postCreateCommand`iin `git submodule update --init &&
-      zensical/tyokalut/setup.sh`. Nykyisessä kuvassa
-      `python3`:sta puuttuu `ensurepip`, `setup.sh` asentaa sen aptilla.
+- [x] `postCreateCommand` hakee submodulen ja ajaa
+      `zensical/tyokalut/setup.sh`:n (kaikki haarat, 2026-09-18). ohj2:n
+      `dev`:ssä sama tiedosto, erona vain nimi ja mdBookin portti 36742;
+      jypelidocsissa on Python-kuva.
+- [ ] Devcontainer-kuva → `mcr.microsoft.com/devcontainers/python:3.11-bookworm`.
+      Odottaa (päätetty 2026-09-18 pitää kuva toistaiseksi): `svgbob_cli`
+      asennetaan cargolla, ja Rust tulee nyt `ohj-mdbook-tooling`-kuvasta;
+      Python-kuvaan tarvittaisiin `ghcr.io/devcontainers/features/rust:1`.
+      Nykyisessä kuvassa `python3`:sta puuttuu `ensurepip`, `setup.sh`
+      asentaa sen aptilla.
 - [x] `README.md`: mdBook-maininnat pois, Zensical ja työkalujen submodule
       tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
 - [x] KaTeX: ei kaavojen renderöintiä (päätetty 2026-09-18). Eksponentit
