@@ -77,22 +77,18 @@
 }
 
 /* Kurssin nimi yläpalkissa on linkki etusivulle (overrides/partials/
- * header.html). Selaimen oletusväri ja alleviivaus pois; alleviivaus vain
- * osoittimen alla, koska muuta merkkiä linkistä ei ole. */
+ * header.html). Selaimen oletusväri ja alleviivaus pois; osoittimen alla
+ * linkki saa taustan yhdessä sivustovalikon nuolen kanssa (sitemenu.css). */
 .md-header__title a {
   color: inherit;
   text-decoration: none;
 }
 
-.md-header__title a:hover {
-  text-decoration: underline;
-}
-
 /* Kun teema on vaihtanut nimen tilalle sivun otsikon, läpinäkyvä nimi olisi
  * yhä näppäimistöllä kohdistettavissa; visibility ottaa sen kierrosta pois.
  * Viive on teeman oman opacity-siirtymän kesto. Työpöydällä vaihtoa ei tehdä,
- * joten tämä perutaan alempana. */
-.md-header__title--active .md-header__topic a {
+ * joten tämä perutaan alempana. Sama sivustovalikon painikkeelle ja linkeille. */
+.md-header__title--active .md-header__topic :is(a, button) {
   visibility: hidden;
   transition: visibility 0s 0.15s;
 }
@@ -300,7 +296,7 @@
     transform: none;
   }
 
-  .md-header__title--active .md-header__topic a {
+  .md-header__title--active .md-header__topic :is(a, button) {
     visibility: visible;
   }
 
