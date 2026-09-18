@@ -1,4 +1,4 @@
-# 🔢 Tiedon esittäminen tietokoneessa
+# Tiedon esittäminen tietokoneessa
 
 Tietokoneen muistiin tallennetaan lukuja kaksijärjestelmässä eli ns. _binäärimuodossa_. Tietokoneen muisti koostuu biteistä, jotka voivat olla joko 0 tai 1. Myös lähdekoodimme teksti ja kaikki tieto on oltava lopulta bittimuodossa, jotta tietokone pystyy käsittelemään sitä.
 
