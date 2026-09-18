@@ -86,7 +86,12 @@
 
 /* Hakupainikkeen hover samalla täytöllä kuin sivusto- ja kirjasinvalikon
  * (sitemenu.css, fontmenu.css); teeman --md-default-fg-color--lighter on
- * liian tumma. */
+ * liian tumma. Teeman 0,4 s:n häivytys pois kuten niissäkin (syy
+ * fontmenu.css:ssä). */
+.md-search__button {
+  transition: none;
+}
+
 .md-search__button:focus,
 .md-search__button:hover {
   background-color: var(--jyu-rule);
@@ -94,11 +99,14 @@
 
 /* Kun teema on vaihtanut nimen tilalle sivun otsikon, läpinäkyvä nimi olisi
  * yhä näppäimistöllä kohdistettavissa; visibility ottaa sen kierrosta pois.
- * Viive on teeman oman opacity-siirtymän kesto. Työpöydällä vaihtoa ei tehdä,
- * joten tämä perutaan alempana. Sama sivustovalikon painikkeelle ja linkeille. */
-.md-header__title--active .md-header__topic :is(a, button) {
-  visibility: hidden;
-  transition: visibility 0s 0.15s;
+ * Viive on teeman oman opacity-siirtymän kesto. Sama sivustovalikon
+ * painikkeelle ja linkeille. Työpöydällä vaihtoa ei tehdä (alempana), joten
+ * sääntö on rajattu sen ulkopuolelle eikä jätä sinne omaa transitioniaan. */
+@media screen and (max-width: 76.2344em) {
+  .md-header__title--active .md-header__topic :is(a, button) {
+    visibility: hidden;
+    transition: visibility 0s 0.15s;
+  }
 }
 
 /* Alatunnisteen linkit oikeassa reunassa (overrides/partials/copyright.html)
@@ -164,6 +172,13 @@
   ~ .md-nav__link
   .md-nav__icon:after {
   transform: rotate(-90deg);
+}
+
+/* Valikon ja sisällysluettelon rivien väri ja tausta vaihtuvat osoittimen
+ * alla kerralla kuten yläpalkin painikkeissa (fontmenu.css); teeman 0,25 s:n
+ * häivytys pois. Nuolen kääntö ja alalukujen avautuminen jäävät. */
+.md-nav__link {
+  transition: none;
 }
 
 /* Laatikon vierityspalkki pyöristettyjen kulmien väliin: raitaa lyhennetään
@@ -335,10 +350,6 @@
     pointer-events: auto;
     opacity: 1;
     transform: none;
-  }
-
-  .md-header__title--active .md-header__topic :is(a, button) {
-    visibility: visible;
   }
 
   /* 4. Sumennettu tausta vain kiskon oikealle puolelle. Kiskon kohdalla
