@@ -6,7 +6,7 @@ näppäimistö syntyvät vasta selaimessa.
 
 import pytest
 
-JYPELI = "https://ohj-perus-jy.github.io/jypelidocs/"
+JYPELI = "https://jypeli.it.jyu.fi/"
 
 
 @pytest.fixture(scope="module")

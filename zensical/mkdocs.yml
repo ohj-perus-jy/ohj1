@@ -67,7 +67,7 @@ extra:
     - name: Ohjelmointi 1
       url: https://ohjelmointi1.it.jyu.fi/
     - name: Jypeli-ohjeet
-      url: https://ohj-perus-jy.github.io/jypelidocs/
+      url: https://jypeli.it.jyu.fi/
 
 extra_css:
   # Leipätekstin kirjasin; miksi ei theme.font.text, ks. tiedoston alku.
