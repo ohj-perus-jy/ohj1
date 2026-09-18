@@ -35,9 +35,9 @@ kehityspalvelin projektin juuresta:
 DevContainer hakee submodulen ja asentaa Zensicalin hakemistoon
 `zensical/.venv` jo kontin luonnissa. Ilman DevContaineria saman tekee
 ensimmäinen ajo (tarvittaessa myös `python3-venv`-paketin asennuksen, mihin
-tarvitaan sudo); Python 3.11 tai uudempi riittää. ASCII-kaavioiden
-(`bob`-koodilohkot) piirtämiseen tarvitaan lisäksi `svgbob_cli`
-(`cargo install svgbob_cli@0.7.6`, DevContainerissa Rust on valmiina).
+tarvitaan sudo); Python 3.11 tai uudempi riittää. Uuden tai muutetun
+ASCII-kaavion (`bob`-koodilohko) piirtämiseen tarvitaan `svgbob_cli`, jonka
+ajo asentaa itse cargolla (DevContainerissa Rust on valmiina).
 
 **Muokattava sisältö on kansiossa `src/`.** `zensical/docs/` ja
 `zensical/site/` ovat generoituja.
