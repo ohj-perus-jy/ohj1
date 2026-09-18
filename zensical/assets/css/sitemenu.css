@@ -24,7 +24,6 @@
   line-height: 1.6rem;
   text-overflow: ellipsis;
   border-radius: 0.4rem 0 0 0.4rem;
-  transition: background-color 0.15s, text-shadow 0.15s;
 }
 
 /* Ilman valikkoa nimi on oma pillerinsä. */
@@ -47,11 +46,11 @@
   border: 0;
   border-radius: 0 0.4rem 0.4rem 0;
   cursor: pointer;
-  transition: background-color 0.15s;
 }
 
 /* Molemmat osat yhtä aikaa, myös valikon ollessa auki. Sävyt kuten
- * kirjasinpainikkeessa: toinen osa sen lepotilan täytöllä. */
+ * kirjasinpainikkeessa: toinen osa sen lepotilan täytöllä. Täytöt vaihtuvat
+ * kerralla ilman häivytystä, syy fontmenu.css:ssä. */
 .jyu-sites:hover :is(.md-ellipsis a, .jyu-sites__button),
 .jyu-sites:has([aria-expanded="true"]) :is(.md-ellipsis a, .jyu-sites__button) {
   background-color: var(--md-default-fg-color--lightest);

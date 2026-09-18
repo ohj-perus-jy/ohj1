@@ -119,3 +119,22 @@ def test_the_menu_fits_a_phone(browser, base_url):
     assert 0 <= box["left"] and box["right"] <= 390
     assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
     assert errors == []
+
+
+@pytest.mark.parametrize("width, shown", [(1400, True), (800, False)])
+def test_a_scrolled_page_hides_the_menu_only_on_a_narrow_screen(browser, base_url, width, shown):
+    """Vieritetyllä sivulla teema merkitsee otsikon tilaan --active. Kapealla
+    näytöllä nimi ja valikko väistyvät silloin sivun otsikon tieltä; työpöydällä
+    ne pysyvät, eikä piilotussääntö saa vaikuttaa siellä painikkeeseen lainkaan."""
+    page, errors = open_page(
+        browser, base_url, viewport={"width": width, "height": 800})
+    page.evaluate("document.querySelector('.md-header__title')"
+                  ".classList.add('md-header__title--active')")
+    button = "getComputedStyle(document.querySelector('.jyu-sites__button'))"
+    if shown:
+        assert page.evaluate(f"{button}.transitionProperty") != "visibility"
+        page.wait_for_timeout(300)  # piilotuksen viive on 0,15 s
+        assert page.evaluate(f"{button}.visibility") == "visible"
+    else:
+        page.wait_for_function(f"{button}.visibility === 'hidden'")
+    assert errors == []
