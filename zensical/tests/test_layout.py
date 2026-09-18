@@ -72,3 +72,24 @@ def test_chapter_arrow_points_where_the_list_moves(browser, chapter_url, width):
     page.wait_for_function(f"item => ({ARROW_ANGLE})(item) === -90",
                            arg=other.element_handle(), timeout=2000)
     context.close()
+
+
+def test_drawer_scrollbar_stays_between_the_rounded_corners(browser, chapter_url):
+    """Kapean näytön laatikon vierityspalkin raita alkaa ja päättyy kulmien
+    pyöristyksen sisäpuolella, mutta vieritysalue on yhä koko laatikon korkuinen."""
+    context = browser.new_context(viewport={"width": 1100, "height": 500})
+    page = context.new_page()
+    page.goto(chapter_url, wait_until="load")
+    page.click(".md-header__button[for=__drawer]")
+    box, rail, radius, track = page.evaluate("""() => {
+        const drawer = document.querySelector(".md-sidebar--primary")
+        const rail = drawer.querySelector(".md-sidebar__scrollwrap")
+        const track = getComputedStyle(rail, "::-webkit-scrollbar-track")
+        const rect = element => element.getBoundingClientRect().toJSON()
+        return [rect(drawer), rect(rail), getComputedStyle(drawer).borderTopLeftRadius,
+                [track.marginTop, track.marginBottom]]
+    }""")
+    assert radius != "0px"
+    assert track == [radius, radius]
+    assert (rail["top"], rail["bottom"]) == (box["top"], box["bottom"])
+    context.close()
