@@ -38,7 +38,7 @@ henkilökohtaisissa töissä.
 
 Versiohallinta mahdollistaa myös saman koodin parissa työskentelyn eri
 tietokoneilta, mikä sopii hyvin tälle kurssille, koska usein tehdään töitä eri
-tietokoneilta (mikroluokka, kotikone, jne.). 
+tietokoneilta (mikroluokka, kotikone jne.). 
 
 *Git-varasto* (engl. *repository*) sisältää sekä kooditiedostot että koko
 projektin muokkaushistorian. GitLab ja GitHub ovat eräitä suosittuja
