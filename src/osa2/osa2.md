@@ -10,9 +10,9 @@ Tämän osan aiheita ovat:
  * aliohjelmat
  * kommentointi ja dokumentointi
 
-## 📦 Muuttujat ja tietotyypit
+## Muuttujat ja tietotyypit
 
-## 🛝 Lausekkeet ja lauseet
+## Lausekkeet ja lauseet
 
 
 
