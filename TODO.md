@@ -214,7 +214,8 @@ juuri mdBook ja `/dev/` Zensical.
       tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
 - [x] KaTeX: ei kaavojen renderöintiä (päätetty 2026-09-18). Eksponentit
       kirjoitetaan `<sup>`-tageilla (`2<sup>31</sup>`), kertomerkki `·`.
-- [ ] Harkitse ohj2:n `links.yml` (lychee) ja `.lycheeignore` kopiointia.
+- [x] Linkkitarkistus: `links.yml` kutsuu työkalujen `linkit`-actionia
+      (yhteiset asetukset ohj2:sta, 2026-09-18). Omaa `.lycheeignore`a ei tarvita.
 - [ ] Vahti (`convert.py --watch`) ajaa muunnoksen omassa prosessissaan, joten
       muutettu `convert.py` tulee voimaan vasta `run.sh`:n uudelleenkäynnistyksessä;
       siihen asti vahti kirjoittaa `docs/`:n vanhalla koodilla (2026-09-18: uusi
