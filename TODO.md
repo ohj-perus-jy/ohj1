@@ -7,6 +7,12 @@ muutettu ohj1:tä varten: `zensical/README.md`, kohta "Ohj1-kohtaiset
 muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy ilman
 varoituksia, `./zensical/run.sh test` menee läpi (220 passed, 3 skipped).
 
+**2026-09-18:** työkalut (`convert.py`, assetit, testit) ovat submodule
+`zensical/tyokalut/` (repo kirjatyokalut), yhteinen ohj2:n ja Jypeli-ohjeiden
+kanssa; kirjan omat asetukset ovat `zensical/kirja.toml`issa. Alla mainitut
+`zensical/README.md`:n kohdat ovat nyt `zensical/tyokalut/TAUSTA.md`:ssä ja
+`zensical/tests` polussa `zensical/tyokalut/tests`.
+
 ## Vaihe 1 — `dev`-haara ja julkaisu `/dev/`:iin
 
 - [x] `dev`-haara `main`in päälle, `zensical/` kopioitu ohj2:sta (2026-09-11).
@@ -197,7 +203,8 @@ juuri mdBook ja `/dev/` Zensical.
       `start.sh`, `.vscode/tasks.json`:n ja `launch.json`:n mdBook-kohdat,
       devcontainerin nimi "Ohj1 mdBook" ja portti 3000.
 - [ ] Devcontainer-kuva → `mcr.microsoft.com/devcontainers/python:3.11-bookworm`,
-      `postCreateCommand`iin `zensical/setup.sh`. Nykyisessä kuvassa
+      `postCreateCommand`iin `git submodule update --init &&
+      zensical/tyokalut/setup.sh`. Nykyisessä kuvassa
       `python3`:sta puuttuu `ensurepip`, `setup.sh` asentaa sen aptilla.
 - [ ] `README.md`, `CONTRIBUTING.md`: mdBook-maininnat pois, Zensical tilalle.
 - [ ] KaTeX: `src`:ssä ei ole kaavoja, joten `mdbook-katex` jää pois ilman
