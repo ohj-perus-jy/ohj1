@@ -1,4 +1,4 @@
-# <span class="part-icon">👨🏻‍💻</span> Ensimmäinen ohjelma
+# 👨🏻‍💻 Ensimmäinen ohjelma
 
 ## Lähdekoodin kirjoittaminen
 
