@@ -45,6 +45,8 @@ Haarat ja julkaisu: `main` on tuotanto (<https://ohjelmointi1.it.jyu.fi>),
 `dev` on työhaara ja esikatselu osoitteessa
 <https://ohjelmointi1.it.jyu.fi/dev/>. GitHub Actions julkaisee molemmat joka
 työnnöllä. Muutokset viedään `dev` → `main` merge-committina.
+Ulkoiset linkit tarkistetaan joka työnnössä ja maanantaisin (lychee,
+`.github/workflows/links.yml`).
 
 Lisää:
 
