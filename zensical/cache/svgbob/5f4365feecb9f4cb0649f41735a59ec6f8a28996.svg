@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="144" class="svgbob">
+  <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
+  stroke: var(--md-default-fg-color);
+  stroke-width: 2;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+}
+
+.svgbob text {
+  white-space: pre;
+  fill: var(--md-default-fg-color);
+  font-family: var(--md-code-font-family);
+  font-size: 14px;
+}
+
+.svgbob rect.backdrop {
+  stroke: none;
+  fill: transparent;
+}
+
+.svgbob .broken {
+  stroke-dasharray: 8;
+}
+
+.svgbob .filled {
+  fill: var(--md-default-fg-color);
+}
+
+.svgbob .bg_filled {
+  fill: transparent;
+  stroke-width: 1;
+}
+
+.svgbob .nofill {
+  fill: transparent;
+}
+
+.svgbob .end_marked_arrow {
+  marker-end: url(#arrow);
+}
+
+.svgbob .start_marked_arrow {
+  marker-start: url(#arrow);
+}
+
+.svgbob .end_marked_diamond {
+  marker-end: url(#diamond);
+}
+
+.svgbob .start_marked_diamond {
+  marker-start: url(#diamond);
+}
+
+.svgbob .end_marked_circle {
+  marker-end: url(#circle);
+}
+
+.svgbob .start_marked_circle {
+  marker-start: url(#circle);
+}
+
+.svgbob .end_marked_open_circle {
+  marker-end: url(#open_circle);
+}
+
+.svgbob .start_marked_open_circle {
+  marker-start: url(#open_circle);
+}
+
+.svgbob .end_marked_big_open_circle {
+  marker-end: url(#big_open_circle);
+}
+
+.svgbob .start_marked_big_open_circle {
+  marker-start: url(#big_open_circle);
+}
+
+</style>
+  <defs>
+    <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 0,4 4,2 0,0"></polygon>
+    </marker>
+    <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+    </marker>
+    <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="2" class="filled"></circle>
+    </marker>
+    <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+    </marker>
+    <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+    </marker>
+  </defs>
+  <rect class="backdrop" x="0" y="0" width="560" height="144"></rect>
+  <text x="66" y="12" >argumentti</text>
+  <text x="386" y="12" >paluuarvo</text>
+  <line x1="56" y1="40" x2="184" y2="40" class="solid"></line>
+  <polygon points="184,36 192,40 184,44" class="filled"></polygon>
+  <text x="242" y="44" >Math.Sqrt</text>
+  <polygon points="488,36 496,40 488,44" class="filled"></polygon>
+  <text x="26" y="44" >16</text>
+  <text x="506" y="44" >4.0</text>
+  <text x="354" y="92" >.</text>
+  <line x1="64" y1="104" x2="176" y2="104" class="solid"></line>
+  <polygon points="176,100 184,104 176,108" class="filled"></polygon>
+  <text x="202" y="108" >Console.WriteLine</text>
+  <line x1="348" y1="96" x2="348" y2="112" class="solid"></line>
+  <text x="354" y="124" >&#39;</text>
+  <text x="378" y="108" >ei</text>
+  <text x="402" y="108" >paluuarvoa,</text>
+  <text x="386" y="124" >teksti</text>
+  <text x="490" y="124" >ruudulla</text>
+  <text x="10" y="108" >Hei!</text>
+  <g>
+    <path d="M 200,24 A 4,4 0,0,0 196,28" class="nofill"></path>
+    <line x1="196" y1="28" x2="196" y2="52" class="solid"></line>
+    <line x1="200" y1="24" x2="352" y2="24" class="solid"></line>
+    <path d="M 352,24 A 4,4 0,0,1 356,28" class="nofill"></path>
+    <line x1="356" y1="28" x2="356" y2="52" class="solid"></line>
+    <line x1="356" y1="40" x2="488" y2="40" class="solid"></line>
+    <path d="M 196,52 A 4,4 0,0,0 200,56" class="nofill"></path>
+    <line x1="200" y1="56" x2="352" y2="56" class="solid"></line>
+    <path d="M 356,52 A 4,4 0,0,1 352,56" class="nofill"></path>
+  </g>
+  <g>
+    <path d="M 196,88 A 8,8 0,0,0 188,96" class="nofill"></path>
+    <line x1="196" y1="88" x2="352" y2="88" class="solid"></line>
+    <line x1="188" y1="96" x2="188" y2="112" class="solid"></line>
+    <path d="M 188,112 A 8,8 0,0,0 196,120" class="nofill"></path>
+    <line x1="196" y1="120" x2="352" y2="120" class="solid"></line>
+  </g>
+  <g>
+    <text x="442" y="124">nä</text>
+    <text x="458" y="124">kyy</text>
+  </g>
+</svg>
