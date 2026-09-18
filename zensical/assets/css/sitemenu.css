@@ -58,11 +58,12 @@
 }
 
 /* Osoittimen alla oleva osa ja avatun valikon nuoli kirjasinpainikkeen
- * hover-täytöllä. Sama :is() molemmissa, jotta tarkkuus riittää yllä olevaa
- * sääntöä vastaan. */
+ * hover-täytöllä: --jyu-rule (layout.css), koska teeman seuraava porras
+ * --md-default-fg-color--lighter on nimen taustaksi liian tumma. Sama :is()
+ * molemmissa, jotta tarkkuus riittää yllä olevaa sääntöä vastaan. */
 .jyu-sites :is(.md-ellipsis a, .jyu-sites__button):hover,
 .jyu-sites :is(.md-ellipsis a, .jyu-sites__button)[aria-expanded="true"] {
-  background-color: var(--md-default-fg-color--lighter);
+  background-color: var(--jyu-rule);
 }
 
 /* Hover-täyttö vie kontrastia, joten nimi saa alavarjon sivun taustavärillä:

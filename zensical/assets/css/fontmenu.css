@@ -28,10 +28,11 @@
   transition: background-color 0.4s;
 }
 
+/* Sama hover-täyttö kuin sivustovalikossa (sitemenu.css). */
 .jyu-font__button:hover,
 .jyu-font__button:focus-visible,
 .jyu-font__button[aria-expanded="true"] {
-  background-color: var(--md-default-fg-color--lighter);
+  background-color: var(--jyu-rule);
 }
 
 .jyu-font__button:focus-visible {
