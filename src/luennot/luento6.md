@@ -1,6 +1,6 @@
 # 6. luento: Aliohjelman kuormittaminen, ehtolause 
 
- * **Lue:** [6.5 Aliohjelman kuormittaminen](https://tim.jyu.fihttps://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#aliohjelman-kuormittaminen)
+ * **Lue:** [6.5 Aliohjelman kuormittaminen](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#aliohjelman-kuormittaminen)
  * **Lue:** [13. Ehtolauseet](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#ehtolauseet-valintalauseet)
 
 ## Syksy 2026

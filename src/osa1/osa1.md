@@ -17,7 +17,7 @@ ohjauksissa.
 
 ## Luennot 
 
-[Luentojen 1 ja 2]() katsominen tukee tätä osaa. Suosittelemme katsomaan luennot ennen tai samanaikaisesti tämän osan lukemisen kanssa.
+Luentojen 1 ja 2 katsominen tukee tätä osaa. Suosittelemme katsomaan luennot ennen tai samanaikaisesti tämän osan lukemisen kanssa.
 
 ## Tehtävät
 
