@@ -21,6 +21,7 @@ import fnmatch
 import hashlib
 import io
 import json
+import math
 import os
 import re
 import shutil
@@ -32,7 +33,7 @@ import traceback
 import urllib.error
 import urllib.request
 import zlib
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -254,6 +255,17 @@ SVGBOB_COMMAND = [
     "--stroke-width", "2",
     "--background", "transparent",
 ]
+
+# svgbob_problems: tekstin sijainti (solu 8 × 16 px) ja lähteen lainatut osat.
+SVGBOB_TEXT_RE = re.compile(
+    r'<text x="(?P<x>\d+)" y="(?P<y>\d+)"\s*>(?P<text>[^<]*)</text>')
+SVGBOB_QUOTED_RE = re.compile(r'"[^"]*"')
+SVGBOB_PAREN_RE = re.compile(r"\w[()]|[()]\w")
+
+# svgbob_fit_text: kuvan ja taustan koko sekä merkin todellinen leveys
+# (0,6 em 14 px:n kirjasimella; svgbob olettaa 8 px).
+SVGBOB_SIZE_RE = re.compile(r'width="(?P<width>\d+)" height="(?P<height>\d+)"')
+SVGBOB_CHAR_WIDTH = 8.4
 
 # Tehtäväkortit: mdBookin omat elementit <task>, <task-title num="">, <points>,
 # <handout>, <task-link>. <task> ei ole Python-Markdownin BLOCK_LEVEL_ELEMENTS-
@@ -1090,7 +1102,52 @@ def svgbob_prefix_ids(svg: str, number: int) -> str:
     return SVGBOB_REF_RE.sub(lambda m: f'url(#bob{number}-{m["name"]})', svg)
 
 
-def convert_svgbob(text: str) -> tuple[str, int, set[str]]:
+def svgbob_fit_text(svg: str) -> str:
+    """Kuvan koko niin suureksi, että kaikki teksti mahtuu.
+
+    svgbob 0.7.6 laskee koon viivoista ja lainaamattomasta tekstistä, joten
+    oikean tai alareunan lainattu teksti leikkautuisi pois. Reunaan jää sama
+    6 px kuin svgbobin omassa laskennassa.
+    """
+    size = SVGBOB_SIZE_RE.search(svg)
+    if not size:
+        return svg
+    width, height = int(size["width"]), int(size["height"])
+    fit_width, fit_height = width, height
+    for match in SVGBOB_TEXT_RE.finditer(svg):
+        end = int(match["x"]) + len(unescape(match["text"])) * SVGBOB_CHAR_WIDTH
+        fit_width = max(fit_width, math.ceil(end) + 6)
+        fit_height = max(fit_height, ((int(match["y"]) - 12) // 16 + 2) * 16)
+    if (fit_width, fit_height) == (width, height):
+        return svg
+    return svg.replace(size[0], f'width="{fit_width}" height="{fit_height}"')
+
+
+def svgbob_problems(art: str, svg: str) -> list[str]:
+    """Kaavion rivit, jotka svgbob 0.7.6 piirtää eri tavalla kuin ne lukevat.
+
+    Peräkkäiset ääkköset hajoavat päällekkäisiksi paloiksi (Käännä -> "Kän"
+    ja "änä"), ja kirjaimen vieressä oleva sulku piirtyy kaarena (Main()).
+    Kumpikin korjaantuu lainausmerkeillä, joita svgbob ei piirrä.
+    """
+    lines = art.split("\n")
+    problems: dict[str, None] = {}
+    for match in SVGBOB_TEXT_RE.finditer(svg):
+        text = unescape(match["text"])
+        row, col = (int(match["y"]) - 12) // 16, (int(match["x"]) - 2) // 8
+        line = lines[row] if row < len(lines) else ""
+        # Lainattu teksti alkaa lainausmerkin sarakkeesta.
+        if text not in (line[col:col + len(text)],
+                        line[col + 1:col + 1 + len(text)]):
+            problems[f"teksti sotkeutuu: {line.strip()}"] = None
+    for line in lines:
+        bare = SVGBOB_QUOTED_RE.sub(lambda m: " " * len(m[0]), line)
+        if SVGBOB_PAREN_RE.search(bare):
+            problems[f"sulut piirtyvät kaarina: {line.strip()}"] = None
+    return list(problems)
+
+
+def convert_svgbob(text: str, source_path: str = "") -> tuple[str, int, set[str]]:
     """```bob-aidat upotetuiksi SVG-kaavioiksi. -> (teksti, kaavioita, nimet).
 
     Ajetaan convert_divsin jälkeen, jottei kääre saisi markdown="1":tä.
@@ -1119,9 +1176,12 @@ def convert_svgbob(text: str) -> tuple[str, int, set[str]]:
         if svg is None:
             out.extend(lines[number:end + 1])
         else:
+            for problem in svgbob_problems(art, svg):
+                print(f"varoitus: {source_path}: svgbob-kaavio, {problem}"
+                      " (kirjoita teksti lainausmerkkeihin)", file=sys.stderr)
             used.add(hashlib.sha1(art.encode("utf-8")).hexdigest() + ".svg")
             diagrams += 1
-            svg = svgbob_prefix_ids(svg, diagrams)
+            svg = svgbob_prefix_ids(svgbob_fit_text(svg), diagrams)
             indent = match["indent"]
             out.append(f'{indent}<div class="svgbob">')
             out += [indent + line for line in svg.split("\n") if line.strip()]
@@ -1400,6 +1460,161 @@ def convert_tasks(text: str) -> tuple[str, int]:
         skip_blank = False
         out.append(line)
     return "\n".join(out), cards
+
+
+# Testaa tietosi -visat (assets/js/visa.js): <visa>-kääreessä <vaittama
+# vastaus="totta|tarua"> ja <kysymys>, jonka vaihtoehdot ovat tehtävälistan
+# rivejä (- [x] oikea, - [ ] väärä). Kummankin lopussa <perustelu>. Kukin tagi
+# omalla rivillään.
+QUIZ_OPEN_RE = re.compile(
+    r'^\s*<(?P<tag>visa|kysymys|perustelu|vaittama)'
+    r'(?:\s+vastaus="(?P<answer>[^"]*)")?\s*>\s*$')
+QUIZ_CLOSE_RE = re.compile(r"^\s*</(?P<tag>visa|vaittama|kysymys|perustelu)>\s*$")
+QUIZ_OPTION_RE = re.compile(r"^- \[(?P<mark>[ xX])\] (?P<text>.*)$")
+QUIZ_CLAIM_OPTIONS = (("totta", "Totta"), ("tarua", "Tarua"))
+QUIZ_SUMMARY = "Näytä vastaus"
+
+
+def trim_blank(lines: list[str]) -> list[str]:
+    """Tyhjät rivit pois alusta ja lopusta."""
+    start, end = 0, len(lines)
+    while start < end and not lines[start].strip():
+        start += 1
+    while end > start and not lines[end - 1].strip():
+        end -= 1
+    return lines[start:end]
+
+
+def quiz_question(answer: str | None, body: list[tuple[str, bool]],
+                  explanation: list[str]) -> tuple[list[str], str | None]:
+    """Yksi kysymys HTML-riveiksi. -> (rivit, virhe).
+
+    answer: väittämän vastaus, monivalinnalla None (oikea on [x]-rivi).
+    body: (rivi, onko koodiaidassa) ennen perustelua. Vaihtoehdot tulevat
+    ensimmäisen vaihtoehtorivin paikalle, sisennetty jatkorivi kuuluu
+    edelliseen vaihtoehtoon. Tunniste on kysymyksen tekstin tiiviste, joten
+    muuttunut kysymys unohtaa selaimeen tallennetun vastauksen.
+    """
+    question: list[str] = []
+    options: list[list] = []
+    place = None
+    for line, fenced in body:
+        match = None if fenced else QUIZ_OPTION_RE.match(line)
+        if match:
+            if place is None:
+                place = len(question)
+            options.append([match["mark"] != " ", match["text"].strip()])
+        elif (options and not fenced and line[:1].isspace() and line.strip()
+              and place == len(question)):
+            options[-1][1] += " " + line.strip()
+        else:
+            question.append(line)
+    problem = None
+    if answer is None:
+        right = [number for number, (correct, _) in enumerate(options) if correct]
+        if len(options) < 2 or len(right) != 1:
+            problem = "kysymyksessä pitää olla vaihtoehdot ja täsmälleen yksi [x]"
+        answer = "abcdefgh"[right[0]] if len(right) == 1 and right[0] < 8 else ""
+        items = ['<ol class="jyu-visa-vaihtoehdot" type="a" markdown="1">']
+        items += [f'<li data-arvo="{"abcdefgh"[number]}" markdown="1">{text}</li>'
+                  for number, (_, text) in enumerate(options[:8])]
+        items.append("</ol>")
+    else:
+        if options:
+            problem = "väittämällä ei ole vaihtoehtoja, vastaus on tagissa"
+        place = None
+        items = ['<ul class="jyu-visa-vaihtoehdot jyu-visa-tt">']
+        items += [f'<li data-arvo="{value}">{label}</li>'
+                  for value, label in QUIZ_CLAIM_OPTIONS]
+        items.append("</ul>")
+    identity = "\n".join(line for line, _ in body).strip()
+    digest = hashlib.sha1(identity.encode("utf-8")).hexdigest()[:8]
+    if place is None:
+        place = len(question)
+    out = [f'<div class="jyu-visa-q" data-vastaus="{escape(answer)}"'
+           f' data-id="{digest}" markdown="1">', ""]
+    out += trim_blank(question[:place]) + ["", *items, ""]
+    if rest := trim_blank(question[place:]):
+        out += rest + [""]
+    if explanation := trim_blank(explanation):
+        out += ['<details markdown="1">', f"<summary>{QUIZ_SUMMARY}</summary>", "",
+                *explanation, "", "</details>", ""]
+    return out + ["</div>"], problem
+
+
+def convert_quizzes(text: str, source_path: str = "") -> tuple[str, int]:
+    """<visa>-lohkot HTML:ksi. -> (teksti, kysymyksiä). Ks. QUIZ_OPEN_RE.
+
+    Ilman skriptiä kysymys on tekstiä, vaihtoehdot lista ja perustelu
+    <details>-lohko; visa.js tekee vaihtoehdoista napit. Tyhjät rivit kuten
+    convert_tasksissa. Koodiaidat ohitetaan, mutta kysymyksen sisällä ne
+    kulkevat mukana.
+    """
+    out: list[str] = []
+    open_fence: str | None = None
+    questions = 0
+    skip_blank = False
+    answer: str | None = None
+    body: list[tuple[str, bool]] | None = None
+    explanation: list[str] = []
+    explaining = False
+
+    def emit(lines: list[str]) -> None:
+        if out and out[-1].strip():
+            out.append("")
+        out.extend(lines)
+        out.append("")
+
+    for line in text.split("\n"):
+        match = CODE_FENCE_RE.match(line)
+        fenced = open_fence is not None
+        tag = None
+        if match and open_fence is None:
+            open_fence = match["fence"]
+        elif (match and not match["info"].strip()
+                and len(match["fence"]) >= len(open_fence)):
+            open_fence = None
+        elif open_fence is None:
+            tag = QUIZ_OPEN_RE.match(line) or QUIZ_CLOSE_RE.match(line)
+        closing = tag is not None and line.lstrip().startswith("</")
+        if tag and tag["tag"] == "visa":
+            emit(["</div>"] if closing else ['<div class="jyu-visa" markdown="1">'])
+            skip_blank = True
+            continue
+        if tag and tag["tag"] in ("vaittama", "kysymys") and not closing:
+            answer = tag["answer"] if tag["tag"] == "vaittama" else None
+            if tag["tag"] == "vaittama" and answer not in dict(QUIZ_CLAIM_OPTIONS):
+                print(f'varoitus: {source_path}: <vaittama vastaus="{answer}">,'
+                      " pitää olla totta tai tarua", file=sys.stderr)
+                answer = answer or ""
+            body, explanation, explaining = [], [], False
+            continue
+        if body is not None:
+            if tag and tag["tag"] == "perustelu":
+                explaining = not closing
+            elif tag:
+                lines, problem = quiz_question(answer, body, explanation)
+                if problem:
+                    print(f"varoitus: {source_path}: {problem}", file=sys.stderr)
+                emit(lines)
+                questions += 1
+                body = None
+                skip_blank = True
+            elif explaining:
+                explanation.append(line)
+            else:
+                body.append((line, fenced or match is not None))
+            continue
+        if skip_blank and not line.strip():
+            skip_blank = False
+            continue
+        skip_blank = False
+        out.append(line)
+    if body is not None:
+        print(f"varoitus: {source_path}: visan kysymys jää sulkematta",
+              file=sys.stderr)
+        emit(quiz_question(answer, body, explanation)[0])
+    return "\n".join(out), questions
 
 
 # Vaiheittainen ohje (assets/js/walkthrough.js): <walkthrough scenes="...">
@@ -1925,6 +2140,8 @@ def main(strict: bool = False) -> int:
         converted, _ = convert_includes(converted, origin)
         converted, _, _ = convert_anchors(converted)
         converted, _ = convert_moved_links(converted, source_path)
+        # Visat ennen aitoja: kysymyksen tunniste lasketaan lähteen tekstistä.
+        converted, _ = convert_quizzes(converted, source_path)
         # Monitiedostolohkot ennen convert_fencesiä: convert_fences ei koske
         # niiden valmiisiin aitoihin. Aidat, kaaviot, alertit ja tehtäväkortit
         # ennen convert_tabsia, koska se sisentää välilehden sisällön, eikä
@@ -1939,7 +2156,7 @@ def main(strict: bool = False) -> int:
         # Divit ennen tehtäväkortteja (näkee vain lähteen divit) ja ennen
         # svgbobia (kääre ei saa markdown="1":tä).
         converted, _ = convert_divs(converted)
-        converted, _, page_art = convert_svgbob(converted)
+        converted, _, page_art = convert_svgbob(converted, source_path)
         # Tehtäväkortit ennen bonusmerkkejä (task_head lukee kortin tagin itse)
         # ja bonusmerkit ennen ikoneita (bi-stars ei ole ICON_MAPissa).
         converted, _ = convert_tasks(converted)
