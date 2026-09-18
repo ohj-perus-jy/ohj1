@@ -250,6 +250,21 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   - Uusi `dedent_headings`: 1–3 välilyönnillä sisennetty otsikko, jonka
     CommonMark sallii mutta Python-Markdown ei (ohj1:ssä kaksi, korjattu
     myös `src`:ssä e816bc7). *Yleiskäyttöinen.*
+  - Uusi `svgbob_problems`: varoitus, kun svgbob 0.7.6 piirtää kaavion
+    tekstin väärin. Peräkkäiset ääkköset hajoavat päällekkäisiksi paloiksi
+    (`Käännä` → `Kän` + `änä`), ja kirjaimen vieressä oleva sulku piirtyy
+    kaarena (`Main()`). Kumpikin korjaantuu lainausmerkeillä (`"Main()"`),
+    joita svgbob ei piirrä; siksi merkkijonoliteraalin lainausmerkit eivät
+    näy kaaviossa. *Yleiskäyttöinen.*
+  - Uusi `svgbob_fit_text`: svgbob 0.7.6 laskee kuvan koon vain viivoista
+    ja lainaamattomasta tekstistä, joten juuri edellisen kohdan suosittelema
+    lainattu teksti leikkautui oikeasta tai alareunasta pois (ohj1:ssä neljä
+    kaaviota kymmenestä, esim. `TulostaViiva()` sivulla
+    `osa2/4-aliohjelmat.md`). Koko kasvatetaan upotettaessa tekstien mukaan,
+    joten `cache/svgbob/` pysyy svgbobin omana tulosteena. Merkin leveys on
+    8,4 px (0,6 em 14 px:n koodikirjasimella) eikä svgbobin olettama 8 px;
+    pitkä teksti ylittäisi muuten reunan lainaamattomanakin.
+    *Yleiskäyttöinen.*
 - `assets/js/playground.js`: `csharp` kieliin; `feature-*`-määre kielen
   perään (`csharp-jypeli`) ja tulosteen data-URI-kuvat `<img>`-elementeiksi
   kuten ../theme/playground_ext.js. `multifile`-kenttä vain
@@ -283,11 +298,42 @@ ohj2:een (KAYTTOONOTTO.md: "korjaukset viedään käsin molempiin").
   tagin sisältö varalla ilman skriptiä ja tulosteessa), git.md ja tyokalut.md
   käyttävät git-ht-ohjeen `avaa-windows`-kohtausta; koesivun lopussa
   välilehdellä, testit samoissa tiedostoissa. *Yleiskäyttöinen.*
+- Testaa tietosi -visa (lukujen `<visa>`-osio, merkkaus:
+  ../curriculum/rakenne.md): `convert.py`:n uusi `convert_quizzes`
+  (`<vaittama vastaus>` ja `<kysymys>` → `.jyu-visa-q`-div, vaihtoehdot
+  listaksi, `<perustelu>` → `<details>`), `assets/js/visa.js` ja
+  `assets/css/visa.css`. Valinta paljastaa oikean vastauksen ja perustelun,
+  eikä vastausta voi vaihtaa; "Tyhjennä vastaukset" nollaa sivun visan.
+  - Oikea vastaus merkitään vaihtoehtoon itseensä (`- [x]`) eikä kirjaimena
+    tagiin, jotta vaihtoehtojen järjestyksen voi muuttaa rikkomatta vastausta.
+    Numerot ja kirjaimet tulevat CSS-laskureista samasta syystä.
+  - Ilman skriptiä kysymys on tekstiä, vaihtoehdot kirjainlista ja perustelu
+    avattava `<details>`. Tulostussivulle (print.js) napit jätetään
+    tarkoituksella tekemättä, joten paperilla on sama muoto.
+  - Vastaukset ovat localStoragen avaimessa `jyu-visa` (kysymyksen `data-id`
+    → valittu arvo). Tunniste on kysymyksen lähdetekstin tiiviste eikä
+    järjestysnumero: kysymysten lisääminen tai siirtäminen ei sekoita
+    tallennettuja vastauksia, ja muutettu kysymys unohtaa vanhan vastauksen.
+    Siksi muunnos ajetaan ennen `convert_fences`iä.
+  - Ilme on teeman tehtävälistan kevyt pallukka eikä reunustettu nappi.
+    Kirjain on pallukan sisällä, koska perustelut viittaavat kirjaimiin. Oma
+    valinta on täytetty pallukka, ja ✓/✗ tekstin perässä kertoo tuloksen
+    myös ilman väriä. Oikean ja väärän värit ovat omia tokeneita
+    (`--jyu-visa-ok`, `--jyu-visa-wrong`), koska teeman vihreä ja punainen
+    eivät riitä tekstin kontrastiin; perustelulaatikko käyttää
+    admonitions.css:n `--adm`-muuttujaa ja teeman check-kuvaketta, rasti on
+    saman Lucide-sarjan x.
+  - Koesivu `tests/book/src/osa1/visa.md` SUMMARY.md:n ulkopuolella, testit
+    `tests/test_visa.py`; oikean kirjan visat tarkistaa `tests/test_book.py`.
+  *Yleiskäyttöinen.*
+- `tests/test_book.py`: `source_uses` kääntää kuvion `re.MULTILINE`-lipulla.
+  Ilman sitä `^`-alkuiset kuviot (plantuml- ja bob-aidat) eivät osuneet
+  koskaan, ja kaavioiden olemassaolon tarkistus jäi ajamatta. *Yleiskäyttöinen.*
 - `tests/test_convert.py`: testit yllä oleville. `tests/test_book.py`:
   `*`-luettelomerkki, `source_uses`-ohitukset ominaisuuksille joita kirja ei
   käytä (*yleiskäyttöinen*). `KNOWN_BROKEN_IMAGES` poistettu, koska ohj1:n
   kuvat on korjattu `src`:ssä (ohj2:ssa yhä `osa4/images/adventure.png`).
-- `cache/svgbob/`: ohj1:n kolme bob-kaaviota (svgbob_cli 0.7.6, asennettu
+- `cache/svgbob/`: ohj1:n bob-kaaviot (svgbob_cli 0.7.6, asennettu
   `cargo install svgbob_cli@0.7.6`); ohj2:n kaaviot ja `assets/plantuml/`
   jätetty pois.
 - Tämä README: johdanto ja tämä kohta. PERUSTELUT.md, PURKUSUUNNITELMA.md ja
