@@ -89,7 +89,9 @@ mitään.
 
 ## Uusi solution
 
-Katsotaan nyt uuden solutionin ja projektin luomista Riderissa.
+Katsotaan nyt uuden solutionin ja projektin luomista Riderissa. Tämän luvun
+aikana tehdään yksi solution (`demo1`) ja siihen kolme projektia: `Lumiukko`,
+`HelloWorld` ja `YmpyraPeli`.
 
 Luodaan uusi solution ja siihen projekti edellä luodun kansiorakenteen
 alaisuuteen. Tässä esimerkissä luodaan demo1-niminen solution ja siihen
@@ -98,7 +100,7 @@ olemassa olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan
 solutioniin](#uusi-projekti-solutioniin).
 
 * Valitse `New Solution`. Mikäli joku vanha solution on jo auki, niin sama
-  onnistuu yläpalkista  File <i class="bi bi-chevron-right"></i> New Solution`. ![Uusi solution
+  onnistuu yläpalkista `File` <i class="bi bi-chevron-right"></i> `New Solution`. ![Uusi solution
   Linuxissa](./images/new_solution_linux.png)
 * Valitse vasemmalta Custom templates -listasta `FysiikkaPeli`.
 * Anna solutionin nimeksi `demoX`, esimerkiksi `demo1`
@@ -188,7 +190,7 @@ Lisätään siihen toinen projekti olemassa olevan lisäksi.
 Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-solutioniin. 
 
 - Klikkaa Explorer-paneelissa solutionin `demo1` nimeä hiiren oikealla (Macissa kahdella sormella).
-- Valitse `Add <i class="bi bi-chevron-right"></i> New Project`
+- Valitse `Add` <i class="bi bi-chevron-right"></i> `New Project`
 - Valitse vasemmalta `ConsoleMain`-projektimalli
 - Anna nimeksi `HelloWorld`
 - Paina `Create`.
@@ -230,6 +232,62 @@ Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa `Cust
 - `Fysiikkapeli` (Fysiikkaa käyttävät pelit ja muut graafiset sovellukset)
 - `Tasohyppelypeli` (Esimerkkipeli)
 - `Android Fysiikkapeli` (Android-alustaa varten)
+
+## Graafinen sovellus Jypeli-kirjastolla
+
+Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
+
+Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä](https://jypeli.it.jyu.fi), jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
+
+Tehdään seuraavaksi luvun kolmas projekti: pieni Jypeli-esimerkki, jossa luodaan
+ikkuna ja piirretään siihen ympyrä. Projektin nimeksi tulee `YmpyraPeli`.
+
+- Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin edellä
+  [HelloWorld](#uusi-projekti-solutioniin): klikkaa Explorer-paneelissa
+  solutionin `demo1` nimeä hiiren oikealla ja valitse `Add` <i class="bi bi-chevron-right"></i> `New Project`.
+- Valitse vasemmalta `Fysiikkapeli`-projektimalli.
+- Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös kooditiedoston
+  (`YmpyraPeli.cs`) ja siinä olevan luokan, joten luokan nimi on sama kuin alla
+  olevassa koodissa.
+- Paina `Create`.
+- Avaa `YmpyraPeli.cs` ja korvaa `Begin`-metodin sisältö alla olevan koodin
+  `Begin`-metodin sisällöllä.
+- Aja projekti klikkaamalla Explorerissa sen nimeä `YmpyraPeli` hiiren oikealla
+  ja valitsemalla `Run 'YmpyraPeli'`.
+
+```csharp,feature-jypeli
+using Jypeli;
+public class YmpyraPeli : PhysicsGame
+{
+    public override void Begin()
+    {
+        GameObject ympyra = new GameObject(50, 50);
+        ympyra.Shape = Shape.Circle; 
+        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
+        Add(ympyra); // Lisätään ympyrä peliin
+    }
+}
+```
+
+Voit kokeilla peliä myös suoraan tällä sivulla klikkaamalla yllä olevan koodilaatikon oikean yläreunan vihreää "Play"-painiketta. Ikkunaan pitäisi ilmestyä keskelle pieni ympyrä.
+
+Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
+
+Ensimmäinen rivi luo uuden muuttujan nimeltä `ympyra`, joka on tyyppiä `GameObject`. Sen leveydeksi ja korkeudeksi annetaan `50`.
+```csharp,ignore
+GameObject ympyra = new GameObject(50, 50);
+```
+
+Seuraavaksi asetamme `ympyra` muuttujan muodoksi `Shape.Circle` ja sijainniksi asetetaan vektori, joka osoittaa keskipisteeseen `new Vector(0, 0)`.
+```csharp,ignore
+ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
+ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
+```
+
+Lopuksi lisäämme `ympyra` muuttujan näkyviin kutsumalla Jypelin `Add` metodia. `ympyra` muuttuja on siis olemassa jo heti ensimmäisen rivin jälkeen, mutta se pitää erikseen vielä lisätä "pelimaailmaan".
+```csharp,ignore
+Add(ympyra); // Lisätään ympyrä peliin
+```
 
 ## Pääohjelma Jypeli-projekteissa (Main)
 
@@ -307,49 +365,3 @@ TIMistä ennen projektin luomista.
 > Rider luo Jypeli-projektiin automaattisesti myös `Ohjelma.cs`-tiedoston, jossa
 > on Main-pääohjelma. **Sitä ei tarvitse eikä pidä muokata**, eikä TIMin koodia
 > liitetä sinne.
-
-## Graafinen sovellus Jypeli-kirjastolla
-
-Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
-
-Jypelin avulla voi luoda 2D-pelejä, joissa on grafiikkaa ja ääniä. Jypeliin on tarjolla paljon valmiita [ohjeita ja esimerkkejä](https://jypeli.it.jyu.fi), jotka auttavat sinua pääsemään alkuun pelien tekemisessä. 
-
-Tehdään seuraavaksi pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen ympyrä.
-
-> [!HUOMAUTUS]
-> Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut asennettuna; ohjeet löytyvät [Työkalut-sivulta](../tyokalut.md#jetbrains-rider). 
-> Luo uusi Fysiikkapeli-projekti Riderissa ja korvaa `Begin`-metodin sisältö yllä olevalla koodilla. Suorita sitten peli painamalla vihreää "Play"-painiketta ikkunan yläreunassa.
-
-```csharp,feature-jypeli
-using Jypeli;
-public class YmpyraPeli : PhysicsGame
-{
-    public override void Begin()
-    {
-        GameObject ympyra = new GameObject(50, 50);
-        ympyra.Shape = Shape.Circle; 
-        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
-        Add(ympyra); // Lisätään ympyrä peliin
-    }
-}
-```
-
-Voit käynnistää pelin yllä klikkaamalla oikean yläreunan vihreää "Play"-painiketta. Ikkunaan pitäisi ilmestyä keskelle pieni ympyrä.
-
-Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
-
-Ensimmäinen rivi luo uuden muuttujan nimeltä `ympyra`, joka on tyyppiä `GameObject`. Sen leveydeksi ja korkeudeksi annetaan `50`.
-```csharp,ignore
-GameObject ympyra = new GameObject(50, 50);
-```
-
-Seuraavaksi asetamme `ympyra` muuttujan muodoksi `Shape.Circle` ja sijainniksi asetetaan vektori, joka osoittaa keskipisteeseen `new Vector(0, 0)`.
-```csharp,ignore
-ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
-ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
-```
-
-Lopuksi lisäämme `ympyra` muuttujan näkyviin kutsumalla Jypelin `Add` metodia. `ympyra` muuttuja on siis olemassa jo heti ensimmäisen rivin jälkeen, mutta se pitää erikseen vielä lisätä "pelimaailmaan".
-```csharp,ignore
-Add(ympyra); // Lisätään ympyrä peliin
-```
