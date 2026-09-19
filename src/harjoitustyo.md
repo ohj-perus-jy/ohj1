@@ -9,7 +9,7 @@ Ohjelmointi 1 -opintojakson harjoitus työ
  - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty. Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada arvosanan.
  - tehdään yksin tai parityönä. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
  - sisältää keskimääräisesti *opiskelijaa kohti* noin 27 tuntia työtä. Parityönä tehtävän työn määrä on siis laskennallisesti 54 tuntia. Katso tarkat vaatimukset paritöille alla.
- - voi olla [Jypeli-työkaluilla](https://tim.jyu.fi/view/kurssit/jypeli/wiki) tehty peli, mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli). Muita kieliä ei hyväksytä.
+ - voi olla [Jypeli-työkaluilla](https://jypeli.it.jyu.fi/) tehty peli, mutta voi olla [jokin muukin C#-kielellä tehty komentoriviohjelma](#muukuinpeli). Muita kieliä ei hyväksytä.
 
 ## Vaiheet ja aikataulu {#aikataulu}
 
