@@ -52,7 +52,7 @@ kommentin loppuun ilmestyy valmis pohja, jonka keskelle testit kirjoitetaan:
 
 <animation scenes="images/comtest/scenes.js" scene="comt-pohja">
 
-![Riderin ehdotuslista, jossa valittuna comt – ComTest: DocTest](images/comtest/comt-ehdotus.png)
+![Animaatio, jossa näytetään testialueen kirjoittaminen dokumentaatiokommenttiin](images/comtest/comt-ehdotus.png)
 
 ```csharp,ignore
 /// <example>
@@ -237,8 +237,8 @@ public static int[] Luvut(int n)
 }
 ```
 
-Listalla vastaava rivi olisi esimerkiksi
-`Arvot(1.0, 0.5, 3) === new List<double>{1.0, 1.5, 2.0};`.
+Lista verrataan samalla tavalla. Jos `Luvut` palauttaisi taulukon sijasta
+listan (`List<int>`), testirivi olisi `Luvut(3) === new List<int>{0, 1, 2};`.
 
 Lyhyemmin saman voi kirjoittaa merkinnällä `=J=`, joka yhdistää vasemman puolen
 alkiot merkkijonoksi pilkulla ja välilyönnillä eroteltuina:
