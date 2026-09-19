@@ -99,11 +99,9 @@ public class Liukuluvut
 }
 ```
 
-Tuloksen viimeinen numero `5` ei ole kirjoitusvirhe. Liukuluvut ovat
-likiarvoja: tietokone esittää luvut kaksijärjestelmässä, jossa monia
-desimaalilukuja ei voi esittää tarkasti, aivan kuten 1/3:a ei voi kirjoittaa
-tarkasti kymmenjärjestelmässä. Tavallisessa laskennassa tällä ei ole väliä,
-mutta kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus:
+Tuloksen viimeinen numero `5` ei ole kirjoitusvirhe, vaan
+[liukulukujen](1-muuttujat-ja-tietotyypit.md#perustietotyypit) epätarkkuutta.
+Siksi kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus:
 `0.1 + 0.2 == 0.3` on C#:ssa `false`. Lisää aiheesta kerrotaan liitteessä
 [Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
@@ -111,6 +109,88 @@ Kokonaisluvun jakaminen nollalla kaataa ohjelman
 (`DivideByZeroException`). Liukuluvun jakaminen nollalla ei kaada: `1.0 / 0`
 on `∞` (`Infinity`), mikä on matemaattisesti kyseenalaista mutta käytännössä
 kätevää.
+
+### Sama operaattori, eri tyypit
+
+Edellä nähtiin, että `/` tekee eri asian `int`- ja `double`-arvoille. Sama
+pätee yleisemminkin: operaattorin merkitys riippuu siitä, minkä tyyppisiä
+arvoja sen ympärillä on. Kääntäjä katsoo tyypit ja valitsee niiden perusteella,
+mitä operaattori tekee.
+
+Selvin esimerkki on `+`. Lukujen välissä se laskee yhteen, mutta merkkijonojen
+välissä se liittää tekstit peräkkäin, kuten
+[edellisen luvun tervehdyksessä](1-muuttujat-ja-tietotyypit.md#muuttujan-tulostaminen).
+Jos vain toinen osapuoli on merkkijono, toinen muutetaan ensin tekstiksi.
+
+```csharp
+using System;
+
+public class PlusMerkki
+{
+    public static void Main()
+    {
+        Console.WriteLine(2 + 3);                 // 5
+        Console.WriteLine("2" + "3");             // 23
+        Console.WriteLine("Summa: " + 2 + 3);     // Summa: 23  (!)
+        Console.WriteLine("Summa: " + (2 + 3));   // Summa: 5
+    }
+}
+```
+
+Kolmas rivi yllättää. Lauseke lasketaan vasemmalta oikealle, joten ensin
+`"Summa: " + 2` yhdistetään merkkijonoksi `"Summa: 2"`, ja sen perään liitetään
+vielä `3`. Sulkeet korjaavat asian, ja interpoloitu merkkijono
+`$"Summa: {2 + 3}"` välttää koko ongelman.
+
+Kaikkia operaattoreita ei ole määritelty kaikille tyypeille. Merkkijonoille ei
+ole kertolaskua, joten `"abc" * 2` ei käänny: `CS0019: Operator '*' cannot be
+applied to operands of type 'string' and 'int'`.
+
+<details closed id="operaattorin-kuormittaminen"><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Operaattorit omille tyypeille</summary>
+
+Operaattorien merkitykset eivät rajoitu kieleen sisäänrakennettuihin
+tyyppeihin. Kun ohjelmoija tekee oman tyypin, hän voi samalla määritellä, mitä
+`+`, `*`, `==` ja useimmat muut operaattorit tekevät sen arvoille. Tätä
+kutsutaan *operaattorin kuormittamiseksi* (engl. *operator overloading*).
+
+Olet jo käyttänyt tyyppiä, jolle näin on tehty. Jypelin `Vector` on lukupari
+(x, y), ja Jypelin tekijät ovat määritelleet sille yhteen- ja vähennyslaskun
+sekä kertomisen ja jakamisen luvulla:
+
+```csharp,ignore
+Vector a = new Vector(100, 0);
+Vector b = new Vector(0, 50);
+Vector summa = a + b;     // (100, 50): x:t ja y:t lasketaan erikseen yhteen
+Vector tupla = a * 2;     // (200, 0)
+```
+
+Luvun alun esimerkki, jossa pallon paikkaan lisätään sen nopeus, on juuri
+tällaista vektorien yhteenlaskua.
+
+Kuormitettu operaattori on pohjimmiltaan aliohjelma, jonka nimenä on
+operaattorin merkki. Jypelin lähdekoodissa vektorien yhteenlasku näyttää
+suunnilleen tältä:
+
+```csharp,ignore
+public static Vector operator +(Vector a, Vector b)
+{
+    return new Vector(a.X + b.X, a.Y + b.Y);
+}
+```
+
+Kun kääntäjä näkee lausekkeen `a + b` ja molemmat ovat vektoreita, se kutsuu
+tätä aliohjelmaa. Idea on sama kuin
+[aliohjelman kuormittamisessa](../osa3/1-parametrit-ja-argumentit.md#kuormittaminen):
+samalla nimellä on monta versiota, ja kääntäjä valitsee niistä oikean tyyppien
+perusteella.
+
+Rajansa silti on. Valmiiden tyyppien operaattoreita ei voi muuttaa, joten
+`1 + 1` on aina `2`. Kaikkia operaattoreita ei myöskään voi kuormittaa:
+esimerkiksi sijoitusta `=` ei voi. Omia operaattoreita ei tällä kurssilla
+kirjoiteta, mutta valmiita tulee vastaan esimerkiksi Jypelin vektoreilla
+laskettaessa.
+
+</details>
 
 ## Laskujärjestys
 
@@ -189,23 +269,22 @@ public class Katkaisu
 }
 ```
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Pankkiirin pyöristys</summary>
 
-`Math.Round(2.5)` on `2`, ja `Math.Round(3.5)` on `4`. C# pyöristää puolikkaat
-oletuksena lähimpään *parilliseen* lukuun ("pankkiirin pyöristys"), jotta
-suuressa joukossa pyöristyksiä virheet kumoavat toisensa. Koulussa opitun
-pyöristyksen saa kirjoittamalla `Math.Round(2.5, MidpointRounding.AwayFromZero)`.
-Tämä on yksi niistä asioista, jotka on hyvä tietää, jotta ei epäile omaa
-järkeään.
-
-</details>
+Mainittakoon, että `Math.Round` on siitä mielenkiintoinen, että se pyöristää
+puolikkaat oletuksena lähimpään *parilliseen* lukuun (ns. "pankkiirin
+pyöristys"). Koulussa opitun pyöristyksen saa kirjoittamalla `Math.Round(2.5,
+MidpointRounding.AwayFromZero)`. Tämä on yksi niistä asioista, jotka on hyvä
+tietää, jotta ei epäile omaa järkeään. Yksityiskohtia on liitteessä [Tiedon
+esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md) ja
+[`Math.Round`-dokumentaatiossa](https://learn.microsoft.com/en-us/dotnet/api/system.math.round?view=net-10.0)).
 
 ### Merkkijonosta luvuksi
 
 Merkkijono ja luku ovat eri asioita, vaikka ne näyttäisivät samalta: `"42" + 1`
-on `"421"`, ei `43`. Merkkijono muunnetaan luvuksi `int.Parse`- tai
-`double.Parse`-aliohjelmalla, ja luku merkkijonoksi `ToString`-metodilla tai
-interpoloimalla `$"{luku}"`.
+on `"421"`, ei `43`, sillä merkkijonon kanssa `+`
+[liittää eikä laske](#sama-operaattori-eri-tyypit). Merkkijono muunnetaan
+luvuksi `int.Parse`- tai `double.Parse`-aliohjelmalla, ja luku merkkijonoksi
+`ToString`-metodilla tai interpoloimalla `$"{luku}"`.
 
 ```csharp,ignore
 int ika = int.Parse("20");             // 20
@@ -367,6 +446,8 @@ olisivat kokonaislukuja.
 ## Yhteenveto
 
 * `+ - * / %` laskevat; kahden `int`-arvon jako on kokonaislukujako.
+* Operaattorin merkitys riippuu tyypeistä: `+` laskee luvut yhteen mutta
+  liittää merkkijonot peräkkäin.
 * Laskujärjestys on sama kuin matematiikassa; sulkeet ratkaisevat epäselvät
   tapaukset.
 * `(double)x` ja `(int)x` muuntavat tyyppiä; `int.Parse` muuntaa merkkijonon
@@ -396,6 +477,16 @@ ja tulos on 3. Jos haluat 3.5, tee toisesta luvusta liukuluku: `7 / 2.0`.
 <perustelu>
 **Totta.** Jakojäännös kertoo, mitä jää yli: 17 = 3 · 5 + 2. Samalla
 operaattorilla selviää esimerkiksi parillisuus: `luku % 2 == 0`.
+</perustelu>
+</vaittama>
+
+<vaittama vastaus="tarua">
+Lauseke `"Tulos: " + 1 + 2` tuottaa merkkijonon `"Tulos: 3"`.
+<perustelu>
+**Tarua.** Lauseke lasketaan vasemmalta oikealle: ensin syntyy `"Tulos: 1"`,
+ja sen perään liitetään `2`, joten tulos on `"Tulos: 12"`. Sulkeilla
+`"Tulos: " + (1 + 2)` tai interpoloinnilla `$"Tulos: {1 + 2}"` saadaan
+`"Tulos: 3"`.
 </perustelu>
 </vaittama>
 
