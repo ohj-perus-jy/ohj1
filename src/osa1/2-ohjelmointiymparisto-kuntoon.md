@@ -237,6 +237,77 @@ Jypeli-projektissa Main-pääohjelma menee Ohjelma.cs-tiedostoon, joten jos copy
 koodin, joka sisältää Main-pääohjelman, niin **poista Main-pääohjelma** `Portaat`-luokan (tms. projektisi nimeä vastaava luokka)
 sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
 
+## TIM-tehtävien tekeminen Riderissa {#tim-tehtavat-riderissa}
+
+Voit tehdä TIMin harjoitustehtäviä Riderissa. Osassa TIM-tehtävistä on kuitenkin piilotettuja osia: tehtävälaatikossa
+näkyy vain se kohta, johon vastaus kirjoitetaan, ja muu ohjelma (esimerkiksi
+`using`-rivit, luokan esittely ja pääohjelma) on piilossa. Pelkkä näkyvä osa ei
+siksi käänny Riderissa sellaisenaan. Tässä ohjeessa kerrotaan, miten tällaiset
+tehtävät kannattaa tehdä Riderissa.
+
+Ideana on kopioida tehtävän koko koodi piilotettuine osineen TIMistä Rideriin,
+kirjoittaa ja testata vastaus siellä ja kopioida lopuksi valmis koodi takaisin
+TIMiin. Koko koodissa kommentit `BYCODEBEGIN` ja `BYCODEEND` kertovat, mikä osa
+koodista on TIMissä näkyvää vastausaluetta.
+
+> [!VINKKI]
+> Alla kopioidaan ja liitetään koko tiedoston sisältö kerralla. Kaiken saa
+> valittua näppäimillä <kbd>Ctrl</kbd> + <kbd>A</kbd>, kopioitua näppäimillä
+> <kbd>Ctrl</kbd> + <kbd>C</kbd> ja liitettyä näppäimillä <kbd>Ctrl</kbd> +
+> <kbd>V</kbd>. Macissa käytä <kbd>Ctrl</kbd>-näppäimen sijaan
+> <kbd>Cmd</kbd>-näppäintä.
+
+### Komentorivitehtävät {#tim-consolemain}
+
+Komentorivitehtävä tehdään `ConsoleMain`-projektissa.
+
+1. **Riderissa:** Tee uusi projekti ja valitse projektimalliksi `ConsoleMain`.
+   Katso tarvittaessa ohjeet luvusta [Uusi projekti olemassa olevaan
+   solutioniin](#uusi-projekti-solutioniin).
+1. **TIMissä:** Klikkaa tehtävän palautuslaatikossa olevaa *Näytä koko koodi*
+   -linkkiä ja sen jälkeen *Copy*-linkkiä. Tehtävän koko koodi on nyt
+   leikepöydällä.
+1. **Riderissa:** Avaa juuri tekemäsi projektin `.cs`-tiedosto, valitse sen koko
+   sisältö ja liitä TIMistä kopioimasi koodi tilalle.
+1. **Riderissa:** Kirjoita vastauksesi. Jos liitetyssä koodissa on kommentit
+   `BYCODEBEGIN` ja `BYCODEEND`, tee vastaus **näiden rivien väliin**.
+1. **Riderissa:** Kun ohjelma toimii, valitse taas tiedoston koko sisältö ja
+   kopioi se.
+1. **TIMissä:** Liitä koodi tehtävän palautuslaatikkoon ja palauta tehtävä tavalliseen tapaan.
+
+Vaiheet näkyvät myös alla olevalla esimerkkivideolla, jossa tehtävän koodi
+haetaan TIMistä Rideriin ja viedään takaisin (videossa ei ole ääntä).
+
+<video controls muted preload="metadata" width="800" style="max-width: 100%; height: auto;" src="./images/tim_consolemain_rider.mp4"></video>
+
+### Jypeli-tehtävät {#tim-fysiikkapeli}
+
+TIMin Jypeli-tehtävät käyttävät `Fysiikkapeli`-projektimallia, ellei tehtävässä
+toisin mainita. Erona komentorivitehtäviin on, että projektin nimen pitää olla
+sama kuin tehtävän koodissa olevan luokan nimi, joten luokan nimi katsotaan
+TIMistä ennen projektin luomista.
+
+1. **TIMissä:** Klikkaa tehtävän palautuslaatikossa olevaa *Näytä koko koodi*
+   -linkkiä ja katso, mikä on koodissa olevan luokan (`class`) nimi.
+1. **Riderissa:** Tee uusi projekti. Valitse projektimalliksi `Fysiikkapeli`
+   (ellei toisin ohjeisteta) ja anna projektin nimeksi sama kuin tehtävän luokan
+   nimi.
+1. **TIMissä:** Klikkaa *Copy*-linkkiä. Tehtävän koko koodi on nyt
+   leikepöydällä.
+1. **Riderissa:** Avaa se projektin `.cs`-tiedosto, jonka nimi on sama kuin
+   projektin nimi, valitse sen koko sisältö ja liitä TIMistä kopioimasi koodi
+   tilalle.
+1. **Riderissa:** Kirjoita vastauksesi. Jos liitetyssä koodissa on kommentit
+   `BYCODEBEGIN` ja `BYCODEEND`, tee vastaus **näiden rivien väliin**.
+1. **Riderissa:** Kun peli toimii, valitse taas tiedoston koko sisältö ja
+   kopioi se.
+1. **TIMissä:** Liitä koodi tehtävän palautuslaatikkoon ja palauta tehtävä tavalliseen tapaan.
+
+> [!VAROITUS]
+> Rider luo Jypeli-projektiin automaattisesti myös `Ohjelma.cs`-tiedoston, jossa
+> on Main-pääohjelma. **Sitä ei tarvitse eikä pidä muokata**, eikä TIMin koodia
+> liitetä sinne.
+
 ## Graafinen sovellus Jypeli-kirjastolla
 
 Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
