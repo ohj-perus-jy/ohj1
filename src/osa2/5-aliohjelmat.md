@@ -21,7 +21,7 @@ tuntee. *Kävele* on aliohjelma, ja niin on myös *ota bussi 12*. Ihmiset
 ajattelevat aliohjelmilla luonnostaan. Ohjelmoinnissa ne pitää vain kirjoittaa
 näkyviin.
 
-Ohjelmissa aliohjelmia tarvitaan kolmesta syystä.
+Ohjelmissa aliohjelmia tarvitaan neljästä syystä.
 
 * **Sama asia tehdään monta kertaa.** Pelissä luodaan kymmenen vihollista,
   ja jokainen tarvitsee saman viiden rivin luontikoodin. Tulostetaan otsikko
@@ -36,6 +36,16 @@ Ohjelmissa aliohjelmia tarvitaan kolmesta syystä.
 * **Nimi kertoo, mitä koodi tekee.** Kymmenen riviä laskentaa vaatii lukijalta
   pysähtymisen. Kutsu `LaskePintaAla()` ei vaadi. Hyvin nimetty aliohjelma
   on kuin hyvin nimetty muuttuja: se säästää kommentin ja lukijan hermot.
+* **Pienen palan voi testata erikseen.** Kolmensadan rivin `Begin`-aliohjelmasta
+  on vaikea sanoa, toimiiko se. Kymmenen rivin aliohjelmasta sen näkee
+  kokeilemalla. Osassa 4 kokeilu annetaan koneen tehtäväksi: aliohjelmalle
+  kirjoitetaan [testit](../osa4/4-testaaminen-comtestilla.md), jotka ajetaan
+  napin painalluksella.
+
+Hyvä aliohjelma on *itsenäinen*: se tekee tehtävänsä samalla tavalla
+riippumatta siitä, mistä sitä kutsutaan. Kun kirjoitat aliohjelman runkoa,
+älä mieti kutsujaa. Silloin samaa aliohjelmaa voi käyttää muuallakin kuin
+siinä kohdassa, jota varten se alun perin tehtiin.
 
 Ilman aliohjelmia ohjelma on yksi pitkä lauseiden jono, joka suoritetaan
 alusta loppuun. Aliohjelmien myötä ohjelma saa *rakenteen*: pieniä osia, joilla
@@ -439,7 +449,9 @@ rinnakkain, eivät sisäkkäin. Jos `public static void TulostaViiva()` on
 kirjoitettu `Main`-aliohjelman aaltosulkujen väliin, kääntäjä ilmoittaa
 `CS0106: The modifier 'public' is not valid for this item`. Ilmoitus
 kuulostaa oudolta, mutta syy on sijainti: siirrä aliohjelma `Main`-aliohjelman
-sulkevan aaltosulun jälkeen.
+sulkevan aaltosulun jälkeen. Kääntäjä puhuu sanasta `public`, koska C# sallii
+aliohjelman sisään niin sanotun paikallisen funktion, jolla ei saa olla
+`public`-sanaa. Tällä kurssilla paikallisia funktioita ei käytetä.
 
 **Nimi eri tavalla kuin määrittelyssä.** `tulostaViiva();` tai
 `TulostaViva();` antaa virheen `CS0103: The name 'tulostaViiva' does not exist
@@ -556,6 +568,17 @@ tietoa (b:stä ne puuttuvat). Vaihtoehto d on kutsu, ei määrittely.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: T-tehtävät "Lumiukko konsoliin" (TulostaPallo-aliohjelma
-     kolmesti), "Jaa Begin osiin" (Jypeli: AsetaTausta, LuoPelaaja, LuoMaali)
-     ja "Mitä ohjelma tulostaa?" (kutsujärjestyksen jäljitys). -->
+<!-- Numerointi tarkentuu, kun osan muut tehtävät tehdään. TIM-palautuslinkit
+     lisätään, kun tehtävät on viety TIMiin.
+     Vaiheessa B lisäksi: "Lumiukko konsoliin" (TulostaPallo-aliohjelma
+     kolmesti) ja "Jaa Begin osiin" (Jypeli: AsetaTausta, LuoPelaaja,
+     LuoMaali). -->
+
+<task>
+  <task-title num="T1">Järjestele toimivaksi <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../exercises/2-5-1-jarjestele_toimivaksi/handout.md}}
+
+  </handout>
+</task>

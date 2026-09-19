@@ -14,6 +14,9 @@ gurutehtävä. Pisteytys ja suoritusvaatimukset on kuvattu sivulla
 
 | Tehtävä | Luku | Pisteet | Palautus |
 | ------- | ---- | ------: | -------- |
+| T1 Kirjoita esittelyrivit | [3.1 Parametrit ja argumentit](./1-parametrit-ja-argumentit.md#tehtävät) | 1 p. | tulossa |
+| T2 Lisää lumiukkoja | [3.1 Parametrit ja argumentit](./1-parametrit-ja-argumentit.md#tehtävät) | 1 p. | tulossa |
+| T3 Tulostavasta palauttavaksi | [3.2 Aliohjelman paluuarvo](./2-aliohjelman-paluuarvo.md#tehtävät) | 1 p. | tulossa |
 
 Harjoitustehtävien palautustilaisuuden tallenne on TIMissä:
 <https://tim.jyu.fi/view/kurssit/tie/itkp102/koti#aikataulu>.

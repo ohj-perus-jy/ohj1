@@ -134,8 +134,7 @@ public class Laskujarjestys
 }
 ```
 
-Kun et ole varma järjestyksestä, käytä sulkeita. Ne eivät maksa mitään, ja
-lukija kiittää.
+Kun et ole varma järjestyksestä, käytä sulkeita. 
 
 ## Tyyppimuunnokset
 

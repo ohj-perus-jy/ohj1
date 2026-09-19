@@ -131,6 +131,22 @@ Lukutyypit:
 | `double`    | Liukuluku (desimaaliluku)   | n. ±1.79 · 10<sup>308</sup>, noin 15 merkitsevää numeroa   | `3.14`, `-0.001`, `2.0`    |
 | `float`     | Liukuluku (vähemmän tarkka) | n. ±3.40 · 10<sup>38</sup>, noin 7 merkitsevää numeroa     | `3.14f`, `-0.001f`, `2.0f` |
 
+Nimitys "liukuluku" tulee siitä, että luvun tarkkuus "liukuu" sen mukaan, kuinka
+suuri luku on. 
+
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Miksi nimitys "liukuluku"?</summary>
+
+Merkitsevien numeroiden määrä on kiinteä: `float`-tyyppisillä luvuilla noin 6–9,
+`double`-tyyppisillä noin 15–17 desimaalinumeroa. Mitä kauempana luku on
+nollasta, sitä vähemmän tarkkuutta jää desimaaliosalle. Esimerkiksi
+`double`-arvoilla luvun 2<sup>53</sup> ≈ 9 × 10<sup>15</sup> yläpuolella edes
+kaikki kokonaisluvut eivät ole enää esitettävissä. Mitä lähempänä nollaa luku
+on, sitä enemmän desimaaleja mahtuu mukaan; mitä suurempi luku on, sitä vähemmän
+desimaaleja mahtuu mukaan. Liukuluvut ovat suurelta osin epätarkkoja, ja
+epätarkkuus kasvaa, kun lukuja lasketaan yhteen tai vähennetään toisistaan.
+
+</details>
+
 Muut tietotyypit:
 
 | Tietotyyppi | Kuvaus             | Esimerkkejä arvoista      |
@@ -160,7 +176,9 @@ jotka on jaettu tasan negatiivisten ja positiivisten lukujen kesken. Jos
 `int`-muuttujan arvo ylittää ylärajan, se "pyörähtää ympäri" negatiiviseksi
 ilman virheilmoitusta.
 
-Tämä ei ole pelkkä teoria: vuonna 2014 YouTube joutui vaihtamaan
+Tämä ei ole pelkkä teoria: vuonna 2014 YouTube [joutui
+vaihtamaan](https://www.pbs.org/newshour/arts/gangnam-style-music-video-exceeds-youtubes-view-limit
+"PBS News: 'Gangnam Style' proved to be swan song for YouTube's view limit")
 katselukertalaskurinsa tyyppiä, kun *Gangnam Style* -videon katselukerrat
 lähestyivät lukua 2 147 483 647. Tarkemmin lukujen esittämisestä kerrotaan
 liitteessä [Tiedon esittäminen

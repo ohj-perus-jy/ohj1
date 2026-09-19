@@ -4,7 +4,7 @@ Tässä luvussa tarkastelemme ohjelmaa kokonaisuutena: mistä osista se koostuu 
 missä järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
 *top-down*-tavalla; katselemme ensin ohjelman rakennetta kokonaisuutena ja sitten tarkastelemme yksittäisiä osia.
 Aliohjelmat on jo käsitelty luvussa
-[Aliohjelmat](./4-aliohjelmat.md), joten tässä luvussa keskitytään siihen,
+[Aliohjelmat](./5-aliohjelmat.md), joten tässä luvussa keskitytään siihen,
 miten ohjelman osat asettuvat kokonaisuudeksi. Parametreihin ja paluuarvoihin
 pureudutaan osassa 3.
 
@@ -107,7 +107,7 @@ public static void Main()
 
 `Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta -- riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
 
-`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Mitä määreet `public`, `static` ja `void` tarkoittavat, käsiteltiin luvussa [Aliohjelmat](./4-aliohjelmat.md).
+`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Mitä määreet `public`, `static` ja `void` tarkoittavat, käsiteltiin luvussa [Aliohjelmat](./5-aliohjelmat.md).
 
 Ohjelmassa saa olla vain yksi aloituspiste. Jos ohjelmassa on useita luokkia, `Main` kirjoitetaan vain yhteen niistä.
 
@@ -212,7 +212,7 @@ Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka `Console
 > täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
 > *kutsutaan*.
 
-Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Aliohjelmien kutsumista käsiteltiin luvussa [Aliohjelmat](./4-aliohjelmat.md).
+Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Aliohjelmien kutsumista käsiteltiin luvussa [Aliohjelmat](./5-aliohjelmat.md).
 
 ## Lohkot ja sisennykset
 
@@ -289,7 +289,7 @@ public class Sovellus
 }
 ```
 
-**Aliohjelma toisen aliohjelman sisällä.** Aliohjelmat kirjoitetaan luokan sisään, mutta *toistensa* rinnalle -- ei sisäkkäin.
+**Aliohjelma toisen aliohjelman sisällä.** Aliohjelmat kirjoitetaan luokan sisään, mutta *toistensa* rinnalle -- ei sisäkkäin. Alla oleva ohjelma ei käänny, koska `public` ei kelpaa aliohjelman sisällä: `CS0106: The modifier 'public' is not valid for this item`.
 
 ```csharp,ignore
 public class Sovellus
@@ -302,6 +302,8 @@ public class Sovellus
     }
 }
 ```
+
+Tarkkaan ottaen C# sallii aliohjelman sisään kirjoitetun *paikallisen funktion* (engl. *local function*), kunhan sen edessä ei ole `public`-sanaa. Siksi kääntäjä valittaa sanasta `public` eikä aliohjelman paikasta. Paikallisia funktioita ei käytetä tällä kurssilla: niitä ei voi kutsua muualta eikä testata erikseen, ja sisäkkäin kirjoitettu koodi on juuri sitä, mistä aliohjelmilla pyritään eroon.
 
 <details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: "luokaton" ohjelma</summary>
 
@@ -343,10 +345,13 @@ sen puolestasi.
 </vaittama>
 
 <vaittama vastaus="tarua">
-Aliohjelman voi kirjoittaa toisen aliohjelman sisään.
+Ohjelma kääntyy, vaikka `public static void` -aliohjelma olisi kirjoitettu
+`Main`-aliohjelman aaltosulkujen sisään.
 <perustelu>
-**Tarua.** Aliohjelmat kirjoitetaan luokan sisään toistensa rinnalle.
-Sisäkkäin kirjoitettu `public static void` -aliohjelma on käännösvirhe.
+**Tarua.** Kääntäjä ilmoittaa, että `public` ei kelpaa aliohjelman sisällä
+(`CS0106`). Aliohjelmat kirjoitetaan luokan sisään toistensa rinnalle. C#
+sallii kyllä aliohjelman sisään *paikallisen funktion* ilman `public`-sanaa,
+mutta tällä kurssilla niitä ei käytetä.
 </perustelu>
 </vaittama>
 

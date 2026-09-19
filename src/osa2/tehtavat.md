@@ -14,6 +14,7 @@ gurutehtävä. Pisteytys ja suoritusvaatimukset on kuvattu sivulla
 
 | Tehtävä | Luku | Pisteet | Palautus |
 | ------- | ---- | ------: | -------- |
+| T1 Järjestele toimivaksi | [2.5 Aliohjelmat](./5-aliohjelmat.md#tehtävät) | 1 p. | tulossa |
 
 Harjoitustehtävien palautustilaisuuden tallenne on TIMissä:
 <https://tim.jyu.fi/view/kurssit/tie/itkp102/koti#aikataulu>.
