@@ -88,13 +88,13 @@ Tentin minimipistemäärä on 0 ja maksimipistemäärä on 24. Tekemällä
 harjoitustehtäviä kerrytät hyvityspisteitä tenttiin seuraavasti.
 
 | harjoitustehtävistä kerättyjä pisteitä vähintään | Hyvityspisteitä |
-| -----------------------------------------------: | --------------- |
-|                                               27 | 1               |
-|                                               33 | 2               |
-|                                               40 | 3               |
-|                                               47 | 4               |
-|                                               53 | 5               |
-|                                               60 | 6               |
+| -----------------------------------------------: | --------------: |
+|                                               27 |               1 |
+|                                               33 |               2 |
+|                                               40 |               3 |
+|                                               47 |               4 |
+|                                               53 |               5 |
+|                                               60 |               6 |
 
 Kultakin harjoitustehtäväkerralta hyväksiluetaan **enintään 8
 harjoitustehtäväpistettä**. Toisin sanoen, vaikka saisit joltain
