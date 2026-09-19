@@ -468,15 +468,14 @@ Noudata huolellisesti alla olevia ohjeita.
     Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
 
     **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
- 2. Siirry osoitteeseen [https://www.jetbrains.com/community/education/#students](https://www.jetbrains.com/community/education/#students) 
- 3. Klikkaa *Apply now*.			
- 4. Täytä tiedot *Apply with: University email address* -lomakkeessa, ole tarkkana 
+ 2. Siirry osoitteeseen [https://www.jetbrains.com/shop/eform/students](https://www.jetbrains.com/shop/eform/students) 
+ 3. Valitse lomakkeen yläosasta *University email address* ja täytä tiedot. Ole tarkkana, 
  että annat student.jyu.fi-loppuisen opiskelijasähköpostiosoitteen. Hyväksy mahdolliset käyttöehdot. 
- Klikkaa *Apply for free products*.			
- 5. Avaa yliopiston sähköpostisi, noudata JetBrainsin lähettämän vahvistusviestin
+ Klikkaa *Apply for Free Products*.			
+ 4. Avaa yliopiston sähköpostisi, noudata JetBrainsin lähettämän vahvistusviestin
  ohjeita ja vahvista lisenssi.
  **<u>Jos viesti ei tulekaan, älä lähetä lomaketta useita kertoja "varmuuden vuoksi". Siitä on vain ja ainoastaan haittaa.</u>**
- 6. JetBrains pyytää linkittämään lisenssin JetBrains-tiliin. 
+ 5. JetBrains pyytää linkittämään lisenssin JetBrains-tiliin. 
  Tilin voinee luoda M365/Microsoft-tilin kautta valitsemalla *Sign in with Microsoft* ja yhdistämällä suoraan			
  yliopiston sähköpostiin.			
  			

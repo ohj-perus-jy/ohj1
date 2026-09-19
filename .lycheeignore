@@ -1,0 +1,12 @@
+# ohj1:n omat lychee-ohitukset (regex, yksi per rivi). Yhteiset asetukset:
+# zensical/tyokalut/linkit/lychee.toml.
+
+# TIMin Oma eteneminen: otsikot näkyvät vain kirjautuneelle.
+^https://tim\.jyu\.fi/view/kurssit/tie/itkp102/eteneminen#
+
+# TIM-sivujen huomautus "Navigointipalkki löytyy komponentit-kansiosta":
+# suhteellinen linkki osoittaa kurssikansion yläpuolelle.
+^https://tim\.jyu\.fi/view/kurssit/(tie/)?komponentit$
+
+# TIMin ohjeet/rider: vanha ComTest-esimerkkisivu (esimerkit ovat nyt kirjassa).
+^https://tim\.jyu\.fi/tyokalut/comtest-examples$
