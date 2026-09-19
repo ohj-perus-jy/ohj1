@@ -237,21 +237,6 @@ Jypeli-projektissa Main-pääohjelma menee Ohjelma.cs-tiedostoon, joten jos copy
 koodin, joka sisältää Main-pääohjelman, niin **poista Main-pääohjelma** `Portaat`-luokan (tms. projektisi nimeä vastaava luokka)
 sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
 
-
-## Sisällön tuominen Jypeli-projektiin (Content-kansio)
-
-Kuvat ja äänet lisätään peliprojektin Content-kansioon, joka näkyy editorin tiedostolistauksessa.
-
-Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Directory*
-
-![Sisällön lisääminen](./images/new_content_directory.jpg)
-
- 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Add Existing Item*
- 1. Valitse tiedosto(t) jonka haluat lisätä ja paina ok.
- 1. Valitse Copy.
- 1. Klikkaa tuomaasi tiedostoa Content-kansiossa hiiren oikealla ja valitse Properties
- 1. Vaihda *Copy to output directory* -kohtaan "Copy if newer"
-
 ## Graafinen sovellus Jypeli-kirjastolla
 
 Jypeli on C#-kielellä kirjoitettu pelimoottori, joka on suunniteltu erityisesti opetuskäyttöön. Jypeli tarjoaa helppokäyttöisen tavan pelien luomiseen, mikä tekee siitä hyvän valinnan tälle kurssille.
