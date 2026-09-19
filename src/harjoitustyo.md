@@ -23,7 +23,7 @@ Ohjelmointi 1 -opintojakson harjoitus työ
  - on osa kurssisuoritusta ja arvioidaan asteikolla hyväksytty/hylätty. Harjoitustyö pitää olla hyväksytty ennen kuin kurssista voi saada arvosanan.
  - tehdään yksin tai parityönä. Kolmen hengen ja sitä isompia ryhmiä ei hyväksytä.
  - on Jypeli-työkaluilla tehty
-   peli taiC#-kielellä tehty komentoriviohjelma. Muita kieliä tai työkaluja ei hyväksytä.
+   peli tai C#-kielellä tehty komentoriviohjelma. Muita kieliä tai työkaluja ei hyväksytä.
 
 ## Vaiheet ja aikataulu {#aikataulu}
 
@@ -98,10 +98,38 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
 
 ## Harjoitustyön vaiheiden tarkistuslistat {#vaiheiden-tarkistuslistat}
 
-### Vaihe 1: Suunnitelma versiohallinnassa
+Harjoitustyön voi palauttaa kahdella tavalla: Git-etävarastona tai
+ZIP-pakettina. Valitse palautustapa alta. Käytä samaa palautustapaa
+kaikissa kolmessa vaiheessa.
+
+#### [Git-etävarasto](#tab/git) 
+
+Valitsit palautustavaksi Git-etävaraston. Harjoitustyö tallennetaan
+GitLab- tai GitHub-palvelussa olevaan omaan etävarastoon, jonka osoite
+ilmoitetaan TIMin [Oma eteneminen -sivulla](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
+
+**Tämä tapa on erittäin suositeltava, jos jatkat seuraaville
+ohjelmointikursseille**, sillä Git-versiohallinta on käytössä myöhemmillä ohjelmointikursseilla.
+***
+
+#### [ZIP-paketti](#tab/zip)
+
+Valitsit palautustavaksi ZIP-paketin. Harjoitustyökansio pakataan
+ZIP-tiedostoksi ja ladataan TIMin
+[Oma eteneminen -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
+Git-työkalua ei tarvita, ja voit ohittaa [Git-ohjeen](./git.md) kokonaan.
+
+Huomaa, että ZIP-paketti pitää ladata TIMiin uudelleen jokaisessa vaiheessa. Ota
+itse säännöllisesti varmuuskopioita työstäsi.
+
+***
+
+### Vaihe 1: Suunnitelma {#vaihe-1-suunnitelma-versiohallinnassa}
+
+#### [Git-etävarasto](#tab/git)
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [ohjevideo](https://youtu.be/MQJ69rmd1sw)).
+ 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [vaiheittainen ohje](./git-ht-ohje.md)).
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
  1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
@@ -114,7 +142,58 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
  1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
  1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
+***
+
+#### [ZIP-paketti](#tab/zip)
+
+ 1. Lataa harjoitustyön pohja omalle tietokoneelle ZIP-pakettina: avaa
+    kurssin pohjaprojekti <https://gitlab.jyu.fi/tie/ohj1/ohj1ht> (tai
+    <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht>) selaimessa ja valitse
+    *Code* <i class="bi bi-chevron-right"></i> *zip* (GitHubissa *Code*
+    <i class="bi bi-chevron-right"></i> *Download ZIP*).
+ 1. Pura ladattu paketti paikkaan, josta löydät sen, esimerkiksi kansioon
+    `C:\Users\kayttajatunnus\ohj1\harjoitustyo` (Windows) tai
+    `~/ohj1/harjoitustyo` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
+    harjoitustyön tiedostot tallennetaan sen sisälle.
+ 1. Kirjoita harjoitustyön suunnitelma lataamasi harjoitustyöpohjan `suunnitelma/suunnitelma.md`-tiedostoon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje alla](#zip-pakkaaminen)).
+ 1. Lataa ZIP-tiedosto [Oma
+    eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen) suunnitelma-kohtaan.
+ 1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+
+<details closed id="zip-pakkaaminen">
+<summary>Harjoitustyökansion pakkaaminen ZIP-tiedostoksi</summary>
+
+Pakkaa aina **koko harjoitustyökansio** (esim. `harjoitustyo`), ei pelkkää
+solution-kansiota tai yksittäisiä tiedostoja. Paketissa tulee olla mukana
+suunnitelma kuvineen sekä kaikki ohjelmakoodi.
+
+Poista ennen pakkaamista solution-kansiosta `bin`- ja `obj`-alikansiot. Rider
+luo ne uudelleen käännettäessä, ja ne kasvattavat paketin kokoa turhaan. Älä
+käytä liian suurikokoisia kuvia, ääniä tai muita resursseja (~ useita
+megatavuja per kpl), sillä ne voivat tehdä paketista liian suuren. Pienennä kuvia, ääniä
+tai muita resursseja tarvittaessa ennen pakkaamista.
+
+Pakkaaminen käyttöjärjestelmittäin:
+
+- **Windows**: Klikkaa kansiota hiiren oikealla painikkeella ja valitse
+  *Pakkaa ZIP-tiedostoksi* (engl. *Compress to ZIP file*) tai *Lähetä
+  kohteeseen* <i class="bi bi-chevron-right"></i> *Pakattu kansio*.
+- **macOS**: Klikkaa kansiota Finderissa hiiren oikealla painikkeella
+  (tai Ctrl-klikkaa) ja valitse *Pakkaa* (engl. *Compress*).
+- **Linux**: Klikkaa kansiota tiedostonhallinnassa hiiren oikealla
+  painikkeella ja valitse *Pakkaa* (engl. *Compress*) ja muodoksi `.zip`.
+
+Nimeä tiedosto muotoon `ohj1ht.zip`. Voit tarkistaa paketin toimivuuden
+purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
+
+</details>
+
+***
+
 ### Vaihe 2: Työ 50 % valmis
+
+#### [Git-etävarasto](#tab/git)
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
@@ -123,11 +202,28 @@ vain erityisestä syystä. Jos et pääse paikalle ryhmäohjausaikana (ks.
       ladattu etävarastostasi paikalliseksi git-varastoksi.
  1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./git.md#push).
- 1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
+ 1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+
+***
+
+#### [ZIP-paketti](#tab/zip)
+
+ 1. Tee työsi eteenpäin suunnitelman mukaan. 
+    - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
+      solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      Varmista, että solution on tallennettu nimenomaan harjoitustyökansioon,
+      jonka purit vaiheessa 1.
+ 1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja
+    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).    
+ 2. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+
+***
 
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
 ### Vaihe 3: Työ 100 % valmis
+
+#### [Git-etävarasto](#tab/git)
 
  1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ennen kuin
     menet tenttiin**
@@ -135,8 +231,25 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
  1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  1. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
     - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
-    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävarasto omalle tietokoneelle eri kansioon ja yrittää ajaa solution.
+    - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävaraston omalle tietokoneelle eri kansioon ja yrittää ajaa solutionin.
  1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+
+***
+
+#### [ZIP-paketti](#tab/zip)
+
+ 1. **Tutkinto-opiskelijat ja lukiolinjat**: **Näytettävä ohjaajalle ennen kuin
+    menet tenttiin**
+ 1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#vaatimukset)
+ 1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
+ 1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja
+    lataa se [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).    
+    - Huomaa, että paketissa olevan työn tulee olla <u>toimiva</u>! Pura paketti
+      eri kansioon (tai lähetä kaverille), avaa solution sieltä Riderissa ja kokeile, että ohjelma
+      kääntyy ja käynnistyy. 
+ 1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
+
+***
 
 Mikäli ohjaaja antaa merkittävän määrän korjauskehotuksia, opiskelijalla on 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
@@ -154,14 +267,16 @@ käyttää pohjana Jypelin mukana tulevaa Fysiikkapelin tai
 Tasohyppelypelin pohjaa. 
 [Katso inspiraatiota vanhoista harkkatöistä](https://youtu.be/Coknsg_ClR4). 
 
-Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan hyväksymä.
-Suunnitelmat tallennetaan GitLabiin, ks. [vaiheen 1 tarkistuslista](../harjoitustyo.md#vaiheiden-kuvaukset).
+Harjoitustyö täytyy olla suunniteltu ja suunnitelman tulee olla ohjaajan
+hyväksymä. Suunnitelma palautetaan valitsemallasi palautustavalla
+(Git-etävarasto tai ZIP-paketti), ks.
+[vaiheen 1 tarkistuslista](#vaihe-1-suunnitelma-versiohallinnassa).
 
 Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitustyöhön):
 
   1. Tekijöiden nimet
   2. Pelin nimi
-  3. Harjoitustyön osoite gitissä
+  3. Harjoitustyön osoite gitissä (jos palautat työn Git-etävarastona)
   3. Pelaajien lukumäärä (1-4) 
   4. Pelin taustatarina tai kuvaus pelin teemasta
   5. Pelin idea ja tavoitteet
@@ -176,7 +291,7 @@ Työssä on oltava vähintään muutama aliohjelma Jypelin valmiiden aliohjelmie
 
 Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa-alueet".
 
-**Jos teet pelin parityönä:** Kumpikin käyttää samaa etävaraston osoitetta. Ks. [Git-ohjeet](../git.md#git-ja-ryhmätyöskentely).
+**Jos teet pelin parityönä:** Parityössä on yksi yhteinen palautus: Git-palautuksessa kumpikin käyttää samaa etävaraston osoitetta (ks. [Git-ohjeet](./git.md#git-ja-ryhmätyöskentely)), ja ZIP-palautuksessa pari palauttaa yhden yhteisen ZIP-paketin. Parityössä Git-etävarasto on suositeltavampi vaihtoehto, koska sen avulla työtä on helpompi tehdä samanaikaisesti (ks. [vinkit alla](#ukk)).
 
 Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
 
@@ -717,7 +832,6 @@ Pidä laskentalogiikka omassa funktiossa, jotta peliluokka pysyy selkeänä.
  * Aikaraja ylittyy
  * Peli alkaa alusta
 
-
 **Hyödynnä tulokset pelissä** Tässä esimerkkejä.
 
  * Näytä pelaajalle (pisteet, tilastot, top-ajat)
@@ -764,8 +878,8 @@ tulee testata.
 
 Inspiraatiota voi hakea vaikkapa Pong-pelistä tai Läpsylinnusta. 
 
- - [Pong-peli](https://trac.cc.jyu.fi/projects/npo/wiki/Pong/Vaihe1)
- - [Läpsylintu](https://trac.cc.jyu.fi/projects/npo/wiki/Lapsylintu)
+ - [Pong-peli](https://jypeli.it.jyu.fi/tutoriaalit/pong/)
+ - [Läpsylintu](https://jypeli.it.jyu.fi/tutoriaalit/lapsylintu/)
 
 </details>
 

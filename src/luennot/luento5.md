@@ -8,10 +8,9 @@
 
 ## Syksy 2026
 
- * Tulossa
- 
-## Kevät 2026
+ * 📺 Katso: [YouTube](https://youtube.com/live/fAy0h8AmczI?feature=share),
+     [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2026/luento-5)
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento05/Luento05.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento05)
 
- * 📺 Vain syksyn 2025 tallenne saatavilla: ([YouTube](https://youtu.be/WSTxO_H2bxg), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2025/luento-5))  
- * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento05/Luento05.pdf). 
- * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2025s/esimerkit/-/tree/main/Luento05).
+

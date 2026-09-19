@@ -7,7 +7,7 @@ Tässä osassa...
  * toistorakenteet
  * merkkijonot
 
-## ➿ Toistorakenteet
+## Toistorakenteet
 
 **Toistorakenteilla** voidaan toistaa jonkin lauseen tai lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistorakenteita ovat `while`, `do-while`, `for`, ja `foreach`.
 

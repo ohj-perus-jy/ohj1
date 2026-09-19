@@ -1,4 +1,4 @@
-# ➕ Operaattorit
+# Operaattorit
 
 Ohjelmointikielissä *operaattorit* ovat erityisiä symboleja tai avainsanoja, jotka suorittavat tiettyjä operaatioita arvojen tai muuttujien välillä. Operaattoreita käytetään lausekkeissa, jotka muodostavat ohjelman logiikan ja toiminnallisuuden.
 

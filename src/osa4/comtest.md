@@ -1,15 +1,15 @@
 # Aliohjelmien yksikkötestaus ComTest-työkalulla
 
-ComTest on Java-kielinen yksikkötestauskehys, joka mahdollistaa pienten
-koodinpätkien, kuten aliohjelmien, testaamisen erikseen muusta ohjelmakoodista.
-ComTestin avulla voidaan määritellä testitapauksia, joissa kutsutaan testattavaa aliohjelmaa
+ComTest on yksikkötestauskehys, joka mahdollistaa pienten koodinpätkien, kuten
+aliohjelmien, testaamisen erikseen muusta ohjelmakoodista. ComTestin avulla
+voidaan määritellä testitapauksia, joissa kutsutaan testattavaa aliohjelmaa
 erilaisilla syötteillä, ja tarkistetaan, että aliohjelma palauttaa odotetut
 arvot.
 
 ComTest-testit kirjoitetaan dokumentaatiokommenteiksi testattavan aliohjelman
 lähdekoodiin. Testitapaukset ympäröidään `<example>`- ja `<pre name="test">`-tageilla.
 Alla esimerkki, jossa määritellään testitapaukset `Summa`-aliohjelmalle, joka
-laskee kahden kokonaisluvun summan.
+laskee kahden kokonaisluvun summan. Lisää tämä koodi luokan sisään, pääohjelman ulkopuolelle:
 
 ```csharp
 /// <summary>
@@ -22,8 +22,15 @@ laskee kahden kokonaisluvun summan.
 /// Summa(0, 0) === 0
 /// </pre>
 /// </example>
-public int Summa(int a, int b)
+public static int Summa(int a, int b)
 {
     return a + b;
 }
 ```
+
+Nyt voit Riderissa klikata Tests › Comtest: Generate Tests. Tämä luo ohjelmasi
+rinnalle testiprojektin. Testiprojektin ajaminen suorittaa kaikki määritellyt
+testitapaukset ja raportoi mahdolliset virheet. Aja testiprojekti klikkaamalla
+Tests › Run All Tests from Solution. Hetken odottelun jälkeen alareunassa
+pitäisi näkyä vihreä merkki, ja teksti Passed. 
+

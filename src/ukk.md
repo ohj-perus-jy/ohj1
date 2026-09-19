@@ -38,7 +38,7 @@ ComTest toimii vain Riderissa, mutta muuten ei ole merkitystä mitä IDEä käyt
 
 Tentti on yleensä perinteinen ohjelmointiin ja ymmärtämiseen painottuva tentti. Vanhoja tenttejä ja arvosteluperusteita on [tarjolla](https://users.jyu.fi/~anlakane/ohjelmointi1/tentit/) malliksi.
 
-## Voinko korvata opintojakson aiemmalla kokemuksella (työkokemus, oma projekti, jne.)?
+## Voinko korvata opintojakson aiemmalla kokemuksella (työkokemus, oma projekti jne.)?
 
 Suosittelemme opintojakson suorittamista aiemmasta kokemuksesta huolimatta. Monet asiat voivat olla sinulle uusia, vaikka aikaisempaa ohjelmointikokemusta olisikin. Myös opiskelijoilta saamamme palautteen perusteella opintojakson suorittaminen voi olla hyvin opettavainen kokemus, vaikka ohjelmointikokemusta olisikin.
 

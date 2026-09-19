@@ -45,14 +45,14 @@ riippuu käyttöjärjestelmästäsi ja omista mieltymyksistäsi.
 
 Sopivia sijainteja ovat esimerkiksi:
 
- * Windows: `C:\Users\<käyttäjätunnus>\kurssit\ohj1` tai `C:\Opiskelu\ohj1`
- * Mac ja Linux: `~/kurssit/ohj1` 
+ * Windows: `C:\Users\<käyttäjätunnus>\ohj1` tai `C:\Opiskelu\ohj1`
+ * Mac ja Linux: `~/ohj1` 
 
 Korvaa `<käyttäjätunnus>` omalla käyttäjänimelläsi tai vastaavalla tunnisteella.
-Omalla koneella sen ei tietenkään tarvitse olla sama tunniste kuin yliopiston
+Omalla koneella sen ei tietenkään tarvitse olla sama kuin yliopiston
 käyttäjänimi. 
 
-Mikroluokan koneessa: `c:\MyTemp\<käyttäjätunnus>\ohj1`
+Agoran tietokoneluokassa käytä kansionimeä: `c:\MyTemp\<käyttäjätunnus>\ohj1`
 
 Kansio voi sijaita jossain muuallakin. **Tärkeintä on, että itse tiedät missä
 kansiossa työskentelet, ja että löydät sen helposti myöhemmin.**

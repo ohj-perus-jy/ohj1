@@ -215,7 +215,7 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 
 ### [macOS](#tab/macos)
 
-1. Avaa Pääte tai Termimal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
+1. Avaa Pääte tai Terminal (*Launchpad* <i class="bi bi-chevron-right"></i> *Pääte*/*Terminal*)
 2. Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:
 
     ```bash
@@ -389,7 +389,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
 2. Asenna .NET SDK -pakkaus: `dotnet-sdk-10.0`. Pakkauksen nimi on yleensä sama
-   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että .NET on asennettu suorittamalla komento:
 
@@ -448,7 +448,11 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
     Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
 
+    <animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
     ![Git bash avattu](images/gitbash-avattu2.png)
+
+    </animation>
 
 *** 
 
@@ -475,7 +479,7 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
  
 1. Avaa jakelusi pääteohjelma ellei se ole jo
 2. Asenna Git-pakkaus: `git`. Pakkauksen nimi on yleensä sama
-   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch, jne.)
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
 3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
 4. Testaa, että `git`-komento on asennettu suorittamalla komento:
 

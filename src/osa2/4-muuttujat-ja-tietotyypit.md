@@ -1,4 +1,4 @@
-# 💾 Muuttujat ja tietotyypit
+# Muuttujat ja tietotyypit
 
 Muuttujat ovat ohjelmassa käytettäviä arvoja, joiden arvo voi muuttua ohjelman suorituksen aikana. Niinpä voidaan sanoa, että ohjelman tila koostuu muuttujissa olevista arvoista. Jos muuttujan arvo muuttuu (esimerkiksi käyttäjän vuorovaikutuksen seurauksena), muuttuu ohjelman tila. 
 
@@ -35,7 +35,8 @@ Muut tietotyypit:
 
 
 | Tietotyyppi | Kuvaus                          | Esimerkkejä arvoista          |
-| `string`    | Merkkijono                      |  | `"Hei!"`, `"12345"`           |
+| ----------- | ------------------------------- | ----------------------------- |
+| `string`    | Merkkijono                      | `"Hei!"`, `"12345"`           |
 | `bool`      | Totuusarvo                      | `true`, `false`               |
 | `char`      | Yksittäinen merkki              | `'a'`, `'1'`, `'#'`           |
 

@@ -1,0 +1,229 @@
+# TODO: Zensical ohj1:ssä
+
+`zensical/` on kopio ohj2:n `zensical/`-hakemistosta (ohj2 `dev`, commit
+`164510d`, 2026-09-11) ohj2:n `zensical/KAYTTOONOTTO.md`:n vaiheen 7
+mukaisesti. `main` on mdBook, Zensical elää `dev`-haarassa. Mitä kopioon on
+muutettu ohj1:tä varten: `zensical/README.md`, kohta "Ohj1-kohtaiset
+muutokset". Tila 2026-09-11: `./zensical/run.sh build` kääntyy ilman
+varoituksia, `./zensical/run.sh test` menee läpi (220 passed, 3 skipped).
+
+**2026-09-18:** työkalut (`convert.py`, assetit, testit) ovat submodule
+`zensical/tyokalut/` (repo kirjatyokalut), yhteinen ohj2:n ja Jypeli-ohjeiden
+kanssa; kirjan omat asetukset ovat `zensical/kirja.toml`issa. Alla mainitut
+`zensical/README.md`:n kohdat ovat nyt `zensical/tyokalut/TAUSTA.md`:ssä ja
+`zensical/tests` polussa `zensical/tyokalut/tests`. mdBookin tiedostot
+(`book.toml`, `theme/`, `start.sh` ym.) poistettiin 2026-09-18.
+
+## Vaihe 1 — `dev`-haara ja julkaisu `/dev/`:iin
+
+- [x] `dev`-haara `main`in päälle, `zensical/` kopioitu ohj2:sta (2026-09-11).
+- [x] GitHub: Settings → Environments → `github-pages` → Deployment branches:
+      `dev` lisätty (2026-09-11).
+- [x] `dev` pushattu originiin; vanha, eri sisältöinen `origin/dev`
+      (2026-04-10) korvattu (2026-09-11).
+- [x] `.github/workflows/pages.yml` `main`iin (cherry-pick `15a640f`,
+      mukana `.gitignore` ja portti 8001 kuten ohj2:n vaihe 0), sitten
+      `main` → `dev` (`b9d4582`). Tiedosto on sama molemmissa (2026-09-11).
+- [x] Todenna `dev`-pushin ajo: neljä jobia vihreitä, myös
+      `mdbook-dev-check` (ajo 34589621298, 2026-09-11).
+- [x] Todenna `ohjelmointi1.it.jyu.fi/dev/` (sivusto on omassa domainissaan
+      kuten ohj2, `ohj-perus-jy.github.io/ohj1/` ohjaa sinne): tyylit ja
+      skriptit latautuvat, `tentti/` ja `tulosta/` vastaavat 200, juuri on
+      yhä mdBook (2026-09-11).
+- [x] Ajonappi tulostaa `/dev/`:ssä. Ensimmäinen yritys aikakatkaistui:
+      suorituspalvelimen C#-polku ei siedä kenttää `multifile: false`, jota
+      ohj2:n skripti lähetti aina (Java sietää). Korjattu: kenttä lähtee
+      vain monitiedostolohkoille (2026-09-11).
+- [x] Todenna `main`-pushin jälkeen, että `/dev/` säilyy: ajo 34590494841
+      vihreä (`mdbook`, `zensical`, `deploy`; `mdbook-dev-check` ohitetaan
+      `main`issa), juuri on mdBook ja `/dev/` vastaa 200 (2026-09-11).
+
+## Vaihe 2 — Aineiston korjaukset
+
+Alla olevat ovat rikki myös mdBookissa (tarkistettu `mdbook build`in
+tulosteesta 2026-09-11), paitsi sivut, joita mdBook ei julkaise lainkaan
+(`osa4/osa4.md` on kommentoitu pois SUMMARY:stä, `exercises/1-8-1-…` ei ole
+sisällytetty mihinkään). Tehdyt menivät `main`iin; kaksi avointa ovat vain
+Zensicalin ongelmia ja tehdään `dev`:ssä (vaihe 4).
+
+- [x] Ankkurit, joita ei ole: `af8c653` suoraan `main`iin, `main` → `dev`
+      (`06b6001`, 2026-09-11). mdBookissa rikkinäisiä 11 → 0, Zensicalissa varoituksia
+      14 → 1 (`pohja.md`, alla).
+  - [x] `tyokalut.md`: `#rider-settings` (3 linkkiä): otsikosta oli tullut
+        `<details>` (`db3bf52`); `id` lohkoon
+  - [x] `git.md`: `#credentials`: `id` lohkoon "Push ei onnistu"
+  - [x] `harjoitustyo.md`: `#muukuinpeli`: `id` UKK-lohkoon
+  - [x] `harjoitustyo.md`: `#miten-saan-taulukon-...-idprt6kcamnzha` (3 linkkiä):
+        `#taulukko-silmukka-funktio`
+  - [x] `harjoitustyo.md` → `osa1/2-ohjelmointiymparisto-kuntoon.md#konfigurointi-ja-laajennokset`:
+        osio siirtyi (`9a763f0`), nyt `tyokalut.md#jetbrains-rider`
+  - [x] `harjoitustyo.md` → `git.md#tehtyjen-muutosten-lahettaminen-etavarastoon-push`
+        ja `#muutosten-hakeminen-etavarastosta-paikalliseen-varastoon-pull`:
+        nyt `#push` ja `#pull`
+  - [x] `exercises/1-8-1-bonus_editorin_kayttaminen/handout.md`:
+        `#todo_lisaa_kuva` tekstiksi
+  - [x] `osa4/osa4.md`: `#-sanakirja`: osiota ei ole, linkki pois
+- [x] `exercises/1-8-1-…/starter/pohja.md`: `#lisaa_osoite` on tehtävän
+      paikkamerkki, jonka opiskelija korvaa, joten `src`:hen ei kosketa.
+      Zensical tekee jokaisesta `.md`:stä sivun, mdBook vain SUMMARY:n
+      luvuista: `convert.py`:n `NOT_PAGES` (`exercises/*/starter/*.md`)
+      jättää sen pois; Zensical 0.0.60 ei tunne `exclude_docs`:ia
+      (`dev`, 2026-09-11).
+- [x] `.gitignore`: `book` osui myös koekirjaan `zensical/tests/book`, joka
+      ei siksi ollut gitissä, ja `run.sh test` kaatui puhtaassa checkoutissa.
+      `book` → `/book` kuten ohj2:ssa (`2c05e5a`), mukana `af8c653`:ssa;
+      koekirja palautettu ohj2:n `164510d`:stä `dev`iin (2026-09-11).
+- [x] Sivut, joita ei ole: `e816bc7` `main`iin, `main` → `dev`
+      (`9f5fc1a`, 2026-09-11). mdBookin rikkinäiset linkit ja kuvat 5 → 0,
+      Zensicalin varoitukset 5 → 0.
+  - [x] `debuggausnayte.md` → `tuki-ja-palaute.md`: `index.md#tuki-ja-palaute`
+  - [x] `osa1/1-ensimmainen-ohjelma.md` → `../tyokalut/tyokalut.md`: `../tyokalut.md`
+  - [x] `osa2/1-ohjelman-rakenne.md` → `../osa3/1-aliohjelmat.md`: sivu
+        siirtyi `osa2/aliohjelmat.md`:ksi (`9c18110`)
+  - [x] `osa4/index.md` → `osa4/comtest.md`: `./comtest.md`
+  - [x] Lisäksi `harjoitustyo.md` "Janat-haaste" → `ht/janat` (TIMin
+        suhteellinen polku): TIMin täysi osoite `…/ohj1/harjoitustyo/janat`
+- [x] Kuvat, joita ei ole (`tyokalut.md`, absoluuttinen polku): haettu
+      TIMistä `src/images/`:iin (`rider-install-comtest.gif`,
+      `rider-dotnet-cli-path.png`), linkit suhteellisiksi, alt-tekstit.
+- [x] `harjoitustyo.md`: käänteinen linkkisyntaksi
+      `(./index.md#tuki-ja-palaute)[etusivu]` näkyi tekstinä.
+- [x] Sisäkkäiset listat: Python-Markdown vaatii alakohdalle ja alkion
+      jatkoriveille 4 välilyöntiä, mdBook hyväksyy 2–3. Sisennys 4:ään
+      `src`:ssä: alakohdat `e816bc7` (`tyokalut.md`, `debuggausnayte.md`,
+      `luento3`, `4`, `7`, `8`, `15`), jatkokappaleet ja koodilohkot
+      `49da85e`, `909fed0` (`git.md`, `osa1/2-ohjelmointiymparisto-kuntoon.md`,
+      `tyokalut.md`). Mitattu molempien HTML:stä: sisäkkäiset listat ja
+      tekstin listasyvyys täsmäävät, ja jatkorivien korjaus ei muuttanut
+      mdBookin HTML:ää. Ainoa ero: `debuggausnayte.md`:n videovälilehden
+      läpäisytuloste on Zensicalissa kohdan 6 alla, mdBookissa listan
+      jälkeen; jätetty. `harjoitustyo.md` ei ollut rikki.
+      `mdx_truly_sane_lists` hylätty: Zensicalin `markdown_extensions`
+      korvaa koko oletuslistan, ja 2 välilyönnin sisennys muuttaisi
+      nykyisten 4 välilyönnin listojen tulkinnan. Sama puute ohj2:ssa.
+- [x] Sisennetyt otsikot (` ## …`) pois `osa5/1-debuggaus.md`:stä ja
+      `luennot/luento16.md`:stä (`e816bc7`). `dedent_headings` jää.
+- [x] `> [!LISATIETO]` (ainoa esiintymä, `osa2/4-muuttujat-ja-tietotyypit.md`)
+      → `<details>`-lohko kuten muut "Valinnaista lisätietoa" -kohdat
+      (`e816bc7`); `lisatieto` pois `convert.py`:n `ALERT_KINDS`:sta.
+- [x] Lisäksi `debuggausnayte.md`, ohjauksessa-välilehden latausohjeet:
+      `> [!HUOMAUTUS]` `<details>`-lohkossa ilman tyhjää riviä näkyi
+      mdBookissa raakatekstinä. Listan sisään sisennettyä alerttia ei
+      tunnista mdBook eikä `convert.py`, joten tavallinen lainaus
+      `> **Huomautus:**` (`e816bc7`).
+- [x] Poikkeukset pois `zensical/tests/test_book.py`:stä:
+      `KNOWN_DEAD_ANCHORS` ja `KNOWN_BROKEN_IMAGES` (2026-09-11).
+- [ ] Numeroitu lista, joka katkeaa (kappale, kuva tai `<details>` kohtien
+      välissä rivin alussa): mdBook jatkaa numerointia (`<ol start>`),
+      Python-Markdown aloittaa aina ykkösestä (`lazy_ol`). Rikki
+      Zensicalissa: `debuggausnayte.md`, videovälilehti (1, 1, 1, 2 eikä
+      1, 2, 3, 4), ja `git.md`, tunnistetietojen korjaus (1, 2, 3, 1, 1).
+      Vaihtoehdot: (a) `sane_lists` `mkdocs.yml`:ään: kokeiltu, numerointi
+      täsmää mdBookiin eikä muiden sivujen HTML muutu, mutta koko
+      22 laajennuksen oletuslista pitää kirjoittaa `mkdocs.yml`:ään
+      (~35 riviä, verrattava Zensical-päivityksissä), sama ohj2:een.
+      (b) `src`:ssä: `git.md`:n kuvat kohtiensa alle (2 riviä),
+      `debuggausnayte.md`:n kaksi `<details>`-lohkoa kohtien 1 ja 2 alle
+      (~65 riviä, sisäkkäisten listojen ja koodiaidan sisennykset
+      säädettävä, ettei mdBook tee niistä koodilohkoja).
+- [ ] `<details>` välilehden sisällä: `convert_tabs` sisentää välilehden
+      sisällön, eikä `md_in_html` käsittele sisennettyä HTML:ää, joten
+      tulosteeseen jää `<p><details … markdown="1">` (`debuggausnayte.md`,
+      3 lohkoa). Selain avaa lohkot silti oikein. `convert.py`:n puute,
+      tarkista myös ohj2 (`dev`, `zensical/`).
+
+## Vaihe 3 — C#-ominaisuuksien todennus
+
+Testikirja (`zensical/tests/book`) on ohj2:n Java-kirja, joten ohj1:n
+C#-erityispiirteet eivät olleet testien piirissä; nyt ne ovat omalla
+sivullaan `osa1/csharp.md`.
+
+- [x] Ajonappi oikeaa suorituspalvelinta vasten: tavallinen ` ```csharp `
+      (2026-09-11, ks. vaihe 1).
+- [x] Sama ` ```csharp,feature-jypeli `-lohkolle: aineiston ainoa
+      (`osa1/2-ohjelmointiymparisto-kuntoon.md`) ajettu `/dev/`:ssä
+      Playwrightilla. Kieleksi lähtee `csharp-jypeli`, ja palvelin palauttaa
+      ikkunan 1024×768 PNG:nä; mdBookissa sama (2026-09-11).
+- [x] Jypelin kuvatuloste: `.jyu-result-image` lohkona ja koodilohkon
+      kulmin (`.4rem`), leveys teemalta. Pelkän kuvan yllä ei enää lue "Ei
+      tulostetta" (mdBookissa "No output"), vaan tekstilaatikko jää pois.
+      Todennettu oikeaa palvelinta vasten korvaamalla `/dev/`:n
+      `playground.js` ja `.css` paikallisilla, vaalea ja tumma teema;
+      tavallinen C#-lohko toimii ennallaan (2026-09-11).
+- [x] Koekirjaan `osa1/csharp.md` (piilorivit `//-`, `ignore`,
+      `feature-jypeli`) SUMMARY.md:n ulkopuolelle, jotta ohj2:n testien
+      laskemat luvut ja lohkot eivät muutu; 7 testiä `test_playground.py`:n
+      loppuun. Vanhalla koodilla kuvatestit kaatuvat. `run.sh test`:
+      220 passed, 3 skipped (2026-09-11).
+
+## Vaihe 4 — Uusi materiaali `dev`:ssä (säännöt kurssin loppuun)
+
+Voimassa 2026-09-11 – 2026-09-15. Vaihdon (vaihe 5) jälkeen mdBook-säännöt
+raukesivat; `main` → `dev` -sääntö jää. Uudet säännöt vaiheen 5 alussa.
+
+`main` (juuri, mdBook) on vanha materiaali käynnissä olevalle kurssille ja
+muuttuu vain vähän. `dev` (`/dev/`, Zensical) on uusi materiaali.
+
+- [ ] Vanhan materiaalin korjaukset `main`iin, uusi materiaali suoraan
+      `dev`:iin. `dev`:n ei tarvitse toimia mdBookissa.
+- [ ] `main` → `dev` viikoittain, ei rebasea. Konfliktissa uusi teksti jää;
+      `main`in korjaus käsin, jos se koskee yhä.
+- [ ] Merkinnät kuten nyt (`> [!VINKKI]`, `//-`, `HIGHLIGHT`, `<task>`);
+      Zensicalin omaa syntaksia vain, kun vastinetta ei ole. Ei purkua ennen
+      vaihtoa.
+- [ ] `./zensical/run.sh test` mergen ja isompien muutosten jälkeen.
+- [ ] mdBookin tiedostoihin ei kosketa `dev`:ssä; `pages.yml` vain `main`in
+      kautta.
+- [ ] Yleiskäyttöiset `convert.py`-korjaukset käsin myös ohj2:een.
+- [x] `mdbook-dev-check` pois `pages.yml`:stä (`e6d0172`, 2026-09-11).
+
+## Vaihe 5 — Vaihto ja purku (ohj2:n KAYTTOONOTTO.md vaiheet 5–6)
+
+Säännöt vaihdon jälkeen (päätetty 2026-09-15): `main` on tuotanto (juuri),
+`dev` on työhaara ja esikatselu `/dev/`:ssä. Julkaisu PR:llä `dev` → `main`
+merge-committina (ei squash, ei rebase), heti perään `main` → `dev`, jotta
+`pages.yml` on sama molemmissa (`main`-push ajaa `main`in version).
+
+Portti tarkistettu 2026-09-15: `git merge-tree --write-tree origin/main
+origin/dev` → 0, `run.sh test` 265 passed, 3 skipped, viimeiset ajot vihreitä,
+juuri mdBook ja `/dev/` Zensical.
+
+- [x] Vaihto 2026-09-15. `main` → `dev` (`4fadc1a`), haara `vaihto` `dev`:n
+      päälle pelkällä `pages.yml`-muutoksella (`a7cbcc2`: `zensical`-job
+      matriisina `main` → juuri ja `dev` → `/dev/`, `mdbook`-job pois), PR #34
+      `vaihto` → `main` merge-committina (`d276dfd`), sitten `main` → `dev`
+      (fast-forward). Ajot 34982369347 (`main`) ja 34983082503 (`dev`)
+      vihreitä. Todennettu: juuri ja `/dev/` Zensical 0.0.62, 10 otossivua ja
+      27 css/js-tiedostoa 200, ajonappi tulostaa oikeaa palvelinta vasten
+      (Playwright), vanha `.html`-osoite 404, 404-sivu Zensicalin.
+      `/dev/`-esikatselu jää: `dev` on työhaara.
+- [x] Vanhat `.html`-osoitteet menevät rikki (TIMin linkit, kirjanmerkit).
+      Päätetty 2026-09-15 kuten ohj2:ssa: ei ohjaussivuja, TIMin linkit
+      korjataan käsin hakemistomuotoon (`osa1/1-ensimmainen-ohjelma/`).
+- [x] Poista mdBook: `book.toml`, `theme/`, `highlight/`, `mermaid/`,
+      `start.sh`, `.vscode/tasks.json`:n ja `launch.json`:n mdBook-kohdat,
+      devcontainerin nimi "Ohj1 mdBook" ja portti 3000 (kaikki haarat,
+      2026-09-18). VS Coden F5 käynnistää nyt `zensical/run.sh`:n samaan
+      porttiin 36743. Lisäksi `.gitignore`:sta `/book` ja GitHubin
+      Rust-pohjan rivit (Cargo, rustfmt), jotka olivat mukana mdBookin takia.
+- [x] `postCreateCommand` hakee submodulen ja ajaa
+      `zensical/tyokalut/setup.sh`:n (kaikki haarat, 2026-09-18). ohj2:n
+      `dev`:ssä sama tiedosto, erona vain nimi ja mdBookin portti 36742;
+      jypelidocsissa on Python-kuva.
+- [ ] Devcontainer-kuva → `mcr.microsoft.com/devcontainers/python:3.11-bookworm`.
+      Odottaa (päätetty 2026-09-18 pitää kuva toistaiseksi): `svgbob_cli`
+      asennetaan cargolla, ja Rust tulee nyt `ohj-mdbook-tooling`-kuvasta;
+      Python-kuvaan tarvittaisiin `ghcr.io/devcontainers/features/rust:1`.
+      Nykyisessä kuvassa `python3`:sta puuttuu `ensurepip`, `setup.sh`
+      asentaa sen aptilla.
+- [x] `README.md`: mdBook-maininnat pois, Zensical ja työkalujen submodule
+      tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
+- [x] KaTeX: ei kaavojen renderöintiä (päätetty 2026-09-18). Eksponentit
+      kirjoitetaan `<sup>`-tageilla (`2<sup>31</sup>`), kertomerkki `·`.
+- [x] Linkkitarkistus: `links.yml` kutsuu työkalujen `linkit`-actionia
+      (yhteiset asetukset ohj2:sta, 2026-09-18). Omaa `.lycheeignore`a ei tarvita.
+- [ ] Purku PURKUSUUNNITELMA.md:n järjestyksessä, sitten
+      `grep -r mdbook-tooling .github .devcontainer` tyhjä ja
+      `ohj-mdbook-tooling` arkistoon. Muunnokset ovat yhteisissä
+      työkaluissa ja ohj2 käyttää vielä mdBookia (myös kuvaa
+      `ohj-mdbook-tooling`), joten purku odottaa ohj2:n vaihtoa.

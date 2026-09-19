@@ -1,0 +1,26 @@
+# Ulkoisten linkkien tarkistus: zensical/tyokalut/linkit (asetukset ja
+# perustelut työkalujen READMEssa). Kirjan omat ohitukset: .lycheeignore.
+name: Check external links
+
+on:
+  push:
+    branches: ["main", "dev"]
+    paths: ["src/**", ".lycheeignore", ".github/workflows/links.yml", "zensical/tyokalut"]
+  pull_request:
+    paths: ["src/**", ".lycheeignore", ".github/workflows/links.yml", "zensical/tyokalut"]
+  # Linkit rikkoutuvat ilman committejakin. Ajetaan vain oletushaarassa.
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: ./zensical/tyokalut/linkit

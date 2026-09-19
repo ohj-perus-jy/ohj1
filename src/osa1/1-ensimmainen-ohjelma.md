@@ -1,4 +1,4 @@
-# <span class="part-icon">👨🏻‍💻</span> Ensimmäinen ohjelma
+# Ensimmäinen ohjelma
 
 ## Lähdekoodin kirjoittaminen
 
@@ -181,7 +181,7 @@ public class Ohjelma
 }
 ```
 
-## 📝 Tehtävät
+## Tehtävät
 
 <task>
   <task-title num="T1*">Tulostaminen <points>1 p.</points></task-title>
