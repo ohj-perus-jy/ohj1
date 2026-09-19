@@ -1,11 +1,11 @@
 # Tentti
 
-Lukuvuonna 2026-2027 tenttejä järjestetään seuraavasti. **Tentin kesto tulee
-olemaan 3 tuntia. Alla näkyy tentin kestona 4 tuntia, johon sisältyy mahdollinen yksilöllisen järjestelyn mukainen lisäaika.**
+Lukuvuonna 2026-2027 tenttejä järjestetään seuraavasti. **Tentin kesto on 3
+tuntia. Alla näkyy tentin kestona 4 tuntia, johon sisältyy mahdollinen
+yksilöllisen järjestelyn mukainen lisäaika.**
 
 | Tentti  | Päivämäärä | Aika        | Paikka         | Ilmoittaudu                                          | Muuta     |
 | ------- | ---------- | ----------- | -------------- | ---------------------------------------------------- | --------- |
-| Kesä 3  | 10.9.2026  | 16-20       | Ag Aud3 / Zoom | [Ilmoittaudu](https://tim.pm/ohj1-tentti-2026-09-10) | Myös Ohj2 |
 | Syksy 1 | 27.11.2026 | 14-18       | Ag Aud1 / Zoom |                                                      |           |
 | Syksy 2 | 17.12.2026 | 10-14       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
 | Syksy 3 | 14.1.2027  | 16-20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
@@ -26,7 +26,7 @@ alla).
 Mikäli sinulle on esimerkiksi myönnetty
 lisäaikaa tentteihin [yksilöllisenä
 järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus),
-ilmoita siitä lomakkeella tenttiin ilmoittautumisen yhteydessä.
+ilmoita siitä lomakkeella tenttiin ilmoittautumisen yhteydessä. 
 
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 

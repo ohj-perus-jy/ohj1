@@ -35,20 +35,29 @@ Tämän kurssin [harjoitustyö](../harjoitustyo.md) on Jypeli-peli. Jypeliin on
 tarjolla paljon valmiita ohjeita ja esimerkkejä, jotka auttavat sinua pääsemään
 alkuun pelien tekemisessä:
 
-* [Jypelin ohjeet (wiki)](https://tim.jyu.fi/view/kurssit/jypeli/wiki)
+* [Jypelin ohjeet](https://jypeli.it.jyu.fi)
 * [Jypelin koodidokumentaatio](http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/)
 
 ## Ensimmäinen Jypeli-ohjelma
 
 Tehdään pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen
-ympyrä.
+ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `demo1`-solutionin
+kolmas projekti [edellisessä luvussa](./3-ohjelmointiymparisto-kuntoon.md)
+tehtyjen `Lumiukko`- ja `HelloWorld`-projektien jälkeen.
 
-> [!HUOMAUTUS]
-> Jos haluat kokeilla tätä koodia itse, sinulla tulee olla kehitystyökalut
-> asennettuna; ohjeet löytyvät [Työkalut-sivulta](../tyokalut.md#jetbrains-rider).
-> Luo uusi Fysiikkapeli-projekti Riderissa ja korvaa `Begin`-metodin sisältö
-> alla olevalla koodilla. Suorita sitten peli painamalla vihreää
-> "Play"-painiketta ikkunan yläreunassa.
+1. Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin
+   [HelloWorld](./3-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
+   klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
+   painikkeella ja valitse Add <i class="bi bi-chevron-right"></i> New Project.
+2. Valitse vasemmalta `Fysiikkapeli`-projektimalli.
+3. Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös
+   kooditiedoston (`YmpyraPeli.cs`) ja siinä olevan luokan, joten luokan nimi
+   on sama kuin alla olevassa koodissa.
+4. Paina `Create`.
+5. Avaa `YmpyraPeli.cs` ja korvaa `Begin`-metodin sisältö alla olevan koodin
+   `Begin`-metodin sisällöllä.
+6. Aja projekti klikkaamalla Explorerissa sen nimeä `YmpyraPeli` hiiren
+   oikealla ja valitsemalla Run 'YmpyraPeli'.
 
 ```csharp,feature-jypeli
 using Jypeli;
@@ -64,8 +73,9 @@ public class YmpyraPeli : PhysicsGame
 }
 ```
 
-Voit käynnistää pelin yllä klikkaamalla oikean yläreunan vihreää
-"Play"-painiketta. Ikkunaan pitäisi ilmestyä keskelle pieni ympyrä.
+Voit kokeilla peliä myös suoraan tällä sivulla klikkaamalla yllä olevan
+koodilaatikon oikean yläreunan vihreää "Play"-painiketta. Ikkunaan pitäisi
+ilmestyä keskelle pieni ympyrä.
 
 Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 
@@ -197,21 +207,6 @@ Jypeli-projektissa Main-pääohjelma menee Ohjelma.cs-tiedostoon, joten jos
 copy-pastetat koodin, joka sisältää Main-pääohjelman, niin **poista
 Main-pääohjelma** `Portaat`-luokan (tms. projektisi nimeä vastaava luokka)
 sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
-
-## Sisällön tuominen Jypeli-projektiin (Content-kansio)
-
-Kuvat ja äänet lisätään peliprojektin Content-kansioon, joka näkyy editorin
-tiedostolistauksessa.
-
-Content-kansion voi luoda klikkaamalla hiiren oikealla projektia <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Directory*
-
-![Sisällön lisääminen](./images/new_content_directory.jpg)
-
- 1. Lisää tiedosto klikkaamalla kansiota hiiren oikealla napilla <i class="bi bi-chevron-right"></i> *Add* <i class="bi bi-chevron-right"></i> *Add Existing Item*
- 1. Valitse tiedosto(t) jonka haluat lisätä ja paina ok.
- 1. Valitse Copy.
- 1. Klikkaa tuomaasi tiedostoa Content-kansiossa hiiren oikealla ja valitse Properties
- 1. Vaihda *Copy to output directory* -kohtaan "Copy if newer"
 
 ## Yhteenveto
 

@@ -1,21 +1,20 @@
-# Testaaminen ComTestillä
+# Aliohjelmien yksikkötestaus ComTest-työkalulla
 
 ComTest on Jyväskylän yliopistossa kehitetty yksikkötestaustyökalu, jolla
-pieniä koodinpätkiä, kuten funktioita, voidaan testata erikseen muusta
-ohjelmakoodista. Testissä kutsutaan testattavaa funktiota erilaisilla
+pieniä koodinpätkiä, kuten aliohjelmia, voidaan testata erikseen muusta
+ohjelmakoodista. Testissä kutsutaan testattavaa aliohjelmaa erilaisilla
 syötteillä ja tarkistetaan, että se palauttaa odotetut arvot. Kun testit on
 kerran kirjoitettu, ne voi ajaa uudelleen aina koodia muutettuaan ja nähdä
-heti, toimiiko funktio edelleen.
+heti, toimiiko aliohjelma edelleen.
 
 ComTest on Riderin lisäosa. Jos et ole vielä asentanut sitä, tee se ensin
 [Työkalut-sivun ohjeilla](../tyokalut.md#comtest).
 
-## Testit dokumentaatiokommenteissa
+## Miltä ComTest-testi näyttää?
 
-ComTest-testit kirjoitetaan testattavan funktion
-[dokumentaatiokommenttiin](./3-kommentointi-ja-dokumentointi.md) `<example>`-
-ja `<pre name="test">`-tagien sisään. Alla on testit `Summa`-funktiolle, joka
-laskee kahden kokonaisluvun summan:
+ComTest-testit kirjoitetaan testattavan aliohjelman dokumentaatiokommenttiin
+`<example>`- ja `<pre name="test">`-tagien sisään. Alla on testit
+`Summa`-aliohjelmalle, joka laskee kahden kokonaisluvun summan:
 
 ```csharp,ignore
 /// <summary>
@@ -37,63 +36,23 @@ public static int Summa(int a, int b)
 }
 ```
 
-Jokainen `===`-rivi on yksi tarkistus: vasemmalla puolella on funktion kutsu ja
-oikealla puolella arvo, joka kutsun pitää palauttaa. Testit ovat samalla
-funktion käyttöesimerkkejä: lukija näkee niistä suoraan, mitä funktio milläkin
-syötteellä palauttaa.
+Jokainen `===`-rivi on yksi testitapaus: vasemmalla puolella on aliohjelman
+kutsu ja oikealla puolella arvo, joka kutsun pitää palauttaa. Esimerkiksi
+ensimmäinen rivi testaa, että kutsumalla `Summa(2, 3)` tulisi saada arvo `5`.
+Testit ovat samalla aliohjelman käyttöesimerkkejä: lukija näkee niistä suoraan,
+millaisella syötteillä aliohjelmaa voi kutsua ja mitä se palauttaa.
 
 Kommentit eivät itsessään ole ajettavaa koodia. ComTest lukee ne ja tekee
 niiden perusteella varsinaiset testit ohjelmasi rinnalle omaan testiprojektiinsa.
 
-Tageja ei tarvitse kirjoittaa käsin. Lisää dokumentaatiokommentin alle uusi
-tyhjä rivi, kirjoita sille `comt` ja varmista, että ehdotuslistassa on
-valittuna *comt &ndash; ComTest: DocTest*. Paina <kbd>Enter</kbd>, niin
-kommentin loppuun ilmestyy valmis pohja, jonka keskelle testit kirjoitetaan:
+## Ensimmäinen testi vaihe vaiheelta
 
-<animation scenes="images/comtest/scenes.js" scene="comt-pohja">
+Testit kannattaa kirjoittaa *ennen* kuin aliohjelma on valmis. Silloin joudut
+miettimään etukäteen, mitä aliohjelman pitää palauttaa, ja näet testeistä,
+milloin toteutus on valmis. Tehdään `Summa` tällä tavalla.
 
-![Animaatio, jossa näytetään testialueen kirjoittaminen dokumentaatiokommenttiin](images/comtest/comt-ehdotus.png)
-
-```csharp,ignore
-/// <example>
-/// <pre name="test">
-///
-/// </pre>
-/// </example>
-```
-
-</animation>
-
-## Testien ajaminen Riderissä
-
-Testien ajamiseen tarvitaan Riderin *Tests*-valikosta kaksi komentoa:
-
-- *ComTest: Generate Tests from Solution* tekee kommenteissa olevista
-  ComTest-testeistä varsinaisen testikoodin tai päivittää sen, jos testit ovat
-  muuttuneet. Ensimmäisellä kerralla ComTest luo ohjelmasi rinnalle
-  testiprojektin, joten tässä voi mennä hetki. Tuloksia tämä ei vielä näytä.
-- *Run All Tests from Solution* ajaa testikoodin ja näyttää tulokset Riderin
-  alareunassa *Unit Tests* -ikkunassa.
-
-Kun olet lisännyt tai muuttanut testejä, valitse siis ensin *Generate Tests* ja
-sitten *Run All Tests*. Jos ajat pelkän *Run All Tests* -komennon, Rider ajaa
-vanhat testit eikä huomaa kommentteihin tekemiäsi muutoksia. Kun olet muuttanut
-vain funktion toteutusta, pelkkä *Run All Tests* riittää.
-
-Vihreä merkki ja teksti *Passed* tarkoittavat, että kaikki tarkistukset menivät
-läpi. Punainen *Failed* tarkoittaa, että jokin kutsu palautti muuta kuin
-testissä odotettiin. Klikkaa epäonnistunutta testiä, niin näet, mitä arvoa
-odotettiin ja mitä funktio palautti, esimerkiksi `Expected: 5` ja
-`But was: 0`.
-
-## Testit ensin: tynkä, testit, toteutus
-
-Testit kannattaa kirjoittaa *ennen* kuin funktio on valmis. Silloin joudut
-miettimään etukäteen, mitä funktion pitää palauttaa, ja näet testeistä, milloin
-toteutus on valmis. Tehdään `Summa` tällä tavalla.
-
-1. Kirjoita funktiosta ensin tynkä, joka kääntyy mutta palauttaa vielä väärän
-    arvon. Lisää se luokan sisään, pääohjelman ulkopuolelle:
+1. Kirjoita aliohjelmasta ensin tynkä, joka kääntyy mutta palauttaa vielä
+    väärän arvon. Lisää se luokan sisään, pääohjelman ulkopuolelle:
 
     ```csharp,ignore
     public static int Summa(int a, int b)
@@ -102,13 +61,30 @@ toteutus on valmis. Tehdään `Summa` tällä tavalla.
     }
     ```
 
-2. Siirrä kursori funktion yläpuolelle tyhjälle riville ja kirjoita `///`.
-    Rider luo dokumentaatiokommentin rungon. Täydennä siihen, mitä funktio
-    tekee, mitä parametrit tarkoittavat ja mitä funktio palauttaa.
+2. Siirrä kursori aliohjelman yläpuolelle tyhjälle riville ja kirjoita `///`.
+    Rider luo dokumentaatiokommentin rungon. Täydennä siihen, mitä aliohjelma
+    tekee, mitä parametrit tarkoittavat ja mitä aliohjelma palauttaa.
 
-3. Lisää kommentin loppuun testipohja kirjoittamalla `comt` ja painamalla
-    <kbd>Enter</kbd>. Kirjoita testit `<pre name="test">`- ja `</pre>`-rivien
-    väliin:
+3. Lisää dokumentaatiokommentin alle uusi tyhjä rivi, kirjoita sille `comt` ja
+    varmista, että ehdotuslistassa on valittuna *comt &ndash; ComTest: DocTest*.
+    Paina <kbd>Enter</kbd>, niin kommentin loppuun ilmestyy valmis pohja
+    testeille:
+
+    <animation scenes="images/comtest/scenes.js" scene="comt-pohja">
+
+    ![Animaatio, jossa näytetään testialueen kirjoittaminen dokumentaatiokommenttiin](images/comtest/comt-ehdotus.png)
+
+    ```csharp,ignore
+    /// <example>
+    /// <pre name="test">
+    ///
+    /// </pre>
+    /// </example>
+    ```
+
+    </animation>
+
+4. Kirjoita testit `<pre name="test">`- ja `</pre>`-rivien väliin:
 
     ```csharp,ignore
     /// Summa(2, 3) === 5;
@@ -119,18 +95,24 @@ toteutus on valmis. Tehdään `Summa` tällä tavalla.
     Valitse testeihin erilaisia tapauksia: tavallisia arvoja, negatiivisia
     lukuja ja rajatapauksia, kuten nolla.
 
-4. Tee kommenteista testikoodi valitsemalla *Tests* › *ComTest: Generate Tests
-    from Solution* ja aja sitten testit valitsemalla *Tests* › *Run All Tests
-    from Solution*. Nyt tuloksen pitää olla punainen *Failed*, koska tynkä
-    palauttaa aina nollan.
+5. Tee kommenteista testikoodi valitsemalla *Tests* › *ComTest: Generate Tests
+    from Solution*. Ensimmäisellä kerralla ComTest luo ohjelmasi rinnalle
+    testiprojektin, joten tässä voi mennä hetki.
 
-5. Korjaa funktion toteutus:
+    Aja sitten testit valitsemalla *Tests* › *Run All Tests from Solution*.
+    Tulokset avautuvat Riderin alareunaan *Unit Tests* -ikkunaan.
+
+    Nyt tuloksen pitää olla punainen *Failed*, koska tynkä palauttaa aina
+    nollan. Klikkaa epäonnistunutta testiä, niin näet, mitä arvoa odotettiin ja
+    mitä aliohjelma palautti, esimerkiksi `Expected: 5` ja `But was: 0`.
+
+6. Korjaa aliohjelman toteutus:
 
     ```csharp,ignore
     return a + b;
     ```
 
-6. Aja testit uudelleen valitsemalla *Run All Tests from Solution*. Testejä ei
+7. Aja testit uudelleen valitsemalla *Run All Tests from Solution*. Testejä ei
     tarvitse generoida uudelleen, koska muutit vain toteutusta etkä testejä.
     Nyt *Unit Tests* -ikkunassa pitäisi näkyä vihreä merkki ja teksti *Passed*.
 
@@ -138,18 +120,65 @@ Punainen tulos ensimmäisellä ajokerralla on hyvä merkki: se kertoo, että tes
 todella tarkistavat jotain. Jos testit menisivät läpi jo tyngällä, ne eivät
 huomaisi virheellistäkään toteutusta.
 
+## Testien ajaminen
+
+Testien ajamiseen tarvitaan Riderin *Tests*-valikosta kaksi komentoa:
+
+- *ComTest: Generate Tests from Solution* tekee kommenteissa olevista
+  ComTest-testeistä varsinaisen testikoodin tai päivittää sen, jos testit ovat
+  muuttuneet. Tuloksia tämä ei vielä näytä.
+- *Run All Tests from Solution* ajaa testikoodin ja näyttää tulokset
+  *Unit Tests* -ikkunassa.
+
+Kun olet lisännyt tai muuttanut testejä, valitse siis ensin *Generate Tests* ja
+sitten *Run All Tests*. Jos ajat pelkän *Run All Tests* -komennon, Rider ajaa
+vanhat testit eikä huomaa kommentteihin tekemiäsi muutoksia. Kun olet muuttanut
+vain aliohjelman toteutusta, pelkkä *Run All Tests* riittää.
+
 ## Mitä ComTestillä testataan?
 
-ComTest sopii parhaiten funktioille, jotka saavat syötteensä parametreina ja
+ComTest sopii parhaiten aliohjelmille, jotka saavat syötteensä parametreina ja
 *palauttavat* tuloksen. Aliohjelmia, jotka lukevat näppäimistöltä
 (`Console.ReadLine`) tai tulostavat näytölle (`Console.WriteLine`), ei tällä
 opintojaksolla testata. Tämäkin on hyvä syy kirjoittaa laskenta omaksi
-funktiokseen ja pitää tulostaminen pääohjelmassa.
+aliohjelmakseen ja pitää tulostaminen pääohjelmassa.
 
-ComTest-lisäosan lähdekoodi on JYU:n GitLabissa:
-<https://gitlab.jyu.fi/tie/tools/comtest.intellij>.
+ComTestin lähdekoodi on JYU:n GitLabissa:
+<https://gitlab.jyu.fi/tie/ohj1/Comtest>. Riderin ja IntelliJ IDEAn lisäosa on
+omassa varastossaan: <https://gitlab.jyu.fi/tie/tools/comtest.intellij>.
 
-## Liukulukujen testaaminen
+## Esimerkkejä erilaisista testeistä
+
+Testirivit ovat ComTestin merkintöjä ja tavallista C#-koodia sekaisin: voit
+esimerkiksi luoda muuttujan yhdellä rivillä ja tarkistaa sen arvon seuraavalla.
+Siksi rivit päätetään puolipisteeseen kuten muukin C#-koodi.
+
+### Merkkijonot
+
+Merkkijonoa verrataan `===`-merkinnällä kuten lukujakin. Muista testata myös
+rajatapaukset, kuten tyhjä ja yhden merkin mittainen merkkijono:
+
+```csharp,ignore
+/// <summary>
+/// Palauttaa merkkijonon alkupuoliskon.
+/// </summary>
+/// <param name="jono">merkkijono, josta puolikas otetaan</param>
+/// <returns>merkkijonon alkupuolisko</returns>
+/// <example>
+/// <pre name="test">
+/// Puolikas("") === "";
+/// Puolikas("Abba") === "Ab";
+/// Puolikas("Hiiri") === "Hi";
+/// Puolikas("A") === "";
+/// </pre>
+/// </example>
+public static string Puolikas(string jono)
+{
+    return jono.Substring(0, jono.Length / 2);
+}
+```
+
+### Desimaaliluvut
 
 Desimaalilukuja (`double`) ei voi verrata täsmälleen, koska tietokone esittää ne
 likiarvoina: esimerkiksi `0.1 + 0.2` ei ole tarkalleen `0.3`. Käytä siksi
@@ -177,37 +206,6 @@ tarkkuus riittää, sen voi vaihtaa `#TOLERANCE`-rivillä ennen testejä:
 /// #TOLERANCE=0.01
 /// Keskiarvo(1.0, 2.01) ~~~ 1.5;
 /// </pre>
-```
-
-## Esimerkkejä erilaisista testeistä
-
-Testirivit ovat ComTestin merkintöjä ja tavallista C#-koodia sekaisin: voit
-esimerkiksi luoda muuttujan yhdellä rivillä ja tarkistaa sen arvon seuraavalla.
-Siksi rivit päätetään puolipisteeseen kuten muukin C#-koodi.
-
-### Merkkijonot
-
-Merkkijonoa verrataan `===`-merkinnällä kuten kokonaislukujakin. Muista testata myös
-rajatapaukset, kuten tyhjä ja yhden merkin mittainen merkkijono:
-
-```csharp,ignore
-/// <summary>
-/// Palauttaa merkkijonon alkupuoliskon.
-/// </summary>
-/// <param name="jono">merkkijono, josta puolikas otetaan</param>
-/// <returns>merkkijonon alkupuolisko</returns>
-/// <example>
-/// <pre name="test">
-/// Puolikas("") === "";
-/// Puolikas("Abba") === "Ab";
-/// Puolikas("Hiiri") === "Hi";
-/// Puolikas("A") === "";
-/// </pre>
-/// </example>
-public static string Puolikas(string jono)
-{
-    return jono.Substring(0, jono.Length / 2);
-}
 ```
 
 ### Taulukot ja listat

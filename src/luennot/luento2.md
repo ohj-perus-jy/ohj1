@@ -5,7 +5,7 @@
  * **Lue:** [2.4 Kommentointi ja dokumentointi](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#kommentointi). 
  * Tutustuttiin graafiseen kehitysympäristöön
  * [Jypeli-kirjasto ja sen asennus](../tyokalut.md)
- * [Jypelin ohjeet](https://tim.jyu.fi/view/kurssit/jypeli/wiki) 
+ * [Jypelin ohjeet](https://jypeli.it.jyu.fi) 
  * [Jypelin koodidokumentaatio](http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/)
 
 ## Syksy 2026

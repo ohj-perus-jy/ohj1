@@ -19,7 +19,7 @@ Jos ohjelma tuntuu olevan totaalisen jumissa, voidaan sen ajo pysäyttää ja ka
 Rider työkalupalkki:<br>
 ![Rider debug työkalupalkki](./images/rider_debug_toolbar.png)
  
-Kannattaa harjoitella käyttämään näppäinoikoteitä debuggaustilassa, sillä ne nopeuttavat debuggausta huomattavasti. Riderin näppäinoikoteitä saa tarkistettua ja muutettua `Configure <i class="bi bi-chevron-right"></i> Settings <i class="bi bi-chevron-right"></i> Keymap` tai `File <i class="bi bi-chevron-right"></i> Settings <i class="bi bi-chevron-right"></i> Keymap`.
+Kannattaa harjoitella käyttämään näppäinoikoteitä debuggaustilassa, sillä ne nopeuttavat debuggausta huomattavasti. Riderin näppäinoikoteitä saa tarkistettua ja muutettua `Configure` <i class="bi bi-chevron-right"></i> `Settings` <i class="bi bi-chevron-right"></i> `Keymap` tai `File` <i class="bi bi-chevron-right"></i> `Settings` <i class="bi bi-chevron-right"></i> `Keymap`.
 
 ## Keskeytyskohta (breakpoint) 
 
