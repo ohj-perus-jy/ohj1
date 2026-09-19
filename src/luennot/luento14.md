@@ -4,7 +4,7 @@
  * **Lue:** [12.4. Muokattavat merkkijonot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#stringbuilder)
  * **Lue:** [15.5. Moniulotteiset taulukot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#moniulotteiset-taulukot)
  * **Lue:** [23. Dynaamiset tietorakenteet](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#dynaamiset-tietorakenteet)
- * [Harjoitustyön tarkastettavat vaatimukset](https://tim.jyu.fi/view/kurssit/tie/itkp102/ohjeet/harjoitustyo#htosat)
+ * [Harjoitustyön tarkastettavat vaatimukset](../harjoitustyo.md#htosat)
 
 ## Syksy 2026
 

@@ -123,7 +123,7 @@ Voit poistaa videon näytteen tarkastamisen jälkeen.
     * Käynnistä ladattu ohjelma Debug-tilassa ja suorita projektissa olevat tehtävät. Tehtävien ohjeet löytyvät `Program.cs` -tiedostosta.
     * Voit yrittää debuggausnäytteen suorittamista niin monta kertaa kuin haluat.
 
-4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen. Kopioi videon URL-osoite [TIMin Oma eteneminen -sivun](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#debuggausn%C3%A4yte-opiskelija-t%C3%A4ytt%C3%A4%C3%A4) debuggausnäytteen URL-osoitteen palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL-osoite käyttäen Share-painiketta videon alapuolella. 
+4. Julkaise nauhoitteesi YouTubeen tai Moniviestimeen. Kopioi videon URL-osoite [TIMin Oma eteneminen -sivun](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#debuggausn%C3%A4yte-1) debuggausnäytteen URL-osoitteen palautuskenttään. Mikäli videosi on YouTubessa, kopioi videon URL-osoite käyttäen Share-painiketta videon alapuolella. 
 
 Debuggausnäytteet tarkistetaan noin kerran viikossa. Saat ilmoituksen, kun työsi on tarkistettu.
 

@@ -24,3 +24,15 @@ jobs:
         with:
           submodules: true
       - uses: ./zensical/tyokalut/linkit
+
+  # TIM-sivut muuttuvat gitin ulkopuolella: vain ajastettuna ja käsin.
+  tim:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: ./zensical/tyokalut/linkit
+        with:
+          tim: true

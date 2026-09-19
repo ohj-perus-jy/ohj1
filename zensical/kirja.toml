@@ -12,3 +12,9 @@ ei_sivuja = ["exercises/*/starter/*.md"]
 # mdBookin käyttöliittymää kuvaavat osiot, jotka eivät päde Zensicalissa.
 [poistettavat_osiot]
 "index.md" = "Navigointi tässä materiaalissa"
+
+# Linkkitarkistuksen TIM-ajo (tyokalut/linkit): kansioiden julkiset sivut.
+[linkit]
+tim_kansiot = ["kurssit/tie/itkp102"]
+# Vanhaa monistetta ei enää ylläpidetä.
+tim_pois = ["kurssit/tie/itkp102/materiaali/moniste"]
