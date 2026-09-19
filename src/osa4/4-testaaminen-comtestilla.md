@@ -249,6 +249,97 @@ Desimaalilukuja sisältävät taulukot ja listat kannattaa verrata suoraan eikä
 `=J=`-merkinnällä, koska merkkijonossa desimaalierotin riippuu koneen
 kieliasetuksista (suomessa pilkku, englannissa piste).
 
+### Kaksiulotteiset taulukot
+
+Kaksiulotteisia taulukoita testataan samaan tapaan kuin yksiulotteisia. Jos
+aliohjelma saa taulukon parametrina, luo taulukko ensin muuttujaan omalla
+testirivillään. Samaa taulukkoa voi sitten käyttää kaikissa sen jälkeisissä
+testeissä:
+
+```csharp,ignore
+/// <summary>
+/// Palauttaa rivin, jolta haettu luku löytyy ensimmäisen kerran.
+/// </summary>
+/// <param name="taulukko">taulukko, josta lukua haetaan</param>
+/// <param name="luku">haettava luku</param>
+/// <returns>rivin indeksi tai -1, jos lukua ei löydy</returns>
+/// <example>
+/// <pre name="test">
+/// int[,] luvut = {{2, 4, 1}, {9, 2, 0}, {5, 6, 1}, {0, 12, 3}};
+/// RiviJollaLuku(luvut, 1) === 0;
+/// RiviJollaLuku(luvut, 0) === 1;
+/// RiviJollaLuku(luvut, 12) === 3;
+/// RiviJollaLuku(luvut, 11) === -1;
+/// RiviJollaLuku(new int[0, 0], 1) === -1;
+/// </pre>
+/// </example>
+public static int RiviJollaLuku(int[,] taulukko, int luku)
+{
+    for (int rivi = 0; rivi < taulukko.GetLength(0); rivi++)
+    {
+        for (int sarake = 0; sarake < taulukko.GetLength(1); sarake++)
+        {
+            if (taulukko[rivi, sarake] == luku) return rivi;
+        }
+    }
+    return -1;
+}
+```
+
+Kahdessa viimeisessä testissä lukua ei löydy: ensin taulukosta, jossa sitä ei
+ole, ja sitten tyhjästä taulukosta `new int[0, 0]`.
+
+Jos aliohjelma palauttaa kaksiulotteisen taulukon, sitä voi verrata
+`===`-merkinnällä suoraan toiseen taulukkoon. Vertailu tarkistaa alkioiden
+lisäksi taulukon muodon eli rivien ja sarakkeiden määrän:
+
+```csharp,ignore
+/// <summary>
+/// Palauttaa taulukon, johon on numeroitu luvut 1, 2, 3, ... riveittäin.
+/// </summary>
+/// <param name="rivit">rivien määrä</param>
+/// <param name="sarakkeet">sarakkeiden määrä</param>
+/// <returns>numeroitu taulukko</returns>
+/// <example>
+/// <pre name="test">
+/// Numerotaulukko(0, 0) === new int[0, 0];
+/// Numerotaulukko(1, 1) === new int[,]{{1}};
+/// Numerotaulukko(2, 3) === new int[,]{{1, 2, 3}, {4, 5, 6}};
+/// Numerotaulukko(3, 2) === new int[,]{{1, 2}, {3, 4}, {5, 6}};
+/// </pre>
+/// </example>
+public static int[,] Numerotaulukko(int rivit, int sarakkeet)
+{
+    int[,] tulos = new int[rivit, sarakkeet];
+    int luku = 1;
+    for (int rivi = 0; rivi < rivit; rivi++)
+    {
+        for (int sarake = 0; sarake < sarakkeet; sarake++)
+        {
+            tulos[rivi, sarake] = luku;
+            luku++;
+        }
+    }
+    return tulos;
+}
+```
+
+Kahdessa viimeisessä testissä on samat luvut 1&ndash;6, mutta eri muodossa.
+Jos testi odottaisi väärän muotoista taulukkoa, se epäonnistuisi, ja
+virheilmoituksessa näkyisivät molempien taulukoiden koot, esimerkiksi
+`Expected is <System.Int32[3,2]>, actual is <System.Int32[2,3]>`.
+
+Ison taulukon kaikkia alkioita ei tarvitse kirjoittaa testiin. Yksittäistä
+alkiota voi testata indeksoimalla kutsun palauttamaa taulukkoa:
+
+```csharp,ignore
+/// Numerotaulukko(10, 10)[9, 9] === 100;
+```
+
+`=J=`-merkintä ei toimi kaksiulotteisille taulukoille. Esimerkiksi testi
+`Numerotaulukko(2, 3) =J= "1, 2, 3, 4, 5, 6";` epäonnistuu, koska taulukosta ei
+tule alkioiden luetteloa vaan merkkijono `System.Int32[,]`.
+
 ### Aliohjelma, joka muuttaa parametriaan
 
 Jos aliohjelma ei palauta mitään vaan muuttaa parametrina saamaansa taulukkoa,
