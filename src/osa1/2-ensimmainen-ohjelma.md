@@ -49,15 +49,20 @@ Olemme kirjoittaneet sinulle valmiiksi pienen C#-ohjelman, joka tulostaa tekstin
 Play-napin muotoista painiketta ajaaksesi ohjelman. Ohjelman pitäisi näyttää
 teksti `Heippa, maailma!`.
 
-```csharp,
+```csharp,editable
 public class Ohjelma
 {
     public static void Main()
     {
-      System.Console.WriteLine("Heippa, maailma!");
+        System.Console.WriteLine("Heippa, maailma!");
     }
 }
 ```
+
+Koodia voi myös muokata suoraan tällä sivulla. Klikkaa koodia, vaihda
+lainausmerkkien sisällä olevan tekstin tilalle vaikkapa oma nimesi ja aja
+ohjelma uudelleen. Jos ohjelma menee rikki, saat alkuperäisen koodin takaisin
+ajonapin vieressä olevalla *Peruuta muutokset* -painikkeella.
 
 Tämä on ehkäpä yksinkertaisin mahdollinen esimerkki, mutta silti se on täysin
 toimivan tietokoneohjelman lähdekoodi (joskaan ohjelma ei ole maailman
