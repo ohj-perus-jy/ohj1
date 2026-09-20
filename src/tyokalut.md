@@ -493,7 +493,7 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 3. Tarkista, että Rider toimii. Avaa Launchpad ja käynnistä sieltä *Rider*.
 
     Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
-    Järjestelmä saattaa myös kysyä, *Rider on internetsitä ladattu appi. Avataanko se?*.
+    Järjestelmä saattaa myös kysyä, *Rider on internetistä ladattu appi. Avataanko se?*.
     Siinä tapauksessa voi valita *Avaa*.
     
     Hyväksy mahdolliset Riderin käyttöehdot.
