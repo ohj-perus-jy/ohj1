@@ -52,12 +52,15 @@ Tämä sivu sisältää [Jyväskylän yliopiston ohjeet verkkotenttien suorittam
 
 ### Tentissä sallitut aineistot ja materiaalit
 
-- Tenttivastausten antamiseen saa käyttää vain tietokonetta. Mobiililaitteiden käyttö on kielletty.
-- Tentin aikana saa käyttää tekstiin ja videoon perustuvia verkkosivuja, mukaan lukien opintojakson materiaaleja, harjoitustehtäviä, ohje- ja dokumentaatiosivuja.
+- Tentin aikana saa käyttää tekstiin ja videoon perustuvia verkkosivuja, mukaan
+  lukien opintojakson materiaaleja, harjoitustehtäviä, ohje- ja
+  dokumentaatiosivuja, itse tehtyjä sähköisiä tai paperille kirjoitettuja muistiinpanoja.
 - Tentin aikana ainoa sallittu hakukone on [DuckDuckGo](https://duckduckgo.com), jonka [tekoälyominaisuudet](https://duckduckgo.com/settings#aifeatures) tulee kytkeä pois päältä.
 - Tentin aikana saa käyttää Rideria, Visual Studiota, tai vastaavaa kehitysympäristöä.
 - Tentin aikana saa käyttää Visual Studio Codea, Sublime Textia, tai vastaavaa tekstieditoria.
-- Tentin aikana saa käyttää itse tehtyjä sähköisiä tai paperille kirjoitettuja muistiinpanoja.
+- Tenttivastausten antamiseen saa käyttää vain tietokonetta. Mobiililaitteiden
+  käyttö on kielletty. Kynää ja paperia saa olla muistiinpanojen tekemistä
+  varten. 
 
 ### Tentissä kielletyt välineet ja menetelmät
 
