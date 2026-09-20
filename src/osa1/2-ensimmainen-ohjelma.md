@@ -12,17 +12,27 @@ lähtien lähes jokaisessa ohjelmointikielessä. Syy on käytännöllinen: ohjel
 niin pieni, että jos se ei toimi, vika on työkaluissa eikä koodissa. Kun se
 toimii, tiedät, että kääntäjä, ajoympäristö ja editori ovat kunnossa.
 
-Tekstipohjaiset eli *konsoliohjelmat* eivät myöskään ole pelkkä
-harjoitusväline. Moni oikea ohjelma toimii täsmälleen näin:
+Hello World on *tekstipohjainen* ohjelma eli *konsoliohjelma*. Siinä ei ole
+painikkeita, valikoita eikä kuvia, vaan kaikki tapahtuu tekstinä: ohjelma
+tulostaa rivejä *konsoliin*, ja käyttäjä voi vastata kirjoittamalla.
 
-* **Komentorivityökalut.** Versionhallintaohjelma `git`, jota käytät tällä
-  kurssilla harjoitustyössä, on konsoliohjelma: se lukee komennon ja tulostaa
-  vastauksen.
-* **Palvelinohjelmat.** Verkkosivun taustalla pyörivä ohjelma ei näytä
-  ikkunaa kenellekään. Se lukee pyyntöjä ja kirjoittaa lokia tekstinä.
-* **Skriptit.** Sadan tiedoston uudelleennimeäminen tai mittausdatan siivous
-  tehdään usein pienellä konsoliohjelmalla, jonka koko käyttöliittymä on
-  muutama tulostettu rivi.
+Tavallinen tietokoneen käyttäjä avaa konsolin harvoin, jos koskaan.
+Konsoliohjelman tapa olla vuorovaikutuksessa käyttäjän kanssa on silti tuttu:
+ohjelma kysyy, käyttäjä vastaa tekstillä ja ohjelma tulostaa vastauksen. Sama
+malli löytyy arjesta:
+
+* **Tekoälychatit.** ChatGPT, Claude ja muut vastaavat toimivat kuin
+  konsoliohjelma: kirjoitat rivin tekstiä, saat tekstiä takaisin, ja sama
+  toistuu niin kauan kuin haluat jatkaa.
+* **Puhelinvalikot.** "Paina 1, jos asiasi koskee laskutusta." Ohjelma
+  esittää vaihtoehdot, käyttäjä valitsee yhden ja ohjelma jatkaa valinnan
+  mukaan. Rakenne on sama kuin konsoliohjelman valikossa, käyttöliittymänä on
+  vain ääni näytön sijaan.
+
+Moni ohjelma toimii myös kokonaan ilman ikkunaa. Verkkosivun taustalla pyörivä
+palvelinohjelma lukee pyyntöjä ja kirjoittaa lokia tekstinä, ja sadan
+tiedoston uudelleennimeäminen tai mittausdatan siivous tehdään usein pienellä
+skriptillä, jonka koko käyttöliittymä on muutama tulostettu rivi.
 
 Konsoliohjelmissa on lisäksi se etu, että ohjelman toiminnan näkee suoraan
 tulosteesta. Siksi suuri osa tämän kurssin esimerkeistä on konsoliohjelmia,
@@ -79,18 +89,14 @@ väliin.
 Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/5-aliohjelmat.md), mutta lyhyesti: 
 aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste -- tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
 
-```csharp,noplayground
-    {
-```
-
-Vastaavasti kuin luokan kohdalla, tämä aaltosulku kertoo, mistä aliohjelman
+Vastaavasti kuin luokan kohdalla, seuraava avaava aaltosulku `{` kertoo, mistä aliohjelman
 sisältö alkaa. Kaikki aliohjelman sisällä tehtävä kirjoitetaan tämän ja
 vastaavan sulkevan aaltosulun `}` väliin.
 
 Aaltosulkujen rajaamaa aluetta kutsutaan *lohkoksi* (engl. *block*). Lohkot
 ovat sisäkkäin: aliohjelman lohko on luokan lohkon sisällä. Huomaa, että
 sisemmän lohkon rivit on *sisennetty* eli siirretty oikealle neljän
-välilyönnin verran jokaista tasoa kohti. Kääntäjä ei välitä sisennyksistä,
+välilyönnin verran jokaista tasoa kohti. C#-kielen kääntäjä ei välitä sisennyksistä,
 mutta ihminen välittää: sisennyksestä näkee yhdellä silmäyksellä, mikä kuuluu
 minkäkin sisään. Rider sisentää rivit puolestasi, kun painat Enteriä
 aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan luvussa
@@ -113,45 +119,18 @@ Meillä on enää jäljellä kaksi sulkevaa aaltosulkua. Kuten jo mainitsimme, n
 
 ## Mitä lähdekoodille oikeastaan tapahtuu?
 
-Kun olet kirjoittanut lähdekoodin, se täytyy muuntaa sellaiseen muotoon, että
-tietokone voi suorittaa sen. C#-kielen kohdalla tätä muodonmuutosta kutsutaan
-*kääntämiseksi* (engl. *compilation*), ja useiden vaiheiden seurauksena syntyy
-niin sanottu konekielinen ohjelma, joka voidaan käynnistää tietokoneella.
-Kääntäminen tapahtuu *kääntäjällä* (engl. *compiler*), joka on erityinen
-ohjelma, joka lukee lähdekoodin ja tuottaa siitä suoritettavan ohjelman.
-Esimerkiksi Rider-sovelluskehitysympäristössä on sisäänrakennettuna toiminnot
-kääntämistä varten. 
+Tietokone ei voi suorittaa lähdekoodia sellaisenaan, vaan se täytyy ensin
+*kääntää* (engl. *compile*) konekieliseksi ohjelmaksi. Käännöksen tekee
+*kääntäjä* (engl. *compiler*), eli ohjelma, joka lukee lähdekoodin ja tuottaa
+siitä suoritettavan ohjelman. Käännetty ohjelma voidaan sitten *ajaa* (engl.
+*run*), eli käynnistää. Koodin muuttamisen jälkeen ohjelma on käännettävä
+uudelleen, jotta muutokset tulevat voimaan.
 
-Käännetty ohjelma voidaan sitten *ajaa* (engl. *run*), eli käynnistää
-tietokoneella. C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö,
-joka sisältää tarvittavat työkalut -- asennusohjeen löydät
-[Työkalut](../tyokalut.md)-kohdasta. .NET-ympäristön asentamisen
-jälkeen kääntäminen-ajaminen&ndash;prosessi voidaan tehdä komentoriviltä
-seuraavasti. Alla on kaksi komentoa, jotka syötetään komentoriville siinä
-kansiossa, missä projekti on tehty. 
-
-```bash
-dotnet build   # kääntää projektin
-dotnet run     # kääntää tarvittaessa ja ajaa ohjelman
-```
-
-Ohjelma on käännettävä aina koodin muuttamisen jälkeen, jotta muutokset tulevat voimaan.
-
-Sovelluskehittimessä (esim. Rider) kääntäminen tapahtuu klikkaamalla *Run* tai *Debug*. Noiden painikkeiden painamiseurauksena tapahtuu sekä kääntäminen että ajaminen. 
-
-## Miten lähdekoodia kirjoitetaan?
-
-Lähdekoodia voi periaatteessa kirjoittaa millä tahansa *tekstieditorilla*, eli
-ohjelmalla, jolla voi kirjoittaa ja muokata pelkkää tekstiä ilman erityisiä
-muotoiluja tai tyylejä. Olet ehkä jo käyttänytkin tekstieditoria, kuten Muistio
-(Notepad) Windowsissa tai TextEdit macOS:ssä. Tässä "pelkkä teksti" tarkoittaa,
-että teksti todella tallennetaan tietokoneen muistiin sellaisenaan; esimerkiksi
-Word-asiakirjaan tallentuu tosiasiassa aina paljon muutakin tietoa, kuten
-fontti- ja asettelutietoja.
-
-Lähdekoodi tallennetaan tiedostoon, joka C#-kielen tapauksessa päättyy yleensä
-`.cs` -tiedostopäätteeseen, kuten `Ohjelma.cs`. Tällöin käyttöjärjestelmä
-tunnistaa tiedoston C#-lähdekooditiedostoksi. 
+C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö, jonka
+asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta. Riderissa *Run* ja
+*Debug* sekä kääntävät että ajavat ohjelman. Saman voi tehdä myös ilman
+Rideria, ks. liite [Kääntäminen
+komentorivillä](../liitteet/kaantaminen-komentorivilla.md).
 
 <details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
 
@@ -170,6 +149,26 @@ tekijöistä, kuten ekosysteemistä (esimerkiksi saatavilla olevat kirjastot) ja
 kehittäjäyhteisöstä. 
 
 </details>
+
+## Miten lähdekoodia kirjoitetaan?
+
+Lähdekoodia voi periaatteessa kirjoittaa millä tahansa *tekstieditorilla*, eli
+ohjelmalla, jolla voi kirjoittaa ja muokata pelkkää tekstiä ilman erityisiä
+muotoiluja tai tyylejä. Olet ehkä jo käyttänytkin tekstieditoria, kuten Muistio
+(Notepad) Windowsissa tai TextEdit macOS:ssä. Tässä "pelkkä teksti" tarkoittaa,
+että teksti todella tallennetaan tietokoneen muistiin sellaisenaan; esimerkiksi
+Word-asiakirjaan tallentuu tosiasiassa aina paljon muutakin tietoa, kuten
+fontti- ja asettelutietoja.
+
+Tällä kurssilla kirjoitamme lähdekoodin [*Rider*-sovelluskehittimellä](../tyokalut.md#jetbrains-rider) (engl.
+*integrated development environment*, *IDE*). Sovelluskehitin on tekstieditori,
+johon on lisätty ohjelmointia helpottavia toimintoja: se esimerkiksi värittää
+koodin, ehdottaa täydennyksiä, näyttää virheet jo kirjoittaessa sekä kääntää ja
+ajaa ohjelman napin painalluksella. 
+
+Lähdekoodi tallennetaan tiedostoon, joka C#-kielen tapauksessa päättyy yleensä
+`.cs` -tiedostopäätteeseen, kuten `Ohjelma.cs`. Tällöin käyttöjärjestelmä
+tunnistaa tiedoston C#-lähdekooditiedostoksi. 
 
 ## Käännösvirheet
 

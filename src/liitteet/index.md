@@ -4,6 +4,7 @@ Liitteet ovat valinnaista lisätietoa. Niitä ei vaadita kurssin
 suorittamiseen, mutta ne syventävät ymmärrystä ja niihin viitataan lukujen
 "Valinnaista lisätietoa" -kohdissa.
 
+* [Kääntäminen komentorivillä](./kaantaminen-komentorivilla.md) (liittyy osaan 1)
 * [Tiedon esittäminen tietokoneessa](./tiedon-esittaminen-tietokoneella.md):
   binääriluvut, liukuluvut ja merkistöt (liittyy osaan 2)
 * [Moniulotteiset taulukot](./moniulotteiset-taulukot.md) (liittyy osaan 5)

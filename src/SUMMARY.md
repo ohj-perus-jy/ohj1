@@ -66,6 +66,7 @@
 ---
 
 - [Liitteet](./liitteet/index.md)
+  - [Kääntäminen komentorivillä](./liitteet/kaantaminen-komentorivilla.md)
   - [Tiedon esittäminen tietokoneessa](./liitteet/tiedon-esittaminen-tietokoneella.md)
   - [Valinnaiset parametrit ja oletusarvot](./liitteet/oletusarvot.md)
   - [Moniulotteiset taulukot](./liitteet/moniulotteiset-taulukot.md)
