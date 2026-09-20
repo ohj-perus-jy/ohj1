@@ -482,8 +482,8 @@ vain, jos aliohjelmaa kutsutaan. Tarkista, että `Main`-aliohjelmassa on kutsu.
 
 ## Testaa tietosi
 
-Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
-mutta hämärät kohdat paljastuvat.
+Valitse vastaus, niin näet heti, menikö se oikein ja miksi. Pisteitä ei jaeta,
+mutta huomaat, mitä asioita kannattaa vielä kerrata.
 
 <visa>
 

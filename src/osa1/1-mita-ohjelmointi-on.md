@@ -25,7 +25,7 @@ Ohjelmia on kaikkialla, myös siellä, missä niitä ei huomaa.
 * **Tutkimus.** Biologi on mitannut 40 000 solun koon. Kuvaajan tekeminen
   jokaisesta koeasetelmasta erikseen taulukkolaskennalla veisi viikon; ohjelma
   tekee sen minuutissa ja samalla tavalla joka kerta.
-* **Arjen automaatio.** Kansiossa on 500 lomakuvaa nimillä `IMG_4711.jpg`.
+* **Arjen automaatio.** Kansiossa on 500 lomakuvaa, joiden nimet ovat muotoa `IMG_4711.jpg`.
   Kymmenen rivin ohjelma nimeää ne uudelleen päivämäärän mukaan sillä aikaa,
   kun haet kahvia.
 
@@ -55,11 +55,12 @@ noudattaa henkilö, joka ei ole koskaan nähnyt kahvinkeitintä.
 Huomaa muutama asia. Vaiheet suoritetaan *järjestyksessä*: jos virtakytkintä
 painaa ennen veden lisäämistä, tulos on huono. Jokainen vaihe on niin pieni,
 ettei sitä tarvitse selittää. Ja ohjeessa on silti aukkoja: mitä jos kahvi on
-loppu? Mitä jos säiliössä on jo vettä? Ihminen paikkaa aukot itse. Tietokone ei
+loppu? Mitä jos säiliössä on jo vettä? Ihminen paikkaa tietenkin aukot itse,
+mutta tietokone ei
 paikkaa mitään.
 
-Ohjelmoinnissa algoritmit rakentuvat kolmesta perusrakenteesta, ja opit ne
-kaikki tämän kurssin aikana:
+Ohjelmoinnissa algoritmien suorittaminen rakentuu kolmesta perusrakenteesta,
+ja opit ne kaikki tämän kurssin aikana:
 
 * **Peräkkäisyys**: vaiheet suoritetaan yksi kerrallaan, järjestyksessä,
   kuten yllä.
@@ -67,7 +68,9 @@ kaikki tämän kurssin aikana:
   Tähän tutustutaan luvussa [Ehtolauseet](../osa2/3-ehtolauseet.md).
 * **Toisto**: *toista* "lisää mittalusikallinen kahvia", *kunnes* lusikallisia
   on neljä. Tähän tutustutaan luvussa
-  [Toistolauseet](../osa4/1-toistolauseet.md).
+  [Toistolauseet](../osa4/1-toistolauseet.md). Toiston voi toteuttaa
+  viittaamalla itseensä, jolloin puhutaan
+  [rekursiosta](../osa7/1-rekursio.md).
 
 Kun osaat nämä kolme ja opit pilkkomaan ison tehtävän pieniin osiin, osaat
 ohjelmoida. Loppu on yksityiskohtia. Tosin yksityiskohtia on aika paljon.
@@ -93,11 +96,49 @@ kirjoitettavaksi ja luettavaksi. Sama asia C#-kielellä:
 int summa = 1 + 2;
 ```
 
-Tuo ykkösten ja nollien jono ei ole siis satunnaista bittipuuroa, vaan (erään
-prosessoriarkkitehtuurilla varustetun) tietokoneen näkökulmasta juuri se
+Tuo ykkösten ja nollien jono ei ole siis satunnaista bittipuuroa, vaan erään tietokoneen näkökulmasta juuri se
 komentojen sarja, joka laskee yhteen luvut 1 ja 2 ja tallentaa tuloksen
 muistiin. Meidän kannaltamme ohjelmointikielellä ilmaistu komento on tietenkin
-paljon helpompi ymmärtää ja tarvittaessa myös muuttaa. 
+paljon helpompi ymmärtää ja tarvittaessa myös muuttaa.
+
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mitä konekielinen ohjelma tarkoittaa?</summary>
+
+Esimerkki on tavallisen PC-prosessorin (x86) konekieltä. Jokainen kahdeksan
+bitin ryhmä on yksi *tavu*, ja ohjelmassa on kolme käskyä, yksi kullakin
+rivillä. Käskyt käsittelevät
+[*rekistereitä*](https://fi.wikipedia.org/wiki/Rekisteri_%28tietokonetekniikka%29
+"Wikipedia: Rekisteri (tietokonetekniikka)"), jotka ovat prosessorin sisäisiä,
+hyvin nopeita muistipaikkoja. Tässä käytetään rekistereitä nimeltä `eax` ja
+`ebx`.
+
+* **Rivi 1.** Ensimmäinen tavu `10111000` on käskyn koodi: "sijoita
+  rekisteriin `eax` luku, joka tulee seuraavaksi". Seuraavat neljä tavua ovat
+  tuo luku eli 1. Luvulle on varattu 32 bittiä, ja vähiten merkitsevä tavu
+  kirjoitetaan ensin. Siksi ykkönen on heti käskyn koodin jälkeen ja loput
+  tavut ovat nollia.
+* **Rivi 2.** Sama uudelleen, mutta käskyn koodi `10111011` tarkoittaa
+  rekisteriä `ebx`, ja sijoitettava luku on 2 (binäärilukuna `00000010`).
+* **Rivi 3.** Tavu `00000001` on yhteenlaskukäsky, ja `11011000` kertoo, mitkä
+  rekisterit lasketaan yhteen: "lisää rekisterin `ebx` arvo rekisteriin
+  `eax`". Tämän jälkeen rekisterissä `eax` on luku 3.
+
+Käytännössä konekieli kirjoitetaan *assembly-kielellä* (suomeksi myös *symbolinen konekieli*), jossa jokaisella
+käskyllä on lyhyt nimi. Sama ohjelma assemblyllä:
+
+```text
+mov eax, 1
+mov ebx, 2
+add eax, ebx
+```
+
+Assembly vastaa konekieltä käsky käskyltä, joten se on edelleen sidottu yhteen
+prosessorityyppiin. Esimerkiksi puhelimen ARM-prosessorissa samat kolme
+toimenpidettä kirjoitettaisiin aivan eri bittijonoilla. Tämä on yksi syy
+käyttää niin kutsuttua korkean tason ohjelmointikieltä: rivi `int summa = 1 + 2;` on sama kaikilla
+koneilla, ja kääntäjä huolehtii siitä, millaista konekieltä kullekin
+prosessorille tuotetaan.
+
+</details>
 
 Ohjelmointikielellä kirjoitettua tekstiä kutsutaan *lähdekoodiksi*. Jotta
 prosessori voisi suorittaa sen, lähdekoodi täytyy *kääntää* konekielelle.
@@ -172,10 +213,6 @@ Kaksi neuvoa, jotka säästävät hermoja:
 * **Lue virheilmoitus.** Se ei ole moite vaan vihje. Siinä lukee rivinumero
   ja usein suoraan se, mitä puuttuu.
 
-Kurssin käytännöt (tehtävät, harjoitustyö, tentti) on kuvattu sivulla
-[Suorittaminen](../suorittaminen.md), ja koodin kirjoitusasun ohjeet
-[Tyylioppaassa](../tyyliopas.md). Näihin kannattaa tutustua jo nyt.
-
 ## Yhteenveto
 
 * Algoritmi on täsmällinen vaiheittainen ohje. Ohjelma on tietokoneelle
@@ -188,8 +225,8 @@ Kurssin käytännöt (tehtävät, harjoitustyö, tentti) on kuvattu sivulla
 
 ## Testaa tietosi
 
-Valitse vastaus, niin näet heti, osuiko se, ja miksi. Pisteitä ei jaeta,
-mutta hämärät kohdat paljastuvat.
+Valitse vastaus, niin näet heti, menikö se oikein ja miksi. Pisteitä ei jaeta,
+mutta huomaat, mitä asioita kannattaa vielä kerrata.
 
 <visa>
 
