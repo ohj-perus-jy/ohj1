@@ -285,8 +285,10 @@ lusikallisia on neljä." Mikä ohjelmoinnin perusrakenne tämä on?
 
 <perustelu>
 **c.** Sana *kunnes* paljastaa toiston: samaa vaihetta toistetaan, kunnes ehto
-täyttyy. Peräkkäisyys olisi vaiheita järjestyksessä ja valinta
-*jos–niin–muuten*-rakenne. Kääntäminen ei ole algoritmin rakenne lainkaan.
+täyttyy. Toistossakin on siis ehto, mutta se ratkaisee vain, palataanko vaiheen
+alkuun. Valinnassa ehto valitsee kahden eri haaran väliltä, eikä mitään
+toisteta. Peräkkäisyys olisi vaiheita järjestyksessä. Kääntäminen ei ole
+algoritmin rakenne lainkaan.
 </perustelu>
 </kysymys>
 
