@@ -5,9 +5,6 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 
 - **[.NET](#net)** &ndash; *ohjelmistoviitekehys* (engl. framework), tarvitaan
   C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. 
-- **[Git](#git)** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
-  ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
-  Docsiksi.
 - **[JetBrains Rider](#jetbrains-rider)** &ndash; *integroitu kehitysympäristö*, jolla voi
   kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
   C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.
@@ -16,6 +13,10 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 - **[ComTest](#comtest)** &ndash; *yksikkötestigeneraattori*, joka on aputyökalu, jonka
   avulla kirjoitetulle koodille voidaan kirjoittaa testejä helposti luettavalla
   merkintätavalla.
+- **[Git](#git)** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
+  ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
+  Docsiksi. Gitiä tarvitset mahdollisesti vasta harjoitustyön yhteydessä, joten
+  sitä ei tarvitse asentaa vielä opintojakson alussa.
 
 Yllä olevat ohjelmat löytyvät valmiiksi asennettuna [Agoran mikroluokissa](https://navi.jyu.fi/space/m118987) (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.
 
@@ -407,96 +408,6 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 *** 
 
-## Git 
-
-### [Windows](#tab/win)
- 
-1. Avaa PowerShell-komentorivi ellei se ole jo auki.
-2. Asenna Git for Windows suorittamalla alla oleva komento:
-
-    ```bash
-    winget install -e --id=Git.Git --custom '/COMPONENTS="ext,ext\shellhere,ext\guihere"'
-    ```
-    
-    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
-    Jos näet komentorivillä kysymyksen, kuten:
-    
-    ```
-    Do you agree to all the source agreements terms?
-    [Y] Yes [N] No:
-    ```
-    
-    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
-    
-    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
-    
-3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
-4. Testaa, että `git`-komento on asennettu suorittamalla komento:
-
-    ```bash
-    git --version
-    ```
-    
-    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
-    
-    ```
-    git version X.XX.XX
-    ```
-    
-    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* <i class="bi bi-chevron-right"></i> Kirjoita *Git Bash* <i class="bi bi-chevron-right"></i> Valitse *Git Bash*.
-
-    Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
-
-    <animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
-
-    ![Git bash avattu](images/gitbash-avattu2.png)
-
-    </animation>
-
-*** 
-
-### [macOS](#tab/macos)
- 
-1. Avaa Pääte ellei se ole jo
-2. Git-työkalun pitäisi olla jo valmiiksi asennettu jos teit Valmistelu-vaiheessa olevat asiat. Tarkista, että Git toimii suorittamalla seuraava komento:
-
-    ```bash
-    git --version
-    ```
-    
-    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
-    
-    ```
-    git version X.XX.XX
-    ```
-    
-    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-
-*** 
-
-### [Linux](#tab/linux)
- 
-1. Avaa jakelusi pääteohjelma ellei se ole jo
-2. Asenna Git-pakkaus: `git`. Pakkauksen nimi on yleensä sama
-   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
-3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
-4. Testaa, että `git`-komento on asennettu suorittamalla komento:
-
-    ```bash
-    git --version
-    ```
-    
-    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
-    
-    ```
-    git version X.XX.XX
-    ```
-    
-    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
-
-*** 
-
 ## JetBrains Rider {#jetbrains-rider}
 
 ### [Windows](#tab/win)
@@ -757,6 +668,101 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
      ![ComTest Runner -lisäosan asentaminen Riderissa](./images/rider-install-comtest.gif)
  5. Paina *Save*
  6. Sulje JetBrains Rider
+
+## Git 
+
+> [!HUOMAUTUS]
+> Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
+> mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
+> myöhemmin.
+
+### [Windows](#tab/win)
+ 
+1. Avaa PowerShell-komentorivi ellei se ole jo auki.
+2. Asenna Git for Windows suorittamalla alla oleva komento:
+
+    ```bash
+    winget install -e --id=Git.Git --custom '/COMPONENTS="ext,ext\shellhere,ext\guihere"'
+    ```
+    
+    Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+    Jos näet komentorivillä kysymyksen, kuten:
+    
+    ```
+    Do you agree to all the source agreements terms?
+    [Y] Yes [N] No:
+    ```
+    
+    Paina komentorivillä `y`-näppäintä ja sen jälkeen `Enter`-näppäintä.
+    
+    Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti `Successfully installed`.
+    
+3. Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi
+4. Testaa, että `git`-komento on asennettu suorittamalla komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+5. Testaa, vielä, että Git Bash on asennettu. Mene *Haku-ikoni* › Kirjoita *Git Bash* › Valitse *Git Bash*.
+
+    Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   
+
+    <animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+
+    ![Git bash avattu](images/gitbash-avattu2.png)
+
+    </animation>
+
+*** 
+
+### [macOS](#tab/macos)
+ 
+1. Avaa Pääte ellei se ole jo
+2. Git-työkalun pitäisi olla jo valmiiksi asennettu jos teit Valmistelu-vaiheessa olevat asiat. Tarkista, että Git toimii suorittamalla seuraava komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+
+*** 
+
+### [Linux](#tab/linux)
+ 
+1. Avaa jakelusi pääteohjelma ellei se ole jo
+2. Asenna Git-pakkaus: `git`. Pakkauksen nimi on yleensä sama
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)
+3. Asennuksen jälkeen sulje ja avaa pääte uudelleen
+4. Testaa, että `git`-komento on asennettu suorittamalla komento:
+
+    ```bash
+    git --version
+    ```
+    
+    Jos asennus onnistui, näet seuraavanlaisen tulosteen:
+    
+    ```
+    git version X.XX.XX
+    ```
+    
+    Tekstin `X.XX.XX` tilalla näkyy git-työkalun tarkka versio.
+
+*** 
 
 ## Mitä seuraavaksi? 
  
