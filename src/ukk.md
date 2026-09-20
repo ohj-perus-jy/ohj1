@@ -39,7 +39,7 @@ ComTest toimii vain Riderissa, mutta muuten ei ole merkitystä mitä IDEä käyt
 Tentti on yleensä "perinteinen" (= valvottu, ajastettu) ohjelmointiin ja
 ymmärtämiseen painottuva tentti. Vanhoja tenttejä ja arvosteluperusteita on
 [tarjolla](https://users.jyu.fi/~anlakane/ohjelmointi1/tentit/) malliksi.
-Lukuvuonna 2026-2027 opiskelija voi valita itse, haluaako osallistua tenttiin
+Lukuvuonna 2026–2027 opiskelija voi valita itse, haluaako osallistua tenttiin
 paikan päällä vai etänä. Lisätietoja löytyy [tentin ohjeista](./tentti.md).
 
 ## Voinko korvata opintojakson aiemmalla kokemuksella (työkokemus, oma projekti jne.)?
