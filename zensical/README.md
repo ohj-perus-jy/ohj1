@@ -7,19 +7,21 @@ Työkalut (`convert.py`, `puhe.py`, tyylit, skriptit, teeman mallit, testit)
 ovat git-submodule [`tyokalut/`](https://github.com/ohj-perus-jy/kirjatyokalut),
 yhteinen ohj2:n ja Jypeli-ohjeiden kanssa:
 
-- käyttö, asetukset, työkalujen muuttaminen ja testit:
+- ominaisuudet, käyttö, asetukset, työkalujen muuttaminen ja testit:
   [tyokalut/README.md](tyokalut/README.md)
 - ratkaisujen perustelut: [tyokalut/PERUSTELUT.md](tyokalut/PERUSTELUT.md)
-- mitä ominaisuuksia on ja mitä ohj1 toi ohj2:n koeputkeen (tämän tiedoston
-  aiempi sisältö): [tyokalut/TAUSTA.md](tyokalut/TAUSTA.md)
-- työkalujen yhtenäistämisen tilanne: [tyokalut/YHTENAISTYS.md](tyokalut/YHTENAISTYS.md)
+- mistä ominaisuudet tulivat ja mitä ohj1 toi ohj2:n koeputkeen (tämän
+  tiedoston aiempi sisältö): [tyokalut/TAUSTA.md](tyokalut/TAUSTA.md)
+- miten työkalut yhtenäistettiin ja avoimet kysymykset:
+  [tyokalut/YHTENAISTYS.md](tyokalut/YHTENAISTYS.md)
 
 Mitä ohj1:ssä on vielä tekemättä: [../TODO.md](../TODO.md).
 [KAYTTOONOTTO.md](KAYTTOONOTTO.md) ja [PURKUSUUNNITELMA.md](PURKUSUUNNITELMA.md)
 ovat ohj2:n alkuperäiset: työjärjestys tuotantoon ja se, mitä `convert.py`:stä
-voi poistaa, kun mdBookia ei enää tarvita. ohj1:stä mdBook on poistettu
-(2026-09-18), mutta työkalut ovat yhteiset ohj2:n kanssa, joten
-mdBook-merkkauksen muunnokset jäävät, kunnes ohj2kin on vaihtanut.
+voi poistaa, kun mdBookia ei enää tarvita. Käyttöönotto on tehty: mdBook on
+poistettu kaikista kirjoista (ohj1 2026-09-18, ohj2 2026-09-20). Purku on siis
+mahdollinen, mutta sitä ei ole aloitettu; se tehdään työkalurepoon, ja
+muunnokset ovat tarpeen niin kauan kuin `src/`:ssä on mdBookin merkkausta.
 Dokumenttien viittaukset README:n tarkistuslistaan ja PERUSTELUT.md:hen
 tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
 
@@ -47,9 +49,9 @@ huomauttaa, jos `tyokalut/` on eri versiossa kuin haara odottaa.
   Tentti-sivun ja Git-HT-ohje Git-sivun alle (`[siirrot]`), etusivulta
   poistetaan mdBookin käyttöliittymää kuvaava osio (`[poistettavat_osiot]`),
   eivätkä tehtävien aloituspohjat ole sivuja (`ei_sivuja`).
-- `mkdocs.yml`: `site_name`, `copyright`, `repo_url` ja sivustovalikon lista
-  (`extra.sites`). Teema, tyylit ja skriptit tulevat työkalujen
-  `mkdocs-pohja.yml`:stä generoidun `nav.yml`:n kautta.
+- `mkdocs.yml`: `site_name`, `site_url`, `copyright`, `repo_url` ja
+  sivustovalikon lista (`extra.sites`). Teema, tyylit ja skriptit tulevat
+  työkalujen `mkdocs-pohja.yml`:stä generoidun `nav.yml`:n kautta.
 - `cache/svgbob/`: kirjan bob-kaaviot (svgbob_cli 0.7.6,
   `cargo install svgbob_cli@0.7.6`). Kuvat ovat versionhallinnassa, koska
   julkaisu ei asenna svgbobia: uusi tai muutettu kaavio piirretään
