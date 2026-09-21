@@ -203,7 +203,7 @@ se paikkaan, josta löydät sen.
  3. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
  4. Seuraa `DebugNayte`-luokan dokumentaatiossa olevia ohjeita ja tee siellä
     annetut tehtävät. Kun pyydetään "ohjaajan antamaa lukua", kirjoita mikä luku
-    tahansa väliltä 600-1500.
+    tahansa väliltä 600–1500.
 
 Älä muuta koodia ellei tehtävässä ole niin käsketty. 
 

@@ -1,20 +1,20 @@
 # Tentti
 
-Lukuvuonna 2026-2027 tenttejä järjestetään seuraavasti. **Tentin kesto on 3
+Lukuvuonna 2026–2027 tenttejä järjestetään seuraavasti. **Tentin kesto on 3
 tuntia. Alla näkyy tentin kestona 4 tuntia, johon sisältyy mahdollinen
 yksilöllisen järjestelyn mukainen lisäaika.**
 
 | Tentti  | Päivämäärä | Aika        | Paikka         | Ilmoittaudu                                          | Muuta     |
 | ------- | ---------- | ----------- | -------------- | ---------------------------------------------------- | --------- |
-| Syksy 1 | 27.11.2026 | 14-18       | Ag Aud1 / Zoom |                                                      |           |
-| Syksy 2 | 17.12.2026 | 10-14       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
-| Syksy 3 | 14.1.2027  | 16-20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
-| Kevät 1 | 9.4.2027   | 10-14       | Ag Aud3 / Zoom |                                                      |           |
-| Kevät 2 | 28.4.2027  | 16:30-20:30 | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
-| Kevät 3 | 25.5.2027  | 10-14       | Ag Aud2 / Zoom |                                                      | Myös Ohj2 |
-| Kesä 1  | 17.6.2027  | 12-16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
-| Kesä 2  | 4.8.2027   | 12-16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
-| Kesä 3  | 9.9.2027   | 16-20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Syksy 1 | 27.11.2026 | 14–18       | Ag Aud1 / Zoom |                                                      |           |
+| Syksy 2 | 17.12.2026 | 10–14       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Syksy 3 | 14.1.2027  | 16–20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kevät 1 | 9.4.2027   | 10–14       | Ag Aud3 / Zoom |                                                      |           |
+| Kevät 2 | 28.4.2027  | 16:30–20:30 | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kevät 3 | 25.5.2027  | 10–14       | Ag Aud2 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 1  | 17.6.2027  | 12–16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 2  | 4.8.2027   | 12–16       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Kesä 3  | 9.9.2027   | 16–20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
 
 Voit osallistua tenttiin joko Agoran luentosalissa tai etänä Zoomin kautta. 
 

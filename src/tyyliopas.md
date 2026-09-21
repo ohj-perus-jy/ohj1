@@ -93,7 +93,7 @@ if (ehto) {
 - **Tiedostojen nimet**: PascalCase (esim. `Laskin.cs`, `Ohjelma.cs`)
 - **Kansiot**: PascalCase (esim. `Palvelut`, `Mallit`)
 
-Vaikka skandien ja muidenkin Unicode-merkkien käyttö on teknisesti sallittua, on syytä huomata, että niiden käyttö ammattimaisessa ohjelmistokehityksesä ei välttämättä ole suositeltavaa, tai se voi olla jopa kiellettyä. Voikin olla hyödyllistä alusta asti omaksua tapa, jossa käytät nimeämisessä vain ASCII-merkkejä (a-z, A-Z, 0-9 ja _).
+Vaikka skandien ja muidenkin Unicode-merkkien käyttö on teknisesti sallittua, on syytä huomata, että niiden käyttö ammattimaisessa ohjelmistokehityksesä ei välttämättä ole suositeltavaa, tai se voi olla jopa kiellettyä. Voikin olla hyödyllistä alusta asti omaksua tapa, jossa käytät nimeämisessä vain ASCII-merkkejä (a–z, A–Z, 0–9 ja _).
 
 ## Rivinvaihdot
 

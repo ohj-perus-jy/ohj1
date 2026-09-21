@@ -252,7 +252,7 @@ Suunnitelmassa pitää olla ainakin seuraavat asiat (soveltaen ei-peliharjoitust
   1. Tekijöiden nimet
   2. Pelin nimi
   3. Harjoitustyön osoite gitissä (jos palautat työn Git-etävarastona)
-  3. Pelaajien lukumäärä (1-4) 
+  3. Pelaajien lukumäärä (1–4) 
   4. Pelin taustatarina tai kuvaus pelin teemasta
   5. Pelin idea ja tavoitteet
   6. Hahmotelma pelistä (kuva tai kuvia paperilla käsin tai tietokoneella piirrettynä)
