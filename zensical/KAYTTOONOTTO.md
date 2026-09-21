@@ -256,7 +256,7 @@ ja ` ```csharp,feature-jypeli ` (1); `book.toml`:n piilorivimerkki on
 
 - `mkdocs.yml`: `site_name`, `copyright`, `repo_url`, `edit_uri`.
 - `convert.py`: `NEST_UNDER` (ohj1:ssäkin on `tentti.md` ja
-  `tenttiohjeet.md`), `DROP_SECTIONS`, `PLANTUML_AGENT`, `PRINT_INTRO`.
+  `tenttiohjeet.md`), `PLANTUML_AGENT`, `PRINT_INTRO`.
 - `SUMMARY.md`:n muoto. ohj1:ssä on 10 etulinkkiä, rivi
   `[Omat tiedot (TIM)<https://tim.jyu.fi>]()`, kommentoituja rivejä ja
   `luennot/`-sivuja osien alla. `build_nav` on kirjoitettu ohj2:n puulle;
