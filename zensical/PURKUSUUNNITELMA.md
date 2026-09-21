@@ -1,53 +1,43 @@
-# Purkusuunnitelma: mitä `convert.py`:stä jää, kun mdBook poistuu
+# Purkusuunnitelma: mitä `convert.py`:stä voi poistaa
 
-Tämä tiedosto olettaa, että koeputki voittaa: `../src` siirtyy Zensicalin
-lähdepuuksi ja mdBook (`../book.toml`, `../theme/`, `../start.sh`) poistetaan.
-Se vastaa yhteen kysymykseen — mitkä `convert.py`:n vaiheista lakkaavat silloin
-olemasta, mitkä vasta lähdettä muokkaamalla ja mitkä eivät koskaan.
+Lähdepuu `../src` on yhä mdBookin syntaksia, ja `convert.py` kääntää sen joka
+ajolla Zensicalille. Sivulla lukee `> [!VINKKI]`, kunnes joku kirjoittaa sen
+uusiksi. Lähdettä saa muokata vapaasti, mutta se on tehtävä erikseen, eikä
+joka kohdassa kannata. Tämä tiedosto vastaa yhteen kysymykseen: mitkä
+`convert.py`:n vaiheista voi poistaa heti, mitkä vasta lähdettä muokkaamalla
+ja mitkä eivät koskaan.
 
-Tila ja käyttöohjeet ovat [README.md](README.md):ssä, tehtyjen ratkaisujen
-perustelut [PERUSTELUT.md](tyokalut/PERUSTELUT.md):ssä. Vaihenumerot viittaavat
-`convert.py`:n alkukommenttiin, kohtanumerot README.md:n tarkistuslistaan.
-Esiintymäluvut ovat `python3 convert.py`:n raportista (10.9.2026).
+Työkalut ovat kirjoille yhteiset (submodule `tyokalut/`), joten muunnoksen voi
+poistaa `convert.py`:stä vasta, kun se on ajettu jokaisen kirjan lähteeseen.
+
+Käyttöohjeet ovat [tyokalut/README.md](tyokalut/README.md):ssä, tehtyjen
+ratkaisujen perustelut [PERUSTELUT.md](tyokalut/PERUSTELUT.md):ssä.
+Kohtanumerot viittaavat [TAUSTA.md](tyokalut/TAUSTA.md):n tarkistuslistaan.
+Vaiheet 1–5 ovat `convert.py`:n `main`in järjestys: kopiointi (`sync_docs`),
+sivukohtaiset muunnokset, assetit, navigaatio ja tulostussivu, jäänteiden
+siivous. Esiintymäluvut ovat ohj2:n lähteestä (10.9.2026).
 
 **Tämä on päättelyä nykyisestä koodista, ei mitattua eikä kokeiltua.**
 Toisin kuin PERUSTELUT.md, jossa jokaisen kohdan takana on todennus, tässä ei
 ole vielä ajettu mitään. Luvut ovat mitattuja, päätelmät eivät.
-
-## Lähtökohta: mdBookin poistuminen ei vie syntaksia mukanaan
-
-Ensimmäinen houkutus on ajatella, että kun mdBook poistuu, mdBookin syntaksin
-kääntäminen poistuu sen mukana. Näin ei ole. Syntaksi on `../src`:ssä ja jää
-sinne, kunnes joku kirjoittaa sen uusiksi. Sivulla lukee `> [!VINKKI]`
-riippumatta siitä, onko `book.toml` olemassa.
-
-mdBookin poistuminen vie mukanaan vain **rajoitteen**: koeputken sääntö "ei
-koske `../src`:ään" on olemassa siksi, että `bash ../start.sh` pitää toimia
-koko ajan. Kun sitä vaatimusta ei ole, lähdettä saa muokata — mutta se on
-tehtävä erikseen, eikä joka kohdassa kannata.
-
-Siksi vaiheet jakautuvat kolmeen.
 
 ## Taustaksi: vaihtoehdot A, B ja C
 
 Alla viitataan kahdesti PERUSTELUT.md:n vaihtoehtoihin. Tässä ne lyhyesti,
 jotta sitä lukua ei tarvitse etsiä.
 
-Ratkaistava ongelma oli tämä: `zensical serve` seuraa `docs/`-hakemistoa,
-jonka `convert.py` kirjoittaa — ei lähdepuuta `../src`. Kesken kirjoittamista
-tehty muutos ei siis näy selaimessa ennen kuin muunnos on ajettu uudelleen.
-Kolme tapaa päästä siitä eroon:
+`zensical serve` seuraa `docs/`-hakemistoa, jonka `convert.py` kirjoittaa, ei
+lähdepuuta `../src`. Kolme tapaa saada kesken kirjoittamista tehty muutos
+näkymään selaimessa:
 
-**A. Lähde pysyy mdBookin syntaksina, `convert.py` jää ja sen ympärille
-tehdään vahti.** Käännösaskel on olemassa muttei näy käsityönä: `run.sh`
-käynnistää `convert.py --watch`:n palvelimen rinnalle, ja tallennus riittää.
-**Tämä on nykytila.** Ratkaiseva mittaus oli, että koko kierros tallennuksesta
-selaimen päivittymiseen on 2,3 s — vaihtoehdot olisivat olleet perusteltuja
-vain, jos luku olisi ollut kymmeniä sekunteja.
+**A. Lähde pysyy nykyisenä, `convert.py` jää ja sen ympärillä on vahti.**
+`run.sh` käynnistää `convert.py --watch`:n palvelimen rinnalle, ja tallennus
+riittää. **Tämä on nykytila.** Koko kierros tallennuksesta selaimen
+päivittymiseen on 2,3 s.
 
 **B. Käännetään kerran ja `docs/` committoidaan uudeksi lähdepuuksi.**
-Muunnoksia ei silloin ole lainkaan. Hylättiin, koska hinta on kohtuuton juuri
-niissä kohdissa, jotka koeputkessa on tehty: kirjoittaisit käsin
+Muunnoksia ei silloin ole lainkaan. Hylätty, koska hinta on kohtuuton juuri
+laskettavissa merkinnöissä: kirjoittaisit käsin
 `` ```{ .java data-hidden="1 3" data-hl-green="2" } `` ja laskisit rivinumerot
 itse — ja numeroisit ne uudelleen joka kerta kun lisäät rivin lohkon alkuun.
 Merkintä `// HIGHLIGHT_GREEN_BEGIN` on olemassa juuri siksi, ettei numeroita
@@ -76,32 +66,28 @@ Laajennuksen on oltava `.venv`:stä importattavissa. Muunnokset olisivat
 esikäsittelijöitä (`Preprocessor`), koska ne katsovat raakoja rivejä ennen
 jäsennystä — samaa työtä kuin `mark_highlights` ja `hide_lines` tekevät nyt.
 
-C:tä ei ole tehty, koska nopeussyy raukesi mittauksissa. Ainoa jäljellä oleva
-syy on `docs_dir: src`, joka säilyttäisi sivujen sisäiset linkit, kuvapolut,
-`edit_uri`:n ja Gitin historian koskemattomina. Se on myös se, mihin alla oleva
-luku *Seuraus* päätyy: mdBookin poistuttua C on paljon halvempi kuin nyt.
+Nopeus ei ole syy tehdä C:tä (A:n kierros on 2,3 s). Ainoa syy on
+`docs_dir: src`, joka säilyttäisi sivujen sisäiset linkit, kuvapolut,
+`edit_uri`:n ja Gitin historian koskemattomina. Alla oleva luku *Seuraus*
+näyttää, että kohdan 1 jälkeen C on paljon halvempi kuin nyt.
 
-## 1. Poistuu heti, pelkästään mdBookin lähdöstä
+## 1. Poistuu heti
 
-Nämä eivät ole syntaksin kääntämistä vaan kiertoteitä sen ympäri, ettei
-lähdettä saa koskea tai ettei mdBook osaa jotain.
+Nämä eivät ole syntaksin kääntämistä vaan kiertoteitä mdBookin rajoitteiden
+ympäri. Rajoitteita ei enää ole, joten ne puretaan suoraan lähteessä.
 
-**`drop_sections`** (vaihe 2, kohta 1) — 1 osio. Etusivun "Navigointi tässä
-materiaalissa" kuvaa mdBookin käyttöliittymää. Poista osio `src/index.md`:stä,
-niin muunnos, `DROP_SECTIONS`, `HEADING_RE` ja niiden testit menevät mukana.
-
-**`NEST_UNDER`** — 2 sivua. mdBookin `SUMMARY.md` ei salli etulinkkien
-sisäkkäisyyttä, Zensical sallii. Siirrä `tenttiohjeet.md` `tentti/`-hakemistoon
-lähteessä, ja mukana lähtevät `nest_moves`, `sync_docs`:n siirtologiikka **ja**
+**`NEST_UNDER`** — `kirja.toml`:n `[siirrot]`. `SUMMARY.md` ei salli
+etulinkkien sisäkkäisyyttä, Zensical sallii. Siirrä `tenttiohjeet.md`
+`tentti/`-hakemistoon lähteessä, ja mukana lähtevät `nest_moves`, `sync_docs`:n siirtologiikka **ja**
 `build_extra`:n koko `edit_source`-polkukartta — jälkimmäinen on olemassa vain
 siksi, että siirretyn sivun muokkauslinkki löytäisi takaisin.
 
-**`build_nav`** — koko navigaatio. `SUMMARY.md`:tä ei enää ole, joten
-`nav.yml` kirjoitetaan käsin ja otetaan versionhallintaan.
+**`build_nav`** — koko navigaatio. `SUMMARY.md` poistetaan, ja `nav.yml`
+kirjoitetaan käsin ja otetaan versionhallintaan.
 
 Yksi asia ei poistu tämän mukana: **lukujen numerointi** (kohta 10). Numerot
-eivät ole lähteessä, vaan mdBook laskee ne sijainnista, ja Materialissa ei ole
-vastinetta. Joko numerot kirjoitetaan `nav.yml`:n otsikoihin käsin ja
+eivät ole lähteessä, vaan `build_nav` laskee ne sijainnista, eikä Materialissa
+ole vastinetta. Joko numerot kirjoitetaan `nav.yml`:n otsikoihin käsin ja
 ylläpidetään käsin, tai `nav.yml` pysyy numeroimattomana järjestyslistana ja
 12 riviä koodia laskee ne. Tämä on ainoa kohta, jossa käsin kirjoitettu
 navigaatio on aidosti huonompi kuin generoitu.
@@ -132,46 +118,11 @@ kääntäminen (`java,ignore` → `{ .java .ignore }`) on kertatyötä, mutta sa
 funktion sisällä laskettavat piilorivit (142 lohkoa, `hide_lines`) ja
 korostukset (79 lohkoa, `mark_highlights`) eivät ole — ne kuuluvat kohtaan 3.
 
-**`convert_anchors` halkeaa kahtia: toinen puoli käy lähteeseen heti, toinen
-vasta vaihdon jälkeen.**
-
-Välilyönnin lisääminen otsikon tunnuksen eteen (1 otsikko) käy `../src`:ään
-milloin tahansa: mdBook hyväksyy molemmat muodot. Mitattu sen omasta
-käännöksestä — `osa4/01-rajapinta.md`:n välilyönnitön `{#alykoti-saadettava}`
-antaa `id="alykoti-saadettava"` aivan kuten `tyokalut.md`:n välilyönnillinen
-`{#jdk}` antaa `id="jdk"`.
-
-Ääkkösten riisuminen (6 linkkiä) **ei** käy ennen vaihtoa. Riisuttua ankkuria
-ei voi kirjoittaa lähteeseen, koska mdBook säilyttää ääkköset otsikon tunnuksessa
-(`book/osa7/01-javafx-perusteet.html`: `id="ensimmäinen-javafx-sovellus"`):
-`#ensimmainen-javafx-sovellus` osoittaisi siellä tyhjään. Ainoa muoto, jonka
-molemmat generaattorit ymmärtävät samalla tavalla, on **otsikon oma
-ascii-tunnus** — kuuden linkin lisäksi neljä kohdeotsikkoa saisi `{#tunnus}`:n:
-
-| Kohdeotsikko                                                                       | Otsikon tunnukseksi                       |
-| ----------------------------------------------------------------------------------- | ----------------------------------------- |
-| `osa1/01-hei-java.md:73` "Opas: Java-ohjelmien kääntäminen ja ajaminen"              | `{#opas-kaantaminen-ja-ajaminen}`         |
-| `osa4/02-vertailurajapinta.md:1` "Comparable-rajapinta ja luonnollinen järjestys"    | `{#comparable-ja-luonnollinen-jarjestys}` |
-| `osa7/01-javafx-perusteet.md` "Ensimmäinen JavaFX-sovellus"                          | `{#ensimmainen-javafx-sovellus}`          |
-| `osa7/01-javafx-perusteet.md` "JavaFX-sovelluksen käynnistys ja ydinluokat"          | `{#javafx-kaynnistys-ja-ydinluokat}`      |
-
-Tunnus muuttaa mdBookin nykyisiä osoitteita: ulkopuolinen linkki vanhaan
-ääkköselliseen ankkuriin (TIM, kirjanmerkit) lakkaa toimimasta. Kohdan 14
-päätöksen (11.9.2026, [KAYTTOONOTTO.md](KAYTTOONOTTO.md)) jälkeen se ei ole
-enää erillinen hinta, koska vanhat osoitteet menevät vaihdossa rikki joka
-tapauksessa. `.html`-polku antaa 404:n, eikä ankkurikaan osuisi, vaikka sivu
-löytyisi: Zensical riisuu ääkköset otsikon tunnuksesta
-(`site/osa7/01-javafx-perusteet/index.html`:
-`id="ensimmainen-javafx-sovellus"`). Tunnus vain aikaistaisi rikkoutumisen.
-
-Tunnuksia ei myöskään tarvita. KAYTTOONOTTO.md:n järjestyksessä purku
-tehdään vaihdon jälkeen, kun mdBookia ei enää ole. Silloin `convert_anchors`
-ajetaan lähteeseen kuten muutkin muunnokset: kuusi linkkiä riisuttuun muotoon
-ja yksi välilyönti, ja Zensical tuottaa vastaavat tunnukset itse. Ankkurit
-ovat silloin samat kuin nykyisessä `docs/`:ssä, joka kääntyy varoituksetta.
-Yllä oleva versio (kuusi linkkiä ja neljä tunnusta) on tarpeen vain, jos
-ankkurit korjataan `main`issa ennen vaihtoa, eikä siihen ole syytä:
-`convert_anchors` puretaan joka tapauksessa vasta vaihdon jälkeen.
+**`convert_anchors` ajetaan lähteeseen kuten muutkin:** kuusi linkkiä
+riisuttuun muotoon (`#käyttö` → `#kaytto`) ja yksi välilyönti otsikon tunnuksen
+eteen (`{#tunnus}`). Zensical riisuu ääkköset otsikon tunnuksesta itse
+(`id="ensimmainen-javafx-sovellus"`), joten ankkurit ovat samat kuin nykyisessä
+`docs/`:ssä, joka kääntyy varoituksetta.
 
 **Ikonilyhenne toimii ilman konfiguraatiota.** Zensicalin emoji-indeksi
 (`zensical/extensions/emoji.py`, `_load_twemoji_index`) indeksoi jokaisen SVG:n
@@ -181,7 +132,7 @@ hakemisto sekä sitä vahtiva testi jäävät pois. Bonusmerkki on poikkeus: se 
 ole teeman ikoni vaan oma polku, joten se vaatii joko inline-SVG:n lähteeseen
 tai `custom_icons`-hakemiston ja `attr_list`-luokan kullan säilyttämiseksi.
 
-## 3. Jää, vaikka mdBookia ei olisi koskaan ollutkaan
+## 3. Jää
 
 ### Merkinnät, joissa lähteen syntaksi on parempi kuin kohde
 
@@ -211,14 +162,14 @@ ettei kirjoittajan tarvitse laskea:
 ## Seuraus: vaihtoehto C:n hinta romahtaa
 
 Vaiheet **1 ja 5** — kopiointi ja jäänteiden poisto — eivät poistu millään
-yllä olevalla. Ne kuolevat vain, jos `docs_dir: src`, mikä on README.md:n
+yllä olevalla. Ne kuolevat vain, jos `docs_dir: src`, mikä on TAUSTA.md:n
 jäljellä oleva avoin kysymys, ja se taas edellyttää että jäljelle jäävät
 sivukohtaiset muunnokset siirtyvät renderöintiin Python-Markdown-laajennuksena
 (**vaihtoehto C**).
 
 Tässä on koko juttu. PERUSTELUT.md toteaa vaihtoehto C:stä, ettei kaikkea voi
 siirtää, ja luettelee neljä kirjan tason estettä: navigaatio, tulostussivun
-runko, PlantUML-kuvien haku ja `NEST_UNDER`-siirrot. Kun mdBook poistuu, tuosta
+runko, PlantUML-kuvien haku ja `NEST_UNDER`-siirrot. Kohdan 1 jälkeen tuosta
 listasta jää jäljelle **yksi ja puoli**:
 
 - Navigaatio poistuu kohdan 1 mukana.
@@ -228,7 +179,7 @@ listasta jää jäljelle **yksi ja puoli**:
   `prune_diagrams` on koko puun asia, ja se on kertaluontoinen siivous.
 - Tulostussivun runko jää. Se tarvitsee koko `nav`-lohkon.
 
-Eli vaihtoehto C ei tarkoita mdBookin jälkeen enää sitä, että käännösaskel
+Eli vaihtoehto C ei tarkoita kohdan 1 jälkeen enää sitä, että käännösaskel
 jäisi puolitiehen. Se tarkoittaa laajennusta plus muutamaa kymmentä riviä,
 jotka ajetaan vain rakenteen muuttuessa — ei jokaisen tallennuksen jälkeen.
 Silloin vahtia (`--watch`) ei tarvita, koska `zensical serve` seuraa suoraan
@@ -239,7 +190,7 @@ lähdepuuta.
 | Vaihe                              | Kohtalo                                                           |
 | ---------------------------------- | ----------------------------------------------------------------- |
 | 1. `sync_docs`                     | vasta `docs_dir: src`:n myötä, joka edellyttää vaihtoehto C:tä    |
-| 2. sivun 14 muunnosta              | 1 heti, 8 uudelleenkirjoituksella, 5 jää (ks. yllä)               |
+| 2. sivun 13 muunnosta              | 8 uudelleenkirjoituksella, 5 jää (ks. yllä)                       |
 | 3. assetit                         | jää, ellei niitä siirretä `docs_dir`:n sisään                     |
 | 4. `build_nav`                     | poistuu heti                                                      |
 | 4. `build_extra` `edit_source`     | poistuu heti (`NEST_UNDER`:n mukana)                              |
