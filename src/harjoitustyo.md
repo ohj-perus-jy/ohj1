@@ -133,8 +133,8 @@ itse säännöllisesti varmuuskopioita työstäsi.
  1. Lataa harjoitustyön pohja omalle tietokoneelle ZIP-pakettina: avaa
     kurssin pohjaprojekti <https://gitlab.jyu.fi/tie/ohj1/ohj1ht> (tai
     <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht>) selaimessa ja valitse
-    *Code* <i class="bi bi-chevron-right"></i> *zip* (GitHubissa *Code*
-    <i class="bi bi-chevron-right"></i> *Download ZIP*).
+    *Code* › *zip* (GitHubissa *Code*
+    › *Download ZIP*).
  1. Pura ladattu paketti paikkaan, josta löydät sen, esimerkiksi kansioon
     `C:\Users\kayttajatunnus\ohj1\harjoitustyo` (Windows) tai
     `~/ohj1/harjoitustyo` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
@@ -162,7 +162,7 @@ Pakkaaminen käyttöjärjestelmittäin:
 
 - **Windows**: Klikkaa kansiota hiiren oikealla painikkeella ja valitse
   *Pakkaa ZIP-tiedostoksi* (engl. *Compress to ZIP file*) tai *Lähetä
-  kohteeseen* <i class="bi bi-chevron-right"></i> *Pakattu kansio*.
+  kohteeseen* › *Pakattu kansio*.
 - **macOS**: Klikkaa kansiota Finderissa hiiren oikealla painikkeella
   (tai Ctrl-klikkaa) ja valitse *Pakkaa* (engl. *Compress*).
 - **Linux**: Klikkaa kansiota tiedostonhallinnassa hiiren oikealla
@@ -464,7 +464,7 @@ Noudata huolellisesti alla olevia ohjeita.
     (esim. Gmail tai Hotmail) ja katsoa tuleeko posti itselle perille.
     Ota varmuuden vuoksi mahdollinen edelleenohjaus pois päältä.
     Huomioi, että edelleenohjauksen deaktivoitumisessa on viivettä.
-    Jos posti ei tule perille, tarkista account.jyu.fi <i class="bi bi-chevron-right"></i> sähköpostiasetukset.
+    Jos posti ei tule perille, tarkista *account.jyu.fi* › *sähköpostiasetukset*.
     Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
 
     **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
@@ -488,7 +488,7 @@ JetBrains lisää osoitteesi mustalle listalle, ja sen jälkeen osoitteen avaami
 - <https://rider-support.jetbrains.com/hc/en-us/requests/new>
 
 **Code With Me käyttöönotto:**
-Valitse yläpalkista *Tools*<i class="bi bi-chevron-right"></i>*Enable Code With Me* ja lopuksi *Enable and restart*
+Valitse yläpalkista *Tools* › *Enable Code With Me* ja lopuksi *Enable and restart*
 
 **Session aloitus**
 
