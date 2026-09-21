@@ -11,7 +11,7 @@ Tässä osassa...
 
 **Toistorakenteilla** voidaan toistaa jonkin lauseen tai lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistorakenteita ovat `while`, `do-while`, `for`, ja `foreach`.
 
-Tulostetaan luvut 1-10 käyttäen `while`-silmukkaa ja `for`-silmukkaa.
+Tulostetaan luvut 1–10 käyttäen `while`-silmukkaa ja `for`-silmukkaa.
 
 ```csharp
 int i = 1;

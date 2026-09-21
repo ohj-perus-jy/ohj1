@@ -160,8 +160,8 @@ ls
 
 Toimi seuraavasti:
 
-1. Tee yllä mainitut vaiheet 1-4 *vain ensimmäisellä rivillä* olevalle komennolle (eli tässä `echo "Kissa"`)
-2. Tee yllä mainitut vaiheet 1-4 *vain toisella rivillä* olevalle komennolle (eli `ls`)
+1. Tee yllä mainitut vaiheet 1–4 *vain ensimmäisellä rivillä* olevalle komennolle (eli tässä `echo "Kissa"`)
+2. Tee yllä mainitut vaiheet 1–4 *vain toisella rivillä* olevalle komennolle (eli `ls`)
 3. Jatka rivien suorittamista kunnes olet suorittanut kaikki laatikossa olevat rivit
 
 Toisin sanoen, tällä sivulla jokainen yksittäinen komento on aseteltu omalle rivilleen. Tarkoitus on, että suoritat jokaisen rivin yksi kerrallaan siinä järjestyksessä, jossa ne on laatikossa kirjoitettu.
