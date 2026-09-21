@@ -76,11 +76,14 @@ näyttää, että kohdan 1 jälkeen C on paljon halvempi kuin nyt.
 Nämä eivät ole syntaksin kääntämistä vaan kiertoteitä mdBookin rajoitteiden
 ympäri. Rajoitteita ei enää ole, joten ne puretaan suoraan lähteessä.
 
-**`NEST_UNDER`** — `kirja.toml`:n `[siirrot]`. `SUMMARY.md` ei salli
-etulinkkien sisäkkäisyyttä, Zensical sallii. Siirrä `tenttiohjeet.md`
-`tentti/`-hakemistoon lähteessä, ja mukana lähtevät `nest_moves`, `sync_docs`:n siirtologiikka **ja**
-`build_extra`:n koko `edit_source`-polkukartta — jälkimmäinen on olemassa vain
-siksi, että siirretyn sivun muokkauslinkki löytäisi takaisin.
+**`NEST_UNDER`** — `kirja.toml`:n `[siirrot]`. mdBookin `SUMMARY.md` ei
+salli etulinkkien sisäkkäisyyttä, Zensical sallii. **Tehty 21.9.2026:**
+sivut ovat lähteessä hakemistoissaan (ohj1: `tentti/` ja `git/`, ohj2:
+`tentti/`; yläsivu `index.md`), ja alasivu on `SUMMARY.md`:ssä sisennettynä
+etulinkkinä, jonka `build_nav` lukee. jypelidocs ei käyttänyt siirtoja.
+`[siirrot]`, `nest_moves`, `convert_moved_links`, `sync_docs`:n
+siirtologiikka ja `edit_source`-kartan siirtorivit on poistettu; kartassa on
+enää tulostussivu. `docs/` on molemmissa kirjoissa sama kuin ennen.
 
 **`build_nav`** — koko navigaatio. `SUMMARY.md` poistetaan, ja `nav.yml`
 kirjoitetaan käsin ja otetaan versionhallintaan.
@@ -173,7 +176,7 @@ runko, PlantUML-kuvien haku ja `NEST_UNDER`-siirrot. Kohdan 1 jälkeen tuosta
 listasta jää jäljelle **yksi ja puoli**:
 
 - Navigaatio poistuu kohdan 1 mukana.
-- `NEST_UNDER` poistuu kohdan 1 mukana.
+- `NEST_UNDER` on poistettu (21.9.2026).
 - PlantUML ei ollutkaan kirjan tason työtä: `convert_plantuml` ja
   `convert_svgbob` ottavat parametrikseen yhden sivun tekstin. Vain
   `prune_diagrams` on koko puun asia, ja se on kertaluontoinen siivous.
@@ -193,7 +196,7 @@ lähdepuuta.
 | 2. sivun 13 muunnosta              | 8 uudelleenkirjoituksella, 5 jää (ks. yllä)                       |
 | 3. assetit                         | jää, ellei niitä siirretä `docs_dir`:n sisään                     |
 | 4. `build_nav`                     | poistuu heti                                                      |
-| 4. `build_extra` `edit_source`     | poistuu heti (`NEST_UNDER`:n mukana)                              |
+| 4. `build_extra` `edit_source`     | siirtorivit poistettu; tulostussivun rivi jää sen mukana          |
 | 4. `build_extra` `tab_labels`      | poistuu välilehtien uudelleenkirjoituksen mukana                  |
 | 4. `build_print_page`              | jää                                                               |
 | 5. jäänteiden poisto               | vaiheen 1 mukana                                                  |

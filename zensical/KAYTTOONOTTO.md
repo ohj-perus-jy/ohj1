@@ -172,8 +172,11 @@ kirjanmerkit.
 
 **Purku** (järjestys PURKUSUUNNITELMA.md:stä):
 
-- [ ] Kohta 1: `NEST_UNDER` ja `build_nav`, jolloin `nav.yml` menee
-      versionhallintaan. (`drop_sections` on jo purettu.)
+- [x] Kohta 1a: `NEST_UNDER` poistettu — sivut siirretty lähteessä
+      `tentti/`- ja `git/`-hakemistoihin (myös ohj2:ssa), alasivu
+      sisennettynä etulinkkinä `SUMMARY.md`:ssä.
+- [ ] Kohta 1b: `build_nav`, jolloin `nav.yml` menee versionhallintaan.
+      (`drop_sections` on jo purettu.)
 - [ ] Kohta 2: yksi commit per muunnos (`fences`, `alerts`, `details`,
       `anchors`, `drop_breaks`, `divs`, `icons`, `bonus_marks`, `tabs`).
       Jokaisessa: aja muunnos `src/`:hen, poista funktio ja sen testit, aja
@@ -255,8 +258,7 @@ ja ` ```csharp,feature-jypeli ` (1); `book.toml`:n piilorivimerkki on
 **Muu repokohtainen:**
 
 - `mkdocs.yml`: `site_name`, `copyright`, `repo_url`, `edit_uri`.
-- `convert.py`: `NEST_UNDER` (ohj1:ssäkin on `tentti.md` ja
-  `tenttiohjeet.md`), `PLANTUML_AGENT`, `PRINT_INTRO`.
+- `convert.py`: `PLANTUML_AGENT`, `PRINT_INTRO`.
 - `SUMMARY.md`:n muoto. ohj1:ssä on 10 etulinkkiä, rivi
   `[Omat tiedot (TIM)<https://tim.jyu.fi>]()`, kommentoituja rivejä ja
   `luennot/`-sivuja osien alla. `build_nav` on kirjoitettu ohj2:n puulle;
