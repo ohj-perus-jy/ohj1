@@ -41,5 +41,5 @@ Tämän perään kirjoita vielä lyhyt kuvaus siitä, mitä ja miten teit tehtä
 
 Tulos antaa itsellesi suuntaa nykyisestä tehokkuudestasi tekstin tuottajana. Kurssin lopussa voi tehdä testin uudelleen, ja kokeilla onko tapahtunut kehitystä.
 
-**Anna itsellesi pistemäärä väliltä 0-1 (rasti kohtaan *Set custom points/Aseta mukautetut pisteet*).** Jos teit tehtävän mielestäsi täysin oikein, 1 piste, puoliksi oikein 0.5 pistettä jne.
+**Anna itsellesi pistemäärä väliltä 0–1 (rasti kohtaan *Set custom points/Aseta mukautetut pisteet*).** Jos teit tehtävän mielestäsi täysin oikein, 1 piste, puoliksi oikein 0.5 pistettä jne.
 

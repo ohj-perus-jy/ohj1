@@ -2,7 +2,7 @@
 
 ## Kuinka paljon aikaa Ohjelmointi 1 vie viikossa?
 
-Opintopisteiden mukainen laskennallinen työmäärä on noin 14-15 tuntia viikossa. Ajankäyttö vaihtelee yksilöllisesti, eikä aiempi kokemus välttämättä vähennä ajantarvetta. Ratkaisevaa ovat työtavat ja säännöllisyys.
+Opintopisteiden mukainen laskennallinen työmäärä on noin 14–15 tuntia viikossa. Ajankäyttö vaihtelee yksilöllisesti, eikä aiempi kokemus välttämättä vähennä ajantarvetta. Ratkaisevaa ovat työtavat ja säännöllisyys.
 
 ## En ehtinyt palauttaa harjoitustehtäviä ajoissa. Mitä teen?
 
@@ -20,7 +20,7 @@ ohjeistuksesta](./suorittaminen.md#eettiset-ohjeet).
 
 Voi. Opintojakson kuluessa joitain tehtäviä uudistetaan, joten on mahdollista
 että jotkin tehtävät muuttuvat. Jos näin käy, niin vanha versio jää kuitenkin
-näkyviin sivun alareunaan tämän lukuvuoden 2026-2027 ajaksi. 
+näkyviin sivun alareunaan tämän lukuvuoden 2026–2027 ajaksi. 
 
 ## Toimiiko kurssi Macilla tai Linuxilla?
 

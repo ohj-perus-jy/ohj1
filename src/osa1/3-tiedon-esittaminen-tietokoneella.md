@@ -8,7 +8,7 @@ On hyvä ymmärtää, miten tekstiä, lukuja ja muuta informaatiota esitetään 
 
 ## Kokonaislukujen esittäminen binäärimuodossa
 
-Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0-9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 · 10<sup>2</sup> + 4 · 10<sup>1</sup> + 5 · 10<sup>0</sup>. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
+Siinä missä kymmenjärjestelmässä (kutsutaan usein myös desimaalijärjestelmäksi) on kymmenen eri numeroa, 0–9, kaksijärjestelmässä on vain kaksi eri numeroa: 0 ja 1. Luvun paikka määrittää sen arvon: esimerkiksi 345 tarkoittaa 3 · 10<sup>2</sup> + 4 · 10<sup>1</sup> + 5 · 10<sup>0</sup>. Voidaan ajatella, että jokaisella luvulla on paikka, joka kertoo sen arvon potenssina kymmenelle (alkaen oikealta, ensimmäinen paikka on 0). Esimerkiksi luvun 345 kohdalla luku 5 on paikassa 0, luku 4 paikassa 1 ja luku 3 paikassa 2. 
 
 Vastaava idea toimii myös kaksijärjestelmässä. Kaksijärjestelmässä luvun paikka määrittää sen arvon kahden potenssina: esimerkiksi binääriluku `101` tarkoittaa 1 · 2<sup>2</sup> + 0 · 2<sup>1</sup> + 1 · 2<sup>0</sup> = 5 kymmenjärjestelmässä. 
 
@@ -42,7 +42,7 @@ Esimerkiksi lukua 0.1 ei voida esittää täsmällisesti liukulukuna, koska kaks
 
 Tekstin esittämiseen tietokoneessa on olemassa erilaisia merkistöjä ja merkistökoodauksia. Yksi niistä on **ASCII** (engl. *American Standard Code for Information Interchange*).
 
-ASCII on sopimus, joka määrittää 128 merkille (mm. aakkoset a-z ja numerot 0-9) yksikäsitteisen numeroarvon väliltä 0-127. Tämän numeroarvon avulla merkki voidaan esittää binäärimuodossa, tallentaa tietokoneen muistiin ja myös lukea sieltä. Esimerkiksi kirjain 'A' on ASCII-koodissa 65, 'B' on 66 jne.
+ASCII on sopimus, joka määrittää 128 merkille (mm. aakkoset a–z ja numerot 0–9) yksikäsitteisen numeroarvon väliltä 0–127. Tämän numeroarvon avulla merkki voidaan esittää binäärimuodossa, tallentaa tietokoneen muistiin ja myös lukea sieltä. Esimerkiksi kirjain 'A' on ASCII-koodissa 65, 'B' on 66 jne.
 
 ASCII-koodi on yhä kaikkien modernien koodausten perusosa. (*Koodauksella* tarkoitetaan tässä yhteydessä merkistön esitystapaa tietokoneessa.) Pelkkä ASCII on kuitenkin sinänsä rajoittunut. Nykyisin oletuskoodaus on useimmiten UTF-8 (Unicode-standardi), joka on taaksepäin täysin yhteensopiva ASCII:n kanssa, joka sisältää käytännössä kaikki maailman kirjoitusjärjestelmät. Ohjelmakoodin kirjoittamisessa käytetään edelleen usein 7-bittisiä ASCII-merkkejä, vaikkakin Unicode-merkit ovat sallittuja monissa ohjelmointikielissä. 
 

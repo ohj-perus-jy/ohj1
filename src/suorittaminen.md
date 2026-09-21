@@ -10,7 +10,7 @@ mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
 | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               |
 | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     |
 | osallistut [tenttiin](tentti.md)                                           | ei tenttiä                                                                 |
-| Arvosana välillä 1-5                                                       | Arvosana 1                                                                 |
+| Arvosana välillä 1–5                                                       | Arvosana 1                                                                 |
 
 Suoritustavassa 1 arvosana määräytyy tenttipisteistä, joita voi korottaa
 harjoitustehtävistä saatavilla
