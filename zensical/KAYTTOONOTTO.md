@@ -172,8 +172,8 @@ kirjanmerkit.
 
 **Purku** (järjestys PURKUSUUNNITELMA.md:stä):
 
-- [ ] Kohta 1: `drop_sections`, `NEST_UNDER` ja `build_nav`, jolloin `nav.yml`
-      menee versionhallintaan.
+- [ ] Kohta 1: `NEST_UNDER` ja `build_nav`, jolloin `nav.yml` menee
+      versionhallintaan. (`drop_sections` on jo purettu.)
 - [ ] Kohta 2: yksi commit per muunnos (`fences`, `alerts`, `details`,
       `anchors`, `drop_breaks`, `divs`, `icons`, `bonus_marks`, `tabs`).
       Jokaisessa: aja muunnos `src/`:hen, poista funktio ja sen testit, aja
