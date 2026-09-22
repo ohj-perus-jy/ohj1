@@ -1,6 +1,9 @@
 # Tyyliopas
 
-Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyyliopas perustuu suurelta osin [Microsoftin C#-kielen tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/identifier-names).
+Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyylioppaalla
+tarkoitetaan ohjeistusta, joka auttaa tekemään koodista luettavaa ja
+ylläpidettävää. Tämä tyyliopas perustuu suurelta osin [Microsoftin C#-kielen
+tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/identifier-names).
 
 ## Yleiset periaatteet
 
