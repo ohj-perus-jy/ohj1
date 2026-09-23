@@ -66,10 +66,6 @@ yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme list
  
 Tämän sivun asennusohjeet vaativat komentorivin avaamista ja käyttöä.
 
-Opintojaksolla komentorivin käyttöä käsitellään tarkemmin opintojakson aikana;
-jos luet nämä ohjeet aivan opintojakson alussa, komentorivi saattaa kuulostaa
-vielä hämärältä asialta.
-
 Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin
 käyttöön alta.
 
@@ -77,17 +73,22 @@ käyttöön alta.
  
 **Mikä on komentorivi?**
 
-*Komentorivi* (engl. command line) tai *pääte* (engl. terminal) on (tämän ohjeen
-puitteissa) tietokoneohjelma, jolla tietokonetta voi ohjata tekstillä.
-Esimerkiksi, kun Windowsissa jonkun kansion sisällön katsominen onnistuu
-graafisesti avaamalla Resurssinhallinta (tai macOS:lla vastaavasti Finder), sama
-asia onnistuu komentorivillä kirjoittamalla *komento* (engl. command), joka
+*Komentorivi* on (tämän ohjeen puitteissa) tietokoneohjelma, jolla tietokonetta
+voi ohjata tekstillä. Esimerkiksi, kun Windowsissa jonkun kansion sisällön
+katsominen onnistuu graafisesti avaamalla Resurssienhallinta (macOS:lla Finder),
+sama asia onnistuu komentorivillä kirjoittamalla tekstimuotoinen *komento*, joka
 tulostaa näkyviin kansion sisällön.
 
-Komentorivillä työskentely on yleistä ohjelmoinnin yhteydessä. Syitä on monia,
-kuten toiston ja automaation helpottaminen. Tämän ohjeen kannalta olennainen syy
-on, että ohjelmien asentaminen onnistuu nykyään jopa helpommin komentorivillä
-kuin etsimällä sopiva asennusohjelma verkosta.
+Vaikka olet ehkä aiemmin käyttänyt komentoriviä harvoin jos koskaan,
+ohjelmoinnin yhteydessä komentorivi on varsin hyödyllinen työkalu. Syitä on
+monia, kuten toiston ja automaation helpottaminen. Tämän ohjeen kannalta
+olennainen syy on, että ohjelmien asentaminen onnistuu nykyään jopa helpommin
+komentorivillä kuin etsimällä sopiva asennusohjelma verkosta.
+
+Komentorivistä käytetään myös nimityksiä *pääte* ja *terminaali*. Englanniksi
+komentorivistä käytetään nimityksiä *command line*, *terminal* ja *shell*.
+Kaikki nämä tarkoittavat samaa asiaa: ohjelmaa, jolla tietokonetta voi ohjata
+kirjoittamalla komentoja tekstinä.
 
 ***
 
