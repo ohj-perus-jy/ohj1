@@ -318,14 +318,19 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
       int pisteraja = 18
       ``` 
       Vakiot ilmaistaan `const`-määreellä. 
+ 
  9. **`}` + 2 tyhjää**: Aliohjelmien loppusulun `}` jälkeen tasan kaksi tyhjää riviä.
+ 
  10. **Dokumentaatio**: Luokat, aliohjelmat ja attribuutit tulee dokumentoida.
 
       Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne sen tekevät. Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`). Myös attribuutit dokumentoidaan `summary`-tagein. 
-11. **Funktio**: Pelissä on funktio.
+ 
+ 11. **Funktio**: Pelissä on funktio.
 
       Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#taulukko-silmukka-funktio) 
+ 
  12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#jetbrains-rider) 
+ 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
 ## Usein kysytyt kysymykset ja muut vinkit {#ukk}
@@ -468,13 +473,17 @@ Noudata huolellisesti alla olevia ohjeita.
     Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
 
     **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
+ 
  2. Siirry osoitteeseen [https://www.jetbrains.com/shop/eform/students](https://www.jetbrains.com/shop/eform/students) 
+ 
  3. Valitse lomakkeen yläosasta *University email address* ja täytä tiedot. Ole tarkkana, 
  että annat student.jyu.fi-loppuisen opiskelijasähköpostiosoitteen. Hyväksy mahdolliset käyttöehdot. 
  Klikkaa *Apply for Free Products*.			
+ 
  4. Avaa yliopiston sähköpostisi, noudata JetBrainsin lähettämän vahvistusviestin
  ohjeita ja vahvista lisenssi.
  **<u>Jos viesti ei tulekaan, älä lähetä lomaketta useita kertoja "varmuuden vuoksi". Siitä on vain ja ainoastaan haittaa.</u>**
+ 
  5. JetBrains pyytää linkittämään lisenssin JetBrains-tiliin. 
  Tilin voinee luoda M365/Microsoft-tilin kautta valitsemalla *Sign in with Microsoft* ja yhdistämällä suoraan			
  yliopiston sähköpostiin.			
