@@ -27,10 +27,8 @@ Valitse käyttöjärjestelmä alta.
 
 ### [Windows](#tab/win)
  
-Valitsit Microsfot Windows -käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:
-
-- Windows 11
-- Windows 10
+Valitsit Windows -käyttöjärjestelmän. Alla olevat ohjeet on testattu Windows
+11:llä. Windows 10:llä toimisesta ei ole varmuutta.
 
 ***
 
@@ -53,12 +51,14 @@ Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavill
 - Linux Ubuntu 24.04.3 LTS
 - Debian 13
 
-Valitse käyttöjärjestelmäsi yllä olevilla painikkeilla.
+***
 
-Huomaa, että muilla käyttöjärjestelmillä voi esiintyä pieniä poikkeuksia.
-Mikäli ohjeet eivät toimi, ilmoita siitä opettajille: ohj1-opet@jyu.onmicrosoft.com.
-Vastaavasti, jos saat ohjeet toimimaan käyttöjärjestelmällä, jotka eivät ole
-yllä mainitussa listassa, kerro käyttöjärjestelmäsi, niin päivitämme listan.
+### [Chrome OS](#tab/chromeos)
+
+Kurssin ohjelmointiympäristö **ei ole tuettu** Chrome OS -käyttöjärjestelmässä.
+Vaikka työkalujen asentaminen saattaakin onnistua, emme voi taata, että kaikki
+työkalut toimivat käyttökelpoisesti tai edes oikein. Suosittelemme vahvasti käyttämään
+joko Windows-, macOS- tai Linux-käyttöjärjestelmää.
 
 ***
 
