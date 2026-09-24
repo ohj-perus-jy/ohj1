@@ -42,7 +42,8 @@ numeroidaan osien mukaan (demo1–demo8).
 |                                          | 8.2 Kertaus ja tenttiin valmistautuminen                                                                | käsitteet, virheet, tentti, jatko                                                                 | runko                                   |
 | **Liitteet**                             | Tiedon esittäminen tietokoneessa                                                                        | binääri, liukuluku, merkistöt                                                                     | valmis                                  |
 |                                          | Valinnaiset parametrit ja oletusarvot                                                                   | oletusarvo, säännöt, oletusarvot vai kuormittaminen                                               | valmis                                  |
-|                                          | Moniulotteiset taulukot, StringBuilder, Lambda-lausekkeet, Tyyppijärjestelmä, Virheilmoitukset, Sanasto |                                                                                                   | runko                                   |
+|                                          | Moniulotteiset taulukot                                                                                 | luonti, indeksointi, GetLength, sisäkkäiset silmukat, parametrina, Jypeli-kenttä, int[][]         | v1 valmis                               |
+|                                          | StringBuilder, Lambda-lausekkeet, Tyyppijärjestelmä, Virheilmoitukset, Sanasto                          |                                                                                                   | runko                                   |
 
 Jokaisella osalla on `index.md` (osaamistavoitteet, luvut, luennot, tehtävät,
 harjoitustyön/debuggausnäytteen vaihe) ja `tehtavat.md` (kokoava lista).

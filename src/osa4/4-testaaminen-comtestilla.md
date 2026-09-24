@@ -251,6 +251,10 @@ kieliasetuksista (suomessa pilkku, englannissa piste).
 
 ### Kaksiulotteiset taulukot
 
+> [!HUOMAUTUS]
+> Kaksiulotteiset taulukot ovat kurssin valinnaista lisätietoa, ks. liite
+> [Moniulotteiset taulukot](../liitteet/moniulotteiset-taulukot.md).
+
 Kaksiulotteisia taulukoita testataan samaan tapaan kuin yksiulotteisia. Jos
 aliohjelma saa taulukon parametrina, luo taulukko ensin muuttujaan omalla
 testirivillään. Samaa taulukkoa voi sitten käyttää kaikissa sen jälkeisissä
