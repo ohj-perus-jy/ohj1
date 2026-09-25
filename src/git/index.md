@@ -132,12 +132,6 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ***
 
-### [Valitse](#tab/default)
-
-Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
-
-***
-
 ## Muistilista 
 
 Alla on lyhyt muistilista tyypillisimmistä tällä kurssilla vastaan tulevista tilanteista gitin kanssa. Lue kuitenkin **ensin** tarkemmat kuvaukset tämän dokumentin seuraavista luvuista.
@@ -346,12 +340,6 @@ että hakemistoon tuli tiedostot `.gitignore`, `README.md` sekä kansio `suunnit
   - `README.md` sisältää projektin kuvauksen Markdown-formaatissa. 
   - `suunnitelma`-kansioon laitetaan pelin suunnitelmakuva (tai -kuvat).
 
-
-***
-
-### [Valitse](#tab/default)
-
-Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 ***
 
