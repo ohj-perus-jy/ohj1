@@ -5,11 +5,7 @@
 
 ## Syksy 2026
 
- * Tulossa
- 
-## Kevät 2026
-
- * Aikatauluongelmien takia tämän päivän luento on nauhoite, pätkitty viime kevään luennosta. 
- * 📺 Katso tallenne ([YouTube](https://youtu.be/igR_9C24b6s), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-kevat-2026/luento-9))
- * Kalvoja ja mallikoodeja ei ole valitettavasti saatavilla
-
+ * 📺 Katso: [YouTube](https://youtube.com/live/FF3edbBpljM?feature=share),
+     [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2026/luento-9)
+ * [📊 Kalvot](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento09/Luento09.pdf)
+ * [🧾 Koodit](https://gitlab.jyu.fi/tie/ohj1/2026s/esimerkit/-/tree/main/Luento09)
