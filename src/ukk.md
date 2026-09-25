@@ -40,7 +40,7 @@ Tentti on yleensä "perinteinen" (= valvottu, ajastettu) ohjelmointiin ja
 ymmärtämiseen painottuva tentti. Vanhoja tenttejä ja arvosteluperusteita on
 [tarjolla](https://users.jyu.fi/~anlakane/ohjelmointi1/tentit/) malliksi.
 Lukuvuonna 2026–2027 opiskelija voi valita itse, haluaako osallistua tenttiin
-paikan päällä vai etänä. Lisätietoja löytyy [tentin ohjeista](./tentti.md).
+paikan päällä vai etänä. Lisätietoja löytyy [tentin ohjeista](tentti/index.md).
 
 ## Voinko korvata opintojakson aiemmalla kokemuksella (työkokemus, oma projekti jne.)?
 

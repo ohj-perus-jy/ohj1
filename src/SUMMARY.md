@@ -3,13 +3,13 @@
 [Aloitus](./index.md)
 [Suorittaminen](./suorittaminen.md)
 [Työkalut ja asentaminen](./tyokalut.md)
-[Versiohallinta ja Git](./git.md)
+[Versiohallinta ja Git](./git/index.md)
 [Harjoitustyö](./harjoitustyo.md)
 [Debuggausnäyte](./debuggausnayte.md)
-[Tentti](./tentti.md)
+[Tentti](./tentti/index.md)
+  [Tenttiohjeet](./tentti/tenttiohjeet.md)
 [Tyyliopas](./tyyliopas.md)
 [Usein kysyttyä](./ukk.md)
-[Tenttiohjeet](./tenttiohjeet.md)
 
 ---
 

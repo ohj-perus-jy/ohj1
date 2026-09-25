@@ -5,13 +5,13 @@ kurssin pohjaprojektista oman kopion GitLabiin, haet sen koneellesi, kirjoitat
 suunnitelman, lähetät sen takaisin GitLabiin ja lisäät lopuksi koodipohjan.
 Kuva näyttää, mitä ruudulla tapahtuu, ja teksti kertoo, mitä sinun pitää tehdä.
 
-Komentojen taustat on selitetty sivulla [Versiohallinta ja Git](git.md). 
+Komentojen taustat on selitetty sivulla [Versiohallinta ja Git](index.md). 
 
 Ohjeessa käytetään JY:n GitLabia (gitlab.jyu.fi). Jos sinulla ei ole
 JY-tunnuksia, tee oma etävarasto GitHubiin, ks. [Oman etävaraston
-luominen](git.md#fork).
+luominen](index.md#fork).
 
-<walkthrough scenes="images/git-ht-ohje/scenes.js" audio="images/git-ht-ohje/puhe">
+<walkthrough scenes="../images/git-ht-ohje/scenes.js" audio="../images/git-ht-ohje/puhe">
 
 ## Oma etävarasto
 
@@ -88,7 +88,7 @@ Paina tehtäväpalkin **Haku**-kenttää, kirjoita `git bash` ja valitse
 hakutuloksista **Git Bash**. Avautuu komentorivi, jolla annetaan tämän ohjeen
 komennot.
 
-Jos Git Bashia ei löydy, asenna ensin [Git](tyokalut.md#git). 
+Jos Git Bashia ei löydy, asenna ensin [Git](../tyokalut.md#git). 
 </step>
 
 <step scene="avaa-macos">
@@ -99,7 +99,7 @@ Jos Git Bashia ei löydy, asenna ensin [Git](tyokalut.md#git).
 
 Avaa Dockista **Launchpad**, kirjoita hakukenttään `Pääte` (englanninkielisessä
 järjestelmässä `Terminal`) ja avaa **Pääte**. Linuxissa käytä jakelusi omaa
-päätettä, ks. [Miten saan Gitin auki](git.md#miten-saan-gitin-auki).
+päätettä, ks. [Miten saan Gitin auki](index.md#miten-saan-gitin-auki).
 
 
 </step>
@@ -242,7 +242,7 @@ Tuplaklikkaa Finderissa `suunnitelma.md`-tiedostoa. Se aukeaa TextEditissä.
 ### Kirjoita suunnitelma
 
 Täytä tiedot ja poista kaikki suluissa olevat ohjetekstit. Mitä suunnitelmassa
-pitää olla, kerrotaan [suunnitelman vaatimuksissa](harjoitustyo.md#suunnitelma).
+pitää olla, kerrotaan [suunnitelman vaatimuksissa](../harjoitustyo.md#suunnitelma).
 Tallenna tiedosto: <kbd>Ctrl</kbd> + <kbd>S</kbd> (macOS: <kbd>Cmd</kbd> +
 <kbd>S</kbd>).
 
@@ -375,7 +375,7 @@ Ensimmäisellä kerralla Git kysyy tunnuksia.
 > [!HUOMAUTUS]
 > Kun pääsytunnus vanhenee vuoden päästä, push antaa virheen *Access denied*.
 > Luo silloin uusi tunnus ja vaihda se vanhan tilalle, ks. [Push ei
-> onnistu](git.md#credentials).
+> onnistu](index.md#credentials).
 
 </step>
 
@@ -409,7 +409,7 @@ Valitse **Put solution and project in the same directory**. Harjoitustyössä
 on vain yksi projekti, joten solution ja projekti tulevat yhteen kansioon
 `harjoitustyo/PertinSeikkailut`; Rider näyttää sen kentän alla. Demoissa
 ruutu jätetään tyhjäksi, koska samaan solutioniin tulee monta projektia, ks.
-[Uusi solution](osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+[Uusi solution](../osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
 
 Jätä **Create Git repository** valitsematta: harjoitustyökansio on jo
 Git-varasto, eikä sen sisään saa syntyä toista. Paina lopuksi **Create**.
@@ -486,7 +486,7 @@ https://gitlab.jyu.fi/kayttajatunnus/ohj1ht.git
 ```
 
 Seuraavaksi esittelet suunnitelman ohjaajalle, ks. [harjoitustyön vaihe
-1](harjoitustyo.md#vaihe-1-suunnitelma-versiohallinnassa).
+1](../harjoitustyo.md#vaihe-1-suunnitelma-versiohallinnassa).
 
 </step>
 

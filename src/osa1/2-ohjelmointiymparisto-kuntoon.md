@@ -100,7 +100,7 @@ olemassa olevaan solutioniin, katso luku [Uusi projekti olemassa olevaan
 solutioniin](#uusi-projekti-solutioniin).
 
 * Valitse `New Solution`. Mikäli joku vanha solution on jo auki, niin sama
-  onnistuu yläpalkista `File` <i class="bi bi-chevron-right"></i> `New Solution`. ![Uusi solution
+  onnistuu yläpalkista *File* › *New Solution*. ![Uusi solution
   Linuxissa](./images/new_solution_linux.png)
 * Valitse vasemmalta Custom templates -listasta `FysiikkaPeli`.
 * Anna solutionin nimeksi `demoX`, esimerkiksi `demo1`
@@ -190,7 +190,7 @@ Lisätään siihen toinen projekti olemassa olevan lisäksi.
 Tässä esimerkissä luodaan uusi ConsoleMain-projekti olemassa olevaan `demo1`-solutioniin. 
 
 - Klikkaa Explorer-paneelissa solutionin `demo1` nimeä hiiren oikealla (Macissa kahdella sormella).
-- Valitse `Add` <i class="bi bi-chevron-right"></i> `New Project`
+- Valitse *Add* › *New Project*
 - Valitse vasemmalta `ConsoleMain`-projektimalli
 - Anna nimeksi `HelloWorld`
 - Paina `Create`.
@@ -244,7 +244,7 @@ ikkuna ja piirretään siihen ympyrä. Projektin nimeksi tulee `YmpyraPeli`.
 
 - Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin edellä
   [HelloWorld](#uusi-projekti-solutioniin): klikkaa Explorer-paneelissa
-  solutionin `demo1` nimeä hiiren oikealla ja valitse `Add` <i class="bi bi-chevron-right"></i> `New Project`.
+  solutionin `demo1` nimeä hiiren oikealla ja valitse *Add* › *New Project*.
 - Valitse vasemmalta `Fysiikkapeli`-projektimalli.
 - Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös kooditiedoston
   (`YmpyraPeli.cs`) ja siinä olevan luokan, joten luokan nimi on sama kuin alla

@@ -46,9 +46,8 @@ huomauttaa, jos `tyokalut/` on eri versiossa kuin haara odottaa.
 ## Tämän kirjan omat tiedostot
 
 - `kirja.toml`: kirjan asetukset työkaluille. Tenttiohjeet siirretään
-  Tentti-sivun ja Git-HT-ohje Git-sivun alle (`[siirrot]`), etusivulta
-  poistetaan mdBookin käyttöliittymää kuvaava osio (`[poistettavat_osiot]`),
-  eivätkä tehtävien aloituspohjat ole sivuja (`ei_sivuja`).
+  Tentti-sivun ja Git-HT-ohje Git-sivun alle (`[siirrot]`), eivätkä tehtävien
+  aloituspohjat ole sivuja (`ei_sivuja`).
 - `mkdocs.yml`: `site_name`, `site_url`, `copyright`, `repo_url` ja
   sivustovalikon lista (`extra.sites`). Teema, tyylit ja skriptit tulevat
   työkalujen `mkdocs-pohja.yml`:stä generoidun `nav.yml`:n kautta.

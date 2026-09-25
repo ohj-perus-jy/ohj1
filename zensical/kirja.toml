@@ -4,15 +4,6 @@ nimi = "ohj1"
 # Tehtävien aloituspohjat ovat opiskelijalle annettavia tiedostoja, eivät sivuja.
 ei_sivuja = ["exercises/*/starter/*.md"]
 
-# Etulinkkien sisäkkäisyys: avain siirretään arvon alle.
-[siirrot]
-"tenttiohjeet.md" = "tentti.md"
-"git-ht-ohje.md" = "git.md"
-
-# mdBookin käyttöliittymää kuvaavat osiot, jotka eivät päde Zensicalissa.
-[poistettavat_osiot]
-"index.md" = "Navigointi tässä materiaalissa"
-
 # Linkkitarkistuksen TIM-ajo (tyokalut/linkit): kansioiden julkiset sivut.
 [linkit]
 tim_kansiot = ["kurssit/tie/itkp102"]
