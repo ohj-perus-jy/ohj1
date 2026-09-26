@@ -3,6 +3,9 @@
  * **Lue:** [16. Toistorakenteet](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#toistorakenteet-silmukat)
  * **Lue:** [Debuggaus-materiaali](../osa5/debuggaus.md)
 
+> [!VAROITUS]
+> Luento 9 ja Harjoitustehtävät 4 <u>vain etänä</u>. Ei siis saliluentoa maanantaina.
+
 ## Syksy 2026
 
  * 📺 Katso: [YouTube](https://youtube.com/live/FF3edbBpljM?feature=share),
