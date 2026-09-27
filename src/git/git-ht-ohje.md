@@ -11,7 +11,7 @@ Ohjeessa käytetään JY:n GitLabia (gitlab.jyu.fi). Jos sinulla ei ole
 JY-tunnuksia, tee oma etävarasto GitHubiin, ks. [Oman etävaraston
 luominen](index.md#fork).
 
-<walkthrough scenes="../images/git-ht-ohje/scenes.js" audio="../images/git-ht-ohje/puhe">
+<walkthrough scenes="../images/git-ht-ohje/scenes.js" audio>
 
 ## Oma etävarasto
 

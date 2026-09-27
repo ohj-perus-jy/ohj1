@@ -12,6 +12,7 @@ tim_pois = ["kurssit/tie/itkp102/materiaali/moniste"]
 
 # Koko sivun ääneenluku (tyokalut/puhe.py): sivut, joille tehdään äänet, ja
 # äänivaraston repo, jonka klooni on kansiossa puhe/ (ei tämän repon historiaan).
+# Samaan varastoon tulevat vaiheittaisten ohjeiden (<walkthrough audio>) äänet.
 [puhe]
 sivut = [
     "tyokalut.md",
