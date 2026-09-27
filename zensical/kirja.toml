@@ -9,3 +9,13 @@ ei_sivuja = ["exercises/*/starter/*.md"]
 tim_kansiot = ["kurssit/tie/itkp102"]
 # Vanhaa monistetta ei enää ylläpidetä.
 tim_pois = ["kurssit/tie/itkp102/materiaali/moniste"]
+
+# Koko sivun ääneenluku (tyokalut/puhe.py): sivut, joille tehdään äänet, ja
+# äänivaraston repo, jonka klooni on kansiossa puhe/ (ei tämän repon historiaan).
+[puhe]
+sivut = [
+    "tyokalut.md",
+    "osa1/1-ensimmainen-ohjelma.md",
+    "osa1/2-ohjelmointiymparisto-kuntoon.md",
+]
+repo = "https://github.com/ohj-perus-jy/ohj1-puhe.git"
