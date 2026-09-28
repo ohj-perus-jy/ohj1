@@ -30,8 +30,7 @@ Lisenssi ei koske issueita.
 
 Sivusto rakennetaan **[Zensicalilla](https://zensical.org)**. Työkalut
 (muunnos, tyylit, skriptit, testit) ovat git-submodule `zensical/tyokalut`,
-repo [kirjatyokalut](https://github.com/ohj-perus-jy/kirjatyokalut), joka on
-yhteinen Ohjelmointi 2:n ja Jypeli-ohjeiden kanssa.
+repo [kirjatyokalut](https://github.com/ohj-perus-jy/kirjatyokalut).
 
 Kloonaa repo submoduleineen. Jos sinulla ei ole kirjoitusoikeutta, forkkaa
 repo ensin ja kloonaa oma forkkisi.
@@ -42,18 +41,14 @@ cd ohj1
 git config submodule.recurse true    # git pull ja git switch päivittävät jatkossa myös työkalut
 ```
 
-Windowsissa kloonaa WSL:n levylle, älä Windowsin kansioon (`C:\…`). Sieltä
-kontti lukee tiedostot hitaan 9p-liitoksen läpi, ja Zensicalin asennus kestää
-minuutteja sekuntien sijaan. Avaa WSL-pääte (`wsl`), kloonaa
+Windowsissa kloonaa WSL:n levylle, älä Windowsin kansioon (`C:\…`), koska
+asennus on sieltä hidasta. Avaa WSL-pääte (`wsl`), kloonaa
 kotihakemistoosi ja avaa kansio VS Codessa komennolla `code ohj1`.
 
-Suositeltu tapa on käyttää mukana olevaa DevContaineria. Se hakee submodulen
-ja asentaa Zensicalin hakemistoon `zensical/.venv` jo kontin luonnissa. Ilman
-DevContaineria saman tekee ensimmäinen ajo (tarvittaessa myös
-`python3-venv`-paketin asennuksen, mihin tarvitaan sudo); Python 3.11 tai
-uudempi riittää. Uuden tai muutetun ASCII-kaavion (`bob`-koodilohko)
-piirtämiseen tarvitaan `svgbob_cli`, jonka ajo asentaa itse cargolla
-(DevContainerissa Rust on valmiina).
+Suositeltu tapa on käyttää mukana olevaa DevContaineria. Se hakee submodulen ja
+asentaa Zensicalin hakemistoon `zensical/.venv` jo kontin luonnissa. Jos et
+halua käyttää DevContaineria, ensimmäinen käynnistys (ks. alla) asentaa
+tarvittavat työkalut ja riippuvuudet. 
 
 Käynnistä kehityspalvelin projektin juuresta:
 
@@ -64,13 +59,15 @@ Käynnistä kehityspalvelin projektin juuresta:
 ./zensical/run.sh test       # testit (pytest + Playwright)
 ```
 
-**Muokattava sisältö on kansiossa `src/`.** `zensical/docs/` ja
-`zensical/site/` ovat generoituja.
+**Muokattava sisältö on kansiossa `src/`.** Älä muokkaa tiedostoja kansioissa
+`zensical/docs/` ja `zensical/site/`.
 
 ## Kirjoittaminen
 
 Sivut kirjoitetaan Markdownilla mdBookin merkkauksella; työkalut muuntavat
-sen Zensicalille. Navigaatio on tiedostossa `src/SUMMARY.md`.
+sen Zensicalille. Navigaatio on tiedostossa `src/SUMMARY.md`. Sivun osoite
+tulee tiedoston polusta, eikä vanhoille osoitteille ole ohjauksia: sivun
+siirto tai uudelleennimeäminen rikkoo TIMin linkit, joten päivitä ne samalla.
 
 Kaikki työkalujen tukema merkkaus on kirjatyökalujen
 [Ominaisuudet-taulukossa](https://github.com/ohj-perus-jy/kirjatyokalut#ominaisuudet):
@@ -104,6 +101,10 @@ tulkitse sitä koodilohkoksi.
 - Valikkopolut kirjoitetaan kursiivilla ja kohdat erotetaan ›-merkillä:
   *File* › *New* › *Project*.
 - Lukuvälit kirjoitetaan pitkällä viivalla: 1–3, ei 1-3.
+- Listan kohtaan kuuluva jatkokappale, kuva, koodilohko tai `<details>`
+  sisennetään neljällä välilyönnillä. Muuten numeroitu lista alkaa alusta.
+- Kaavoja ei renderöidä. Eksponentti kirjoitetaan `2<sup>31</sup>` ja
+  kertomerkki `·`.
 
 ## Haarat ja julkaisu
 
@@ -114,6 +115,13 @@ tulkitse sitä koodilohkoksi.
 GitHub Actions julkaisee molemmat joka työnnöllä. Ulkoiset linkit
 tarkistetaan joka työnnössä, pull requestissa ja maanantaisin (lychee,
 `.github/workflows/links.yml`).
+
+Ylläpitäjille: isot tai keskeneräiset muutokset (uudet luvut, rakenne)
+tehdään `dev`iin ja viedään `dev` → `main`. Pienet korjaukset,
+työkalupäivitykset ja pull requestit menevät suoraan `main`iin. Kun `main`
+muuttuu, yhdistä `main` → `dev`. Haarat yhdistetään aina merge-commitilla,
+ei rebasella eikä squashilla. `pages.yml`:n on oltava sama molemmissa
+haaroissa, koska kummankin työntö julkaisee molemmat sivustot.
 
 ## Pull request
 
@@ -138,16 +146,12 @@ Tee pull request `main`-haaraan.
 4. Avaa GitHubissa pull request `main`-haaraan. Ylläpitäjät tarkistavat
    ehdotuksesi ja antavat tarvittaessa palautetta.
 
-Ylläpitäjille: omat muutokset tehdään `dev`iin ja viedään `dev` → `main`
-merge-committina. Kun `main`iin on yhdistetty pull request, yhdistä `main` →
-`dev`.
-
 ## Lisää
 
 - [zensical/README.md](zensical/README.md): tämän kirjan asetukset
   (`kirja.toml`, `mkdocs.yml`, kaaviot, ääneenluku) ja työkalujen päivittäminen
 - [kirjatyokalut/README.md](https://github.com/ohj-perus-jy/kirjatyokalut#readme):
   rakenne, asetukset, työkalujen muuttaminen ja testit
-- [TODO.md](TODO.md): mitä siirrossa mdBookista on vielä tekemättä
+- [TODO.md](TODO.md): avoimet tehtävät
 
 Kiitos avustasi materiaalin parantamisessa!
