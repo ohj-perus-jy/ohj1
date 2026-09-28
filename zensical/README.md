@@ -32,8 +32,15 @@ tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
 ./zensical/run.sh 8003         # eri portti
 ./zensical/run.sh build        # pelkkä rakennus site/-hakemistoon
 ./zensical/run.sh test         # testit: koekirja ja tämä kirja
-./zensical/run.sh puhe ../src/git-ht-ohje.md   # vaiheittaisen ohjeen äänet
+./zensical/run.sh puhe         # ääneenluvun leikkeet (kirja.toml: [puhe]) ja
+                               # vaiheittaisen ohjeen äänet; --teksti ei tee ääniä
 ```
+
+Ääneenluku tarvitsee Azure Speech -avaimen (`AZURE_SPEECH_KEY`,
+`AZURE_SPEECH_REGION`). Leikkeet ovat erillisessä repossa
+[ohj1-puhe](https://github.com/ohj-perus-jy/ohj1-puhe), jonka `puhe` kloonaa
+kansioon `zensical/puhe/` ja johon se pushaa uudet leikkeet; julkaisu hakee
+sen samaan kansioon.
 
 Kloonin tai haaran vaihdon jälkeen submodule haetaan komennolla
 `git submodule update --init` (`run.sh` tekee sen itse, jos hakemisto on
