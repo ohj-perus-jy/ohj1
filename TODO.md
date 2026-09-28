@@ -217,7 +217,9 @@ juuri mdBook ja `/dev/` Zensical.
       Nykyisessä kuvassa `python3`:sta puuttuu `ensurepip`, `setup.sh`
       asentaa sen aptilla.
 - [x] `README.md`: mdBook-maininnat pois, Zensical ja työkalujen submodule
-      tilalle (2026-09-18). `CONTRIBUTING.md`:tä ei ohj1:ssä ole.
+      tilalle (2026-09-18). README on nyt opiskelijoille (virheilmoitus,
+      Muokkaa-linkki), kehittäjän ohjeet ovat `CONTRIBUTING.md`:ssä
+      (2026-09-28). Ulkopuolisten pull requestit tehdään `main`iin.
 - [x] KaTeX: ei kaavojen renderöintiä (päätetty 2026-09-18). Eksponentit
       kirjoitetaan `<sup>`-tageilla (`2<sup>31</sup>`), kertomerkki `·`.
 - [x] Linkkitarkistus: `links.yml` kutsuu työkalujen `linkit`-actionia
