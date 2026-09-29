@@ -41,7 +41,7 @@ cd ohj1
 git config submodule.recurse true    # git pull ja git switch päivittävät jatkossa myös työkalut
 ```
 
-Windowsissa kloonaa WSL:n levylle, älä Windowsin kansioon (`C:\…`), koska
+Windowsissa avaa WSL, ja kloonaa WSL:n levylle, älä Windowsin kansioon (`C:\…`), koska
 asennus on sieltä hidasta. Avaa WSL-pääte (`wsl`), kloonaa
 kotihakemistoosi ja avaa kansio VS Codessa komennolla `code ohj1`.
 
