@@ -106,7 +106,7 @@ ohjelmointikursseille**, sillä Git-versiohallinta on käytössä myöhemmillä 
 Valitsit palautustavaksi ZIP-paketin. Harjoitustyökansio pakataan
 ZIP-tiedostoksi ja ladataan TIMin
 [Oma eteneminen -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen).
-Git-työkalua ei tarvita, ja voit ohittaa [Git-ohjeen](./git.md) kokonaan.
+Git-työkalua ei tarvita, ja voit ohittaa [Git-ohjeen](git/index.md) kokonaan.
 
 Huomaa, että ZIP-paketti pitää ladata TIMiin uudelleen jokaisessa vaiheessa. Ota
 itse säännöllisesti varmuuskopioita työstäsi.
@@ -118,12 +118,12 @@ itse säännöllisesti varmuuskopioita työstäsi.
 #### [Git-etävarasto](#tab/git)
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
- 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](./git.md#fork) tai [vaiheittainen ohje](./git-ht-ohje.md)).
+ 1. Luo oma etävarasto GitLabiin tai GitHubiin. (Katso [kirjalliset ohjeet](git/index.md#fork) tai [vaiheittainen ohje](git/git-ht-ohje.md)).
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
- 1. Aseta omat Git-tiedot ([ohje](./git.md#gitconfig)). 
- 1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](./git.md#clone)). 
+ 1. Aseta omat Git-tiedot ([ohje](git/index.md#gitconfig)). 
+ 1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](git/index.md#clone)). 
  1. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
- 1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](./git.md#add-commit) ja [push](./git.md#push)). 
+ 1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](git/index.md#add-commit) ja [push](git/index.md#push)). 
  1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
 ***
@@ -133,8 +133,8 @@ itse säännöllisesti varmuuskopioita työstäsi.
  1. Lataa harjoitustyön pohja omalle tietokoneelle ZIP-pakettina: avaa
     kurssin pohjaprojekti <https://gitlab.jyu.fi/tie/ohj1/ohj1ht> (tai
     <https://github.com/ITKP102-Ohjelmointi-1/ohj1ht>) selaimessa ja valitse
-    *Code* <i class="bi bi-chevron-right"></i> *zip* (GitHubissa *Code*
-    <i class="bi bi-chevron-right"></i> *Download ZIP*).
+    *Code* › *zip* (GitHubissa *Code*
+    › *Download ZIP*).
  1. Pura ladattu paketti paikkaan, josta löydät sen, esimerkiksi kansioon
     `C:\Users\kayttajatunnus\ohj1\harjoitustyo` (Windows) tai
     `~/ohj1/harjoitustyo` (macOS/Linux). Tämä kansio on jatkossa harjoitustyökansiosi, ja kaikki
@@ -162,7 +162,7 @@ Pakkaaminen käyttöjärjestelmittäin:
 
 - **Windows**: Klikkaa kansiota hiiren oikealla painikkeella ja valitse
   *Pakkaa ZIP-tiedostoksi* (engl. *Compress to ZIP file*) tai *Lähetä
-  kohteeseen* <i class="bi bi-chevron-right"></i> *Pakattu kansio*.
+  kohteeseen* › *Pakattu kansio*.
 - **macOS**: Klikkaa kansiota Finderissa hiiren oikealla painikkeella
   (tai Ctrl-klikkaa) ja valitse *Pakkaa* (engl. *Compress*).
 - **Linux**: Klikkaa kansiota tiedostonhallinnassa hiiren oikealla
@@ -185,7 +185,7 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
       Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
       ladattu etävarastostasi paikalliseksi git-varastoksi.
  1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
-    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](./git.md#push).
+    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon (add-commit)](git/index.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon (push)](git/index.md#push).
  1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
 ***
@@ -214,7 +214,7 @@ Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja 
  1. Tarkista, että työ täyttää kaikki [vaaditut osa-alueet](#htosat)
  1. Jos teet harjoitustyön parityönä, tarkista, että tuntikirjanpito on ajan tasalla
  1. Varmista, että työsi lopullinen, <u>toimiva</u> koodi on etävarastossa
-    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](./git.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](./git.md#push)
+    - Katso ohjeet [tiedostojen lisäämiseksi git-varastoon](git/index.md#add-commit) ja ohjeet [git-varaston lataamiseksi etävarastoon](git/index.md#push)
     - Huomaa, että etävarastossa olevan työn tulee olla toimiva! Voit esimerkiksi kokeilla ladata etävaraston omalle tietokoneelle eri kansioon ja yrittää ajaa solutionin.
  1. Esittele työ ohjaajalle lähi- tai etäohjauksessa.
 
@@ -272,7 +272,7 @@ Muut tarkastettavat osa-alueet on lueteltu alempana kohdassa "Tarkastettavat osa
 
 ## Paritöistä
 
-Parityössä on yksi yhteinen palautus: Git-palautuksessa kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta (ks. [Git-ohjeet](./git.md#git-ja-ryhmätyöskentely)), ja ZIP-palautuksessa pari palauttaa yhden yhteisen ZIP-paketin. Parityössä Git-etävarasto on suositeltavampi vaihtoehto, koska sen avulla työtä on helpompi tehdä samanaikaisesti (ks. [vinkit alla](#ukk)).
+Parityössä on yksi yhteinen palautus: Git-palautuksessa kaikki ryhmäläiset käyttävät samaa etävaraston osoitetta (ks. [Git-ohjeet](git/index.md#git-ja-ryhmätyöskentely)), ja ZIP-palautuksessa pari palauttaa yhden yhteisen ZIP-paketin. Parityössä Git-etävarasto on suositeltavampi vaihtoehto, koska sen avulla työtä on helpompi tehdä samanaikaisesti (ks. [vinkit alla](#ukk)).
 
 Molempien on annettava kutakuinkin yhtäläinen panos työn ohjelmalliseen toteutukseen. Yksittäisenä varoittavana esimerkkinä mainittakoon parityö, jossa toinen on paneutunut grafiikan tekemiseen ja toinen ohjelmointiin. Tällöin grafiikkaan paneutuneelta osallistujalta voidaan pyytää lisänäyttöjä työn ohjelmalliseen toteutukseen johon parityön toinen osapuoli ei saa osallistua. Lisäksi kummankin tekijän on pystyttävä esittämään riittävän tarkka tuntikirjanpito ja selvitys mitä työajalla on tehty, jotta osaamistavoitteet ohjelmoinnin osalta voidaan todentaa. 
 
@@ -318,14 +318,19 @@ Alla on tarkastettavien osa-alueiden lista, jonka ohjaajat tulevat tarkastamaan 
       int pisteraja = 18
       ``` 
       Vakiot ilmaistaan `const`-määreellä. 
+ 
  9. **`}` + 2 tyhjää**: Aliohjelmien loppusulun `}` jälkeen tasan kaksi tyhjää riviä.
+ 
  10. **Dokumentaatio**: Luokat, aliohjelmat ja attribuutit tulee dokumentoida.
 
       Dokumenteissa kuvataan muun muassa sitä, *mitä* aliohjelmat tekevät, ei miten ne sen tekevät. Luokan alussa tulee olla tekijän nimi ja versio (`@author`, `@version`). Myös attribuutit dokumentoidaan `summary`-tagein. 
-11. **Funktio**: Pelissä on funktio.
+ 
+ 11. **Funktio**: Pelissä on funktio.
 
       Funktio ottaa vastaan parametrin tai parametreja, käsittelee parametrina saatua tietoa, ja palauttaa arvon annetun syötteen perusteella. Funktion täytyy prosessoida tietoa jotenkin; funktiolla täytyy olla jokin todellinen tarkoitus ohjelman kokonaisuuden kannalta. Tyypillisesti funktiossa voi hyödyntää silmukkaa tai taulukkoa/listaa. [Esimerkkejä.](#taulukko-silmukka-funktio) 
+ 
  12. **Ei virheitä eikä varoituksia** Riderin oikeassa yläkulmassa. Muista asentaa [kurssin Rider-asetukset](./tyokalut.md#jetbrains-rider) 
+ 
  13. Ei-pelien tapauksessa osoitettu myös taito testata aliohjelmia.
 
 ## Usein kysytyt kysymykset ja muut vinkit {#ukk}
@@ -439,7 +444,7 @@ Lähtökohtaisesti on kolme tapaa, joita tällä opintojaksolla suositellaan:
 
 **Eri koneet, sama etävarasto**:
 
-Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](./git.md#push)) ja ladataan ([`git pull`](./git.md#pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](./git.md#git-ja-ryhmätyöskentely) osiosta.
+Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston omalle tietokoneelle, tekee omia muutoksia ja lataa ne takaisin samaan etävarastoon. Niin kauan kuin muutoksia ei tehdä päällekkäin (eli kummatkin muokkaatte samaa koodiriviä) tai päällekkäiset muutokset ovat tarpeeksi yksinkertaisia, `git`-työkalu osaa yhdistää kahden eri tekijän muutokset yhteen. Tässä tärkeintä on, että muutokset lähetetään etävarastoon ([`git push`](git/index.md#push)) ja ladataan ([`git pull`](git/index.md#pull)) sieltä mahdollisimman usein. Tapauksissa, jossa `git`-työkalu ei pysty yhdistämään kahden henkilön muutoksia, syntyy ns. *konflikti*, joka pitää ratkaista itse. Git-konfliktien ratkaiseminen on tämän opintojakson ulkopuolella; ongelmatilanteissa ota yhteyttä siis ohjaajaan. Lyhyt kuvaus tästä löytyy [Git ja ryhmätyöskentely](git/index.md#git-ja-ryhmätyöskentely) osiosta.
 
 **Pariohjelmointi**:
 
@@ -464,17 +469,21 @@ Noudata huolellisesti alla olevia ohjeita.
     (esim. Gmail tai Hotmail) ja katsoa tuleeko posti itselle perille.
     Ota varmuuden vuoksi mahdollinen edelleenohjaus pois päältä.
     Huomioi, että edelleenohjauksen deaktivoitumisessa on viivettä.
-    Jos posti ei tule perille, tarkista account.jyu.fi <i class="bi bi-chevron-right"></i> sähköpostiasetukset.
+    Jos posti ei tule perille, tarkista *account.jyu.fi* › *sähköpostiasetukset*.
     Selvitä tarvittaessa Digipalveluiden (help.jyu.fi) kanssa missä vika on. 
 
     **<u>Et voi edetä tässä ohjeessa, jos opiskelijasähköpostisi ei toimi</u>.**			
+ 
  2. Siirry osoitteeseen [https://www.jetbrains.com/shop/eform/students](https://www.jetbrains.com/shop/eform/students) 
+ 
  3. Valitse lomakkeen yläosasta *University email address* ja täytä tiedot. Ole tarkkana, 
  että annat student.jyu.fi-loppuisen opiskelijasähköpostiosoitteen. Hyväksy mahdolliset käyttöehdot. 
  Klikkaa *Apply for Free Products*.			
+ 
  4. Avaa yliopiston sähköpostisi, noudata JetBrainsin lähettämän vahvistusviestin
  ohjeita ja vahvista lisenssi.
  **<u>Jos viesti ei tulekaan, älä lähetä lomaketta useita kertoja "varmuuden vuoksi". Siitä on vain ja ainoastaan haittaa.</u>**
+ 
  5. JetBrains pyytää linkittämään lisenssin JetBrains-tiliin. 
  Tilin voinee luoda M365/Microsoft-tilin kautta valitsemalla *Sign in with Microsoft* ja yhdistämällä suoraan			
  yliopiston sähköpostiin.			
@@ -488,7 +497,7 @@ JetBrains lisää osoitteesi mustalle listalle, ja sen jälkeen osoitteen avaami
 - <https://rider-support.jetbrains.com/hc/en-us/requests/new>
 
 **Code With Me käyttöönotto:**
-Valitse yläpalkista *Tools*<i class="bi bi-chevron-right"></i>*Enable Code With Me* ja lopuksi *Enable and restart*
+Valitse yläpalkista *Tools* › *Enable Code With Me* ja lopuksi *Enable and restart*
 
 **Session aloitus**
 

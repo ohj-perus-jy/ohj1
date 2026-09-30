@@ -1,6 +1,9 @@
 # Tyyliopas
 
-Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyyliopas perustuu suurelta osin [Microsoftin C#-kielen tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/identifier-names).
+Tämä on lyhyt koodin tyyliopas Ohjelmointi 1 -kurssille. Tyylioppaalla
+tarkoitetaan ohjeistusta, joka auttaa tekemään koodista luettavaa ja
+ylläpidettävää. Tämä tyyliopas perustuu suurelta osin [Microsoftin C#-kielen
+tyylioppaaseen](https://learn.microsoft.com/fi-fi/dotnet/csharp/fundamentals/coding-style/identifier-names).
 
 ## Yleiset periaatteet
 
@@ -12,7 +15,7 @@ Poista käyttämätön koodi ja kommentit. Pidä koodi siistinä ja järjestykse
 
 Projektikansiossa tulee olla vain tarpeelliset tiedostot. Poista vanhat, käyttämättömät tai väliaikaiset tiedostot.
 
-Käytä Riderin automaattisia C#-kielen koodinmuotoiluasetuksia säännöllisesti (Code <i class="bi bi-chevron-right"></i> Reformat Code...).
+Käytä Riderin automaattisia C#-kielen koodinmuotoiluasetuksia säännöllisesti (*Code* › *Reformat Code...*).
 
 ## Dokumentointi ja kommentointi
 

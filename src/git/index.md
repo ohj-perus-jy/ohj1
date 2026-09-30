@@ -18,7 +18,7 @@ myöhemmissä tietojenkäsittelyn opinnoissa ja ohjelmistoalan työssä.
 
 ## Ennen kuin aloitat
 
-Asenna [kehitystyökalut ja Git-versiohallinta](tyokalut.md), ellet ole vielä tehnyt niin.
+Asenna [kehitystyökalut ja Git-versiohallinta](../tyokalut.md), ellet ole vielä tehnyt niin.
 
 Jos olet Jyväskylän yliopiston opiskelija, sinun tulee tietää
 JY-käyttäjätunnuksesi jotta voit käyttää gitlab.jyu.fi-palvelua. Varmista,
@@ -60,18 +60,18 @@ Valitse alta käyttöjärjestelmäsi mukainen käyttötapa.
 
 ### [Windows](#tab/windows)
  
-1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin.
+1. [Asenna Git-työkalu](../tyokalut.md#git) mikäli et ole vielä tehnyt niin.
 2. Paina *Käynnistä*-painikkeen vieressä olevaa *Haku-ikonia*
 3. Kirjoita hakupalkkiin *git bash*
 4. Valitse löytyvistä tuloksista *Git Bash*
 
-<animation scenes="images/git-ht-ohje/scenes.js" scene="avaa-windows">
+<animation scenes="../images/git-ht-ohje/scenes.js" scene="avaa-windows">
 
-![Git bash startmenu](images/gitbash-startmenu.png)
+![Git bash startmenu](../images/gitbash-startmenu.png)
 
 Tuloksena pitäisi avautua seuraava bash-komentorivipääte:
 
-![Git bash avattu](images/gitbash-avattu.png)
+![Git bash avattu](../images/gitbash-avattu.png)
 
 </animation>
 
@@ -96,16 +96,16 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [macOS](#tab/macos)
 
- 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
+ 1. [Asenna Git-työkalu](../tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Avaa *Launchpad*
  3. Kirjoita ylhäällä olevaan hakupalkkiin *Pääte* (tai *Terminal* jos käyttöjärjestelmän kieli on englanti)
  4. Avaa hakutuloksena löytyvä *Pääte* tai *Terminal*-sovellus
 
-![Mac-terminal](images/mac-terminal-1.png)
+![Mac-terminal](../images/mac-terminal-1.png)
 
 Tuloksena pitäisi avautua seuraava pääteikkuna:
 
-![Mac-Terminal](images/mac-terminal-2.png)
+![Mac-Terminal](../images/mac-terminal-2.png)
 
 Voit testata, että Git-työkalu löytyy suorittamalla komento
 
@@ -119,7 +119,7 @@ Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
 ### [Linux](#tab/linux)
 
- 1. [Asenna Git-työkalu](tyokalut.md#git) mikäli et ole vielä tehnyt niin
+ 1. [Asenna Git-työkalu](../tyokalut.md#git) mikäli et ole vielä tehnyt niin
  2. Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla *Terminal* tai *Terminal Emulator*. Tämä usein avaa bash-päätteen, joka on sopiva tämän ohjeen kannalta.
 
 Voit testata, että `git`-työkalu löytyy suorittamalla komento
@@ -129,12 +129,6 @@ git --version
 ```
 
 Jos komento palauttaa versionumeron, niin git on asennettu oikein.
-
-***
-
-### [Valitse](#tab/default)
-
-Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 ***
 
@@ -193,7 +187,7 @@ https://github.com/käyttäjänimi/ohj1ht.git
 
 Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen#harjoitusty%C3%B6).
 
-Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta Clone <i class="bi bi-chevron-right"></i> Clone with HTTPS. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
+Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta *Clone* › *Clone with HTTPS*. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
 
 <details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mikä fork on?</summary>
 
@@ -346,12 +340,6 @@ että hakemistoon tuli tiedostot `.gitignore`, `README.md` sekä kansio `suunnit
   - `README.md` sisältää projektin kuvauksen Markdown-formaatissa. 
   - `suunnitelma`-kansioon laitetaan pelin suunnitelmakuva (tai -kuvat).
 
-
-***
-
-### [Valitse](#tab/default)
-
-Valitse käyttöjärjestelmäsi yllä olevista vaihtoehdoista.
 
 ***
 
@@ -519,18 +507,18 @@ public override void Begin()
 }
 ```
 Tämä pusku ei onnistu, sillä **Kehittäjä A** on puskenut oman muutoksensa etävarastoon ja **Kehittäjä B** ei ole hakenut näitä muutoksia itselleen lokaaliin varastoon. Komento `git push` johtaa tämän näköiseen tulosteeseen.
-![Epäonnistunut pusku merge conflictissä](./images/merge_conflict_failed_push.png)
+![Epäonnistunut pusku merge conflictissä](../images/merge_conflict_failed_push.png)
 
 **Kehittäjä B** hakee muutokset itselleen komennolla `git pull --rebase`. Tämä komento epäonnistuu kuvassa näkyvällä tulosteella.
-![Epäonnistunut hakeminen merge conflictissä](./images/merge_conflict_failed_pull.png)
+![Epäonnistunut hakeminen merge conflictissä](../images/merge_conflict_failed_pull.png)
 
 Jos tämä komento ajettiin Riderin terminaalissa, niin Rider näyttää ylälaidassa varoituksen merge conflictista. Tästä ilmoituksesta voi klikata *Resolve conflicts...* nappia, jolloin avautuu Riderin näkymä konfliktien ratkomiseen.
-![Riderin merge conflict varoitus](./images/merge_conflict_rider_notification.png)
+![Riderin merge conflict varoitus](../images/merge_conflict_rider_notification.png)
 
 #### Konfliktin ratkaiseminen editorissa
 
 Riderin *Merge conflict editor* näkymä näkyy alla olevassa kuvassa. Editorissa on kolme ikkunaa. Vasemmalla puolella on **Kehittäjän B** lokaalit muutokset, eli hänen, joka yritti hakea muutoksia etävarastosta. Oikealla puolella taas näkyy etävarastosta haettu tiedosto. Keskimmäinen ikkuna taas näyttää lopputuloksen.
-![Riderin merge conflict editori](./images/merge_conflict_editor.png)
+![Riderin merge conflict editori](../images/merge_conflict_editor.png)
 
 Nyt **Kehittäjän B** tulee päättää, säilytetäänkö lokaalit muutokset vai etävarastosta haetut muutokset. Tämä tapahtuu painamalla muutoksen eli punaisella näkyvän alueen kohdalla ikkunoiden välissä näkyvää nuoli symbolia joko vasemmalta(lokaali) tai oikealta(etävarasto) puolelta. Tämän jälkeen valittu muutos siirtyy keskimmäiseen ikkunaan. Kun kaikki konfliktit on ratkaistu tällä tavoin ja lopputulos(keskimmäinen ikkuna) näyttää oikealta, voidaan painaa alakulmasta *Apply* nappia ja sitten *Apply Changes and Mark Resolved*.
 
@@ -605,7 +593,7 @@ Yleisimpiä ongelmia on lueteltu alla.
 
 Annoit git clone -komennolle väärän etävaraston URL-osoitteen. Tarkista
 etävarastosi osoite gitlab.jyu.fi-palvelussa oman projektisi 
-kohdasta Clone <i class="bi bi-chevron-right"></i> Clone with HTTPS. Anna tämä osoite git clone -komennon perään. 
+kohdasta *Clone* › *Clone with HTTPS*. Anna tämä osoite git clone -komennon perään. 
 
 Syy, miksi näin kävi, johtuu todennäköisesti siitä, että forkkia tehdessäsi
 muutit Project slugia, eli projektin tunnistetta, joka muuttaa etävaraston
@@ -619,7 +607,7 @@ URL-osoitetta.
 `remote: HTTP Basic: Access denied`
 `fatal: Authentication failed for 'https://gitlab.jyu.fi/NIMI/ohj1ht.git'`
 
-![Push access denied](images/push-access-denied.png)
+![Push access denied](../images/push-access-denied.png)
 
 Huomaa, että virheilmoitus voi näyttää hieman erilaiselta riippuen siitä
 käytätkö komentoriviä vai jotain muuta Git-asiakasohjelmaa.
@@ -634,7 +622,7 @@ hyväksy salasanoja, vaan sinun tulee käyttää [pääsytunnusta](#token), eli 
 Jos fetch- ja push-urlien lopussa **ei ole** `.git`-osaa, käy kopioimassa
 GitLab-palvelussa varastosi HTTPS-url-osoite, ks. kuva alla.
 
-![Gitlab clone https](images/gitlab-clone-https.gif)
+![Gitlab clone https](../images/gitlab-clone-https.gif)
 
 Anna sitten alla oleva komento, ja **pasteta URL-kohtaan** äsken kopioimasi osoite.
 

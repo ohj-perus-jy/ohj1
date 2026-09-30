@@ -9,7 +9,7 @@ mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
 | keräät yhteensä vähintään 27 pistettä harjoitustehtävistä                  | keräät vähintään 5 pistettä **jokaiselta** harjoitustehtäväviikolta        |
 | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               |
 | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     |
-| osallistut [tenttiin](tentti.md)                                           | ei tenttiä                                                                 |
+| osallistut [tenttiin](tentti/index.md)                                           | ei tenttiä                                                                 |
 | Arvosana välillä 1–5                                                       | Arvosana 1                                                                 |
 
 Suoritustavassa 1 arvosana määräytyy tenttipisteistä, joita voi korottaa

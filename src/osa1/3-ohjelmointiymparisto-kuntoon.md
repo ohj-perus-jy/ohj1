@@ -89,7 +89,7 @@ ohj1
 > Dropbox, iCloud), jos voit. Synkronointi ja kääntäjä kirjoittavat samoja
 > tiedostoja yhtä aikaa, ja tuloksena on satunnaisia, vaikeasti selitettäviä
 > virheitä. Varmuuskopio hoituu paremmin Gitillä, josta kerrotaan sivulla
-> [Versiohallinta ja Git](../git.md).
+> [Versiohallinta ja Git](../git/index.md).
 
 ## Solution ja projekti
 
@@ -470,7 +470,7 @@ se on aina varmuuskopioitu.
 <perustelu>
 **Tarua.** Pilvisynkronointi lukitsee tiedostoja kesken kääntämisen ja
 aiheuttaa satunnaisia, vaikeasti selitettäviä virheitä. Pidä projektit
-tavallisessa kansiossa ja hoida varmuuskopiointi [Gitillä](../git.md).
+tavallisessa kansiossa ja hoida varmuuskopiointi [Gitillä](../git/index.md).
 </perustelu>
 </vaittama>
 

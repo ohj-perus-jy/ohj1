@@ -30,4 +30,4 @@ osan tehtävät on koottu sivulle [Osan 8 tehtävät](./tehtavat.md).
 
 * Palauta harjoitustyön [vaihe 3 (työ 100 %
   valmis)](../harjoitustyo.md#vaiheiden-kuvaukset).
-* Lue [Tentti](../tentti.md) ja [Tenttiohjeet](../tenttiohjeet.md).
+* Lue [Tentti](../tentti/index.md) ja [Tenttiohjeet](../tentti/tenttiohjeet.md).

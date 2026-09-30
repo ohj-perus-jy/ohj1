@@ -12,18 +12,11 @@ yhteinen ohj2:n ja Jypeli-ohjeiden kanssa:
 - ratkaisujen perustelut: [tyokalut/PERUSTELUT.md](tyokalut/PERUSTELUT.md)
 - mistä ominaisuudet tulivat ja mitä ohj1 toi ohj2:n koeputkeen (tämän
   tiedoston aiempi sisältö): [tyokalut/TAUSTA.md](tyokalut/TAUSTA.md)
-- miten työkalut yhtenäistettiin ja avoimet kysymykset:
+- merkkauksen siirto mdBookin syntaksista Zensicalin omaan (mikä on tehty ja
+  mikä jää) ja avoimet kysymykset:
   [tyokalut/YHTENAISTYS.md](tyokalut/YHTENAISTYS.md)
 
 Mitä ohj1:ssä on vielä tekemättä: [../TODO.md](../TODO.md).
-[KAYTTOONOTTO.md](KAYTTOONOTTO.md) ja [PURKUSUUNNITELMA.md](PURKUSUUNNITELMA.md)
-ovat ohj2:n alkuperäiset: työjärjestys tuotantoon ja se, mitä `convert.py`:stä
-voi poistaa, kun mdBookia ei enää tarvita. Käyttöönotto on tehty: mdBook on
-poistettu kaikista kirjoista (ohj1 2026-09-18, ohj2 2026-09-20). Purku on siis
-mahdollinen, mutta sitä ei ole aloitettu; se tehdään työkalurepoon, ja
-muunnokset ovat tarpeen niin kauan kuin `src/`:ssä on mdBookin merkkausta.
-Dokumenttien viittaukset README:n tarkistuslistaan ja PERUSTELUT.md:hen
-tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
 
 ## Käynnistys
 
@@ -32,8 +25,15 @@ tarkoittavat nyt työkalujen TAUSTA.md:tä ja PERUSTELUT.md:tä.
 ./zensical/run.sh 8003         # eri portti
 ./zensical/run.sh build        # pelkkä rakennus site/-hakemistoon
 ./zensical/run.sh test         # testit: koekirja ja tämä kirja
-./zensical/run.sh puhe ../src/git-ht-ohje.md   # vaiheittaisen ohjeen äänet
+./zensical/run.sh puhe         # ääneenluvun leikkeet (kirja.toml: [puhe]) ja
+                               # vaiheittaisen ohjeen äänet; --teksti ei tee ääniä
 ```
+
+Ääneenluku tarvitsee Azure Speech -avaimen (`AZURE_SPEECH_KEY`,
+`AZURE_SPEECH_REGION`). Leikkeet ovat erillisessä repossa
+[ohj1-puhe](https://github.com/ohj-perus-jy/ohj1-puhe), jonka `puhe` kloonaa
+kansioon `zensical/puhe/` ja johon se pushaa uudet leikkeet; julkaisu hakee
+sen samaan kansioon.
 
 Kloonin tai haaran vaihdon jälkeen submodule haetaan komennolla
 `git submodule update --init` (`run.sh` tekee sen itse, jos hakemisto on
@@ -45,10 +45,8 @@ huomauttaa, jos `tyokalut/` on eri versiossa kuin haara odottaa.
 
 ## Tämän kirjan omat tiedostot
 
-- `kirja.toml`: kirjan asetukset työkaluille. Tenttiohjeet siirretään
-  Tentti-sivun ja Git-HT-ohje Git-sivun alle (`[siirrot]`), etusivulta
-  poistetaan mdBookin käyttöliittymää kuvaava osio (`[poistettavat_osiot]`),
-  eivätkä tehtävien aloituspohjat ole sivuja (`ei_sivuja`).
+- `kirja.toml`: kirjan asetukset työkaluille. Tehtävien aloituspohjat eivät
+  ole sivuja (`ei_sivuja`).
 - `mkdocs.yml`: `site_name`, `site_url`, `copyright`, `repo_url` ja
   sivustovalikon lista (`extra.sites`). Teema, tyylit ja skriptit tulevat
   työkalujen `mkdocs-pohja.yml`:stä generoidun `nav.yml`:n kautta.
@@ -68,4 +66,5 @@ git add zensical/tyokalut && git commit -m "Työkalut: ..."
 
 Jokainen haara kiinnittää oman työkaluversionsa. `.github/workflows/pages.yml`
 kääntää samalla ajolla `main`in ja `dev`in, joten rakennetta koskeva muutos
-viedään molempiin samalla työnnöllä (merge-commit, ks. ../TODO.md).
+viedään molempiin samalla työnnöllä (merge-commit, ks.
+../CONTRIBUTING.md).

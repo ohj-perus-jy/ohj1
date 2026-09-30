@@ -19,8 +19,8 @@ tenttiin valmistautumiseen.
 
 ## Tentti
 
-* [Tentti](../tentti.md): ajankohdat, ilmoittautuminen ja arvostelu.
-* [Tenttiohjeet](../tenttiohjeet.md): tenttitilanteen käytännöt.
+* [Tentti](../tentti/index.md): ajankohdat, ilmoittautuminen ja arvostelu.
+* [Tenttiohjeet](../tentti/tenttiohjeet.md): tenttitilanteen käytännöt.
 * [Vanhoja tenttejä](https://users.jyu.fi/~anlakane/ohjelmointi1/tentit/)
   harjoittelua varten.
 

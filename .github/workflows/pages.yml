@@ -7,7 +7,7 @@
 # Pages-sivusto on yksi kokonaisuus: osittainen julkaisu pyyhkisi toisen.
 # Tämän tiedoston on oltava sama `main`issa ja `dev`:ssä; `main`-push ajaa
 # `main`in version. mdBook-julkaisu päättyi 2026-09-15 ja sen tiedostot
-# poistettiin 2026-09-18 (TODO.md, vaihe 5).
+# poistettiin 2026-09-18.
 name: Deploy site to Pages
 
 on:
@@ -31,6 +31,8 @@ jobs:
   # standardikirjaston; kaaviot (cache/svgbob/) ovat versionhallinnassa,
   # joten svgbobia ei tarvita. --strict kaataa ajon, jos jokin kaavio puuttuu
   # välimuistista: ilman sitä sivu julkaistaisiin kaavio koodilohkona.
+  # Ääneenluvun leikkeet ovat erillisessä repossa (kirja.toml: [puhe] repo),
+  # jonka tyokalut/puhe.py täyttää; --strict kaatuu myös, jos se puuttuu.
   zensical:
     strategy:
       matrix:
@@ -42,12 +44,17 @@ jobs:
     name: zensical (${{ matrix.ref }})
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ matrix.ref }}
           # Työkalut: zensical/tyokalut (kirjatyokalut-repo).
           submodules: true
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with:
+          repository: ohj-perus-jy/ohj1-puhe
+          path: zensical/puhe
+          fetch-depth: 1
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -59,7 +66,7 @@ jobs:
         run: |
           python3 tyokalut/convert.py --strict
           zensical build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact }}
           path: zensical/site
@@ -71,16 +78,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: site
           path: _site
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: site-dev
           path: _site/dev
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
