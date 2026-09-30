@@ -126,7 +126,7 @@ Jos solution on jo olemassa ja haluat lisätä siihen projektin, katso kohta
 [Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
 
 1. Valitse Riderin aloitusikkunasta `New Solution`. Jos jokin solution on jo
-   auki, sama löytyy valikosta File <i class="bi bi-chevron-right"></i> New Solution.
+   auki, sama löytyy valikosta *File* › *New Solution*.
    ![Uusi solution Linuxissa](./images/new_solution_linux.png)
 2. Valitse vasemmalta *Custom Templates* -listasta `FysiikkaPeli`. Jos listaa
    ei näy, Jypeli-projektimalleja ei ole asennettu; katso
@@ -209,8 +209,8 @@ public class Lumiukko : PhysicsGame
 Kaksi viimeistä riviä ovat valmista koodia, jolla peli sulkeutuu
 Esc-näppäimestä. Niihin ei tarvitse koskea.
 
-Käynnistä ohjelma valitsemalla Run <i class="bi bi-chevron-right"></i> Run
-'Lumiukko' tai painamalla yläpalkin vihreää kolmiota. Näytölle pitäisi avautua
+Käynnistä ohjelma valitsemalla *Run* ›
+*Run 'Lumiukko'* tai painamalla yläpalkin vihreää kolmiota. Näytölle pitäisi avautua
 ikkuna vaaleansinisellä taustalla. Ikkuna on tyhjä, ja se on tässä vaiheessa
 täysin oikein. Sulje ikkuna.
 
@@ -261,7 +261,7 @@ konsoliohjelma. Lisätään siihen toinen projekti.
 
 1. Klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
    painikkeella (Macissa kahdella sormella).
-2. Valitse Add <i class="bi bi-chevron-right"></i> New Project.
+2. Valitse *Add* › *New Project*.
 3. Valitse vasemmalta `ConsoleMain`-projektimalli.
 4. Anna nimeksi `HelloWorld` ja paina `Create`.
 5. Aja projekti ensimmäisellä kerralla klikkaamalla Explorerissa sen nimeä
@@ -332,8 +332,8 @@ tekoälyn käytöstä kurssilla kerrotaan sivulla
 ilmoituksen ensimmäinen rivi; usein siinä lukee tiedoston nimi ja
 rivinumero. Jos ilmoitus mainitsee paketin, jota ei löydy (*package* tai
 *restore*), Jypeliä ei ole vielä ladattu: tarkista verkkoyhteys ja käännä
-uudelleen valitsemalla Build <i class="bi bi-chevron-right"></i> Rebuild
-Solution.
+uudelleen valitsemalla *Build* ›
+*Rebuild Solution*.
 
 **Muutokset eivät näy.** Ajat luultavasti toista projektia. Katso yläpalkin
 pudotusvalikko.

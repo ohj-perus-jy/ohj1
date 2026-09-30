@@ -234,7 +234,7 @@ Kääntäjä ei välitä sisennyksistä lainkaan -- ohjelma kääntyisi, vaikka 
 
 > [!VINKKI]
 > Riderissä koko tiedoston sisennykset saa siistittyä kerralla valitsemalla
-> Code <i class="bi bi-chevron-right"></i> Reformat Code. Tee tämä tottumuksesta
+> *Code* › *Reformat Code*. Tee tämä tottumuksesta
 > aina ennen tehtävän palauttamista.
 
 ## Yhteenveto: ohjelman runko

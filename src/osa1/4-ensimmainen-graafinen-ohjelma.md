@@ -48,7 +48,7 @@ tehtyjen `Lumiukko`- ja `HelloWorld`-projektien jälkeen.
 1. Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin
    [HelloWorld](./3-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
    klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
-   painikkeella ja valitse Add <i class="bi bi-chevron-right"></i> New Project.
+   painikkeella ja valitse *Add* › *New Project*.
 2. Valitse vasemmalta `Fysiikkapeli`-projektimalli.
 3. Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös
    kooditiedoston (`YmpyraPeli.cs`) ja siinä olevan luokan, joten luokan nimi
