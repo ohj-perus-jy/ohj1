@@ -19,14 +19,10 @@ asiat: `zensical/tyokalut/YHTENAISTYS.md`.
 
 ## Kehitysympäristö
 
-- [ ] Devcontainerin kuva `ohj-mdbook-tooling` →
-      `mcr.microsoft.com/devcontainers/python:3.11-bookworm` ja feature
-      `ghcr.io/devcontainers/features/rust:1` (svgbob_cli), kuten
-      jypelidocsissa. Rust tarvitaan pysyvästi, koska bob-kaaviot piirretään
-      aina lähteen ascii-kaaviosta.
-- [ ] `ohj-mdbook-tooling` arkistoon (*Settings* › *Archive*), kun ohj1, ohj2
-      ja containerapps eivät enää käytä sitä (`git grep mdbook-tooling --
-      .devcontainer .github` tyhjä). GHCR-paketteja ei poisteta: vanhat
+- [ ] `ohj-mdbook-tooling` arkistoon (*Settings* › *Archive*), kun
+      containerapps ei enää käytä sitä (`git grep mdbook-tooling --
+      .devcontainer .github` tyhjä). Ohj1 ja ohj2 vaihtoivat 2026-10-01
+      jypelidocsin malliin: `python:3.11-bookworm` ja Rust-feature. GHCR-paketteja ei poisteta: vanhat
       commitit viittaavat tageihin `:devcontainer-latest` ja `:runner-latest`.
 
 ## Merkkaus
