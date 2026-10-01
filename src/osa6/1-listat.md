@@ -18,7 +18,13 @@ Taulukon koko on kiinteä. Kun alkioita lisätään ja poistetaan ohjelman suori
 
 ## Lista parametrina ja paluuarvona
 
-## Listojen testaaminen ComTestillä
+<!-- Lista on viitetyyppi kuten taulukko (luku 5.3): aliohjelma voi muuttaa
+     kutsujan listaa. Listojen testaaminen on luvussa 7.2. -->
+
+## Jypelissä
+
+<!-- Lista vihollisista: lisääminen, läpikäynti ja poistaminen, kun vihollinen
+     tuhoutuu. Taulukko ei tähän sovi, koska määrä muuttuu pelin aikana. -->
 
 ## Tehtävät
 

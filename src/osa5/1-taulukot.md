@@ -16,7 +16,13 @@ Taulukko (engl. *array*) on tietorakenne, johon voi tallentaa useita samantyyppi
 
 ## Taulukko on viite
 
+<!-- Lyhyesti: taulukkomuuttujassa on viite taulukkoon, ei itse alkioita.
+     Tarkemmin luvussa 5.3 Arvotyypit ja viitetyypit. -->
+
 ## Taulukko parametrina
+
+<!-- Aliohjelma saa viitteen samaan taulukkoon, joten se voi muuttaa
+     kutsujan taulukkoa. Seuraukset käsitellään luvussa 5.3. -->
 
 ## Tehtävät
 

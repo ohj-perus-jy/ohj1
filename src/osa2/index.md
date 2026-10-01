@@ -1,12 +1,13 @@
-# Osa 2: Muuttujat, ehdot ja aliohjelmat
+# Osa 2: Muuttujat, syöte, ehdot ja aliohjelmat
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
 > * osaat määritellä muuttujia, valita niille sopivan tietotyypin ja sijoittaa
 >   niihin arvoja
-> * osaat laskea aritmeettisia lausekkeita ja tiedät, miten tietotyyppi
->   vaikuttaa laskun tulokseen
+> * osaat lukea käyttäjältä tekstiä ja lukuja
+> * tiedät, miten tietotyyppi vaikuttaa laskun tulokseen, ja osaat muuntaa
+>   arvon tyypistä toiseen
 > * osaat kirjoittaa ehtolauseita vertailu- ja loogisilla operaattoreilla
 > * erotat lauseen ja lausekkeen toisistaan
 > * osaat jakaa ohjelman aliohjelmiin ja kutsua niitä

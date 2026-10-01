@@ -141,11 +141,12 @@ prosessorille tuotetaan.
 </details>
 
 Ohjelmointikielellä kirjoitettua tekstiä kutsutaan *lähdekoodiksi*. Jotta
-prosessori voisi suorittaa sen, lähdekoodi täytyy *kääntää* konekielelle.
-Kääntämisen tekee ohjelma nimeltä *kääntäjä*. Kääntäjä on kuin pikkutarkka
-äidinkielenopettaja: se ei päästä läpi yhtäkään puuttuvaa puolipistettä, mutta
-kertoo aina täsmälleen, millä rivillä vika on. Tähän tutustutaan käytännössä
-luvussa [Ensimmäinen ohjelma](./2-ensimmainen-ohjelma.md).
+prosessori voisi suorittaa C#-kielisen ohjelman, lähdekoodi täytyy *kääntää*
+konekielelle. Kääntämisen tekee ohjelma nimeltä *kääntäjä*. Kääntäjä on kuin
+pikkutarkka äidinkielenopettaja: se ei päästä läpi yhtäkään puuttuvaa
+puolipistettä, mutta kertoo aina täsmälleen, millä rivillä vika on. Tähän
+tutustutaan käytännössä luvussa
+[Ensimmäinen ohjelma](./2-ensimmainen-ohjelma.md).
 
 Ohjelmointikieliä on satoja. Tällä kurssilla käytetään **C#**-kieltä (lausutaan
 "c sharp"), joka on Microsoftin kehittämä ja laajasti käytetty kieli. Sillä
@@ -185,7 +186,7 @@ Kirjasto on siis valmista koodia, jota kutsutaan omasta ohjelmasta.
 Jypeli hoitaa ikkunan avaamisen, piirtämisen, fysiikan ja näppäimistön
 lukemisen, jotta sinä voit keskittyä siihen, mitä pelissä tapahtuu.
 Ensimmäinen Jypeli-ohjelma tehdään luvussa
-[Ensimmäinen graafinen ohjelma](./4-ensimmainen-graafinen-ohjelma.md).
+[Ensimmäinen graafinen ohjelma](./5-ensimmainen-graafinen-ohjelma.md).
 
 ## Ohjelmoijan työtapa
 

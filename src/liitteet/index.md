@@ -11,6 +11,6 @@ suorittamiseen, mutta ne syventävät ymmärrystä ja niihin viitataan lukujen
 * [Valinnaiset parametrit ja oletusarvot](./oletusarvot.md) (liittyy osaan 3)
 * [Muokattavat merkkijonot: StringBuilder](./stringbuilder.md) (liittyy osaan 4)
 * [Lambda-lausekkeet](./lambda-lausekkeet.md) (liittyy osaan 6)
-* [C#-kielen tyyppijärjestelmästä](./tyyppijarjestelma.md) (liittyy osaan 6)
+* [C#-kielen tyyppijärjestelmästä](./tyyppijarjestelma.md) (liittyy osaan 5)
 * [Yleisimmät virheilmoitukset](./virheilmoitukset.md)
 * [Sanasto](./sanasto.md)

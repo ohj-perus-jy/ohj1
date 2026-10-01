@@ -148,12 +148,15 @@ yhdessä muodossa. Siksi laskeva aliohjelma kirjoitetaan funktioksi, joka *ei
 tulosta mitään*. Tulostaminen jätetään kutsujalle, tavallisesti pääohjelmalle.
 Palauttavaa funktiota on myös helppo testata: testi kutsuu funktiota ja vertaa
 paluuarvoa odotettuun (ks. [Testaaminen
-ComTestillä](../osa4/4-testaaminen-comtestilla.md)). Ruudulle tulostettua
+ComTestillä](../osa7/2-testaaminen-comtestilla.md)). Ruudulle tulostettua
 tekstiä testi ei näe.
 
-Sama koskee muitakin sivuvaikutuksia. Se, että aliohjelma tulostaa jotakin tai
-lisää peliin olion, ei ole palauttamista. Aliohjelma palauttaa arvon vain
-`return`-lauseella.
+Tulostaminen on esimerkki aliohjelman *sivuvaikutuksesta* (engl. *side
+effect*): aliohjelma muuttaa jotakin itsensä ulkopuolella, esimerkiksi
+tulostaa ruudulle tai lisää peliin olion. Sivuvaikutus ei ole palauttamista.
+Aliohjelma palauttaa arvon vain `return`-lauseella. Sivuvaikutuksiin palataan
+luvussa [Arvotyypit ja viitetyypit](../osa5/3-arvotyypit-ja-viitetyypit.md),
+jossa aliohjelma muuttaa kutsujan taulukkoa.
 
 ## Tehtävät
 

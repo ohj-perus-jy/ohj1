@@ -1,20 +1,21 @@
-# Osa 4: Toisto, merkkijonot ja testaaminen
+# Osa 4: Toisto, merkkijonot ja satunnaisuus
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
 > * osaat kirjoittaa toistolauseita `while`- ja `for`-rakenteilla
-> * osaat käsitellä merkkijonoja valmiilla metodeilla
+> * osaat käsitellä merkkijonoja valmiilla metodeilla ja tarkistaa käyttäjän
+>   syötteen
+> * osaat käyttää satunnaislukuja ohjelmassa
 > * osaat kommentoida koodia ja dokumentoida aliohjelman
 >   dokumentaatiokommenteilla
-> * osaat testata funktion ComTestillä
 
 ## Luvut
 
 1. [Toistolauseet](./1-toistolauseet.md)
 2. [Merkkijonot](./2-merkkijonot.md)
-3. [Kommentointi ja dokumentointi](./3-kommentointi-ja-dokumentointi.md)
-4. [Testaaminen ComTestillä](./4-testaaminen-comtestilla.md)
+3. [Satunnaisluvut](./3-satunnaisluvut.md)
+4. [Kommentointi ja dokumentointi](./4-kommentointi-ja-dokumentointi.md)
 
 ## Luennot
 
@@ -23,7 +24,6 @@ luennot päivitetään tähän.
 
 * [Luento 9: Toistolauseet](../luennot/luento9.md)
 * [Luento 8: Harjoitustyö, merkkijonot](../luennot/luento8.md)
-* [Luento 7: Testaaminen, ComTest](../luennot/luento7.md)
 
 ## Tehtävät
 

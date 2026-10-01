@@ -15,7 +15,7 @@ esitellään.
 | lauseke | expression | [2.4](../osa2/4-lauseet-ja-lausekkeet.md) |
 | muuttuja | variable | [2.1](../osa2/1-muuttujat-ja-tietotyypit.md) |
 | tietotyyppi | data type | [2.1](../osa2/1-muuttujat-ja-tietotyypit.md) |
-| operaattori | operator | [2.2](../osa2/2-operaattorit.md) |
+| operaattori | operator | [1.3](../osa1/3-laskutoimitukset.md) |
 | ehtolause | conditional statement | [2.3](../osa2/3-ehtolauseet.md) |
 | aliohjelma | subroutine, method | [2.5](../osa2/5-aliohjelmat.md) |
 | parametri | parameter | [3.1](../osa3/1-parametrit-ja-argumentit.md) |
@@ -26,14 +26,15 @@ esitellään.
 | olio | object | [3.4](../osa3/4-jypeli-ja-oliot.md) |
 | paluuarvo | return value | [3.2](../osa3/2-aliohjelman-paluuarvo.md) |
 | funktio | function | [3.2](../osa3/2-aliohjelman-paluuarvo.md) |
+| sivuvaikutus | side effect | [3.2](../osa3/2-aliohjelman-paluuarvo.md#funktio-joka-ei-tulosta) |
 | kuormittaminen | overloading | [3.1](../osa3/1-parametrit-ja-argumentit.md#kuormittaminen) |
-| yksikkötesti | unit test | [4.4](../osa4/4-testaaminen-comtestilla.md) |
+| yksikkötesti | unit test | [7.2](../osa7/2-testaaminen-comtestilla.md) |
 | toistolause, silmukka | loop | [4.1](../osa4/1-toistolauseet.md) |
 | merkkijono | string | [4.2](../osa4/2-merkkijonot.md) |
 | taulukko | array | [5.1](../osa5/1-taulukot.md) |
 | indeksi | index | [5.1](../osa5/1-taulukot.md) |
 | lista | list | [6.1](../osa6/1-listat.md) |
 | sanakirja | dictionary | [6.2](../osa6/2-sanakirjat.md) |
-| viitetyyppi | reference type | [6.3](../osa6/3-arvotyypit-ja-viitetyypit.md) |
+| viitetyyppi | reference type | [5.3](../osa5/3-arvotyypit-ja-viitetyypit.md) |
 | rekursio | recursion | [7.1](../osa7/1-rekursio.md) |
-| poikkeus | exception | [7.2](../osa7/2-poikkeukset.md) |
+| poikkeus | exception | [6.3](../osa6/3-tiedostot-ja-poikkeukset.md) |

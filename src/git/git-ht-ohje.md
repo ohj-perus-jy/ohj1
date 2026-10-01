@@ -409,7 +409,7 @@ Valitse **Put solution and project in the same directory**. Harjoitustyössä
 on vain yksi projekti, joten solution ja projekti tulevat yhteen kansioon
 `harjoitustyo/PertinSeikkailut`; Rider näyttää sen kentän alla. Demoissa
 ruutu jätetään tyhjäksi, koska samaan solutioniin tulee monta projektia, ks.
-[Uusi solution](../osa1/3-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+[Uusi solution](../osa1/4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
 
 Jätä **Create Git repository** valitsematta: harjoitustyökansio on jo
 Git-varasto, eikä sen sisään saa syntyä toista. Paina lopuksi **Create**.

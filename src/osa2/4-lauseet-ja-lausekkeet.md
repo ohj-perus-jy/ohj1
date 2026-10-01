@@ -117,7 +117,7 @@ int b = a++;           // Lausekkeena: b saa arvon 4, ja a on sen jälkeen 5.
 Jälkimmäinen rivi on laillista C#:a, mutta sitä kannattaa välttää: lukija
 joutuu pysähtymään miettimään, kumpi arvo `b`:hen päätyi. Operaattoreista ja
 `++`:n kahdesta muodosta kerrottiin luvussa
-[Operaattorit ja laskutoimitukset](./2-operaattorit.md).
+[Operaattorit ja tyyppimuunnokset](./2-operaattorit.md).
 
 Tässä esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus. Se, mihin
 "lokeroon" jokin koodinpätkä kuuluu, vaihtelee ohjelmointikielen mukaan.

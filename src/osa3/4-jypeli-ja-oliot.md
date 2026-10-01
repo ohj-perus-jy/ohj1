@@ -4,7 +4,7 @@
 > Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Luvussa [Ensimmäinen graafinen ohjelma](../osa1/4-ensimmainen-graafinen-ohjelma.md)
+Luvussa [Ensimmäinen graafinen ohjelma](../osa1/5-ensimmainen-graafinen-ohjelma.md)
 luotiin peliolio ja lisättiin se peliin. Tässä luvussa selitetään, mitä
 silloin oikeastaan tapahtui: mikä on olio, miten olio luodaan, miten sen
 ominaisuuksia muutetaan ja miten sen metodeja kutsutaan. Samalla opitaan
@@ -40,6 +40,15 @@ kirjoittamaan omia aliohjelmia Jypeli-peliin.
 <!-- Jypelissä aliohjelmat kirjoitetaan ilman `static`-sanaa (`public void
      PiirraPallo(...)`). Miksi: aliohjelma kuuluu peli-oliolle. Kutsuminen
      Beginistä. -->
+
+## Pelin ohjaaminen näppäimistöllä
+
+<!-- Vähimmäisesittely, jotta pelistä tulee interaktiivinen:
+     `Keyboard.Listen(Key.Left, ButtonState.Down, LiikutaPelaajaa, "Liikuta
+     vasemmalle", ...)`. Kuuntelija kutsuu omaa aliohjelmaa, kun näppäintä
+     painetaan. Pelaaja on attribuutti, koska käsittelijä tarvitsee sen
+     (luku 3.3). Muut ohjaimet ja tapahtumat: harjoitustyön ohjeet ja Jypelin
+     wiki. -->
 
 ## Dokumentaation lukeminen
 

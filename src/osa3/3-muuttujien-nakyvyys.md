@@ -20,7 +20,7 @@ käytettävissä. Asia tulee vastaan heti, kun ohjelmassa on useita aliohjelmia.
 ## Parametrit ovat paikallisia muuttujia
 
 <!-- Parametrin muuttaminen ei muuta kutsujan muuttujaa (arvotyypeillä).
-     Viitetyypit käsitellään luvussa 6.3. -->
+     Viitetyypit käsitellään luvussa 5.3. -->
 
 ## Attribuutit
 
@@ -28,6 +28,23 @@ Vaikka tällä kurssilla ei käsitellä olio-ohjelmointia, Jypeli-ohjelmissa
 käytämme luokan attribuutteja. Attribuutit ovat muuttujia, jotka määritellään
 luokan sisällä, mutta aliohjelmien ulkopuolella. Attribuutit ovat olemassa koko
 luokan elinkaaren ajan, ja ne näkyvät kaikissa luokan aliohjelmissa. 
+
+<!-- Vaiheessa B:
+     - Näkyvyyden kolme tasoa: lohko, aliohjelma, luokka. Attribuutti on
+       C#:n vastine muiden kielten globaalille muuttujalle, mutta vain luokan
+       sisällä.
+     - Miksi Jypelissä: tapahtumankäsittelijät (törmäys, näppäin, ajastin)
+       kutsutaan pelin puolesta, joten niille ei voi välittää omia
+       parametreja. Esimerkki: `private PhysicsObject pelaaja;` ja
+       `private IntMeter pisteet;`, joita käsittelijä käyttää.
+     - Sääntö: parametri aina kun voi, attribuutti vain kun käsittelijä sitä
+       tarvitsee. Kiinteät arvot luokkatason vakioiksi (`const`). Sama
+       vaatimus on harjoitustyön ohjeissa (../harjoitustyo.md, "Ei turhia
+       peliluokan attribuutteja").
+     - Konsoliohjelmissa attribuutteja ei tällä kurssilla tarvita.
+     - Miksi välttää: aliohjelma, joka lukee tai muuttaa attribuuttia, ei
+       enää nojaa vain parametreihinsa (vrt. sivuvaikutus, luku 3.2), ja
+       virheen syytä on vaikeampi paikantaa. -->
 
 ## Virhe: muuttujaa ei ole olemassa nykyisessä kontekstissa
 

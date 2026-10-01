@@ -253,7 +253,7 @@ funktiossa olisi `GetLength(0)` ja `GetLength(1)` vaihtaneet paikkaa,
 neliönmuotoinen lauta ei paljastaisi virhettä, mutta suorakulmainen
 paljastaa. Lisää ComTestin ja kaksiulotteisten taulukoiden yhdistämisestä,
 myös taulukon palauttavan funktion testaamisesta, on luvun
-[Testaaminen ComTestillä](../osa4/4-testaaminen-comtestilla.md#kaksiulotteiset-taulukot)
+[Testaaminen ComTestillä](../osa7/2-testaaminen-comtestilla.md#kaksiulotteiset-taulukot)
 lopussa.
 
 Kaksiulotteinen taulukko on yksiulotteisen tapaan

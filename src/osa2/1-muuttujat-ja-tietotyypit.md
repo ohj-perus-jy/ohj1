@@ -249,6 +249,38 @@ public class Tervehdys
 }
 ```
 
+## Syötteen lukeminen
+
+Tähän asti muuttujien arvot on kirjoitettu lähdekoodiin. Ohjelmasta tulee
+kiinnostavampi, kun arvon antaa käyttäjä. `Console.ReadLine` pysäyttää
+ohjelman odottamaan, kunnes käyttäjä kirjoittaa rivin tekstiä ja painaa
+Enter-näppäintä. Kirjoitettu rivi tallennetaan muuttujaan.
+
+```csharp,ignore
+Console.Write("Mikä on nimesi? ");
+string nimi = Console.ReadLine();
+Console.WriteLine($"Hei, {nimi}!");
+```
+
+Ohjelman ajo näyttää tältä, kun käyttäjä kirjoittaa nimekseen Maija:
+
+```text
+Mikä on nimesi? Maija
+Hei, Maija!
+```
+
+Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
+
+Kaksi huomiota:
+
+* **`Console.Write` ei vaihda riviä.** Se toimii kuten `Console.WriteLine`,
+  mutta jättää kohdistimen tulostetun tekstin perään. Siksi käyttäjän vastaus
+  tulee samalle riville kysymyksen kanssa.
+* **Syöte on aina merkkijono.** Vaikka käyttäjä kirjoittaisi `20`,
+  `Console.ReadLine` antaa tekstin `"20"`, ei lukua. Luvuksi se muunnetaan
+  seuraavassa luvussa
+  [Operaattorit ja tyyppimuunnokset](./2-operaattorit.md#luvun-lukeminen-käyttäjältä).
+
 ## Vakiot
 
 Joskus arvo ei saa muuttua ohjelman suorituksen aikana: valon nopeus, pelin
@@ -321,9 +353,10 @@ on kirjoitettu eri tavalla kuin määrittelyssä (`Pisteet` vs. `pisteet`).
 ## Yhteenveto
 
 * Muuttuja on nimetty paikka yhdelle arvolle. Sillä on tyyppi, joka ei muutu.
-* Määrittely: `tyyppi nimi = arvo;`. Sijoitus: `nimi = lauseke;`.
-* Sijoitus kopioi arvon. Muuttujan arvo muuttuu vain sijoittamalla.
+* Määrittely: `tyyppi nimi = arvo;`. Sijoitus `nimi = lauseke;` kopioi arvon,
+  ja muuttujan arvo muuttuu vain sijoittamalla.
 * Kurssin perustyypit: `int`, `double`, `string`, `bool`, `char`.
+* `Console.ReadLine` lukee käyttäjän kirjoittaman rivin merkkijonona.
 * Nimeä muuttujat kuvaavasti camelCase-tyylillä. Kiinteät arvot vakioiksi
   `const`-avainsanalla.
 

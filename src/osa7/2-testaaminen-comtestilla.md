@@ -210,9 +210,9 @@ tarkkuus riittää, sen voi vaihtaa `#TOLERANCE`-rivillä ennen testejä:
 
 ### Taulukot ja listat
 
-Taulukoihin tutustutaan vasta seuraavassa osassa, mutta niiden testaaminen on
-koottu tähän samaan paikkaan. Taulukkoa voi verrata suoraan toiseen taulukkoon
-ja listaa toiseen listaan:
+[Taulukot](../osa5/1-taulukot.md) ja [listat](../osa6/1-listat.md) ovat tuttuja
+osista 5 ja 6. Taulukkoa voi verrata suoraan toiseen taulukkoon ja listaa
+toiseen listaan:
 
 ```csharp,ignore
 /// <summary>
@@ -399,6 +399,13 @@ ja tyhjän rivin jälkeen taulukko, jonka jokaisesta rivistä tulee yksi testi:
 
 Otsikkorivillä `|`-merkin ja sarakkeen nimen välissä pitää olla vähintään yksi
 välilyönti.
+
+### Satunnaisuutta käyttävä aliohjelma
+
+<!-- Vaiheessa B: satunnaista tulosta ei voi verrata kiinteään arvoon.
+     Vaihtoehdot: anna `Random`-oliolle siemenluku (`new Random(42)`), jolloin
+     lukusarja on joka ajolla sama, tai testaa ominaisuutta (tulos on välillä
+     1–6). Liittyy lukuun 4.3 Satunnaisluvut. -->
 
 ## Tehtävät
 

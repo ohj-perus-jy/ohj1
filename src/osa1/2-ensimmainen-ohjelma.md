@@ -139,19 +139,37 @@ komentorivillä](../liitteet/kaantaminen-komentorivilla.md).
 
 <details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
 
-Monet kielet C#, Java ja C++, ovat *käännettäviä*, kun taas osa, kuten Python ja
-JavaScript ovat *tulkattavia*. Tulkatuissa kielissä lähdekoodia suoritetaan
-ilman erillistä käännösvaihetta. Tällöin lähdekoodia ajetaan lause lauseelta
-tulkin (engl. *interpreter*) avulla. Käännetyt kielet ovat olleet perinteisesti
-nopeampia, koska käännösvaiheessa voidaan tehdä optimointeja, joita tulkki ei
-pysty tekemään reaaliajassa. 
+Monet kielet, kuten C#, Java ja C++, ovat *käännettäviä*. Kaikkia kieliä ei
+kuitenkaan käännetä etukäteen konekielelle: osa, kuten Python ja JavaScript,
+on *tulkattavia*. Tulkattavan kielen ohjelman suorittaa *tulkki* (engl.
+*interpreter*): ohjelma, joka lukee lähdekoodia ja toimii sen mukaan sitä
+mukaa kuin lukee.
 
-Nykyaikaiset tulkit ovat kuitenkin pystyneet kuromaan tätä eroa jossain määrin
-kiinni. Jos käännetyn ja tulkatun kielen välillä täytyy valita, voi valinta toki
-toki erityisissä tilanteissa (kuten aikakriittisissä tai resurssirajoitteisissa
-sovelluksissa) riippua suorituskyvystä, mutta usein valinta riippuu myös muista
+* **Python.** Kun Python-ohjelma käynnistetään, Python-tulkki saa
+  lähdekooditiedoston sellaisenaan ja alkaa suorittaa sitä ylhäältä alas.
+  Erillistä käännösvaihetta ei ole, eikä ohjelmasta synny omaa suoritettavaa
+  tiedostoa. Siksi ohjelman ajamiseen tarvitaan aina sekä lähdekoodi että
+  tulkki.
+* **JavaScript.** Verkkosivun mukana selaimeen ladataan JavaScript-lähdekoodia,
+  ja selaimessa oleva tulkki suorittaa sen. Sama lähdekoodi toimii
+  puhelimessa ja pöytäkoneessa, koska kummassakin on oma tulkkinsa.
+
+Ero näkyy ohjelmoijalle ennen kaikkea virheissä. Kääntäjä käy koko ohjelman
+läpi ennen kuin riviäkään suoritetaan, joten se löytää kirjoitusvirheen myös
+sellaiselta riviltä, jolle ohjelma päätyy vain harvoin. Tulkki huomaa monet
+virheet vasta, kun suoritus tulee virheelliselle riville. Ohjelma voi siis
+toimia pitkään ja kaatua vasta sitten.
+
+Käännetyt kielet ovat olleet perinteisesti nopeampia, koska käännösvaiheessa
+voidaan tehdä optimointeja, joita tulkki ei pysty tekemään reaaliajassa. Raja
+ei kuitenkaan ole jyrkkä: nykyaikaiset tulkit kääntävät usein suoritettavia
+osia konekielelle ajon aikana ja ovat näin kuroneet eroa kiinni.
+
+Jos käännetyn ja tulkatun kielen välillä täytyy valita, valinta voi
+erityisissä tilanteissa (kuten aikakriittisissä tai resurssirajoitteisissa
+sovelluksissa) riippua suorituskyvystä. Usein se riippuu kuitenkin muista
 tekijöistä, kuten ekosysteemistä (esimerkiksi saatavilla olevat kirjastot) ja
-kehittäjäyhteisöstä. 
+kehittäjäyhteisöstä.
 
 </details>
 

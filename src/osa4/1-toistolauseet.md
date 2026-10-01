@@ -98,6 +98,19 @@ for (int i = 1; i <= 10; i++)
 }
 ```
 
+## Välitulosten tulostaminen
+
+<!-- Vaiheessa B: kun silmukka ei toimi odotetusti, tulosta silmukkamuuttuja
+     ja välitulos joka kierroksella (`Console.WriteLine($"i={i}, summa={summa}")`).
+     Näin näkee, millä kierroksella lasku menee vikaan. Tulostukset poistetaan
+     lopuksi. Debuggeri tekee saman ilman koodin muuttamista: luku 5.4. -->
+
+## Jypelissä
+
+<!-- Vaiheessa B: silmukka luo kymmenen estettä riviin (`for`, x-koordinaatti
+     lasketaan silmukkamuuttujasta). Jatkaa osan 3 peliä; seuraavassa luvussa
+     4.3 esteet sijoitetaan satunnaisesti. -->
+
 ## Tehtävät
 
 <!-- Tehtävät lisätään vaiheessa B. -->

@@ -181,7 +181,7 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
-      solution](./osa1/3-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      solution](./osa1/4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
       ladattu etävarastostasi paikalliseksi git-varastoksi.
  1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
@@ -194,7 +194,7 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
-      solution](./osa1/3-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      solution](./osa1/4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan harjoitustyökansioon,
       jonka purit vaiheessa 1.
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja

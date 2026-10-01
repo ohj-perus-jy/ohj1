@@ -5,6 +5,8 @@
 >
 > * osaat selittää omin sanoin, mitä algoritmi, ohjelma ja ohjelmointikieli ovat
 > * osaat kirjoittaa, kääntää ja suorittaa tekstiä tulostavan C#-ohjelman
+> * osaat laskea ohjelmassa aritmeettisilla operaattoreilla ja tiedät, miten
+>   kokonaislukujen jako eroaa liukulukujen jaosta
 > * osaat asentaa kehitysympäristön ja luoda siihen uuden solutionin ja projektin
 > * osaat tehdä yksinkertaisen graafisen ohjelman Jypeli-kirjastolla
 
@@ -12,8 +14,9 @@
 
 1. [Mitä ohjelmointi on?](./1-mita-ohjelmointi-on.md)
 2. [Ensimmäinen ohjelma](./2-ensimmainen-ohjelma.md)
-3. [Ohjelmointiympäristö kuntoon](./3-ohjelmointiymparisto-kuntoon.md)
-4. [Ensimmäinen graafinen ohjelma](./4-ensimmainen-graafinen-ohjelma.md)
+3. [Laskutoimitukset](./3-laskutoimitukset.md)
+4. [Ohjelmointiympäristö kuntoon](./4-ohjelmointiymparisto-kuntoon.md)
+5. [Ensimmäinen graafinen ohjelma](./5-ensimmainen-graafinen-ohjelma.md)
 
 ## Luennot
 

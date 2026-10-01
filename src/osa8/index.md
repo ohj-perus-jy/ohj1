@@ -1,15 +1,13 @@
-# Osa 8: Satunnaisluvut ja kertaus
+# Osa 8: Kertaus
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * osaat käyttää satunnaislukuja ohjelmassa
 > * osaat kerrata kurssin keskeiset asiat ja valmistautua tenttiin
 
 ## Luvut
 
-1. [Satunnaisluvut](./1-satunnaisluvut.md)
-2. [Kertaus ja tenttiin valmistautuminen](./2-kertaus.md)
+1. [Kertaus ja tenttiin valmistautuminen](./1-kertaus.md)
 
 ## Luennot
 

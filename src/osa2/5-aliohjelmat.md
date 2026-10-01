@@ -38,8 +38,8 @@ Ohjelmissa aliohjelmia tarvitaan neljästä syystä.
   on kuin hyvin nimetty muuttuja: se säästää kommentin ja lukijan hermot.
 * **Pienen palan voi testata erikseen.** Kolmensadan rivin `Begin`-aliohjelmasta
   on vaikea sanoa, toimiiko se. Kymmenen rivin aliohjelmasta sen näkee
-  kokeilemalla. Osassa 4 kokeilu annetaan koneen tehtäväksi: aliohjelmalle
-  kirjoitetaan [testit](../osa4/4-testaaminen-comtestilla.md), jotka ajetaan
+  kokeilemalla. Osassa 7 kokeilu annetaan koneen tehtäväksi: aliohjelmalle
+  kirjoitetaan [testit](../osa7/2-testaaminen-comtestilla.md), jotka ajetaan
   napin painalluksella.
 
 Hyvä aliohjelma on *itsenäinen*: se tekee tehtävänsä samalla tavalla
@@ -304,7 +304,7 @@ aliohjelma. Ääkkösiä ei käytetä, kuten ei muuttujissakaan: `PiirraTausta`,
 ## Aliohjelmat Jypelissä
 
 Pelissä aliohjelmien hyöty näkyy heti. Osan 1 [aurinko ja
-talo](../osa1/4-ensimmainen-graafinen-ohjelma.md#ensimmäinen-jypeli-ohjelma)
+talo](../osa1/5-ensimmainen-graafinen-ohjelma.md#ensimmäinen-jypeli-ohjelma)
 -esimerkki mahtui vielä yhteen `Begin`-aliohjelmaan, mutta jo muutaman olion
 jälkeen `Begin` on seinä koodia. Jaetaan se osiin:
 

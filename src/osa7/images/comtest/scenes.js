@@ -1,4 +1,4 @@
-/* Kohtaukset sivulle osa4/4-testaaminen-comtestilla.md. Piirtoavut (ui) ja animaation merkinnät
+/* Kohtaukset sivulle osa7/2-testaaminen-comtestilla.md. Piirtoavut (ui) ja animaation merkinnät
  * (data-type, data-show, data-hide, data-wait, data-ring, data-order):
  * zensical/tyokalut/assets/js/walkthrough.js.
  *

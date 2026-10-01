@@ -1,34 +1,29 @@
-# Operaattorit ja laskutoimitukset
+# Operaattorit ja tyyppimuunnokset
 
 *Operaattorit* ovat merkkejä, jotka tekevät jotakin arvoille: laskevat yhteen,
-vertaavat, yhdistävät. Tässä luvussa opitaan laskemaan C#:lla ja samalla
-huomataan, että tietokone laskee hieman eri tavalla kuin peruskoulussa
-opetettiin. Se ei ole rikki. Se vain noudattaa sääntöjä pilkuntarkasti.
+vertaavat, yhdistävät. Luvussa [Laskutoimitukset](../osa1/3-laskutoimitukset.md)
+laskettiin valmiiksi kirjoitetuilla luvuilla. Nyt lasketaan muuttujilla, ja
+silloin muuttujan tyyppi ratkaisee, mitä operaattori tekee. Tässä luvussa
+opitaan myös muuntamaan arvo tyypistä toiseen, lukemaan luku käyttäjältä sekä
+vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
 
-## Mihin laskentaa tarvitaan?
+## Mihin operaattoreita tarvitaan?
 
-* **Ostoskorin loppusumma.** Tuotteiden hinnat lasketaan yhteen, alennus
-  vähennetään prosentteina ja arvonlisävero lisätään. Kolme operaattoria ja
-  yksi sulkupari.
-* **Painoindeksi.** Paino jaetaan pituuden neliöllä. Jos jakolaskun tekee
-  kokonaisluvuilla, tulos on aina 0, ja se on tämän luvun tärkein opetus.
-* **Pelin fysiikka.** Jokaisella ruudunpäivityksellä pallon paikkaan lisätään
-  sen nopeus, ja nopeuteen lisätään painovoima. Peli on käytännössä
-  yhteenlaskua kuusikymmentä kertaa sekunnissa.
+* **Painoindeksi.** Paino jaetaan pituuden neliöllä. Jos paino ja pituus ovat
+  kokonaislukumuuttujissa, jakolasku katkaisee desimaalit, ja tarvitaan
+  tyyppimuunnos.
+* **Käyttäjän syöte.** Käyttäjän kirjoittama ikä on tekstiä. Ennen kuin sillä
+  voi laskea, teksti on muunnettava luvuksi.
+* **Pelin pistelaskuri.** "Lisää pisteisiin kymmenen" on niin yleinen
+  toimenpide, että sille on oma lyhennysmerkintänsä `pisteet += 10`.
 * **Ehdot.** "Onko pelaajalla tarpeeksi rahaa?" on vertailu `raha >= hinta`,
   jonka tulos on totuusarvo. Seuraavan luvun ehtolauseet rakentuvat näiden
   vertailujen varaan.
 
-## Aritmeettiset operaattorit
+## Laskeminen muuttujilla
 
-Aritmeettisia operaattoreita käytetään matemaattisten laskutoimitusten
-suorittamiseen.
-
-   - `+` yhteenlasku
-   - `-` vähennyslasku
-   - `*` kertolasku
-   - `/` jakolasku
-   - `%` jakojäännös
+Aritmeettiset operaattorit `+`, `-`, `*`, `/` ja `%` toimivat muuttujilla
+samoin kuin [luvuilla](../osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit).
 
 ```csharp
 using System;
@@ -48,39 +43,15 @@ public class Laskuja
 }
 ```
 
-Neljäs tulostusrivi ansaitsee huomion: `10 / 3` on `3`, ei `3.333…`.
+Osasta 1 tuttu
+[kokonaislukujako](../osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös)
+voidaan nyt sanoa tarkemmin: kun jaettava ja jakaja ovat molemmat tyyppiä
+`int`, myös tulos on `int` ja desimaaliosa katkaistaan pois. Muuttujilla virhe
+on vielä kavalampi kuin luvuilla, koska rivistä `a / b` ei näe tyyppejä.
+Ne on katsottava muuttujien määrittelystä.
 
-### Kokonaislukujako ja jakojäännös
-
-Kun jaettava ja jakaja ovat molemmat kokonaislukuja (`int`), myös tulos on
-kokonaisluku: desimaaliosa katkaistaan pois. `7 / 2` on `3`, ja `1 / 2` on `0`.
-Tämä on yleisin aloittelijan laskuvirhe, ja se on kavala, koska kääntäjä ei
-huomauta mitään. Ohjelma vain laskee väärin.
-
-Katkaistu osa ei kuitenkaan katoa: *jakojäännösoperaattori* `%` antaa sen,
-mitä jakolaskusta jää yli. `7 % 2` on `1`, koska 7 = 2 · 3 + 1. Jakojäännös on
-yllättävän hyödyllinen:
-
-```csharp
-using System;
-
-public class Jakojaannos
-{
-    public static void Main()
-    {
-        int sekunnit = 754;
-        Console.WriteLine($"{sekunnit / 60} min {sekunnit % 60} s"); // 12 min 34 s
-
-        int luku = 17;
-        Console.WriteLine(luku % 2);   // 1 -> luku on pariton (parillisella tulos on 0)
-    }
-}
-```
-
-### Liukulukulaskenta
-
-Jos ainakin toinen laskun osapuolista on liukuluku (`double`), tulos on
-liukuluku ja desimaalit säilyvät.
+Jos ainakin toinen osapuoli on `double`, tulos on `double` ja desimaalit
+säilyvät.
 
 ```csharp
 using System;
@@ -92,23 +63,21 @@ public class Liukuluvut
         double x = 10;
         int y = 3;
         Console.WriteLine(x / y);        // 3.3333333333333335
-        Console.WriteLine(10.0 / 3);     // 3.3333333333333335
-        Console.WriteLine(10 / 3);       // 3
-        Console.WriteLine(10 / 3.0);     // 3.3333333333333335
+        Console.WriteLine(y / 2);        // 1
+        Console.WriteLine(y / 2.0);      // 1.5
     }
 }
 ```
 
-Tuloksen viimeinen numero `5` ei ole kirjoitusvirhe, vaan
-[liukulukujen](1-muuttujat-ja-tietotyypit.md#perustietotyypit) epätarkkuutta.
-Siksi kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus:
+[Liukulukujen](1-muuttujat-ja-tietotyypit.md#perustietotyypit) epätarkkuuden
+vuoksi kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus:
 `0.1 + 0.2 == 0.3` on C#:ssa `false`. Lisää aiheesta kerrotaan liitteessä
 [Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
 Kokonaisluvun jakaminen nollalla kaataa ohjelman
-(`DivideByZeroException`). Liukuluvun jakaminen nollalla ei kaada: `1.0 / 0`
-on `∞` (`Infinity`), mikä on matemaattisesti kyseenalaista mutta käytännössä
-kätevää.
+(`DivideByZeroException`). Liukuluvun jakaminen nollalla ei kaada: jos `x` on
+`double`, `x / 0` on `∞` (`Infinity`), mikä on matemaattisesti kyseenalaista
+mutta käytännössä kätevää.
 
 ### Sama operaattori, eri tyypit
 
@@ -121,30 +90,9 @@ Selvin esimerkki on `+`. Lukujen välissä se laskee yhteen, mutta merkkijonojen
 välissä se liittää tekstit peräkkäin, kuten
 [edellisen luvun tervehdyksessä](1-muuttujat-ja-tietotyypit.md#muuttujan-tulostaminen).
 Jos vain toinen osapuoli on merkkijono, toinen muutetaan ensin tekstiksi.
-
-```csharp
-using System;
-
-public class PlusMerkki
-{
-    public static void Main()
-    {
-        Console.WriteLine(2 + 3);                 // 5
-        Console.WriteLine("2" + "3");             // 23
-        Console.WriteLine("Summa: " + 2 + 3);     // Summa: 23  (!)
-        Console.WriteLine("Summa: " + (2 + 3));   // Summa: 5
-    }
-}
-```
-
-Kolmas rivi yllättää. Lauseke lasketaan vasemmalta oikealle, joten ensin
-`"Summa: " + 2` yhdistetään merkkijonoksi `"Summa: 2"`, ja sen perään liitetään
-vielä `3`. Sulkeet korjaavat asian, ja interpoloitu merkkijono
-`$"Summa: {2 + 3}"` välttää koko ongelman.
-
-Kaikkia operaattoreita ei ole määritelty kaikille tyypeille. Merkkijonoille ei
-ole kertolaskua, joten `"abc" * 2` ei käänny: `CS0019: Operator '*' cannot be
-applied to operands of type 'string' and 'int'`.
+Siksi `"Summa: " + a + b` liittää luvut tekstin perään eikä laske niitä yhteen.
+Sulkeet `"Summa: " + (a + b)` korjaavat asian, ja interpoloitu merkkijono
+`$"Summa: {a + b}"` välttää koko ongelman.
 
 <details closed id="operaattorin-kuormittaminen"><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Operaattorit omille tyypeille</summary>
 
@@ -164,8 +112,8 @@ Vector summa = a + b;     // (100, 50): x:t ja y:t lasketaan erikseen yhteen
 Vector tupla = a * 2;     // (200, 0)
 ```
 
-Luvun alun esimerkki, jossa pallon paikkaan lisätään sen nopeus, on juuri
-tällaista vektorien yhteenlaskua.
+Pelin fysiikka, jossa pallon paikkaan lisätään sen nopeus jokaisella
+ruudunpäivityksellä, on juuri tällaista vektorien yhteenlaskua.
 
 Kuormitettu operaattori on pohjimmiltaan aliohjelma, jonka nimenä on
 operaattorin merkki. Jypelin lähdekoodissa vektorien yhteenlasku näyttää
@@ -191,30 +139,6 @@ kirjoiteta, mutta valmiita tulee vastaan esimerkiksi Jypelin vektoreilla
 laskettaessa.
 
 </details>
-
-## Laskujärjestys
-
-Operaattoreilla on sama laskujärjestys kuin matematiikassa: kerto- ja
-jakolasku sekä jakojäännös lasketaan ennen yhteen- ja vähennyslaskua, ja
-samanarvoiset operaattorit vasemmalta oikealle. Sulkeilla järjestystä voi
-muuttaa.
-
-```csharp
-using System;
-
-public class Laskujarjestys
-{
-    public static void Main()
-    {
-        Console.WriteLine(2 + 3 * 4);     // 14
-        Console.WriteLine((2 + 3) * 4);   // 20
-        Console.WriteLine(10 - 4 - 3);    // 3  (vasemmalta oikealle: (10 - 4) - 3)
-        Console.WriteLine(7 + 10 / 3);    // 10 (10 / 3 on 3)
-    }
-}
-```
-
-Kun et ole varma järjestyksestä, käytä sulkeita. 
 
 ## Tyyppimuunnokset
 
@@ -252,7 +176,9 @@ kokonaisluvuilla ennen kuin tulos muunnetaan.
 
 Toiseen suuntaan muunnos ei tapahdu automaattisesti, koska desimaalit
 katoavat. Muunnos on kirjoitettava näkyviin, ja se *katkaisee* desimaalit, ei
-pyöristä. Pyöristämiseen on `Math.Round`.
+pyöristä. Pyöristämiseen on
+[`Math`-luokan](../osa1/3-laskutoimitukset.md#valmiita-laskutoimituksia-math)
+`Math.Round`.
 
 ```csharp
 using System;
@@ -291,9 +217,40 @@ int ika = int.Parse("20");             // 20
 string teksti = (ika + 1).ToString();  // "21"
 ```
 
-Tähän riittää nyt tämä. Muunnoksiin palataan tarkemmin luvussa
-[Merkkijonot](../osa4/2-merkkijonot.md), jossa käsitellään myös käyttäjän
-syötteen lukeminen ja se, mitä tapahtuu, kun teksti ei olekaan luku.
+### Luvun lukeminen käyttäjältä
+
+Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun.
+[Edellisessä luvussa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen)
+nähtiin, että `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
+merkkijonona. Luku saadaan muuntamalla rivi `int.Parse`- tai
+`double.Parse`-aliohjelmalla.
+
+```csharp,ignore
+Console.Write("Anna ikäsi: ");
+string syote = Console.ReadLine();      // esim. "20"
+int ika = int.Parse(syote);             // 20
+Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
+```
+
+Lukeminen ja muuntaminen kirjoitetaan tavallisesti yhdelle riville, jolloin
+välimuuttujaa ei tarvita:
+
+```csharp,ignore
+Console.Write("Anna ikäsi: ");
+int ika = int.Parse(Console.ReadLine());
+
+Console.Write("Anna pituutesi metreinä: ");
+double pituus = double.Parse(Console.ReadLine());
+```
+
+Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
+
+Jos käyttäjä kirjoittaa jotakin, mikä ei ole luku (vaikkapa `kaksikymmentä`),
+`int.Parse` ei pysty muuntamaan tekstiä ja ohjelma kaatuu virheeseen
+`FormatException`. Toistaiseksi luotamme siihen, että käyttäjä kirjoittaa
+luvun. Luvussa [Merkkijonot](../osa4/2-merkkijonot.md) opitaan tarkistamaan
+syöte, ja samalla selviää, miksi desimaaliluku on joillakin koneilla
+kirjoitettava pilkulla ja toisilla pisteellä.
 
 ## Vertailuoperaattorit
 
@@ -419,39 +376,15 @@ public class PlusPlus
 Tällä kurssilla `++` ja `--` kirjoitetaan omalle rivilleen, jolloin eroa ei
 tarvitse muistaa.
 
-## Valmiita laskutoimituksia: `Math`
-
-Neliöjuuri, potenssi, itseisarvo ja muut tavalliset funktiot löytyvät
-`Math`-luokasta. Muutama esimerkki:
-
-```csharp
-using System;
-
-public class MathEsimerkit
-{
-    public static void Main()
-    {
-        Console.WriteLine(Math.Sqrt(16));      // 4
-        Console.WriteLine(Math.Pow(2, 10));    // 1024
-        Console.WriteLine(Math.Abs(-7));       // 7
-        Console.WriteLine(Math.Max(3, 8));     // 8
-        Console.WriteLine(Math.PI);            // 3.141592653589793
-    }
-}
-```
-
-`Math.Sqrt` ja `Math.Pow` palauttavat aina `double`-arvon, vaikka argumentit
-olisivat kokonaislukuja.
-
 ## Yhteenveto
 
-* `+ - * / %` laskevat; kahden `int`-arvon jako on kokonaislukujako.
+* Aritmeettiset operaattorit toimivat muuttujilla kuten luvuilla; kahden
+  `int`-arvon jako on kokonaislukujako.
 * Operaattorin merkitys riippuu tyypeistä: `+` laskee luvut yhteen mutta
   liittää merkkijonot peräkkäin.
-* Laskujärjestys on sama kuin matematiikassa; sulkeet ratkaisevat epäselvät
-  tapaukset.
 * `(double)x` ja `(int)x` muuntavat tyyppiä; `int.Parse` muuntaa merkkijonon
   luvuksi.
+* Luku luetaan käyttäjältä kaavalla `int.Parse(Console.ReadLine())`.
 * Vertailut tuottavat `bool`-arvon; `&&`, `||` ja `!` yhdistävät niitä.
 * `+=` ja `++` lyhentävät tavallisimmat sijoitukset.
 
@@ -464,29 +397,19 @@ mutta huomaat, mitä asioita kannattaa vielä kerrata.
 
 **Totta vai tarua?**
 
-<vaittama vastaus="tarua">
-Lauseke `7 / 2` antaa tuloksen 3.5.
-<perustelu>
-**Tarua.** Kun molemmat luvut ovat kokonaislukuja, C# tekee kokonaislukujaon
-ja tulos on 3. Jos haluat 3.5, tee toisesta luvusta liukuluku: `7 / 2.0`.
-</perustelu>
-</vaittama>
-
 <vaittama vastaus="totta">
-`17 % 5` on 2.
+Lause `luku += 5;` tekee saman kuin `luku = luku + 5;`.
 <perustelu>
-**Totta.** Jakojäännös kertoo, mitä jää yli: 17 = 3 · 5 + 2. Samalla
-operaattorilla selviää esimerkiksi parillisuus: `luku % 2 == 0`.
+**Totta.** `+=` on lyhennysmerkintä: se laskee muuttujan nykyiseen arvoon
+oikean puolen ja sijoittaa tuloksen takaisin samaan muuttujaan.
 </perustelu>
 </vaittama>
 
 <vaittama vastaus="tarua">
-Lauseke `"Tulos: " + 1 + 2` tuottaa merkkijonon `"Tulos: 3"`.
+Jos käyttäjä kirjoittaa `20`, `Console.ReadLine()` palauttaa kokonaisluvun 20.
 <perustelu>
-**Tarua.** Lauseke lasketaan vasemmalta oikealle: ensin syntyy `"Tulos: 1"`,
-ja sen perään liitetään `2`, joten tulos on `"Tulos: 12"`. Sulkeilla
-`"Tulos: " + (1 + 2)` tai interpoloinnilla `$"Tulos: {1 + 2}"` saadaan
-`"Tulos: 3"`.
+**Tarua.** `Console.ReadLine` palauttaa aina merkkijonon, tässä `"20"`. Luvuksi
+se muuttuu vasta `int.Parse`-kutsulla.
 </perustelu>
 </vaittama>
 
@@ -535,5 +458,6 @@ jopa huomauttaa siitä.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: "Mitä lauseke tuottaa?" (kokonaislukujako, laskujärjestys),
-     "Sekunnit tunneiksi", "Painoindeksi" (tyyppimuunnos), "Lämpötilan muunnos". -->
+<!-- Vaiheessa B: "Painoindeksi" (syöte ja tyyppimuunnos), "Keskiarvo"
+     (cast ennen jakoa), "Ikä ensi vuonna" (int.Parse(Console.ReadLine())).
+     Literaaleilla laskevat tehtävät ovat luvussa 1.3. -->

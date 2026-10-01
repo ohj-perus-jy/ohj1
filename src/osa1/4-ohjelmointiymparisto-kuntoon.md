@@ -236,7 +236,7 @@ Lisää vielä *dokumentaatiokommentit*: kirjoita luokan esittelyrivin
 Rider luo `<summary>`-rungon. Kirjoita tagien väliin, mitä ohjelma tekee. Tee
 sama `Begin`-aliohjelmalle. Dokumentaatiokommentit ovat kurssilla pakollisia,
 ja niistä kerrotaan tarkemmin luvussa [Kommentointi ja
-dokumentointi](../osa4/3-kommentointi-ja-dokumentointi.md).
+dokumentointi](../osa4/4-kommentointi-ja-dokumentointi.md).
 
 ```csharp,ignore
 /// <summary>
@@ -345,7 +345,7 @@ Avaa sitten `.sln`-tiedosto Riderissä uudesta paikasta.
 **Ohjelmassa on kaksi `Main`-pääohjelmaa.** Jypeli-projektissa `Main` on
 tiedostossa `Ohjelma.cs`. Jos kopioit esimerkin, jossa on oma `Main`, poista
 toinen. Tästä kerrotaan luvussa [Ensimmäinen graafinen
-ohjelma](./4-ensimmainen-graafinen-ohjelma.md#pääohjelma-jypeli-projekteissa-main).
+ohjelma](./5-ensimmainen-graafinen-ohjelma.md#pääohjelma-jypeli-projekteissa-main).
 
 Lisää ongelmatilanteita ja niiden ratkaisuja on koottu
 [Työkalut-sivulle](../tyokalut.md#ongelmatilanteita-ja-niiden-ratkaisuja).
@@ -353,7 +353,7 @@ Lisää ongelmatilanteita ja niiden ratkaisuja on koottu
 ## Jypeli-projektit
 
 Jypeli-projektimallit ja Jypeli-projektin pääohjelma on kuvattu luvussa
-[Ensimmäinen graafinen ohjelma](./4-ensimmainen-graafinen-ohjelma.md).
+[Ensimmäinen graafinen ohjelma](./5-ensimmainen-graafinen-ohjelma.md).
 
 ## TIM-tehtävien tekeminen Riderissa {#tim-tehtavat-riderissa}
 

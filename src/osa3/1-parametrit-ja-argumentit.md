@@ -223,8 +223,8 @@ parametreihinsa, toimii mistä tahansa kutsuttuna: tänään `Main`-aliohjelmast
 ensi viikolla toisesta ohjelmasta. Kun aliohjelma palauttaa arvon, samaan
 työjärjestykseen tulee mukaan paluuarvon tyyppi, ks. [Aliohjelman
 paluuarvo](./2-aliohjelman-paluuarvo.md#kutsusta-määrittelyyn-paluuarvon-tyyppi). Osassa 4 väliin
-lisätään vielä dokumentointi ja testit, ks. [Testaaminen
-ComTestillä](../osa4/4-testaaminen-comtestilla.md#ensimmäinen-testi-vaihe-vaiheelta).
+lisätään vielä dokumentointi ja osassa 7 testit, ks. [Testaaminen
+ComTestillä](../osa7/2-testaaminen-comtestilla.md#ensimmäinen-testi-vaihe-vaiheelta).
 
 ## Parametrit Jypeli-ohjelmassa
 

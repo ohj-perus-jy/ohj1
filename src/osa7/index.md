@@ -1,18 +1,15 @@
-# Osa 7: Rekursio, poikkeukset ja tiedostot
+# Osa 7: Rekursio ja testaaminen
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
 > * osaat kirjoittaa rekursiivisen funktion ja tunnistat sen lopetusehdon
-> * osaat käsitellä poikkeuksen `try`-`catch`-rakenteella ja tiedät, milloin
->   se kannattaa
-> * osaat lukea tietoa tiedostosta ja kirjoittaa tiedostoon
+> * osaat testata funktion ComTestillä
 
 ## Luvut
 
 1. [Rekursio](./1-rekursio.md)
-2. [Poikkeukset](./2-poikkeukset.md)
-3. [Tiedostojen lukeminen ja kirjoittaminen](./3-tiedostot.md)
+2. [Testaaminen ComTestillä](./2-testaaminen-comtestilla.md)
 
 ## Luennot
 
@@ -21,6 +18,7 @@ luennot päivitetään tähän.
 
 * [Luento 16: `switch`-lause, attribuutit, rekursio](../luennot/luento16.md)
 * [Luento 17: Rekursio](../luennot/luento17.md)
+* [Luento 7: Testaaminen, ComTest](../luennot/luento7.md)
 
 ## Tehtävät
 

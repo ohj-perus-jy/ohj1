@@ -42,11 +42,11 @@ alkuun pelien tekemisessä:
 
 Tehdään pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen
 ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `demo1`-solutionin
-kolmas projekti [edellisessä luvussa](./3-ohjelmointiymparisto-kuntoon.md)
+kolmas projekti [edellisessä luvussa](./4-ohjelmointiymparisto-kuntoon.md)
 tehtyjen `Lumiukko`- ja `HelloWorld`-projektien jälkeen.
 
 1. Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin
-   [HelloWorld](./3-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
+   [HelloWorld](./4-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
    klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
    painikkeella ja valitse *Add* › *New Project*.
 2. Valitse vasemmalta `Fysiikkapeli`-projektimalli.
@@ -199,7 +199,7 @@ Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa
 - `Android Fysiikkapeli` (Android-alustaa varten)
 
 Solutionin ja projektin luominen on kuvattu luvussa [Ohjelmointiympäristö
-kuntoon](./3-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+kuntoon](./4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
 
 ## Pääohjelma Jypeli-projekteissa (Main)
 

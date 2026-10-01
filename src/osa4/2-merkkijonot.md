@@ -28,32 +28,18 @@ merkkijonoja luvuiksi ja takaisin.
 
 ## Merkkijonosta luvuksi ja takaisin
 
-Luvussa [Operaattorit ja laskutoimitukset](../osa2/2-operaattorit.md#tyyppimuunnokset)
-tyyppimuunnokset esiteltiin lyhyesti. Tässä syvennetään sitä, mitä
-`int.Parse` ja `double.Parse` oikeastaan tekevät ja mitä tapahtuu, kun
+Luvussa [Operaattorit ja tyyppimuunnokset](../osa2/2-operaattorit.md#luvun-lukeminen-käyttäjältä)
+luku luettiin käyttäjältä kaavalla `int.Parse(Console.ReadLine())` ja
+luotettiin siihen, että käyttäjä kirjoittaa luvun. Tässä syvennetään sitä,
+mitä `int.Parse` ja `double.Parse` oikeastaan tekevät ja mitä tapahtuu, kun
 muunnos ei onnistu.
-
-### Käyttäjän syöte on aina merkkijono
-
-Käyttäjän kirjoittama syöte on aina merkkijono, vaikka se näyttäisi luvulta.
-`Console.ReadLine` lukee käyttäjän kirjoittaman rivin, ja `int.Parse` muuntaa
-sen luvuksi.
-
-```csharp,ignore
-Console.Write("Anna ikäsi: ");
-string syote = Console.ReadLine();      // esim. "20"
-int ika = int.Parse(syote);             // 20
-Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
-```
-
-Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
 
 ### Kun teksti ei ole luku
 
 <!-- Vaiheessa B: `int.Parse("abc")` heittää FormatExceptionin ja ohjelma
      kaatuu. Virheilmoituksen lukeminen. `int.TryParse` palauttaa `bool`-arvon
      ja tuloksen `out`-parametrissa; esimerkki syötteen tarkistamisesta
-     silmukassa. Poikkeuksen käsittelyyn palataan luvussa 7.2. -->
+     silmukassa. Poikkeuksen käsittelyyn palataan luvussa 6.3. -->
 
 ### Desimaalipilkku vai piste?
 
