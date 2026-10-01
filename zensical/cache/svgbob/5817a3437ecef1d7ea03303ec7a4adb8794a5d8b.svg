@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="408" height="128" class="svgbob">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="192" class="svgbob">
   <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
   stroke: var(--md-default-fg-color);
   stroke-width: 2;
@@ -95,34 +95,25 @@
       <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
     </marker>
   </defs>
-  <rect class="backdrop" x="0" y="0" width="408" height="128"></rect>
-  <text x="10" y="12" >Sovellus.cs</text>
-  <polygon points="272,4 264,8 272,12" class="filled"></polygon>
-  <line x1="272" y1="8" x2="280" y2="8" class="solid"></line>
-  <text x="290" y="12" >tiedosto</text>
-  <text x="42" y="44" >class</text>
-  <text x="90" y="44" >Sovellus</text>
-  <polygon points="272,36 264,40 272,44" class="filled"></polygon>
-  <line x1="272" y1="40" x2="280" y2="40" class="solid"></line>
-  <text x="290" y="44" >luokka</text>
-  <polygon points="272,68 264,72 272,76" class="filled"></polygon>
-  <line x1="272" y1="72" x2="280" y2="72" class="solid"></line>
-  <text x="290" y="76" >aloituspiste</text>
-  <polygon points="272,100 264,104 272,108" class="filled"></polygon>
-  <line x1="272" y1="104" x2="280" y2="104" class="solid"></line>
-  <text x="290" y="108" >muu</text>
-  <text x="322" y="108" >aliohjelma</text>
-  <text x="82" y="76" >Main()</text>
-  <text x="82" y="108" >Tervehdys()</text>
+  <rect class="backdrop" x="0" y="0" width="304" height="192"></rect>
+  <polygon points="56,100 48,104 56,108" class="filled"></polygon>
+  <line x1="56" y1="104" x2="96" y2="104" class="solid"></line>
+  <polygon points="40,164 48,164 44,176" class="filled"></polygon>
+  <line x1="224" y1="72" x2="280" y2="72" class="solid"></line>
+  <polygon points="280,68 288,72 280,76" class="filled"></polygon>
+  <text x="18" y="12" >Main()</text>
+  <text x="274" y="12" >Nelio(double x)</text>
+  <text x="58" y="44" >double ala = Nelio(3) + 1;</text>
+  <text x="106" y="76" >kutsu, x = 3</text>
+  <text x="306" y="92" >return x * x;</text>
+  <text x="106" y="108" >paluu, arvo 9</text>
+  <text x="58" y="140" >double ala = 9 + 1;</text>
   <g>
-    <line x1="12" y1="16" x2="12" y2="36" class="solid"></line>
-    <path d="M 12,36 A 4,4 0,0,0 16,40" class="nofill"></path>
-    <line x1="16" y1="40" x2="32" y2="40" class="solid"></line>
+    <line x1="44" y1="16" x2="44" y2="164" class="solid"></line>
+    <line x1="44" y1="72" x2="96" y2="72" class="solid"></line>
   </g>
   <g>
-    <line x1="52" y1="48" x2="52" y2="100" class="solid"></line>
-    <line x1="52" y1="72" x2="72" y2="72" class="solid"></line>
-    <path d="M 52,100 A 4,4 0,0,0 56,104" class="nofill"></path>
-    <line x1="56" y1="104" x2="72" y2="104" class="solid"></line>
+    <line x1="292" y1="72" x2="292" y2="104" class="solid"></line>
+    <line x1="232" y1="104" x2="292" y2="104" class="solid"></line>
   </g>
 </svg>
