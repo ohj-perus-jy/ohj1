@@ -52,7 +52,7 @@ Esimerkissä on kaksi uutta asiaa, jotka eivät liity laskemiseen:
 * Rivi `using System;` ohjelman alussa lyhentää kirjoittamista: sen ansiosta
   `System.Console.WriteLine` voidaan kirjoittaa muodossa `Console.WriteLine`.
   Tarkemmin tästä kerrotaan luvussa
-  [Ohjelman rakenne](../osa2/6-ohjelman-rakenne.md).
+  [Ohjelman rakenne](../osa2/5-ohjelman-rakenne.md).
 * Merkkien `//` jälkeinen teksti on *kommentti*. Kääntäjä ohittaa sen, joten
   kommentti on tarkoitettu vain ihmiselle. Tämän kirjan esimerkeissä kommentti
   kertoo usein, mitä rivi tulostaa.

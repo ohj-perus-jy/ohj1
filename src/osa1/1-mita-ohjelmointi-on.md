@@ -65,7 +65,7 @@ ja opit ne kaikki tämän kurssin aikana:
 * **Peräkkäisyys**: vaiheet suoritetaan yksi kerrallaan, järjestyksessä,
   kuten yllä.
 * **Valinta**: *jos* kahvi on loppu, *niin* mene kauppaan, *muuten* jatka.
-  Tähän tutustutaan luvussa [Ehtolauseet](../osa2/3-ehtolauseet.md).
+  Tähän tutustutaan luvussa [Ehtolauseet](../osa3/1-ehtolauseet.md).
 * **Toisto**: *toista* "lisää mittalusikallinen kahvia", *kunnes* lusikallisia
   on neljä. Tähän tutustutaan luvussa
   [Toistolauseet](../osa4/1-toistolauseet.md). Toiston voi toteuttaa

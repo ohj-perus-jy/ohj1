@@ -1,7 +1,7 @@
 # Valinnaiset parametrit ja oletusarvot
 
 Valinnaista lisätietoa lukuun [3.1 Parametrit ja
-argumentit](../osa3/1-parametrit-ja-argumentit.md). Parametrille voi antaa
+argumentit](../osa2/4-funktiot.md). Parametrille voi antaa
 *oletusarvon*, jolloin argumentin voi jättää kutsussa pois.
 
 ## Oletusarvon määrittely
@@ -51,7 +51,7 @@ argumentteja ei tarvitse käyttää.
 
 ## Oletusarvot vai kuormittaminen?
 
-Sama lopputulos saadaan myös [kuormittamalla](../osa3/1-parametrit-ja-argumentit.md#kuormittaminen)
+Sama lopputulos saadaan myös [kuormittamalla](../osa2/4-funktiot.md#kuormittaminen)
 aliohjelma, eli kirjoittamalla kaksi samannimistä versiota eri
 parametrilistoilla. Oletusarvo on lyhyempi silloin, kun versiot eroavat vain
 yhden arvon osalta. Kuormittaminen on parempi, kun versiot tekevät eri asioita

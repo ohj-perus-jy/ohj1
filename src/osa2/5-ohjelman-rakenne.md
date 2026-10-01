@@ -3,10 +3,8 @@
 Tässä luvussa tarkastelemme ohjelmaa kokonaisuutena: mistä osista se koostuu ja
 missä järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
 *top-down*-tavalla; katselemme ensin ohjelman rakennetta kokonaisuutena ja sitten tarkastelemme yksittäisiä osia.
-Aliohjelmat on jo käsitelty luvussa
-[Aliohjelmat](./5-aliohjelmat.md), joten tässä luvussa keskitytään siihen,
-miten ohjelman osat asettuvat kokonaisuudeksi. Parametreihin ja paluuarvoihin
-pureudutaan osassa 3.
+Funktiot käsiteltiin luvussa [Funktiot](./4-funktiot.md), joten tässä
+luvussa keskitytään siihen, miten ohjelman osat asettuvat kokonaisuudeksi.
 
 ## Miksi rakenteesta pitää välittää?
 
@@ -34,7 +32,7 @@ C#-kieli on [*olioperusteinen ohjelmointikieli*](https://learn.microsoft.com/en-
 
 Yhdessä luokassa tulee lisäksi olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä -- siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia: pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
 
-Alla oleva sovellus koostuu yhdestä luokasta, joka sisältää pääohjelman (`Main`) ja yhden aliohjelman (`Tervehdys`), siis yhteensä kaksi aliohjelmaa. Voit ajaa ohjelman klikkaamalla koodilohkon oikeassa yläkulmassa olevaa Play-painiketta.
+Alla oleva sovellus koostuu yhdestä luokasta, joka sisältää pääohjelman (`Main`) ja yhden funktion (`Tervehdys`), siis yhteensä kaksi aliohjelmaa. Voit ajaa ohjelman klikkaamalla koodilohkon oikeassa yläkulmassa olevaa Play-painiketta.
 
 ```csharp
 using System;
@@ -44,14 +42,14 @@ public class Sovellus
     public static void Main()
     {
         // Ohjelman suoritus alkaa Main-aliohjelmasta.
-        // Tässä kutsutaan Tervehdys-aliohjelmaa kaksi kertaa.
-        Tervehdys();
-        Tervehdys();
+        // Tässä kutsutaan Tervehdys-funktiota kaksi kertaa.
+        Console.WriteLine(Tervehdys("Maija"));
+        Console.WriteLine(Tervehdys("Pekka"));
     }
 
-    public static void Tervehdys()
+    public static string Tervehdys(string nimi)
     {
-        Console.WriteLine("Tervehdys!");
+        return "Tervehdys, " + nimi + "!";
     }
 }
 ```
@@ -65,7 +63,7 @@ Ohjelman rakennetta voi havainnollistaa seuraavasti. Uloimpana on tiedosto, sen 
       |
       +-- "Main()"               <- aloituspiste
       |
-      '-- "Tervehdys()"          <- muu aliohjelma
+      '-- "Tervehdys(nimi)"      <- funktio
 ```
 
 Käydään osat läpi yksi kerrallaan.
@@ -107,7 +105,7 @@ public static void Main()
 
 `Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta -- riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
 
-`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Mitä määreet `public`, `static` ja `void` tarkoittavat, käsiteltiin luvussa [Aliohjelmat](./5-aliohjelmat.md).
+`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Määreet `public` ja `static` käsiteltiin luvussa [Funktiot](./4-funktiot.md). `void` tarkoittaa, että `Main` ei palauta mitään. Tällaisiin aliohjelmiin palataan luvussa [Aliohjelmat ilman paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 Ohjelmassa saa olla vain yksi aloituspiste. Jos ohjelmassa on useita luokkia, `Main` kirjoitetaan vain yhteen niistä.
 
@@ -159,7 +157,7 @@ Molemmat tavat toimivat, mutta `using`-lause säästää kirjoitusvaivaa ja teke
 
 ## Suoritusjärjestys
 
-Ohjelman lauseet suoritetaan yksi kerrallaan siinä järjestyksessä, jossa ne on kirjoitettu. Kun vastaan tulee aliohjelmakutsu, suoritus siirtyy kutsuttuun aliohjelmaan. Kun aliohjelma on suoritettu loppuun, suoritus jatkuu kutsukohdan seuraavasta lauseesta.
+Ohjelman lauseet suoritetaan yksi kerrallaan siinä järjestyksessä, jossa ne on kirjoitettu. Kun vastaan tulee kutsu, suoritus siirtyy kutsuttuun aliohjelmaan. Kun aliohjelma on suoritettu loppuun, suoritus palaa kutsukohtaan ja jatkuu siitä.
 
 ```csharp
 using System;
@@ -169,13 +167,13 @@ public class Sovellus
     public static void Main()
     {
         Console.WriteLine("1. Ohjelma alkaa");
-        Tervehdys();
+        Console.WriteLine(Tervehdys());
         Console.WriteLine("3. Ohjelma loppuu");
     }
 
-    public static void Tervehdys()
+    public static string Tervehdys()
     {
-        Console.WriteLine("2. Tervehdys!");
+        return "2. Tervehdys!";
     }
 }
 ```
@@ -196,23 +194,25 @@ Suorituksen kulku näyttää tältä:
      | 1. "Ohjelma alkaa"
      |
      +------ kutsu --------->+
-     |                       | 2. "Tervehdys!"
+     |                       | palauttaa "2. Tervehdys!"
      |<----- paluu ----------+
+     |
+     | 2. "Tervehdys!"
      |
      | 3. "Ohjelma loppuu"
      |
      v
 ```
 
-Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka `Console.WriteLine`-lause on kirjoitettu tiedostossa vasta viimeisenä. Ohjelman *kirjoitusjärjestys* ja *suoritusjärjestys* ovat siis kaksi eri asiaa.
+Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka se on kirjoitettu tiedostossa vasta viimeisenä. Funktion paluuarvo tulostetaan `Main`-aliohjelman toisella rivillä, kun suoritus on palannut funktiosta. Ohjelman *kirjoitusjärjestys* ja *suoritusjärjestys* ovat siis kaksi eri asiaa.
 
 > [!TÄRKEÄÄ]
-> Aliohjelmien määrittelyjärjestyksellä luokan sisällä ei ole väliä. `Tervehdys`-aliohjelman
+> Aliohjelmien määrittelyjärjestyksellä luokan sisällä ei ole väliä. `Tervehdys`-funktion
 > voi kirjoittaa yhtä hyvin ennen `Main`-aliohjelmaa kuin sen jälkeenkin -- ohjelma toimii
 > täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
 > *kutsutaan*.
 
-Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Aliohjelmien kutsumista käsiteltiin luvussa [Aliohjelmat](./5-aliohjelmat.md).
+Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Kutsumista käsiteltiin luvussa [Funktiot](./4-funktiot.md#mitä-kutsussa-tapahtuu).
 
 ## Lohkot ja sisennykset
 
@@ -225,7 +225,7 @@ public class Sovellus            // taso 0
 {
     public static void Main()    // taso 1
     {
-        Tervehdys();             // taso 2
+        int luku = 1;            // taso 2
     }
 }
 ```
@@ -251,7 +251,7 @@ public class Sovellus                // 2. Luokka (= tiedoston nimi)
         // 4. Ohjelman lauseet, suoritetaan ylhäältä alas
     }
 
-    public static void Apuri()       // 5. Mahdolliset muut aliohjelmat
+    public static int Apuri(int x)   // 5. Omat funktiot
     {
         // ...
     }
@@ -296,8 +296,9 @@ public class Sovellus
 {
     public static void Main()
     {
-        public static void Tervehdys()   // Väärin: aliohjelma Main-aliohjelman sisällä
+        public static double Nelio(double x)   // Väärin: funktio Main-aliohjelman sisällä
         {
+            return x * x;
         }
     }
 }
@@ -345,8 +346,8 @@ sen puolestasi.
 </vaittama>
 
 <vaittama vastaus="tarua">
-Ohjelma kääntyy, vaikka `public static void` -aliohjelma olisi kirjoitettu
-`Main`-aliohjelman aaltosulkujen sisään.
+Ohjelma kääntyy, vaikka funktio olisi kirjoitettu `Main`-aliohjelman
+aaltosulkujen sisään.
 <perustelu>
 **Tarua.** Kääntäjä ilmoittaa, että `public` ei kelpaa aliohjelman sisällä
 (`CS0106`). Aliohjelmat kirjoitetaan luokan sisään toistensa rinnalle. C#

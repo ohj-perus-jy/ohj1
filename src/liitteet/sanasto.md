@@ -11,23 +11,23 @@ esitellään.
 | algoritmi | algorithm | [1.1](../osa1/1-mita-ohjelmointi-on.md) |
 | lähdekoodi | source code | [1.2](../osa1/2-ensimmainen-ohjelma.md) |
 | kääntäminen | compiling | [1.2](../osa1/2-ensimmainen-ohjelma.md) |
-| lause | statement | [2.4](../osa2/4-lauseet-ja-lausekkeet.md) |
-| lauseke | expression | [2.4](../osa2/4-lauseet-ja-lausekkeet.md) |
+| lause | statement | [2.3](../osa2/3-lauseet-ja-lausekkeet.md) |
+| lauseke | expression | [2.3](../osa2/3-lauseet-ja-lausekkeet.md) |
 | muuttuja | variable | [2.1](../osa2/1-muuttujat-ja-tietotyypit.md) |
 | tietotyyppi | data type | [2.1](../osa2/1-muuttujat-ja-tietotyypit.md) |
 | operaattori | operator | [1.3](../osa1/3-laskutoimitukset.md) |
-| ehtolause | conditional statement | [2.3](../osa2/3-ehtolauseet.md) |
-| aliohjelma | subroutine, method | [2.5](../osa2/5-aliohjelmat.md) |
-| parametri | parameter | [3.1](../osa3/1-parametrit-ja-argumentit.md) |
-| argumentti | argument | [3.1](../osa3/1-parametrit-ja-argumentit.md) |
-| esittelyrivi | method header | [3.1](../osa3/1-parametrit-ja-argumentit.md) |
-| tynkä | stub | [3.1](../osa3/1-parametrit-ja-argumentit.md#kutsusta-määrittelyyn) |
+| ehtolause | conditional statement | [3.1](../osa3/1-ehtolauseet.md) |
+| aliohjelma | subroutine, method | [2.4](../osa2/4-funktiot.md) |
+| parametri | parameter | [2.4](../osa2/4-funktiot.md) |
+| argumentti | argument | [2.4](../osa2/4-funktiot.md) |
+| esittelyrivi | method header | [2.4](../osa2/4-funktiot.md) |
+| tynkä | stub | [2.4](../osa2/4-funktiot.md#kutsusta-määrittelyyn) |
 | näkyvyysalue | scope | [3.3](../osa3/3-muuttujien-nakyvyys.md) |
 | olio | object | [3.4](../osa3/4-jypeli-ja-oliot.md) |
-| paluuarvo | return value | [3.2](../osa3/2-aliohjelman-paluuarvo.md) |
-| funktio | function | [3.2](../osa3/2-aliohjelman-paluuarvo.md) |
-| sivuvaikutus | side effect | [3.2](../osa3/2-aliohjelman-paluuarvo.md#funktio-joka-ei-tulosta) |
-| kuormittaminen | overloading | [3.1](../osa3/1-parametrit-ja-argumentit.md#kuormittaminen) |
+| paluuarvo | return value | [2.4](../osa2/4-funktiot.md) |
+| funktio | function | [2.4](../osa2/4-funktiot.md) |
+| sivuvaikutus | side effect | [3.2](../osa3/2-aliohjelmat-ilman-paluuarvoa.md#void-aliohjelma) |
+| kuormittaminen | overloading | [2.4](../osa2/4-funktiot.md#kuormittaminen) |
 | yksikkötesti | unit test | [7.2](../osa7/2-testaaminen-comtestilla.md) |
 | toistolause, silmukka | loop | [4.1](../osa4/1-toistolauseet.md) |
 | merkkijono | string | [4.2](../osa4/2-merkkijonot.md) |

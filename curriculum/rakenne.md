@@ -16,14 +16,13 @@ numeroidaan osien mukaan (demo1–demo8).
 |                                              | 1.3 Laskutoimitukset                                                           | aritmetiikka, kokonaislukujako ja jakojäännös, laskujärjestys, `+` ja teksti, Math; ilman muuttujia    | v1 (siirretty luvusta 2.2), tehtävät alustavia   |
 |                                              | 1.4 Ohjelmointiympäristö kuntoon                                               | Rider, hakemistorakenne, solution, projekti                                                            | v1 valmis, tehtävät puuttuvat                  |
 |                                              | 1.5 Ensimmäinen graafinen ohjelma                                              | Jypeli-esimerkki, projektimallit, Main, Content                                                        | v1 valmis, tehtävät puuttuvat                  |
-| **2 Muuttujat, syöte, ehdot ja aliohjelmat** | 2.1 Muuttujat ja tietotyypit                                                   | muuttuja, tyypit, var, vakiot, syöte `Console.ReadLine`                                                | v1 valmis, tehtävät puuttuvat                  |
+| **2 Muuttujat, syöte ja funktiot**           | 2.1 Muuttujat ja tietotyypit                                                   | muuttuja, tyypit, var, vakiot, syöte `Console.ReadLine`                                                | v1 valmis, tehtävät puuttuvat                  |
 |                                              | 2.2 Operaattorit ja tyyppimuunnokset                                           | laskeminen muuttujilla, cast, `Parse` ja lukusyöte, vertailu, loogiset, sijoitus                       | v1 valmis, tehtävät puuttuvat                  |
-|                                              | 2.3 Ehtolauseet                                                                | if, else if, else, vertailu, loogiset, switch                                                          | v1 valmis, tehtävät puuttuvat                  |
-|                                              | 2.4 Lauseet ja lausekkeet                                                      | lause vs. lauseke                                                                                      | v1 valmis, tehtävät puuttuvat                  |
-|                                              | 2.5 Aliohjelmat                                                                | määrittely, kutsu, void, terminologia                                                                  | osittain (yhteenveto ja visa puuttuvat)        |
-|                                              | 2.6 Ohjelman rakenne                                                           | luokka, Main, using, suoritusjärjestys, lohkot, rakennevirheet                                         | v1 valmis                                      |
-| **3 Funktiot ja Jypeli**                     | 3.1 Parametrit ja argumentit                                                   | parametri, argumentti, useita parametreja, Jypeli-esimerkki; kuormittaminen `<details>`-lohkona        | osittain                                       |
-|                                              | 3.2 Aliohjelman paluuarvo                                                      | return, kutsu lausekkeena, CS0161, useita returneja, sivuvaikutus                                      | osittain                                       |
+|                                              | 2.3 Lauseet ja lausekkeet                                                      | lause vs. lauseke, kutsu lausekkeena; `a++` ja spesifikaatio `<details>`-lohkona                       | v1 valmis, tehtävät puuttuvat                  |
+|                                              | 2.4 Funktiot                                                                   | määrittely, kutsu, parametri, return, paluuarvon tyyppi, kutsusta määrittelyyn, tynkä, CS0161, Jypeli-funktio; kuormittaminen `<details>`-lohkona | v1 (koottu luvuista 2.5, 3.1 ja 3.2), tehtävät alustavia |
+|                                              | 2.5 Ohjelman rakenne                                                           | luokka, Main, using, suoritusjärjestys, lohkot, rakennevirheet                                         | v1 valmis                                      |
+| **3 Ehdot, aliohjelmat ja Jypeli**           | 3.1 Ehtolauseet                                                                | if, else if, else, loogiset, switch, ehtolause funktiossa (useita returneja, CS0161, totuusarvo suoraan) | v1 valmis (siirretty luvusta 2.3), tehtävät puuttuvat |
+|                                              | 3.2 Aliohjelmat ilman paluuarvoa                                               | void, sivuvaikutus, void-kutsu lauseena, laskeva vai tekevä, `return;`, Main ja Begin, Begin osiin     | v1 (koottu luvuista 2.5 ja 3.2), tehtävät alustavia |
 |                                              | 3.3 Muuttujien näkyvyys                                                        | paikalliset muuttujat, lohko, parametrit, attribuutit, CS0103                                          | runko                                          |
 |                                              | 3.4 Jypeli ja oliot                                                            | olio, new, olioviite lyhyesti, ominaisuudet, metodikutsu, PhysicsGame/Begin, omat aliohjelmat Jypelissä, näppäinkuuntelija | runko                                          |
 | **4 Toisto, merkkijonot ja satunnaisuus**    | 4.1 Toistolauseet                                                              | while, do-while, for, sisäkkäiset, break/continue, välitulosten tulostaminen                           | osittain (yhteenveto ja visa puuttuvat)        |
@@ -64,24 +63,60 @@ merkitty päivämäärällä.
   merkkijonolle ja `int.Parse(Console.ReadLine())` luvussa 2.2 valmiina
   kaavana. Ohjelmista tulee heti interaktiivisia. Epäonnistuva `Parse`,
   `TryParse` ja kulttuuriasetukset käsitellään edelleen luvussa 4.2.
-- **Osa 2: ehtolauseet ja aliohjelmat ilman parametreja.** Vasta niiden
-  jälkeen tulevat lauseet ja lausekkeet sekä ohjelman rakenne. Rakenneluku on
-  osan lopussa kokoavana: silloin luokka, `Main`, lohkot ja suoritusjärjestys
-  on jo nähty käytännössä. Lohkot ja sisennys mainitaan jo luvussa 1.2, koska
-  niistä kysytään ensimmäisenä.
-- **Osa 3 = funktiot ja Jypeli.** Parametrit, paluuarvo, näkyvyys ja oliot.
-  Parametrit siirrettiin osasta 2 tänne 9.9.2026, jotta osa 2 kevenee ja
-  aliohjelman koko käsitteistö (parametri, paluuarvo, näkyvyys) tulee yhdessä
-  osassa. Jypeli-luku on laaja, ja harjoitustyön suunnittelu alkaa heti sen
-  perään.
+- **Osa 2: lausekkeista funktioihin (1.10.2026).** Luvut 2.2–2.4 ovat ketju:
+  operaattoreilla rakennetaan lausekkeita, luku 2.3 nimeää ne, ja luku 2.4
+  tekee niistä nimettyjä lausekkeita eli funktioita. Rakenneluku on osan
+  lopussa kokoavana: silloin luokka, `Main`, lohkot ja suoritusjärjestys on jo
+  nähty käytännössä. Lohkot ja sisennys mainitaan jo luvussa 1.2, koska niistä
+  kysytään ensimmäisenä.
+- **Funktiot ennen `void`-aliohjelmia (1.10.2026).** Ensimmäinen oma
+  aliohjelma on luvussa 2.4 funktio, jolla on parametri ja paluuarvo
+  (`Nelio(x)`). `void`-aliohjelma tulee luvussa 3.2 erikoistapauksena:
+  aliohjelma, joka tekee jotakin eikä anna mitään takaisin. Perustelut:
+  opiskelija on kutsunut arvon palauttavia funktioita luvusta 1.3 lähtien
+  (`Math.Sqrt`, `Console.ReadLine`, `int.Parse`), ja luku 2.3 nimeää kutsun
+  lausekkeeksi, joten oma funktio jatkaa tuttua. Kun ensimmäinen oma
+  aliohjelma ei tulosta, tulostamisen ja palauttamisen sekaannusta ei synny,
+  eikä sitä tarvitse purkaa jälkikäteen. Palauttavat funktiot ovat valmiiksi
+  testattavia osan 7 ComTestiä varten. Parametrit, paluuarvo ja kutsusta
+  määrittelyyn -työjärjestys ovat samassa luvussa; parametrit siirrettiin
+  9.9.2026 osasta 2 osaan 3, ja nyt ne palasivat funktioiden mukana.
+- **Lause ja lauseke yksinkertaisesti (1.10.2026).** Luku 2.3 käyttää kahta
+  sääntöä: lause saa jotakin tapahtumaan, ja lausekkeella on arvo. Testi:
+  lauseke kelpaa sijoituksen oikealle puolelle. Arvon antava kutsu on lauseke;
+  `Console.WriteLine` ja muut `void`-kutsut ovat pelkkiä lauseita.
+  Spesifikaation tarkempi luokittelu (siellä `void`-kutsukin on lauseke) ja
+  `a++` ovat `<details>`-lohkossa. Luvut 2.4 ja 3.2 nojaavat vain tähän
+  jakoon.
+- **Ehtolauseet osaan 3 (1.10.2026).** Osa 2 ei saa olla liian raskas, kun
+  funktiot tulivat siihen parametreineen. Vertailu ja loogiset operaattorit
+  jäivät lukuun 2.2, joten funktio voi palauttaa totuusarvon ilman
+  ehtolausetta (`return ika >= 18;`), ja ehto opitaan ensin arvona. Luku 3.1
+  opettaa ehtolauseen funktioiden kanssa: useita `return`-lauseita, CS0161 ja
+  totuusarvon palauttaminen suoraan. Järjestys 3.1 → 3.2 → 3.3 on myös
+  riippuvuusjärjestys: `return;` `void`-aliohjelmassa ja lohkon rajaama
+  näkyvyys tarvitsevat `if`-lausetta. Osan 2 ohjelmat eivät vielä haaraudu,
+  joten demon 2 tehtävät ovat muotoa lue, laske, tulosta.
+- **Osa 3 = ehdot, aliohjelmat ja Jypeli (1.10.2026).** Ehtolauseet,
+  `void`-aliohjelmat, näkyvyys ja oliot. Jypeli-luku on laaja, ja
+  harjoitustyön suunnittelu alkaa heti sen perään.
+- **Lumiukko funktiolla (1.10.2026).** Ensimmäisen viikon Lumiukko-demo voi
+  pysyä ennallaan, koska osan 1 esimerkit käyttävät muutenkin rakenteita
+  selittämättä. Luvussa 2.4 Lumiukko tehdään funktiolla
+  `GameObject LuoPallo(x, y, sade)`, jonka paluuarvon `Begin` lisää peliin.
+  Kutsuja voi muuttaa palautettua palloa ennen lisäämistä, ja unohtunut `Add`
+  näkyy kuvasta. Luvussa 3.2 `void PiirraLumiukko(x, y)` kokoaa lumiukon ja
+  lisää pallot peliin, koska kolmea oliota ei voi palauttaa yhtenä arvona.
 - **Olioiden käyttö osassa 3 Jypelin yhteydessä.** Jypeli vaatii olioita
-  heti; luku 1.5 käyttää niitä selittämättä, luku 3.4 selittää. Luku 3.4
+  heti; luku 1.5 käyttää niitä selittämättä, luku 2.4 palauttaa funktiosta
+  `GameObject`-arvon kuten minkä tahansa muun arvon, ja luku 3.4 selittää. Luku 3.4
   mainitsee myös, että muuttujaan tallentuu viite olioon eikä olio itse, joten
   kaksi muuttujaa voi viitata samaan olioon. Termit arvotyyppi ja viitetyyppi
   tulevat vasta luvussa 5.3.
 - **Sivuvaikutus käsitteenä, ei omana lukunaan (1.10.2026).** Termi esitellään
-  luvussa 3.2 erottamaan palauttaminen tulostamisesta, ja siihen palataan
-  luvussa 5.3, kun aliohjelma muuttaa kutsujan taulukkoa.
+  luvussa 3.2 `void`-aliohjelman tehtävänä ja erottamaan palauttaminen
+  tulostamisesta, ja siihen palataan luvussa 5.3, kun aliohjelma muuttaa
+  kutsujan taulukkoa.
 - **Attribuutit luvussa 3.3 (1.10.2026).** C#:ssa ei ole globaaleja muuttujia,
   mutta peliluokan attribuutit ovat sama asia luokan sisällä. Konsoliohjelmissa
   niitä ei tarvita (luokkatason `const` riittää). Jypelissä niitä ei voi
@@ -99,7 +134,7 @@ merkitty päivämäärällä.
   Demoissa ei vaadita opiskelijan omia testejä ennen osaa 7. Taulukoiden,
   listojen ja satunnaisuuden testaaminen on koottu lukuun 7.2.
 - **Kuormittaminen bonustietona, oletusarvot liitteenä.** Kuormittaminen on
-  `<details>`-lohko luvussa 3.1 (ankkuri `#kuormittaminen`), koska sitä ei
+  `<details>`-lohko luvussa 2.4 (ankkuri `#kuormittaminen`), koska sitä ei
   tarvita omissa ohjelmissa mutta se selittää kirjastojen dokumentaatiota.
   Valinnaiset parametrit ja oletusarvot ovat liite.
 - **Silmukat osassa 4, taulukot osassa 5.** Silmukat esitellään ennen
@@ -137,8 +172,8 @@ samaa peliä osasta toiseen. Peli toimii samalla harjoitustyön mallina.
 | Osa | Luku     | Jypelissä                                                                 |
 | --- | -------- | ------------------------------------------------------------------------- |
 | 1   | 1.5      | ensimmäinen peli: pallo ja kenttä                                         |
-| 2   | 2.1, 2.5 | olion koko, väri ja paikka muuttujista; kentän luonti omaksi aliohjelmaksi |
-| 3   | 3.1, 3.2 | `LuoPallo(x, y)`; funktio, joka palauttaa luomansa olion                  |
+| 2   | 2.1, 2.4 | olion koko, väri ja paikka muuttujista; `LuoPallo(x, y, sade)` palauttaa pallon, `Begin` lisää sen |
+| 3   | 3.2      | `Begin` osiin; `PiirraLumiukko(x, y)` kokoaa lumiukon                      |
 | 3   | 3.3, 3.4 | pelaaja ja pistelaskuri attribuutteina; näppäinkuuntelija                  |
 | 4   | 4.1, 4.3 | silmukka luo esteet, `RandomGen` sijoittaa ne                              |
 | 5   | 5.2, 5.3 | kenttä merkkijonotaulukosta; kaksi muuttujaa, sama pallo                   |

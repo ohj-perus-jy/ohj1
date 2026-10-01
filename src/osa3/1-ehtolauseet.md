@@ -4,7 +4,8 @@ Tähän asti ohjelmamme ovat tehneet joka kerta täsmälleen saman asian. Se on
 harvoin tarpeeksi. *Ehtolauseella* ohjelma tekee valinnan: jos ehto on
 voimassa, suoritetaan yksi asia, muuten jokin toinen. Valinta on yksi
 [kolmesta perusrakenteesta](../osa1/1-mita-ohjelmointi-on.md#algoritmi-eli-ohje),
-jotka tekevät ohjelmasta muutakin kuin listan käskyjä.
+jotka tekevät ohjelmasta muutakin kuin listan käskyjä. Ehtolause tekee myös
+funktioista monipuolisempia: funktio voi palauttaa eri arvon eri tilanteissa.
 
 ## Mihin ehtolauseita tarvitaan?
 
@@ -20,9 +21,9 @@ jotka tekevät ohjelmasta muutakin kuin listan käskyjä.
   vain yksi toteutuu.
 
 Ehto on aina *totuusarvoinen lauseke*: jotakin, jonka arvo on `true` tai
-`false`. Edellisen luvun [vertailu- ja loogiset
-operaattorit](./2-operaattorit.md#vertailuoperaattorit) ovat juuri sitä
-varten.
+`false`. Luvun [Operaattorit ja
+tyyppimuunnokset](../osa2/2-operaattorit.md#vertailuoperaattorit) vertailu- ja
+loogiset operaattorit ovat juuri sitä varten.
 
 ## `if`-lause
 
@@ -245,7 +246,112 @@ public class Sisakkain
 
 Sisäkkäisyys on tehokasta, mutta yli kolmen tason päätöspuu on jo vaikea
 lukea. Silloin kannattaa miettiä, voisiko osan ehdoista yhdistää
-`&&`-operaattorilla tai siirtää aliohjelmaan (osa 3).
+`&&`-operaattorilla tai siirtää funktioon (ks. [Ehtolause
+funktiossa](#ehtolause-funktiossa)).
+
+## Ehtolause funktiossa
+
+Luvun [Funktiot](../osa2/4-funktiot.md) funktioissa oli yksi `return`-lause.
+Ehtolauseen avulla funktio voi palauttaa eri arvon eri tilanteissa. Edellä
+arvosana laskettiin `Main`-aliohjelmassa apumuuttujaan. Luontevampaa on
+kirjoittaa siitä funktio, jossa jokainen haara palauttaa oman arvonsa:
+
+```csharp
+using System;
+
+public class Arvosanat
+{
+    public static void Main()
+    {
+        Console.WriteLine(Arvosana(83));   // 4
+        Console.WriteLine(Arvosana(45));   // 0
+    }
+
+    public static int Arvosana(int pisteet)
+    {
+        if (pisteet >= 90)
+        {
+            return 5;
+        }
+        else if (pisteet >= 80)
+        {
+            return 4;
+        }
+        else if (pisteet >= 70)
+        {
+            return 3;
+        }
+        else if (pisteet >= 60)
+        {
+            return 2;
+        }
+        else if (pisteet >= 50)
+        {
+            return 1;
+        }
+        return 0;
+    }
+}
+```
+
+`return` lopettaa funktion suorituksen heti, ja suoritus palaa kutsukohtaan.
+Kun pisteitä on 83, ensimmäinen ehto on epätosi ja toinen tosi, joten funktio
+palauttaa 4, eikä loppuja ehtoja edes tarkisteta. Viimeinen `return 0;`
+suoritetaan vain, jos mikään ehto ei ollut tosi.
+
+**Jokaisella suorituspolulla on oltava `return`.** Kääntäjä tarkistaa, että
+funktio palauttaa arvon, kulki suoritus mitä haaraa tahansa. Jos yllä viimeinen
+`return 0;` puuttuisi, alle 50 pisteellä funktio ei palauttaisi mitään, ja
+kääntäjä ilmoittaa `CS0161: not all code paths return a value`. Kääntäjä ei
+laske ehtojen arvoja etukäteen, joten se vaatii viimeisen `return`-lauseen
+silloinkin, kun ihminen näkee kaikkien tapausten olevan katettu:
+
+```csharp,ignore
+public static int Suurempi(int a, int b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    if (a <= b)      // ei käänny: CS0161
+    {
+        return b;
+    }
+}
+```
+
+Korjaus on kirjoittaa viimeinen tapaus `else`-haaraksi tai pelkäksi
+`return b;`-lauseeksi ilman ehtoa.
+
+**Totuusarvon voi palauttaa suoraan.** Aloittelija kirjoittaa usein näin:
+
+```csharp,ignore
+public static bool OnkoParillinen(int luku)
+{
+    if (luku % 2 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+```
+
+Funktio toimii, mutta ehtolause on turha. Vertailu `luku % 2 == 0` on jo
+lauseke, jonka arvo on `true` tai `false`, joten sen voi palauttaa sellaisenaan
+kuten luvun [Funktiot](../osa2/4-funktiot.md#paluuarvon-tyyppi)
+`OnkoTaysiIkainen`:
+
+```csharp,ignore
+public static bool OnkoParillinen(int luku)
+{
+    return luku % 2 == 0;
+}
+```
+
+Jos ehtolauseen haarat vain palauttavat `true` ja `false`, palauta ehto itse.
 
 ## `switch`
 
@@ -335,6 +441,10 @@ public class Puolipiste
 }
 ```
 
+**Funktion haarasta puuttuu `return`.** Funktiossa jokaisella suorituspolulla
+on oltava `return`-lause, muuten kääntäjä ilmoittaa `CS0161: not all code
+paths return a value`. Ks. [Ehtolause funktiossa](#ehtolause-funktiossa).
+
 **Aaltosulut pois.** Jos lohkossa on vain yksi lause, C# sallii aaltosulkujen
 jättämisen pois. Tällä kurssilla aaltosulut kirjoitetaan aina, koska ilman
 niitä toisen lauseen lisääminen lohkoon menee helposti pieleen: sisennys
@@ -347,6 +457,9 @@ näyttää oikealta, mutta vain ensimmäinen lause kuuluu ehtoon.
 * `else if` -ketjusta suoritetaan ensimmäinen tosi haara; järjestyksellä on
   väliä.
 * Ehdot yhdistetään operaattoreilla `&&`, `||` ja `!`.
+* Funktiossa jokainen haara voi palauttaa oman arvonsa, ja jokaisella
+  suorituspolulla on oltava `return`. Totuusarvon voi palauttaa suoraan:
+  `return luku % 2 == 0;`.
 * `switch` sopii, kun yhtä arvoa verrataan moneen vaihtoehtoon.
 * Kirjoita `==` vertailuun, älä laita puolipistettä `if`-rivin perään ja
   käytä aina aaltosulkuja.
@@ -444,5 +557,7 @@ lopettaa `switch`-lauseen, joten `default`-haaraa ei suoriteta.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: "Parillinen vai pariton", "Arvosana", "Karkausvuosi"
-     (&&, ||), "Mitä ohjelma tulostaa?" (else if -järjestys), switch-tehtävä. -->
+<!-- Vaiheessa B: "Parillinen vai pariton", "Arvosana funktioksi",
+     "Suurempi" (useita return-lauseita), "OnkoKarkausvuosi" (&&, ||,
+     totuusarvo suoraan), "Mitä ohjelma tulostaa?" (else if -järjestys),
+     switch-tehtävä. -->

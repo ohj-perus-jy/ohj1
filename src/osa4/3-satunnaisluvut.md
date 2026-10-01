@@ -25,7 +25,7 @@ paikka, arvattava luku. Tässä luvussa opitaan arpomaan lukuja
 
 ## Esimerkki: arvaa luku
 
-<!-- Yhdistää syötteen (2.2), ehtolauseen (2.3), silmukan (4.1) ja
+<!-- Yhdistää syötteen (2.2), ehtolauseen (3.1), silmukan (4.1) ja
      satunnaisluvun: ohjelma arpoo luvun 1–100, käyttäjä arvaa, ohjelma
      vastaa "liian suuri" tai "liian pieni", kunnes arvaus osuu. -->
 

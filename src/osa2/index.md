@@ -1,4 +1,4 @@
-# Osa 2: Muuttujat, syöte, ehdot ja aliohjelmat
+# Osa 2: Muuttujat, syöte ja funktiot
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
@@ -8,9 +8,11 @@
 > * osaat lukea käyttäjältä tekstiä ja lukuja
 > * tiedät, miten tietotyyppi vaikuttaa laskun tulokseen, ja osaat muuntaa
 >   arvon tyypistä toiseen
-> * osaat kirjoittaa ehtolauseita vertailu- ja loogisilla operaattoreilla
+> * osaat muodostaa totuusarvoisia lausekkeita vertailu- ja loogisilla
+>   operaattoreilla
 > * erotat lauseen ja lausekkeen toisistaan
-> * osaat jakaa ohjelman aliohjelmiin ja kutsua niitä
+> * osaat kirjoittaa funktion, joka saa tietoa parametreina ja palauttaa arvon,
+>   ja käyttää sen kutsua lausekkeessa
 > * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
 >   järjestyksessä ne suoritetaan
 

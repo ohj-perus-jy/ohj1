@@ -91,7 +91,7 @@ väliin.
     public static void Main()
 ```
 
-Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/5-aliohjelmat.md), mutta lyhyesti: 
+Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/4-funktiot.md), mutta lyhyesti: 
 aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste -- tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
 
 Vastaavasti kuin luokan kohdalla, seuraava avaava aaltosulku `{` kertoo, mistä aliohjelman
@@ -105,7 +105,7 @@ välilyönnin verran jokaista tasoa kohti. C#-kielen kääntäjä ei välitä si
 mutta ihminen välittää: sisennyksestä näkee yhdellä silmäyksellä, mikä kuuluu
 minkäkin sisään. Rider sisentää rivit puolestasi, kun painat Enteriä
 aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan luvussa
-[Ohjelman rakenne](../osa2/6-ohjelman-rakenne.md#lohkot-ja-sisennykset).
+[Ohjelman rakenne](../osa2/5-ohjelman-rakenne.md#lohkot-ja-sisennykset).
 
 ```csharp,noplayground
         System.Console.WriteLine("Heippa, maailma!");
@@ -113,7 +113,7 @@ aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan luvussa
 
 Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, maailma!" näytölle. `System.Console.WriteLine` on C#-kielen sisäänrakennettu toiminto, joka hoitaa tekstin tulostamisen konsoli-ikkunaan. Viesti, joka halutaan tulostaa, kirjoitetaan lainausmerkkien sisälle.
 
-Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi luvussa [Lauseet ja lausekkeet](../osa2/4-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
+Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi luvussa [Lauseet ja lausekkeet](../osa2/3-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
 
 ```csharp,noplayground
     }

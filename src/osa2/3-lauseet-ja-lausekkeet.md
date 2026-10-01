@@ -19,8 +19,8 @@ Erottelu tulee vastaan jatkuvasti:
 * Kun mietit, voiko tulostuskäskyn sisään kirjoittaa laskun
   (`Console.WriteLine(2 + 3)`), vastaus on kyllä: tulostuskäsky odottaa
   lauseketta, ja `2 + 3` on lauseke.
-* Kun osassa 3 kirjoitat funktion, joka palauttaa arvon, sen kutsu on lauseke,
-  ja sitä voi käyttää kaikkialla, missä arvoa tarvitaan.
+* Kun seuraavassa luvussa kirjoitat oman funktion, sen kutsu on lauseke, ja
+  sitä voi käyttää kaikkialla, missä arvoa tarvitaan.
 
 ## Lause
 
@@ -34,10 +34,10 @@ ika = ika + 1;                             // sijoituslause
 Console.WriteLine("Hyvää syntymäpäivää!"); // aliohjelmakutsu
 ```
 
-Myös ehtolause (`if`) ja toistolause (`while`, `for`) ovat lauseita. Ne eivät
-pääty puolipisteeseen vaan sisältävät aaltosulkujen rajaaman lohkon, jossa on
-lisää lauseita. Ehtolauseet käsiteltiin luvussa
-[Ehtolauseet](./3-ehtolauseet.md), ja toistolauseisiin tutustutaan osassa 4.
+Myöhemmin vastaan tulee lauseita, jotka eivät pääty puolipisteeseen:
+ehtolause (`if`, luku [Ehtolauseet](../osa3/1-ehtolauseet.md)) ja
+toistolauseet (`while`, `for`, osa 4). Niissä on aaltosulkujen rajaama lohko,
+jonka sisällä on lisää lauseita.
 
 ## Lauseke
 
@@ -59,6 +59,9 @@ isommiksi lausekkeiksi.
 Jokaisella lausekkeella on arvon lisäksi *tyyppi*, joka kertoo, millainen arvo
 on kyseessä. Tyypit esiteltiin luvussa
 [Muuttujat ja tietotyypit](./1-muuttujat-ja-tietotyypit.md).
+
+Lausekkeen tunnistaa helposti: jos koodinpätkän voi kirjoittaa sijoituksen
+oikealle puolelle, esimerkiksi `int x = ...;`, se on lauseke.
 
 ## Lauseke lauseen sisällä
 
@@ -92,17 +95,33 @@ public class Lausekkeet
 }
 ```
 
-Lauseke voi olla myös aliohjelmakutsu, joka palauttaa arvon. Alla
-`Math.Max(3, 7)` on lauseke, jonka arvo on 7. Omia arvon palauttavia
-aliohjelmia opitaan kirjoittamaan luvussa [Aliohjelman
-paluuarvo](../osa3/2-aliohjelman-paluuarvo.md).
+## Kutsu lausekkeena
+
+Kutsu on lauseke, jos se antaa arvon. Useimmat jo tutuista kutsuista antavat:
+
+| Kutsu                | Arvo                         | Tyyppi   |
+| -------------------- | ---------------------------- | -------- |
+| `Math.Max(3, 7)`     | 7                            | `int`    |
+| `Math.Sqrt(16)`      | 4                            | `double` |
+| `int.Parse("42")`    | 42                           | `int`    |
+| `Console.ReadLine()` | käyttäjän kirjoittama rivi   | `string` |
+
+Siksi kutsun voi sijoittaa muuttujaan tai antaa toiselle kutsulle:
 
 ```csharp,ignore
-int suurempi = Math.Max(3, 7); // Sijoituslause, jossa lauseke on kutsu
-Console.WriteLine(suurempi);   // Tulostaa 7
+int suurempi = Math.Max(3, 7);             // sijoituslause, jossa lauseke on kutsu
+int ika = int.Parse(Console.ReadLine());   // kutsu toisen kutsun argumenttina
 ```
 
-## Lauseke, joka on myös lause
+`Console.WriteLine("Moi")` on erilainen. Se tulostaa tekstin mutta ei anna
+arvoa, joten se ei ole lauseke vaan pelkkä lause. Sama testi kuin edellä
+paljastaa eron: `int x = Math.Max(3, 7);` kääntyy, mutta
+`int x = Console.WriteLine("Moi");` ei käänny.
+
+Seuraavassa luvussa kirjoitat [omia funktioita](./4-funktiot.md), joiden kutsu
+on lauseke samalla tavalla kuin `Math.Max`-kutsu.
+
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: lauseke, joka on myös lause</summary>
 
 Joissakin tapauksissa sama koodinpätkä on sekä lause että lauseke. Tavallisin
 esimerkki on `a++`, joka kasvattaa muuttujan `a` arvoa yhdellä. Se saa jotakin
@@ -119,18 +138,23 @@ joutuu pysähtymään miettimään, kumpi arvo `b`:hen päätyi. Operaattoreista
 `++`:n kahdesta muodosta kerrottiin luvussa
 [Operaattorit ja tyyppimuunnokset](./2-operaattorit.md).
 
-Tässä esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus. Se, mihin
-"lokeroon" jokin koodinpätkä kuuluu, vaihtelee ohjelmointikielen mukaan.
-Ohjelmointikielen spesifikaatio määrittelee sen, mitkä koodinpätkät ovat
-lauseita, mitkä lausekkeita, ja mitkä jotakin muuta. Jos asia kiinnostaa
-enemmän, voit tutustua [📖 C#-kielen
+Tässä luvussa esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus.
+Se, mihin "lokeroon" jokin koodinpätkä kuuluu, vaihtelee ohjelmointikielen
+mukaan, ja tarkat säännöt ovat kielen spesifikaatiossa. Esimerkiksi
+C#-spesifikaatio sanoo lausekkeeksi myös `Console.WriteLine`-kutsun, jolla ei
+ole arvoa. Tämän kurssin ohjelmiin riittää yksinkertainen jako: lauseke on
+koodia, jolla on arvo. Jos asia kiinnostaa enemmän, voit tutustua [📖 C#-kielen
 spesifikaatioon](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/statements).
+
+</details>
 
 ## Yhteenveto
 
 * Lause saa jotakin tapahtumaan ja päättyy yleensä puolipisteeseen.
 * Lausekkeella on arvo ja tyyppi. Lausekkeita ovat arvot, muuttujat,
-  laskutoimitukset ja arvon palauttavat kutsut.
+  laskutoimitukset ja arvon antavat kutsut, kuten `Math.Max(3, 7)`.
+* Testi: jos koodinpätkän voi kirjoittaa sijoituksen oikealle puolelle, se on
+  lauseke.
 * Lauseke käytetään aina jossakin lauseessa: sijoitetaan muuttujaan tai
   annetaan aliohjelmalle.
 
@@ -161,10 +185,10 @@ sisällä oleva `"Moi"` on lauseke.
 </vaittama>
 
 <vaittama vastaus="totta">
-Sama koodinpätkä voi olla sekä lauseke että lause.
+`Console.ReadLine()` on lauseke.
 <perustelu>
-**Totta.** `a++` on lauseke, koska sillä on arvo, ja puolipisteellä
-päätettynä `a++;` on myös lause.
+**Totta.** Kutsu antaa arvon, käyttäjän kirjoittaman rivin, joten sen voi
+sijoittaa muuttujaan: `string nimi = Console.ReadLine();`.
 </perustelu>
 </vaittama>
 

@@ -17,8 +17,8 @@ vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
 * **Pelin pistelaskuri.** "Lisää pisteisiin kymmenen" on niin yleinen
   toimenpide, että sille on oma lyhennysmerkintänsä `pisteet += 10`.
 * **Ehdot.** "Onko pelaajalla tarpeeksi rahaa?" on vertailu `raha >= hinta`,
-  jonka tulos on totuusarvo. Seuraavan luvun ehtolauseet rakentuvat näiden
-  vertailujen varaan.
+  jonka tulos on totuusarvo. Funktio voi palauttaa vertailun tuloksen, ja
+  osan 3 ehtolauseet rakentuvat näiden vertailujen varaan.
 
 ## Laskeminen muuttujilla
 
@@ -128,7 +128,7 @@ public static Vector operator +(Vector a, Vector b)
 
 Kun kääntäjä näkee lausekkeen `a + b` ja molemmat ovat vektoreita, se kutsuu
 tätä aliohjelmaa. Idea on sama kuin
-[aliohjelman kuormittamisessa](../osa3/1-parametrit-ja-argumentit.md#kuormittaminen):
+[funktion kuormittamisessa](./4-funktiot.md#kuormittaminen):
 samalla nimellä on monta versiota, ja kääntäjä valitsee niistä oikean tyyppien
 perusteella.
 
@@ -315,7 +315,7 @@ public class Loogiset
 ```
 
 Loogisten operaattoreiden totuustaulut ja käyttö ehdoissa käsitellään
-tarkemmin luvussa [Ehtolauseet](./3-ehtolauseet.md).
+tarkemmin luvussa [Ehtolauseet](../osa3/1-ehtolauseet.md).
 
 ## Sijoitusoperaattorit
 

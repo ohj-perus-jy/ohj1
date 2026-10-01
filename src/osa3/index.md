@@ -1,18 +1,19 @@
-# Osa 3: Funktiot ja Jypeli
+# Osa 3: Ehdot, aliohjelmat ja Jypeli
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
-> * osaat välittää aliohjelmalle tietoa parametreina
-> * osaat kirjoittaa funktion, joka palauttaa arvon, ja käyttää paluuarvoa
->   lausekkeessa
+> * osaat kirjoittaa ehtolauseita ja funktioita, jotka palauttavat eri arvon
+>   eri tilanteissa
+> * osaat kirjoittaa aliohjelman, joka ei palauta arvoa, ja tiedät, milloin
+>   aliohjelmasta tehdään funktio ja milloin ei
 > * tiedät, missä muuttuja näkyy ja milloin sitä ei enää ole
 > * osaat luoda ja käyttää olioita Jypeli-pelissä
 
 ## Luvut
 
-1. [Parametrit ja argumentit](./1-parametrit-ja-argumentit.md)
-2. [Aliohjelman paluuarvo](./2-aliohjelman-paluuarvo.md)
+1. [Ehtolauseet](./1-ehtolauseet.md)
+2. [Aliohjelmat ilman paluuarvoa](./2-aliohjelmat-ilman-paluuarvoa.md)
 3. [Muuttujien näkyvyys](./3-muuttujien-nakyvyys.md)
 4. [Jypeli ja oliot](./4-jypeli-ja-oliot.md)
 
