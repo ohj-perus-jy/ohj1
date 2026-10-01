@@ -122,7 +122,7 @@ itse säännöllisesti varmuuskopioita työstäsi.
  1. Kopioi ja liitä etävarastosi osoite [Oma eteneminen-sivulle](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen). Etävaraston osoitteen on oltava muotoa `https://github.com/kayttajanimi/ohj1ht.git` tai `https://gitlab.com/kayttajanimi/ohj1ht.git`.
  1. Aseta omat Git-tiedot ([ohje](git/index.md#gitconfig)). 
  1. Hae oma etävarastosi omalle tietokoneelle Git-työkalun avulla ([ohje](git/index.md#clone)). 
- 1. Kirjoita harjoitustyön suunnitelma ladattuun harjoitustyökansioon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
+ 1. Kirjoita harjoitustyön suunnitelma lataamasi harjoitustyöpohjan `suunnitelma/suunnitelma.md`-tiedostoon. Katso [suunnitelman vaatimukset alla](./harjoitustyo.md#suunnitelma) ja katso [esimerkkisuunnitelma](https://gitlab.jyu.fi/tie/ohj1/2025k/ohj1ht/-/blob/main/suunnitelma/suunnitelma.md).
  1. Lataa suunnitelmasi ja kuvasi etävarastoon ([add-commit](git/index.md#add-commit) ja [push](git/index.md#push)). 
  1. Esittele suunnitelma ohjaajalle lähi- tai etäohjauksessa.
 
