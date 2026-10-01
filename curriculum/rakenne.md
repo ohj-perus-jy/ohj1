@@ -25,7 +25,7 @@ numeroidaan osien mukaan (demo1–demo8).
 | **3 Funktiot ja Jypeli**                     | 3.1 Parametrit ja argumentit                                                   | parametri, argumentti, useita parametreja, Jypeli-esimerkki; kuormittaminen `<details>`-lohkona        | osittain                                       |
 |                                              | 3.2 Aliohjelman paluuarvo                                                      | return, kutsu lausekkeena, CS0161, useita returneja, sivuvaikutus                                      | osittain                                       |
 |                                              | 3.3 Muuttujien näkyvyys                                                        | paikalliset muuttujat, lohko, parametrit, attribuutit, CS0103                                          | runko                                          |
-|                                              | 3.4 Jypeli ja oliot                                                            | olio, new, ominaisuudet, metodikutsu, PhysicsGame/Begin, omat aliohjelmat Jypelissä, näppäinkuuntelija | runko                                          |
+|                                              | 3.4 Jypeli ja oliot                                                            | olio, new, olioviite lyhyesti, ominaisuudet, metodikutsu, PhysicsGame/Begin, omat aliohjelmat Jypelissä, näppäinkuuntelija | runko                                          |
 | **4 Toisto, merkkijonot ja satunnaisuus**    | 4.1 Toistolauseet                                                              | while, do-while, for, sisäkkäiset, break/continue, välitulosten tulostaminen                           | osittain (yhteenveto ja visa puuttuvat)        |
 |                                              | 4.2 Merkkijonot                                                                | indeksointi, metodit, muotoilu, Split/Trim, syöte syventäen: TryParse, kulttuuri                       | runko                                          |
 |                                              | 4.3 Satunnaisluvut                                                             | Random, RandomGen, arvauspeli                                                                          | runko                                          |
@@ -75,7 +75,10 @@ merkitty päivämäärällä.
   osassa. Jypeli-luku on laaja, ja harjoitustyön suunnittelu alkaa heti sen
   perään.
 - **Olioiden käyttö osassa 3 Jypelin yhteydessä.** Jypeli vaatii olioita
-  heti; luku 1.5 käyttää niitä selittämättä, luku 3.4 selittää.
+  heti; luku 1.5 käyttää niitä selittämättä, luku 3.4 selittää. Luku 3.4
+  mainitsee myös, että muuttujaan tallentuu viite olioon eikä olio itse, joten
+  kaksi muuttujaa voi viitata samaan olioon. Termit arvotyyppi ja viitetyyppi
+  tulevat vasta luvussa 5.3.
 - **Sivuvaikutus käsitteenä, ei omana lukunaan (1.10.2026).** Termi esitellään
   luvussa 3.2 erottamaan palauttaminen tulostamisesta, ja siihen palataan
   luvussa 5.3, kun aliohjelma muuttaa kutsujan taulukkoa.

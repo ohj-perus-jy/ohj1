@@ -8,8 +8,10 @@ Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopi
 
 ## Mitä muuttujassa on?
 
-<!-- Jatkaa luvun 5.1 kohtaa "Taulukko on viite". Laatikkomalli luvusta 2.1:
-     arvotyypin laatikossa on arvo, viitetyypin laatikossa nuoli. -->
+<!-- Jatkaa luvun 5.1 kohtaa "Taulukko on viite". Aloita tutusta tilanteesta:
+     luvun 3.4 huomautuksessa `pallo` ja `sama` viittaavat samaan olioon.
+     Laatikkomalli luvusta 2.1: arvotyypin laatikossa on arvo, viitetyypin
+     laatikossa nuoli. -->
 
 ## Arvotyypit: `int`, `double`, `bool`, `char`
 

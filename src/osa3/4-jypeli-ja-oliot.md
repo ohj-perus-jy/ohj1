@@ -20,6 +20,21 @@ kirjoittamaan omia aliohjelmia Jypeli-peliin.
 <!-- `PhysicsObject pallo = new PhysicsObject(50, 50);` Konstruktorin
      argumentit. Muuttuja viittaa olioon. -->
 
+> [!HUOMAUTUS]
+> Kun olio sijoitetaan muuttujaan, muuttujaan tallentuu *viite* (engl.
+> *reference*) olioon eikä olio itse. Siksi kaksi muuttujaa voi viitata samaan
+> olioon:
+>
+> ```csharp,ignore
+> PhysicsObject pallo = new PhysicsObject(40, 40);
+> PhysicsObject sama = pallo;
+> sama.Color = Color.Red;   // myös pallo on nyt punainen
+> ```
+>
+> Rivi `PhysicsObject sama = pallo;` ei luo uutta palloa, vaan `pallo` ja
+> `sama` viittaavat samaan olioon. Viitteisiin palataan luvussa [Arvotyypit ja
+> viitetyypit](../osa5/3-arvotyypit-ja-viitetyypit.md).
+
 ## Ominaisuudet
 
 <!-- `pallo.X`, `pallo.Y`, `pallo.Color`, `pallo.Shape`. Lukeminen ja
