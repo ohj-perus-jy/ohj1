@@ -1,17 +1,17 @@
 # Arvotyypit ja viitetyypit
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopioituu arvo, toisesta viite. Tässä luvussa selitetään ero ja sen seuraukset parametrien välityksessä ja vertailussa.
+Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopioituu arvo, toisesta viite. Opit, mistä ero johtuu ja mitä seurauksia sillä on parametrien välityksessä ja vertailussa.
 
 ## Mitä muuttujassa on?
 
-<!-- Jatkaa luvun 5.1 kohtaa "Taulukko on viite". Aloita tutusta tilanteesta:
-     luvun 3.4 huomautuksessa `pallo` ja `sama` viittaavat samaan olioon.
-     Laatikkomalli luvusta 2.1: arvotyypin laatikossa on arvo, viitetyypin
-     laatikossa nuoli. -->
+<!-- Jatkaa aliosan 5.1 kohtaa "Taulukko on viite". Aloita tutusta
+     tilanteesta: aliosan 3.4 huomautuksessa `pallo` ja `sama` viittaavat
+     samaan olioon. Laatikkomalli aliosasta 2.1: arvotyypin laatikossa on
+     arvo, viitetyypin laatikossa nuoli. -->
 
 ## Arvotyypit: `int`, `double`, `bool`, `char`
 
@@ -25,7 +25,7 @@ Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopi
 ## Parametrin välitys ja sivuvaikutus
 
 <!-- Aliohjelma, joka muuttaa parametrina saamaansa taulukkoa, muuttaa
-     kutsujan taulukkoa: tämä on sivuvaikutus (termi luvusta 3.2). Vertaa
+     kutsujan taulukkoa: tämä on sivuvaikutus (termi aliosasta 3.2). Vertaa
      funktioon, joka palauttaa uuden taulukon. Nimeä ja dokumentoi niin, että
      muutos näkyy kutsujalle. -->
 
@@ -39,7 +39,15 @@ Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopi
 
 <!-- Kaksi muuttujaa, sama pallo: `PhysicsObject toinen = pallo;` ja
      `toinen.Color = Color.Red;` värjää myös "ensimmäisen", koska olioita on
-     vain yksi. Seuraavassa luvussa sama näytetään debuggerilla. -->
+     vain yksi. Seuraavassa aliosassa sama näytetään debuggerilla. -->
+
+## Valinnaista lisätietoa
+
+* [C#-kielen tyyppijärjestelmästä](../liitteet/tyyppijarjestelma.md)
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

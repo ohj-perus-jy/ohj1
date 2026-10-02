@@ -1,10 +1,10 @@
 # Taulukot ja silmukat
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Taulukko ja silmukka kulkevat käsi kädessä: silmukalla käydään taulukon alkiot läpi yksi kerrallaan. Tässä luvussa kirjoitetaan taulukkoa käsitteleviä funktioita.
+Taulukko ja silmukka kulkevat käsi kädessä: silmukalla käydään taulukon alkiot läpi yksi kerrallaan. Opit kirjoittamaan taulukkoa käsitteleviä funktioita.
 
 ## Taulukon läpikäynti `for`-silmukalla
 
@@ -39,7 +39,15 @@ taulukon tai kokoelman alkioita halutaan muuttaa; silloin tarvitaan
 
 <!-- Kenttä merkkijonotaulukosta: jokainen merkki on yksi ruutu, ja
      sisäkkäinen silmukka luo merkkiä vastaavan olion. Vaihtoehto: pallot
-     taulukkoon. Taulukkofunktioiden testaaminen on luvussa 7.2. -->
+     taulukkoon. Taulukkofunktioiden testaaminen on aliosassa 7.2. -->
+
+## Valinnaista lisätietoa
+
+* [Moniulotteiset taulukot](../liitteet/moniulotteiset-taulukot.md)
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

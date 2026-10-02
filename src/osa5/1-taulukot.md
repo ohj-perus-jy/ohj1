@@ -1,10 +1,10 @@
 # Taulukot
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Taulukko (engl. *array*) on tietorakenne, johon voi tallentaa useita samantyyppisiä arvoja yhden nimen alle. Tässä luvussa opitaan luomaan taulukko, viittaamaan sen alkioihin indeksillä ja ymmärtämään, mitä taulukkomuuttujassa oikeastaan on.
+Taulukko (engl. *array*) on tietorakenne, johon voi tallentaa useita samantyyppisiä arvoja yhden nimen alle. Opit luomaan taulukon, viittaamaan sen alkioihin indeksillä ja ymmärtämään, mitä taulukkomuuttujassa oikeastaan on.
 
 ## Miksi taulukoita tarvitaan?
 
@@ -17,12 +17,16 @@ Taulukko (engl. *array*) on tietorakenne, johon voi tallentaa useita samantyyppi
 ## Taulukko on viite
 
 <!-- Lyhyesti: taulukkomuuttujassa on viite taulukkoon, ei itse alkioita.
-     Tarkemmin luvussa 5.3 Arvotyypit ja viitetyypit. -->
+     Tarkemmin aliosassa 5.3 Arvotyypit ja viitetyypit. -->
 
 ## Taulukko parametrina
 
 <!-- Aliohjelma saa viitteen samaan taulukkoon, joten se voi muuttaa
-     kutsujan taulukkoa. Seuraukset käsitellään luvussa 5.3. -->
+     kutsujan taulukkoa. Seuraukset käsitellään aliosassa 5.3. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

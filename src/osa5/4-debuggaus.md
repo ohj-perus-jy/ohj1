@@ -171,3 +171,11 @@ Joudut siis asentamaan Riderin uudestaan:
 2. Klikkaa *Download*
 3. Valitse omalle koneellesi sopiva versio ja lataa se
 4. Asenna Rider uudelleen
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
+
+## Tehtävät
+
+<!-- Tehtävät lisätään vaiheessa B. -->
