@@ -2,12 +2,12 @@
 
 Ensimmäisten viikkojen tehtävät voi periaatteessa tehdä verkkoselaimessa, mutta
 varsin pian on aika ottaa käyttöön oikea työkalu: *sovelluskehitin* eli IDE
-(engl. *Integrated Development Environment*). Tässä luvussa otetaan Rider
+(engl. *Integrated Development Environment*). Nyt otetaan Rider
 käyttöön, sovitaan kansiorakenteesta, jotta tiedostot löytyvät vielä
 marraskuussakin, ja luodaan ensimmäinen solution ja projekti.
 
 Ellet ole vielä asentanut kehitystyökaluja, tee se nyt
-[Työkalut-sivun](../tyokalut.md) ohjeiden mukaisesti. Tämä luku olettaa, että
+[Työkalut-sivun](../tyokalut.md) ohjeiden mukaisesti. Jatkossa oletetaan, että
 .NET, Rider ja Jypeli ovat asennettuina.
 
 ## Mihin IDE:tä tarvitaan?
@@ -118,8 +118,8 @@ tarkoita mitään, eikä sitä kannata yrittää suomentaa.
 
 ## Uusi solution
 
-Tämän ja seuraavan luvun aikana tehdään yksi solution (`demo1`) ja siihen
-kolme projektia: `Lumiukko`, `HelloWorld` ja `YmpyraPeli`.
+Tavoitteena on yksi solution (`demo1`), johon tulee lopulta kolme projektia:
+`Lumiukko`, `HelloWorld` ja `YmpyraPeli`.
 
 Luodaan solution `demo1` ja siihen projekti `Lumiukko` kansioon `ohj1/demot`.
 Jos solution on jo olemassa ja haluat lisätä siihen projektin, katso kohta
@@ -235,8 +235,8 @@ Lisää vielä *dokumentaatiokommentit*: kirjoita luokan esittelyrivin
 (`public class Lumiukko...`) yläpuolelle kolme kauttaviivaa `///`, jolloin
 Rider luo `<summary>`-rungon. Kirjoita tagien väliin, mitä ohjelma tekee. Tee
 sama `Begin`-aliohjelmalle. Dokumentaatiokommentit ovat kurssilla pakollisia,
-ja niistä kerrotaan tarkemmin luvussa [Kommentointi ja
-dokumentointi](../osa4/4-kommentointi-ja-dokumentointi.md).
+ja niistä kerrotaan tarkemmin [kommentoinnin ja
+dokumentoinnin](../osa4/4-kommentointi-ja-dokumentointi.md) yhteydessä.
 
 ```csharp,ignore
 /// <summary>
@@ -344,16 +344,17 @@ Avaa sitten `.sln`-tiedosto Riderissä uudesta paikasta.
 
 **Ohjelmassa on kaksi `Main`-pääohjelmaa.** Jypeli-projektissa `Main` on
 tiedostossa `Ohjelma.cs`. Jos kopioit esimerkin, jossa on oma `Main`, poista
-toinen. Tästä kerrotaan luvussa [Ensimmäinen graafinen
-ohjelma](./5-ensimmainen-graafinen-ohjelma.md#pääohjelma-jypeli-projekteissa-main).
+toinen. Tästä kerrotaan kohdassa [Pääohjelma
+Jypeli-projekteissa](./5-ensimmainen-graafinen-ohjelma.md#pääohjelma-jypeli-projekteissa-main).
 
 Lisää ongelmatilanteita ja niiden ratkaisuja on koottu
 [Työkalut-sivulle](../tyokalut.md#ongelmatilanteita-ja-niiden-ratkaisuja).
 
 ## Jypeli-projektit
 
-Jypeli-projektimallit ja Jypeli-projektin pääohjelma on kuvattu luvussa
-[Ensimmäinen graafinen ohjelma](./5-ensimmainen-graafinen-ohjelma.md).
+Jypeli-projektimallit ja Jypeli-projektin pääohjelma on kuvattu
+[ensimmäisen graafisen ohjelman](./5-ensimmainen-graafinen-ohjelma.md)
+yhteydessä.
 
 ## TIM-tehtävien tekeminen Riderissa {#tim-tehtavat-riderissa}
 
@@ -380,7 +381,7 @@ koodista on TIMissä näkyvää vastausaluetta.
 Komentorivitehtävä tehdään `ConsoleMain`-projektissa.
 
 1. **Riderissa:** Tee uusi projekti ja valitse projektimalliksi `ConsoleMain`.
-   Katso tarvittaessa ohjeet luvusta [Uusi projekti olemassa olevaan
+   Katso tarvittaessa ohjeet kohdasta [Uusi projekti olemassa olevaan
    solutioniin](#uusi-projekti-solutioniin).
 1. **TIMissä:** Klikkaa tehtävän palautuslaatikossa olevaa *Näytä koko koodi*
    -linkkiä ja sen jälkeen *Copy*-linkkiä. Tehtävän koko koodi on nyt
@@ -512,6 +513,14 @@ demot rakennetaan.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: T-tehtävä "Ympäristö kuntoon" (palauta kuvakaappaus
-     Riderista, jossa demo1-solution ja Lumiukko-projekti ajettuna) ja bonus
-     "Tekstieditorin käyttäminen" (exercises/1-8-1-bonus_editorin_kayttaminen). -->
+<!-- Vaiheessa B: tehtävä "Ympäristö kuntoon" (palauta kuvakaappaus
+     Riderista, jossa demo1-solution ja Lumiukko-projekti ajettuna). -->
+
+<task>
+  <task-title num="1.7">Tekstieditorin käyttäminen <i class="bi bi-stars"></i><points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-7-editorin-kayttaminen/handout.md}}
+
+  </handout>
+</task>

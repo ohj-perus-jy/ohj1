@@ -1,6 +1,6 @@
 # Ensimmäinen ohjelma
 
-Tässä luvussa kirjoitetaan, käännetään ja ajetaan ensimmäinen C#-ohjelma.
+Nyt kirjoitetaan, käännetään ja ajetaan ensimmäinen C#-ohjelma.
 Ohjelma tulostaa yhden rivin tekstiä, mutta siinä on jo kaikki samat osat kuin
 tuhansien rivien ohjelmissa: lähdekoodi, kääntäjä ja suoritettava ohjelma.
 
@@ -104,8 +104,9 @@ sisemmän lohkon rivit on *sisennetty* eli siirretty oikealle neljän
 välilyönnin verran jokaista tasoa kohti. C#-kielen kääntäjä ei välitä sisennyksistä,
 mutta ihminen välittää: sisennyksestä näkee yhdellä silmäyksellä, mikä kuuluu
 minkäkin sisään. Rider sisentää rivit puolestasi, kun painat Enteriä
-aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan luvussa
-[Ohjelman rakenne](../osa2/5-ohjelman-rakenne.md#lohkot-ja-sisennykset).
+aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan
+[ohjelman rakenteen](../osa2/5-ohjelman-rakenne.md#lohkot-ja-sisennykset)
+yhteydessä.
 
 ```csharp,noplayground
         System.Console.WriteLine("Heippa, maailma!");
@@ -113,7 +114,7 @@ aaltosulun jälkeen. Lohkoihin ja sisennyksiin palataan luvussa
 
 Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, maailma!" näytölle. `System.Console.WriteLine` on C#-kielen sisäänrakennettu toiminto, joka hoitaa tekstin tulostamisen konsoli-ikkunaan. Viesti, joka halutaan tulostaa, kirjoitetaan lainausmerkkien sisälle.
 
-Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi luvussa [Lauseet ja lausekkeet](../osa2/3-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
+Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi [myöhemmin](../osa2/3-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
 
 ```csharp,noplayground
     }
@@ -329,20 +330,20 @@ toisistaan, eikä jälkimmäistä ole olemassa.
 ## Tehtävät
 
 <task>
-  <task-title num="T1*">Tulostaminen <points>1 p.</points></task-title>
+  <task-title num="1.1">Tulostaminen <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-2-1-tulostaminen/handout.md}}
+  {{#include ../tehtavat/1-1-tulostaminen/handout.md}}
 
   </handout>
-  <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_tulostaminen_header">Tee tehtävä  TIMissä</a></task-link>
+  <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_tulostaminen_header">Tee tehtävä TIMissä</a></task-link>
 </task>
 
 <task>
-  <task-title num="T2*">Ensimmäinen oma ohjelma <points>1 p.</points></task-title>
+  <task-title num="1.2">Ensimmäinen oma ohjelma <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-2-2-oma_ohjelma/handout.md}}
+  {{#include ../tehtavat/1-2-oma-ohjelma/handout.md}}
 
   </handout>
   <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_oma_ohjelma_header">Tee tehtävä TIMissä</a></task-link>

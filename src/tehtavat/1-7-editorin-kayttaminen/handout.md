@@ -1,6 +1,6 @@
 Tässä tehtävässä harjoitellaan tekstieditorin käyttöä pelkällä näppäimistöllä. Ota sekuntikellolla aika, kauanko sinulla menee tekstitiedoston muokkaamiseen alla olevien ohjeiden mukaisesti. Hiirtä ei saa käyttää lainkaan.
 
-Lue ensin tehtävä huolellisesti. Kun olet ensin sisäistänyt kaikki ohjeet, lataa ja avaa annettu pohjatiedosto haluamallasi [tekstieditorilla](../../tyokalut.md#tekstieditori). Word tai muu toimisto-ohjelma *ei* ole tekstieditori, eivätkä ne kuulu tämän kurssin sisältöön.
+Lue ensin tehtävä huolellisesti. Kun olet ensin sisäistänyt kaikki ohjeet, lataa ja avaa annettu pohjatiedosto haluamallasi [tekstieditorilla](../tyokalut.md#tekstieditori). Word tai muu toimisto-ohjelma *ei* ole tekstieditori, eivätkä ne kuulu tämän kurssin sisältöön.
 
 Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korvaa ja vastaavat. Aloita ajanotto siitä, kun kirjoitat ensimmäisen merkin, ja lopeta siihen kun viimeinen merkki on kirjoitettu. Tee pohjatiedostoon seuraavat muokkaukset:
 
@@ -14,7 +14,7 @@ Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korv
    useamman rivin kokonaisuus:
    - Rivi 6: Kirjoita vuorotellen merkkejä: |~|~|~|~... kunnes rivillä on 
      49 merkkiä (rivi päättyy | merkkiin).
-   - Rivit 7-27: Numeroi rivit käyttäen parillisia lukuja seuraavasti 
+   - Rivit 7–27: Numeroi rivit käyttäen parillisia lukuja seuraavasti 
      (rivillä aina kaksi numeromerkkiä ja rivinvaihto):
       02
       04

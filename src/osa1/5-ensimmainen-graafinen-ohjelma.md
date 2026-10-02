@@ -1,15 +1,15 @@
 # Ensimmäinen graafinen ohjelma
 
 Konsoliohjelmat ovat hyvä tapa oppia, mutta tunnustetaan: tekstiä tulostava
-ohjelma ei ole se, minkä takia useimmat haluavat oppia ohjelmoimaan. Tässä
-luvussa tehdään ensimmäinen graafinen ohjelma *Jypeli*-kirjastolla: avataan
+ohjelma ei ole se, minkä takia useimmat haluavat oppia ohjelmoimaan. Nyt
+tehdään ensimmäinen graafinen ohjelma *Jypeli*-kirjastolla: avataan
 ikkuna ja piirretään siihen jotakin. Samalla nähdään, mitä *kirjaston*
 käyttäminen käytännössä tarkoittaa.
 
-Luvussa käytetään olioita (`new`, ominaisuudet, `Add`) selittämättä niitä
-vielä tarkasti. Olioihin palataan kunnolla luvussa [Jypeli ja
-oliot](../osa3/4-jypeli-ja-oliot.md). Nyt riittää, että saat jotakin näkyviin
-ja uskallat muuttaa sitä.
+Esimerkeissä käytetään olioita (`new`, ominaisuudet, `Add`) selittämättä niitä
+vielä tarkasti. Olioihin palataan kunnolla
+[myöhemmin](../osa3/4-jypeli-ja-oliot.md). Nyt riittää, että saat jotakin
+näkyviin ja uskallat muuttaa sitä.
 
 ## Miksi pelikirjasto?
 
@@ -42,8 +42,8 @@ alkuun pelien tekemisessä:
 
 Tehdään pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen
 ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `demo1`-solutionin
-kolmas projekti [edellisessä luvussa](./4-ohjelmointiymparisto-kuntoon.md)
-tehtyjen `Lumiukko`- ja `HelloWorld`-projektien jälkeen.
+kolmas projekti [aiemmin tehtyjen](./4-ohjelmointiymparisto-kuntoon.md)
+`Lumiukko`- ja `HelloWorld`-projektien jälkeen.
 
 1. Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin
    [HelloWorld](./4-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
@@ -198,8 +198,8 @@ Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa
 - `Tasohyppelypeli` (Esimerkkipeli)
 - `Android Fysiikkapeli` (Android-alustaa varten)
 
-Solutionin ja projektin luominen on kuvattu luvussa [Ohjelmointiympäristö
-kuntoon](./4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+Solutionin ja projektin luominen on kuvattu kohdassa
+[Uusi solution](./4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
 
 ## Pääohjelma Jypeli-projekteissa (Main)
 
@@ -288,5 +288,14 @@ keskipistettä.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: T-tehtävä "Oma kuvio" (vähintään kolme eri muotoista ja
+<!-- Vaiheessa B: tehtävät "Oma kuvio" (vähintään kolme eri muotoista ja
      väristä oliota) ja "Lumiukko" (kolme palloa päällekkäin). -->
+
+<task>
+  <task-title num="1.8">Kolmiot <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-8-kolmiot/handout.md}}
+
+  </handout>
+</task>

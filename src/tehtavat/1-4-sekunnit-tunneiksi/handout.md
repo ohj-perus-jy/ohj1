@@ -13,5 +13,5 @@ vastausta lähdekoodiin.
 Kokeile lopuksi, että ohjelmasi toimii myös toisella luvulla: kun vaihdat
 luvun `7235` tilalle luvun `10000`, tulostuksen pitää olla `2 h 46 min 40 s`.
 
-Vihje: täydet minuutit saat samalla tavalla kuin luvun esimerkissä. Niistä
-pitää vielä erottaa täydet tunnit.
+Vihje: täydet minuutit saat samalla tavalla kuin esimerkissä, jossa 754
+sekuntia muutetaan minuuteiksi. Niistä pitää vielä erottaa täydet tunnit.

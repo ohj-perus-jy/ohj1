@@ -6,10 +6,8 @@ miljoonia kertoja sekunnissa -- eikä koskaan sitä, mitä *tarkoitettiin*.
 Ohjelmoijan työ on sanoa asiat niin täsmällisesti, ettei näiden kahden välillä
 ole eroa.
 
-Tässä luvussa ei vielä kirjoiteta koodia. Sen sijaan katsotaan, mitä
-ohjelmoiminen on, mitä sillä saa aikaan ja millaisia välineitä ohjelmoija
-käyttää. Ensimmäinen oikea C#-ohjelma kirjoitetaan luvussa
-[Ensimmäinen ohjelma](./2-ensimmainen-ohjelma.md).
+Ennen ensimmäistä koodiriviä katsotaan, mitä ohjelmoiminen on, mitä sillä saa
+aikaan ja millaisia välineitä ohjelmoija käyttää.
 
 ## Mihin ohjelmointia tarvitaan?
 
@@ -65,11 +63,10 @@ ja opit ne kaikki tämän kurssin aikana:
 * **Peräkkäisyys**: vaiheet suoritetaan yksi kerrallaan, järjestyksessä,
   kuten yllä.
 * **Valinta**: *jos* kahvi on loppu, *niin* mene kauppaan, *muuten* jatka.
-  Tähän tutustutaan luvussa [Ehtolauseet](../osa3/1-ehtolauseet.md).
+  Valinta ohjelmoidaan [ehtolauseilla](../osa3/1-ehtolauseet.md).
 * **Toisto**: *toista* "lisää mittalusikallinen kahvia", *kunnes* lusikallisia
-  on neljä. Tähän tutustutaan luvussa
-  [Toistolauseet](../osa4/1-toistolauseet.md). Toiston voi toteuttaa
-  viittaamalla itseensä, jolloin puhutaan
+  on neljä. Toisto ohjelmoidaan [toistolauseilla](../osa4/1-toistolauseet.md).
+  Toiston voi toteuttaa myös viittaamalla itseensä, jolloin puhutaan
   [rekursiosta](../osa7/1-rekursio.md).
 
 Kun osaat nämä kolme ja opit pilkkomaan ison tehtävän pieniin osiin, osaat
@@ -144,9 +141,7 @@ Ohjelmointikielellä kirjoitettua tekstiä kutsutaan *lähdekoodiksi*. Jotta
 prosessori voisi suorittaa C#-kielisen ohjelman, lähdekoodi täytyy *kääntää*
 konekielelle. Kääntämisen tekee ohjelma nimeltä *kääntäjä*. Kääntäjä on kuin
 pikkutarkka äidinkielenopettaja: se ei päästä läpi yhtäkään puuttuvaa
-puolipistettä, mutta kertoo aina täsmälleen, millä rivillä vika on. Tähän
-tutustutaan käytännössä luvussa
-[Ensimmäinen ohjelma](./2-ensimmainen-ohjelma.md).
+puolipistettä, mutta kertoo aina täsmälleen, millä rivillä vika on.
 
 Ohjelmointikieliä on satoja. Tällä kurssilla käytetään **C#**-kieltä (lausutaan
 "c sharp"), joka on Microsoftin kehittämä ja laajasti käytetty kieli. Sillä
@@ -185,8 +180,8 @@ Kirjasto on siis valmista koodia, jota kutsutaan omasta ohjelmasta.
 **Jypeli**-kirjastoa, joka on Jyväskylän yliopistossa kehitetty pelimoottori.
 Jypeli hoitaa ikkunan avaamisen, piirtämisen, fysiikan ja näppäimistön
 lukemisen, jotta sinä voit keskittyä siihen, mitä pelissä tapahtuu.
-Ensimmäinen Jypeli-ohjelma tehdään luvussa
-[Ensimmäinen graafinen ohjelma](./5-ensimmainen-graafinen-ohjelma.md).
+Pääset kokeilemaan sitä pian
+[ensimmäisessä graafisessa ohjelmassa](./5-ensimmainen-graafinen-ohjelma.md).
 
 ## Ohjelmoijan työtapa
 
@@ -297,6 +292,6 @@ algoritmin rakenne lainkaan.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: T-tehtävä "Kirjoita algoritmi" (ohje arkiaskareeseen, esim.
+<!-- Vaiheessa B: tehtävä "Kirjoita algoritmi" (ohje arkiaskareeseen, esim.
      voileivän tekeminen, vähintään 8 vaihetta) ja lyhyt monivalinta
      käsitteistä (algoritmi, lähdekoodi, kääntäjä, kirjasto). -->

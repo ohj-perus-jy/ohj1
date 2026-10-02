@@ -1,7 +1,7 @@
 # Laskutoimitukset
 
 [Ensimmäinen ohjelmamme](./2-ensimmainen-ohjelma.md) tulosti valmiiksi
-kirjoitettua tekstiä. Tässä luvussa ohjelma pannaan laskemaan: tulostettavaksi
+kirjoitettua tekstiä. Nyt ohjelma pannaan laskemaan: tulostettavaksi
 annetaan lasku, ja tietokone laskee sen. Samalla huomataan, että tietokone
 laskee hieman eri tavalla kuin peruskoulussa opetettiin. Se ei ole rikki. Se
 vain noudattaa sääntöjä pilkuntarkasti.
@@ -12,7 +12,7 @@ vain noudattaa sääntöjä pilkuntarkasti.
   vähennetään prosentteina ja arvonlisävero lisätään. Kolme laskumerkkiä ja
   yksi sulkupari.
 * **Painoindeksi.** Paino jaetaan pituuden neliöllä. Jos jakolaskun tekee
-  kokonaisluvuilla, tulos on väärä, ja se on tämän luvun tärkein opetus.
+  kokonaisluvuilla, tulos on väärä, ja se on laskutoimitusten tärkein opetus.
 * **Pelin fysiikka.** Jokaisella ruudunpäivityksellä pallon paikkaan lisätään
   sen nopeus, ja nopeuteen lisätään painovoima. Peli on käytännössä
   yhteenlaskua kuusikymmentä kertaa sekunnissa.
@@ -51,8 +51,8 @@ Esimerkissä on kaksi uutta asiaa, jotka eivät liity laskemiseen:
 
 * Rivi `using System;` ohjelman alussa lyhentää kirjoittamista: sen ansiosta
   `System.Console.WriteLine` voidaan kirjoittaa muodossa `Console.WriteLine`.
-  Tarkemmin tästä kerrotaan luvussa
-  [Ohjelman rakenne](../osa2/5-ohjelman-rakenne.md).
+  Tarkemmin tästä kerrotaan
+  [ohjelman rakenteen](../osa2/5-ohjelman-rakenne.md) yhteydessä.
 * Merkkien `//` jälkeinen teksti on *kommentti*. Kääntäjä ohittaa sen, joten
   kommentti on tarkoitettu vain ihmiselle. Tämän kirjan esimerkeissä kommentti
   kertoo usein, mitä rivi tulostaa.
@@ -117,8 +117,8 @@ Lisää aiheesta kerrotaan liitteessä
 [Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
 Kokonaisluvuille ja liukuluvuille on C#:ssa omat *tietotyyppinsä*, `int` ja
-`double`. Niihin tutustutaan luvussa
-[Muuttujat ja tietotyypit](../osa2/1-muuttujat-ja-tietotyypit.md).
+`double`. Niihin tutustutaan tarkemmin
+[muuttujien](../osa2/1-muuttujat-ja-tietotyypit.md) yhteydessä.
 
 ## Laskujärjestys
 
@@ -311,42 +311,41 @@ merkkijonoksi `"52"`.
 
 ## Tehtävät
 
-<!-- Alustavat tehtävät. Numerointi jatkuu luvun 1.2 tehtävistä ja tarkentuu,
-     kun osan muut tehtävät tehdään. TIM-palautuslinkit lisätään, kun tehtävät
-     on viety TIMiin. -->
+<!-- Alustavat tehtävät. TIM-palautuslinkit lisätään, kun tehtävät on viety
+     TIMiin. -->
 
 <task>
-  <task-title num="T3">Mitä lauseke tuottaa? <points>1 p.</points></task-title>
+  <task-title num="1.3">Mitä lauseke tuottaa? <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-3-1-mita_lauseke_tuottaa/handout.md}}
+  {{#include ../tehtavat/1-3-mita-lauseke-tuottaa/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="T4">Sekunnit tunneiksi <points>1 p.</points></task-title>
+  <task-title num="1.4">Sekunnit tunneiksi <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-3-2-sekunnit_tunneiksi/handout.md}}
+  {{#include ../tehtavat/1-4-sekunnit-tunneiksi/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="T5">Lämpötilan muunnos <points>1 p.</points></task-title>
+  <task-title num="1.5">Lämpötilan muunnos <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-3-3-lampotilan_muunnos/handout.md}}
+  {{#include ../tehtavat/1-5-lampotilan-muunnos/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="B1">Kaksi pientä vai yksi iso? <points>1 p.</points></task-title>
+  <task-title num="1.6">Kaksi pientä vai yksi iso? <i class="bi bi-stars"></i><points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/1-3-4-pizzavertailu/handout.md}}
+  {{#include ../tehtavat/1-6-pizzavertailu/handout.md}}
 
   </handout>
 </task>
