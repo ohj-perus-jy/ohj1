@@ -1,4 +1,4 @@
-Ota pohjaksi luvun `Lumiukot`-ohjelma, jossa ovat aliohjelma `PiirraLumiukko`
+Ota pohjaksi `Lumiukot`-ohjelma, jossa ovat aliohjelma `PiirraLumiukko`
 ja funktio `LuoPallo`.
 
 1. Lisää peliin kaksi lumiukkoa lisää. Anna toisen paikka muuttujien ja

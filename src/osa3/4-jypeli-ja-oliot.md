@@ -1,14 +1,14 @@
 # Jypeli ja oliot
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Luvussa [Ensimmäinen graafinen ohjelma](../osa1/5-ensimmainen-graafinen-ohjelma.md)
-luotiin peliolio ja lisättiin se peliin. Tässä luvussa selitetään, mitä
-silloin oikeastaan tapahtui: mikä on olio, miten olio luodaan, miten sen
-ominaisuuksia muutetaan ja miten sen metodeja kutsutaan. Samalla opitaan
-kirjoittamaan omia aliohjelmia Jypeli-peliin.
+[Ensimmäisessä graafisessa ohjelmassa](../osa1/5-ensimmainen-graafinen-ohjelma.md)
+luotiin peliolio ja lisättiin se peliin. Nyt selitetään, mitä silloin oikeastaan
+tapahtui: mikä on olio, miten olio luodaan, miten sen ominaisuuksia muutetaan ja
+miten sen metodeja kutsutaan. Samalla opitaan kirjoittamaan omia aliohjelmia
+Jypeli-peliin.
 
 ## Mikä on olio?
 
@@ -32,8 +32,8 @@ kirjoittamaan omia aliohjelmia Jypeli-peliin.
 > ```
 >
 > Rivi `PhysicsObject sama = pallo;` ei luo uutta palloa, vaan `pallo` ja
-> `sama` viittaavat samaan olioon. Viitteisiin palataan luvussa [Arvotyypit ja
-> viitetyypit](../osa5/3-arvotyypit-ja-viitetyypit.md).
+> `sama` viittaavat samaan olioon. Viitteisiin palataan [arvo- ja
+> viitetyyppien](../osa5/3-arvotyypit-ja-viitetyypit.md) yhteydessä.
 
 ## Ominaisuudet
 
@@ -62,13 +62,17 @@ kirjoittamaan omia aliohjelmia Jypeli-peliin.
      `Keyboard.Listen(Key.Left, ButtonState.Down, LiikutaPelaajaa, "Liikuta
      vasemmalle", ...)`. Kuuntelija kutsuu omaa aliohjelmaa, kun näppäintä
      painetaan. Pelaaja on attribuutti, koska käsittelijä tarvitsee sen
-     (luku 3.3). Muut ohjaimet ja tapahtumat: harjoitustyön ohjeet ja Jypelin
+     (aliosa 3.3). Muut ohjaimet ja tapahtumat: harjoitustyön ohjeet ja Jypelin
      wiki. -->
 
 ## Dokumentaation lukeminen
 
 <!-- Jypelin wiki ja koodidokumentaatio: miten löydät, mitä ominaisuuksia ja
      metodeja PhysicsObjectilla on. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

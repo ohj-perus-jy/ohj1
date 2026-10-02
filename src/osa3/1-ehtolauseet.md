@@ -21,9 +21,8 @@ funktioista monipuolisempia: funktio voi palauttaa eri arvon eri tilanteissa.
   vain yksi toteutuu.
 
 Ehto on aina *totuusarvoinen lauseke*: jotakin, jonka arvo on `true` tai
-`false`. Luvun [Operaattorit ja
-tyyppimuunnokset](../osa2/2-operaattorit.md#vertailuoperaattorit) vertailu- ja
-loogiset operaattorit ovat juuri sitä varten.
+`false`. Juuri sitä varten ovat [vertailu- ja loogiset
+operaattorit](../osa2/2-operaattorit.md#vertailuoperaattorit).
 
 ## `if`-lause
 
@@ -251,10 +250,11 @@ funktiossa](#ehtolause-funktiossa)).
 
 ## Ehtolause funktiossa
 
-Luvun [Funktiot](../osa2/4-funktiot.md) funktioissa oli yksi `return`-lause.
-Ehtolauseen avulla funktio voi palauttaa eri arvon eri tilanteissa. Edellä
-arvosana laskettiin `Main`-aliohjelmassa apumuuttujaan. Luontevampaa on
-kirjoittaa siitä funktio, jossa jokainen haara palauttaa oman arvonsa:
+Aiemmin kirjoitetuissa [funktioissa](../osa2/4-funktiot.md) oli yksi
+`return`-lause. Ehtolauseen avulla funktio voi palauttaa eri arvon eri
+tilanteissa. Edellä arvosana laskettiin `Main`-aliohjelmassa apumuuttujaan.
+Luontevampaa on kirjoittaa siitä funktio, jossa jokainen haara palauttaa oman
+arvonsa:
 
 ```csharp
 using System;
@@ -341,8 +341,7 @@ public static bool OnkoParillinen(int luku)
 
 Funktio toimii, mutta ehtolause on turha. Vertailu `luku % 2 == 0` on jo
 lauseke, jonka arvo on `true` tai `false`, joten sen voi palauttaa sellaisenaan
-kuten luvun [Funktiot](../osa2/4-funktiot.md#paluuarvon-tyyppi)
-`OnkoTaysiIkainen`:
+kuten funktiossa [`OnkoTaysiIkainen`](../osa2/4-funktiot.md#paluuarvon-tyyppi):
 
 ```csharp,ignore
 public static bool OnkoParillinen(int luku)

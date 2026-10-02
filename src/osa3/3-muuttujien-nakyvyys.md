@@ -1,11 +1,11 @@
 # Muuttujien näkyvyys
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Tässä luvussa selvitetään, missä osassa ohjelmaa muuttuja on olemassa ja
-käytettävissä. Asia tulee vastaan heti, kun ohjelmassa on useita aliohjelmia.
+Muuttuja ei ole olemassa ja käytettävissä kaikkialla ohjelmassa. Asia tulee
+vastaan heti, kun ohjelmassa on useita aliohjelmia.
 
 ## Paikalliset muuttujat
 
@@ -20,7 +20,7 @@ käytettävissä. Asia tulee vastaan heti, kun ohjelmassa on useita aliohjelmia.
 ## Parametrit ovat paikallisia muuttujia
 
 <!-- Parametrin muuttaminen ei muuta kutsujan muuttujaa (arvotyypeillä).
-     Viitetyypit käsitellään luvussa 5.3. -->
+     Viitetyypit käsitellään aliosassa 5.3. -->
 
 ## Attribuutit
 
@@ -43,13 +43,17 @@ luokan elinkaaren ajan, ja ne näkyvät kaikissa luokan aliohjelmissa.
        peliluokan attribuutteja").
      - Konsoliohjelmissa attribuutteja ei tällä kurssilla tarvita.
      - Miksi välttää: aliohjelma, joka lukee tai muuttaa attribuuttia, ei
-       enää nojaa vain parametreihinsa (vrt. sivuvaikutus, luku 3.2), ja
+       enää nojaa vain parametreihinsa (vrt. sivuvaikutus, aliosa 3.2), ja
        virheen syytä on vaikeampi paikantaa. -->
 
 ## Virhe: muuttujaa ei ole olemassa nykyisessä kontekstissa
 
 <!-- CS0103. Tyypillinen syy: muuttuja määritelty toisessa aliohjelmassa tai
      lohkossa. Ratkaisu: välitä tieto parametrina tai paluuarvona. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

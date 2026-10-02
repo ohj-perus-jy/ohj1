@@ -1,6 +1,6 @@
 # Aliohjelmat ilman paluuarvoa
 
-Luvun [Funktiot](../osa2/4-funktiot.md) funktiot laskevat: ne saavat arvoja
+[Funktiot](../osa2/4-funktiot.md) laskevat: ne saavat arvoja
 ja antavat tuloksen takaisin. Kaikki tehtävät eivät kuitenkaan ole laskemista.
 Ohjelman pitää myös tulostaa, piirtää ja lisätä olioita peliin. Sellainen
 aliohjelma *tekee* jotakin eikä anna mitään takaisin. Paluuarvon tyypin
@@ -105,8 +105,8 @@ Se, mitä `void`-aliohjelma saa aikaan, on *sivuvaikutus* (engl. *side
 effect*): aliohjelma muuttaa jotakin itsensä ulkopuolella, esimerkiksi
 tulostaa ruudulle tai lisää peliin olion. Funktion tulos kulkee kutsujalle
 paluuarvona. `void`-aliohjelman tulos näkyy ruudulla tai pelissä, mutta
-kutsuja ei saa sitä käyttöönsä. Sivuvaikutuksiin palataan luvussa
-[Arvotyypit ja viitetyypit](../osa5/3-arvotyypit-ja-viitetyypit.md), jossa
+kutsuja ei saa sitä käyttöönsä. Sivuvaikutuksiin palataan [arvo- ja
+viitetyyppien](../osa5/3-arvotyypit-ja-viitetyypit.md) yhteydessä, kun
 aliohjelma muuttaa kutsujan taulukkoa.
 
 `void`-aliohjelma *tekee* jotakin, joten sen nimi alkaa yleensä verbillä:
@@ -221,7 +221,7 @@ aliohjelma ei lupaa palauttaa mitään.
 
 ## `void`-kutsu ei ole lauseke
 
-Luvun [Lauseet ja lausekkeet](../osa2/3-lauseet-ja-lausekkeet.md#kutsu-lausekkeena)
+[Lausekkeiden](../osa2/3-lauseet-ja-lausekkeet.md#kutsu-lausekkeena)
 testi toimii tässäkin: lausekkeella on arvo, ja sen voi kirjoittaa sijoituksen
 oikealle puolelle. `void`-aliohjelman kutsulla ei ole arvoa, joten se ei ole
 lauseke. Se kelpaa vain omaksi lauseekseen.
@@ -301,14 +301,14 @@ Tyypillisiä virheitä alla).
 Paluuarvo annetaan kutsujalle. Kuka sitten kutsuu `Main`-aliohjelmaa? Ei mikään
 oma aliohjelmasi, vaan .NET-ympäristö, kun ohjelma käynnistetään.
 `Begin`-aliohjelmaa kutsuu Jypeli, kun peli alkaa. Kumpikaan ei odota
-vastausta, joten molemmat ovat `void`. Sama koskee luvussa [Jypeli ja
-oliot](./4-jypeli-ja-oliot.md) tulevia näppäinten käsittelijöitä: Jypeli
-kutsuu niitä, kun näppäintä painetaan, eikä tee paluuarvolla mitään.
+vastausta, joten molemmat ovat `void`. Sama koskee Jypelin [näppäinten
+käsittelijöitä](./4-jypeli-ja-oliot.md): Jypeli kutsuu niitä, kun näppäintä
+painetaan, eikä tee paluuarvolla mitään.
 
 ## Aliohjelmat Jypelissä
 
-Luvun [Funktiot](../osa2/4-funktiot.md#funktiot-jypelissä) lumiukossa `Begin`
-lisäsi jokaisen pallon itse. Kun lumiukkoja on useita, `Begin` täyttyy
+Aiemmin tehdyssä [lumiukossa](../osa2/4-funktiot.md#funktiot-jypelissä)
+`Begin` lisäsi jokaisen pallon itse. Kun lumiukkoja on useita, `Begin` täyttyy
 `Add`-riveistä. Kootaan lumiukon piirtäminen `void`-aliohjelmaksi.
 `PiirraLumiukko` saa parametreina alimman pallon keskipisteen ja laskee siitä
 muiden pallojen paikat. Pallot koskettavat toisiaan, kun keskipisteiden väli
@@ -345,7 +345,7 @@ public class Lumiukot : PhysicsGame
 }
 ```
 
-Tässä näkyy koko luvun asia pienessä tilassa:
+Esimerkki kokoaa edellä opitun pieneen tilaan:
 
 * `Begin` kutsuu `PiirraLumiukko`-aliohjelmaa, joka kutsuu
   `LuoPallo`-funktiota kolmesti. Jokainen uusi lumiukko on
@@ -507,26 +507,25 @@ tekevät jotakin eli tulostavat, lisäävät tai piirtävät.
 
 ## Tehtävät
 
-<!-- Numerointi tarkentuu, kun osan muut tehtävät tehdään. TIM-palautuslinkit
-     lisätään, kun tehtävät on viety TIMiin.
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin.
      Vaiheessa B lisäksi: "Lumiukko konsoliin" (TulostaPallo-aliohjelma
      kolmesti) ja "Jaa Begin osiin" (Jypeli: AsetaTausta, LuoPelaaja,
      LuoMaali). -->
 
 <task>
-  <task-title num="T1">Lisää lumiukkoja <points>1 p.</points></task-title>
+  <task-title num="3.1">Lisää lumiukkoja <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/3-2-1-lisaa_lumiukkoja/handout.md}}
+  {{#include ../tehtavat/3-1-lisaa-lumiukkoja/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="T2">Tulostavasta palauttavaksi <points>1 p.</points></task-title>
+  <task-title num="3.2">Tulostavasta palauttavaksi <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/3-2-2-tulostavasta_palauttavaksi/handout.md}}
+  {{#include ../tehtavat/3-2-tulostavasta-palauttavaksi/handout.md}}
 
   </handout>
 </task>
