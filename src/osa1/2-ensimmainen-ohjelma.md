@@ -143,13 +143,13 @@ siitä suoritettavan ohjelman. Käännetty ohjelma voidaan sitten *ajaa* (engl.
 *run*), eli käynnistää. Koodin muuttamisen jälkeen ohjelma on käännettävä
 uudelleen, jotta muutokset tulevat voimaan.
 
-C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö, jonka
-asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta. Riderissa *Run* ja
-*Debug* sekä kääntävät että ajavat ohjelman. Saman voi tehdä myös ilman
-Rideria, ks. liite [Kääntäminen
-komentorivillä](../liitteet/kaantaminen-komentorivilla.md).
+C#-kielessä kääntäminen ja ajaminen .NET-ympäristön avulla. 
+Riderissa *Run* ja *Debug* tekevät tuon automaattisesti. Saman voi tehdä
+myös ilman Rideria, ks. liite [Kääntäminen
+komentorivillä](../liitteet/kaantaminen-komentorivilla.md). .NET-ympäristön
+asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta. 
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Miksi C#-ohjelma tarvitsee ajoympäristön?</summary>
+<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mihin .NETiä tarvitaan?</summary>
 
 C#-kääntäjä ei tuota suoraan konekieltä vaan *välikieltä* (engl.
 *intermediate language*), joka ei ole vielä minkään prosessorin konekieltä.
