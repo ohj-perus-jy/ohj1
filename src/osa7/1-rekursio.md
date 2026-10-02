@@ -1,10 +1,10 @@
 # Rekursio
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Rekursiivinen funktio kutsuu itseään. Tässä luvussa opitaan tunnistamaan, milloin rekursio on luonteva ratkaisu, ja kirjoittamaan rekursiivinen funktio, joka varmasti päättyy.
+Rekursiivinen funktio kutsuu itseään. Opit tunnistamaan, milloin rekursio on luonteva ratkaisu, ja kirjoittamaan rekursiivisen funktion, joka varmasti päättyy.
 
 ## Mitä rekursio on?
 
@@ -19,6 +19,10 @@ Rekursiivinen funktio kutsuu itseään. Tässä luvussa opitaan tunnistamaan, mi
 ## Rekursio vai silmukka?
 
 ## Esimerkki: Sierpinskin kolmio Jypelillä
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

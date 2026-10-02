@@ -405,7 +405,11 @@ välilyönti.
 <!-- Vaiheessa B: satunnaista tulosta ei voi verrata kiinteään arvoon.
      Vaihtoehdot: anna `Random`-oliolle siemenluku (`new Random(42)`), jolloin
      lukusarja on joka ajolla sama, tai testaa ominaisuutta (tulos on välillä
-     1–6). Liittyy lukuun 4.3 Satunnaisluvut. -->
+     1–6). Liittyy aliosaan 4.3 Satunnaisluvut. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 
