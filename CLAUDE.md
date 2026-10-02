@@ -9,7 +9,7 @@ Materiaali on `src/`:ssä.
 
 - Jokainen osa on hakemistossa `src/osaN/`:
   - `index.md`: 2–3 virkkeen esittelykappale, `> [!Osaamistavoitteet]`-
-    laatikko, luennot ja Käsitteet-taulukko.
+    laatikko, luennot ja Käsitteet-taulukko vakiotekstin kera (ks. alla).
   - 3–4 aliosaa (poikkeuksellisesti enemmän), tiedostot `1-nimi.md`,
     `2-nimi.md`, … Aliosan lopussa ovat otsikot `## Testaa tietosi`
     (visa) ja sen jälkeen `## Tehtävät`.
@@ -34,8 +34,17 @@ Materiaali on `src/`:ssä.
   katsottuina (`../tyokalut.md`).
 - Uusi käsite lisätään osan Käsitteet-taulukkoon (sarakkeet Käsite,
   Englanniksi, Selitys). Rivi on muotoa
-  `| [käsite](./1-nimi.md) | *englanniksi* | selitys |`, ja linkki vie
-  aliosaan, jossa käsite esitellään. `src/sanasto.md` kootaan taulukoista
+  `| [käsite](./1-nimi.md#otsikko) | *englanniksi* | selitys |`, ja linkki vie
+  sen otsikon kohdalle, jonka alla käsite esitellään ensimmäisen kerran.
+  Ankkuri kirjoitetaan ääkkösineen (`#käännösvirheet`); työkalut muuntavat
+  sen. Jos käsite esitellään sivun johdannossa ennen ensimmäistä otsikkoa,
+  ankkuria ei tarvita. Taulukon edellä on kaikissa osissa sama teksti:
+  "Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+  kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
+  ovat [sanastossa](../sanasto.md)." Taulukkoon tulevat
+  ohjelmointikäsitteet, eivät yleiset matematiikan tai pelialan sanat
+  (esim. jakojäännösoperaattori, ei jakojäännös; ei pelimoottori).
+  `src/sanasto.md` kootaan taulukoista
   komennolla `python3 skriptit/sanasto.py`, ei käsin. Skripti järjestää
   myös osien taulukot suomen aakkosjärjestykseen.
 - Uuden tekstin on sovittava kirjan kokonaisuuteen ja tyyliin. Käsite

@@ -35,24 +35,28 @@ luennot päivitetään tähän.
 
 ## Käsitteet
 
+Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
+ovat [sanastossa](../sanasto.md).
+
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
-| [argumentti](./4-funktiot.md) | *argument* | kutsussa aliohjelmalle annettava arvo |
-| [esittelyrivi](./4-funktiot.md) | *method header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
+| [argumentti](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *argument* | kutsussa aliohjelmalle annettava arvo |
+| [esittelyrivi](./4-funktiot.md#oma-funktio) | *method header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
 | [funktio](./4-funktiot.md) | *function* | aliohjelma, joka palauttaa arvon |
-| [kuormittaminen](./4-funktiot.md) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
-| [lauseke](./3-lauseet-ja-lausekkeet.md) | *expression* | koodin osa, jolla on arvo ja tyyppi |
-| [looginen operaattori](./2-operaattorit.md) | *logical operator* | operaattori, joka yhdistää totuusarvoja (JA, TAI, EI) |
-| [metodi](./4-funktiot.md) | *method* | olioon liittyvä aliohjelma |
+| [kuormittaminen](./4-funktiot.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
+| [lauseke](./3-lauseet-ja-lausekkeet.md#lauseke) | *expression* | koodin osa, jolla on arvo ja tyyppi |
+| [looginen operaattori](./2-operaattorit.md#loogiset-operaattorit) | *logical operator* | operaattori, joka yhdistää totuusarvoja (JA, TAI, EI) |
+| [metodi](./4-funktiot.md#tyypillisiä-virheitä) | *method* | olioon liittyvä aliohjelma |
 | [muuttuja](./1-muuttujat-ja-tietotyypit.md) | *variable* | nimetty paikka, johon tallennetaan yksi arvo |
-| [nimiavaruus](./5-ohjelman-rakenne.md) | *namespace* | luokkien ryhmä, ikään kuin kansio luokille |
-| [paluuarvo](./4-funktiot.md) | *return value* | arvo, jonka funktio antaa `return`-lauseella takaisin kutsujalle |
-| [parametri](./4-funktiot.md) | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista |
-| [pääohjelma](./5-ohjelman-rakenne.md) | *main method* | `Main`-aliohjelma, josta ohjelman suoritus alkaa |
-| [sijoituslause](./1-muuttujat-ja-tietotyypit.md) | *assignment statement* | lause, joka tallentaa lausekkeen arvon muuttujaan |
-| [tietotyyppi](./1-muuttujat-ja-tietotyypit.md) | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa |
-| [totuusarvo](./1-muuttujat-ja-tietotyypit.md) | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` |
-| [tynkä](./4-funktiot.md) | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon |
-| [tyyppimuunnos](./2-operaattorit.md) | *cast* | arvon muuntaminen tyypistä toiseen, esimerkiksi `(double)x` |
-| [vakio](./1-muuttujat-ja-tietotyypit.md) | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua |
-| [vertailuoperaattori](./2-operaattorit.md) | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon |
+| [nimiavaruus](./5-ohjelman-rakenne.md#using-lause-ja-nimiavaruudet) | *namespace* | luokkien ryhmä, ikään kuin kansio luokille |
+| [paluuarvo](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *return value* | arvo, jonka funktio antaa `return`-lauseella takaisin kutsujalle |
+| [parametri](./4-funktiot.md#oma-funktio) | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista |
+| [pääohjelma](./5-ohjelman-rakenne.md#yksinkertaisen-ohjelman-osat) | *main method* | `Main`-aliohjelma, josta ohjelman suoritus alkaa |
+| [sijoituslause](./1-muuttujat-ja-tietotyypit.md#arvon-sijoittaminen-ja-muuttaminen) | *assignment statement* | lause, joka tallentaa lausekkeen arvon muuttujaan |
+| [tietotyyppi](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa |
+| [totuusarvo](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` |
+| [tynkä](./4-funktiot.md#kutsusta-määrittelyyn) | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon |
+| [tyyppimuunnos](./2-operaattorit.md#tyyppimuunnokset) | *cast* | arvon muuntaminen tyypistä toiseen, esimerkiksi `(double)x` |
+| [vakio](./1-muuttujat-ja-tietotyypit.md#vakiot) | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua |
+| [vertailuoperaattori](./2-operaattorit.md#vertailuoperaattorit) | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon |

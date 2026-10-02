@@ -26,16 +26,20 @@ luennot päivitetään tähän.
 
 ## Käsitteet
 
+Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
+ovat [sanastossa](../sanasto.md).
+
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
-| [attribuutti](./3-muuttujien-nakyvyys.md) | *field* | luokan muuttuja, joka näkyy luokan kaikissa aliohjelmissa |
+| [attribuutti](./3-muuttujien-nakyvyys.md#attribuutit) | *field* | luokan muuttuja, joka näkyy luokan kaikissa aliohjelmissa |
 | [ehto](./1-ehtolauseet.md) | *condition* | totuusarvoinen lauseke, jonka perusteella ehtolause tekee valinnan |
 | [ehtolause](./1-ehtolauseet.md) | *conditional statement* | lause, joka suorittaa koodin vain, jos ehto on tosi |
 | [näkyvyysalue](./3-muuttujien-nakyvyys.md) | *scope* | ohjelman alue, jossa muuttuja on olemassa ja käytettävissä |
-| [olio](./4-jypeli-ja-oliot.md) | *object* | luokasta luotu yksilö, jolla on tietoa ja toimintoja |
-| [ominaisuus](./4-jypeli-ja-oliot.md) | *property* | olion tieto, jota luetaan tai muutetaan pisteellä, esimerkiksi `pallo.Color` |
-| [paikallinen muuttuja](./3-muuttujien-nakyvyys.md) | *local variable* | aliohjelman tai lohkon sisällä määritelty muuttuja, joka näkyy vain siellä |
-| [sivuvaikutus](./2-aliohjelmat-ilman-paluuarvoa.md) | *side effect* | aliohjelman vaikutus itsensä ulkopuolelle, esimerkiksi tulostus ruudulle |
-| [`switch`-lause](./1-ehtolauseet.md) | *switch statement* | rakenne, joka vertaa yhtä arvoa moneen kiinteään vaihtoehtoon |
-| [viite](./4-jypeli-ja-oliot.md) | *reference* | muuttujan sisältö, joka osoittaa olioon; olio itse ei ole muuttujassa |
-| [`void`-aliohjelma](./2-aliohjelmat-ilman-paluuarvoa.md) | *void method* | aliohjelma, joka tekee jotakin eikä palauta arvoa |
+| [olio](./4-jypeli-ja-oliot.md#mikä-on-olio) | *object* | luokasta luotu yksilö, jolla on tietoa ja toimintoja |
+| [ominaisuus](./4-jypeli-ja-oliot.md#ominaisuudet) | *property* | olion tieto, jota luetaan tai muutetaan pisteellä, esimerkiksi `pallo.Color` |
+| [paikallinen muuttuja](./3-muuttujien-nakyvyys.md#paikalliset-muuttujat) | *local variable* | aliohjelman tai lohkon sisällä määritelty muuttuja, joka näkyy vain siellä |
+| [sivuvaikutus](./2-aliohjelmat-ilman-paluuarvoa.md#void-aliohjelma) | *side effect* | aliohjelman vaikutus itsensä ulkopuolelle, esimerkiksi tulostus ruudulle |
+| [`switch`-lause](./1-ehtolauseet.md#switch) | *switch statement* | rakenne, joka vertaa yhtä arvoa moneen kiinteään vaihtoehtoon |
+| [viite](./4-jypeli-ja-oliot.md#olion-luominen-new-operaattorilla) | *reference* | muuttujan sisältö, joka osoittaa olioon; olio itse ei ole muuttujassa |
+| [`void`-aliohjelma](./2-aliohjelmat-ilman-paluuarvoa.md#void-aliohjelma) | *void method* | aliohjelma, joka tekee jotakin eikä palauta arvoa |

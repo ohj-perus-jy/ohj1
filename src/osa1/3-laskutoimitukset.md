@@ -8,6 +8,10 @@ vain noudattaa sääntöjä pilkuntarkasti.
 
 ## Mihin laskentaa tarvitaan?
 
+Kaikki, mitä ruudulla tapahtuu, pelihahmon sijainnista ostoskorin
+loppusummaan, syntyy pohjimmiltaan laskutoimituksista. Siksi laskeminen on
+ensimmäisiä asioita, joita tietokoneelle opetetaan. Muutama esimerkki:
+
 * **Ostoskorin loppusumma.** Tuotteiden hinnat lasketaan yhteen, alennus
   vähennetään prosentteina ja arvonlisävero lisätään. Kolme laskumerkkiä ja
   yksi sulkupari.
@@ -67,12 +71,13 @@ desimaalipistettä.
 
 Kun jaettava ja jakaja ovat molemmat kokonaislukuja, myös tulos on
 kokonaisluku: desimaaliosa katkaistaan pois. `7 / 2` on `3`, ja `1 / 2` on `0`.
-Tämä on yleisin aloittelijan laskuvirhe, ja se on kavala, koska kääntäjä ei
-huomauta mitään. Ohjelma vain laskee väärin.
+Tämä on yksi aloittelijan yleisimmistä laskuvirheistä. Se on kavala, koska
+kääntäjä ei huomauta mitään. Ohjelma laskee täsmälleen kielen sääntöjen
+mukaan, ja väärin menee ohjelmoijan oletus. Rider osaa joissakin tilanteissa
+varoittaa (*Possible loss of fraction*), mutta ei aina.
 
-Katkaistu osa ei kuitenkaan katoa: *jakojäännösoperaattori* `%` antaa sen,
-mitä jakolaskusta jää yli. `7 % 2` on `1`, koska 7 = 2 · 3 + 1. Jakojäännös on
-yllättävän hyödyllinen:
+*Jakojäännösoperaattori* `%` antaa sen, mitä kokonaislukujaossa jää yli.
+`7 % 2` on `1`, koska 7 = 2 · 3 + 1. Jakojäännös on yllättävän hyödyllinen:
 
 ```csharp
 using System;
@@ -91,7 +96,7 @@ public class Jakojaannos
 }
 ```
 
-## Liukulukulaskenta
+## Liukuluvuilla laskeminen
 
 Jos ainakin toinen laskun osapuolista on liukuluku, tulos on liukuluku ja
 desimaalit säilyvät. Desimaalierotin on piste, ei pilkku.
@@ -116,16 +121,12 @@ epätarkkuutta: tietokone ei pysty esittämään kaikkia desimaalilukuja tarkast
 Lisää aiheesta kerrotaan liitteessä
 [Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
-Kokonaisluvuille ja liukuluvuille on C#:ssa omat *tietotyyppinsä*, `int` ja
-`double`. Niihin tutustutaan tarkemmin
-[muuttujien](../osa2/1-muuttujat-ja-tietotyypit.md) yhteydessä.
-
 ## Laskujärjestys
 
-Operaattoreilla on sama laskujärjestys kuin matematiikassa: kerto- ja
-jakolasku sekä jakojäännös lasketaan ennen yhteen- ja vähennyslaskua, ja
-samanarvoiset operaattorit vasemmalta oikealle. Sulkeilla järjestystä voi
-muuttaa.
+C#:ssa laskutoimitusten järjestys seuraa matematiikasta tuttua järjestystä:
+kerto- ja jakolasku sekä jakojäännös lasketaan ennen yhteen- ja
+vähennyslaskua, ja samanarvoiset laskutoimitukset vasemmalta oikealle.
+Sulkeilla järjestystä voi muuttaa.
 
 ```csharp
 using System;
@@ -149,9 +150,10 @@ Kun et ole varma järjestyksestä, käytä sulkeita.
 Lainausmerkit ratkaisevat, onko kyse luvusta vai tekstistä: `5` on luku, `"5"`
 on tekstiä. Lainausmerkeissä olevaa tekstiä kutsutaan *merkkijonoksi*.
 
-Operaattorin merkitys riippuu siitä, mitä sen ympärillä on. Lukujen välissä
-`+` laskee yhteen, mutta merkkijonojen välissä se liittää tekstit peräkkäin.
-Jos vain toinen osapuoli on merkkijono, toinen muutetaan ensin tekstiksi.
+Sama `+`-merkki tekee eri asioita sen mukaan, mitä sen molemmilla puolilla
+on. Lukujen välissä se laskee yhteen, mutta merkkijonojen välissä se liittää
+tekstit peräkkäin. Jos vain toinen osapuoli on merkkijono, toinen muutetaan
+ensin tekstiksi.
 
 ```csharp
 using System;
@@ -168,7 +170,7 @@ public class PlusMerkki
 }
 ```
 
-Kolmas rivi yllättää. Lauseke lasketaan vasemmalta oikealle, joten ensin
+Kolmas rivi yllättää. Lasku etenee vasemmalta oikealle, joten ensin
 `"Summa: " + 2` yhdistetään merkkijonoksi `"Summa: 2"`, ja sen perään liitetään
 vielä `3`. Sulkeet korjaavat asian.
 
@@ -250,7 +252,7 @@ mutta huomaat, mitä asioita kannattaa vielä kerrata.
 **Totta vai tarua?**
 
 <vaittama vastaus="tarua">
-Lauseke `7 / 2` antaa tuloksen 3.5.
+Lasku `7 / 2` antaa tuloksen 3.5.
 <perustelu>
 **Tarua.** Kun molemmat luvut ovat kokonaislukuja, C# tekee kokonaislukujaon
 ja tulos on 3. Jos haluat 3.5, tee toisesta luvusta liukuluku: `7 / 2.0`.
@@ -267,9 +269,9 @@ jakojäännös kahdella jaettaessa on 0.
 </vaittama>
 
 <vaittama vastaus="tarua">
-Lauseke `"Tulos: " + 1 + 2` tuottaa merkkijonon `"Tulos: 3"`.
+`"Tulos: " + 1 + 2` tuottaa merkkijonon `"Tulos: 3"`.
 <perustelu>
-**Tarua.** Lauseke lasketaan vasemmalta oikealle: ensin syntyy `"Tulos: 1"`,
+**Tarua.** Lasku etenee vasemmalta oikealle: ensin syntyy `"Tulos: 1"`,
 ja sen perään liitetään `2`, joten tulos on `"Tulos: 12"`. Sulkeilla
 `"Tulos: " + (1 + 2)` saadaan `"Tulos: 3"`.
 </perustelu>
@@ -315,10 +317,10 @@ merkkijonoksi `"52"`.
      TIMiin. -->
 
 <task>
-  <task-title num="1.3">Mitä lauseke tuottaa? <points>1 p.</points></task-title>
+  <task-title num="1.3">Mitä lasku tuottaa? <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-3-mita-lauseke-tuottaa/handout.md}}
+  {{#include ../tehtavat/1-3-mita-lasku-tuottaa/handout.md}}
 
   </handout>
 </task>

@@ -421,7 +421,7 @@ Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä kl
  * Tai työ voi olla tietyn WWW-sivun lukeminen ja sieltä tiettyjen tietojen käsittely yksinkertaiseen muotoon. 
  * Esimerkiksi joltakin sääsivulta päivän tuuliarvojen maksimi ja keskiarvo.
 
-Monet [Advent of code -tapahtuman](https://adventofcode.com/) tehtävät voivat hyvinkin soveltua harjoitustyön aiheeksi -- tosin loppupään tehtävät ovat jo hyvin vaikeita. 
+Monet [Advent of code -tapahtuman](https://adventofcode.com/) tehtävät voivat hyvinkin soveltua harjoitustyön aiheeksi — tosin loppupään tehtävät ovat jo hyvin vaikeita. 
 Inspraatiota voi hakea myös vaikkapa täältä [http://nifty.stanford.edu/](http://nifty.stanford.edu/). Katso tuolta CS1-tasoiset tehtävät, niiden pitäisi (suurelta osin) olla tämän kurssin osaamistavoitteiden mukaisia. Näissäkin tapauksissa suunnitelma tulee kuitenkin hyväksyttää ohjaajalla. 
 
 Ei-pelien tapauksessa ohjelmaan tehdyt testattavissa olevat aliohjelmat
@@ -455,7 +455,7 @@ Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston 
 
 **Pariohjelmointi**:
 
-Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)). Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein -- vaihto voi tapahtua jopa "lennosta". Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon menee samalla tavalla kuin jos tekisi harjoitustyötä yksin. Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa, sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta. Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä "vuoron vaihtaminen" etänä on yleensä hankalaa.
+Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)). Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein — vaihto voi tapahtua jopa "lennosta". Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon menee samalla tavalla kuin jos tekisi harjoitustyötä yksin. Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa, sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta. Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä "vuoron vaihtaminen" etänä on yleensä hankalaa.
 
 **Työskentely samanaikaisesti verkossa**:
 

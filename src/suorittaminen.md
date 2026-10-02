@@ -62,7 +62,7 @@ Tehtävien aikataulurajoitukset ja mallivastauskäytänteet vaihtelevat opiskeli
       <td>Tehtävien deadline</td>
       <td>Vastuuopettajan määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
       <td>Oman opettajasi määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
-      <td>Ei deadlineja -- vain opiskeluoikeutesi rajoittama.</td>
+      <td>Ei deadlineja — vain opiskeluoikeutesi rajoittama.</td>
       </tr>
     <tr>
       <td>Mallivastaukset</td>

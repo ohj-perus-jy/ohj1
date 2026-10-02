@@ -1,9 +1,9 @@
 # Osa 1: Ensimmäinen ohjelma
 
-Ohjelmointi on ohjeiden kirjoittamista tietokoneelle, ja ensimmäinen oma
-ohjelma syntyy jo muutamasta rivistä. Aluksi kirjoitetaan tekstiä tulostava
-C#-ohjelma ja lasketaan sillä, sitten asennetaan kehitysympäristö ja tehdään
-ensimmäinen graafinen ohjelma Jypeli-kirjastolla.
+Ohjelmointi on ohjeiden kirjoittamista tietokoneelle. Ensimmäinen oma
+ohjelma syntyy jo muutamasta rivistä. Aluksi kirjoitetaan C#-ohjelma, joka
+tulostaa tekstiä ja laskutoimitusten tuloksia, sitten asennetaan
+kehitysympäristö ja tehdään ensimmäinen graafinen ohjelma Jypeli-kirjastolla.
 
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
@@ -24,28 +24,34 @@ Luennot tukevat tekstiä. Katso ne ennen lukemista tai sen rinnalla.
 
 ## Käsitteet
 
+Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
+ovat [sanastossa](../sanasto.md).
+
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
-| [algoritmi](./1-mita-ohjelmointi-on.md) | *algorithm* | täsmällinen, vaiheittainen ohje tehtävän suorittamiseen |
-| [aliohjelma](./2-ensimmainen-ohjelma.md) | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan |
-| [jakojäännös](./3-laskutoimitukset.md) | *remainder* | jakolaskusta yli jäävä osa, operaattori `%` |
-| [kirjasto](./1-mita-ohjelmointi-on.md) | *library* | valmista koodia, jota oma ohjelma voi käyttää |
-| [kokonaislukujako](./3-laskutoimitukset.md) | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois |
-| [kommentti](./3-laskutoimitukset.md) | *comment* | kääntäjän ohittama, ihmiselle tarkoitettu teksti koodissa |
-| [konekieli](./1-mita-ohjelmointi-on.md) | *machine code* | prosessorin ymmärtämät, ykkösistä ja nollista koostuvat käskyt |
-| [käännösvirhe](./2-ensimmainen-ohjelma.md) | *compilation error* | virhe, joka estää lähdekoodin kääntämisen |
-| [kääntäjä](./1-mita-ohjelmointi-on.md) | *compiler* | ohjelma, joka kääntää lähdekoodin konekielelle |
-| [kääntäminen](./1-mita-ohjelmointi-on.md) | *compiling* | lähdekoodin muuntaminen konekieliseksi, suoritettavaksi ohjelmaksi |
-| [lause](./2-ensimmainen-ohjelma.md) | *statement* | ohjelman pienin suoritettava yksikkö, käsky tietokoneelle |
-| [liukuluku](./3-laskutoimitukset.md) | *floating-point number* | desimaaliluku, jonka tarkkuus on rajallinen |
-| [lohko](./2-ensimmainen-ohjelma.md) | *block* | aaltosulkujen `{ }` rajaama alue koodissa |
-| [luokka](./2-ensimmainen-ohjelma.md) | *class* | kokonaisuus, jonka sisään C#:ssa kirjoitetaan kaikki koodi |
-| [lähdekoodi](./1-mita-ohjelmointi-on.md) | *source code* | ohjelmointikielellä kirjoitettu ohjelman teksti |
-| [merkkijono](./3-laskutoimitukset.md) | *string* | lainausmerkkien sisään kirjoitettu teksti |
-| [ohjelmointikieli](./1-mita-ohjelmointi-on.md) | *programming language* | ihmisen kirjoitettavaksi ja luettavaksi suunniteltu kieli ohjelmien kirjoittamiseen |
-| [operaattori](./3-laskutoimitukset.md) | *operator* | merkki, joka tekee arvoille jotakin, esimerkiksi laskutoimituksen |
-| [pelimoottori](./5-ensimmainen-graafinen-ohjelma.md) | *game engine* | kirjasto, joka hoitaa pelin piirtämisen, fysiikan ja ohjauksen |
-| [projekti](./4-ohjelmointiymparisto-kuntoon.md) | *project* | yhden ohjelman koodi ja siihen liittyvät tiedostot |
-| [solution](./4-ohjelmointiymparisto-kuntoon.md) | *solution* | kokoelma projekteja, jotka pidetään auki yhtä aikaa |
-| [sovelluskehitin](./2-ensimmainen-ohjelma.md) | *integrated development environment, IDE* | ohjelmointia helpottavilla toiminnoilla varustettu tekstieditori |
-| [suorituksenaikainen virhe](./2-ensimmainen-ohjelma.md) | *runtime error* | virhe, joka ilmenee vasta ohjelmaa ajettaessa |
+| [ajoympäristö](./2-ensimmainen-ohjelma.md#mitä-lähdekoodille-oikeastaan-tapahtuu) | *runtime environment* | ympäristö, joka suorittaa käännetyn C#-ohjelman ja muuntaa sen konekielelle vasta ajon aikana |
+| [algoritmi](./1-mita-ohjelmointi-on.md#algoritmi-eli-ohje) | *algorithm* | täsmällinen, vaiheittainen ohje tehtävän suorittamiseen |
+| [aliohjelma](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan |
+| [jakojäännösoperaattori](./3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) | *remainder operator* | operaattori `%`, joka antaa sen, mitä kokonaislukujaossa jää yli |
+| [kirjasto](./1-mita-ohjelmointi-on.md#kirjasto) | *library* | valmista koodia, jota oma ohjelma voi käyttää |
+| [kokonaislukujako](./3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois |
+| [kommentti](./3-laskutoimitukset.md#aritmeettiset-operaattorit) | *comment* | kääntäjän ohittama, ihmiselle tarkoitettu teksti koodissa |
+| [konekieli](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *machine code* | prosessorin ymmärtämät, ykkösistä ja nollista koostuvat käskyt |
+| [konsoli](./2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) | *console* | pelkkää tekstiä näyttävä ikkuna, johon konsoliohjelma tulostaa ja jossa käyttäjä kirjoittaa |
+| [konsoliohjelma](./2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) | *console application* | tekstipohjainen ohjelma ilman painikkeita, valikoita ja kuvia |
+| [käännösvirhe](./2-ensimmainen-ohjelma.md#käännösvirheet) | *compilation error* | virhe, joka estää lähdekoodin kääntämisen |
+| [kääntäjä](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *compiler* | ohjelma, joka kääntää lähdekoodin konekielelle |
+| [kääntäminen](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *compiling* | lähdekoodin muuntaminen konekieliseksi, suoritettavaksi ohjelmaksi |
+| [lause](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *statement* | ohjelman pienin suoritettava yksikkö, käsky tietokoneelle |
+| [liukuluku](./3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) | *floating-point number* | desimaaliluvun esitysmuoto tietokoneessa, esimerkiksi `3.14` |
+| [lohko](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *block* | aaltosulkujen `{ }` rajaama alue koodissa |
+| [luokka](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *class* | kokonaisuus, jonka sisään C#:ssa kirjoitetaan kaikki koodi |
+| [lähdekoodi](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *source code* | ohjelmointikielellä kirjoitettu ohjelman teksti |
+| [merkkijono](./3-laskutoimitukset.md#plus-merkki-ja-teksti) | *string* | lainausmerkkien sisään kirjoitettu teksti |
+| [ohjelmointikieli](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *programming language* | ihmisen kirjoitettavaksi ja luettavaksi suunniteltu kieli ohjelmien kirjoittamiseen |
+| [operaattori](./3-laskutoimitukset.md#aritmeettiset-operaattorit) | *operator* | merkki, joka tekee arvoille jotakin, esimerkiksi laskutoimituksen |
+| [projekti](./4-ohjelmointiymparisto-kuntoon.md#solution-ja-projekti) | *project* | yhden ohjelman koodi ja siihen liittyvät tiedostot |
+| [solution](./4-ohjelmointiymparisto-kuntoon.md#solution-ja-projekti) | *solution* | kokoelma projekteja, jotka pidetään auki yhtä aikaa |
+| [sovelluskehitin](./2-ensimmainen-ohjelma.md#miten-lähdekoodia-kirjoitetaan) | *integrated development environment, IDE* | ohjelmointia helpottavilla toiminnoilla varustettu tekstieditori |
+| [suorituksenaikainen virhe](./2-ensimmainen-ohjelma.md#käännösvirheet) | *runtime error* | virhe, joka ilmenee vasta ohjelmaa ajettaessa |

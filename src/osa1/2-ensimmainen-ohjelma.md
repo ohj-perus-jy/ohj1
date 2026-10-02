@@ -10,11 +10,12 @@ Ensimmäisenä ohjelmana on tapana kirjoittaa "Hello, World!" -tervehdys. Tapa o
 peräisin 1970-luvulta C-kielen oppikirjasta, ja sitä on noudatettu siitä
 lähtien lähes jokaisessa ohjelmointikielessä. Syy on käytännöllinen: ohjelma on
 niin pieni, että jos se ei toimi, vika on työkaluissa eikä koodissa. Kun se
-toimii, tiedät, että kääntäjä, ajoympäristö ja editori ovat kunnossa.
+toimii, tiedät, että ohjelmointityökalusi ovat kunnossa.
 
-Hello World on *tekstipohjainen* ohjelma eli *konsoliohjelma*. Siinä ei ole
-painikkeita, valikoita eikä kuvia, vaan kaikki tapahtuu tekstinä: ohjelma
-tulostaa rivejä *konsoliin*, ja käyttäjä voi vastata kirjoittamalla.
+Hello World on tekstipohjainen ohjelma eli *konsoliohjelma* (engl. *console
+application*). Siinä ei ole painikkeita, valikoita eikä kuvia, vaan kaikki
+tapahtuu tekstinä: ohjelma tulostaa rivejä *konsoliin* (engl. *console*) eli
+pelkkää tekstiä näyttävään ikkunaan, ja käyttäjä voi vastata kirjoittamalla.
 
 Tavallinen tietokoneen käyttäjä avaa konsolin harvoin, jos koskaan.
 Konsoliohjelman tapa olla vuorovaikutuksessa käyttäjän kanssa on silti tuttu:
@@ -38,11 +39,7 @@ Konsoliohjelmissa on lisäksi se etu, että ohjelman toiminnan näkee suoraan
 tulosteesta. Siksi suuri osa tämän kurssin esimerkeistä on konsoliohjelmia,
 vaikka harjoitustyö tehdäänkin graafisena Jypeli-pelinä.
 
-## Lähdekoodin kirjoittaminen
-
-Tietokoneohjelma on joukko ohjeita, jotka tietokone suorittaa. Ohjelmoija
-kirjoittaa nämä ohjeet käyttäen ohjelmointikieltä, kuten C#. Tätä kirjoitettua
-koodia kutsutaan *lähdekoodiksi*. 
+## Ensimmäisen ohjelman lähdekoodi
 
 Olemme kirjoittaneet sinulle valmiiksi pienen C#-ohjelman, joka tulostaa tekstin
 "Heippa, maailma!" näytölle. Voit klikata koodilohkon oikeassa reunassa olevaa
@@ -67,7 +64,7 @@ ajonapin vieressä olevalla *Peruuta muutokset* -painikkeella.
 Tämä on ehkäpä yksinkertaisin mahdollinen esimerkki, mutta silti se on täysin
 toimivan tietokoneohjelman lähdekoodi (joskaan ohjelma ei ole maailman
 mielenkiintoisin)! Lupaamme, että opit pian kirjoittamaan monimutkaisempia
-ohjelmia itse -- mutta aloitetaan pienestä.
+ohjelmia itse — mutta aloitetaan pienestä.
 
 Käydään läpi, mitä ohjelma tekee rivi riviltä:
 
@@ -77,7 +74,10 @@ public class Ohjelma
 
 Tämä rivi määrittelee uuden *luokan* (engl. *class*) nimeltä `Ohjelma`.
 C#-kielessä kaikki koodi kirjoitetaan luokkien sisälle. Luokka on kuin säiliö,
-joka voi sisältää tietoa ja toiminnallisuutta.
+joka voi sisältää tietoa ja toiminnallisuutta. Sana `public` tarkoittaa, että
+luokka on julkinen: sitä saa käyttää mistä tahansa muualtakin koodista. Tällä
+kurssilla kaikki luokat ovat julkisia. Muihin vaihtoehtoihin tutustutaan
+Ohjelmointi 2 -kurssilla.
 
 ```csharp,noplayground
 {
@@ -92,7 +92,18 @@ väliin.
 ```
 
 Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/4-funktiot.md), mutta lyhyesti: 
-aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste -- tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
+aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste — tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
+
+Nimen edessä on kolme sanaa, jotka toistuvat kurssin konsoliohjelmissa:
+
+* `public` tarkoittaa samaa kuin luokan edessä: aliohjelma on julkinen.
+* `static` on olio-ohjelmoinnin käsite, johon tutustutaan tarkemmin
+  Ohjelmointi 2 -kurssilla. Tällä kurssilla konsoliohjelmien aliohjelmat
+  kirjoitetaan `static`-sanan kanssa ja Jypeli-pelien aliohjelmat
+  pääsääntöisesti ilman sitä.
+* `void` tarkoittaa, että aliohjelma ei anna tulokseksi mitään arvoa. Siihen
+  palataan [aliohjelmien](../osa3/2-aliohjelmat-ilman-paluuarvoa.md)
+  yhteydessä.
 
 Vastaavasti kuin luokan kohdalla, seuraava avaava aaltosulku `{` kertoo, mistä aliohjelman
 sisältö alkaa. Kaikki aliohjelman sisällä tehtävä kirjoitetaan tämän ja
@@ -112,7 +123,7 @@ yhteydessä.
         System.Console.WriteLine("Heippa, maailma!");
 ```
 
-Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, maailma!" näytölle. `System.Console.WriteLine` on C#-kielen sisäänrakennettu toiminto, joka hoitaa tekstin tulostamisen konsoli-ikkunaan. Viesti, joka halutaan tulostaa, kirjoitetaan lainausmerkkien sisälle.
+Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, maailma!" näytölle. `System.Console.WriteLine` on .NET-kirjaston valmis toiminto, joka hoitaa tekstin tulostamisen konsoli-ikkunaan. Viesti, joka halutaan tulostaa, kirjoitetaan lainausmerkkien sisälle.
 
 Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi [myöhemmin](../osa2/3-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
 
@@ -132,9 +143,12 @@ siitä suoritettavan ohjelman. Käännetty ohjelma voidaan sitten *ajaa* (engl.
 *run*), eli käynnistää. Koodin muuttamisen jälkeen ohjelma on käännettävä
 uudelleen, jotta muutokset tulevat voimaan.
 
-C#-kielessä kääntämiseen ja ajamiseen tarvitaan .NET-ympäristö, jonka
-asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta. Riderissa *Run* ja
-*Debug* sekä kääntävät että ajavat ohjelman. Saman voi tehdä myös ilman
+C#-kääntäjä ei kuitenkaan tuota suoraan konekieltä vaan välikieltä, jonka
+*ajoympäristö* (engl. *runtime environment*) kääntää konekielelle vasta
+ohjelmaa ajettaessa. Siksi sama käännetty ohjelma toimii eri prosessoreilla,
+kunhan koneessa on ajoympäristö. C#:n kääntäjä ja ajoympäristö kuuluvat
+.NET-ympäristöön, jonka asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta.
+Riderissa *Run* ja *Debug* sekä kääntävät että ajavat ohjelman. Saman voi tehdä myös ilman
 Rideria, ks. liite [Kääntäminen
 komentorivillä](../liitteet/kaantaminen-komentorivilla.md).
 

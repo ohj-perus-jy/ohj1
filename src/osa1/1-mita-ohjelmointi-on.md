@@ -2,9 +2,9 @@
 
 Ohjelmointi on ohjeiden kirjoittamista tietokoneelle. Tietokone on äärimmäisen
 nopea ja äärimmäisen tunnollinen: se tekee täsmälleen sen, mitä sille sanotaan,
-miljoonia kertoja sekunnissa -- eikä koskaan sitä, mitä *tarkoitettiin*.
-Ohjelmoijan työ on sanoa asiat niin täsmällisesti, ettei näiden kahden välillä
-ole eroa.
+miljoonia kertoja sekunnissa. Se ei kuitenkaan tiedä, miksi ohje annetaan, joten
+se suorittaa kiltisti myös väärän ohjeen. Ohjelmoijan työ on kirjoittaa ohjeet
+niin täsmällisesti, että tietokone tekee juuri sen, mitä tarkoitettiin.
 
 Ennen ensimmäistä koodiriviä katsotaan, mitä ohjelmoiminen on, mitä sillä saa
 aikaan ja millaisia välineitä ohjelmoija käyttää.
@@ -34,6 +34,8 @@ on vain se tapa, jolla ratkaisu kirjoitetaan muistiin.
 ## Algoritmi eli ohje
 
 *Algoritmi* on täsmällinen, vaiheittainen ohje jonkin tehtävän suorittamiseen.
+Ohjelmoija keksii ensin algoritmin ja kirjoittaa sen sitten ohjelmaksi, jota
+tietokone noudattaa. Algoritmeja on kuitenkin muuallakin kuin tietokoneissa.
 Resepti on algoritmi. Reittiohje on algoritmi. Huonekalun kokoamisohje on
 algoritmi (joskin toisinaan melko tulkinnanvarainen sellainen).
 
@@ -74,9 +76,10 @@ ohjelmoida. Loppu on yksityiskohtia. Tosin yksityiskohtia on aika paljon.
 
 ## Ohjelma ja ohjelmointikieli
 
-Tietokoneen sydän on *prosessori*, joka ymmärtää vain *konekieltä*: jonoja
-ykkösiä ja nollia, joista kukin ryhmä tarkoittaa jotakin hyvin pientä
-toimenpidettä, kuten "laske kaksi lukua yhteen" tai "siirry ohjeeseen numero
+Jotta tietokone voisi noudattaa algoritmia, algoritmi on kirjoitettava
+muotoon, jota tietokone pystyy suorittamaan. Ohjelman suorittaa tietokoneen
+sydän, *prosessori*, joka ymmärtää vain *konekieltä*: jonoja ykkösiä ja
+nollia, joista kukin ryhmä tarkoittaa jotakin hyvin pientä toimenpidettä, kuten "laske kaksi lukua yhteen" tai "siirry ohjeeseen numero
 4711". Konekielinen ohjelma voisi näyttää suunnilleen tältä:
 
 ```text

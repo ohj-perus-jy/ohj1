@@ -30,7 +30,7 @@ enää ajatella.
 
 C#-kieli on [*olioperusteinen ohjelmointikieli*](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction), mikä tarkoittaa muun muassa sitä, että kaikki koodi kirjoitetaan luokkien sisälle. Jokaisessa ohjelmassa täytyy siis tavallisesti olla vähintään yksi luokka.
 
-Yhdessä luokassa tulee lisäksi olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä -- siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia: pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
+Yhdessä luokassa tulee lisäksi olla `Main`-aliohjelma, joka toimii ohjelman aloituspisteenä — siksi sitä kutsutaan myös *pääohjelmaksi*. Ohjelma suoritetaan järjestyksessä, lause kerrallaan ylhäältä alaspäin `Main`-aliohjelmasta alkaen. Luokka voi sisältää muitakin aliohjelmia: pääohjelma voi kutsua aliohjelmia, jotka voivat kutsua taas muita aliohjelmia jne. Ohjelman suoritus päättyy, kun pääohjelma on suoritettu loppuun.
 
 Alla oleva sovellus koostuu yhdestä luokasta, joka sisältää pääohjelman (`Main`) ja yhden funktion (`Tervehdys`), siis yhteensä kaksi aliohjelmaa. Voit ajaa ohjelman klikkaamalla koodilohkon oikeassa yläkulmassa olevaa Play-painiketta.
 
@@ -77,7 +77,7 @@ public class Sovellus
 }
 ```
 
-Rivi `public class Sovellus` määrittelee uuden *luokan* (engl. *class*) nimeltä `Sovellus`. Luokkaa voi ajatella säiliönä, joka kokoaa yhteen toisiinsa liittyvää tietoa ja toiminnallisuutta. Tällä kurssilla luokka on aluksi lähinnä kehys, jonka sisään aliohjelmat kirjoitetaan. Luokkien varsinaiseen ideaan -- olioiden mallintamiseen -- palataan kurssin lopussa ja Ohjelmointi 2 -kurssilla.
+Rivi `public class Sovellus` määrittelee uuden *luokan* (engl. *class*) nimeltä `Sovellus`. Luokkaa voi ajatella säiliönä, joka kokoaa yhteen toisiinsa liittyvää tietoa ja toiminnallisuutta. Tällä kurssilla luokka on aluksi lähinnä kehys, jonka sisään aliohjelmat kirjoitetaan. Luokkien varsinaiseen ideaan — olioiden mallintamiseen — palataan kurssin lopussa ja Ohjelmointi 2 -kurssilla.
 
 Määre `public` kertoo, että luokkaa saa käyttää muualtakin kuin omasta tiedostostaan. Jos määrettä ei kirjoita, luokan näkyvyys on rajoitetumpi. Tällä kurssilla kirjoitamme `public`-määreen aina näkyviin sekä luokille että aliohjelmille.
 
@@ -87,7 +87,7 @@ Luokan nimi kirjoitetaan *PascalCase*-tyylillä, eli jokaisen sanan alkukirjain 
 
 Käytäntö on, että yksi tiedosto sisältää yhden luokan ja että luokan nimi on sama kuin tiedoston nimi. Luokka `Sovellus` kirjoitetaan siis tiedostoon `Sovellus.cs`.
 
-Kääntäjä ei pakota tähän -- ohjelma kääntyy, vaikka luokan ja tiedoston nimet eroaisivat -- mutta käytännöstä poikkeaminen tekee koodin lukemisesta hankalaa. Kun luokkia on kymmeniä, on korvaamattoman arvokasta tietää, mistä tiedostosta mikäkin luokka löytyy.
+Kääntäjä ei pakota tähän — ohjelma kääntyy, vaikka luokan ja tiedoston nimet eroaisivat — mutta käytännöstä poikkeaminen tekee koodin lukemisesta hankalaa. Kun luokkia on kymmeniä, on korvaamattoman arvokasta tietää, mistä tiedostosta mikäkin luokka löytyy.
 
 > [!VINKKI]
 > Jos vaihdat luokan nimen Riderissä, tee se uudelleennimeämistoiminnolla
@@ -103,7 +103,7 @@ public static void Main()
 }
 ```
 
-`Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta -- riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
+`Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta — riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
 
 `Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Määreet `public` ja `static` käsiteltiin [funktioiden](./4-funktiot.md) yhteydessä. `void` tarkoittaa, että `Main` ei palauta mitään. Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
@@ -208,7 +208,7 @@ Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka se on ki
 
 > [!TÄRKEÄÄ]
 > Aliohjelmien määrittelyjärjestyksellä luokan sisällä ei ole väliä. `Tervehdys`-funktion
-> voi kirjoittaa yhtä hyvin ennen `Main`-aliohjelmaa kuin sen jälkeenkin -- ohjelma toimii
+> voi kirjoittaa yhtä hyvin ennen `Main`-aliohjelmaa kuin sen jälkeenkin — ohjelma toimii
 > täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
 > *kutsutaan*.
 
@@ -230,7 +230,7 @@ public class Sovellus            // taso 0
 }
 ```
 
-Kääntäjä ei välitä sisennyksistä lainkaan -- ohjelma kääntyisi, vaikka kaikki kirjoitettaisiin yhdelle riville. Sisennys on ihmistä varten: sen avulla lohkojen rakenteen näkee yhdellä silmäyksellä. Sisentämätön koodi on lähes lukukelvotonta, joten sisennyksistä kannattaa pitää huolta alusta asti.
+Kääntäjä ei välitä sisennyksistä lainkaan — ohjelma kääntyisi, vaikka kaikki kirjoitettaisiin yhdelle riville. Sisennys on ihmistä varten: sen avulla lohkojen rakenteen näkee yhdellä silmäyksellä. Sisentämätön koodi on lähes lukukelvotonta, joten sisennyksistä kannattaa pitää huolta alusta asti.
 
 > [!VINKKI]
 > Riderissä koko tiedoston sisennykset saa siistittyä kerralla valitsemalla
@@ -289,7 +289,7 @@ public class Sovellus
 }
 ```
 
-**Aliohjelma toisen aliohjelman sisällä.** Aliohjelmat kirjoitetaan luokan sisään, mutta *toistensa* rinnalle -- ei sisäkkäin. Alla oleva ohjelma ei käänny, koska `public` ei kelpaa aliohjelman sisällä: `CS0106: The modifier 'public' is not valid for this item`.
+**Aliohjelma toisen aliohjelman sisällä.** Aliohjelmat kirjoitetaan luokan sisään, mutta *toistensa* rinnalle — ei sisäkkäin. Alla oleva ohjelma ei käänny, koska `public` ei kelpaa aliohjelman sisällä: `CS0106: The modifier 'public' is not valid for this item`.
 
 ```csharp,ignore
 public class Sovellus
