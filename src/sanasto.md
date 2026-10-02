@@ -6,7 +6,6 @@ kunkin osan etusivulla.
 
 | Käsite | Englanniksi | Selitys | Osa |
 | --- | --- | --- | --- |
-| ajoympäristö | *runtime environment* | ympäristö, joka suorittaa käännetyn C#-ohjelman ja muuntaa sen konekielelle vasta ajon aikana | [1](./osa1/2-ensimmainen-ohjelma.md#mitä-lähdekoodille-oikeastaan-tapahtuu) |
 | algoritmi | *algorithm* | täsmällinen, vaiheittainen ohje tehtävän suorittamiseen | [1](./osa1/1-mita-ohjelmointi-on.md#algoritmi-eli-ohje) |
 | aliohjelma | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | argumentti | *argument* | kutsussa aliohjelmalle annettava arvo | [2](./osa2/4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) |
@@ -15,7 +14,6 @@ kunkin osan etusivulla.
 | ehtolause | *conditional statement* | lause, joka suorittaa koodin vain, jos ehto on tosi | [3](./osa3/1-ehtolauseet.md) |
 | esittelyrivi | *method header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-funktiot.md#oma-funktio) |
 | funktio | *function* | aliohjelma, joka palauttaa arvon | [2](./osa2/4-funktiot.md) |
-| jakojäännösoperaattori | *remainder operator* | operaattori `%`, joka antaa sen, mitä kokonaislukujaossa jää yli | [1](./osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) |
 | kirjasto | *library* | valmista koodia, jota oma ohjelma voi käyttää | [1](./osa1/1-mita-ohjelmointi-on.md#kirjasto) |
 | kokonaislukujako | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois | [1](./osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) |
 | kommentti | *comment* | kääntäjän ohittama, ihmiselle tarkoitettu teksti koodissa | [1](./osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) |

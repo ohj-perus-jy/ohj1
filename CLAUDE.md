@@ -39,11 +39,12 @@ Materiaali on `src/`:ssä.
   Ankkuri kirjoitetaan ääkkösineen (`#käännösvirheet`); työkalut muuntavat
   sen. Jos käsite esitellään sivun johdannossa ennen ensimmäistä otsikkoa,
   ankkuria ei tarvita. Taulukon edellä on kaikissa osissa sama teksti:
-  "Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+  "Tässä osassa esitellään seuraavat käsitteet. Käsitteen linkki vie
   kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
-  ovat [sanastossa](../sanasto.md)." Taulukkoon tulevat
-  ohjelmointikäsitteet, eivät yleiset matematiikan tai pelialan sanat
-  (esim. jakojäännösoperaattori, ei jakojäännös; ei pelimoottori).
+  ovat [sanastossa](../sanasto.md)." Taulukkoon tulevat vain keskeiset
+  ohjelmointikäsitteet, ei yleisiä matematiikan tai pelialan sanoja
+  (jakojäännös, pelimoottori), yksittäisiä operaattoreita eikä
+  lisätietolaatikoiden käsitteitä. Taulukko pidetään lyhyenä.
   `src/sanasto.md` kootaan taulukoista
   komennolla `python3 skriptit/sanasto.py`, ei käsin. Skripti järjestää
   myös osien taulukot suomen aakkosjärjestykseen.
@@ -59,4 +60,5 @@ Materiaali on `src/`:ssä.
 - Älä toista sanoja "osa" ja "aliosa" tarpeettomasti äläkä viittaa turhaan
   eteen- tai taaksepäin. Lukija näkee rakenteen navigaatiosta ja otsikoista,
   joten tekstin ei tarvitse kertoa, missä osassa tai aliosassa ollaan:
-  "Tässä aliosassa opit tulostamaan" → "Opit tulostamaan".
+  "Tässä aliosassa opit tulostamaan" → "Opit tulostamaan". Osan etusivulla
+  (`index.md`) "tässä osassa" on luonteva.

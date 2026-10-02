@@ -15,8 +15,9 @@ ensimmäisiä asioita, joita tietokoneelle opetetaan. Muutama esimerkki:
 * **Ostoskorin loppusumma.** Tuotteiden hinnat lasketaan yhteen, alennus
   vähennetään prosentteina ja arvonlisävero lisätään. Kolme laskumerkkiä ja
   yksi sulkupari.
-* **Painoindeksi.** Paino jaetaan pituuden neliöllä. Jos jakolaskun tekee
-  kokonaisluvuilla, tulos on väärä, ja se on laskutoimitusten tärkein opetus.
+* **Keskiarvo.** Viikon lämpötilojen summa jaetaan päivien määrällä. Jos
+  jakolaskun tekee kokonaisluvuilla, desimaalit katoavat, ja juuri se on
+  laskutoimitusten tärkein opetus.
 * **Pelin fysiikka.** Jokaisella ruudunpäivityksellä pallon paikkaan lisätään
   sen nopeus, ja nopeuteen lisätään painovoima. Peli on käytännössä
   yhteenlaskua kuusikymmentä kertaa sekunnissa.

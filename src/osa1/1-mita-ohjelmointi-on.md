@@ -34,7 +34,7 @@ on vain se tapa, jolla ratkaisu kirjoitetaan muistiin.
 ## Algoritmi eli ohje
 
 *Algoritmi* on täsmällinen, vaiheittainen ohje jonkin tehtävän suorittamiseen.
-Ohjelmoija keksii ensin algoritmin ja kirjoittaa sen sitten ohjelmaksi, jota
+Ohjelmoija suunnittelee ensin algoritmin ja kirjoittaa sen sitten ohjelmaksi, jota
 tietokone noudattaa. Algoritmeja on kuitenkin muuallakin kuin tietokoneissa.
 Resepti on algoritmi. Reittiohje on algoritmi. Huonekalun kokoamisohje on
 algoritmi (joskin toisinaan melko tulkinnanvarainen sellainen).
@@ -189,16 +189,24 @@ Pääset kokeilemaan sitä pian
 ## Ohjelmoijan työtapa
 
 Ohjelmointi ei ole sitä, että kirjoitetaan ohjelma valmiiksi ja painetaan
-nappia. Se on kehä, jota kierretään monta kertaa:
+nappia. Ensin suunnitellaan algoritmi: mitä vaiheita tehtävä vaatii ja missä
+järjestyksessä. Sitten algoritmi kirjoitetaan ohjelmaksi, käännetään ja
+ajetaan. Tätä kehää kierretään monta kertaa:
 
 ```bob
-  .-----------.      .----------.      .-------.
-  | Kirjoita  |----->|  "Käännä"|----->|  Aja  |
-  '-----------'      '----------'      '-------'
-        ^                 |                |
-        |  "käännösvirhe" |  "väärä tulos" |
-        '-----------------'----------------'
+  .-------------.   .----------.   .----------.   .-----.
+  | Suunnittele |-->| Kirjoita |-->| "Käännä" |-->| Aja |
+  '-------------'   '----------'   '----------'   '-----'
+         ^             ^    ^           |            |
+         |             |    |           |            |
+         |             |    '-----------'            |
+         |             |   "käännösvirhe"            |
+         '-------------+-----------------------------'
+                               "väärä tulos"
 ```
+
+Väärä tulos ei aina johdu kirjoitusvirheestä. Joskus vika on jo algoritmissa,
+ja silloin palataan suunnittelemaan.
 
 Virheet eivät ole merkki siitä, että jokin meni pieleen. Ne ovat työtapa.
 Kokenutkin ohjelmoija näkee virheilmoituksia kymmeniä kertoja päivässä. Ero
@@ -220,7 +228,8 @@ Kaksi neuvoa, jotka säästävät hermoja:
   tapa kirjoittaa ohjelma; kääntäjä muuntaa sen konekielelle.
 * Kirjasto on valmista koodia, jota oma ohjelma käyttää. Jypeli on
   pelikirjasto.
-* Ohjelmointi on kirjoittamisen, kääntämisen, ajamisen ja korjaamisen kehä.
+* Ohjelmointi alkaa algoritmin suunnittelusta, ja sen jälkeen se on
+  kirjoittamisen, kääntämisen, ajamisen ja korjaamisen kehä.
 
 ## Testaa tietosi
 

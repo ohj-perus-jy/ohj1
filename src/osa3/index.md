@@ -26,7 +26,7 @@ luennot päivitetään tähän.
 
 ## Käsitteet
 
-Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+Tässä osassa esitellään seuraavat käsitteet. Käsitteen linkki vie
 kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
 ovat [sanastossa](../sanasto.md).
 

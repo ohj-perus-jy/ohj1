@@ -24,16 +24,14 @@ Luennot tukevat tekstiä. Katso ne ennen lukemista tai sen rinnalla.
 
 ## Käsitteet
 
-Nämä käsitteet esitellään seuraavilla sivuilla. Käsitteen linkki vie
+Tässä osassa esitellään seuraavat käsitteet. Käsitteen linkki vie
 kohtaan, jossa siitä puhutaan ensimmäisen kerran. Koko kirjan käsitteet
 ovat [sanastossa](../sanasto.md).
 
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
-| [ajoympäristö](./2-ensimmainen-ohjelma.md#mitä-lähdekoodille-oikeastaan-tapahtuu) | *runtime environment* | ympäristö, joka suorittaa käännetyn C#-ohjelman ja muuntaa sen konekielelle vasta ajon aikana |
 | [algoritmi](./1-mita-ohjelmointi-on.md#algoritmi-eli-ohje) | *algorithm* | täsmällinen, vaiheittainen ohje tehtävän suorittamiseen |
 | [aliohjelma](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan |
-| [jakojäännösoperaattori](./3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) | *remainder operator* | operaattori `%`, joka antaa sen, mitä kokonaislukujaossa jää yli |
 | [kirjasto](./1-mita-ohjelmointi-on.md#kirjasto) | *library* | valmista koodia, jota oma ohjelma voi käyttää |
 | [kokonaislukujako](./3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois |
 | [kommentti](./3-laskutoimitukset.md#aritmeettiset-operaattorit) | *comment* | kääntäjän ohittama, ihmiselle tarkoitettu teksti koodissa |
