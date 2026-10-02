@@ -1,15 +1,15 @@
 # Kertaus ja tenttiin valmistautuminen
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Tässä luvussa kootaan kurssin keskeiset asiat yhteen ja annetaan ohjeita
-tenttiin valmistautumiseen.
+Lopuksi kootaan kurssin keskeiset asiat yhteen ja annetaan ohjeita tenttiin
+valmistautumiseen.
 
 ## Kurssin käsitteet yhdellä sivulla
 
-<!-- Taulukko: käsite, luku, esimerkki. Muuttuja, tyyppi, operaattori,
+<!-- Taulukko: käsite, aliosa, esimerkki. Muuttuja, tyyppi, operaattori,
      ehtolause, aliohjelma, parametri, paluuarvo, silmukka, taulukko, lista,
      sanakirja, olio, rekursio, poikkeus. -->
 
@@ -28,3 +28,11 @@ tenttiin valmistautumiseen.
 
 <!-- Ohjelmointi 2: luokat ja oliot. Linkki extramateriaalin
      olio-ohjelmoinnin johdantoon. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
+
+## Tehtävät
+
+<!-- Tehtävät lisätään vaiheessa B. -->

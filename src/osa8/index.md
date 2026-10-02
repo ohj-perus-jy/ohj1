@@ -1,13 +1,13 @@
 # Osa 8: Kertaus
 
+Kurssin keskeiset käsitteet kootaan yhteen, ja tyypillisistä virheistä
+opitaan, miten ne vältetään. Lopuksi valmistaudutaan tenttiin ja katsotaan,
+miten ohjelmointia voi opiskella kurssin jälkeen.
+
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
 > * osaat kerrata kurssin keskeiset asiat ja valmistautua tenttiin
-
-## Luvut
-
-1. [Kertaus ja tenttiin valmistautuminen](./1-kertaus.md)
 
 ## Luennot
 
@@ -19,13 +19,4 @@ luennot päivitetään tähän.
   tai [tekstimuodossa](https://gitlab.jyu.fi/tie/ohj1/2025k/yhteenveto/-/blob/main/yhteenveto.md)
 * [Extramateriaali](../luennot/extra.md)
 
-## Tehtävät
-
-Tehtävät ovat lukujen sisällä sen asian kohdalla, jota ne harjoittavat. Kaikki
-osan tehtävät on koottu sivulle [Osan 8 tehtävät](./tehtavat.md).
-
-## Harjoitustyön viimeistely ja tentti
-
-* Palauta harjoitustyön [vaihe 3 (työ 100 %
-  valmis)](../harjoitustyo.md#vaiheiden-kuvaukset).
-* Lue [Tentti](../tentti/index.md) ja [Tenttiohjeet](../tentti/tenttiohjeet.md).
+<!-- Käsitteet-taulukko lisätään, kun aliosat kirjoitetaan. -->
