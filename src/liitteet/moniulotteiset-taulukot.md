@@ -1,15 +1,14 @@
 # Moniulotteiset taulukot
 
-Valinnaista lisätietoa lukuihin [5.1 Taulukot](../osa5/1-taulukot.md) ja
-[5.2 Taulukot ja silmukat](../osa5/2-taulukot-ja-silmukat.md). Tavallisen
+Valinnaista lisätietoa [taulukoista](../osa5/1-taulukot.md) ja niiden
+[läpikäynnistä silmukoilla](../osa5/2-taulukot-ja-silmukat.md). Tavallisen
 taulukon alkio löytyy yhdellä indeksillä. Kaksiulotteisessa taulukossa
 alkioita on riveissä ja sarakkeissa, ja alkioon tarvitaan kaksi indeksiä:
 rivi ja sarake.
 
 Kaksiulotteinen taulukko käydään läpi kahdella sisäkkäisellä silmukalla, joten
-kertaa tarvittaessa luvun [Toistolauseet](../osa4/1-toistolauseet.md#sisakkaiset-silmukat)
-kohta sisäkkäisistä silmukoista. Luvun esimerkeissä rakennetaan
-laivanupotuspelin pelilautaa.
+kertaa tarvittaessa [sisäkkäiset silmukat](../osa4/1-toistolauseet.md#sisakkaiset-silmukat).
+Esimerkeissä rakennetaan laivanupotuspelin pelilautaa.
 
 ## Mihin kaksiulotteista taulukkoa tarvitaan?
 
@@ -252,9 +251,8 @@ testilaudat eivät ole neliöitä: `lauta2` on 2 × 3 ja `lauta3` 3 × 2. Jos
 funktiossa olisi `GetLength(0)` ja `GetLength(1)` vaihtaneet paikkaa,
 neliönmuotoinen lauta ei paljastaisi virhettä, mutta suorakulmainen
 paljastaa. Lisää ComTestin ja kaksiulotteisten taulukoiden yhdistämisestä,
-myös taulukon palauttavan funktion testaamisesta, on luvun
-[Testaaminen ComTestillä](../osa7/2-testaaminen-comtestilla.md#kaksiulotteiset-taulukot)
-lopussa.
+myös taulukon palauttavan funktion testaamisesta, kerrotaan
+[ComTest-esimerkeissä](../osa7/2-testaaminen-comtestilla.md#kaksiulotteiset-taulukot).
 
 Kaksiulotteinen taulukko on yksiulotteisen tapaan
 [viite](../osa5/1-taulukot.md#taulukko-on-viite). Jos aliohjelma muuttaa

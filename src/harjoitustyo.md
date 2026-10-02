@@ -115,6 +115,9 @@ itse säännöllisesti varmuuskopioita työstäsi.
 
 ### Vaihe 1: Suunnitelma {#vaihe-1-suunnitelma-versiohallinnassa}
 
+Aloita harjoitustyö ja tee tämä vaihe osan 4 aikana. Vinkkejä alkuun saat
+extramateriaalista [Harjoitustyö 2,5 tunnissa](./luennot/extra.md).
+
 #### [Git-etävarasto](#tab/git)
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
@@ -177,6 +180,8 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 
 ### Vaihe 2: Työ 50 % valmis
 
+Tee tämä vaihe viimeistään osan 7 aikana.
+
 #### [Git-etävarasto](#tab/git)
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
@@ -206,6 +211,8 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
 ### Vaihe 3: Työ 100 % valmis
+
+Palauta tämä vaihe osan 8 aikana.
 
 #### [Git-etävarasto](#tab/git)
 

@@ -1,7 +1,7 @@
 # Yleisimmät virheilmoitukset
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
 Kokoelma kääntäjän ja suoritusaikaisten virheilmoitusten tulkinnoista. Jokaisen kohdalla kerrotaan tyypillinen syy ja korjaus.

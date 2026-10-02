@@ -1,7 +1,7 @@
 # Lambda-lausekkeet
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
 Valinnaista lisätietoa osaan [6](../osa6/index.md). Listan metodit `Find`, `FindAll` ja `Exists` ottavat parametrikseen ehdon, joka kirjoitetaan lambda-lausekkeena.

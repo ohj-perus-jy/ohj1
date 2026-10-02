@@ -44,8 +44,9 @@ numeroidaan osien mukaan (demo1–demo8).
 |                                              | Moniulotteiset taulukot                                                        | luonti, indeksointi, GetLength, sisäkkäiset silmukat, parametrina, Jypeli-kenttä, int[][]              | v1 valmis                                      |
 |                                              | StringBuilder, Lambda-lausekkeet, Tyyppijärjestelmä, Virheilmoitukset, Sanasto |                                                                                                        | runko                                          |
 
-Jokaisella osalla on `index.md` (osaamistavoitteet, luvut, luennot, tehtävät,
-harjoitustyön/debuggausnäytteen vaihe) ja `tehtavat.md` (kokoava lista).
+Jokaisella osalla on `index.md` (esittely, osaamistavoitteet, luennot,
+Käsitteet-taulukko) ja `tehtavat.md` (kokoava taulukko). Tarkempi kuvaus on
+kirjan `CLAUDE.md`:ssä.
 
 ## Päätökset ja perustelut
 

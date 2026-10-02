@@ -24,7 +24,8 @@ Näyte arvostellaan asteikolla hyväksytty/hylätty.
 Näyte tulee olla tehtynä ja hyväksyttynä ennen tenttiin osallistumista.
 Huomioithan, että näytteen tekeminen ja hyväksyttäminen voi viedä aikaa, joten
 aloita ajoissa. Suosittelemme, että teet näytteen viimeistään osan 8 takarajaan
-mennessä. 
+mennessä. Debuggerin käyttö opetetaan osassa 5, joten voit suorittaa näytteen
+heti sen jälkeen.
 
 ## Miksi? 
 
@@ -32,7 +33,7 @@ Debuggerin käyttö on osa kurssin osaamistavoitteita. Ohjelman koon kasvaessa t
 
 ## Miten valmistaudun?
 
- 1. Lue [luku 5.4 Debuggaus](./osa5/4-debuggaus.md)
+ 1. Lue sivu [Debuggaus](./osa5/4-debuggaus.md)
  2. Katso [luennon debuggauksesta ja debuggerin käytöstä](https://www.youtube.com/live/2d1ErNVn9sI?feature=share&t=1095) 
  3. Tee [Osan 5 harjoitustehtävä 4](https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo5#KeLJyCC2zOjx)
  4. Tee [harjoittelunäyte](#harjoittelunayte) (vapaaehtoinen)
@@ -196,7 +197,7 @@ Saat vielä erillisen kuittauksen debuggausnäytteen hyväksymisestä sähköpos
 
 Voit harjoitella debuggausnäytettä tekemällä harjoittelunäytteen. 
 
- 1. Lataa [Debugnayte.zip](exercises/debug-harjoittelu/DebugNayte.zip) ja pura
+ 1. Lataa [Debugnayte.zip](tehtavat/debuggausnayte/DebugNayte.zip) ja pura
 se paikkaan, josta löydät sen.
  2. Etsi ja avaa `DebugNayte.sln`-tiedosto Riderissa. Mikäli Rider kysyy,
     luotatko avattavaan projektiin, valitse Trust and Open.

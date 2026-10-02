@@ -1,10 +1,10 @@
 # Kääntäminen komentorivillä
 
-Valinnaista lisätietoa lukuun [1.2 Ensimmäinen
-ohjelma](../osa1/2-ensimmainen-ohjelma.md). Kurssilla ohjelmat käännetään ja
-ajetaan Riderin *Run*- ja *Debug*-painikkeilla, mutta Rider ei tee mitään
-taikuutta: se kutsuu taustalla samoja .NET-ympäristön työkaluja, joita voit
-käyttää itse komentoriviltä.
+Valinnaista lisätietoa [ensimmäisen ohjelman](../osa1/2-ensimmainen-ohjelma.md)
+kääntämisestä. Kurssilla ohjelmat käännetään ja ajetaan Riderin *Run*- ja
+*Debug*-painikkeilla, mutta Rider ei tee mitään taikuutta: se kutsuu
+taustalla samoja .NET-ympäristön työkaluja, joita voit käyttää itse
+komentoriviltä.
 
 ## Mitä tarvitaan?
 

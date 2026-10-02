@@ -1,8 +1,7 @@
 # Valinnaiset parametrit ja oletusarvot
 
-Valinnaista lisätietoa lukuun [3.1 Parametrit ja
-argumentit](../osa2/4-funktiot.md). Parametrille voi antaa
-*oletusarvon*, jolloin argumentin voi jättää kutsussa pois.
+Valinnaista lisätietoa [funktioista](../osa2/4-funktiot.md). Parametrille voi
+antaa *oletusarvon*, jolloin argumentin voi jättää kutsussa pois.
 
 ## Oletusarvon määrittely
 

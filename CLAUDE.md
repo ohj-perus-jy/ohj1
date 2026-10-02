@@ -7,11 +7,6 @@ Materiaali on `src/`:ssä.
 
 ## Kirjan rakenne
 
-Tämä on tavoiterakenne, johon kirjaa viedään. Osa sisällöstä on vielä vanhassa
-muodossa: esimerkiksi tehtävät ovat `src/exercises/`-kansiossa tunnuksilla T1,
-B1, eikä osien etusivuilla ole Käsitteet-taulukkoa. Uusi sisältö tehdään
-tavoiterakenteen mukaan. Vanhaa ei siirretä pyytämättä.
-
 - Jokainen osa on hakemistossa `src/osaN/`:
   - `index.md`: 2–3 virkkeen esittelykappale, `> [!Osaamistavoitteet]`-
     laatikko, luennot ja Käsitteet-taulukko.
