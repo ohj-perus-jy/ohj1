@@ -1,10 +1,10 @@
 # Sanakirjat
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Sanakirja (`Dictionary<TKey, TValue>`) tallentaa avain–arvo-pareja: arvo haetaan avaimen perusteella. Tässä luvussa opitaan, milloin sanakirja on parempi valinta kuin lista, ja miten sitä käytetään.
+Sanakirja (`Dictionary<TKey, TValue>`) tallentaa avain–arvo-pareja: arvo haetaan avaimen perusteella. Opit, milloin sanakirja on parempi valinta kuin lista, ja miten sitä käytetään.
 
 ## Avain ja arvo
 
@@ -17,6 +17,10 @@ Sanakirja (`Dictionary<TKey, TValue>`) tallentaa avain–arvo-pareja: arvo haeta
 ## Sanakirjan läpikäynti
 
 ## Esimerkki: sanojen laskeminen
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

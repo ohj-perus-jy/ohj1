@@ -1,5 +1,10 @@
 # Osa 6: Kokoelmat ja tiedostot
 
+Taulukon koko kiinnitetään sitä luotaessa, mutta lista kasvaa ja kutistuu
+tarpeen mukaan, ja sanakirjasta tieto haetaan avaimen perusteella. Lisäksi
+luetaan ja kirjoitetaan tiedostoja ja varaudutaan virheisiin, joita ohjelma ei
+voi estää etukäteen, kuten puuttuvaan tiedostoon.
+
 > [!Osaamistavoitteet]
 > Tämän osan jälkeen
 >
@@ -9,12 +14,6 @@
 > * osaat käsitellä poikkeuksen `try`-`catch`-rakenteella ja tiedät, milloin
 >   se kannattaa
 
-## Luvut
-
-1. [Listat](./1-listat.md)
-2. [Sanakirjat](./2-sanakirjat.md)
-3. [Tiedostot ja poikkeukset](./3-tiedostot-ja-poikkeukset.md)
-
 ## Luennot
 
 Luentojen numerointi on kevään 2026 toteutuksen mukainen. Uuden toteutuksen
@@ -22,11 +21,4 @@ luennot päivitetään tähän.
 
 * [Luento 13: Dynaamiset tietorakenteet](../luennot/luento13.md)
 
-## Tehtävät
-
-Tehtävät ovat lukujen sisällä sen asian kohdalla, jota ne harjoittavat. Kaikki
-osan tehtävät on koottu sivulle [Osan 6 tehtävät](./tehtavat.md).
-
-## Valinnaista lisätietoa
-
-* [Lambda-lausekkeet](../liitteet/lambda-lausekkeet.md)
+<!-- Käsitteet-taulukko lisätään, kun aliosat kirjoitetaan. -->

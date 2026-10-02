@@ -1,15 +1,14 @@
 # Tiedostot ja poikkeukset
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Ohjelman tiedot katoavat, kun ohjelma suljetaan, ellei niitä tallenneta. Tässä
-luvussa opitaan lukemaan tekstitiedosto riveiksi, käsittelemään rivit ja
-kirjoittamaan tiedostoon. Tiedosto voi kuitenkin puuttua tai sen sisältö voi
-olla väärän muotoista. Silloin syntyy *poikkeus*, ja luvun toisessa puoliskossa
-opitaan lukemaan poikkeuksen virheilmoitus ja käsittelemään poikkeus
-`try`-`catch`-rakenteella.
+Ohjelman tiedot katoavat, kun ohjelma suljetaan, ellei niitä tallenneta. Opit
+lukemaan tekstitiedoston riveiksi, käsittelemään rivit ja kirjoittamaan
+tiedostoon. Tiedosto voi kuitenkin puuttua tai sen sisältö voi olla väärän
+muotoista. Silloin syntyy *poikkeus*. Opit myös lukemaan poikkeuksen
+virheilmoituksen ja käsittelemään poikkeuksen `try`-`catch`-rakenteella.
 
 ## Tiedosto ja polku
 
@@ -22,7 +21,7 @@ opitaan lukemaan poikkeuksen virheilmoitus ja käsittelemään poikkeus
 ## Kun tiedostoa ei löydy: poikkeus
 
 <!-- Puuttuva tiedosto kaataa ohjelman (`FileNotFoundException`). Toinen tuttu
-     tapaus: `int.Parse` ja väärä syöte (`FormatException`, luvut 2.2 ja 4.2).
+     tapaus: `int.Parse` ja väärä syöte (`FormatException`, aliosat 2.2 ja 4.2).
      Kun ohjelma kohtaa tilanteen, josta se ei voi jatkaa, syntyy poikkeus. -->
 
 ## Poikkeuksen virheilmoituksen lukeminen
@@ -40,6 +39,10 @@ opitaan lukemaan poikkeuksen virheilmoitus ja käsittelemään poikkeus
 ## Esimerkki: pistelista tiedostosta
 
 <!-- Jypelissä: pelin ennätykset tai kenttä luetaan tiedostosta. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 
