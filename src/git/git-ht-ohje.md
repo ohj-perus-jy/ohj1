@@ -260,8 +260,13 @@ ensin tiedoston nimi ja sen perään lainausmerkeissä otsikko.
 ```
 
 > [!VAROITUS]
-> Tiedoston nimen pitää täsmätä kirjain kirjaimelta, myös isot ja pienet
-> kirjaimet. Muuten GitLab ei näytä kuvaa.
+> 1. Kuvan tiedostopolku on *suhteellinen*: jos kuva on samassa kansiossa kuin
+>    suunnitelma.md, kirjoitetaan vain kuvan nimi. Jos kuva on alikansiossa,
+>    kirjoitetaan alikansion nimi ja kauttaviiva ennen kuvan nimeä, esimerkiksi
+>    `kuvat/hahmotelma.png`. *Älä* kirjoita koko polkua koneeltasi, esimerkiksi
+>    `C:\Users\olli\ohj1\harjoitustyo\suunnitelma\hahmotelma.png`.
+> 2. Kuvan tiedostonimen pitää täsmätä kirjain kirjaimelta, myös isot ja pienet
+>    kirjaimet. Muuten GitLab ei näytä kuvaa.
 
 </step>
 
