@@ -1,12 +1,12 @@
 # Merkkijonot
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Merkkijono (`string`) on jono merkkejä. Tässä luvussa opitaan käsittelemään
-merkkijonoja valmiilla metodeilla, pilkkomaan niitä osiin ja muuntamaan
-merkkijonoja luvuiksi ja takaisin.
+Merkkijono (`string`) on jono merkkejä. Opit käsittelemään merkkijonoja
+valmiilla metodeilla, pilkkomaan niitä osiin ja muuntamaan merkkijonoja luvuiksi
+ja takaisin.
 
 ## Merkkijono on kuin taulukko merkkejä
 
@@ -28,9 +28,9 @@ merkkijonoja luvuiksi ja takaisin.
 
 ## Merkkijonosta luvuksi ja takaisin
 
-Luvussa [Operaattorit ja tyyppimuunnokset](../osa2/2-operaattorit.md#luvun-lukeminen-käyttäjältä)
-luku luettiin käyttäjältä kaavalla `int.Parse(Console.ReadLine())` ja
-luotettiin siihen, että käyttäjä kirjoittaa luvun. Tässä syvennetään sitä,
+Aiemmin [luku luettiin käyttäjältä](../osa2/2-operaattorit.md#luvun-lukeminen-käyttäjältä)
+kaavalla `int.Parse(Console.ReadLine())` ja luotettiin siihen, että käyttäjä
+kirjoittaa luvun. Tässä syvennetään sitä,
 mitä `int.Parse` ja `double.Parse` oikeastaan tekevät ja mitä tapahtuu, kun
 muunnos ei onnistu.
 
@@ -39,7 +39,7 @@ muunnos ei onnistu.
 <!-- Vaiheessa B: `int.Parse("abc")` heittää FormatExceptionin ja ohjelma
      kaatuu. Virheilmoituksen lukeminen. `int.TryParse` palauttaa `bool`-arvon
      ja tuloksen `out`-parametrissa; esimerkki syötteen tarkistamisesta
-     silmukassa. Poikkeuksen käsittelyyn palataan luvussa 6.3. -->
+     silmukassa. Poikkeuksen käsittelyyn palataan aliosassa 6.3. -->
 
 ### Desimaalipilkku vai piste?
 
@@ -55,6 +55,10 @@ muunnos ei onnistu.
 ## Valinnaista lisätietoa
 
 * [Muokattavat merkkijonot: StringBuilder](../liitteet/stringbuilder.md)
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

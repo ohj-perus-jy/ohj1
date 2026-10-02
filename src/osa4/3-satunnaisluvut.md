@@ -1,12 +1,12 @@
 # Satunnaisluvut
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
 Pelit ja simulaatiot tarvitsevat satunnaisuutta: nopanheitto, vihollisen
-paikka, arvattava luku. Tässä luvussa opitaan arpomaan lukuja
-`Random`-luokalla ja Jypelin `RandomGen`-luokalla.
+paikka, arvattava luku. Opit arpomaan lukuja `Random`-luokalla ja Jypelin
+`RandomGen`-luokalla.
 
 ## Mihin satunnaisuutta tarvitaan?
 
@@ -16,7 +16,7 @@ paikka, arvattava luku. Tässä luvussa opitaan arpomaan lukuja
 ## `Random`-olio
 
 <!-- `Random arpoja = new Random();` Olio luodaan `new`-operaattorilla kuten
-     Jypelin oliot luvussa 3.4. Yksi olio riittää koko ohjelmalle. -->
+     Jypelin oliot aliosassa 3.4. Yksi olio riittää koko ohjelmalle. -->
 
 ## Kokonaisluvun ja liukuluvun arpominen
 
@@ -32,10 +32,14 @@ paikka, arvattava luku. Tässä luvussa opitaan arpomaan lukuja
 ## Jypelissä: `RandomGen`
 
 <!-- `RandomGen.NextDouble(Level.Left, Level.Right)`, `RandomGen.NextColor()`,
-     `RandomGen.NextInt`. Jatkaa luvun 4.1 peliä: silmukan luomat esteet
+     `RandomGen.NextInt`. Jatkaa aliosan 4.1 peliä: silmukan luomat esteet
      sijoitetaan satunnaisiin paikkoihin. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 
 <!-- Tehtävät lisätään vaiheessa B. Satunnaisuutta käyttävän koodin
-     testaaminen (siemenluku) on luvussa 7.2. -->
+     testaaminen (siemenluku) on aliosassa 7.2. -->

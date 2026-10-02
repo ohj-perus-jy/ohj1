@@ -2,9 +2,9 @@
 
 **Toistolauseilla** (eli *silmukoilla*) voidaan toistaa jonkin lauseen tai
 lauseiden suoritusta niin kauan kuin jokin ehto on voimassa. Toistolauseita
-ovat `while`, `do-while` ja `for`. Neljäs toistolause, `foreach`, esitellään
-osassa 5 luvussa [Taulukot ja silmukat](../osa5/2-taulukot-ja-silmukat.md),
-koska se tarvitsee taulukon tai kokoelman, jonka alkiot käydään läpi.
+ovat `while`, `do-while` ja `for`. Neljäs toistolause, `foreach`, käy läpi
+taulukon tai kokoelman alkiot, joten se esitellään vasta
+[taulukoiden](../osa5/2-taulukot-ja-silmukat.md) yhteydessä.
 
 ## `while`-silmukka
 
@@ -103,13 +103,17 @@ for (int i = 1; i <= 10; i++)
 <!-- Vaiheessa B: kun silmukka ei toimi odotetusti, tulosta silmukkamuuttuja
      ja välitulos joka kierroksella (`Console.WriteLine($"i={i}, summa={summa}")`).
      Näin näkee, millä kierroksella lasku menee vikaan. Tulostukset poistetaan
-     lopuksi. Debuggeri tekee saman ilman koodin muuttamista: luku 5.4. -->
+     lopuksi. Debuggeri tekee saman ilman koodin muuttamista: aliosa 5.4. -->
 
 ## Jypelissä
 
 <!-- Vaiheessa B: silmukka luo kymmenen estettä riviin (`for`, x-koordinaatti
-     lasketaan silmukkamuuttujasta). Jatkaa osan 3 peliä; seuraavassa luvussa
-     4.3 esteet sijoitetaan satunnaisesti. -->
+     lasketaan silmukkamuuttujasta). Jatkaa osan 3 peliä; aliosassa 4.3
+     esteet sijoitetaan satunnaisesti. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 

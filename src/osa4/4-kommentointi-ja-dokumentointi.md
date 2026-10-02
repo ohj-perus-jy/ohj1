@@ -1,13 +1,13 @@
 # Kommentointi ja dokumentointi
 
 > [!HUOMAUTUS]
-> Tämä luku on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
 > vaiheessa B.
 
-Tässä luvussa opitaan kirjoittamaan kommentteja ja dokumentoimaan aliohjelmat
-niin, että sekä ihminen että kehitysympäristö hyötyvät niistä.
-Dokumentaatiokommentit ovat myös pohja ComTest-testeille, joihin tutustutaan
-osassa 7 luvussa [Testaaminen ComTestillä](../osa7/2-testaaminen-comtestilla.md).
+Opit kirjoittamaan kommentteja ja dokumentoimaan aliohjelmat niin, että sekä
+ihminen että kehitysympäristö hyötyvät niistä. Dokumentaatiokommentit ovat
+myös pohja [ComTest-testeille](../osa7/2-testaaminen-comtestilla.md), joihin
+tutustutaan myöhemmin.
 
 ## Rivi- ja lohkokommentit
 
@@ -27,6 +27,10 @@ osassa 7 luvussa [Testaaminen ComTestillä](../osa7/2-testaaminen-comtestilla.md
 ## Tyyliopas
 
 <!-- Linkki ../tyyliopas.md: nimeäminen, sisennys, kommentointi. -->
+
+## Testaa tietosi
+
+<!-- Visa kirjoitetaan vaiheessa B. -->
 
 ## Tehtävät
 
