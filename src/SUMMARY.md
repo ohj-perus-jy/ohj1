@@ -73,7 +73,7 @@
   - [Lambda-lausekkeet](./liitteet/lambda-lausekkeet.md)
   - [C#-kielen tyyppijärjestelmästä](./liitteet/tyyppijarjestelma.md)
   - [Yleisimmät virheilmoitukset](./liitteet/virheilmoitukset.md)
-  - [Sanasto](./liitteet/sanasto.md)
+  - [Sanasto](./sanasto.md)
 - [Luennot](./luennot/index.md)
   - [Luento 1: Johdatus, mitä ohjelmointi on?](./luennot/luento1.md)
   - [Luento 2: Kehitysympäristö, graafinen C#-ohjelma](./luennot/luento2.md)
