@@ -4,7 +4,7 @@ Olet kutsunut funktioita jo monta kertaa. `Math.Sqrt(16)` antaa luvun 4,
 `Math.Max(3, 8)` antaa suuremman luvuista, `int.Parse("42")` antaa merkkijonoa
 vastaavan kokonaisluvun ja `Console.ReadLine()` antaa käyttäjän kirjoittaman
 rivin. Kaikki toimivat samalla tavalla: funktiolle annetaan jotakin, ja se
-antaa takaisin arvon. Tässä luvussa kirjoitat omia funktioita.
+antaa takaisin arvon. Nyt kirjoitat omia funktioita.
 
 Idea on tuttu matematiikasta. Funktio f(x) = x² ottaa luvun ja antaa sen
 neliön: f(3) = 9. C#:ssa sama funktio näyttää tältä:
@@ -99,8 +99,7 @@ public class Kutsuja
 ```
 
 `Console.WriteLine` on poikkeus: se ei anna mitään takaisin, vaan tulostaa.
-Tällaisiin aliohjelmiin palataan luvussa [Aliohjelmat ilman
-paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
+Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 ## Oma funktio
 
@@ -165,8 +164,9 @@ Kolme sääntöä, jotka kannattaa painaa mieleen heti:
   `Nelio(3)` riittää.
 
 Myös `Main` on rakenteeltaan samanlainen. Sen paluuarvon tyypin paikalla lukee
-`void`, joka tarkoittaa, että `Main` ei anna takaisin mitään. Siihen palataan
-luvussa [Aliohjelmat ilman paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
+`void`, joka tarkoittaa, että `Main` ei anna takaisin mitään. Siihen palataan,
+kun käsitellään [aliohjelmia ilman
+paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 ## Mitä kutsussa tapahtuu?
 
@@ -227,7 +227,8 @@ mutta funktiossa sama arvo tunnetaan nimellä `x`. Nimien ei tarvitse olla
 samat, eikä funktio edes tiedä, minkä nimisestä muuttujasta arvo tuli tai
 tuliko se muuttujasta lainkaan. Parametriin kopioidaan pelkkä arvo. Parametri
 on funktion oma muuttuja, joka syntyy kutsussa ja katoaa, kun funktio päättyy.
-Tähän palataan luvussa [Muuttujien näkyvyys](../osa3/3-muuttujien-nakyvyys.md).
+Tähän palataan [muuttujien näkyvyyden](../osa3/3-muuttujien-nakyvyys.md)
+yhteydessä.
 
 ## Useita parametreja
 
@@ -436,7 +437,7 @@ Silloin kutsu luetaan luontevasti: `bool aikuinen = OnkoTaysiIkainen(ika);`.
 
 ## Funktiot Jypelissä
 
-Luvussa [Ensimmäinen graafinen ohjelma](../osa1/5-ensimmainen-graafinen-ohjelma.md)
+[Ensimmäisessä graafisessa ohjelmassa](../osa1/5-ensimmainen-graafinen-ohjelma.md)
 jokainen olio luotiin usealla rivillä. Lumiukossa on kolme palloa, ja niiden
 rivit ovat lähes samat. Kirjoitetaan pallon luominen funktioksi, joka
 palauttaa valmiin pallon:
@@ -470,9 +471,9 @@ public class Lumiukko : PhysicsGame
 ```
 
 `LuoPallo` on funktio siinä missä `Nelio`: se saa parametreina paikan ja säteen
-ja palauttaa arvon. Arvo on vain luvun sijaan `GameObject`, sama tyyppi, jota
-käytit luvussa 1.5. Mikä olio tarkalleen on, selitetään luvussa [Jypeli ja
-oliot](../osa3/4-jypeli-ja-oliot.md).
+ja palauttaa arvon. Arvo on vain luvun sijaan `GameObject`, sama tyyppi kuin
+aiemmissa Jypeli-esimerkeissä. Mikä olio tarkalleen on, selitetään
+[myöhemmin](../osa3/4-jypeli-ja-oliot.md).
 
 Kutsun `LuoPallo(0, -200, 100)` arvo on siis pallo, ja `Add` lisää sen peliin.
 Koska funktio palauttaa pallon eikä lisää sitä itse, kutsuja voi vielä muuttaa
@@ -482,9 +483,9 @@ Kaksi eroa konsoliohjelmaan:
 
 * Funktion edestä puuttuu `static`. Jypelissä aliohjelmat käyttävät yleensä
   pelin omia asioita, kuten `Add`-metodia ja `Level`-ominaisuutta, ja siksi ne
-  kirjoitetaan ilman `static`-sanaa. Syy selitetään luvussa [Jypeli ja
-  oliot](../osa3/4-jypeli-ja-oliot.md); toistaiseksi riittää muistaa sääntö:
-  konsolissa `public static`, Jypelissä `public`.
+  kirjoitetaan ilman `static`-sanaa. Syy selitetään
+  [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä; toistaiseksi riittää
+  muistaa sääntö: konsolissa `public static`, Jypelissä `public`.
 * `Begin`-aliohjelmassa on sana `override`. Se kertoo, että Jypelillä on oma
   `Begin`, jonka tilalle tämä kirjoitetaan. Omissa funktioissa sitä ei
   käytetä.
@@ -572,7 +573,7 @@ aliohjelman, joka kuuluu luokasta luodulle *oliolle*. `Math.Sqrt` on
 staattinen: sitä kutsutaan luokan nimellä, eikä mitään "Math-oliota" tarvitse
 luoda. Jypeli-pelin `LuoPallo` sen sijaan kuuluu pelioliolle, jolla on oma
 kenttä, tausta ja olioiden lista; siksi siitä puuttuu `static`. Ero avataan
-kunnolla luvussa [Jypeli ja oliot](../osa3/4-jypeli-ja-oliot.md) ja laajemmin
+kunnolla [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä ja laajemmin
 Ohjelmointi 2 -kurssilla.
 
 </details>
@@ -712,26 +713,25 @@ sijoittaa.
 
 ## Tehtävät
 
-<!-- Numerointi tarkentuu, kun osan muut tehtävät tehdään. TIM-palautuslinkit
-     lisätään, kun tehtävät on viety TIMiin.
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin.
      Vaiheessa B lisäksi: "Painoindeksi" (syöte Mainissa, laskenta
      funktiossa) ja "Lumiukko funktiolla" (Jypeli: LuoPallo palauttaa
      pallon, Begin lisää sen). -->
 
 <task>
-  <task-title num="T1">Järjestele toimivaksi <points>1 p.</points></task-title>
+  <task-title num="2.2">Järjestele toimivaksi <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/2-4-1-jarjestele_toimivaksi/handout.md}}
+  {{#include ../tehtavat/2-2-jarjestele-toimivaksi/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="T2">Kirjoita esittelyrivit <points>1 p.</points></task-title>
+  <task-title num="2.3">Kirjoita esittelyrivit <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../exercises/2-4-2-esittelyrivit/handout.md}}
+  {{#include ../tehtavat/2-3-esittelyrivit/handout.md}}
 
   </handout>
 </task>

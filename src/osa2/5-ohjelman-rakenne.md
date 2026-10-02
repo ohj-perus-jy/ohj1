@@ -1,14 +1,14 @@
 # Ohjelman rakenne
 
-Tässä luvussa tarkastelemme ohjelmaa kokonaisuutena: mistä osista se koostuu ja
-missä järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
+Tarkastellaan ohjelmaa kokonaisuutena: mistä osista se koostuu ja missä
+järjestyksessä osat suoritetaan. Yritämme siis hahmottaa ohjelmaa
 *top-down*-tavalla; katselemme ensin ohjelman rakennetta kokonaisuutena ja sitten tarkastelemme yksittäisiä osia.
-Funktiot käsiteltiin luvussa [Funktiot](./4-funktiot.md), joten tässä
-luvussa keskitytään siihen, miten ohjelman osat asettuvat kokonaisuudeksi.
+[Funktiot](./4-funktiot.md) on jo käsitelty, joten nyt keskitytään siihen,
+miten ohjelman osat asettuvat kokonaisuudeksi.
 
 ## Miksi rakenteesta pitää välittää?
 
-Luvun [Ensimmäinen ohjelma](../osa1/2-ensimmainen-ohjelma.md) esimerkissä oli
+[Ensimmäisessä ohjelmassamme](../osa1/2-ensimmainen-ohjelma.md) oli
 seitsemän riviä, joista vain yksi teki jotakin. Loput kuusi olivat rakennetta:
 luokka, pääohjelma ja aaltosulut. Aloittelijasta se tuntuu turhalta
 kehystykseltä, mutta rakenteella on kaksi tehtävää.
@@ -22,9 +22,9 @@ koodi jaetaan luokkiin ja aliohjelmiin, jotka nimetään sen mukaan, mitä ne
 tekevät, jolloin lukija löytää etsimänsä lukematta kaikkea.
 
 Sama periaate on tuttu muualtakin: kirja jaetaan lukuihin ja kappaleisiin, ja
-kirje alkaa vastaanottajan osoitteella, vaikka itse asia olisi yksi rivi. Tässä
-luvussa opitaan C#-ohjelman "osoitekenttä" niin hyvin, ettei sitä tarvitse enää
-ajatella.
+kirje alkaa vastaanottajan osoitteella, vaikka itse asia olisi yksi rivi.
+Seuraavaksi opitaan C#-ohjelman "osoitekenttä" niin hyvin, ettei sitä tarvitse
+enää ajatella.
 
 ## Yksinkertaisen ohjelman osat
 
@@ -105,7 +105,7 @@ public static void Main()
 
 `Main` on ohjelman *aloituspiste* (engl. *entry point*). Kun käyttöjärjestelmä käynnistää ohjelman, suoritus alkaa aina `Main`-aliohjelman ensimmäisestä lauseesta -- riippumatta siitä, missä kohtaa tiedostoa `Main` sattuu sijaitsemaan. Nimen `Main` on oltava juuri tämä, ja se kirjoitetaan isolla alkukirjaimella.
 
-`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Määreet `public` ja `static` käsiteltiin luvussa [Funktiot](./4-funktiot.md). `void` tarkoittaa, että `Main` ei palauta mitään. Tällaisiin aliohjelmiin palataan luvussa [Aliohjelmat ilman paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
+`Main` kirjoitetaan täsmälleen samalla tavalla kuin mikä tahansa muukin aliohjelma; erikoista siinä on vain nimi ja rooli aloituspisteenä. Määreet `public` ja `static` käsiteltiin [funktioiden](./4-funktiot.md) yhteydessä. `void` tarkoittaa, että `Main` ei palauta mitään. Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 Ohjelmassa saa olla vain yksi aloituspiste. Jos ohjelmassa on useita luokkia, `Main` kirjoitetaan vain yhteen niistä.
 
@@ -212,7 +212,7 @@ Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka se on ki
 > täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
 > *kutsutaan*.
 
-Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Kutsumista käsiteltiin luvussa [Funktiot](./4-funktiot.md#mitä-kutsussa-tapahtuu).
+Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Kutsumista käsiteltiin [funktioiden](./4-funktiot.md#mitä-kutsussa-tapahtuu) yhteydessä.
 
 ## Lohkot ja sisennykset
 
@@ -389,3 +389,7 @@ mikä tahansa, eivätkä `using`-rivit tai kommentit vaikuta asiaan.
 </kysymys>
 
 </visa>
+
+## Tehtävät
+
+<!-- Tehtävät lisätään vaiheessa B. -->

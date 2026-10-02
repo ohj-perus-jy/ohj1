@@ -277,9 +277,8 @@ Kaksi huomiota:
   mutta jättää kohdistimen tulostetun tekstin perään. Siksi käyttäjän vastaus
   tulee samalle riville kysymyksen kanssa.
 * **Syöte on aina merkkijono.** Vaikka käyttäjä kirjoittaisi `20`,
-  `Console.ReadLine` antaa tekstin `"20"`, ei lukua. Luvuksi se muunnetaan
-  seuraavassa luvussa
-  [Operaattorit ja tyyppimuunnokset](./2-operaattorit.md#luvun-lukeminen-käyttäjältä).
+  `Console.ReadLine` antaa tekstin `"20"`, ei lukua. Luvuksi se pitää
+  [muuntaa erikseen](./2-operaattorit.md#luvun-lukeminen-käyttäjältä).
 
 ## Vakiot
 
@@ -338,7 +337,7 @@ public class Virhe
 
 Tekstin sijoittaminen lukumuuttujaan antaa vastaavan ilmoituksen `CS0029:
 Cannot implicitly convert type 'string' to 'int'`. Jos teksti on luku, se
-pitää ensin muuntaa; siitä kerrotaan seuraavassa luvussa.
+pitää ensin [muuntaa](./2-operaattorit.md#merkkijonosta-luvuksi).
 
 **Sama nimi kahdesti.** Muuttujan voi määritellä samassa lohkossa vain kerran.
 Toinen `int pisteet = ...` -rivi antaa virheen `CS0128: A local variable named
@@ -437,6 +436,14 @@ tulostuisi vaihtoehto a.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: T-tehtävät "Määrittele muuttujat"
-     (exercises/2-1-1-mita_tulostaa), "Mitä ohjelma tulostaa?" (sijoitusten
-     jäljitys), "Painoindeksi". -->
+<!-- Vaiheessa B lisäksi: "Mitä ohjelma tulostaa?" (sijoitusten jäljitys) ja
+     "Painoindeksi". -->
+
+<task>
+  <task-title num="2.1">Määrittele muuttujat <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/2-1-maarittele-muuttujat/handout.md}}
+
+  </handout>
+</task>

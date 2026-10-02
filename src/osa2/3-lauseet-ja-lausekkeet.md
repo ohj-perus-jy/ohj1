@@ -19,8 +19,8 @@ Erottelu tulee vastaan jatkuvasti:
 * Kun mietit, voiko tulostuskäskyn sisään kirjoittaa laskun
   (`Console.WriteLine(2 + 3)`), vastaus on kyllä: tulostuskäsky odottaa
   lauseketta, ja `2 + 3` on lauseke.
-* Kun seuraavassa luvussa kirjoitat oman funktion, sen kutsu on lauseke, ja
-  sitä voi käyttää kaikkialla, missä arvoa tarvitaan.
+* Kun kirjoitat oman funktion, sen kutsu on lauseke, ja sitä voi käyttää
+  kaikkialla, missä arvoa tarvitaan.
 
 ## Lause
 
@@ -35,9 +35,9 @@ Console.WriteLine("Hyvää syntymäpäivää!"); // aliohjelmakutsu
 ```
 
 Myöhemmin vastaan tulee lauseita, jotka eivät pääty puolipisteeseen:
-ehtolause (`if`, luku [Ehtolauseet](../osa3/1-ehtolauseet.md)) ja
-toistolauseet (`while`, `for`, osa 4). Niissä on aaltosulkujen rajaama lohko,
-jonka sisällä on lisää lauseita.
+[ehtolause](../osa3/1-ehtolauseet.md) (`if`) ja
+[toistolauseet](../osa4/1-toistolauseet.md) (`while`, `for`). Niissä on
+aaltosulkujen rajaama lohko, jonka sisällä on lisää lauseita.
 
 ## Lauseke
 
@@ -57,8 +57,8 @@ isommiksi lausekkeiksi.
 | `ika + 1` | yhtä suurempi kuin `ika` | `int` |
 
 Jokaisella lausekkeella on arvon lisäksi *tyyppi*, joka kertoo, millainen arvo
-on kyseessä. Tyypit esiteltiin luvussa
-[Muuttujat ja tietotyypit](./1-muuttujat-ja-tietotyypit.md).
+on kyseessä. Tyypit esiteltiin
+[muuttujien](./1-muuttujat-ja-tietotyypit.md) yhteydessä.
 
 Lausekkeen tunnistaa helposti: jos koodinpätkän voi kirjoittaa sijoituksen
 oikealle puolelle, esimerkiksi `int x = ...;`, se on lauseke.
@@ -118,8 +118,8 @@ arvoa, joten se ei ole lauseke vaan pelkkä lause. Sama testi kuin edellä
 paljastaa eron: `int x = Math.Max(3, 7);` kääntyy, mutta
 `int x = Console.WriteLine("Moi");` ei käänny.
 
-Seuraavassa luvussa kirjoitat [omia funktioita](./4-funktiot.md), joiden kutsu
-on lauseke samalla tavalla kuin `Math.Max`-kutsu.
+Myös [omien funktioiden](./4-funktiot.md) kutsu on lauseke samalla tavalla
+kuin `Math.Max`-kutsu.
 
 <details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: lauseke, joka on myös lause</summary>
 
@@ -135,10 +135,10 @@ int b = a++;           // Lausekkeena: b saa arvon 4, ja a on sen jälkeen 5.
 
 Jälkimmäinen rivi on laillista C#:a, mutta sitä kannattaa välttää: lukija
 joutuu pysähtymään miettimään, kumpi arvo `b`:hen päätyi. Operaattoreista ja
-`++`:n kahdesta muodosta kerrottiin luvussa
-[Operaattorit ja tyyppimuunnokset](./2-operaattorit.md).
+`++`:n kahdesta muodosta kerrottiin
+[operaattorien](./2-operaattorit.md) yhteydessä.
 
-Tässä luvussa esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus.
+Edellä esitetty jako lausekkeisiin ja lauseisiin on yksinkertaistus.
 Se, mihin "lokeroon" jokin koodinpätkä kuuluu, vaihtelee ohjelmointikielen
 mukaan, ja tarkat säännöt ovat kielen spesifikaatiossa. Esimerkiksi
 C#-spesifikaatio sanoo lausekkeeksi myös `Console.WriteLine`-kutsun, jolla ei

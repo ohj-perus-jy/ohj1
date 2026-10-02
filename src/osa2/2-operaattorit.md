@@ -1,10 +1,10 @@
 # Operaattorit ja tyyppimuunnokset
 
 *Operaattorit* ovat merkkejä, jotka tekevät jotakin arvoille: laskevat yhteen,
-vertaavat, yhdistävät. Luvussa [Laskutoimitukset](../osa1/3-laskutoimitukset.md)
-laskettiin valmiiksi kirjoitetuilla luvuilla. Nyt lasketaan muuttujilla, ja
-silloin muuttujan tyyppi ratkaisee, mitä operaattori tekee. Tässä luvussa
-opitaan myös muuntamaan arvo tyypistä toiseen, lukemaan luku käyttäjältä sekä
+vertaavat, yhdistävät. Tähän asti on [laskettu](../osa1/3-laskutoimitukset.md)
+valmiiksi kirjoitetuilla luvuilla. Nyt lasketaan muuttujilla, ja silloin
+muuttujan tyyppi ratkaisee, mitä operaattori tekee. Lisäksi opitaan
+muuntamaan arvo tyypistä toiseen, lukemaan luku käyttäjältä sekä
 vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
 
 ## Mihin operaattoreita tarvitaan?
@@ -88,7 +88,7 @@ mitä operaattori tekee.
 
 Selvin esimerkki on `+`. Lukujen välissä se laskee yhteen, mutta merkkijonojen
 välissä se liittää tekstit peräkkäin, kuten
-[edellisen luvun tervehdyksessä](1-muuttujat-ja-tietotyypit.md#muuttujan-tulostaminen).
+[aiemmassa tervehdysesimerkissä](1-muuttujat-ja-tietotyypit.md#muuttujan-tulostaminen).
 Jos vain toinen osapuoli on merkkijono, toinen muutetaan ensin tekstiksi.
 Siksi `"Summa: " + a + b` liittää luvut tekstin perään eikä laske niitä yhteen.
 Sulkeet `"Summa: " + (a + b)` korjaavat asian, ja interpoloitu merkkijono
@@ -219,9 +219,9 @@ string teksti = (ika + 1).ToString();  // "21"
 
 ### Luvun lukeminen käyttäjältä
 
-Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun.
-[Edellisessä luvussa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen)
-nähtiin, että `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
+Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun. Kuten
+[syötteen lukemisessa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen)
+nähtiin, `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
 merkkijonona. Luku saadaan muuntamalla rivi `int.Parse`- tai
 `double.Parse`-aliohjelmalla.
 
@@ -248,8 +248,8 @@ Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
 Jos käyttäjä kirjoittaa jotakin, mikä ei ole luku (vaikkapa `kaksikymmentä`),
 `int.Parse` ei pysty muuntamaan tekstiä ja ohjelma kaatuu virheeseen
 `FormatException`. Toistaiseksi luotamme siihen, että käyttäjä kirjoittaa
-luvun. Luvussa [Merkkijonot](../osa4/2-merkkijonot.md) opitaan tarkistamaan
-syöte, ja samalla selviää, miksi desimaaliluku on joillakin koneilla
+luvun. Syötteen tarkistaminen opitaan [merkkijonojen](../osa4/2-merkkijonot.md)
+yhteydessä, ja samalla selviää, miksi desimaaliluku on joillakin koneilla
 kirjoitettava pilkulla ja toisilla pisteellä.
 
 ## Vertailuoperaattorit
@@ -315,7 +315,7 @@ public class Loogiset
 ```
 
 Loogisten operaattoreiden totuustaulut ja käyttö ehdoissa käsitellään
-tarkemmin luvussa [Ehtolauseet](../osa3/1-ehtolauseet.md).
+tarkemmin [ehtolauseiden](../osa3/1-ehtolauseet.md) yhteydessä.
 
 ## Sijoitusoperaattorit
 
@@ -460,4 +460,4 @@ jopa huomauttaa siitä.
 
 <!-- Vaiheessa B: "Painoindeksi" (syöte ja tyyppimuunnos), "Keskiarvo"
      (cast ennen jakoa), "Ikä ensi vuonna" (int.Parse(Console.ReadLine())).
-     Literaaleilla laskevat tehtävät ovat luvussa 1.3. -->
+     Literaaleilla laskevat tehtävät ovat aliosassa 1.3. -->
