@@ -115,6 +115,9 @@ itse säännöllisesti varmuuskopioita työstäsi.
 
 ### Vaihe 1: Suunnitelma {#vaihe-1-suunnitelma-versiohallinnassa}
 
+Aloita harjoitustyö ja tee tämä vaihe osan 4 aikana. Vinkkejä alkuun saat
+extramateriaalista [Harjoitustyö 2,5 tunnissa](./luennot/extra.md).
+
 #### [Git-etävarasto](#tab/git)
 
  1. Sinulla tulee olla Git-työkalu asennettuna ([ohje](./tyokalut.md#git)).
@@ -177,11 +180,13 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 
 ### Vaihe 2: Työ 50 % valmis
 
+Tee tämä vaihe viimeistään osan 7 aikana.
+
 #### [Git-etävarasto](#tab/git)
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
-      solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      solution](./osa1/4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan siihen kansioon, joka on
       ladattu etävarastostasi paikalliseksi git-varastoksi.
  1. Varmista, että työsi koodi on ajan tasalla etävarastossa.
@@ -194,7 +199,7 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 
  1. Tee työsi eteenpäin suunnitelman mukaan. 
     - Ellet tehnyt tätä jo vaiheessa 1: Luo ohjelmakoodia varten [uusi
-      solution](./osa1/2-ohjelmointiymparisto-kuntoon.md#uusi-solution).
+      solution](./osa1/4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
       Varmista, että solution on tallennettu nimenomaan harjoitustyökansioon,
       jonka purit vaiheessa 1.
  1. Pakkaa harjoitustyökansio ZIP-tiedostoksi (ks. [ohje](#zip-pakkaaminen)) ja
@@ -206,6 +211,8 @@ purkamalla sen eri kansioon ja avaamalla solutionin sieltä Riderissa.
 Jos tämä vaihe on pahasti kesken, tarkastaja palauttaa työn opiskelijalle ja antaa 7 päivää aikaa tehdä korjaukset, jonka jälkeen vaihe tarkastetaan uudelleen.
 
 ### Vaihe 3: Työ 100 % valmis
+
+Palauta tämä vaihe osan 8 aikana.
 
 #### [Git-etävarasto](#tab/git)
 
@@ -414,7 +421,7 @@ Linkin saa otettua demotehtävän vierellä olevasta pienestä Link-linkistä kl
  * Tai työ voi olla tietyn WWW-sivun lukeminen ja sieltä tiettyjen tietojen käsittely yksinkertaiseen muotoon. 
  * Esimerkiksi joltakin sääsivulta päivän tuuliarvojen maksimi ja keskiarvo.
 
-Monet [Advent of code -tapahtuman](https://adventofcode.com/) tehtävät voivat hyvinkin soveltua harjoitustyön aiheeksi -- tosin loppupään tehtävät ovat jo hyvin vaikeita. 
+Monet [Advent of code -tapahtuman](https://adventofcode.com/) tehtävät voivat hyvinkin soveltua harjoitustyön aiheeksi — tosin loppupään tehtävät ovat jo hyvin vaikeita. 
 Inspraatiota voi hakea myös vaikkapa täältä [http://nifty.stanford.edu/](http://nifty.stanford.edu/). Katso tuolta CS1-tasoiset tehtävät, niiden pitäisi (suurelta osin) olla tämän kurssin osaamistavoitteiden mukaisia. Näissäkin tapauksissa suunnitelma tulee kuitenkin hyväksyttää ohjaajalla. 
 
 Ei-pelien tapauksessa ohjelmaan tehdyt testattavissa olevat aliohjelmat
@@ -448,7 +455,7 @@ Yleisin tapa yhdessä ohjelmointiin on, että kumpikin lataa saman etävaraston 
 
 **Pariohjelmointi**:
 
-Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)). Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein -- vaihto voi tapahtua jopa "lennosta". Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon menee samalla tavalla kuin jos tekisi harjoitustyötä yksin. Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa, sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta. Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä "vuoron vaihtaminen" etänä on yleensä hankalaa.
+Toinen tapa työskennellä yhdessä on pariohjelmointi (engl. [*pair programming*](https://en.wikipedia.org/wiki/Pair_programming)). Siinä kumpikin pari työskentelee saman tietokoneen äärellä: yksi parista ohjelmoi ja toinen seuraa tai ohjaa. Ajatus on, että rooleja vaihdetaan usein — vaihto voi tapahtua jopa "lennosta". Koska muutokset tehdään samalla tietokoneella, koodin lataaminen etävarastoon menee samalla tavalla kuin jos tekisi harjoitustyötä yksin. Pariohjelmoinnin tapauksessa tulee kuitenkin pitää tarkasti tuntikirjanpitoa, sillä kunkin parin työpanosta ei näe suoraan git-versiohistoriasta. Pariohjelmointi lisäksi toimii parhaiten lähitapaamisissa, sillä "vuoron vaihtaminen" etänä on yleensä hankalaa.
 
 **Työskentely samanaikaisesti verkossa**:
 

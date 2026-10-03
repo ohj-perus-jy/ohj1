@@ -767,8 +767,8 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
 ## Mitä seuraavaksi? 
  
 Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi luennoilla sekä
-muun uassa mmateriaalin luvussa [1.3 Ohjelmointiympäristö
-kuntoon](osa1/2-ohjelmointiymparisto-kuntoon.md).
+muun muassa kirjan sivulla [Ohjelmointiympäristö
+kuntoon](osa1/4-ohjelmointiymparisto-kuntoon.md).
 
 Jos olet *tutkinto-opiskelija*, sinulla on oikeus hankkia [JetBrains Student Pack](https://www.jetbrains.com/academy/student-pack/), joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin *Non-commercial license* -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.
 
