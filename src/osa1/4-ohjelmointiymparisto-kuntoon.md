@@ -235,6 +235,37 @@ Kansioita `bin` ja `obj` ei koskaan tarvitse avata, muokata eikä palauttaa.
 Kääntäjä tekee ne, ja ne voi huoletta poistaa; ne syntyvät uudestaan
 seuraavalla ajokerralla. Oma koodisi on tiedostossa `Lumiukko.cs`.
 
+### Eikö pelkkä kooditiedosto riittäisi?
+
+Yhteen palloon tarvittiin ikkunallinen valintoja, solution, projekti ja
+kansiorakenne. Miksei koodia voisi vain kirjoittaa tiedostoon ja käynnistää?
+Syy on se, että kääntäjä tarvitsee lähdekoodin lisäksi tietoja, joita
+koodissa itsessään ei ole:
+
+* **Mitkä tiedostot kuuluvat ohjelmaan?** Lumiukossakin on jo kaksi
+  kooditiedostoa, `Lumiukko.cs` ja `Ohjelma.cs`. Isossa ohjelmassa niitä on
+  satoja. Projekti kokoaa ne yhdeksi ohjelmaksi.
+* **Mitä kirjastoja ohjelma käyttää?** Jypeli ei kuulu .NETiin, vaan se
+  ladataan verkosta. Tiedostossa `Lumiukko.csproj` lukee, mitä kirjastoa ja
+  mitä sen versiota tarvitaan. Siksi Rider osasi hakea Jypelin itse.
+* **Millaiseksi ohjelma käännetään?** Projektitiedostossa on myös esimerkiksi
+  .NET-versio, jonka valitsit kohtaan `Framework`.
+
+Kaiken tämän voisi kertoa kääntäjälle komentoriviltä joka kerta erikseen,
+mutta komento olisi pitkä, ja siihen olisi helppo tehdä virheitä.
+Projektitiedostoon asiat kirjoitetaan kerran, ja sen jälkeen *Run* kääntää
+ohjelman oikein. Solution taas on olemassa sinua varten: se pitää saman demon
+projektit yhdessä ikkunassa.
+
+Rakenne voi tuntua raskaalta muutaman rivin ohjelmalle, mutta samalla tavalla
+on järjestetty myös työelämän ohjelmat, joissa projekteja voi olla kymmeniä ja
+kirjastoja satoja. Kun rakenne tulee tutuksi pienillä ohjelmilla, isommassa ei
+tarvitse opetella mitään uutta.
+
+Pienen, yhden tiedoston konsoliohjelman voi nykyään tosin ajaa suoraankin
+komennolla `dotnet run HelloWorld.cs`. Silloinkin .NET tekee taustalla
+projektin, se ei vain näy. 
+
 ## Uusi projekti olemassa olevaan solutioniin {#uusi-projekti-solutioniin}
 
 Oletetaan, että solution `Demo1` on jo olemassa ja demon seuraava tehtävä on
