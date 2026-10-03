@@ -41,13 +41,13 @@ alkuun pelien tekemisessä:
 ## Ensimmäinen Jypeli-ohjelma
 
 Tehdään pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen
-ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `demo1`-solutionin
+ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `Demo1`-solutionin
 kolmas projekti [aiemmin tehtyjen](./4-ohjelmointiymparisto-kuntoon.md)
 `Lumiukko`- ja `HelloWorld`-projektien jälkeen.
 
-1. Lisää `demo1`-solutioniin uusi projekti samaan tapaan kuin
+1. Lisää `Demo1`-solutioniin uusi projekti samaan tapaan kuin
    [HelloWorld](./4-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
-   klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
+   klikkaa Explorer-paneelissa solutionin nimeä `Demo1` hiiren oikealla
    painikkeella ja valitse *Add* › *New Project*.
 2. Valitse vasemmalta `Fysiikkapeli`-projektimalli.
 3. Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös

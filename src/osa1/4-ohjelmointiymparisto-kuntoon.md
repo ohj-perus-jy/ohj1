@@ -2,18 +2,17 @@
 
 Ensimmäisten viikkojen tehtävät voi periaatteessa tehdä verkkoselaimessa, mutta
 varsin pian on aika ottaa käyttöön oikea työkalu: *sovelluskehitin* eli IDE
-(engl. *Integrated Development Environment*). Nyt otetaan Rider
-käyttöön, sovitaan kansiorakenteesta, jotta tiedostot löytyvät vielä
+(engl. *Integrated Development Environment*). Otamme nyt Riderin käyttöön,
+katsotaan projekteille sopiva kansiorakenne, jotta tiedostot löytyvät vielä
 marraskuussakin, ja luodaan ensimmäinen solution ja projekti.
 
-Ellet ole vielä asentanut kehitystyökaluja, tee se nyt
-[Työkalut-sivun](../tyokalut.md) ohjeiden mukaisesti. Jatkossa oletetaan, että
-.NET, Rider ja Jypeli ovat asennettuina.
+Ellet ole vielä asentanut kehitystyökaluja, [tee se nyt](../tyokalut.md).
+Jatkossa oletetaan, että .NET, Rider ja Jypeli ovat asennettuina.
 
 ## Mihin IDE:tä tarvitaan?
 
-Lähdekoodi on pelkkää tekstiä, joten sen voisi kirjoittaa Muistiolla. Voisi.
-Samaan tapaan kuin gradun voisi kirjoittaa kirjoituskoneella. IDE on
+Lähdekoodi on pelkkää tekstiä, joten sen teknisesti ottaen voisi kirjoittaa
+Muistiolla. Samaan tapaan kuin gradun voisi kirjoittaa kirjoituskoneella. IDE on
 ohjelmoijan tekstinkäsittelyohjelma, ja sen puuttumisen huomaa nopeasti:
 
 * **Punainen alleviivaus.** Kun kirjoitat `Console.WriteLine("Moi")` ilman
@@ -33,8 +32,8 @@ ohjelmoijan tekstinkäsittelyohjelma, ja sen puuttumisen huomaa nopeasti:
   ja keskustelee Gitin kanssa, jota tarvitaan harjoitustyössä.
 
 Lisäksi itse asennettua IDE:tä voi mukauttaa: vaihtaa värit, fontit ja
-näppäinkomennot mieleisikseen. Tämä on ohjelmoijille tärkeä harrastus, josta
-käydään loputtomia keskusteluja.
+näppäinkomennot mieleisikseen. Tämä on itse asiassa monille ohjelmoijille tärkeä
+harrastus, josta käydään loputtomia keskusteluja.
 
 ### Rider, VS Code ja pilvi
 
@@ -49,6 +48,7 @@ valitset sen, varaudu siihen, että ohjaaja ei välttämättä tunne sen kaikkia
 valikoita.
 
 Pilvipohjaisia kehitysympäristöjä on myös olemassa, ja ne yleistyvät.
+Esimerkiksi TIM on tällainen "pilvessä" pyörivä ympäristö. 
 Ohjelmoinnin opiskelussa, kuten tälläkin kurssilla, kehitysympäristö
 asennetaan kuitenkin edelleen omalle tietokoneelle: se on nopeampi, ilmainen
 ja toimii junassakin. Työelämässä paikallinen kehitysympäristö on yhä
@@ -99,12 +99,12 @@ yhden ohjelman (pelin tai konsolisovelluksen) koodin sekä sen kuvat ja äänet.
 Projekti kuuluu aina johonkin solutioniin, vaikka se olisi solutionin ainoa.
 
 Tällä kurssilla luonteva jako on: yksi demokerta on yksi solution, ja sen
-jokainen tehtävä on oma projektinsa. Solution `demo1` sisältää siis projektit
+jokainen tehtävä on oma projektinsa. Solution `Demo1` sisältää siis projektit
 `Lumiukko`, `HelloWorld` ja niin edelleen. Näin saman demon tehtävät ovat yhtä
 aikaa näkyvillä ilman jatkuvaa avaamista ja sulkemista.
 
 ```bob
- demo1 "(solution)"
+ Demo1 "(solution)"
   |
   +-- Lumiukko   "(projekti)"
   +-- HelloWorld "(projekti)"
@@ -118,81 +118,44 @@ tarkoita mitään, eikä sitä kannata yrittää suomentaa.
 
 ## Uusi solution
 
-Tavoitteena on yksi solution (`demo1`), johon tulee lopulta kolme projektia:
+Tehdään nyt yksi solution (`Demo1`), johon tulee lopulta kolme projektia:
 `Lumiukko`, `HelloWorld` ja `YmpyraPeli`.
 
-Luodaan solution `demo1` ja siihen projekti `Lumiukko` kansioon `ohj1/demot`.
-Jos solution on jo olemassa ja haluat lisätä siihen projektin, katso kohta
-[Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
+Jos olet jo aiemmin tehnyt solutionin ja haluat lisätä siihen projektin, katso
+kohta [Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
 
 1. Valitse Riderin aloitusikkunasta `New Solution`. Jos jokin solution on jo
    auki, sama löytyy valikosta *File* › *New Solution*.
-   ![Uusi solution Linuxissa](./images/new_solution_linux.png)
+
+    <animation scenes="images/rider/scenes.js" scene="uusi-solution">
+
+    ![Riderin New Solution -ikkuna: malliksi on valittu Fysiikkapeli, solutionin nimeksi Demo1 ja projektin nimeksi Lumiukko](./images/new_solution_linux.png)
+
+    </animation>
+
 2. Valitse vasemmalta *Custom Templates* -listasta `FysiikkaPeli`. Jos listaa
    ei näy, Jypeli-projektimalleja ei ole asennettu; katso
    [Työkalut-sivun Jypeli-kohta](../tyokalut.md#jypeli).
-3. Anna solutionin nimeksi `demo1`.
+3. Anna solutionin nimeksi `Demo1`.
 4. Anna projektin nimeksi `Lumiukko`. Projektin nimi alkaa **isolla
    kirjaimella**, koska siitä tulee myös luokan nimi. Tehtävissä nimi voi olla
    myös esimerkiksi `Teht3Lumiukko`.
-5. Kirjoita tai selaa poluksi `demot`-kansion sijainti, esimerkiksi
-   `C:\Users\<käyttäjätunnus>\ohj1\demot` (Windows) tai
-   `~/ohj1/demot` (Mac ja Linux). Yliopiston mikroluokissa projekti
-   tehdään ensin kiintolevylle kansioon `C:\MyTemp\<käyttäjätunnus>\...` ja
-   siirretään lopuksi talteen.
-6. Jätä `Put solution and project in the same directory` -valinta tyhjäksi.
+5. Kirjoita tai selaa poluksi kansio, joka juuri äsken      tehtiin, esimerkiksi
+   `C:\Users\<käyttäjätunnus>\ohj1\demot` (Windows) tai `~/ohj1/demot` (Mac ja
+   Linux). Yliopiston mikroluokissa projekti tehdään ensin kiintolevylle
+   kansioon `C:\MyTemp\<käyttäjätunnus>\...` ja siirretään lopuksi talteen.
+6. Jätä *Put solution and project...* -valinta tyhjäksi.
    Muuten solution- ja projektitiedostot sekoittuvat samaan kansioon, ja
    toisen projektin lisääminen myöhemmin on sotkuista.
-7. Valitse `Framework`-kohtaan `net8.0`.
+7. Valitse `Framework`-kohtaan `net10.0`.
 8. Klikkaa `Create`.
 
 Ensimmäisellä kerralla Rider lataa Jypeli-kirjaston ja muut tarvittavat paketit
 verkosta, mikä voi kestää hetken. Siihen tarvitaan verkkoyhteys.
 
-### Mitä syntyi?
-
-Tutki syntynyttä kansiorakennetta tiedostohallinnassa tai Finderissa. Sen
-pitäisi näyttää suunnilleen tältä:
-
-```bob
-ohj1
- |
- +-demot 
- |  |
- |  '-demo1         <- tämä tehtiin nyt
- |     |-demo1.sln  <- tämä tehtiin nyt  
- |     '-Lumiukko   <- tämä tehtiin nyt 
- |        |
- |        |- bin            
- |        |- obj            
- |        |- Lumiukko.cs    
- |        |- Ohjelma.cs     
- |        '- Lumiukko.csproj
- |
- '-harjoitustyo
-```
-
-Lyhyt selitys `demo1`-kansion sisällöstä:
-
-```text
-demo1                - kansio, joka sisältää demo1-solutionin
-  demo1.sln          - solution-tiedosto, jossa luetellaan projektit
-  Lumiukko           - kansio, jonka alla Lumiukko-projekti
-    bin              - kansio, jonne tulee ajettavaa koodia
-    obj              - kansio, jonne tulee käännettyjä tiedostoja
-    Lumiukko.cs      - C#-lähdekooditiedosto, johon tulee lumiukon piirtävä koodi
-    Ohjelma.cs       - C#-lähdekooditiedosto, joka sisältää pääohjelman
-    Lumiukko.csproj  - projektin asetustiedosto, jossa kerrotaan, mitä
-                       tiedostoja projektiin liittyy
-```
-
-Kansioita `bin` ja `obj` ei koskaan tarvitse avata, muokata eikä palauttaa.
-Kääntäjä tekee ne, ja ne voi huoletta poistaa; ne syntyvät uudestaan
-seuraavalla ajokerralla. Oma koodisi on tiedostossa `Lumiukko.cs`.
-
 ### Ensimmäinen ajo
 
-Klikkaa Explorer-paneelissa `Lumiukko.cs`-tiedostoa. Koodissa pitäisi näkyä:
+Kaksoisklikkaa ruudun vasemmassa reunassa Explorer-paneelissa `Lumiukko.cs`-tiedostoa. Koodissa pitäisi näkyä:
 
 ```csharp,ignore
 public class Lumiukko : PhysicsGame
@@ -207,7 +170,7 @@ public class Lumiukko : PhysicsGame
 ```
 
 Kaksi viimeistä riviä ovat valmista koodia, jolla peli sulkeutuu
-Esc-näppäimestä. Niihin ei tarvitse koskea.
+<kbd>Esc</kbd>-näppäimestä. Niihin ei tarvitse koskea.
 
 Käynnistä ohjelma valitsemalla *Run* ›
 *Run 'Lumiukko'* tai painamalla yläpalkin vihreää kolmiota. Näytölle pitäisi avautua
@@ -231,38 +194,56 @@ mitä pisteen jälkeen voi kirjoittaa. Tämä on IDE:n parhaita puolia, ja sitä
 kannattaa käyttää tietoisesti silloinkin, kun et ole varma, miten jokin asia
 kirjoitetaan.
 
-Lisää vielä *dokumentaatiokommentit*: kirjoita luokan esittelyrivin
-(`public class Lumiukko...`) yläpuolelle kolme kauttaviivaa `///`, jolloin
-Rider luo `<summary>`-rungon. Kirjoita tagien väliin, mitä ohjelma tekee. Tee
-sama `Begin`-aliohjelmalle. Dokumentaatiokommentit ovat kurssilla pakollisia,
-ja niistä kerrotaan tarkemmin [kommentoinnin ja
-dokumentoinnin](../osa4/4-kommentointi-ja-dokumentointi.md) yhteydessä.
+### Mitä syntyi?
 
-```csharp,ignore
-/// <summary>
-/// Piirtää lumiukon mustalle taustalle.
-/// </summary>
-public class Lumiukko : PhysicsGame
-{
-    /// <summary>
-    /// Luo pelin sisällön: taustan ja lumiukon pallot.
-    /// </summary>
-    public override void Begin()
-    {
-        // ...
-    }
-}
+Tutki syntynyttä kansiorakennetta tiedostohallinnassa tai Finderissa. Sen
+pitäisi näyttää suunnilleen tältä:
+
+```bob
+ohj1
+ |
+ +-demot 
+ |  |
+ |  '-Demo1         <- tämä tehtiin nyt
+ |     |-Demo1.sln  <- tämä tehtiin nyt  
+ |     '-Lumiukko   <- tämä tehtiin nyt 
+ |        |
+ |        |- bin            
+ |        |- obj            
+ |        |- Lumiukko.cs    
+ |        |- Ohjelma.cs     
+ |        '- Lumiukko.csproj
+ |
+ '-harjoitustyo
 ```
+
+Lyhyt selitys `Demo1`-kansion sisällöstä:
+
+```text
+Demo1                - kansio, joka sisältää Demo1-solutionin
+  Demo1.sln          - solution-tiedosto, jossa luetellaan projektit
+  Lumiukko           - kansio, jonka alla Lumiukko-projekti
+    bin              - kansio, jonne tulee ajettavaa koodia
+    obj              - kansio, jonne tulee käännettyjä tiedostoja
+    Lumiukko.cs      - C#-lähdekooditiedosto, johon tulee lumiukon piirtävä koodi
+    Ohjelma.cs       - C#-lähdekooditiedosto, joka sisältää pääohjelman
+    Lumiukko.csproj  - projektin asetustiedosto, jossa kerrotaan, mitä
+                       tiedostoja projektiin liittyy
+```
+
+Kansioita `bin` ja `obj` ei koskaan tarvitse avata, muokata eikä palauttaa.
+Kääntäjä tekee ne, ja ne voi huoletta poistaa; ne syntyvät uudestaan
+seuraavalla ajokerralla. Oma koodisi on tiedostossa `Lumiukko.cs`.
 
 ## Uusi projekti olemassa olevaan solutioniin {#uusi-projekti-solutioniin}
 
-Oletetaan, että solution `demo1` on jo olemassa ja demon seuraava tehtävä on
+Oletetaan, että solution `Demo1` on jo olemassa ja demon seuraava tehtävä on
 konsoliohjelma. Lisätään siihen toinen projekti.
 
-1. Klikkaa Explorer-paneelissa solutionin nimeä `demo1` hiiren oikealla
+1. Klikkaa Explorer-paneelissa solutionin nimeä `Demo1` hiiren oikealla
    painikkeella (Macissa kahdella sormella).
 2. Valitse *Add* › *New Project*.
-3. Valitse vasemmalta `ConsoleMain`-projektimalli.
+3. Valitse tällä kertaa `ConsoleMain`-projektimalli.
 4. Anna nimeksi `HelloWorld` ja paina `Create`.
 5. Aja projekti ensimmäisellä kerralla klikkaamalla Explorerissa sen nimeä
    hiiren oikealla ja valitsemalla Run 'HelloWorld'. Sen jälkeen projektin
@@ -270,17 +251,16 @@ konsoliohjelma. Lisätään siihen toinen projekti.
 
 Yläpalkin valikko kertoo, *mikä* projekti käynnistyy, kun painat Run. Jos
 muutit koodia yhdessä projektissa, mutta mikään ei näytä muuttuvan, tarkista
-ensin, ettet aja toista projektia. Tämä on niin yleistä, että sitä voi pitää
-kurssin epävirallisena perinteenä.
+ensin, ettet aja toista projektia. 
 
 ```bob
 ohj1
  |
  +-demot 
  |  |
- |  |-demo1
+ |  |-Demo1
  |  |  |
- |  |  |-demo1.sln 
+ |  |  |-Demo1.sln 
  |  |  |-Lumiukko  
  |  |  |  |
  |  |  |  '- Lumiukko.cs jne.
@@ -289,8 +269,9 @@ ohj1
  |  |  | 
  |  |  '-...         <- vastaavasti voisit tehdä lisää projekteja
  |  |
- |  '-demo2          <- vastaavasti voisit tehdä lisää solutioneja
+ |  '-Demo2          <- vastaavasti voisit tehdä lisää solutioneja
  |     |
+ |     |-Demo2.sln 
  |     |-Lumiukko2
  |     |-LukujenLaskemista
  |     '-...
@@ -301,18 +282,6 @@ ohj1
 ```
 
 ## Riderin tärkeimmät toiminnot
-
-Näillä pärjää pitkälle. Näppäinyhdistelmät ovat Riderin oletusasetusten
-mukaiset.
-
-| Toiminto          | Windows ja Linux                                | macOS                                      | Mitä tekee                                                    |
-| ----------------- | ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
-| Aja ohjelma       | <kbd>Shift</kbd> + <kbd>F10</kbd>               | <kbd>⌃</kbd> + <kbd>R</kbd>                | Kääntää ja ajaa valitun projektin.                            |
-| Täydennys         | <kbd>Ctrl</kbd> + <kbd>Space</kbd>              | <kbd>⌃</kbd> + <kbd>Space</kbd>            | Näyttää, mitä tähän kohtaan voi kirjoittaa.                   |
-| Siisti muotoilu   | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>L</kbd> | Reformat Code: korjaa sisennykset. Tee aina ennen palautusta. |
-| Nimeä uudelleen   | <kbd>Shift</kbd> + <kbd>F6</kbd>                | <kbd>Shift</kbd> + <kbd>F6</kbd>           | Muuttaa nimen kaikkialla kerralla.                            |
-| Kommentoi rivi    | <kbd>Ctrl</kbd> + <kbd>/</kbd>                  | <kbd>⌘</kbd> + <kbd>/</kbd>                | Lisää tai poistaa `//` rivin alusta.                          |
-| Etsi mitä tahansa | <kbd>Shift</kbd> <kbd>Shift</kbd>               | <kbd>Shift</kbd> <kbd>Shift</kbd>          | Tiedostot, asetukset, toiminnot.                              |
 
 Virheet näkyvät koodissa punaisena alleviivauksena ja ikkunan alareunan
 *Problems*-välilehdellä (vanhemmissa versioissa *Errors*). Editorin oikeassa
@@ -325,6 +294,22 @@ Kurssilla käytetään Riderin koodin muotoiluasetuksia, jotka on kuvattu
 kytketään pois päältä [kurssin ohjeen](../tyokalut.md#rider-ai) mukaisesti;
 tekoälyn käytöstä kurssilla kerrotaan sivulla
 [Suorittaminen](../suorittaminen.md#eettiset-ohjeet).
+
+<details><summary>Tehokäyttäjälle: Riderin näppäinoikotiet</summary>
+
+Näillä pärjää pitkälle. Näppäinyhdistelmät ovat Riderin oletusasetusten
+mukaiset. Voit vaihtaa ne mieleisiksi kohdassa *File* › *Settings* › *Keymap*. 
+
+| Toiminto          | Windows ja Linux                                | macOS                                      | Mitä tekee                                                    |
+| ----------------- | ----------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
+| Aja ohjelma       | <kbd>Shift</kbd> + <kbd>F10</kbd>               | <kbd>⌃</kbd> + <kbd>R</kbd>                | Kääntää ja ajaa valitun projektin.                            |
+| Täydennys         | <kbd>Ctrl</kbd> + <kbd>Space</kbd>              | <kbd>⌃</kbd> + <kbd>Space</kbd>            | Näyttää, mitä tähän kohtaan voi kirjoittaa.                   |
+| Siisti muotoilu   | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>L</kbd> | Reformat Code: korjaa sisennykset. Tee aina ennen palautusta. |
+| Nimeä uudelleen   | <kbd>Shift</kbd> + <kbd>F6</kbd>                | <kbd>Shift</kbd> + <kbd>F6</kbd>           | Muuttaa nimen kaikkialla kerralla.                            |
+| Kommentoi rivi    | <kbd>Ctrl</kbd> + <kbd>/</kbd>                  | <kbd>⌘</kbd> + <kbd>/</kbd>                | Lisää tai poistaa `//` rivin alusta.                          |
+| Etsi mitä tahansa | <kbd>Shift</kbd> <kbd>Shift</kbd>               | <kbd>Shift</kbd> <kbd>Shift</kbd>          | Tiedostot, asetukset, toiminnot.                              |
+
+</details>
 
 ## Tyypillisiä ongelmia
 
@@ -339,7 +324,7 @@ uudelleen valitsemalla *Build* ›
 pudotusvalikko.
 
 **Projekti on väärässä kansiossa.** Ei hätää: sulje Rider ja siirrä koko
-solution-kansio (esimerkiksi `demo1`) oikeaan paikkaan tiedostohallinnassa.
+solution-kansio (esimerkiksi `Demo1`) oikeaan paikkaan tiedostohallinnassa.
 Avaa sitten `.sln`-tiedosto Riderissä uudesta paikasta.
 
 **Ohjelmassa on kaksi `Main`-pääohjelmaa.** Jypeli-projektissa `Main` on
@@ -436,7 +421,7 @@ TIMistä ennen projektin luomista.
 * Projekti on yksi ohjelma; solution kokoaa projektit. Demo = solution,
   tehtävä = projekti.
 * Uusi solution: New Solution, projektimalli, nimet isolla alkukirjaimella,
-  polku `demot`-kansioon, `net8.0`, Create.
+  polku `demot`-kansioon, `net10.0`, Create.
 * Run ajaa yläpalkissa valitun projektin. Reformat Code ennen palautusta.
 
 ## Testaa tietosi
@@ -514,7 +499,7 @@ demot rakennetaan.
 ## Tehtävät
 
 <!-- Vaiheessa B: tehtävä "Ympäristö kuntoon" (palauta kuvakaappaus
-     Riderista, jossa demo1-solution ja Lumiukko-projekti ajettuna). -->
+     Riderista, jossa Demo1-solution ja Lumiukko-projekti ajettuna). -->
 
 <task>
   <task-title num="1.7">Tekstieditorin käyttäminen <i class="bi bi-stars"></i><points>1 p.</points></task-title>

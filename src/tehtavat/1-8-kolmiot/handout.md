@@ -1,4 +1,4 @@
-Tee `demo1`-solutioniin uusi Fysiikkapeli-projekti `Kolmiot`. Piirrä sen
+Tee `Demo1`-solutioniin uusi Fysiikkapeli-projekti `Kolmiot`. Piirrä sen
 `Begin`-aliohjelmassa kolmesta kolmiosta kuusi:
 
 * Jokaisen kolmion muoto on `Shape.Triangle` ja väri vihreä.

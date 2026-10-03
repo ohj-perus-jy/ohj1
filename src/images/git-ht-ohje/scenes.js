@@ -640,11 +640,13 @@
 
     /* New Solution (Rider, käyttäjän kuvakaappaus 2026-09): Fysiikkapeli (1),
      * solutionin nimi (2) ja sen perään sama projektin nimi, kansio (3),
-     * solution ja projekti samaan kansioon (4), Create (5). Mallilista on
-     * vieritetty loppuun kuten kuvassa, joten sen alku jää piiloon. */
+     * solution ja projekti samaan kansioon (4), Create (5). Mallilistasta
+     * näkyvät ryhmien otsikot, mutta mallit vain Custom Templates -ryhmästä;
+     * muiden ryhmien tilalla on kolme pistettä. */
     "rider-uusi": () => {
       const section = (name) =>
         `<small style="margin:10px 6px 2px;font-size:11px;letter-spacing:normal;text-transform:none">${name}</small>`;
+      const more = '<span style="color:#8c8f96">…</span>';
       const row = (label, value) => `<div class="jw-form-row"><span>${label}</span>${value}</div>`;
       return ui.window({
         title: "New Solution",
@@ -653,14 +655,13 @@
           <div class="jw-ide">
             <div class="jw-ide-list" style="gap:0;padding:0;overflow:hidden">
               <div class="jw-input" style="margin:8px;color:#8c8f96">⌕ Search</div>
-              <div style="display:flex;flex:1;flex-direction:column;justify-content:flex-end;gap:1px;min-height:0;padding:0 8px 8px;overflow:hidden">
-                <span>AI Extensions</span><span>Services</span><span>Unit Test</span>
-                ${section("Game Development")}<span>CMake</span><span>Godot</span>
-                ${section("Other")}<span>Native C++</span><span>Aspire</span><span>Azure Functions</span>
-                <span>Database</span><span>MAUI</span><span>Roslyn</span>
+              <div style="display:flex;flex:1;flex-direction:column;gap:1px;min-height:0;padding:0 8px 8px;overflow:hidden">
+                ${section(".NET")}${more}
+                ${section("Game Development")}${more}
+                ${section("Other")}${more}
                 ${section("Custom Templates")}<span>Android Fysiikkapeli</span><span>ConsoleMain</span>
                 <span data-click data-on="jw-sel" data-order="1">Fysiikkapeli</span><span>Peruspeli</span><span>Tasohyppelypeli</span>
-                <span style="color:#548af7">Manage Templates...</span>
+                <span style="margin-top:auto;color:#548af7">Manage Templates...</span>
               </div>
             </div>
             <div class="jw-form" style="gap:10px">
