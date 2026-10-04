@@ -40,24 +40,67 @@ alkuun pelien tekemisessä:
 
 ## Ensimmäinen Jypeli-ohjelma
 
-Tehdään pieni Jypeli-esimerkki, jossa luodaan ikkuna ja piirretään siihen
-ympyrä. Projektin nimeksi tulee `YmpyraPeli`, ja se on `Demo1`-solutionin
-kolmas projekti [aiemmin tehtyjen](./4-ohjelmointiymparisto-kuntoon.md)
-`Lumiukko`- ja `HelloWorld`-projektien jälkeen.
+Tehdään pieni Jypeli-peli, jossa luodaan ikkuna ja piirretään siihen ympyrä.
+Peli tehdään omaan projektiinsa `YmpyraPeli`, joka lisätään
+[aiemmin tehtyyn](./4-ohjelmointiymparisto-kuntoon.md) `Demo1`-solutioniin
+`HelloWorld`-projektin rinnalle.
 
 1. Lisää `Demo1`-solutioniin uusi projekti samaan tapaan kuin
-   [HelloWorld](./4-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
+   [konsoliprojekti](./4-ohjelmointiymparisto-kuntoon.md#uusi-projekti-solutioniin):
    klikkaa Explorer-paneelissa solutionin nimeä `Demo1` hiiren oikealla
    painikkeella ja valitse *Add* › *New Project*.
-2. Valitse vasemmalta `Fysiikkapeli`-projektimalli.
+2. Valitse *Custom Templates* -listasta `Fysiikkapeli`-projektimalli.
 3. Anna nimeksi `YmpyraPeli`. Rider nimeää projektin mukaan myös
    kooditiedoston (`YmpyraPeli.cs`) ja siinä olevan luokan, joten luokan nimi
    on sama kuin alla olevassa koodissa.
-4. Paina `Create`.
-5. Avaa `YmpyraPeli.cs` ja korvaa `Begin`-metodin sisältö alla olevan koodin
-   `Begin`-metodin sisällöllä.
-6. Aja projekti klikkaamalla Explorerissa sen nimeä `YmpyraPeli` hiiren
-   oikealla ja valitsemalla Run 'YmpyraPeli'.
+4. Paina `Create`. Ensimmäisellä kerralla Rider lataa Jypeli-kirjaston ja muut
+   tarvittavat paketit verkosta, mikä voi kestää hetken.
+
+### Ensimmäinen ajo
+
+Kaksoisklikkaa Explorer-paneelissa `YmpyraPeli.cs`-tiedostoa. Koodissa
+pitäisi näkyä:
+
+```csharp,ignore
+public class YmpyraPeli : PhysicsGame
+{
+    public override void Begin()
+    {
+        // Kirjoita ohjelmakoodisi tähän
+        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+    }
+}
+```
+
+Kaksi viimeistä riviä ovat valmista koodia, jolla peli sulkeutuu
+<kbd>Esc</kbd>-näppäimestä. Niihin ei tarvitse koskea.
+
+Käynnistä peli klikkaamalla Explorerissa projektin nimeä `YmpyraPeli` hiiren
+oikealla ja valitsemalla Run 'YmpyraPeli'. Näytölle pitäisi avautua ikkuna
+vaaleansinisellä taustalla. Ikkuna on tyhjä, ja se on tässä vaiheessa täysin
+oikein. Sulje ikkuna.
+
+Pyyhi pois rivi `// Kirjoita ohjelmakoodisi tähän` ja kirjoita tilalle:
+
+```csharp,ignore
+GameObject ympyra = new GameObject(50, 50);
+ympyra.Shape = Shape.Circle;
+ympyra.X = 0; // Asetetaan ympyrä keskelle ikkunaa
+ympyra.Y = 0; 
+Add(ympyra); // Lisätään ympyrä peliin
+```
+
+Käynnistä peli uudestaan. Nyt ikkunan keskellä pitäisi näkyä pieni ympyrä.
+
+Huomasitko täydennyksen? Kun kirjoitit `ympyra.`, Rider tarjosi listan siitä,
+mitä kaikkea peliolion kanssa voi tehdä. Jypelin aliohjelmien ja ominaisuuksien
+nimiä ei tarvitse opetella ulkoa, kun täydennystä käyttää tietoisesti.
+
+Kokonaisuudessaan ohjelma on tällainen. Voit kokeilla sitä myös suoraan tällä
+sivulla klikkaamalla koodilaatikon oikean yläreunan vihreää "Play"-painiketta.
+Valmiit <kbd>Esc</kbd>-rivit on jätetty tästä pois; ne saavat jäädä omaan
+koodiisi.
 
 ```csharp,feature-jypeli
 using Jypeli;
@@ -67,15 +110,12 @@ public class YmpyraPeli : PhysicsGame
     {
         GameObject ympyra = new GameObject(50, 50);
         ympyra.Shape = Shape.Circle; 
-        ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
+        ympyra.X = 0; // Asetetaan ympyrä keskelle ikkunaa
+        ympyra.Y = 0; 
         Add(ympyra); // Lisätään ympyrä peliin
     }
 }
 ```
-
-Voit kokeilla peliä myös suoraan tällä sivulla klikkaamalla yllä olevan
-koodilaatikon oikean yläreunan vihreää "Play"-painiketta. Ikkunaan pitäisi
-ilmestyä keskelle pieni ympyrä.
 
 Huh! Siinä oli jo aika paljon uutta. Käydään koodi läpi vaiheittain.
 
@@ -90,8 +130,6 @@ Luokka määritellään samoin kuin konsoliohjelmassa, mutta perään on lisätt
 `: PhysicsGame`. Se tarkoittaa, että luokkamme *on* Jypelin fysiikkapeli ja saa
 käyttöönsä kaiken, mitä Jypeli osaa. `Begin` on aliohjelma, jonka Jypeli
 suorittaa, kun peli käynnistyy; se vastaa konsoliohjelman `Main`-aliohjelmaa.
-(Jypeli-projektissa `Main` on erillisessä `Ohjelma.cs`-tiedostossa, ja sen
-ainoa tehtävä on käynnistää peli.)
 
 ```csharp,ignore
 public class YmpyraPeli : PhysicsGame
@@ -107,21 +145,49 @@ GameObject ympyra = new GameObject(50, 50);
 ```
 
 Seuraavaksi asetamme `ympyra`-muuttujan muodoksi `Shape.Circle` ja sijainniksi
-vektorin, joka osoittaa keskipisteeseen `new Vector(0, 0)`.
+pelialueen keskipiste (0, 0).
 
 ```csharp,ignore
 ympyra.Shape = Shape.Circle; // Asetetaan muodoksi Shape.Circle
-ympyra.Position = new Vector(0, 0); // Asetetaan ympyrä keskelle ikkunaa
+ympyra.X = 0; // Asetetaan ympyrä keskelle ikkunaa
+ympyra.Y = 0; 
 ```
 
 Lopuksi lisäämme `ympyra`-muuttujan näkyviin kutsumalla Jypelin `Add`-metodia.
-`ympyra`-muuttuja on siis olemassa jo heti ensimmäisen rivin jälkeen, mutta se
-pitää erikseen vielä lisätä "pelimaailmaan". Unohtunut `Add` on aloittelijan
+`ympyra`-olio on kyllä olemassa jo heti ensimmäisen rivin jälkeen, mutta se
+pitää erikseen vielä lisätä "pelimaailmaan". Unohtunut `Add` on 
 yleisin syy siihen, että ikkuna on tyhjä ja kääntäjä täysin tyytyväinen.
 
 ```csharp,ignore
 Add(ympyra); // Lisätään ympyrä peliin
 ```
+
+### Mitä syntyi?
+
+Jypeli-projektin kansio poikkeaa hieman konsoliprojektista:
+
+```bob
+Demo1
+ |-Demo1.sln
+ |-HelloWorld
+ '-YmpyraPeli          <- tämä tehtiin nyt
+    |- bin
+    |- obj
+    |- YmpyraPeli.cs     <- oma koodi
+    |- Ohjelma.cs        <- pääohjelma Main
+    '- YmpyraPeli.csproj
+```
+
+Projektissa on kaksi kooditiedostoa. Oma koodi kirjoitetaan tiedostoon
+`YmpyraPeli.cs`. Tiedostossa `Ohjelma.cs` on `Main`-pääohjelma, jonka ainoa
+tehtävä on käynnistää peli; sitä ei tarvitse eikä pidä muokata. Jos kopioit
+esimerkin, jossa on oma `Main`, poista se omasta luokastasi, sillä projektissa
+saa olla vain yksi `Main`.
+
+Projektitiedostossa `YmpyraPeli.csproj` lukee, että projekti tarvitsee
+Jypeli-kirjaston ja minkä version. Siksi Rider osasi hakea Jypelin verkosta
+itse. Tätä kirjaston käyttäminen käytännössä on: projekti kertoo, mitä
+kirjastoa tarvitaan, ja `using`-rivi ottaa sen käyttöön koodissa.
 
 ## Koordinaatisto
 
@@ -152,18 +218,28 @@ reunaan tietämättä ikkunan kokoa.
 Muokkaa yllä olevaa esimerkkiä ja aja se uudelleen jokaisen muutoksen jälkeen.
 Pienet kokeilut ovat nopein tapa oppia, mitä kirjasto osaa.
 
-1. Vaihda ympyrän kooksi `200, 200`.
-2. Vaihda muodoksi `Shape.Rectangle`, `Shape.Triangle` tai `Shape.Star`.
-3. Lisää rivi `ympyra.Color = Color.Red;` ennen `Add`-riviä.
-4. Siirrä ympyrä oikeaan yläkulmaan: `new Vector(300, 200)`.
-5. Lisää toinen olio kopioimalla neljä riviä ja vaihtamalla muuttujan nimeksi
-   `nelio`.
+1. Vaihda ympyrän kooksi `120, 120` ja muuttujan nimeksi `aurinko`. Nimi
+   pitää vaihtaa jokaiselle riville, jolla se esiintyy.
+2. Vaihda auringon väriksi keltainen ennen `Add`-riviä:
+   `aurinko.Color = Color.Yellow;`.
+3. Siirrä aurinko vasempaan yläkulmaan antamalla `X`:n arvoksi `-150` ja
+   `Y`:n arvoksi `100`. Piste on sama kuin koordinaatistokuvassa.
+4. Lisää toinen olio `talo` kopioimalla auringon kuusi riviä ja vaihtamalla
+   nimi, koko `200, 150`, muoto `Shape.Rectangle`, väri `Color.Brown` ja
+   sijainti `(150, -100)`.
+5. Vaihda tausta mustaksi lisäämällä `Begin`-aliohjelman alkuun rivi
+   `Level.Background.Color = Color.Black;`.
 
-Alla on valmis esimerkki, jossa on kaksi oliota ja tumma tausta.
+Lopuksi pelin pitäisi näyttää tältä:
+
+![Pelin ikkuna: musta tausta, keltainen ympyrä vasemmassa yläkulmassa ja ruskea suorakulmio oikeassa alakulmassa](./images/aurinko-ja-talo.svg)
+
+<details closed>
+<summary>Mallikoodi: kokeile ensin kirjoittaa itse ja katso vasta sitten</summary>
 
 ```csharp,feature-jypeli
 using Jypeli;
-public class AurinkoJaTalo : PhysicsGame
+public class YmpyraPeli : PhysicsGame
 {
     public override void Begin()
     {
@@ -172,23 +248,30 @@ public class AurinkoJaTalo : PhysicsGame
         GameObject aurinko = new GameObject(120, 120);
         aurinko.Shape = Shape.Circle;
         aurinko.Color = Color.Yellow;
-        aurinko.Position = new Vector(-150, 100);
+        aurinko.X = -150;
+        aurinko.Y = 100;
         Add(aurinko);
 
         GameObject talo = new GameObject(200, 150);
         talo.Shape = Shape.Rectangle;
         talo.Color = Color.Brown;
-        talo.Position = new Vector(150, -100);
+        talo.X = 150;
+        talo.Y = -100;
         Add(talo);
     }
 }
 ```
 
-Huomaa, että jokaisella oliolla on oma muuttujansa (`aurinko`, `talo`) ja
-jokainen pitää erikseen lisätä peliin `Add`-kutsulla. Ohjelma suoritetaan
-ylhäältä alas, joten myöhemmin lisätty olio piirtyy aiemman päälle.
+</details>
 
-## Jypeli-projektit
+Huomaa, että jokaisella oliolla on oma muuttujansa (`aurinko`, `talo`) ja
+jokainen pitää erikseen lisätä peliin `Add`-kutsulla.
+
+Kokeile vielä muita muotoja, kuten `Shape.Triangle` ja `Shape.Star`, ja siirrä
+talo samaan kohtaan kuin aurinko. Ohjelma suoritetaan ylhäältä alas, joten
+myöhemmin lisätty olio piirtyy aiemman päälle.
+
+## Eri Jypeli-projektimallit
 
 Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa
 `Custom Templates` -kohdasta oikean projektimallin.
@@ -201,17 +284,31 @@ Jypeli-projektin voi tehdä valitsemalla solutionia tai projektia luodessa
 Solutionin ja projektin luominen on kuvattu kohdassa
 [Uusi solution](./4-ohjelmointiymparisto-kuntoon.md#uusi-solution).
 
-## Pääohjelma Jypeli-projekteissa (Main)
+## Tyypillisiä ongelmia
 
-Jypeli-projektissa Main-pääohjelma menee Ohjelma.cs-tiedostoon, joten jos
-copy-pastetat koodin, joka sisältää Main-pääohjelman, niin **poista
-Main-pääohjelma** `Portaat`-luokan (tms. projektisi nimeä vastaava luokka)
-sisältä. Projektissa ei saa olla kahta Main-pääohjelmaa.
+**Ikkuna ei aukea, vaan konsoliin tulee pitkä punainen virheilmoitus.** Lue
+ilmoituksen ensimmäinen rivi; usein siinä lukee tiedoston nimi ja
+rivinumero. Jos ilmoitus mainitsee paketin, jota ei löydy (*package* tai
+*restore*), Jypeliä ei ole vielä ladattu: tarkista verkkoyhteys ja käännä
+uudelleen valitsemalla *Build* › *Rebuild Solution*.
+
+**Ikkuna aukeaa, mutta se on tyhjä.** Olio on luotu, mutta sitä ei ole lisätty
+peliin. Tarkista, että jokaiselle oliolle on oma `Add`-kutsu.
+
+**Ohjelmassa on kaksi `Main`-pääohjelmaa.** Jypeli-projektissa `Main` on
+tiedostossa `Ohjelma.cs`. Jos kopioit esimerkin, jossa on oma `Main`, poista
+se omasta luokastasi.
+
+Lisää ongelmatilanteita ja niiden ratkaisuja on koottu
+[Työkalut-sivulle](../tyokalut.md#ongelmatilanteita-ja-niiden-ratkaisuja).
 
 ## Yhteenveto
 
 * Jypeli on pelikirjasto: ikkuna, piirtäminen, fysiikka ja ohjaimet ovat
   valmiina.
+* Jypeli-peli tehdään `Fysiikkapeli`-projektimallista. Oma koodi kirjoitetaan
+  projektin nimen mukaiseen tiedostoon; `Main` on valmiina tiedostossa
+  `Ohjelma.cs`.
 * Jypeli-peli on luokka, joka perii `PhysicsGame`-luokan. `Begin` suoritetaan
   pelin alkaessa.
 * Peliolio luodaan `new`-sanalla, sen ominaisuuksia (muoto, väri, sijainti)
@@ -259,7 +356,7 @@ Mikä rivi saa pallon näkymään pelissä?
 
 - [ ] `pallo.Color = Color.White;`
 - [x] `Add(pallo);`
-- [ ] `new PhysicsObject(200, 200, Shape.Circle);`
+- [ ] `GameObject pallo = new GameObject(200, 200);`
 - [ ] `Level.Background.Color = Color.Black;`
 
 <perustelu>

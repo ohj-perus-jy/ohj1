@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="512" height="384">
+  <!-- Pelin ikkuna 1024x768, origo keskellä (512, 384), y kasvaa ylöspäin. -->
+  <rect width="1024" height="768" fill="#000"/>
+  <!-- aurinko: koko 120x120, sijainti (-150, 100) -->
+  <circle cx="362" cy="284" r="60" fill="#ffff00"/>
+  <!-- talo: koko 200x150, sijainti (150, -100) -->
+  <rect x="562" y="409" width="200" height="150" fill="#a52a2a"/>
+  <rect x="0.5" y="0.5" width="1023" height="767" fill="none" stroke="#888" stroke-width="1"/>
+</svg>
