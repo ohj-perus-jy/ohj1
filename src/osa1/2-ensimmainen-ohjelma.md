@@ -229,9 +229,10 @@ näkyvät kääntäjän antamina virheilmoituksina. Esimerkiksi
 Rider-sovelluskehittimessä virheet näkyvät alareunassa olevassa
 *Errors*-välilehdessä.
 
-Alla olevassa ohjelmassa on virhe. Klikkaa Play-painiketta nähdäksesi virheilmoitukset.
+Alla olevassa ohjelmassa on virhe. Klikkaa Play-painiketta nähdäksesi
+virheilmoitukset. 
 
-```csharp
+```csharp,editable
 public class Ohjelma
 {
     public static void Main()

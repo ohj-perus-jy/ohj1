@@ -4,7 +4,8 @@ Ensimmäisten viikkojen tehtävät voi periaatteessa tehdä verkkoselaimessa, mu
 varsin pian on aika ottaa käyttöön oikea työkalu: *sovelluskehitin* eli IDE
 (engl. *Integrated Development Environment*). Otamme nyt Riderin käyttöön,
 katsotaan projekteille sopiva kansiorakenne, jotta tiedostot löytyvät vielä
-marraskuussakin, ja luodaan ensimmäinen solution ja projekti.
+marraskuussakin, ja luodaan ensimmäinen solution ja projekti. Projektissa
+ajetaan omalla koneella sama Hello World, joka aiemmin ajettiin selaimessa.
 
 Ellet ole vielä asentanut kehitystyökaluja, [tee se nyt](../tyokalut.md).
 Jatkossa oletetaan, että .NET, Rider ja Jypeli ovat asennettuina.
@@ -12,8 +13,8 @@ Jatkossa oletetaan, että .NET, Rider ja Jypeli ovat asennettuina.
 ## Mihin IDE:tä tarvitaan?
 
 Lähdekoodi on pelkkää tekstiä, joten sen teknisesti ottaen voisi kirjoittaa
-Muistiolla. Samaan tapaan kuin gradun voisi kirjoittaa kirjoituskoneella. IDE on
-ohjelmoijan tekstinkäsittelyohjelma, ja sen puuttumisen huomaa nopeasti:
+Muistiolla. Tämä olisi kuitenkin yhtä miellyttävää kuin gradun kirjoittaminen
+kirjoituskoneella. IDE on ohjelmoijan tekstinkäsittelyohjelma:
 
 * **Punainen alleviivaus.** Kun kirjoitat `Console.WriteLine("Moi")` ilman
   puolipistettä, Rider alleviivaa rivin jo ennen kuin ehdit painaa Run.
@@ -23,8 +24,7 @@ ohjelmoijan tekstinkäsittelyohjelma, ja sen puuttumisen huomaa nopeasti:
   yläpuolella), ja Rider kirjoittaa loput. Kun kirjoitat `Console.`, Rider
   näyttää mitä `Console`-luokalla voi tehdä, joten aliohjelmien nimiä ei
   tarvitse muistaa ulkoa.
-* **Yksi nappi.** Kääntäminen ja ajaminen on yksi painallus. Komentoriviltä
-  sama olisi kaksi komentoa oikeassa kansiossa.
+* **Yksi nappi.** Kääntäminen ja ajaminen on yksi klikkaus. 
 * **Debuggeri.** Kun ohjelma tekee jotakin outoa, debuggerilla sen voi
   pysäyttää kesken kaiken ja katsoa muuttujien arvot. Tähän palataan osassa 5,
   ja siitä on kurssilla jopa oma [näyttönsä](../debuggausnayte.md).
@@ -94,20 +94,20 @@ ohj1
 ## Solution ja projekti
 
 Rider järjestää koodin *solutioneihin* ja *projekteihin*. *Projekti* sisältää
-yhden ohjelman (pelin tai konsolisovelluksen) koodin sekä sen kuvat ja äänet.
+yhden ohjelman (konsolisovelluksen tai pelin) koodin sekä sen kuvat ja äänet.
 *Solution* on kokoelma projekteja, jotka halutaan pitää auki yhtä aikaa.
 Projekti kuuluu aina johonkin solutioniin, vaikka se olisi solutionin ainoa.
 
 Tällä kurssilla luonteva jako on: yksi demokerta on yksi solution, ja sen
 jokainen tehtävä on oma projektinsa. Solution `Demo1` sisältää siis projektit
-`Lumiukko`, `HelloWorld` ja niin edelleen. Näin saman demon tehtävät ovat yhtä
+`HelloWorld`, `Lampotila` ja niin edelleen. Näin saman demon tehtävät ovat yhtä
 aikaa näkyvillä ilman jatkuvaa avaamista ja sulkemista.
 
 ```bob
  Demo1 "(solution)"
   |
-  +-- Lumiukko   "(projekti)"
   +-- HelloWorld "(projekti)"
+  +-- Lampotila  "(projekti)"
   '-- ...
 ```
 
@@ -118,8 +118,9 @@ tarkoita mitään, eikä sitä kannata yrittää suomentaa.
 
 ## Uusi solution
 
-Tehdään nyt yksi solution (`Demo1`), johon tulee lopulta kolme projektia:
-`Lumiukko`, `HelloWorld` ja `YmpyraPeli`.
+Tehdään nyt solution `Demo1` ja siihen ensimmäinen projekti `HelloWorld`,
+joka on konsoliohjelma. Samaan solutioniin lisätään myöhemmin muita
+projekteja, muun muassa ensimmäinen Jypeli-peli.
 
 Jos olet jo aiemmin tehnyt solutionin ja haluat lisätä siihen projektin, katso
 kohta [Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
@@ -133,14 +134,15 @@ kohta [Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
 
     </animation>
 
-2. Valitse vasemmalta *Custom Templates* -listasta `FysiikkaPeli`. Jos listaa
-   ei näy, Jypeli-projektimalleja ei ole asennettu; katso
-   [Työkalut-sivun Jypeli-kohta](../tyokalut.md#jypeli).
+2. Valitse vasemmalta *Custom Templates* -listasta `ConsoleMain`. Listassa
+   ovat kurssin omat projektimallit: `ConsoleMain` on konsoliohjelmille ja
+   `Fysiikkapeli` Jypeli-peleille. Jos listaa ei näy, projektimalleja ei ole
+   asennettu; katso [Työkalut-sivun Jypeli-kohta](../tyokalut.md#jypeli).
 3. Anna solutionin nimeksi `Demo1`.
-4. Anna projektin nimeksi `Lumiukko`. Projektin nimi alkaa **isolla
+4. Anna projektin nimeksi `HelloWorld`. Projektin nimi alkaa **isolla
    kirjaimella**, koska siitä tulee myös luokan nimi. Tehtävissä nimi voi olla
-   myös esimerkiksi `Teht3Lumiukko`.
-5. Kirjoita tai selaa poluksi kansio, joka juuri äsken      tehtiin, esimerkiksi
+   myös esimerkiksi `Teht3Lampotila`.
+5. Kirjoita tai selaa poluksi kansio, joka juuri äsken tehtiin, esimerkiksi
    `C:\Users\<käyttäjätunnus>\ohj1\demot` (Windows) tai `~/ohj1/demot` (Mac ja
    Linux). Yliopiston mikroluokissa projekti tehdään ensin kiintolevylle
    kansioon `C:\MyTemp\<käyttäjätunnus>\...` ja siirretään lopuksi talteen.
@@ -150,46 +152,61 @@ kohta [Uusi projekti olemassa olevaan solutioniin](#uusi-projekti-solutioniin).
 7. Valitse `Framework`-kohtaan `net10.0`.
 8. Klikkaa `Create`.
 
-Ensimmäisellä kerralla Rider lataa Jypeli-kirjaston ja muut tarvittavat paketit
-verkosta, mikä voi kestää hetken. Siihen tarvitaan verkkoyhteys.
-
 ### Ensimmäinen ajo
 
-Kaksoisklikkaa ruudun vasemmassa reunassa Explorer-paneelissa `Lumiukko.cs`-tiedostoa. Koodissa pitäisi näkyä:
+Kaksoisklikkaa ruudun vasemmassa reunassa Explorer-paneelissa
+`HelloWorld.cs`-tiedostoa. Koodissa pitäisi näkyä suunnilleen tämä:
 
 ```csharp,ignore
-public class Lumiukko : PhysicsGame
+using System;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
+
+/// @author Omanimi
+/// @version 4.10.2026
+/// <summary>
+/// 
+/// </summary>
+public class HelloWorld
 {
-    public override void Begin()
+    /// <summary>
+    /// 
+    /// </summary>
+    public static void Main()
     {
-        // Kirjoita ohjelmakoodisi tähän
-        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
-        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+
     }
+
 }
 ```
 
-Kaksi viimeistä riviä ovat valmista koodia, jolla peli sulkeutuu
-<kbd>Esc</kbd>-näppäimestä. Niihin ei tarvitse koskea.
+Projektimalli on kirjoittanut valmiiksi ohjelman rungon: luokan `HelloWorld`
+ja sen sisällä tyhjän `Main`-aliohjelman. Alussa on neljä `using`-riviä, joista
+ensimmäinen on jo tuttu; muut kolme ottavat käyttöön .NET-kirjaston osia,
+joita tarvitaan myöhemmin, eivätkä ne haittaa, vaikka niitä ei vielä
+käytettäisi. Kolmella vinoviivalla `///` alkavat rivit ovat kommentteja:
+kääntäjä ohittaa ne, ja niihin kirjoitetaan tekijän nimi ja lyhyt kuvaus siitä,
+mitä ohjelma tekee. Rider on täyttänyt tekijäksi koneesi käyttäjänimen ja
+versioksi päivämäärän.
 
-Käynnistä ohjelma valitsemalla *Run* ›
-*Run 'Lumiukko'* tai painamalla yläpalkin vihreää kolmiota. Näytölle pitäisi avautua
-ikkuna vaaleansinisellä taustalla. Ikkuna on tyhjä, ja se on tässä vaiheessa
-täysin oikein. Sulje ikkuna.
+Käynnistä ohjelma valitsemalla *Run* › *Run 'HelloWorld'* tai painamalla
+yläpalkin vihreää kolmiota. Ikkunan alareunaan avautuu *Run*-paneeli, jossa
+lukee lopuksi *Process finished with exit code 0*. Ohjelma ajettiin, mutta se
+ei tulostanut mitään, ja se on tässä vaiheessa täysin oikein: `Main` on vielä
+tyhjä.
 
-Pyyhi pois rivi `// Kirjoita ohjelmakoodisi tähän` ja kirjoita tilalle:
+Kirjoita `Main`-aliohjelman aaltosulkujen väliin rivi:
 
 ```csharp,ignore
-Level.Background.Color = Color.Black;
-PhysicsObject pallo = new PhysicsObject(200, 200, Shape.Circle);
-pallo.Color = Color.White;
-Add(pallo);
+Console.WriteLine("Heippa, maailma!");
 ```
 
-Käynnistä ohjelma uudestaan. Nyt mustalla taustalla pitäisi olla iso valkoinen
-pallo: lumiukon ensimmäinen kolmannes. Loput lumiukosta tehdään tehtävissä.
+Käynnistä ohjelma uudestaan. Nyt *Run*-paneelissa pitäisi lukea
+`Heippa, maailma!`. Ohjelma on sama kuin aiemmin selaimessa ajettu, mutta nyt
+kääntäjä ja suoritus ovat omalla koneellasi.
 
-Huomasitko täydennyksen? Kun kirjoitit `Level.`, Rider tarjosi listan siitä,
+Huomasitko täydennyksen? Kun kirjoitit `Console.`, Rider tarjosi listan siitä,
 mitä pisteen jälkeen voi kirjoittaa. Tämä on IDE:n parhaita puolia, ja sitä
 kannattaa käyttää tietoisesti silloinkin, kun et ole varma, miten jokin asia
 kirjoitetaan.
@@ -206,13 +223,12 @@ ohj1
  |  |
  |  '-Demo1         <- tämä tehtiin nyt
  |     |-Demo1.sln  <- tämä tehtiin nyt  
- |     '-Lumiukko   <- tämä tehtiin nyt 
+ |     '-HelloWorld <- tämä tehtiin nyt 
  |        |
  |        |- bin            
  |        |- obj            
- |        |- Lumiukko.cs    
- |        |- Ohjelma.cs     
- |        '- Lumiukko.csproj
+ |        |- HelloWorld.cs    
+ |        '- HelloWorld.csproj
  |
  '-harjoitustyo
 ```
@@ -220,34 +236,34 @@ ohj1
 Lyhyt selitys `Demo1`-kansion sisällöstä:
 
 ```text
-Demo1                - kansio, joka sisältää Demo1-solutionin
-  Demo1.sln          - solution-tiedosto, jossa luetellaan projektit
-  Lumiukko           - kansio, jonka alla Lumiukko-projekti
-    bin              - kansio, jonne tulee ajettavaa koodia
-    obj              - kansio, jonne tulee käännettyjä tiedostoja
-    Lumiukko.cs      - C#-lähdekooditiedosto, johon tulee lumiukon piirtävä koodi
-    Ohjelma.cs       - C#-lähdekooditiedosto, joka sisältää pääohjelman
-    Lumiukko.csproj  - projektin asetustiedosto, jossa kerrotaan, mitä
-                       tiedostoja projektiin liittyy
+Demo1                  - kansio, joka sisältää Demo1-solutionin
+  Demo1.sln            - solution-tiedosto, jossa luetellaan projektit
+  HelloWorld           - kansio, jonka alla HelloWorld-projekti
+    bin                - kansio, jonne tulee ajettavaa koodia
+    obj                - kansio, jonne tulee käännettyjä tiedostoja
+    HelloWorld.cs      - C#-lähdekooditiedosto, johon oma koodi kirjoitetaan
+    HelloWorld.csproj  - projektin asetustiedosto, jossa kerrotaan, mitä
+                         tiedostoja projektiin liittyy
 ```
 
 Kansioita `bin` ja `obj` ei koskaan tarvitse avata, muokata eikä palauttaa.
 Kääntäjä tekee ne, ja ne voi huoletta poistaa; ne syntyvät uudestaan
-seuraavalla ajokerralla. Oma koodisi on tiedostossa `Lumiukko.cs`.
+seuraavalla ajokerralla. Oma koodisi on tiedostossa `HelloWorld.cs`.
 
 ### Eikö pelkkä kooditiedosto riittäisi?
 
-Yhteen palloon tarvittiin ikkunallinen valintoja, solution, projekti ja
-kansiorakenne. Miksei koodia voisi vain kirjoittaa tiedostoon ja käynnistää?
-Syy on se, että kääntäjä tarvitsee lähdekoodin lisäksi tietoja, joita
-koodissa itsessään ei ole:
+Yhteen tulostettuun riviin tarvittiin ikkunallinen valintoja, solution,
+projekti ja kansiorakenne. Miksei koodia voisi vain kirjoittaa tiedostoon ja
+käynnistää? Syy on se, että kääntäjä tarvitsee lähdekoodin lisäksi tietoja,
+joita koodissa itsessään ei ole:
 
-* **Mitkä tiedostot kuuluvat ohjelmaan?** Lumiukossakin on jo kaksi
-  kooditiedostoa, `Lumiukko.cs` ja `Ohjelma.cs`. Isossa ohjelmassa niitä on
-  satoja. Projekti kokoaa ne yhdeksi ohjelmaksi.
-* **Mitä kirjastoja ohjelma käyttää?** Jypeli ei kuulu .NETiin, vaan se
-  ladataan verkosta. Tiedostossa `Lumiukko.csproj` lukee, mitä kirjastoa ja
-  mitä sen versiota tarvitaan. Siksi Rider osasi hakea Jypelin itse.
+* **Mitkä tiedostot kuuluvat ohjelmaan?** HelloWorldissa kooditiedostoja on
+  yksi, mutta isossa ohjelmassa niitä on satoja. Projekti kokoaa ne yhdeksi
+  ohjelmaksi.
+* **Mitä kirjastoja ohjelma käyttää?** HelloWorld pärjää .NETin omalla
+  kirjastolla, mutta esimerkiksi Jypeli ei kuulu .NETiin, vaan se ladataan
+  verkosta. Projektitiedostoon kirjoitetaan, mitä kirjastoa ja mitä sen
+  versiota tarvitaan, ja Rider hakee sen itse.
 * **Millaiseksi ohjelma käännetään?** Projektitiedostossa on myös esimerkiksi
   .NET-versio, jonka valitsit kohtaan `Framework`.
 
@@ -269,15 +285,16 @@ projektin, se ei vain näy.
 ## Uusi projekti olemassa olevaan solutioniin {#uusi-projekti-solutioniin}
 
 Oletetaan, että solution `Demo1` on jo olemassa ja demon seuraava tehtävä on
-konsoliohjelma. Lisätään siihen toinen projekti.
+toinen konsoliohjelma, vaikkapa lämpötilan muunnos. Lisätään solutioniin
+toinen projekti.
 
 1. Klikkaa Explorer-paneelissa solutionin nimeä `Demo1` hiiren oikealla
    painikkeella (Macissa kahdella sormella).
 2. Valitse *Add* › *New Project*.
-3. Valitse tällä kertaa `ConsoleMain`-projektimalli.
-4. Anna nimeksi `HelloWorld` ja paina `Create`.
+3. Valitse projektimalliksi `ConsoleMain`.
+4. Anna nimeksi `Lampotila` ja paina `Create`.
 5. Aja projekti ensimmäisellä kerralla klikkaamalla Explorerissa sen nimeä
-   hiiren oikealla ja valitsemalla Run 'HelloWorld'. Sen jälkeen projektin
+   hiiren oikealla ja valitsemalla Run 'Lampotila'. Sen jälkeen projektin
    voi valita yläpalkin pudotusvalikosta vihreän kolmion vierestä.
 
 Yläpalkin valikko kertoo, *mikä* projekti käynnistyy, kun painat Run. Jos
@@ -292,18 +309,18 @@ ohj1
  |  |-Demo1
  |  |  |
  |  |  |-Demo1.sln 
- |  |  |-Lumiukko  
+ |  |  |-HelloWorld  
  |  |  |  |
- |  |  |  '- Lumiukko.cs jne.
+ |  |  |  '- HelloWorld.cs jne.
  |  |  | 
- |  |  |-HelloWorld  <- tämä tehtiin nyt
+ |  |  |-Lampotila   <- tämä tehtiin nyt
  |  |  | 
  |  |  '-...         <- vastaavasti voisit tehdä lisää projekteja
  |  |
  |  '-Demo2          <- vastaavasti voisit tehdä lisää solutioneja
  |     |
  |     |-Demo2.sln 
- |     |-Lumiukko2
+ |     |-Noppa
  |     |-LukujenLaskemista
  |     '-...
  |
@@ -344,12 +361,9 @@ mukaiset. Voit vaihtaa ne mieleisiksi kohdassa *File* › *Settings* › *Keymap
 
 ## Tyypillisiä ongelmia
 
-**Ikkuna ei aukea, vaan konsoliin tulee pitkä punainen virheilmoitus.** Lue
-ilmoituksen ensimmäinen rivi; usein siinä lukee tiedoston nimi ja
-rivinumero. Jos ilmoitus mainitsee paketin, jota ei löydy (*package* tai
-*restore*), Jypeliä ei ole vielä ladattu: tarkista verkkoyhteys ja käännä
-uudelleen valitsemalla *Build* ›
-*Rebuild Solution*.
+**Run-paneelissa lukee vain *Process finished with exit code 0*.** Ohjelma
+ajettiin, mutta se ei tulostanut mitään. Tarkista, että tulostava rivi on
+`Main`-aliohjelman aaltosulkujen välissä.
 
 **Muutokset eivät näy.** Ajat luultavasti toista projektia. Katso yläpalkin
 pudotusvalikko.
@@ -358,19 +372,12 @@ pudotusvalikko.
 solution-kansio (esimerkiksi `Demo1`) oikeaan paikkaan tiedostohallinnassa.
 Avaa sitten `.sln`-tiedosto Riderissä uudesta paikasta.
 
-**Ohjelmassa on kaksi `Main`-pääohjelmaa.** Jypeli-projektissa `Main` on
-tiedostossa `Ohjelma.cs`. Jos kopioit esimerkin, jossa on oma `Main`, poista
-toinen. Tästä kerrotaan kohdassa [Pääohjelma
-Jypeli-projekteissa](./5-ensimmainen-graafinen-ohjelma.md#pääohjelma-jypeli-projekteissa-main).
+**Ohjelmassa on kaksi `Main`-pääohjelmaa.** Projektissa saa olla vain yksi
+aloituspiste. Tyypillisesti uusi tehtävä on kopioitu vanhan projektin sisään
+uuden projektin sijaan. Tee jokaisesta tehtävästä oma projekti.
 
 Lisää ongelmatilanteita ja niiden ratkaisuja on koottu
 [Työkalut-sivulle](../tyokalut.md#ongelmatilanteita-ja-niiden-ratkaisuja).
-
-## Jypeli-projektit
-
-Jypeli-projektimallit ja Jypeli-projektin pääohjelma on kuvattu
-[ensimmäisen graafisen ohjelman](./5-ensimmainen-graafinen-ohjelma.md)
-yhteydessä.
 
 ## TIM-tehtävien tekeminen Riderissa {#tim-tehtavat-riderissa}
 
@@ -451,9 +458,10 @@ TIMistä ennen projektin luomista.
   `harjoitustyo`.
 * Projekti on yksi ohjelma; solution kokoaa projektit. Demo = solution,
   tehtävä = projekti.
-* Uusi solution: New Solution, projektimalli, nimet isolla alkukirjaimella,
-  polku `demot`-kansioon, `net10.0`, Create.
-* Run ajaa yläpalkissa valitun projektin. Reformat Code ennen palautusta.
+* Uusi solution: New Solution, projektimalli (`ConsoleMain` konsoliohjelmalle),
+  nimet isolla alkukirjaimella, polku `demot`-kansioon, `net10.0`, Create.
+* Run ajaa yläpalkissa valitun projektin, ja konsoliohjelman tuloste näkyy
+  *Run*-paneelissa. Reformat Code ennen palautusta.
 
 ## Testaa tietosi
 
@@ -530,7 +538,7 @@ demot rakennetaan.
 ## Tehtävät
 
 <!-- Vaiheessa B: tehtävä "Ympäristö kuntoon" (palauta kuvakaappaus
-     Riderista, jossa Demo1-solution ja Lumiukko-projekti ajettuna). -->
+     Riderista, jossa Demo1-solution ja HelloWorld-projekti ajettuna). -->
 
 <task>
   <task-title num="1.7">Tekstieditorin käyttäminen <i class="bi bi-stars"></i><points>1 p.</points></task-title>

@@ -8,7 +8,7 @@
  * molemmat. */
 
 (window.jyuWalkScenes ??= []).push((ui) => ({
-  /* New Solution: Fysiikkapeli (1), solutionin nimi (2), jonka Rider kopioi
+  /* New Solution: ConsoleMain (1), solutionin nimi (2), jonka Rider kopioi
    * projektin nimeksi, projektin nimi (3), kansio (4), Create (5). Hiiri
    * klikkaa jokaista kenttää ennen kuin siihen kirjoitetaan. Jokainen kohta,
    * johon ohjeessa tehdään valinta, saa keltaisen kehyksen heti valittaessa,
@@ -48,8 +48,8 @@
               ${section(".NET")}${more}
               ${section("Game Development")}${more}
               ${section("Other")}${more}
-              ${section("Custom Templates")}<span>Android Fysiikkapeli</span><span>ConsoleMain</span>
-              <span style="position:relative" data-click data-on="jw-sel" data-order="1">Fysiikkapeli${ring(1.1, 2)}</span><span>Peruspeli</span><span>Tasohyppelypeli</span>
+              ${section("Custom Templates")}<span>Android Fysiikkapeli</span>
+              <span style="position:relative" data-click data-on="jw-sel" data-order="1">ConsoleMain${ring(1.1, 2)}</span><span>Fysiikkapeli</span><span>Peruspeli</span><span>Tasohyppelypeli</span>
               <span style="margin-top:auto;color:#548af7">Manage Templates...</span>
             </div>
           </div>
@@ -59,17 +59,17 @@
                 <span data-type="${TYPE}" data-order="2.2">Demo1</span></div>`, 2.1, 3, 0)}
               <span style="color:#8c8f96">format <span style="color:#548af7">.sln ▾</span></span></div>`)}
             ${row("Project name:", ringed(`<div class="jw-input" style="width:230px" data-click data-order="3">
-              <span data-show data-order="2.3" data-hide="3.2" data-wait="${PAUSE}">Demo1</span><span data-type="${TYPE}" data-order="3.3" data-wait="${PAUSE}">Lumiukko</span></div>`, 3.1, 4, 0))}
+              <span data-show data-order="2.3" data-hide="3.2" data-wait="${PAUSE}">Demo1</span><span data-type="${TYPE}" data-order="3.3" data-wait="${PAUSE}">HelloWorld</span></div>`, 3.1, 4, 0))}
             ${row("Solution directory:", ringed(`<div class="jw-input" style="display:flex" data-click data-order="4">
               <span data-type="${TYPE}" data-order="4.2" data-wait="${PAUSE}">C:\\Users\\olli\\ohj1\\demot</span><span style="margin-left:auto;color:#8c8f96">▭</span></div>`, 4.1, 4.5, 0, "auto"))}
-            <div class="jw-hint" style="margin:-6px 0 0 170px">The project will be created in ...\\Demo1\\Lumiukko</div>
+            <div class="jw-hint" style="margin:-6px 0 0 170px">The project will be created in ...\\Demo1\\HelloWorld</div>
             <div style="margin-left:170px">
               <div class="jw-check" style="position:relative;width:fit-content"><i></i><div>Put solution and project in the same directory</div>${ring(4.5, 4.6)}</div>
               <div class="jw-check"><i></i><div>Create Git repository</div></div>
             </div>
             ${row("Target framework:", ringed('<div class="jw-input" style="display:flex;width:100px">net10.0<span style="margin-left:auto">▾</span></div>', 4.6, 5))}
             ${row("Language:", "<span>C#</span>")}
-            ${row("Type:", "<span>Fysiikkapeli</span>")}
+            ${row("Type:", "<span>ConsoleMain</span>")}
             <div style="display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px">› Template description<span style="flex:1;border-top:1px solid #3c3f44"></span></div>
           </div>
         </div>
