@@ -100,18 +100,18 @@
   <text x="26" y="44" >demot</text>
   <text x="50" y="76" >Demo1</text>
   <text x="74" y="108" >Demo1.sln</text>
-  <text x="74" y="124" >Lumiukko</text>
-  <text x="74" y="188" >HelloWorld</text>
+  <text x="74" y="124" >HelloWorld</text>
+  <text x="74" y="188" >Lampotila</text>
   <text x="74" y="220" >...</text>
   <text x="50" y="252" >Demo2</text>
   <text x="74" y="284" >Demo2.sln</text>
-  <text x="74" y="300" >Lumiukko2</text>
+  <text x="74" y="300" >Noppa</text>
   <text x="74" y="316" >LukujenLaskemista</text>
   <text x="74" y="332" >...</text>
   <text x="26" y="364" >harjoitustyo</text>
   <text x="50" y="396" >...</text>
-  <text x="106" y="156" >Lumiukko.cs</text>
-  <text x="202" y="156" >jne.</text>
+  <text x="106" y="156" >HelloWorld.cs</text>
+  <text x="218" y="156" >jne.</text>
   <polygon points="176,180 168,184 176,188" class="filled"></polygon>
   <line x1="176" y1="184" x2="184" y2="184" class="solid"></line>
   <text x="234" y="188" >tehtiin</text>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="256" class="svgbob">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" class="svgbob">
   <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
   stroke: var(--md-default-fg-color);
   stroke-width: 2;
@@ -95,13 +95,13 @@
       <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
     </marker>
   </defs>
-  <rect class="backdrop" x="0" y="0" width="320" height="256"></rect>
+  <rect class="backdrop" x="0" y="0" width="320" height="240"></rect>
   <text x="2" y="12" >ohj1</text>
   <text x="26" y="44" >demot</text>
   <text x="50" y="76" >Demo1</text>
   <text x="74" y="92" >Demo1.sln</text>
-  <text x="74" y="108" >Lumiukko</text>
-  <text x="26" y="236" >harjoitustyo</text>
+  <text x="74" y="108" >HelloWorld</text>
+  <text x="26" y="220" >harjoitustyo</text>
   <polygon points="168,68 160,72 168,76" class="filled"></polygon>
   <line x1="168" y1="72" x2="176" y2="72" class="solid"></line>
   <polygon points="168,84 160,88 168,92" class="filled"></polygon>
@@ -116,14 +116,13 @@
   <text x="290" y="108" >nyt</text>
   <text x="106" y="140" >bin</text>
   <text x="106" y="156" >obj</text>
-  <text x="106" y="172" >Lumiukko.cs</text>
-  <text x="106" y="188" >Ohjelma.cs</text>
-  <text x="106" y="204" >Lumiukko.csproj</text>
+  <text x="106" y="172" >HelloWorld.cs</text>
+  <text x="106" y="188" >HelloWorld.csproj</text>
   <g>
-    <line x1="12" y1="16" x2="12" y2="228" class="solid"></line>
+    <line x1="12" y1="16" x2="12" y2="212" class="solid"></line>
     <line x1="12" y1="40" x2="24" y2="40" class="solid"></line>
-    <path d="M 12,228 A 4,4 0,0,0 16,232" class="nofill"></path>
-    <line x1="16" y1="232" x2="24" y2="232" class="solid"></line>
+    <path d="M 12,212 A 4,4 0,0,0 16,216" class="nofill"></path>
+    <line x1="16" y1="216" x2="24" y2="216" class="solid"></line>
   </g>
   <g>
     <line x1="36" y1="48" x2="36" y2="68" class="solid"></line>
@@ -137,13 +136,12 @@
     <line x1="64" y1="104" x2="72" y2="104" class="solid"></line>
   </g>
   <g>
-    <line x1="84" y1="112" x2="84" y2="196" class="solid"></line>
+    <line x1="84" y1="112" x2="84" y2="180" class="solid"></line>
     <line x1="84" y1="136" x2="96" y2="136" class="solid"></line>
     <line x1="84" y1="152" x2="96" y2="152" class="solid"></line>
     <line x1="84" y1="168" x2="96" y2="168" class="solid"></line>
-    <line x1="84" y1="184" x2="96" y2="184" class="solid"></line>
-    <path d="M 84,196 A 4,4 0,0,0 88,200" class="nofill"></path>
-    <line x1="88" y1="200" x2="96" y2="200" class="solid"></line>
+    <path d="M 84,180 A 4,4 0,0,0 88,184" class="nofill"></path>
+    <line x1="88" y1="184" x2="96" y2="184" class="solid"></line>
   </g>
   <g>
     <text x="186" y="76">tä</text>
