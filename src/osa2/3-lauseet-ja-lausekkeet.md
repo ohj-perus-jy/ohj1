@@ -121,7 +121,7 @@ paljastaa eron: `int x = Math.Max(3, 7);` kääntyy, mutta
 Myös [omien funktioiden](./4-funktiot.md) kutsu on lauseke samalla tavalla
 kuin `Math.Max`-kutsu.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: lauseke, joka on myös lause</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: lauseke, joka on myös lause</summary>
 
 Joissakin tapauksissa sama koodinpätkä on sekä lause että lauseke. Tavallisin
 esimerkki on `a++`, joka kasvattaa muuttujan `a` arvoa yhdellä. Se saa jotakin

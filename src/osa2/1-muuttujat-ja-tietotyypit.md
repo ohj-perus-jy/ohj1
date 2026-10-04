@@ -134,7 +134,7 @@ Lukutyypit:
 Nimitys "liukuluku" tulee siitä, että luvun tarkkuus "liukuu" sen mukaan, kuinka
 suuri luku on. 
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Miksi nimitys "liukuluku"?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi nimitys "liukuluku"?</summary>
 
 Merkitsevien numeroiden määrä on kiinteä: `float`-tyyppisillä luvuilla noin 6–9,
 `double`-tyyppisillä noin 15–17 desimaalinumeroa. Mitä kauempana luku on
@@ -168,7 +168,7 @@ Muutama huomio:
   `int`-muuttujaan. Silloin käytetään `long`-tyyppiä, jonka arvoalue on noin
   ±9,2 · 10<sup>18</sup>.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Miksi kokonaisluvulla on yläraja?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi kokonaisluvulla on yläraja?</summary>
 
 Tietokoneen muistissa `int`-muuttujalle on varattu 32 bittiä, eli 32 ykköstä
 tai nollaa. Niillä voi esittää 2<sup>32</sup> eli noin 4,3 miljardia eri arvoa,
@@ -300,7 +300,7 @@ paikkaan.
 Vakioksi voi määritellä vain sellaisen arvon, joka on tiedossa jo
 käännösaikana, käytännössä lukuja, merkkijonoja ja totuusarvoja.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: <code>var</code> ja <code>readonly</code></summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: <code>var</code> ja <code>readonly</code></summary>
 
 C#-kielessä on mahdollista merkitä muuttujan tyypin kohdalle sana `var`,
 jolloin kääntäjä päättelee tyypin automaattisesti arvon perusteella.

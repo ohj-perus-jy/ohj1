@@ -189,7 +189,7 @@ Tallenna URL-osoite [TIMiin Harjoitustyö -sivulle](https://tim.jyu.fi/view/kurs
 
 Näet jatkossa oman etävarastosi URL-osoitteen gitlab.jyu.fi-palvelussa kohdasta *Clone* › *Clone with HTTPS*. Käytä oman etävarastosi URL-osoitetta tulevissa ohjeissa.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mikä fork on?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Mikä fork on?</summary>
 
 *Tämä teksti kannattaa lukea, kun ymmärrät, mitä commit, push ja pull tarkoittavat.*
 

@@ -4,7 +4,7 @@ Tälle sivulle on koottu kaikki osan 3 tehtävät. Tehtävänannot ovat tekstin
 lomassa sen asian kohdalla, jota tehtävä harjoittaa. Tehtävät palautetaan
 TIMiin: <https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo3>.
 
-Bonustehtävät on merkitty tähtimerkillä <i class="bi bi-stars"></i>. Pisteytys on
+Bonustehtävät on merkitty tähtimerkillä <i class="jyu-star"></i>. Pisteytys on
 kuvattu sivulla [Suorittaminen](../suorittaminen.md#harjoitustehtävät).
 
 > [!HUOMAUTUS]

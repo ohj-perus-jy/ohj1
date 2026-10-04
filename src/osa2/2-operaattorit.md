@@ -94,7 +94,7 @@ Siksi `"Summa: " + a + b` liittää luvut tekstin perään eikä laske niitä yh
 Sulkeet `"Summa: " + (a + b)` korjaavat asian, ja interpoloitu merkkijono
 `$"Summa: {a + b}"` välttää koko ongelman.
 
-<details closed id="operaattorin-kuormittaminen"><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Operaattorit omille tyypeille</summary>
+<details closed id="operaattorin-kuormittaminen"><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Operaattorit omille tyypeille</summary>
 
 Operaattorien merkitykset eivät rajoitu kieleen sisäänrakennettuihin
 tyyppeihin. Kun ohjelmoija tekee oman tyypin, hän voi samalla määritellä, mitä

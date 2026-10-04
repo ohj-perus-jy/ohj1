@@ -149,7 +149,7 @@ myös ilman Rideria, ks. liite [Kääntäminen
 komentorivillä](../liitteet/kaantaminen-komentorivilla.md). .NET-ympäristön
 asennusohjeen löydät [Työkalut](../tyokalut.md)-kohdasta. 
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mihin .NETiä tarvitaan?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Mihin .NETiä tarvitaan?</summary>
 
 C#-kääntäjä ei tuota suoraan konekieltä vaan *välikieltä* (engl.
 *intermediate language*), joka ei ole vielä minkään prosessorin konekieltä.
@@ -159,7 +159,7 @@ käännetty ohjelma toimii eri prosessoreilla, kunhan koneessa on ajoympäristö
 
 </details>
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Käännettävä vai tulkattava kieli?</summary>
 
 Monet kielet, kuten C#, Java ja C++, ovat *käännettäviä*. Kaikkia kieliä ei
 kuitenkaan käännetä etukäteen konekielelle: osa, kuten Python ja JavaScript,

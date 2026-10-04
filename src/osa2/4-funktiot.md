@@ -560,7 +560,7 @@ aliohjelman sisään niin sanotun paikallisen funktion, jolla ei saa olla
 > Englanninkielisissä lähteissä C#-aliohjelmia sanotaan lähes aina metodeiksi
 > (*method*).
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Miksi <code>public</code> ja <code>static</code> pitää kirjoittaa?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi <code>public</code> ja <code>static</code> pitää kirjoittaa?</summary>
 
 Jos `public` jätetään pois, aliohjelma on C#-kielessä oletuksena *yksityinen*
 (`private`), eli sitä voi kutsua vain saman luokan sisältä. Tällä kurssilla
@@ -578,7 +578,7 @@ Ohjelmointi 2 -kurssilla.
 
 </details>
 
-<details closed id="kuormittaminen"><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Funktion kuormittaminen</summary>
+<details closed id="kuormittaminen"><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Funktion kuormittaminen</summary>
 
 Samannimisiä funktioita voi olla useita, kunhan niiden parametrilistat
 eroavat toisistaan. Tätä kutsutaan *kuormittamiseksi* (engl. *overloading*).

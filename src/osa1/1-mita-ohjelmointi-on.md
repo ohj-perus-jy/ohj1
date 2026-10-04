@@ -101,7 +101,7 @@ komentojen sarja, joka laskee yhteen luvut 1 ja 2 ja tallentaa tuloksen
 muistiin. Meidän kannaltamme ohjelmointikielellä ilmaistu komento on tietenkin
 paljon helpompi ymmärtää ja tarvittaessa myös muuttaa.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Mitä konekielinen ohjelma tarkoittaa?</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Mitä konekielinen ohjelma tarkoittaa?</summary>
 
 Esimerkki on tavallisen PC-prosessorin (x86) konekieltä. Jokainen kahdeksan
 bitin ryhmä on yksi *tavu*, ja ohjelmassa on kolme käskyä, yksi kullakin
@@ -153,7 +153,7 @@ Unity-pelimoottorilla tehty peli on kirjoitettu C#:lla. C#-ohjelmat tarvitsevat
 toimiakseen *.NET*-ympäristön, joka sisältää kääntäjän ja suuren joukon valmista
 koodia.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: Muita ohjelmointikieliä</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Muita ohjelmointikieliä</summary>
 
 Kun osaat yhden kielen, seuraavan oppiminen on paljon helpompaa: perusrakenteet
 ovat samat, vain kirjoitusasu vaihtuu. Muutamia kieliä, joihin todennäköisesti

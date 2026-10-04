@@ -570,7 +570,7 @@ Tehtävät ovat valinnaisia, eikä niitä palauteta TIMiin.
 </task>
 
 <task>
-  <task-title num="M4">Miinaharava <i class="bi bi-stars"></i></task-title>
+  <task-title num="M4">Miinaharava <i class="jyu-star"></i></task-title>
   <handout>
 
   Miinaharavan lauta on `bool[,]`-taulukko, jossa `true` tarkoittaa miinaa.

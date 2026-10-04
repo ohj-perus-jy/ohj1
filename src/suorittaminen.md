@@ -36,7 +36,7 @@ apua pääteohjauksissa; ks. ajat etusivulta.
 
 Harjoitustehtäviä on kahta lajia. Tavalliset tehtävät harjoittavat
 opintojakson osaamistavoitteiden kannalta keskeisiä asioita. Bonustehtävät
-(<i class="bi bi-stars"></i>) ovat tarjolla kertausta, harjoittelua ja
+(<i class="jyu-star"></i>) ovat tarjolla kertausta, harjoittelua ja
 lisähaastetta varten. 
 
 Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen, ellei erikseen

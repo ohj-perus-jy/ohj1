@@ -109,7 +109,7 @@ public static void Main()
 
 Ohjelmassa saa olla vain yksi aloituspiste. Jos ohjelmassa on useita luokkia, `Main` kirjoitetaan vain yhteen niistä.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: <code>Main</code>-aliohjelman muut muodot</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: <code>Main</code>-aliohjelman muut muodot</summary>
 
 `Main`-aliohjelmasta on olemassa useita sallittuja muotoja. Yleisin vaihtoehto tällä kurssilla käytetylle on
 
@@ -306,7 +306,7 @@ public class Sovellus
 
 Tarkkaan ottaen C# sallii aliohjelman sisään kirjoitetun *paikallisen funktion* (engl. *local function*), kunhan sen edessä ei ole `public`-sanaa. Siksi kääntäjä valittaa sanasta `public` eikä aliohjelman paikasta. Paikallisia funktioita ei käytetä tällä kurssilla: niitä ei voi kutsua muualta eikä testata erikseen, ja sisäkkäin kirjoitettu koodi on juuri sitä, mistä aliohjelmilla pyritään eroon.
 
-<details closed><summary><i class="bi bi-stars jyu-gold"></i> Valinnaista lisätietoa: "luokaton" ohjelma</summary>
+<details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: "luokaton" ohjelma</summary>
 
 C#:ssa (alkaen versiosta 9) voi kirjoittaa ohjelman, jossa ei ole luokkaa eikä pääohjelmaa. Tällöin aivan vasemmalle (vähiten sisennetyt rivit) kirjoitetut lauseet muodostavat niin sanotut *top-level statements* -koodin. Kääntäjä muodostaa tämän koodin perusteella luokan ja ohjelman aloituspisteen taustalla ilman, että ohjelmoijan tarvitsee sitä erikseen määritellä. Näin on periaatteessa mahdollista kirjoittaa "Hello world"-ohjelma yksinkertaisesti:
 

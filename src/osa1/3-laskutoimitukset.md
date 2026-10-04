@@ -344,7 +344,7 @@ merkkijonoksi `"52"`.
 </task>
 
 <task>
-  <task-title num="1.9">Kaksi pientä vai yksi iso? <i class="bi bi-stars"></i><points>1 p.</points></task-title>
+  <task-title num="1.9">Kaksi pientä vai yksi iso? <i class="jyu-star"></i><points>1 p.</points></task-title>
   <handout>
 
   {{#include ../tehtavat/1-9-pizzavertailu/handout.md}}
