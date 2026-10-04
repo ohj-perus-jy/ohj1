@@ -83,10 +83,10 @@ tehtävänannon ja linkin TIM-tehtävään.
 
 ````md
 <task>
-  <task-title>Ydintehtävä: Tulostaminen <points>1 p.</points> </task-title>
+  <task-title num="1.1">Tulostaminen <points>1 p.</points></task-title>
   <handout>
 
-{{#include ../exercises/1-1-1-tulostaminen/handout.md}}
+{{#include ../tehtavat/1-1-tulostaminen/handout.md}}
 
   </handout>
   <task-link><a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo1#tehtava_tulostaminen_header">Tee tehtävä TIMissa</a></task-link>

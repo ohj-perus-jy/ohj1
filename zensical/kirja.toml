@@ -2,7 +2,9 @@
 nimi = "ohj1"
 
 # Tehtävien aloituspohjat ovat opiskelijalle annettavia tiedostoja, eivät sivuja.
-ei_sivuja = ["exercises/*/starter/*.md"]
+# Tehtävänannot sisällytetään aliosiin ({{#include}}), eivätkä nekään ole omia
+# sivujaan: niiden linkit kirjoitetaan aliosan sivulta katsottuina.
+ei_sivuja = ["tehtavat/*/starter/*.md", "tehtavat/*/handout.md"]
 
 # Linkkitarkistuksen TIM-ajo (tyokalut/linkit): kansioiden julkiset sivut.
 [linkit]

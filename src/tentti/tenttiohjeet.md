@@ -12,7 +12,7 @@ Tämä sivu sisältää [Jyväskylän yliopiston ohjeet verkkotenttien suorittam
 - Verkkotentti suoritetaan sille varattuna aikana.
 - Verkkotentin saa suorittaa tietokoneella, tabletilla tai puhelimella. Tentti suositellaan suoritettavaksi tietokoneella.
 - Verkkotentin suorittamisen aikainen yhteydenpito ja viestintä ulkopuolisten henkilöiden kanssa on kielletty.
-- Tentin järjestäjä antaa ennen tenttiä tarkentavat ohjeet mahdollisista aineistoista, materiaaleista ja välineistä, joita tentin suorittamiseen saa käyttää. (Katso seuraavassa alaluvussa olevat kurssin tenttisäännöt.)
+- Tentin järjestäjä antaa ennen tenttiä tarkentavat ohjeet mahdollisista aineistoista, materiaaleista ja välineistä, joita tentin suorittamiseen saa käyttää. (Katso kurssin [tenttisäännöt](#ohj1-tenttiohjeet) alempaa.)
 - Verkkotentin suorittamisen aikana saa tarvittaessa käyttää Jyväskylän yliopiston VPN-yhteyttä, mutta ei muita VPN-yhteyksiä.
 - Jos yhteytesi verkkotenttijärjestelmään katkeaa tentin suorittamisen aikana, ilmoita siitä tentin jälkeen tentin järjestäjälle.
 

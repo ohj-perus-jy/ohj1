@@ -5,7 +5,6 @@ mukaan. Näet suoritustapojen vaatimukset alta klikkaamalla.
 
 | Suoritustapa 1                                                             | Suoritustapa 2                                                             |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") | teet ja palautat kaikki pakolliset harjoitustehtävät (ns. "tähtitehtävät") |
 | keräät yhteensä vähintään 27 pistettä harjoitustehtävistä                  | keräät vähintään 5 pistettä **jokaiselta** harjoitustehtäväviikolta        |
 | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               | suoritat [debuggausnäytteen](debuggausnayte.md) hyväksytysti               |
 | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     | suoritat [harjoitustyön](harjoitustyo.md) hyväksytysti                     |
@@ -32,13 +31,12 @@ Mikäli sairauden tai muun hyvän syyn vuoksi et pysty tekemään jotain osasuor
 
 ## Harjoitustehtävät
 
-Kuhunkin osan liittyy harjoitustehtäviä. Harjoitustehtävien tekemiseen saa apua
-pääteohjauksissa; ks. ajat etusivulta. 
+Kuhunkin osaan liittyy harjoitustehtäviä. Harjoitustehtävien tekemiseen saa
+apua pääteohjauksissa; ks. ajat etusivulta. 
 
-Harjoitustehtäviä on hieman eri tasoisia. Opintojakson osaamistavoitteiden
-kannalta keskeiset tehtävät ovat **T**-tehtäviä eli *ydintehtäviä*, ja näistä
-osa on pakollisia, jotka on merkitty tähdellä (★). Muita tehtäviä
-(bonustehtävät, gurutehtävät) on tarjolla kertausta, harjoittelua ja
+Harjoitustehtäviä on kahta lajia. Tavalliset tehtävät harjoittavat
+opintojakson osaamistavoitteiden kannalta keskeisiä asioita. Bonustehtävät
+(<i class="bi bi-stars"></i>) ovat tarjolla kertausta, harjoittelua ja
 lisähaastetta varten. 
 
 Jokaisesta valmiiksi tehdystä tehtävästä saa yhden pisteen, ellei erikseen
@@ -64,7 +62,7 @@ Tehtävien aikataulurajoitukset ja mallivastauskäytänteet vaihtelevat opiskeli
       <td>Tehtävien deadline</td>
       <td>Vastuuopettajan määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
       <td>Oman opettajasi määrittämät. Näkyy TIMissä kunkin tehtävän kohdalla.</td>
-      <td>Ei deadlineja -- vain opiskeluoikeutesi rajoittama.</td>
+      <td>Ei deadlineja — vain opiskeluoikeutesi rajoittama.</td>
       </tr>
     <tr>
       <td>Mallivastaukset</td>

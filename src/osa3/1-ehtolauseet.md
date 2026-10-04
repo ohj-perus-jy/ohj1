@@ -1,0 +1,562 @@
+# Ehtolauseet
+
+Tähän asti ohjelmamme ovat tehneet joka kerta täsmälleen saman asian. Se on
+harvoin tarpeeksi. *Ehtolauseella* ohjelma tekee valinnan: jos ehto on
+voimassa, suoritetaan yksi asia, muuten jokin toinen. Valinta on yksi
+[kolmesta perusrakenteesta](../osa1/1-mita-ohjelmointi-on.md#algoritmi-eli-ohje),
+jotka tekevät ohjelmasta muutakin kuin listan käskyjä. Ehtolause tekee myös
+funktioista monipuolisempia: funktio voi palauttaa eri arvon eri tilanteissa.
+
+## Mihin ehtolauseita tarvitaan?
+
+* **Herätyskello.** Jos on arkipäivä, soita. Muuten anna nukkua. Ilman ehtoa
+  kello soisi joka aamu tai ei koskaan.
+* **Peli.** Jos pallo osuu maaliin, lisää piste ja siirrä pallo keskelle. Jos
+  pelaajan elämät ovat nollassa, näytä "Game over". Lähes kaikki, mitä pelissä
+  tapahtuu, on jonkin ehdon seurausta.
+* **Lomake.** Jos salasana on alle kahdeksan merkkiä, näytä virheilmoitus
+  äläkä päästä eteenpäin.
+* **Arvosana.** Jos pisteitä on vähintään 90, arvosana on 5; muuten jos
+  vähintään 80, arvosana on 4; ja niin edelleen. Tämä on ketju ehtoja, joista
+  vain yksi toteutuu.
+
+Ehto on aina *totuusarvoinen lauseke*: jotakin, jonka arvo on `true` tai
+`false`. Juuri sitä varten ovat [vertailu- ja loogiset
+operaattorit](../osa2/2-operaattorit.md#vertailuoperaattorit).
+
+## `if`-lause
+
+`if`-lause suorittaa lohkon lauseet vain, jos ehto on tosi. Muuten lohko
+hypätään yli ja suoritus jatkuu sen jälkeen.
+
+```mermaid
+flowchart TD
+    ehto{Onko ehto tosi?}
+    ehto -- kyllä --> lohko[Suoritetaan lohkon lauseet]
+    ehto -- ei --> jatko[Jatketaan ehtolauseen jälkeen]
+    lohko --> jatko
+```
+
+Koodissa tämä näyttää seuraavalta.
+
+```csharp,ignore
+if (EHTO)
+{
+    // Suoritetaan, jos ehto on voimassa
+}
+// Tänne jatketaan joka tapauksessa
+```
+
+`EHTO`-sanan kohdalle kirjoitetaan totuusarvon tuottava lauseke. Sulkeet ovat
+pakolliset, eikä rivin loppuun tule puolipistettä.
+
+```csharp
+using System;
+
+public class Lampotila
+{
+    public static void Main()
+    {
+        int lampotila = 27;
+
+        if (lampotila > 25)
+        {
+            Console.WriteLine("On helle!");
+        }
+        Console.WriteLine($"Lämpötila on {lampotila} astetta.");
+    }
+}
+```
+
+Kokeile muuttaa lämpötilaa arvoon `15` ja aja ohjelma uudelleen. Ensimmäinen
+rivi jää tulostumatta, toinen tulostuu aina.
+
+Ehto voi olla myös suoraan `bool`-muuttuja. Kirjoita `if (peliOhi)`, ei
+`if (peliOhi == true)`. Jälkimmäinen toimii, mutta on kuin sanoisi "jos on
+totta, että on totta".
+
+## `else`: muuten
+
+Usein halutaan tehdä jotakin myös silloin, kun ehto ei ole voimassa.
+`else`-osa suoritetaan täsmälleen silloin, kun `if`-osan ehto on epätosi.
+Toinen ja vain toinen lohkoista suoritetaan.
+
+```csharp
+using System;
+
+public class ParitonParillinen
+{
+    public static void Main()
+    {
+        int luku = 17;
+
+        if (luku % 2 == 0)
+        {
+            Console.WriteLine($"{luku} on parillinen.");
+        }
+        else
+        {
+            Console.WriteLine($"{luku} on pariton.");
+        }
+    }
+}
+```
+
+## `else if`: useita vaihtoehtoja
+
+Kun vaihtoehtoja on enemmän kuin kaksi, ehtoja ketjutetaan `else if` -osilla.
+Ehdot tarkistetaan järjestyksessä ylhäältä alas, ja *vain ensimmäinen* tosi
+haara suoritetaan. Viimeinen `else` on vapaaehtoinen ja suoritetaan, jos mikään
+ehto ei ollut tosi.
+
+```mermaid
+flowchart TD
+    e1{EHTO1?} -- tosi --> l1[Lohko 1]
+    e1 -- epätosi --> e2{EHTO2?}
+    e2 -- tosi --> l2[Lohko 2]
+    e2 -- epätosi --> l3[else-lohko]
+    l1 --> j[Jatketaan]
+    l2 --> j
+    l3 --> j
+```
+
+```csharp
+using System;
+
+public class Arvosana
+{
+    public static void Main()
+    {
+        int pisteet = 83;
+        int arvosana;
+
+        if (pisteet >= 90)
+        {
+            arvosana = 5;
+        }
+        else if (pisteet >= 80)
+        {
+            arvosana = 4;
+        }
+        else if (pisteet >= 70)
+        {
+            arvosana = 3;
+        }
+        else if (pisteet >= 60)
+        {
+            arvosana = 2;
+        }
+        else if (pisteet >= 50)
+        {
+            arvosana = 1;
+        }
+        else
+        {
+            arvosana = 0;
+        }
+
+        Console.WriteLine($"Pisteet {pisteet}, arvosana {arvosana}");
+    }
+}
+```
+
+Huomaa, että toisen haaran ehdossa ei tarvitse kirjoittaa `pisteet >= 80 &&
+pisteet < 90`: jos suoritus on päässyt toiseen haaraan asti, ensimmäinen ehto
+oli jo epätosi, joten pisteet ovat varmasti alle 90. Järjestyksellä on siis
+väliä. Jos haarat kirjoittaisi käänteisessä järjestyksessä (`>= 50` ensin),
+kaikki yli 50 pisteen suoritukset saisivat arvosanan 1.
+
+## Loogiset operaattorit ehdoissa
+
+Ehtoja yhdistetään operaattoreilla `&&` (ja), `||` (tai) ja `!` (ei).
+
+```csharp
+using System;
+
+public class Alennus
+{
+    public static void Main()
+    {
+        int ika = 20;
+        bool onkoOpiskelija = true;
+
+        if (ika < 18 || ika >= 65 || onkoOpiskelija)
+        {
+            Console.WriteLine("Saat alennuksen.");
+        }
+
+        if (ika >= 18 && !onkoOpiskelija)
+        {
+            Console.WriteLine("Täysi hinta.");
+        }
+    }
+}
+```
+
+Totuustaulut kertovat operaattorien tuloksen kaikilla yhdistelmillä:
+
+| `a`     | `b`     | `a && b` | a \|\| b | `!a`    |
+| ------- | ------- | -------- | -------- | ------- |
+| `true`  | `true`  | `true`   | `true`   | `false` |
+| `true`  | `false` | `false`  | `true`   | `false` |
+| `false` | `true`  | `false`  | `true`   | `true`  |
+| `false` | `false` | `false`  | `false`  | `true`  |
+
+Kaksi tavallista sudenkuoppaa:
+
+* **Matematiikan tapa ei toimi.** `0 < luku < 10` ei ole C#:a. Kirjoita
+  `luku > 0 && luku < 10`. Sama koskee muotoa `luku > 0 && < 10`, josta
+  puuttuu toinen vertailtava.
+* **"Tai" tarkoittaa eri asiaa kuin puheessa.** "Jos luku on 1 tai 2" on
+  koodissa `luku == 1 || luku == 2`, ei `luku == 1 || 2`.
+
+## Sisäkkäiset ehtolauseet
+
+Ehtolauseen lohkon sisällä voi olla uusi ehtolause. Näin syntyy päätöspuu.
+
+```csharp
+using System;
+
+public class Sisakkain
+{
+    public static void Main()
+    {
+        int lampotila = 3;
+        bool sataa = true;
+
+        if (lampotila < 5)
+        {
+            if (sataa)
+            {
+                Console.WriteLine("Räntää. Ota sadetakki ja pipo.");
+            }
+            else
+            {
+                Console.WriteLine("Kylmä mutta kuiva. Ota pipo.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ei tarvitse pipoa.");
+        }
+    }
+}
+```
+
+Sisäkkäisyys on tehokasta, mutta yli kolmen tason päätöspuu on jo vaikea
+lukea. Silloin kannattaa miettiä, voisiko osan ehdoista yhdistää
+`&&`-operaattorilla tai siirtää funktioon (ks. [Ehtolause
+funktiossa](#ehtolause-funktiossa)).
+
+## Ehtolause funktiossa
+
+Aiemmin kirjoitetuissa [funktioissa](../osa2/4-funktiot.md) oli yksi
+`return`-lause. Ehtolauseen avulla funktio voi palauttaa eri arvon eri
+tilanteissa. Edellä arvosana laskettiin `Main`-aliohjelmassa apumuuttujaan.
+Luontevampaa on kirjoittaa siitä funktio, jossa jokainen haara palauttaa oman
+arvonsa:
+
+```csharp
+using System;
+
+public class Arvosanat
+{
+    public static void Main()
+    {
+        Console.WriteLine(Arvosana(83));   // 4
+        Console.WriteLine(Arvosana(45));   // 0
+    }
+
+    public static int Arvosana(int pisteet)
+    {
+        if (pisteet >= 90)
+        {
+            return 5;
+        }
+        else if (pisteet >= 80)
+        {
+            return 4;
+        }
+        else if (pisteet >= 70)
+        {
+            return 3;
+        }
+        else if (pisteet >= 60)
+        {
+            return 2;
+        }
+        else if (pisteet >= 50)
+        {
+            return 1;
+        }
+        return 0;
+    }
+}
+```
+
+`return` lopettaa funktion suorituksen heti, ja suoritus palaa kutsukohtaan.
+Kun pisteitä on 83, ensimmäinen ehto on epätosi ja toinen tosi, joten funktio
+palauttaa 4, eikä loppuja ehtoja edes tarkisteta. Viimeinen `return 0;`
+suoritetaan vain, jos mikään ehto ei ollut tosi.
+
+**Jokaisella suorituspolulla on oltava `return`.** Kääntäjä tarkistaa, että
+funktio palauttaa arvon, kulki suoritus mitä haaraa tahansa. Jos yllä viimeinen
+`return 0;` puuttuisi, alle 50 pisteellä funktio ei palauttaisi mitään, ja
+kääntäjä ilmoittaa `CS0161: not all code paths return a value`. Kääntäjä ei
+laske ehtojen arvoja etukäteen, joten se vaatii viimeisen `return`-lauseen
+silloinkin, kun ihminen näkee kaikkien tapausten olevan katettu:
+
+```csharp,ignore
+public static int Suurempi(int a, int b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    if (a <= b)      // ei käänny: CS0161
+    {
+        return b;
+    }
+}
+```
+
+Korjaus on kirjoittaa viimeinen tapaus `else`-haaraksi tai pelkäksi
+`return b;`-lauseeksi ilman ehtoa.
+
+**Totuusarvon voi palauttaa suoraan.** Aloittelija kirjoittaa usein näin:
+
+```csharp,ignore
+public static bool OnkoParillinen(int luku)
+{
+    if (luku % 2 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+```
+
+Funktio toimii, mutta ehtolause on turha. Vertailu `luku % 2 == 0` on jo
+lauseke, jonka arvo on `true` tai `false`, joten sen voi palauttaa sellaisenaan
+kuten funktiossa [`OnkoTaysiIkainen`](../osa2/4-funktiot.md#paluuarvon-tyyppi):
+
+```csharp,ignore
+public static bool OnkoParillinen(int luku)
+{
+    return luku % 2 == 0;
+}
+```
+
+Jos ehtolauseen haarat vain palauttavat `true` ja `false`, palauta ehto itse.
+
+## `switch`
+
+Kun samaa muuttujaa verrataan moneen kiinteään arvoon, `switch`-rakenne on
+usein `else if` -ketjua luettavampi. Jokainen `case` on yksi vaihtoehto, ja
+`default` vastaa `else`-osaa. Haara päättyy `break`-lauseeseen.
+
+```csharp
+using System;
+
+public class Viikonpaiva
+{
+    public static void Main()
+    {
+        int paiva = 6;
+
+        switch (paiva)
+        {
+            case 1:
+                Console.WriteLine("Maanantai");
+                break;
+            case 6:
+            case 7:
+                Console.WriteLine("Viikonloppu!");
+                break;
+            default:
+                Console.WriteLine("Arkipäivä");
+                break;
+        }
+    }
+}
+```
+
+Kaksi `case`-riviä peräkkäin (`case 6:` ja `case 7:`) tarkoittaa, että sama
+haara suoritetaan molemmilla arvoilla.
+
+Uudemmissa C#-versioissa `case`-riville voi kirjoittaa myös vertailun:
+
+```csharp
+using System;
+
+public class Vertailut
+{
+    public static void Main()
+    {
+        int luku = 47;
+        switch (luku)
+        {
+            case < 50:
+                Console.WriteLine("Luku on pienempi kuin 50");
+                break;
+            case > 50:
+                Console.WriteLine("Luku on suurempi kuin 50");
+                break;
+            default:
+                Console.WriteLine("Luku on 50");
+                break;
+        }
+    }
+}
+```
+
+## Tyypillisiä virheitä
+
+**Sijoitus vertailun sijaan.** `if (luku = 5)` yrittää sijoittaa luvun ja
+antaa virheen `CS0029: Cannot implicitly convert type 'int' to 'bool'`.
+Tarkoitus oli `if (luku == 5)`.
+
+**Puolipiste `if`-rivin lopussa.** Rivi `if (luku > 5);` on laillinen, mutta
+puolipiste päättää ehtolauseen tyhjänä, ja seuraava lohko suoritetaan aina.
+Rider varoittaa tästä (*Possible mistaken empty statement*). Klikkaa Play ja
+katso, mitä ohjelma tulostaa. Korjaa sitten virhe.
+
+```csharp
+using System;
+
+public class Puolipiste
+{
+    public static void Main()
+    {
+        int luku = 3;
+        if (luku > 5);
+        {
+            Console.WriteLine("Luku on suurempi kuin 5. Vai onko?");
+        }
+    }
+}
+```
+
+**Funktion haarasta puuttuu `return`.** Funktiossa jokaisella suorituspolulla
+on oltava `return`-lause, muuten kääntäjä ilmoittaa `CS0161: not all code
+paths return a value`. Ks. [Ehtolause funktiossa](#ehtolause-funktiossa).
+
+**Aaltosulut pois.** Jos lohkossa on vain yksi lause, C# sallii aaltosulkujen
+jättämisen pois. Tällä kurssilla aaltosulut kirjoitetaan aina, koska ilman
+niitä toisen lauseen lisääminen lohkoon menee helposti pieleen: sisennys
+näyttää oikealta, mutta vain ensimmäinen lause kuuluu ehtoon.
+
+## Yhteenveto
+
+* `if (ehto) { ... }` suorittaa lohkon vain, kun ehto on tosi; `else`-lohko
+  suoritetaan muuten.
+* `else if` -ketjusta suoritetaan ensimmäinen tosi haara; järjestyksellä on
+  väliä.
+* Ehdot yhdistetään operaattoreilla `&&`, `||` ja `!`.
+* Funktiossa jokainen haara voi palauttaa oman arvonsa, ja jokaisella
+  suorituspolulla on oltava `return`. Totuusarvon voi palauttaa suoraan:
+  `return luku % 2 == 0;`.
+* `switch` sopii, kun yhtä arvoa verrataan moneen vaihtoehtoon.
+* Kirjoita `==` vertailuun, älä laita puolipistettä `if`-rivin perään ja
+  käytä aina aaltosulkuja.
+
+## Testaa tietosi
+
+Valitse vastaus, niin näet heti, menikö se oikein ja miksi. Pisteitä ei jaeta,
+mutta huomaat, mitä asioita kannattaa vielä kerrata.
+
+<visa>
+
+**Totta vai tarua?**
+
+<vaittama vastaus="tarua">
+`if (luku = 5)` tarkistaa, onko `luku` viisi.
+<perustelu>
+**Tarua.** Yksi `=` on sijoitus, vertailu kirjoitetaan `==`. Tämä ei edes
+käänny, koska sijoituksen tulos on `int` eikä `bool`. Kääntäjä ilmoittaa
+CS0029.
+</perustelu>
+</vaittama>
+
+<vaittama vastaus="tarua">
+`else if` -ketjusta suoritetaan kaikki haarat, joiden ehto on tosi.
+<perustelu>
+**Tarua.** Vain ensimmäinen tosi haara suoritetaan, loput ohitetaan. Siksi
+järjestyksellä on väliä: arvosanaketjussa on testattava suurin raja ensin.
+</perustelu>
+</vaittama>
+
+<vaittama vastaus="totta">
+`else`-haaralle ei kirjoiteta ehtoa.
+<perustelu>
+**Totta.** `else` suoritetaan, kun mikään edeltävä ehto ei ollut tosi. Ehto on
+siis "kaikki muu".
+</perustelu>
+</vaittama>
+
+**Monivalinta.** Yksi vaihtoehto on oikein.
+
+<kysymys>
+Mitä seuraava koodi tulostaa?
+
+```csharp,ignore
+int luku = 2;
+if (luku > 5);
+{
+    Console.WriteLine("Iso luku");
+}
+```
+
+- [x] `Iso luku`
+- [ ] Ei mitään
+- [ ] Käännösvirheen
+- [ ] `2`
+
+<perustelu>
+**a**, vaikka luku on pieni. Puolipiste `if`-rivin perässä on tyhjä lause, ja
+se on koko `if`-lauseen runko. Aaltosulkulohko ei enää kuulu ehtoon, joten se
+suoritetaan aina. Kääntäjä antaa varoituksen CS0642, mutta kääntää ohjelman.
+</perustelu>
+</kysymys>
+
+<kysymys>
+Muuttujassa `paiva` on 7. Mitä alla oleva `switch` tulostaa?
+
+```csharp,ignore
+switch (paiva)
+{
+    case 1:
+        Console.WriteLine("Maanantai");
+        break;
+    case 6:
+    case 7:
+        Console.WriteLine("Viikonloppu!");
+        break;
+    default:
+        Console.WriteLine("Arkipäivä");
+        break;
+}
+```
+
+- [ ] `Maanantai`
+- [x] `Viikonloppu!`
+- [ ] `Arkipäivä`
+- [ ] `Viikonloppu!` ja `Arkipäivä`
+
+<perustelu>
+**b.** Peräkkäiset `case 6:` ja `case 7:` jakavat saman haaran. `break`
+lopettaa `switch`-lauseen, joten `default`-haaraa ei suoriteta.
+</perustelu>
+</kysymys>
+
+</visa>
+
+## Tehtävät
+
+<!-- Vaiheessa B: "Parillinen vai pariton", "Arvosana funktioksi",
+     "Suurempi" (useita return-lauseita), "OnkoKarkausvuosi" (&&, ||,
+     totuusarvo suoraan), "Mitä ohjelma tulostaa?" (else if -järjestys),
+     switch-tehtävä. -->
