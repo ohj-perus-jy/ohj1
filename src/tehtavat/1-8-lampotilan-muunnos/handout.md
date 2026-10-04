@@ -19,6 +19,8 @@ public class Lampotila
 }
 ```
 
-1. Aja ohjelma. Mitä se tulostaa, ja miksi?
-2. Korjaa ohjelma niin, että se tulostaa oikean tuloksen.
-3. Lisää ohjelmaan rivi, joka tulostaa, paljonko 451 °F on celsiusasteina.
+Korjaa ohjelma niin, että se tulostaa oikean tuloksen, ja lisää siihen toinen
+rivi, joka tulostaa, paljonko 451 °F on celsiusasteina.
+
+Vihje: aja ohjelma ensin sellaisenaan ja mieti, mitä sulkeissa oleva `5 / 9`
+tuottaa.

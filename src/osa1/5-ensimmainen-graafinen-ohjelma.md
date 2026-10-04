@@ -385,14 +385,40 @@ keskipistettä.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: tehtävät "Oma kuvio" (vähintään kolme eri muotoista ja
-     väristä oliota) ja "Lumiukko" (kolme palloa päällekkäin). -->
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin. -->
 
 <task>
-  <task-title num="1.8">Kolmiot <points>1 p.</points></task-title>
+  <task-title num="1.12">Oma kuvio <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-8-kolmiot/handout.md}}
+  {{#include ../tehtavat/1-12-oma-kuvio/handout.md}}
+
+  </handout>
+</task>
+
+<task>
+  <task-title num="1.13">Lumiukko <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-13-lumiukko/handout.md}}
+
+  </handout>
+</task>
+
+<task>
+  <task-title num="1.14">Kolmiot <i class="bi bi-stars"></i><points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-14-kolmiot/handout.md}}
+
+  </handout>
+</task>
+
+<task>
+  <task-title num="1.15">Maisema <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-15-maisema/handout.md}}
 
   </handout>
 </task>

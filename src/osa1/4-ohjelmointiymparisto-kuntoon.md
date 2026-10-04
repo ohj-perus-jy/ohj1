@@ -537,14 +537,22 @@ demot rakennetaan.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: tehtävä "Ympäristö kuntoon" (palauta kuvakaappaus
-     Riderista, jossa Demo1-solution ja HelloWorld-projekti ajettuna). -->
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin. -->
 
 <task>
-  <task-title num="1.7">Tekstieditorin käyttäminen <i class="bi bi-stars"></i><points>1 p.</points></task-title>
+  <task-title num="1.10">Ympäristö kuntoon <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-7-editorin-kayttaminen/handout.md}}
+  {{#include ../tehtavat/1-10-ymparisto-kuntoon/handout.md}}
+
+  </handout>
+</task>
+
+<task>
+  <task-title num="1.11">Toinen projekti <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-11-toinen-projekti/handout.md}}
 
   </handout>
 </task>

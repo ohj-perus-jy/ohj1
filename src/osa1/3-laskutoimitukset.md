@@ -314,41 +314,40 @@ merkkijonoksi `"52"`.
 
 ## Tehtävät
 
-<!-- Alustavat tehtävät. TIM-palautuslinkit lisätään, kun tehtävät on viety
-     TIMiin. -->
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin. -->
 
 <task>
-  <task-title num="1.3">Mitä lasku tuottaa? <points>1 p.</points></task-title>
+  <task-title num="1.6">Mitä lasku tuottaa? <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-3-mita-lasku-tuottaa/handout.md}}
+  {{#include ../tehtavat/1-6-mita-lasku-tuottaa/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="1.4">Sekunnit tunneiksi <points>1 p.</points></task-title>
+  <task-title num="1.7">Sekunnit tunneiksi <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-4-sekunnit-tunneiksi/handout.md}}
+  {{#include ../tehtavat/1-7-sekunnit-tunneiksi/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="1.5">Lämpötilan muunnos <points>1 p.</points></task-title>
+  <task-title num="1.8">Lämpötilan muunnos <points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-5-lampotilan-muunnos/handout.md}}
+  {{#include ../tehtavat/1-8-lampotilan-muunnos/handout.md}}
 
   </handout>
 </task>
 
 <task>
-  <task-title num="1.6">Kaksi pientä vai yksi iso? <i class="bi bi-stars"></i><points>1 p.</points></task-title>
+  <task-title num="1.9">Kaksi pientä vai yksi iso? <i class="bi bi-stars"></i><points>1 p.</points></task-title>
   <handout>
 
-  {{#include ../tehtavat/1-6-pizzavertailu/handout.md}}
+  {{#include ../tehtavat/1-9-pizzavertailu/handout.md}}
 
   </handout>
 </task>

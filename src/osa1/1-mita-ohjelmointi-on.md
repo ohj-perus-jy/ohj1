@@ -304,6 +304,22 @@ algoritmin rakenne lainkaan.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: tehtävä "Kirjoita algoritmi" (ohje arkiaskareeseen, esim.
-     voileivän tekeminen, vähintään 8 vaihetta) ja lyhyt monivalinta
-     käsitteistä (algoritmi, lähdekoodi, kääntäjä, kirjasto). -->
+<!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin. -->
+
+<task>
+  <task-title num="1.1">Kirjoita algoritmi <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-1-kirjoita-algoritmi/handout.md}}
+
+  </handout>
+</task>
+
+<task>
+  <task-title num="1.2">Ole tietokone <points>1 p.</points></task-title>
+  <handout>
+
+  {{#include ../tehtavat/1-2-ole-tietokone/handout.md}}
+
+  </handout>
+</task>
