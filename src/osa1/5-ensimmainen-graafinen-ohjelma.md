@@ -174,7 +174,7 @@ Demo1
     |- bin
     |- obj
     |- YmpyraPeli.cs     <- oma koodi
-    |- Ohjelma.cs        <- pääohjelma Main
+    |- Ohjelma.cs        <- "pääohjelma Main"
     '- YmpyraPeli.csproj
 ```
 
