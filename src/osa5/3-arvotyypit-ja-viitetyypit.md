@@ -10,8 +10,9 @@ Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopi
 
 <!-- Jatkaa aliosan 5.1 kohtaa "Taulukko on viite". Aloita tutusta
      tilanteesta: aliosan 3.4 huomautuksessa `pallo` ja `sama` viittaavat
-     samaan olioon. Laatikkomalli aliosasta 2.1: arvotyypin laatikossa on
-     arvo, viitetyypin laatikossa nuoli. -->
+     samaan olioon. Sama taulukko kuin aliosassa 2.1 (nimi, tyyppi, arvo):
+     arvotyypillä arvosarakkeessa on itse arvo, viitetyypillä osoite, joka
+     vie taulukon ulkopuolelle. -->
 
 ## Arvotyypit: `int`, `double`, `bool`, `char`
 

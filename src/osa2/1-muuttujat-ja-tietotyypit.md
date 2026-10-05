@@ -36,15 +36,13 @@ string nimi = "Maija";    // nimi-muuttujaan voi tallentaa merkkijonoja
 bool peliOhi = false;     // peliOhi-muuttujaan voi tallentaa totuusarvoja
 ```
 
-Muuttujaa voi ajatella laatikkona, jonka kylkeen on kirjoitettu nimi ja jonka
-sisällä on arvo. Laatikon muoto eli tyyppi kertoo, mitä siihen mahtuu:
-kokonaislukulaatikkoon ei mahdu tekstiä. Esimerkin kolme laatikkoa:
+Esimerkin kolme muuttujaa:
 
-| Nimi (kyljessä) | Arvo (sisällä) | Tyyppi (muoto) |
-| --------------- | -------------- | -------------- |
-| `pisteet`       | `0`            | `int`          |
-| `nimi`          | `"Maija"`      | `string`       |
-| `peliOhi`       | `false`        | `bool`         |
+| Nimi      | Tyyppi   | Mitä voi sisältää | Arvo      |
+| --------- | -------- | ----------------- | --------- |
+| `pisteet` | `int`    | kokonaisluku      | `0`       |
+| `nimi`    | `string` | merkkijono        | `"Maija"` |
+| `peliOhi` | `bool`   | totuusarvo        | `false`   |
 
 Ensimmäinen muuttuja nimeltä `pisteet` on tyypiltään `int`, eli kokonaisluku.
 Muita kokonaislukuja voisivat olla esimerkiksi `-10`, `0` ja `67`.
@@ -61,6 +59,46 @@ syntyy esimerkiksi vertailuista: `5 > 3` on `true` ja `2 == 4` on `false`.
 
 Muuttujan tyyppi säilyy samana koko muuttujan elinkaaren ajan. Jos ohjelmoija
 yrittää tallentaa muuttujaan väärän tyyppisen arvon, kääntäminen epäonnistuu.
+Alla jokaiseen kolmeen muuttujaan yritetään sijoittaa arvo, joka ei ole sen
+tyyppinen. Klikkaa Play nähdäksesi, mitä kääntäjä sanoo. Koodia voi muokata:
+kokeile sen jälkeen itse, mitä muuta muuttujiin ei mahdu, esimerkiksi
+`pisteet = 2.5;` tai `peliOhi = "true";`, ja korjaa lopuksi sijoitukset niin,
+että ohjelma kääntyy.
+
+```csharp,editable
+using System;
+
+public class VaaratTyypit
+{
+    public static void Main()
+    {
+        int pisteet = 0;
+        string nimi = "Maija";
+        bool peliOhi = false;
+
+        pisteet = "100";       // merkkijono, vaikka pisteet on int
+        nimi = 42;             // kokonaisluku, vaikka nimi on string
+        peliOhi = 1;           // kokonaisluku, vaikka peliOhi on bool
+
+        Console.WriteLine(pisteet);
+    }
+}
+```
+
+Kääntäjä ilmoittaa jokaisesta rivistä erikseen:
+
+```text
+error CS0029: Cannot implicitly convert type 'string' to 'int'
+error CS0029: Cannot implicitly convert type 'int' to 'string'
+error CS0029: Cannot implicitly convert type 'int' to 'bool'
+```
+
+Ilmoitus kertoo, minkä tyyppinen arvo oli tarjolla ja minkä tyyppiseen
+muuttujaan se ei käynyt. Ensimmäisellä rivillä `"100"` on lainausmerkeissä,
+joten se on teksti eikä luku, vaikka siinä on pelkkiä numeroita. Viimeinen
+rivi `peliOhi = 1` on tavallinen erehdys: joissakin kielissä 1 tarkoittaa
+totta, mutta C#:ssa totuusarvo on vain `true` tai `false`. Koska ohjelma ei
+käänny, yhtäkään sen riviä ei suoriteta.
 
 ## Arvon sijoittaminen ja muuttaminen
 
@@ -102,7 +140,7 @@ public class Kopio
     public static void Main()
     {
         int a = 5;
-        int b = a;             // b saa a:n arvon 5. b on oma laatikkonsa.
+        int b = a;             // b saa a:n arvon 5. b on oma muuttujansa.
         a = 100;               // a muuttuu...
         Console.WriteLine(b);  // ...mutta b on edelleen 5
     }
@@ -110,7 +148,13 @@ public class Kopio
 ```
 
 Sijoitus `b = a` kopioi arvon; se ei sido muuttujia toisiinsa. Kun `a`
-myöhemmin muuttuu, `b` ei tiedä siitä mitään.
+myöhemmin muuttuu, `b` ei tiedä siitä mitään. Rivi `a = 100;` muuttaa vain
+`a`:n arvon:
+
+| Nimi | Tyyppi | Arvo ennen | Arvo jälkeen |
+| ---- | ------ | ---------- | ------------ |
+| `a`  | `int`  | `5`        | `100`        |
+| `b`  | `int`  | `5`        | `5`          |
 
 Muuttujaa ei voi käyttää ennen kuin sillä on arvo. Jos kirjoitat `int x;` ja
 yrität tulostaa `x`:n, kääntäjä ilmoittaa `CS0165: Use of unassigned local
@@ -381,8 +425,8 @@ merkkijonoa, ja kääntäjä ilmoittaa siitä virheellä CS0029.
 Sijoitus `b = a;` kopioi `a`:n arvon, joten `a`:n muuttaminen myöhemmin ei
 vaikuta `b`:hen.
 <perustelu>
-**Totta.** Perustietotyyppien muuttujat ovat toisistaan riippumattomia
-laatikoita. Sijoitus kopioi arvon, ei yhdistä laatikoita.
+**Totta.** Perustietotyyppien muuttujat ovat toisistaan riippumattomia.
+Sijoitus kopioi arvon, ei yhdistä muuttujia.
 </perustelu>
 </vaittama>
 
