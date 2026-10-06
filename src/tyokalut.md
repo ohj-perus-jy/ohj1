@@ -516,7 +516,7 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
    asennus on onnistunut.
 
 9. Poistetaan oikoluku. Ollessasi *Welcome*-ikkunassa, valitse alhaalta
-   *Configure*. Kirjoita hakukenttään "spell" ja mene *Spelling* › *.NET
+   *Configure* › *Settings*. Kirjoita hakukenttään "spell" ja mene *Spelling* › *.NET
    languages* ja klikkaa pois valinta *Enable spell checking* -kohdasta.
 
 10. Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
@@ -526,7 +526,7 @@ HUOM! Lataa tiedosto <kbd>Ctrl</kbd> + klikkaamalla › *Lataa linkitetty tiedos
 tallennu oikein. 
     - Valitse *Welcome*-ikkunassa vasemmasta alalaidasta *Configure* › *Import Settings...*
     - Etsi ja valitse äsken haettu tiedosto
-    - Klikkaa OK, sitten Import and Restart
+    - Klikkaa OK, sitten *Import and Restart*
 
 Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#rider-settings).
 
