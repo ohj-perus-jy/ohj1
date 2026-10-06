@@ -6,9 +6,9 @@ dokumentissa opastetaan, miten nämä työkalut asennetaan.
 - **[.NET](#net)** &ndash; *ohjelmistoviitekehys* (engl. *framework*), tarvitaan
   C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen.
 - **[Visual Studio Code](#vscode)** &ndash; *editori*, jolla kirjoitetaan,
-  käännetään, ajetaan ja debugataan ohjelmia. C#-tuki tulee
-  **[C# Dev Kit](#csdevkit)** -laajennuksesta, joka asennetaan VS Coden
-  jälkeen. Molemmat ovat ilmaisia opiskelukäytössä.
+  käännetään, ajetaan ja debugataan ohjelmia. 
+- **[C# Dev Kit](#csdevkit)** &ndash; VS Coden *laajennus*, joka tuo
+  editoriin C#-tuen. 
 - **[JyPeli](#jypeli)** &ndash; *pelimoottori*, joka on Jyväskylän yliopistossa kehitetty
   C#-kirjasto pelien tekemiseen.
 - **[Git](#git)** &ndash; *versiohallintaohjelma*, joka mahdollistaa koodin versioinnin
@@ -234,7 +234,8 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
     
     Jos saat virheen, jossa lukee `command line tools are already installed`, sinulla
     on jo tarvittavat työkalut asennettuna ja voit jatkaa seuraavaan vaiheeseen.  
-3. Asenna Homebrew-ohjelmahallintatyökalu seuraavalla komennolla:
+3. Asenna Homebrew-ohjelmahallintatyökalu seuraavalla komennolla (saat kopioitua
+   komennon oikean reunan kuvakkeesta):
 
     ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -315,7 +316,8 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 ### [Windows](#tab/win)
  
 1. Avaa PowerShell-komentorivi ellei se ole jo auki.
-2. Suorita alla oleva komento
+2. Suorita alla oleva komento (saat kopioitua
+   komennon oikean reunan kuvakkeesta):
 
     ```bash
     winget install -e --id=Microsoft.DotNet.SDK.10
@@ -352,11 +354,8 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 ### [macOS](#tab/macos)
 
 1. Avaa Pääte ellei se ole jo
-2. Asenna .NET suorittamalla alla olevat komennot (huom: yhteensä 2 komentoa):
+2. Asenna .NET suorittamalla alla oleva komento:
     
-    ```bash
-    brew tap isen-ng/dotnet-sdk-versions
-    ```
     ```bash
     brew install --cask dotnet-sdk10
     ```
@@ -409,9 +408,9 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 
 ## Visual Studio Code {#vscode}
 
-Visual Studio Code (VS Code) on Microsoftin ilmainen editori, jolla kurssin
-ohjelmat kirjoitetaan ja ajetaan. Asenna ensin VS Code ja sen jälkeen
-C#-tuen antava laajennus (seuraava kohta).
+Visual Studio Code (lyhyesti VS Code) on Microsoftin ilmainen
+ohjelmointiympäristö. Asenna ensin VS Code ja sen jälkeen C#-tuen antava
+laajennus.
 
 ### [Windows](#tab/win)
  
@@ -501,7 +500,7 @@ sulkea.
 VS Code ei sellaisenaan ymmärrä C#:a. Tuki tulee Microsoftin *C# Dev Kit*
 -laajennuksesta (engl. *extension*): koodin täydennys, virheiden alleviivaus,
 **▷**-painike ohjelmien ajamiseen ja komento uuden Jypeli-pelin luomiseen.
-Laajennus on ilmainen opiskelu-, harrastus- ja avoimen lähdekoodin käytössä.
+Laajennus on ilmainen opiskelukäytössä.
 
 1. Avaa komentorivi (PowerShell, Pääte tai vastaava) ellei se ole jo auki, ja
    asenna laajennus suorittamalla komento:
@@ -521,13 +520,12 @@ Laajennus on ilmainen opiskelu-, harrastus- ja avoimen lähdekoodin käytössä.
    Ensimmäisellä käynnistyksellä laajennus viimeistelee asennustaan hetken;
    odota, kunnes oikean alakulman ilmoitukset lakkaavat.
 
-    Laajennus avaa opastussivun *Get Started with C# Dev Kit*, jonka
-    ensimmäinen askel on *Connect account*. Tiliä ei tarvita: laajennus toimii
-    opiskelukäytössä ilman kirjautumista. Sulje sivu sen alareunan painikkeella
-    *Mark Done*. Vasemman alakulman tilikuvakkeeseen jää merkki *Sign in with
-    Microsoft to use C# Dev Kit*; sekin on sama pyyntö, ja sen voi jättää
-    huomiotta. VS Code saattaa myös ehdottaa GitHub Copilotin käyttöönottoa tai
-    muita laajennuksia. Niitäkään ei tarvita; voit sulkea ilmoitukset.
+3. Laajennus avaa opastussivun *Get Started with C# Dev Kit*, jonka ensimmäinen
+   askel on *Connect account*. Tiliä ei tarvita. Sulje sivu sen alareunan painikkeella
+   *Mark Done*. Vasemman alakulman tilikuvakkeeseen jää merkki *Sign in with
+   Microsoft to use C# Dev Kit*; sekin on sama pyyntö, ja sen voi jättää
+   huomiotta. VS Code saattaa myös ehdottaa GitHub Copilotin käyttöönottoa tai
+   muita laajennuksia. Niitäkään ei tarvita; voit sulkea ilmoitukset.
 
 3. Tarkista, että laajennus on paikallaan: valitse *View* › *Extensions*.
    *Installed*-luettelossa näkyvät *C# Dev Kit*, *C#* ja *.NET Install Tool*.
@@ -547,37 +545,37 @@ Laajennus on ilmainen opiskelu-, harrastus- ja avoimen lähdekoodin käytössä.
     Success: Jypeli.Templates installed the following templates:
     ```
 
-3. Kokeile, että kaikki toimii yhdessä, tekemällä kokeilupeli VS Codella.
-   Kurssin varsinaiset ohjelmat tulevat eri kansioon, jonka teet kirjan
-   luvussa [Ohjelmointiympäristö kuntoon](osa1/4-ohjelmointiymparisto-kuntoon.md).
 
-    1. Luo kotikansioosi kansio `Kokeilu`.
-    2. Avaa VS Codessa kansio `Kokeilu`: *File* › *Open Folder…*. macOS saattaa
-       kysyä, saako VS Code käyttää Tiedostot-kansion tiedostoja (*would like
-       to access files in your Documents folder*); valitse *Salli* (*Allow*).
-       Kun VS Code kysyy, luotatko kansion tekijöihin (*Do you trust the
-       authors of the files in this folder?*), valitse *Yes, I trust the
-       authors*. Jos kysymys jää huomaamatta, VS Code avaa kansion rajoitetussa
-       tilassa (*Restricted Mode* alapalkissa), jossa C#-laajennus ei toimi.
-       Napsauta silloin alapalkin *Restricted Mode* -tekstiä, valitse *Trust*
-       ja sulje avautunut *Workspace Trust* -välilehti ruksista. Lataa lopuksi
-       ikkuna uudelleen: avaa komentopaletti (**Ctrl+Shift+P**, macOS:
-       **Cmd+Shift+P**) ja valitse **Developer: Reload Window**. Ilman tätä
-       C#-laajennus ei lähde käyntiin.
-    3. Avaa komentopaletti (*View* › *Command Palette…* tai **Ctrl+Shift+P**,
-       macOS: **Cmd+Shift+P**), kirjoita `new project` ja valitse
-       **.NET: New Project...**
-    4. Valitse luettelosta pohja **Fysiikkapeli**. Jypeli-pohjat näkyvät
-       luettelossa, kun kohdan 2 asennus onnistui.
-    5. Anna pelille nimi `Testipeli` ja valitse sijainniksi **Default
-       directory**. Jos VS Code kysyy solution-tiedoston muotoa, valitse
-       **.slnx**. Valitse lopuksi **Create project**.
-    6. Avaa *Explorer*-näkymästä (vasen reuna) tiedosto `Testipeli/Testipeli.cs`
-       ja paina oikean yläkulman **▷**-painiketta. Ensimmäinen käännös kestää
-       hetken. Sen jälkeen aukeaa peli-ikkuna.
+## Kokeile, että kaikki toimii {#kokeilu}
 
-    Jos peli-ikkuna aukesi, kaikki on kunnossa. Sulje peli ja VS Code. Voit
-    halutessasi nyt poistaa `Kokeilu`-kansion: sitä ei tarvita enää.
+Kokeillaan nyt, että kaikki toimii yhdessä tekemällä kokeilupeli VS Codella.
+
+ 1. Luo kotikansioosi kansio `Kokeilu`.
+ 2. Avaa VS Codessa kansio `Kokeilu`: *File* › *Open Folder…*. macOS saattaa
+    kysyä, saako VS Code käyttää Tiedostot-kansion tiedostoja (*would like
+    to access files in your Documents folder*); valitse *Salli* (*Allow*).
+ 3. Kun VS Code kysyy, luotatko kansion tekijöihin (*Do you trust the
+    authors of the files in this folder?*), valitse *Yes, I trust the
+    authors*. Jos kysymys jää huomaamatta, VS Code avaa kansion rajoitetussa
+    tilassa (*Restricted Mode* alapalkissa), jossa C#-laajennus ei toimi.
+    Napsauta silloin alapalkin *Restricted Mode* -tekstiä, valitse *Trust*
+    ja sulje avautunut *Workspace Trust* -välilehti ruksista. 
+ 4. Lataa lopuksi ikkuna uudelleen: avaa komentopaletti (*View* › *Command
+    Palette…* tai **Ctrl+Shift+P** (Windows) / **Cmd+Shift+P** (macOS)) ja valitse
+    **Developer: Reload Window**. Ilman tätä C#-laajennus ei lähde käyntiin.
+ 5. Avaa komentopaletti, kirjoita `new project` ja valitse
+    **.NET: New Project...**
+ 6. Valitse luettelosta pohja **Fysiikkapeli**. Voit hakea pohjaa kirjoittamalla
+    hakukenttään `Fysiikkapeli`.
+ 7. Anna pelille nimi `Testipeli` ja valitse sijainniksi **Default
+    directory**. Jos VS Code kysyy solution-tiedoston muotoa, valitse
+    **.slnx**. Valitse lopuksi **Create project**.
+ 8. Avaa *Explorer*-näkymästä (vasen reuna) tiedosto `Testipeli/Testipeli.cs`
+    ja paina oikean yläkulman **▷**-painiketta. Ensimmäinen käännös kestää
+    hetken. Sen jälkeen aukeaa peli-ikkuna.
+
+Jos peli-ikkuna aukesi, kaikki on kunnossa. Sulje peli ja VS Code. Voit
+halutessasi nyt poistaa `Kokeilu`-kansion: sitä ei tarvita enää.
 
 ## VS Coden asetukset {#vscode-settings}
 
