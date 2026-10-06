@@ -354,13 +354,10 @@ Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.
 ### [macOS](#tab/macos)
 
 1. Avaa Pääte ellei se ole jo
-2. Asenna .NET suorittamalla alla olevat komennot (huom: yhteensä 2 komentoa):
+2. Asenna .NET suorittamalla alla oleva komento
     
     ```bash
-    brew tap isen-ng/dotnet-sdk-versions
-    ```
-    ```bash
-    brew install --cask dotnet-sdk10
+    brew install --cask dotnet-sdk
     ```
     
     Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
