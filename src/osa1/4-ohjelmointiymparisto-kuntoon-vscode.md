@@ -14,7 +14,7 @@ pääpiirteissään tältä:
 
 ```text
 Osa1/                  <- avaa tämä kansio VS Codessa
-├── Osa1.slnx          <- solution-tiedosto: luettelo osan peleistä. VS Code tekee ja päivittää sen itse.
+├── Lumiukko.slnx      <- solution-tiedosto: luettelo osan peleistä. VS Code tekee ja päivittää sen itse.
 ├── HelloWorld.cs      <- konsoliohjelma
 ├── Mina.cs            <- konsoliohjelma
 └── Lumiukko/          <- Jypeli-peli
@@ -103,7 +103,9 @@ Varoitus ei ole virhe: ohjelma kääntyy ja toimii.
 5. Valitse sijainniksi **Default directory**. Peli tulee avatun osa-kansion
    alle, esimerkiksi `Osa1/Lumiukko`.
 6. Jos VS Code kysyy solution-tiedoston muotoa, valitse **.slnx** (myös
-   *.sln* toimii). Kysymys tulee vain osan ensimmäisen pelin kohdalla.
+   *.sln* toimii). Kysymys tulee vain osan ensimmäisen pelin kohdalla, ja
+   tiedosto saa sen pelin nimen, esimerkiksi `Lumiukko.slnx`. Nimellä ei ole
+   merkitystä: tiedosto on luettelo osan kaikista peleistä.
 7. Valitse **Create project**.
 
 ### Pelin ajaminen
