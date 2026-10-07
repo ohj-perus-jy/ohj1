@@ -119,16 +119,16 @@ ohj1
  |
  +-demot 
  |  |
- |  '-Demo1              <- avaa tämä kansio VS Codessa
- |     |-Lumiukko.slnx   <- solution-tiedosto, VS Code tekee sen itse
- |     |-HelloWorld.cs   <- konsoliohjelma
- |     |-Lampotila.cs    <- konsoliohjelma
- |     '-Lumiukko        <- Jypeli-peli
+ |  '-Demo1             <- "avaa tämä kansio VS Codessa"
+ |     |-Lumiukko.slnx  <- "solution-tiedosto, VS Code tekee sen itse"
+ |     |-HelloWorld.cs  <- "konsoliohjelma"
+ |     |-Lampotila.cs   <- "konsoliohjelma"
+ |     '-Lumiukko       <- "Jypeli-peli"
  |        |
  |        |- Lumiukko.csproj
  |        |- Lumiukko.cs
  |        |- Ohjelma.cs
- |        '- Content     <- pelin kuvat ja äänet
+ |        '- Content    <- "pelin kuvat ja äänet"
  |
  '-harjoitustyo
 ```
@@ -243,9 +243,9 @@ ohj1
  |
  +-demot 
  |  |
- |  '-Demo1              <- tämä tehtiin nyt
+ |  '-Demo1             <- "tämä tehtiin nyt"
  |     |
- |     '-HelloWorld.cs   <- tämä tehtiin nyt
+ |     '-HelloWorld.cs  <- "tämä tehtiin nyt"
  |
  '-harjoitustyo
 ```
@@ -339,7 +339,7 @@ ohj1
  |  |  |-Lampotila.cs
  |  |  '-Lumiukko
  |  |
- |  '-Demo2          <- vastaavasti voisit tehdä lisää demokansioita
+ |  '-Demo2  <- "vastaavasti voisit tehdä lisää demokansioita"
  |     |-Noppa.cs
  |     '-...
  |
