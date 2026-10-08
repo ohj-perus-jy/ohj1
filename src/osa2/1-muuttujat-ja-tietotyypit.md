@@ -125,9 +125,6 @@ muuttujaan se ei käynyt. Ensimmäisellä rivillä `"100"` on lainausmerkeissä,
 joten se on teksti eikä luku, vaikka siinä on pelkkiä numeroita. Koska ohjelma ei
 käänny, yhtäkään sen riviä ei suoriteta.
 
-
-
-
 ```csharp
 using System;
 
