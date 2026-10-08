@@ -17,10 +17,7 @@ kehitysympäristö ja tehdään ensimmäinen graafinen ohjelma Jypeli-kirjastoll
 
 ## Luennot
 
-Luennot tukevat tekstiä. Katso ne ennen lukemista tai sen rinnalla.
-
-* [Luento 1: Johdatus, mitä ohjelmointi on?](../luennot/luento1.md)
-* [Luento 2: Kehitysympäristö, graafinen C#-ohjelma](../luennot/luento2.md)
+Päivitetään lähempänä toteutusta. 
 
 ## Käsitteet
 
