@@ -12,7 +12,7 @@ kunkin osan etusivulla.
 | attribuutti | *field* | luokan muuttuja, joka näkyy luokan kaikissa aliohjelmissa | [3](./osa3/3-muuttujien-nakyvyys.md#attribuutit) |
 | ehto | *condition* | totuusarvoinen lauseke, jonka perusteella ehtolause tekee valinnan | [3](./osa3/1-ehtolauseet.md) |
 | ehtolause | *conditional statement* | lause, joka suorittaa koodin vain, jos ehto on tosi | [3](./osa3/1-ehtolauseet.md) |
-| esittelyrivi | *method header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-funktiot.md#oma-funktio) |
+| esittelyrivi | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-funktiot.md#oma-funktio) |
 | funktio | *function* | aliohjelma, joka palauttaa arvon | [2](./osa2/4-funktiot.md) |
 | kirjasto | *library* | valmista koodia, jota oma ohjelma voi käyttää | [1](./osa1/1-mita-ohjelmointi-on.md#kirjasto) |
 | kokonaislukujako | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois | [1](./osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) |

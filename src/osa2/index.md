@@ -24,14 +24,7 @@ arvoilla.
 
 ## Luennot
 
-Luentojen numerointi on kevään 2026 toteutuksen mukainen. Uuden toteutuksen
-luennot päivitetään tähän.
-
-* [Luento 3: Muuttujat](../luennot/luento3.md)
-* [Luento 4: Aliohjelmat](../luennot/luento4.md)
-* [Luento 5: Muuttujat, operaattorit, aliohjelman paluuarvo](../luennot/luento5.md)
-* [Luento 6: Aliohjelman kuormittaminen, ehtolauseet](../luennot/luento6.md)
-* [Luento 11: Tyyppimuunnokset, kertaus operaattoreista](../luennot/luento11.md)
+Päivitetään lähempänä toteutusta.
 
 ## Käsitteet
 
@@ -42,7 +35,7 @@ ovat [sanastossa](../sanasto.md).
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
 | [argumentti](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *argument* | kutsussa aliohjelmalle annettava arvo |
-| [esittelyrivi](./4-funktiot.md#oma-funktio) | *method header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
+| [esittelyrivi](./4-funktiot.md#oma-funktio) | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
 | [funktio](./4-funktiot.md) | *function* | aliohjelma, joka palauttaa arvon |
 | [kuormittaminen](./4-funktiot.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
 | [lauseke](./3-lauseet-ja-lausekkeet.md#lauseke) | *expression* | koodin osa, jolla on arvo ja tyyppi |
