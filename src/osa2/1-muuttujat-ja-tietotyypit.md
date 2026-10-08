@@ -27,16 +27,41 @@ arvoja muuttujissa on. Kun muuttujan arvo muuttuu, ohjelman tila muuttuu.
 
 C#-kielessä jokaiselle muuttujalle on kerrottava *tyyppi* ja *nimi* ennen
 käyttöä. Tyyppi määrittää tarkasti, millaisia arvoja muuttujaan voi tallentaa.
-Määrittelyn yhteydessä muuttujalle annetaan yleensä heti myös arvo
-yhtäsuuruusmerkillä `=`.
+Aloitetaan yhdestä muuttujasta, johon tallennetaan pelin pisteet.
 
 ```csharp,ignore
-int pisteet = 0;          // pisteet-muuttujaan voi tallentaa kokonaislukuja
-string nimi = "Maija";    // nimi-muuttujaan voi tallentaa merkkijonoja
-bool peliOhi = false;     // peliOhi-muuttujaan voi tallentaa totuusarvoja
+int pisteet = 7;
 ```
 
-Esimerkin kolme muuttujaa:
+Rivi tekee kaksi asiaa. Ensin se *määrittelee* muuttujan: `int` on tyyppi ja
+tarkoittaa kokonaislukua, ja `pisteet` on muuttujan nimi. Tämän jälkeen
+ohjelmalla on muistissaan paikka nimeltä `pisteet`, johon mahtuu yksi
+kokonaisluku. Sitten `= 7` *sijoittaa* paikkaan arvon `7`. Puolipiste päättää
+rivin, kuten tulostuskäskynkin. Muistipaikan sisältö näyttää nyt tältä:
+
+| Nimi      | Tyyppi | Mitä voi sisältää | Arvo |
+| --------- | ------ | ----------------- | ---- |
+| `pisteet` | `int`  | kokonaisluku      | `7`  |
+
+Muuttujat määritellään aina samalla kaavalla: tyyppi, nimi, yhtäsuuruusmerkki ja
+arvo. Lisätään pelaajan nimi ja tieto siitä, onko peli ohi.
+
+```csharp,ignore
+string nimi = "Maija";
+bool peliOhi = false;
+```
+
+Muuttuja `nimi` on tyypiltään `string`, mikä tarkoittaa merkkijonoa. Merkkijono voi
+sisältää esimerkiksi kirjaimia, numeroita ja erikoismerkkejä. Esimerkkejä
+merkkijonoista ovat `"Hei!"`, `"12345"` ja `"Ohjelmointi on kivaa."`. Huomaa,
+että merkkijonot kirjoitetaan lainausmerkkien sisälle: `12345` on luku,
+`"12345"` on viiden merkin mittainen teksti.
+
+Muuttuja `peliOhi` on tyypiltään `bool`, eli totuusarvo. Totuusarvo voi olla
+joko `true` (tosi) tai `false` (epätosi). Totuusarvoja syntyy esimerkiksi
+vertailuista: `5 > 3` on `true` ja `2 == 4` on `false`.
+
+Nyt ohjelmalla on kolme muistipaikkaa:
 
 | Nimi      | Tyyppi   | Mitä voi sisältää | Arvo      |
 | --------- | -------- | ----------------- | --------- |
@@ -44,24 +69,26 @@ Esimerkin kolme muuttujaa:
 | `nimi`    | `string` | merkkijono        | `"Maija"` |
 | `peliOhi` | `bool`   | totuusarvo        | `false`   |
 
-Ensimmäinen muuttuja nimeltä `pisteet` on tyypiltään `int`, eli kokonaisluku.
-Muita kokonaislukuja voisivat olla esimerkiksi `-10`, `0` ja `67`.
+## Arvon sijoittaminen ja muuttaminen
 
-Toinen muuttuja nimeltä `nimi` on tyypiltään `string`, eli merkkijono.
-Merkkijono voi sisältää esimerkiksi kirjaimia, numeroita ja erikoismerkkejä.
-Esimerkkejä merkkijonoista ovat `"Hei!"`, `"12345"` ja `"Ohjelmointi on
-kivaa."`. Huomaa, että merkkijonot kirjoitetaan lainausmerkkien sisälle:
-`12345` on luku, `"12345"` on viiden merkin mittainen teksti.
+Muuttujan arvoa voi muuttaa ohjelman suorituksen aikana. Jos esimerkiksi pelaaja
+kerää kolikon, nimi vaihtuu tai peli päättyy, ohjelmassa voidaan sijoittaa uusi arvo muuttujaan:
 
-Kolmas muuttuja nimeltä `peliOhi` on tyypiltään `bool`, eli totuusarvo.
-Totuusarvo voi olla joko `true` (tosi) tai `false` (epätosi). Totuusarvoja
-syntyy esimerkiksi vertailuista: `5 > 3` on `true` ja `2 == 4` on `false`.
+```csharp,ignore
+pisteet = 8;
+nimi = "Matti";
+peliOhi = true;
+```
 
-Muuttujan tyyppi säilyy samana koko muuttujan elinkaaren ajan. Jos ohjelmoija
-yrittää tallentaa muuttujaan väärän tyyppisen arvon, kääntäminen epäonnistuu.
-Alla jokaiseen kolmeen muuttujaan yritetään sijoittaa arvo, joka ei ole sen
-tyyppinen. Klikkaa Play nähdäksesi, mitä kääntäjä sanoo. Koodia voi muokata:
-kokeile sen jälkeen itse, mitä muuta muuttujiin ei mahdu, esimerkiksi
+Muuttujan arvon muuttamista kutsutaan *sijoituslauseeksi*. Sijoituksen kohde on
+aina vasemmalla (tässä `pisteet`, `nimi` tai `peliOhi`), ja oikealla on
+muuttujaan tallennettava (eli "sijoitettava") arvo. 
+
+Muuttujan tyyppi säilyy kuitenkin samana koko muuttujan elinkaaren ajan. Jos
+ohjelmoija yrittää tallentaa muuttujaan väärän tyyppisen arvon, kääntäminen
+epäonnistuu. Alla jokaiseen kolmeen muuttujaan yritetään sijoittaa arvo, joka ei
+ole sen tyyppinen. Klikkaa Play nähdäksesi, mitä kääntäjä sanoo. Koodia voi
+muokata: kokeile sen jälkeen itse, mitä muuta muuttujiin ei mahdu, esimerkiksi
 `pisteet = 2.5;` tai `peliOhi = "true";`, ja korjaa lopuksi sijoitukset niin,
 että ohjelma kääntyy.
 
@@ -95,15 +122,11 @@ error CS0029: Cannot implicitly convert type 'int' to 'bool'
 
 Ilmoitus kertoo, minkä tyyppinen arvo oli tarjolla ja minkä tyyppiseen
 muuttujaan se ei käynyt. Ensimmäisellä rivillä `"100"` on lainausmerkeissä,
-joten se on teksti eikä luku, vaikka siinä on pelkkiä numeroita. Viimeinen
-rivi `peliOhi = 1` on tavallinen erehdys: joissakin kielissä 1 tarkoittaa
-totta, mutta C#:ssa totuusarvo on vain `true` tai `false`. Koska ohjelma ei
+joten se on teksti eikä luku, vaikka siinä on pelkkiä numeroita. Koska ohjelma ei
 käänny, yhtäkään sen riviä ei suoriteta.
 
-## Arvon sijoittaminen ja muuttaminen
 
-Muuttujan arvoa muutetaan *sijoituslauseella*. Sijoituksen kohde on aina
-vasemmalla, ja oikealla on lauseke, jonka arvo lasketaan ja tallennetaan.
+
 
 ```csharp
 using System;
