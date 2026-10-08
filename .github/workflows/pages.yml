@@ -59,6 +59,13 @@ jobs:
           python-version: "3.11"
           cache: pip
           cache-dependency-path: zensical/tyokalut/requirements.txt
+      # Sanasto kootaan käsin osien Käsitteet-taulukoista (skriptit/sanasto.py);
+      # vanhentunut sanasto kaataa julkaisun. Haara ilman skriptiä ohitetaan.
+      - name: Check glossary
+        run: |
+          if [ -f skriptit/sanasto.py ]; then
+            python3 skriptit/sanasto.py --check
+          fi
       - name: Install Zensical
         run: pip install -r zensical/tyokalut/requirements.txt
       - name: Convert and build

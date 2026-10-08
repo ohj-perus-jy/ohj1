@@ -47,7 +47,8 @@ Materiaali on `src/`:ssä.
   lisätietolaatikoiden käsitteitä. Taulukko pidetään lyhyenä.
   `src/sanasto.md` kootaan taulukoista
   komennolla `python3 skriptit/sanasto.py`, ei käsin. Skripti järjestää
-  myös osien taulukot suomen aakkosjärjestykseen.
+  myös osien taulukot suomen aakkosjärjestykseen. Julkaisu (`pages.yml`)
+  kaatuu, jos sanasto tai taulukoiden järjestys on vanhentunut.
 - Uuden tekstin on sovittava kirjan kokonaisuuteen ja tyyliin. Käsite
   esitellään ennen kuin sitä käytetään; tarkista aiemmista osista ja
   aliosista, onko se jo esitelty.
