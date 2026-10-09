@@ -53,7 +53,24 @@ for term, en, desc, href, n in rows:
         continue
     seen[term] = n
     out.append(f"| {term} | {en} | {desc} | [{n}]({href}) |")
-save(src / "sanasto.md", "\n".join(out) + "\n")
-print(len(seen), "käsitettä")
+glossary = src / "sanasto.md"
+entry = re.compile(r"^\| (?P<term>[^|]+) \| (?P<en>[^|]+) \| (?P<desc>.+) \| \[(?P<n>\d+)\]\([^)]+\) \|$")
+before = {}
+if glossary.exists():
+    for line in glossary.read_text().splitlines():
+        if m := entry.match(line):
+            before[m["term"].strip()] = (m["en"].strip(), m["desc"].strip(), int(m["n"]))
+after = {term: (en, desc, n) for term, en, desc, href, n in rows if seen[term] == n}
+for term in sorted(after.keys() - before.keys(), key=lambda t: key([t])):
+    print(f"lisätty: {term} (osa {after[term][2]})")
+for term in sorted(before.keys() - after.keys(), key=lambda t: key([t])):
+    print(f"poistettu: {term} (osa {before[term][2]})")
+labels = ("englanniksi", "selitys", "osa")
+for term in sorted(after.keys() & before.keys(), key=lambda t: key([t])):
+    changed = [l for l, a, b in zip(labels, after[term], before[term]) if a != b]
+    if changed:
+        print(f"muuttunut: {term} ({', '.join(changed)})")
+save(glossary, "\n".join(out) + "\n")
+print(f"sanastossa {len(seen)} käsitettä" + ("" if before != after else ", ei muutoksia"))
 if stale:
     sys.exit(f"vanhentunut: {', '.join(stale)}; aja python3 skriptit/sanasto.py")
