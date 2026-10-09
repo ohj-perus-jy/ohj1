@@ -23,8 +23,7 @@ muuntamaan arvo tyypistä toiseen ja lukemaan luku käyttäjältä.
 
 ## Laskeminen muuttujilla
 
-Muuttujilla voi
-[laskea](../osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) aivan kuten
+Muuttujilla voi laskea aivan kuten
 luvuilla. Laskussa muuttuja edustaa arvoaan. 
 
 Useissa alla olevissa esimerkeissä on piilotettu sellaista koodia, joka ei ole
@@ -50,9 +49,9 @@ koodilaatikon yläreunassa olevaa silmän kuvaa.
 //-}
 ```
 
-Käytettäessä muuttujia on huomioitava [kokonaisluvuilla
-jakaminen](../osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) samaan
-tapaan kuin pelkillä luvuilla laskettaessa. Kun jaettava ja jakaja ovat molemmat
+Käytettäessä muuttujia on huomioitava kokonaisluvuilla
+jakaminen [samaan
+tapaan kuin](../osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) pelkillä luvuilla laskettaessa. Kun jaettava ja jakaja ovat molemmat
 tyyppiä `int`, myös tulos on `int` ja desimaaliosa katkaistaan pois. Muuttujilla
 virhe on vielä kavalampi kuin luvuilla, koska rivistä `a / b` ei näe tyyppejä.
 Ne on katsottava muuttujien määrittelystä. 
@@ -76,11 +75,6 @@ säilyvät.
 //-}
 ```
 
-[Liukulukujen](1-muuttujat-ja-tietotyypit.md#perustietotyypit) epätarkkuuden
-vuoksi kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus:
-`0.1 + 0.2 == 0.3` on C#:ssa `false`. Lisää aiheesta kerrotaan liitteessä
-[Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
-
 Kokonaisluvun jakaminen nollalla kaataa ohjelman
 (`DivideByZeroException`). Liukuluvun jakaminen nollalla ei kaada: jos `x` on
 `double`, `x / 0` on `∞` (`Infinity`), mikä on matemaattisesti kyseenalaista
@@ -98,8 +92,18 @@ välissä se liittää tekstit peräkkäin, kuten
 [aiemmassa tervehdysesimerkissä](1-muuttujat-ja-tietotyypit.md#muuttujan-tulostaminen).
 Jos vain toinen osapuoli on merkkijono, toinen muutetaan ensin tekstiksi.
 Siksi `"Summa: " + a + b` liittää luvut tekstin perään eikä laske niitä yhteen.
-Sulkeet `"Summa: " + (a + b)` korjaavat asian, ja interpoloitu merkkijono
-`$"Summa: {a + b}"` välttää koko ongelman.
+Sulkeilla laskujärjestykseen voidaan vaikuttaa, ja interpoloitu merkkijono
+välttää koko ongelman. Huomaa edelleen, että `+` "lasketaan
+auki" vasemmalta oikealle. Kokeile esimerkkejä alla.
+
+```csharp,editable
+int a = 1;
+int b = 2;
+Console.WriteLine("Summa: " + a + b); 
+Console.WriteLine("Summa: " + (a + b)); 
+Console.WriteLine(a + b + " onpi summa."); 
+Console.WriteLine($"Summa: {a + b}"); 
+```
 
 <details closed id="operaattorin-kuormittaminen"><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Operaattorit omille tyypeille</summary>
 
@@ -292,6 +296,13 @@ public class Vertailuja
 > [!VAROITUS]
 > Yhtäsuuruutta verrataan kahdella yhtäsuuruusmerkillä `==`. Yksi merkki `=`
 > on sijoitus. Kääntäjä huomaa sekaannuksen useimmiten, mutta ei aina.
+
+Kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus, koska
+[liukuluvut ovat likiarvoja](../osa1/3-laskutoimitukset.md#liukuluvuilla-laskeminen):
+`0.1 + 0.2 == 0.3` on C#:ssa `false`. Liukulukuja kannattaa verrata
+tarkistamalla, onko niiden erotus riittävän pieni. Lisää aiheesta kerrotaan
+liitteessä
+[Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
 ## Loogiset operaattorit
 
