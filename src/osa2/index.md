@@ -35,6 +35,7 @@ ovat [sanastossa](../sanasto.md).
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
 | [argumentti](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *argument* | kutsussa aliohjelmalle annettava arvo |
+| [avainsana](./1-muuttujat-ja-tietotyypit.md#muuttujan-nimeäminen) | *keyword* | sana, jolla on kielessä kiinteä merkitys ja jota ei voi käyttää omana nimenä |
 | [esittelyrivi](./4-funktiot.md#oma-funktio) | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
 | [funktio](./4-funktiot.md) | *function* | aliohjelma, joka palauttaa arvon |
 | [kuormittaminen](./4-funktiot.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |

@@ -47,21 +47,25 @@ Muuttujat määritellään aina samalla kaavalla: tyyppi, nimi, yhtäsuuruusmerk
 arvo. Lisätään pelaajan nimi ja tieto siitä, onko peli ohi.
 
 ```csharp,ignore
+int pisteet = 7;
+// HIGHLIGHT_GREEN_BEGIN
 string nimi = "Maija";
 bool peliOhi = false;
+// HIGHLIGHT_GREEN_END
 ```
 
-Muuttuja `nimi` on tyypiltään `string`, mikä tarkoittaa merkkijonoa. Merkkijono voi
-sisältää esimerkiksi kirjaimia, numeroita ja erikoismerkkejä. Esimerkkejä
-merkkijonoista ovat `"Hei!"`, `"12345"` ja `"Ohjelmointi on kivaa."`. Huomaa,
-että merkkijonot kirjoitetaan lainausmerkkien sisälle: `12345` on luku,
-`"12345"` on viiden merkin mittainen teksti.
+Muuttuja `nimi` on tyypiltään `string`, mikä tarkoittaa merkkijonoa. Merkkijono
+on ohjelmoinnissa tapa tallentaa tekstiä, kuten kirjaimia, numeroita ja
+erikoismerkkejä. Esimerkkejä merkkijonoista ovat `"Hei!"`, `"12345"` ja
+`"Ohjelmointi on kivaa."`. Huomaa, että merkkijonot kirjoitetaan lainausmerkkien
+sisälle: `12345` on luku, `"12345"` on viiden merkin mittainen teksti.
 
 Muuttuja `peliOhi` on tyypiltään `bool`, eli totuusarvo. Totuusarvo voi olla
 joko `true` (tosi) tai `false` (epätosi). Totuusarvoja syntyy esimerkiksi
-vertailuista: `5 > 3` on `true` ja `2 == 4` on `false`.
+vertailuista: `5 > 3` on `true` ja `2 == 4` on `false` -- palaamme vertailuihin
+hieman myöhemmin. 
 
-Nyt ohjelmalla on kolme muistipaikkaa:
+Nyt ohjelmamme sisältää kolme muuttujaa: 
 
 | Nimi      | Tyyppi   | Mitä voi sisältää | Arvo      |
 | --------- | -------- | ----------------- | --------- |
@@ -80,17 +84,14 @@ nimi = "Matti";
 peliOhi = true;
 ```
 
-Muuttujan arvon muuttamista kutsutaan *sijoituslauseeksi*. Sijoituksen kohde on
-aina vasemmalla (tässä `pisteet`, `nimi` tai `peliOhi`), ja oikealla on
+Muuttujan arvon muuttamista kutsutaan *sijoituslauseeksi*. Yksi yleisimmistä
+tavoista tehdä sijoituslause on käyttää yhtäsuuruusmerkkiä `=`. Sijoituksen
+kohde on aina vasemmalla (tässä `pisteet`, `nimi` tai `peliOhi`), ja oikealla on
 muuttujaan tallennettava (eli "sijoitettava") arvo. 
 
-Muuttujan tyyppi säilyy kuitenkin samana koko muuttujan elinkaaren ajan. Jos
+Toisin kuin muuttujan arvo, sen tyyppi säilyy samana koko muuttujan elinkaaren ajan. Jos
 ohjelmoija yrittää tallentaa muuttujaan väärän tyyppisen arvon, kääntäminen
-epäonnistuu. Alla jokaiseen kolmeen muuttujaan yritetään sijoittaa arvo, joka ei
-ole sen tyyppinen. Klikkaa Play nähdäksesi, mitä kääntäjä sanoo. Koodia voi
-muokata: kokeile sen jälkeen itse, mitä muuta muuttujiin ei mahdu, esimerkiksi
-`pisteet = 2.5;` tai `peliOhi = "true";`, ja korjaa lopuksi sijoitukset niin,
-että ohjelma kääntyy.
+epäonnistuu. Alla jokaiseen kolmeen muuttujaan yritetään väärän tyyppinen arvo. Klikkaa Play nähdäksesi, mitä kääntäjä sanoo.
 
 ```csharp,editable
 using System;
@@ -112,18 +113,22 @@ public class VaaratTyypit
 }
 ```
 
-Kääntäjä ilmoittaa jokaisesta rivistä erikseen:
+Kääntäjä ilmoittaa jokaisesta rivistä erikseen; esimerkiksi: 
 
 ```text
 error CS0029: Cannot implicitly convert type 'string' to 'int'
-error CS0029: Cannot implicitly convert type 'int' to 'string'
-error CS0029: Cannot implicitly convert type 'int' to 'bool'
 ```
 
-Ilmoitus kertoo, minkä tyyppinen arvo oli tarjolla ja minkä tyyppiseen
-muuttujaan se ei käynyt. Ensimmäisellä rivillä `"100"` on lainausmerkeissä,
-joten se on teksti eikä luku, vaikka siinä on pelkkiä numeroita. Koska ohjelma ei
-käänny, yhtäkään sen riviä ei suoriteta.
+Ilmoitus kertoo, minkä tyyppinen arvo oli tarjolla (tässä `string`) ja minkä
+tyyppiseen muuttujaan (tässä `int`) se ei käynyt. Tämä johtuu, että
+ensimmäisellä rivillä `"100"` on lainausmerkeissä, eikä ohjelma muuta sitä
+automaattisesti luvuksi. Koska ohjelma ei käänny, yhtäkään sen riviä ei
+suoriteta.
+
+Voit muokata yllä olevaa koodia: kokeile muokata esimerkiksi `pisteet = 2.5;`
+tai `peliOhi = "true";`. Korjaa lopuksi koodi niin, että ohjelma kääntyy.
+
+Tehdään toinen ohjelma.
 
 ```csharp
 using System;
@@ -144,10 +149,11 @@ public class Pistelasku
 }
 ```
 
-Rivi `pisteet = pisteet + 5;` näyttää matemaatikosta virheelliseltä, mutta
+Rivi `pisteet = pisteet + 5;` näyttää matemaattisesti virheelliseltä, mutta
 ohjelmoinnissa `=` ei tarkoita "on yhtä suuri kuin" vaan "laske oikea puoli ja
 tallenna tulos vasemmalle". Ensin lasketaan `pisteet + 5` muuttujan nykyisellä
 arvolla (10 + 5 = 15), ja sitten tulos tallennetaan muuttujaan `pisteet`.
+Muista: Yhtäsuuruusmerkillä sijoitetaan oikean puolen arvo vasemmalla olevaan muuttujaan.
 
 Muuttujan arvo muuttuu *vain* silloin, kun siihen sijoitetaan. Tämä kuulostaa
 itsestään selvältä, mutta aiheuttaa yllätyksiä:
@@ -176,38 +182,46 @@ myöhemmin muuttuu, `b` ei tiedä siitä mitään. Rivi `a = 100;` muuttaa vain
 | `a`  | `int`  | `5`        | `100`        |
 | `b`  | `int`  | `5`        | `5`          |
 
+## Muuttujan käyttö ennen määrittelyä
+
 Muuttujaa ei voi käyttää ennen kuin sillä on arvo. Jos kirjoitat `int x;` ja
-yrität tulostaa `x`:n, kääntäjä ilmoittaa `CS0165: Use of unassigned local
-variable 'x'`. Anna siis arvo heti määrittelyn yhteydessä, ellei ole hyvää
-syytä olla antamatta.
+yrität tulostaa `x`:n, kääntäjä ilmoittaa 
+
+```
+CS0165: Use of unassigned local variable 'x'. 
+```
+
+Yleensä arvo on syytä heti määrittelyn yhteydessä. Joskus kuitenkin arvo saadaan
+myöhemmin, esimerkiksi käyttäjän syötteenä. Tällöin muuttuja voidaan
+määritellään ilman arvoa.
 
 ## Perustietotyypit
 
-Yllä käytetyt `int`, `string` ja `bool` ovat C#-kielen perustietotyyppejä.
-Alla on lueteltu tällä kurssilla tarvittavat tyypit ja niiden tärkeimmät
-ominaisuudet.
+Yllä käytetyt `int`, `string` ja `bool` ovat C#-kielen mukana tulevia valmiita
+tietotyyppejä. C#:n mukana tulee [yhteensä 19 tyyppiä](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types), joista kurssilla käytetään vain muutamaa. Alla on
+lueteltu tällä kurssilla tarvittavat tyypit ja niiden tärkeimmät ominaisuudet.
 
 Lukutyypit:
 
 | Tietotyyppi | Kuvaus                      | Arvoalue                                                   | Esimerkkejä arvoista       |
 | ----------- | --------------------------- | ---------------------------------------------------------- | -------------------------- |
 | `int`       | Kokonaisluku                | -2 147 483 648 &ndash; 2 147 483 647                       | `-10`, `0`, `67`           |
+| `long`      | Pitkä kokonaisluku          | n. ±9,2 · 10<sup>18</sup>                                  | `-10000000000`, `0`, `42`  |
 | `double`    | Liukuluku (desimaaliluku)   | n. ±1.79 · 10<sup>308</sup>, noin 15 merkitsevää numeroa   | `3.14`, `-0.001`, `2.0`    |
-| `float`     | Liukuluku (vähemmän tarkka) | n. ±3.40 · 10<sup>38</sup>, noin 7 merkitsevää numeroa     | `3.14f`, `-0.001f`, `2.0f` |
 
 Nimitys "liukuluku" tulee siitä, että luvun tarkkuus "liukuu" sen mukaan, kuinka
-suuri luku on. 
+suuri luku on. Mitä lähempänä nollaa luku on, sitä enemmän desimaaleja mahtuu
+mukaan; mitä suurempi luku on, sitä vähemmän desimaaleja mahtuu mukaan.
 
 <details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi nimitys "liukuluku"?</summary>
 
-Merkitsevien numeroiden määrä on kiinteä: `float`-tyyppisillä luvuilla noin 6–9,
-`double`-tyyppisillä noin 15–17 desimaalinumeroa. Mitä kauempana luku on
-nollasta, sitä vähemmän tarkkuutta jää desimaaliosalle. Esimerkiksi
-`double`-arvoilla luvun 2<sup>53</sup> ≈ 9 × 10<sup>15</sup> yläpuolella edes
-kaikki kokonaisluvut eivät ole enää esitettävissä. Mitä lähempänä nollaa luku
-on, sitä enemmän desimaaleja mahtuu mukaan; mitä suurempi luku on, sitä vähemmän
-desimaaleja mahtuu mukaan. Liukuluvut ovat suurelta osin epätarkkoja, ja
-epätarkkuus kasvaa, kun lukuja lasketaan yhteen tai vähennetään toisistaan.
+Merkitsevien numeroiden määrä on kiinteä: `double`-tyyppisillä tyypeillä
+desimaaliosan tarkkuus on noin 15–17 merkitsevää numeroa. C#:ssa on toinenkin
+liukulukutyyppi, `float`, jonka desimaaliosan tarkkuus on noin 6-9 merkitsevää
+numeroa. Esimerkiksi `double`-arvoilla luvun 2<sup>53</sup> ≈ 9 ×
+10<sup>15</sup> yläpuolella edes kaikki kokonaisluvut eivät ole enää
+esitettävissä. Liukuluvut ovat suurelta osin epätarkkoja, ja epätarkkuus kasvaa,
+kun lukuja lasketaan yhteen tai vähennetään toisistaan.
 
 </details>
 
@@ -223,10 +237,10 @@ Muutama huomio:
 
 * **Desimaalierotin on piste**, ei pilkku: `3.14`. Pilkku tarkoittaa C#:ssa
   jotakin aivan muuta, ja `3,14` aiheuttaa käännösvirheen.
-* **`double` on kurssin oletusliukuluku.** `float`-tyyppiä tarvitaan lähinnä
-  Jypelissä, ja sen arvon perään kirjoitetaan `f`. Jos et tiedä, kumpaa
-  käyttää, käytä `double`-tyyppiä.
-* **`char` kirjoitetaan puolilainausmerkein**, `string` lainausmerkein:
+* **`double` on kurssin oletusliukuluku.** Saatat törmätä `float`-tyyppiin
+  jos selaat esimerkiksi Jypelin lähdekoodia, mutta kurssilla käytetään vain
+  `double`-tyyppiä koska se on tarkempi ja helpompi käyttää. 
+* **`char` kirjoitetaan heittomerkkien sisään**, `string` lainausmerkein:
   `'a'` on yksi merkki, `"a"` on yhden merkin mittainen merkkijono.
 * **`int` ei riitä kaikkeen.** Maailman väkiluku (yli 8 miljardia) ei mahdu
   `int`-muuttujaan. Silloin käytetään `long`-tyyppiä, jonka arvoalue on noin
@@ -252,8 +266,9 @@ tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
 
 ## Muuttujan nimeäminen
 
-Muuttujan nimi kertoo lukijalle, mitä muuttuja sisältää. Hyvä nimi säästää
-kommentin: `int pelaajanPisteet` ei kaipaa selitystä, `int p` kaipaa.
+Muuttujan nimi kertoo lukijalle, mitä muuttuja sisältää. Nimen on syytä
+kommunikoida riittävällä tarkkuudella se, mitä muuttuja sisältää: 
+`int pelaajanPisteet` ei kaipaa selitystä, `int p` kaipaa.
 
 C#-kielen säännöt nimille:
 
@@ -261,8 +276,8 @@ C#-kielen säännöt nimille:
   numerolla. `pisteet2` kelpaa, `2pisteet` ei.
 * Isot ja pienet kirjaimet ovat eri merkkejä: `pisteet` ja `Pisteet` ovat
   kaksi eri muuttujaa. Tämä on tehokas tapa aiheuttaa itselleen hämmennystä.
-* Kielen *avainsanoja*, kuten `int`, `class` tai `public`, ei voi käyttää
-  niminä.
+* C#-kielen *avainsanoja* (engl. *keyword*) ei voi käyttää niminä. Avainsana on
+  sana, jolla on kielessä kiinteä merkitys, kuten `int`, `class` tai `public`.
 
 Kurssin käytännöt on kuvattu [Tyylioppaassa](../tyyliopas.md). Tärkeimmät:
 
@@ -277,23 +292,29 @@ Kurssin käytännöt on kuvattu [Tyylioppaassa](../tyyliopas.md). Tärkeimmät:
 Huonon nimeämisen seuraukset näkee viimeistään kuukauden päästä:
 
 ```csharp,ignore
-double a = 72.5;
-double b = 1.80;
-double c = a / (b * b);   // Mikä tämä nyt olikaan?
+double a = 42.5;
+double b = 600;
+double c = a / b * 100;   // Mikä tämä nyt olikaan?
 ```
 
 ```csharp,ignore
-double paino = 72.5;
-double pituus = 1.80;
-double painoindeksi = paino / (pituus * pituus);
+double litrat = 42.5;
+double kilometrit = 600;
+double kulutus = litrat / kilometrit * 100;
 ```
 
 ## Muuttujan tulostaminen
 
 Muuttujan arvon voi tulostaa sellaisenaan tai osana tekstiä. Tekstin ja
-muuttujien yhdistämiseen kätevin tapa on *interpoloitu merkkijono*: kirjoita
-lainausmerkkien eteen `$`, jolloin aaltosulkujen sisään voi kirjoittaa
-muuttujan tai muun lausekkeen.
+muuttujien yhdistämiseen on kaksi tapaa: 
+
+ * **`+`-merkki**, jolloin tekstit ja muuttujat "lisätään" peräkkäin,
+   esimerkiksi `"Hei, " + nimi + "!"`.
+ * **interpolointi**, esimeriksi `$"Hei, {nimi}!"`. Tässä aaltosulkujen sisään
+   voi kirjoittaa muuttujan nimen tai muun lausekkeen, jonka arvo sijoitetaan
+   tekstiin. Huomaa alkuun laitettava `$`-merkki. 
+   
+Ohessa on ajettava esimerkki.
 
 ```csharp
 using System;
@@ -307,13 +328,13 @@ public class Tervehdys
 
         Console.WriteLine(nimi);
         Console.WriteLine("Hei, " + nimi + "!");                // yhdistäminen +-merkillä
-        Console.WriteLine($"Hei, {nimi}! Olet {ika} vuotta.");   // interpolointi
-        Console.WriteLine($"Ensi vuonna olet {ika + 1}.");       // lauseke aaltosuluissa
+        Console.WriteLine($"Hei, {nimi}! Olet {ika} vuotta.");  // interpolointi
+        Console.WriteLine($"Ensi vuonna olet {ika + 1}.");      // lauseke aaltosuluissa
     }
 }
 ```
 
-## Syötteen lukeminen
+## Syötteen lukeminen käyttäjältä
 
 Tähän asti muuttujien arvot on kirjoitettu lähdekoodiin. Ohjelmasta tulee
 kiinnostavampi, kun arvon antaa käyttäjä. `Console.ReadLine` pysäyttää
@@ -464,10 +485,10 @@ paikalle.
 <kysymys>
 Mikä seuraavista on kelvollinen ja tyyliohjeen mukainen muuttujan nimi?
 
-- [ ] `Painoindeksi`
-- [ ] `paino_indeksi`
-- [x] `painoindeksi`
-- [ ] `2paino`
+- [ ] `Kulutus`
+- [ ] `polttoaineen_kulutus`
+- [x] `kulutus`
+- [ ] `100kmKulutus`
 
 <perustelu>
 **c.** Muuttujat nimetään camelCase-tyylillä pienellä alkukirjaimella. Iso
@@ -501,7 +522,7 @@ tulostuisi vaihtoehto a.
 ## Tehtävät
 
 <!-- Vaiheessa B lisäksi: "Mitä ohjelma tulostaa?" (sijoitusten jäljitys) ja
-     "Painoindeksi". -->
+     "Polttoaineenkulutus". -->
 
 <task>
   <task-title num="2.1">Määrittele muuttujat <points>1 p.</points></task-title>

@@ -10,6 +10,7 @@ kunkin osan etusivulla.
 | aliohjelma | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | argumentti | *argument* | kutsussa aliohjelmalle annettava arvo | [2](./osa2/4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) |
 | attribuutti | *field* | luokan muuttuja, joka näkyy luokan kaikissa aliohjelmissa | [3](./osa3/3-muuttujien-nakyvyys.md#attribuutit) |
+| avainsana | *keyword* | sana, jolla on kielessä kiinteä merkitys ja jota ei voi käyttää omana nimenä | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-nimeäminen) |
 | ehto | *condition* | totuusarvoinen lauseke, jonka perusteella ehtolause tekee valinnan | [3](./osa3/1-ehtolauseet.md) |
 | ehtolause | *conditional statement* | lause, joka suorittaa koodin vain, jos ehto on tosi | [3](./osa3/1-ehtolauseet.md) |
 | esittelyrivi | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-funktiot.md#oma-funktio) |

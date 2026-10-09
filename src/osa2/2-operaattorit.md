@@ -9,29 +9,36 @@ vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
 
 ## Mihin operaattoreita tarvitaan?
 
-* **Painoindeksi.** Paino jaetaan pituuden neliöllä. Jos paino ja pituus ovat
-  kokonaislukumuuttujissa, jakolasku katkaisee desimaalit, ja tarvitaan
-  tyyppimuunnos.
-* **Käyttäjän syöte.** Käyttäjän kirjoittama ikä on tekstiä. Ennen kuin sillä
-  voi laskea, teksti on muunnettava luvuksi.
 * **Pelin pistelaskuri.** "Lisää pisteisiin kymmenen" on niin yleinen
   toimenpide, että sille on oma lyhennysmerkintänsä `pisteet += 10`.
+* **Käyttäjän syöte.** Käyttäjän kirjoittama ikä on tekstiä, ja tekstin
+  kanssa `+` liittää eikä laske: `"20" + 1` on `"201"`. Ennen laskemista
+  teksti on muunnettava luvuksi.
+* **Polttoaineenkulutus.** Tankatut litrat jaetaan ajetuilla kilometreillä
+  ja kerrotaan sadalla. Jos litrat ja kilometrit ovat kokonaislukumuuttujissa,
+  jakolasku katkaisee desimaalit, ja tarvitaan tyyppimuunnos.
 * **Ehdot.** "Onko pelaajalla tarpeeksi rahaa?" on vertailu `raha >= hinta`,
   jonka tulos on totuusarvo. Funktio voi palauttaa vertailun tuloksen, ja
   osan 3 ehtolauseet rakentuvat näiden vertailujen varaan.
 
 ## Laskeminen muuttujilla
 
-Aritmeettiset operaattorit `+`, `-`, `*`, `/` ja `%` toimivat muuttujilla
-samoin kuin [luvuilla](../osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit).
+Laskussa muuttuja edustaa arvoaan. Muuttujilla voi siis
+[laskea](../osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) aivan kuten
+luvuilla.
 
-```csharp
-using System;
+Huomaa, että useissa esimerkeissä on piilotettu sellaista koodia, joka ei ole
+esimerkin kannalta oleellista. Saat koko koodin näkyville klikkaamalla
+koodilaatikon yläreunassa olevaa silmän kuvaa.
 
-public class Laskuja
-{
-    public static void Main()
-    {
+<!-- muista: myös copyhint,playhint mahdollisia -->
+```csharp,eyehint
+//-using System;
+//-
+//-public class Laskuja
+//-{
+//-    public static void Main()
+//-    {
         int a = 10;
         int b = 3;
         Console.WriteLine(a + b);   // 13
@@ -39,34 +46,34 @@ public class Laskuja
         Console.WriteLine(a * b);   // 30
         Console.WriteLine(a / b);   // 3  (!)
         Console.WriteLine(a % b);   // 1
-    }
-}
+//-    }
+//-}
 ```
 
-Osasta 1 tuttu
-[kokonaislukujako](../osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös)
-voidaan nyt sanoa tarkemmin: kun jaettava ja jakaja ovat molemmat tyyppiä
-`int`, myös tulos on `int` ja desimaaliosa katkaistaan pois. Muuttujilla virhe
-on vielä kavalampi kuin luvuilla, koska rivistä `a / b` ei näe tyyppejä.
-Ne on katsottava muuttujien määrittelystä.
+Käytettäessä muuttujia on huomioitava [kokonaisluvuilla
+jakaminen](../osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) samaan
+tapaan kuin pelkillä luvuilla laskettaessa. Kun jaettava ja jakaja ovat molemmat
+tyyppiä `int`, myös tulos on `int` ja desimaaliosa katkaistaan pois. Muuttujilla
+virhe on vielä kavalampi kuin luvuilla, koska rivistä `a / b` ei näe tyyppejä.
+Ne on katsottava muuttujien määrittelystä. 
 
 Jos ainakin toinen osapuoli on `double`, tulos on `double` ja desimaalit
 säilyvät.
 
 ```csharp
-using System;
-
-public class Liukuluvut
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class Liukuluvut
+//-{
+//-    public static void Main()
+//-    {
         double x = 10;
         int y = 3;
         Console.WriteLine(x / y);        // 3.3333333333333335
         Console.WriteLine(y / 2);        // 1
         Console.WriteLine(y / 2.0);      // 1.5
-    }
-}
+//-    }
+//-}
 ```
 
 [Liukulukujen](1-muuttujat-ja-tietotyypit.md#perustietotyypit) epätarkkuuden
@@ -220,7 +227,7 @@ string teksti = (ika + 1).ToString();  // "21"
 ### Luvun lukeminen käyttäjältä
 
 Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun. Kuten
-[syötteen lukemisessa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen)
+[syötteen lukemisessa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen-käyttäjältä)
 nähtiin, `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
 merkkijonona. Luku saadaan muuntamalla rivi `int.Parse`- tai
 `double.Parse`-aliohjelmalla.
@@ -239,8 +246,8 @@ välimuuttujaa ei tarvita:
 Console.Write("Anna ikäsi: ");
 int ika = int.Parse(Console.ReadLine());
 
-Console.Write("Anna pituutesi metreinä: ");
-double pituus = double.Parse(Console.ReadLine());
+Console.Write("Anna matka kilometreinä: ");
+double matka = double.Parse(Console.ReadLine());
 ```
 
 Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
@@ -378,8 +385,8 @@ tarvitse muistaa.
 
 ## Yhteenveto
 
-* Aritmeettiset operaattorit toimivat muuttujilla kuten luvuilla; kahden
-  `int`-arvon jako on kokonaislukujako.
+* Laskussa muuttuja edustaa arvoaan; kahden `int`-arvon jako on
+  kokonaislukujako.
 * Operaattorin merkitys riippuu tyypeistä: `+` laskee luvut yhteen mutta
   liittää merkkijonot peräkkäin.
 * `(double)x` ja `(int)x` muuntavat tyyppiä; `int.Parse` muuntaa merkkijonon
@@ -458,6 +465,6 @@ jopa huomauttaa siitä.
 
 ## Tehtävät
 
-<!-- Vaiheessa B: "Painoindeksi" (syöte ja tyyppimuunnos), "Keskiarvo"
+<!-- Vaiheessa B: "Polttoaineenkulutus" (syöte ja tyyppimuunnos), "Keskiarvo"
      (cast ennen jakoa), "Ikä ensi vuonna" (int.Parse(Console.ReadLine())).
      Literaaleilla laskevat tehtävät ovat aliosassa 1.3. -->

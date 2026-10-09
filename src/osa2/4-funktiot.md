@@ -26,13 +26,13 @@ neliöjuuri lasketaan. Riittää, että tiedät, mitä näppäin tekee. Omat fun
 toimivat samoin: kun funktio on kerran kirjoitettu, sitä käytetään nimellä,
 eikä sen sisältöä tarvitse enää ajatella.
 
-* **Sama lasku tarvitaan monta kertaa.** Painoindeksi lasketaan jakamalla paino
-  pituuden neliöllä. Jos ohjelma laskee sen kymmenelle henkilölle, kaava on
-  kymmenessä kohdassa. Copy-paste toimii mainiosti, kunnes huomaat kaavassa
+* **Sama lasku tarvitaan monta kertaa.** Polttoaineenkulutus lasketaan
+  jakamalla litrat kilometreillä ja kertomalla sadalla. Jos ohjelma laskee sen
+  kymmenelle autolle, kaava on kymmenessä kohdassa. Copy-paste toimii mainiosti, kunnes huomaat kaavassa
   virheen ja korjaat sen kymmeneen kohtaan. Löydät niistä hyvällä tuurilla
   yhdeksän.
-* **Nimi kertoo, mitä lasketaan.** `paino / (pituus * pituus)` vaatii
-  lukijalta pysähtymisen. `Painoindeksi(paino, pituus)` ei vaadi. Hyvin
+* **Nimi kertoo, mitä lasketaan.** `litrat / kilometrit * 100` vaatii
+  lukijalta pysähtymisen. `Kulutus(litrat, kilometrit)` ei vaadi. Hyvin
   nimetty funktio on kuin hyvin nimetty muuttuja: se säästää kommentin ja
   lukijan hermot.
 * **Ohjelma jakautuu osiin.** `Main` lukee syötteen, kutsuu funktioita ja
@@ -383,38 +383,38 @@ Osassa 4 työjärjestykseen lisätään dokumentointi ja osassa 7 testit, ks.
 
 ## Funktio laskee, `Main` tulostaa
 
-Alla oleva ohjelma kysyy käyttäjältä painon ja pituuden ja laskee
-painoindeksin. Katso, mikä osa tekee mitäkin.
+Alla oleva ohjelma kysyy käyttäjältä tankatut litrat ja ajetut kilometrit
+ja laskee polttoaineenkulutuksen. Katso, mikä osa tekee mitäkin.
 
 ```csharp,ignore
 using System;
 
-public class Terveys
+public class Matkalaskuri
 {
     public static void Main()
     {
-        Console.Write("Paino (kg): ");
-        double paino = double.Parse(Console.ReadLine());
-        Console.Write("Pituus (m): ");
-        double pituus = double.Parse(Console.ReadLine());
+        Console.Write("Tankatut litrat: ");
+        double litrat = double.Parse(Console.ReadLine());
+        Console.Write("Ajetut kilometrit: ");
+        double kilometrit = double.Parse(Console.ReadLine());
 
-        double indeksi = Painoindeksi(paino, pituus);
-        Console.WriteLine($"Painoindeksisi on {indeksi}");
+        double kulutus = Kulutus(litrat, kilometrit);
+        Console.WriteLine($"Kulutus on {kulutus} l/100 km");
     }
 
-    public static double Painoindeksi(double paino, double pituus)
+    public static double Kulutus(double litrat, double kilometrit)
     {
-        return paino / (pituus * pituus);
+        return litrat / kilometrit * 100;
     }
 }
 ```
 
-`Painoindeksi` ei lue eikä tulosta mitään. Se saa arvot parametreina ja antaa
+`Kulutus` ei lue eikä tulosta mitään. Se saa arvot parametreina ja antaa
 tuloksen paluuarvona. Syötteen lukeminen ja tulostaminen jäävät
 `Main`-aliohjelmalle. Tästä on kaksi hyötyä:
 
 * **Tuloksen voi käyttää mihin tahansa.** Kutsuja voi tulostaa sen, verrata
-  sitä rajaan tai laskea monen henkilön keskiarvon. Jos funktio tulostaisi
+  sitä rajaan tai laskea monen auton keskiarvon. Jos funktio tulostaisi
   tuloksen itse, ohjelma ei saisi sitä käyttöönsä.
 * **Funktion voi testata.** Testi kutsuu funktiota ja vertaa paluuarvoa
   odotettuun. Ruudulle tulostettua tekstiä testi ei näe.
@@ -430,7 +430,7 @@ nimestä näkee heti, onko kyseessä muuttuja vai funktio. Ääkkösiä ei käyt
 kuten ei muuttujissakaan: `Nelio`, ei `Neliö`. Katso tarkemmin
 [Tyyliopas](../tyyliopas.md#nimeämiskäytännöt).
 
-Nimi kertoo, mitä funktio antaa takaisin (`Keskiarvo`, `Painoindeksi`) tai mitä
+Nimi kertoo, mitä funktio antaa takaisin (`Keskiarvo`, `Kulutus`) tai mitä
 se tekee arvoilleen (`MuotoilePisteet`, `LaskeAlennus`). Totuusarvon
 palauttava funktio nimetään kysymykseksi: `OnkoTaysiIkainen`, `OnkoParillinen`.
 Silloin kutsu luetaan luontevasti: `bool aikuinen = OnkoTaysiIkainen(ika);`.
@@ -714,7 +714,7 @@ sijoittaa.
 ## Tehtävät
 
 <!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin.
-     Vaiheessa B lisäksi: "Painoindeksi" (syöte Mainissa, laskenta
+     Vaiheessa B lisäksi: "Polttoaineenkulutus" (syöte Mainissa, laskenta
      funktiossa) ja "Lumiukko funktiolla" (Jypeli: LuoPallo palauttaa
      pallon, Begin lisää sen). -->
 
