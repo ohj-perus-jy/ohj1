@@ -592,28 +592,36 @@ tekstinä. Kurssilla koodi kirjoitetaan itse, jotta oppisit, miten se syntyy.
 Kytke ominaisuudet pois lisäämällä asetustiedostoon rivi
 
 ```json
-"chat.disableAIFeatures": true
+{
+    // mahdollisesti muita asetuksia tässä
+
+    "chat.disableAIFeatures": true,
+}
 ```
 
-Asetus poistaa tekoälytäydennykset käytöstä ja piilottaa keskustelupaneelin
-sekä otsikkopalkin Chat-valikon. Jos valikko näkyy yhä tallentamisen jälkeen,
-valitse komentopaletista **Developer: Reload Window**.
-
-### Suositellut asetukset
-
-Lisää samaan tiedostoon myös alla olevat rivit. Koko tiedosto näyttää tämän
-jälkeen tältä:
+**Suosittelemme** lisäämään samaan tiedostoon myös alla olevat rivit. Koko
+tiedosto näyttää tämän jälkeen tältä:
 
 ```json
 {
+    // mahdollisesti muita asetuksia tässä
+
     "chat.disableAIFeatures": true,
+    // HIGHLIGHT_GREEN_BEGIN
+    "telemetry.telemetryLevel": "off",
     "editor.formatOnSave": true,
     "editor.acceptSuggestionOnEnter": "off",
     "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": false,
     "workbench.startupEditor": "none"
+    // HIGHLIGHT_GREEN_END
 }
 ```
 
+Tallenna tiedosto (**Ctrl+S**, macOS: **Cmd+S**). Tallentamisen jälkeen valitse komentopaletista **Developer: Reload Window**.
+
+<details closed> <summary>Selitykset asetuksille (Avaa klikkaamalla)</summary>
+
+- `telemetry.telemetryLevel`: VS Code ei lähetä käyttötietoja Microsoftille.
 - `editor.formatOnSave`: koodi sisennetään ja muotoillaan automaattisesti, kun
   tiedosto tallennetaan.
 - `editor.acceptSuggestionOnEnter`: Enter tekee aina rivinvaihdon, ja
@@ -624,7 +632,7 @@ jälkeen tältä:
   jolloin luettelo pysyy lyhyempänä.
 - `workbench.startupEditor`: VS Code aukeaa ilman Welcome-sivua.
 
-Tallenna tiedosto (**Ctrl+S**, macOS: **Cmd+S**). Asetukset tulevat voimaan heti.
+</details>
 
 ## Git 
 
@@ -732,9 +740,39 @@ ajetaan.
 
 Alla on lueteltu joitain yleisimpiä ongelmatilanteita, joita asennuksen tai työkalujen käytön yhteydessä voi tulla vastaan. Jos löydät ongelman, jota ei ole listattu alla, 
 
-- tule pääteohjauksiin. Ajat ja paikat löytyvät [kotisivulta](index.md#tuki-ja-palaute)), 
-- laita viestiä [Teamsissa](index.md#teams-jy) (Kysymyksiä ja apua -kanava) tai
-- laita viestiä opettajille: <ohj1-opet@jyu.onmicrosoft.com>. 
+- voit tulla [pääteohjauksiin](index.md#tuki-ja-palaute), laittaa viestiä
+  [Teamsissa](index.md#teams-jy) (Kysymyksiä ja apua -kanava) tai laittaa sähköpostia
+  opettajille: <ohj1-opet@jyu.onmicrosoft.com>
+
+
+<details closed><summary>'code' is not recognized / command not found: code</summary>
+
+Komentorivi ei löydä VS Coden `code`-komentoa.
+
+- **Windows:** sulje kaikki komentorivit ja avaa uusi PowerShell. Asennus
+  lisää komennon vain uusiin komentoriveihin.
+- **macOS:** käynnistä VS Code Launchpadista, avaa komentopaletti
+  (**Cmd+Shift+P**) ja valitse **Shell Command: Install 'code' command in
+  PATH**. Avaa sen jälkeen uusi Pääte.
+- **Linux:** käynnistä VS Code sovellusvalikosta. Jos `code`-komento puuttuu
+  yhä, tarkista jakelusi pakkauksen ohjeet.
+
+</details>
+
+<details closed><summary>Jypeli-pohjat eivät näy .NET: New Project -luettelossa</summary>
+
+Tarkista päätteessä komennolla
+
+```bash
+dotnet new list
+```
+
+että luettelossa on *Fysiikkapeli* ja muut Jypeli-pohjat. Jos niitä ei ole,
+asenna pohjat [JyPeli-kohdan](#jypeli) ohjeella. Jos pohjat ovat luettelossa
+mutta eivät näy VS Codessa, sulje VS Code kokonaan ja avaa se uudelleen:
+laajennus lukee pohjat käynnistyessään.
+
+</details>
 
 <details closed><summary> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
  
@@ -750,7 +788,7 @@ Asenna uusin GLFW-versio käyttämäsi paketinhallinnan avulla.
  
 Voi olla että tietokoneellasi ei ole näytönohjaimen ajureita asennettuna.
 Mene *Windowsin asetukset* › *Päivitykset* › *Valinnaiset* (päivitä-nappulan alapuolella)
--> Ajurit.
+› Ajurit.
 Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"
 
 Jos ajuria ei löydy ja käytät kannettavaa, todennäköisesti sinulla on integroitu
@@ -782,20 +820,6 @@ niin ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-th
 
 </details>
 
-<details closed><summary>'code' is not recognized / command not found: code</summary>
-
-Komentorivi ei löydä VS Coden `code`-komentoa.
-
-- **Windows:** sulje kaikki komentorivit ja avaa uusi PowerShell. Asennus
-  lisää komennon vain uusiin komentoriveihin.
-- **macOS:** käynnistä VS Code Launchpadista, avaa komentopaletti
-  (**Cmd+Shift+P**) ja valitse **Shell Command: Install 'code' command in
-  PATH**. Avaa sen jälkeen uusi Pääte.
-- **Linux:** käynnistä VS Code sovellusvalikosta. Jos `code`-komento puuttuu
-  yhä, tarkista jakelusi pakkauksen ohjeet.
-
-</details>
-
 <details closed><summary>Unable to execute C# Dev Kit command</summary>
 
 Avattu kansio on rajoitetussa tilassa (*Restricted Mode*), jossa C# Dev Kit ei
@@ -807,20 +831,7 @@ uudelleenlatauksen jälkeen. Yritä sitten uudelleen.
 
 </details>
 
-<details closed><summary>Jypeli-pohjat eivät näy .NET: New Project -luettelossa</summary>
 
-Tarkista päätteessä komennolla
-
-```bash
-dotnet new list
-```
-
-että luettelossa on *Fysiikkapeli* ja muut Jypeli-pohjat. Jos niitä ei ole,
-asenna pohjat [JyPeli-kohdan](#jypeli) ohjeella. Jos pohjat ovat luettelossa
-mutta eivät näy VS Codessa, sulje VS Code kokonaan ja avaa se uudelleen:
-laajennus lukee pohjat käynnistyessään.
-
-</details>
 
 <details closed><summary>Näppäinkomennot eivät toimi</summary>
 
