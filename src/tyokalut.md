@@ -499,7 +499,7 @@ Jos et halua ladata asetuksia tiedostosta, voit [asettaa ne manuaalisesti](#ride
 4. Kun JetBrains Rider kysyy lisenssiä, valitse **Free Non-Commercial License**.
 
 5. Valitse *Register*-linkki ja rekisteröidy JetBrains-käyttäjäksi.
-   Valitse *Continue with email* ja tee itsellesi tunnus.
+   Valitse *Continue with email* ja tee itsellesi tunnus. Tunnuksen *ei* tarvitse liittyä yliopistoon mitenkään.
 
 6. Kun olet rekisteröitynyt, avaa Rider ja valitse *Log in for Non-Commercial License*.
     
