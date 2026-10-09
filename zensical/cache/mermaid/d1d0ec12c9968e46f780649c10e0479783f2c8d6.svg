@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390.00516666666664 662.63" width="390.00516666666664" height="662.63" style="--bg:#FFFFFF;--fg:#27272A">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="e1" data-to="l1" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="tosi" points="144.91175000000004,133.24333333333334 144.91175000000004,335.63 82.8345,335.63 82.8345,415.93000000000006" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="e1" data-to="e2" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="epätosi" points="182.20908333333335,133.24333333333334 182.20908333333335,187.892 228.0621666666667,187.892 228.06216666666668,268.192" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="e2" data-to="l2" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="tosi" points="208.6725,365.1403333333333 208.6725,420.53 165.67016666666666,420.53 165.6701666666667,512.83" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="e2" data-to="l3" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="epätosi" points="247.45183333333335,365.14033333333333 247.45183333333335,444.53 290.45416666666665,444.53 290.45416666666665,512.83" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="l1" data-to="j" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="82.8345,452.83000000000004 82.8345,567.73 165.67016666666666,567.73 165.67016666666666,585.73" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="l2" data-to="j" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="165.6701666666667,549.73 165.6701666666667,567.73 165.67016666666666,567.73 165.67016666666666,585.73" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="l3" data-to="j" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="290.45416666666665,549.73 290.45416666666665,567.73 165.67016666666666,567.73 165.67016666666666,585.73" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="e1" data-to="l1" data-label="tosi">
+  <rect x="65.33450000000002" y="342.63" width="34.282" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="82.47550000000001" y="357.78" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">tosi</text>
+</g>
+<g class="edge-label" data-from="e1" data-to="e2" data-label="epätosi">
+  <rect x="201.5621666666667" y="194.892" width="52.102000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="227.6131666666667" y="210.042" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">epätosi</text>
+</g>
+<g class="edge-label" data-from="e2" data-to="l2" data-label="tosi">
+  <rect x="148.17016666666666" y="427.53" width="34.282" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="165.31116666666665" y="442.67999999999995" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">tosi</text>
+</g>
+<g class="edge-label" data-from="e2" data-to="l3" data-label="epätosi">
+  <rect x="263.95416666666665" y="451.53" width="52.102000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="290.00516666666664" y="466.67999999999995" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">epätosi</text>
+</g>
+<g class="node" data-id="e1" data-label="EHTO1?" data-shape="diamond">
+  <polygon points="163.5604166666667,40 219.5064166666667,95.946 163.5604166666667,151.892 107.6144166666667,95.946" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="163.5604166666667" y="95.946" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">EHTO1?</text>
+</g>
+<g class="node" data-id="l1" data-label="Lohko 1" data-shape="rectangle">
+  <rect x="40" y="415.93000000000006" width="85.66900000000001" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="82.8345" y="434.38000000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Lohko 1</text>
+</g>
+<g class="node" data-id="e2" data-label="EHTO2?" data-shape="diamond">
+  <polygon points="228.0621666666667,268.192 286.2311666666667,326.361 228.0621666666667,384.53 169.89316666666673,326.361" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="228.0621666666667" y="326.361" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">EHTO2?</text>
+</g>
+<g class="node" data-id="l2" data-label="Lohko 2" data-shape="rectangle">
+  <rect x="120.61266666666668" y="512.83" width="90.11500000000001" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="165.6701666666667" y="531.2800000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Lohko 2</text>
+</g>
+<g class="node" data-id="l3" data-label="else-lohko" data-shape="rectangle">
+  <rect x="238.72766666666666" y="512.83" width="103.453" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="290.45416666666665" y="531.2800000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">else-lohko</text>
+</g>
+<g class="node" data-id="j" data-label="Jatketaan" data-shape="rectangle">
+  <rect x="115.05516666666668" y="585.73" width="101.22999999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="165.67016666666666" y="604.1800000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Jatketaan</text>
+</g>
+</svg>
