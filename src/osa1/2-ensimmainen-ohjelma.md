@@ -46,7 +46,7 @@ Olemme kirjoittaneet sinulle valmiiksi pienen C#-ohjelman, joka tulostaa tekstin
 Play-napin muotoista painiketta ajaaksesi ohjelman. Ohjelman pitäisi näyttää
 teksti `Heippa, maailma!`.
 
-```csharp,editable
+```csharp,editable,runhint
 public class Ohjelma
 {
     public static void Main()

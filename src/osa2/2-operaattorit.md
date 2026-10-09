@@ -4,8 +4,7 @@
 vertaavat, yhdistävät. Tähän asti on [laskettu](../osa1/3-laskutoimitukset.md)
 valmiiksi kirjoitetuilla luvuilla. Nyt lasketaan muuttujilla, ja silloin
 muuttujan tyyppi ratkaisee, mitä operaattori tekee. Lisäksi opitaan
-muuntamaan arvo tyypistä toiseen, lukemaan luku käyttäjältä sekä
-vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
+muuntamaan arvo tyypistä toiseen ja lukemaan luku käyttäjältä.
 
 ## Mihin operaattoreita tarvitaan?
 
@@ -14,24 +13,25 @@ vertaamaan arvoja ja muuttamaan muuttujan arvoa lyhyesti.
 * **Käyttäjän syöte.** Käyttäjän kirjoittama ikä on tekstiä, ja tekstin
   kanssa `+` liittää eikä laske: `"20" + 1` on `"201"`. Ennen laskemista
   teksti on muunnettava luvuksi.
-* **Polttoaineenkulutus.** Tankatut litrat jaetaan ajetuilla kilometreillä
+* **Polttoaineen keskikulutus.** Tankatut litrat jaetaan ajetuilla kilometreillä
   ja kerrotaan sadalla. Jos litrat ja kilometrit ovat kokonaislukumuuttujissa,
-  jakolasku katkaisee desimaalit, ja tarvitaan tyyppimuunnos.
+  jakolasku katkaisee desimaalit, ja tarvitaan tyyppimuunnos, jotta lopputulos
+  on oikein.
 * **Ehdot.** "Onko pelaajalla tarpeeksi rahaa?" on vertailu `raha >= hinta`,
-  jonka tulos on totuusarvo. Funktio voi palauttaa vertailun tuloksen, ja
-  osan 3 ehtolauseet rakentuvat näiden vertailujen varaan.
+  jonka tulos on totuusarvo. Näitä tarvitaan, jotta ohjelma voi tehdä päätöksiä,
+  esimerkiksi antaa pelaajan ostaa tai ei.
 
 ## Laskeminen muuttujilla
 
-Laskussa muuttuja edustaa arvoaan. Muuttujilla voi siis
+Muuttujilla voi
 [laskea](../osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) aivan kuten
-luvuilla.
+luvuilla. Laskussa muuttuja edustaa arvoaan. 
 
-Huomaa, että useissa esimerkeissä on piilotettu sellaista koodia, joka ei ole
+Useissa alla olevissa esimerkeissä on piilotettu sellaista koodia, joka ei ole
 esimerkin kannalta oleellista. Saat koko koodin näkyville klikkaamalla
 koodilaatikon yläreunassa olevaa silmän kuvaa.
 
-<!-- muista: myös copyhint,playhint mahdollisia -->
+<!-- muista: myös copyhint,runhint mahdollisia -->
 ```csharp,eyehint
 //-using System;
 //-
