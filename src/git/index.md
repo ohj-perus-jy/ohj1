@@ -271,11 +271,11 @@ mutta melkein helpompi on tässä vaiheessa:
    avattuasi git bash aivan ensimmäiseksi komento `pwd`, joka tulostaa koko
    kotihakemistosi polun. Sitten kirjoita: 
    
-        mkdir /c/Users/MunKayttaja/ohj1/ht
+        mkdir /c/Users/MunKayttaja/ohj1/harjoitustyo
 
 1. Siirry tekemääsi kansioon `cd`-komentoja käyttämällä esimerkiksi seuraavasti:
 
-        cd /c/Users/MunKayttaja/ohj1/ht
+        cd /c/Users/MunKayttaja/ohj1/harjoitustyo
 
     Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi sanan
     `harjoitustyo´ tai pelin nimen. Kansion nimen voi vaihtaa myöhemminkin.
@@ -313,11 +313,11 @@ mutta melkein helpompi on tässä vaiheessa:
    mikä kotihakemistosi nimi on, kirjoita avattuasi Pääte aivan ensimmäiseksi
    komento `pwd`, joka tulostaa koko kotihakemistosi polun. Sitten kirjoita:
 
-        mkdir /Users/MunKayttaja/ohj1/ht
+        mkdir /Users/MunKayttaja/ohj1/harjoitustyo
 
 1. Siirry tekemääsi kansioon `cd`-komentoja käyttämällä esimerkiksi seuraavasti:
 
-        cd /Users/MunKayttaja/ohj1/ht
+        cd /Users/MunKayttaja/ohj1/harjoitustyo
 
     Voit halutessasi vaihtaa `ht`-sanan paikalle valitsemasi pelin nimen. Hakemiston
     nimen voi vaihtaa myöhemminkin.
