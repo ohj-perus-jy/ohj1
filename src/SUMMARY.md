@@ -74,8 +74,8 @@
 <!--     * [Tyyppimuunnokset]() -->
 <!--     * [Osan kaikki tehtävät](./osa6/tehtavat.md) -->
  * [Osa 7](./osa7/index.md)
-    * [Luento 13: Muokattavat merkkijonot, moniulotteiset taulukot, dynaamiset tietorakenteet](./luennot/luento13.md)
-    * [Luento 14: Luokat ja oliot](./luennot/luento14.md)
+    * [Luento 13: StringBuilder, moniulotteiset taulukot, List, Dictionary](./luennot/luento13.md)
+    * [Luento 14: Dictionary, osa 2](./luennot/luento14.md)
     * [Harjoitustehtävät 7](./luennot/harjoitus7.md)
 <!--  * [Lisää kokoamista!](./osa7/osa7.md) -->
 <!--     * [Moniulotteiset taulukot]() -->
