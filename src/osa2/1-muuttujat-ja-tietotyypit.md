@@ -422,7 +422,7 @@ public class Virhe
 
 Tekstin sijoittaminen lukumuuttujaan antaa vastaavan ilmoituksen `CS0029:
 Cannot implicitly convert type 'string' to 'int'`. Jos teksti on luku, se
-pitää ensin [muuntaa](./2-operaattorit.md#merkkijonosta-luvuksi).
+pitää ensin [muuntaa](./2-operaattorit.md#merkkijono-luvuksi-ja-toisin-päin).
 
 **Sama nimi kahdesti.** Muuttujan voi määritellä samassa lohkossa vain kerran.
 Toinen `int pisteet = ...` -rivi antaa virheen `CS0128: A local variable named

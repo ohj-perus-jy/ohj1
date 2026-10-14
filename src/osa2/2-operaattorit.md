@@ -151,81 +151,54 @@ laskettaessa.
 
 </details>
 
-## Tyyppimuunnokset
+## Arvon muuttaminen toiseen tyyppiin
 
 Laskuissa törmää jatkuvasti tilanteeseen, jossa arvo on väärän tyyppinen:
-kokonaisluku pitäisi jakaa tarkasti, liukuluku tallentaa kokonaislukuna tai
-käyttäjän kirjoittama teksti muuttaa luvuksi.
+käyttäjän kirjoittama teksti pitäisi muuttaa luvuksi, kokonaisluku jakaa
+tarkasti tai liukuluku tallentaa kokonaislukuna. Arvon muuttamista tyypistä toiseen sanotaan tyyppimuunnokseksi (engl. type conversion). C#:ssa se tapahtuu neljällä tavalla:
 
-### Kokonaisluvusta liukuluvuksi
+* Merkkijono muunnetaan luvuksi lukutyypin omalla `Parse`-aliohjelmalla,
+  esimerkiksi `int.Parse()`. 
+* Luvun (ja minkä tahansa muunkin arvon) voi muuntaa merkkijonoksi `.ToString()`-aliohjelmalla.
+* Lukutyyppien välillä osa muunnoksista tapahtuu automaattisesti ilman erillistä
+  toimintoa.
+* Osa lukutyyppien välisistä muunnoksista on pyydettävä erikseen. Silloin
+  puhutaan *eksplisiittisestä* muunnoksesta.
 
-`int` muuttuu `double`-tyypiksi automaattisesti, koska mitään ei voi kadota.
-Siksi `10 / 3.0` lasketaan liukulukuina. Jos molemmat luvut ovat muuttujissa,
-toinen niistä *muunnetaan* kirjoittamalla kohdetyyppi sulkeisiin sen eteen.
-Tätä sanotaan *tyyppimuunnokseksi* (engl. *cast*).
+### Merkkijono luvuksi ja toisin päin
 
-```csharp
-using System;
+Merkkijono ja luku ovat eri asioita, vaikka ne näyttäisivät samalta.
+Esimerkiksi `"42" + 1` on `"421"`, ei `43`. Merkkijonon kanssa `+`
+[liittää eikä laske](#sama-operaattori-eri-tyypit).
 
-public class Keskiarvo
-{
-    public static void Main()
-    {
-        int summa = 17;
-        int maara = 4;
-        Console.WriteLine(summa / maara);            // 4
-        Console.WriteLine((double)summa / maara);    // 4.25
-        Console.WriteLine((double)(summa / maara));  // 4  -- liian myöhään!
-    }
-}
-```
+Merkkijonon muuntamiseen luvuksi on jokaiselle lukutyypille oma
+`Parse`-aliohjelma. Kokonaisluvuksi (`int`) muunnetaan `int.Parse`-aliohjelmalla.
+Liukuluvuksi (`double`) muunnetaan `double.Parse`-aliohjelmalla.
 
-Viimeinen rivi on tyypillinen sudenkuoppa: jakolasku on ehditty tehdä
-kokonaisluvuilla ennen kuin tulos muunnetaan.
-
-### Liukuluvusta kokonaisluvuksi
-
-Toiseen suuntaan muunnos ei tapahdu automaattisesti, koska desimaalit
-katoavat. Muunnos on kirjoitettava näkyviin, ja se *katkaisee* desimaalit, ei
-pyöristä. Pyöristämiseen on
-[`Math`-luokan](../osa1/3-laskutoimitukset.md#valmiita-laskutoimituksia-math)
-`Math.Round`.
+Toiseen suuntaan muuntamiseen on kaksi tapaa. Luvusta saa merkkijonon
+kirjoittamalla luvun perään `.ToString()`. Saman tuloksen saa myös
+interpoloimalla: `$"{luku}"`.
 
 ```csharp
-using System;
+//-using System;
+//-
+//-public class Muunnokset
+//-{
+//-    public static void Main()
+//-    {
+        // Merkkijono luvuksi
+        string ikaTekstina = "20";
+        int ika = int.Parse(ikaTekstina);
+        Console.WriteLine(ika + 1);            // 21
 
-public class Katkaisu
-{
-    public static void Main()
-    {
-        double hinta = 3.7;
-        int katkaistu = (int)hinta;                    // 3
-        int pyoristetty = (int)Math.Round(hinta);      // 4
-        Console.WriteLine($"{katkaistu} {pyoristetty}");
-    }
-}
-```
-
-
-Mainittakoon, että `Math.Round` on siitä mielenkiintoinen, että se pyöristää
-puolikkaat oletuksena lähimpään *parilliseen* lukuun (ns. "pankkiirin
-pyöristys"). Koulussa opitun pyöristyksen saa kirjoittamalla `Math.Round(2.5,
-MidpointRounding.AwayFromZero)`. Tämä on yksi niistä asioista, jotka on hyvä
-tietää, jotta ei epäile omaa järkeään. Yksityiskohtia on liitteessä [Tiedon
-esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md) ja
-[`Math.Round`-dokumentaatiossa](https://learn.microsoft.com/en-us/dotnet/api/system.math.round?view=net-10.0)).
-
-### Merkkijonosta luvuksi
-
-Merkkijono ja luku ovat eri asioita, vaikka ne näyttäisivät samalta: `"42" + 1`
-on `"421"`, ei `43`, sillä merkkijonon kanssa `+`
-[liittää eikä laske](#sama-operaattori-eri-tyypit). Merkkijono muunnetaan
-luvuksi `int.Parse`- tai `double.Parse`-aliohjelmalla, ja luku merkkijonoksi
-`ToString`-metodilla tai interpoloimalla `$"{luku}"`.
-
-```csharp,ignore
-int ika = int.Parse("20");             // 20
-string teksti = (ika + 1).ToString();  // "21"
+        // Luku merkkijonoksi
+        int vuosi = 2026;
+        string vuosiTekstina = vuosi.ToString();
+        string toinenTapa = $"{vuosi}";
+        Console.WriteLine(vuosiTekstina + 1);  // 20261
+        Console.WriteLine(toinenTapa + 1);     // 20261
+//-    }
+//-}
 ```
 
 ### Luvun lukeminen käyttäjältä
@@ -233,7 +206,9 @@ string teksti = (ika + 1).ToString();  // "21"
 Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun. Kuten
 [syötteen lukemisessa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen-käyttäjältä)
 nähtiin, `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
-merkkijonona. Luku saadaan muuntamalla rivi `int.Parse`- tai
+merkkijonona. Rivi on siis muunnettava luvuksi. Aliohjelma valitaan sen
+mukaan, minkä tyyppiseen muuttujaan luku tallennetaan. Kokonaisluku
+muunnetaan `int.Parse`-aliohjelmalla. Liukuluku muunnetaan
 `double.Parse`-aliohjelmalla.
 
 ```csharp,ignore
@@ -262,6 +237,148 @@ Jos käyttäjä kirjoittaa jotakin, mikä ei ole luku (vaikkapa `kaksikymmentä`
 luvun. Syötteen tarkistaminen opitaan [merkkijonojen](../osa4/2-merkkijonot.md)
 yhteydessä, ja samalla selviää, miksi desimaaliluku on joillakin koneilla
 kirjoitettava pilkulla ja toisilla pisteellä.
+
+### Automaattinen muunnos
+
+`int` muuttuu `double`-tyypiksi automaattisesti, koska mitään ei voi kadota:
+jokainen `int`-tyyppinen arvo voidaan esittää myös liukulukuna. Tällaista
+automaattista muunnosta sanotaan *implisiittiseksi* (engl. *implicit
+conversion*). Sama tapahtui jo edellä: `double x = 10;` tallentaa muuttujaan
+liukuluvun, ja lausekkeessa `y / 2.0` kokonaisluku `y` muuttuu liukuluvuksi
+ennen jakolaskua.
+
+```csharp
+//-using System;
+//-
+//-public class Automaattinen
+//-{
+//-    public static void Main()
+//-    {
+        int kokonaisia = 7;
+        double liukuluku = kokonaisia;     // int muuttuu double-tyypiksi
+        Console.WriteLine(liukuluku / 2);  // 3.5
+//-    }
+//-}
+```
+
+Automaattinen muunnos tapahtuu vain silloin, kun tietoa ei voi kadota.
+Kurssin perustyypeistä näin on kahdessa tilanteessa:
+
+* lukutyypistä laajempaan lukutyyppiin, esimerkiksi `int` → `long` tai
+  `int` → `double`
+* harvemmin tarvittuna merkistä lukuun: `int koodi = 'A';` tallentaa
+  muuttujaan merkin numerokoodin `65`
+
+`string`- ja `bool`-tyyppien kanssa automaattisia muunnoksia ei ole. Esimerkiksi
+`string s = 5;` ei käänny. Lauseke `"Summa: " + 5` toimii, mutta siinä ei ole
+kyse automaattisesta muunnoksesta, vaan `+`-operaattori itse
+[tekee luvusta tekstiä](#sama-operaattori-eri-tyypit) ja liittää sen perään.
+
+### Eksplisiittinen muunnos
+
+Toiseen suuntaan muunnos ei tapahdu automaattisesti. Kun `double`
+muutetaan `int`-tyypiksi, desimaalit katoavat, eli tietoa voi hävitä. Siksi
+kääntäjä ei tee muunnosta omin päin, vaan vaatii ohjelmoijaa pyytämään sitä
+erikseen. Tällaista muunnosta sanotaan *eksplisiittiseksi muunnokseksi*
+(engl. *explicit conversion* tai *cast*). Kirjoittamalla muunnoksen näkyviin
+ohjelmoija ilmaisee tietävänsä, että tietoa voi kadota.
+
+Eksplisiittinen muunnos tehdään kirjoittamalla kohdetyyppi sulkeisiin
+muunnettavan lausekkeen eteen. 
+
+```csharp
+//-using System;
+//-
+//-public class Katkaisu
+//-{
+//-    public static void Main()
+//-    {
+        double hinta = 3.7;
+        int katkaistu = (int)hinta;                    // 3
+        Console.WriteLine($"{katkaistu}");
+//-    }
+//-}
+```
+
+Ilman muunnosta ohjelma ei käänny: rivi `int katkaistu = hinta;` antaa
+virheilmoituksen.
+
+Huomaa, että muunnos *katkaisee* desimaalit eikä pyöristä, joten `(int)3.7` on `3`.
+Pyöristämiseen on
+[`Math`-luokan](../osa1/3-laskutoimitukset.md#valmiita-laskutoimituksia-math)
+`Math.Round`. Sen tulos on edelleen `double`, joten se muunnetaan vielä
+`int`-tyypiksi.
+
+```csharp
+//-using System;
+//-
+//-public class Pyoristys
+//-{
+//-    public static void Main()
+//-    {
+        double hinta = 3.7;
+        int pyoristetty = (int)Math.Round(hinta);      // 4
+        Console.WriteLine($"{pyoristetty}");
+//-    }
+//-}
+```
+
+Mainittakoon, että `Math.Round` on siitä mielenkiintoinen, että se pyöristää
+puolikkaat oletuksena lähimpään *parilliseen* lukuun (ns. "pankkiirin
+pyöristys"). Koulussa opitun pyöristyksen saa kirjoittamalla `Math.Round(2.5,
+MidpointRounding.AwayFromZero)`. Tämä on yksi niistä asioista, jotka on hyvä
+tietää, jotta ei epäile omaa järkeään. Yksityiskohtia on liitteessä [Tiedon
+esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md) ja
+[`Math.Round`-dokumentaatiossa](https://learn.microsoft.com/en-us/dotnet/api/system.math.round?view=net-10.0)).
+
+Eksplisiittinen muunnos on mahdollinen vain harvojen tyyppien välillä, nimittäin
+niiden, joille kieleen on määritelty muunnos. Kurssin perustyypeistä näitä
+ovat:
+
+* lukutyypit (`int`, `long`, `double` ja muut) keskenään
+* kokonaisluku merkiksi: numerokoodi muuttuu sitä vastaavaksi merkiksi
+  (merkistä kokonaisluvuksi muunnos tapahtuu automaattisesti)
+
+Muiden perustyyppien välillä eksplisiittistä muunnosta ei ole. Esimerkiksi
+merkkijonoa ei voi muuntaa luvuksi eikä totuusarvoa luvuksi sulkeisiin
+kirjoitetulla tyypillä, vaan kääntäjä hylkää tällaiset yritykset.
+
+```csharp,ignore
+char merkki = (char)66;         // 'B'
+int koodi = 'A';                // 65, muunnos on automaattinen
+double d = (double)"1234.5";    // käännösvirhe
+string s = (string)42;          // käännösvirhe
+int i = (int)true;              // käännösvirhe
+```
+
+Siksi tekstin ja luvun välinen muunnos tehdään
+[toisella tavalla](#merkkijono-luvuksi-ja-toisin-päin).
+
+### Tarkka jakolasku kokonaislukumuuttujilla
+
+Joskus eksplisiittinen muunnos on syytä kirjoittaa, vaikka muunnos
+tapahtuisi automaattisestikin. Siitä on hyötyä, kun jaettava ja jakaja ovat
+molemmat `int`-muuttujissa: kun toinen niistä muunnetaan `double`-tyypiksi,
+toinenkin muuttuu implisiittisesti, ja jakolasku tehdään liukulukuina.
+
+```csharp
+//-using System;
+//-
+//-public class Keskiarvo
+//-{
+//-    public static void Main()
+//-    {
+        int summa = 17;
+        int maara = 4;
+        Console.WriteLine(summa / maara);            // 4
+        Console.WriteLine((double)summa / maara);    // 4.25
+        Console.WriteLine((double)(summa / maara));  // 4  -- liian myöhään!
+//-    }
+//-}
+```
+
+Viimeinen rivi on tyypillinen sudenkuoppa: jakolasku on ehditty tehdä
+kokonaisluvuilla ennen kuin tulos muunnetaan.
 
 ## Vertailuoperaattorit
 

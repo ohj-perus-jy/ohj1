@@ -55,7 +55,7 @@ kunkin osan etusivulla.
 | tietotyyppi | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) |
 | totuusarvo | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) |
 | tynkä | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon | [2](./osa2/4-funktiot.md#kutsusta-määrittelyyn) |
-| tyyppimuunnos | *cast* | arvon muuntaminen tyypistä toiseen, esimerkiksi `(double)x` | [2](./osa2/2-operaattorit.md#tyyppimuunnokset) |
+| tyyppimuunnos | *type conversion* | arvon muuntaminen tyypistä toiseen, esimerkiksi `int.Parse(teksti)` tai `(double)x` | [2](./osa2/2-operaattorit.md#arvon-muuttaminen-toiseen-tyyppiin) |
 | vakio | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua | [2](./osa2/1-muuttujat-ja-tietotyypit.md#vakiot) |
 | vertailuoperaattori | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon | [2](./osa2/2-operaattorit.md#vertailuoperaattorit) |
 | viite | *reference* | muuttujan sisältö, joka osoittaa olioon; olio itse ei ole muuttujassa | [3](./osa3/4-jypeli-ja-oliot.md#olion-luominen-new-operaattorilla) |
