@@ -1,5 +1,5 @@
 
-# 13. luento: Hyödyllisiä tietorakenteita 1 
+# 13. luento: StringBuilder, moniulotteiset taulukot, List, Dictionary
  
  * **Lue:** [12.4. Muokattavat merkkijonot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#stringbuilder)
  * **Lue:** [15.5. Moniulotteiset taulukot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#moniulotteiset-taulukot)

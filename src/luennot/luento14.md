@@ -1,5 +1,5 @@
 
-# 14. luento: Hyödyllisiä tietorakenteita 2; harjoitustyön tekemisestä 
+# 14. luento: Dictionary, osa 2
  
  * **Lue:** [12.4. Muokattavat merkkijonot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#stringbuilder)
  * **Lue:** [15.5. Moniulotteiset taulukot](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#moniulotteiset-taulukot)
