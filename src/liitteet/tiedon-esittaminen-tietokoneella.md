@@ -40,6 +40,23 @@ Desimaaliluvut (C#:ssa `double` ja `float`) esitetään tietokoneessa _liukuluku
 
 Esimerkiksi lukua 0.1 ei voida esittää täsmällisesti liukulukuna, koska kaksijärjestelmässä sen esitys on päättymätön, samaan tapaan kuin luvun 1/3 esitys 0.333... kymmenjärjestelmässä. Tästä syystä esimerkiksi lauseke `0.1 + 0.2 == 0.3` on C#:ssa `false`, eikä liukulukuja kannata verrata toisiinsa `==`-operaattorilla.
 
+## Nollalla jakaminen
+
+**Miksi int kaatuu?** Kokonaisluvuilla (kahden komplementti) nollalla jako
+aiheuttaa laitteistotason "Divide Error" -ilmoituksen, ja .NET muuttaa sen
+`DivideByZeroException`-poikkeukseksi. Jos jakaja on vakio (5 / 0), kääntäjä
+antaa käännösvirheen CS0020.
+
+**Miksi double ei kaadu?** IEEE 754 -standardi varaa liukulukujen
+bittiesitykseen erikoisarvot +∞, −∞ ja NaN (*Not a Number*). Standardi myös
+määrittelee, että nollalla jaon tulos on jokin näistä: `1.0/0.0` on +∞,
+`-1.0/0.0` on −∞ ja `0.0/0.0` on NaN. Kun prosessori kohtaa tällaisen jaon, se
+palauttaa sopivan erikoisarvon ja asettaa tilalipun, joka kertoo tilanteen
+tapahtuneen. Prosessorissa on asetus, jolla se saataisiin pysäyttämään ohjelma
+nollalla jaon kohdalla. Käyttöjärjestelmä kytkee asetuksen pois päältä jokaisen
+ohjelman käynnistyessä; tätä kutsutaan poikkeuksen *maskaamiseksi*. Siksi
+ohjelma jatkaa normaalisti, eikä C#:lle näy poikkeusta, vain tulos. 
+
 ## Tekstin esittäminen binäärimuodossa
 
 Tekstin esittämiseen tietokoneessa on olemassa erilaisia merkistöjä ja merkistökoodauksia. Yksi niistä on **ASCII** (engl. *American Standard Code for Information Interchange*).

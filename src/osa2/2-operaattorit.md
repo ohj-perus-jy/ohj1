@@ -23,12 +23,13 @@ muuntamaan arvo tyypistä toiseen ja lukemaan luku käyttäjältä.
 
 ## Laskeminen muuttujilla
 
-Muuttujilla voi laskea aivan kuten
-luvuilla. Laskussa muuttuja edustaa arvoaan. 
+Muuttujilla voi laskea aivan kuten luvuilla. Laskussa muuttuja edustaa arvoaan. 
 
-Useissa alla olevissa esimerkeissä on piilotettu sellaista koodia, joka ei ole
-esimerkin kannalta oleellista. Saat koko koodin näkyville klikkaamalla
-koodilaatikon yläreunassa olevaa silmän kuvaa.
+!!! note "Huomautus"
+    Useissa alla olevissa esimerkeissä on piilotettu luokka (`public class`-rivi) ja
+    pääohjelman määrittely (`public static void Main()`-rivi), jotka eivät ole
+    esimerkkien kannalta oleellisia. Saat kuitenkin aina koko koodin näkyville
+    klikkaamalla laatikon yläreunassa olevaa silmän kuvaa.
 
 <!-- muista: myös copyhint,runhint mahdollisia -->
 ```csharp,eyehint
@@ -75,10 +76,10 @@ säilyvät.
 //-}
 ```
 
-Kokonaisluvun jakaminen nollalla kaataa ohjelman
-(`DivideByZeroException`). Liukuluvun jakaminen nollalla ei kaada: jos `x` on
-`double`, `x / 0` on `∞` (`Infinity`), mikä on matemaattisesti kyseenalaista
-mutta käytännössä kätevää.
+Kokonaisluvun jakaminen nollalla kaataa ohjelman; tämä aiheuttaa niin sanotun
+`DivideByZeroException`-poikkeuksen. Liukuluvun jakaminen nollalla ei kaada
+ohjelmaa vaan palauttaa erikoisarvon: `5.0 / 0` on `∞` (`Infinity`), `-5.0 / 0`
+on `-∞` ja `0.0 / 0` on `NaN` (*Not a Number*).
 
 ### Sama operaattori, eri tyypit
 
@@ -219,12 +220,11 @@ interpoloimalla: `$"{luku}"`.
 
 ### Luvun lukeminen käyttäjältä
 
-`Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
-merkkijonona. Jos tarkoituksena on pyytää käyttäjää syöttämään luku, pitää
-merkkijono muuntaa luvuksi. Aliohjelma valitaan sen
-mukaan, minkä tyyppiseen muuttujaan luku tallennetaan. Kokonaisluku
-muunnetaan `int.Parse`-aliohjelmalla. Liukuluku muunnetaan
-`double.Parse`-aliohjelmalla.
+`Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina merkkijonona. Jos
+tarkoituksena on pyytää käyttäjää syöttämään luku, pitää merkkijono muuntaa
+luvuksi. Aliohjelma valitaan sen mukaan, minkä tyyppiseen muuttujaan luku
+tallennetaan. Kokonaisluku muunnetaan `int.Parse`-aliohjelmalla. Liukuluku
+muunnetaan `double.Parse`-aliohjelmalla.
 
 (Kokeile alla olevia koodeja Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.)
 
@@ -264,8 +264,8 @@ Lukeminen ja muuntaminen voidaan kirjoittaa yhdelle riville, jolloin erillistä
 
 Jos käyttäjä kirjoittaa jotakin, mikä ei ole luku (vaikkapa `kaksikymmentä`),
 `int.Parse` ei pysty muuntamaan tekstiä ja ohjelma kaatuu virheeseen
-`FormatException`. Toistaiseksi luotamme siihen, että käyttäjä kirjoittaa
-luvun, ja desimaaliluvun käyttöjärjestelmänsä ymmärtämässä muodossa. Syötteen
+`FormatException`. Toistaiseksi luotamme siihen, että käyttäjä kirjoittaa luvun,
+ja desimaaliluvun käyttöjärjestelmänsä ymmärtämässä muodossa. Syötteen
 tarkistaminen opitaan myöhemmin. 
 
 <details closed id="syotevirhe">
@@ -286,13 +286,16 @@ else
 }
 ```
 
-Jos syöte on kelvollinen kokonaisluku, se muunnetaan `int`-tyypiksi ja tallennetaan muuttujaan `ika`. Jos muunnos epäonnistuu, ohjelma tulostaa virheilmoituksen. `out`-avainsana kertoo, että muuttuja `ika` määritellään tässä yhteydessä.
+Jos syöte on kelvollinen kokonaisluku, se muunnetaan `int`-tyypiksi ja
+tallennetaan muuttujaan `ika`. Jos muunnos epäonnistuu, ohjelma tulostaa
+virheilmoituksen. `out`-avainsana kertoo, että muuttuja `ika` määritellään tässä
+yhteydessä.
 
 </details>
 
 ### Automaattinen muunnos
 
-`int` muuttuu `double`-tyypiksi automaattisesti, koska mitään ei voi kadota:
+`int` muuntuu `double`-tyypiksi automaattisesti, koska mitään ei voi kadota:
 jokainen `int`-tyyppinen arvo voidaan esittää myös liukulukuna. Tällaista
 automaattista muunnosta sanotaan *implisiittiseksi* (engl. *implicit
 conversion*). Sama tapahtui jo edellä: `double x = 10;` tallentaa muuttujaan
@@ -313,13 +316,13 @@ ennen jakolaskua.
 //-}
 ```
 
-Automaattinen muunnos tapahtuu vain silloin, kun tietoa ei voi kadota.
+Automaattinen muunnos tapahtuu kuitenkin vain silloin, kun tietoa ei voi kadota.
 Kurssin perustyypeistä näin on kahdessa tilanteessa:
 
 * lukutyypistä laajempaan lukutyyppiin, esimerkiksi `int` → `long` tai
   `int` → `double`
-* harvemmin tarvittuna merkistä lukuun: `int koodi = 'A';` tallentaa
-  muuttujaan merkin numerokoodin `65`
+* merkistä lukuun (tarvitaan hyvin harvoin): `int koodi = 'A';` tallentaa
+  muuttujaan merkin numerokoodin `65`. Valinnaista lisätietoa merkkien ja lukujen välisestä muunnoksesta [on liitteessä](../liitteet/tiedon-esittaminen-tietokoneella.md#tekstin-esittäminen-binäärimuodossa).
 
 `string`- ja `bool`-tyyppien kanssa automaattisia muunnoksia ei ole. Esimerkiksi
 `string s = 5;` ei käänny. Lauseke `"Summa: " + 5` toimii, mutta siinä ei ole
@@ -346,7 +349,7 @@ muunnettavan lausekkeen eteen.
 //-    public static void Main()
 //-    {
         double hinta = 3.7;
-        int katkaistu = (int)hinta;                    // 3
+        int katkaistu = (int)hinta; // 3
         Console.WriteLine($"{katkaistu}");
 //-    }
 //-}
@@ -369,7 +372,7 @@ Pyöristämiseen on
 //-    public static void Main()
 //-    {
         double hinta = 3.7;
-        int pyoristetty = (int)Math.Round(hinta);      // 4
+        int pyoristetty = (int)Math.Round(hinta); // 4
         Console.WriteLine($"{pyoristetty}");
 //-    }
 //-}
@@ -391,20 +394,33 @@ ovat:
 * kokonaisluku merkiksi: numerokoodi muuttuu sitä vastaavaksi merkiksi
   (merkistä kokonaisluvuksi muunnos tapahtuu automaattisesti)
 
+```csharp
+//-using System;
+//-
+//-public class Muunnokset
+//-{
+//-    public static void Main()
+//-    {
+         long iso = (long)42;
+         double liuku = (double)iso;
+         char merkki = (char)66; // 'B'
+         int koodi = 'A'; // 65, muunnos on automaattinen
+//-    }
+//-}
+```
+
 Muiden perustyyppien välillä eksplisiittistä muunnosta ei ole. Esimerkiksi
 merkkijonoa ei voi muuntaa luvuksi eikä totuusarvoa luvuksi sulkeisiin
 kirjoitetulla tyypillä, vaan kääntäjä hylkää tällaiset yritykset.
 
 ```csharp,ignore
-char merkki = (char)66;         // 'B'
-int koodi = 'A';                // 65, muunnos on automaattinen
 double d = (double)"1234.5";    // käännösvirhe
 string s = (string)42;          // käännösvirhe
 int i = (int)true;              // käännösvirhe
 ```
 
 Siksi tekstin ja luvun välinen muunnos tehdään
-[toisella tavalla](#merkkijono-luvuksi-ja-toisin-päin).
+[aiemmin kuvatulla tavalla](#merkkijono-luvuksi-ja-toisin-päin).
 
 ### Tarkka jakolasku kokonaislukumuuttujilla
 
@@ -445,12 +461,12 @@ totuusarvon (`true` tai `false`) perustuen vertailun tulokseen.
    - `>=` suurempi tai yhtä suuri kuin
 
 ```csharp
-using System;
-
-public class Vertailuja
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class Vertailuja
+//-{
+//-    public static void Main()
+//-    {
         int x = 5;
         int y = 10;
         bool onkoYhtasuuri = x == y;  // false
@@ -458,8 +474,8 @@ public class Vertailuja
         bool onkoPienempi = x < y;    // true
         bool onkoSuurempi = x > y;    // false
         Console.WriteLine($"{onkoYhtasuuri} {onkoEri} {onkoPienempi} {onkoSuurempi}");
-    }
-}
+//-    }
+//-}
 ```
 
 > [!VAROITUS]
@@ -469,9 +485,7 @@ public class Vertailuja
 Kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus, koska
 [liukuluvut ovat likiarvoja](../osa1/3-laskutoimitukset.md#liukuluvuilla-laskeminen):
 `0.1 + 0.2 == 0.3` on C#:ssa `false`. Liukulukuja kannattaa verrata
-tarkistamalla, onko niiden erotus riittävän pieni. Lisää aiheesta kerrotaan
-liitteessä
-[Tiedon esittäminen tietokoneessa](../liitteet/tiedon-esittaminen-tietokoneella.md).
+tarkistamalla, onko niiden erotus riittävän pieni. 
 
 ## Loogiset operaattorit
 
@@ -482,12 +496,12 @@ Loogisia operaattoreita käytetään totuusarvojen yhdistämiseen.
    - `!` EI: kääntää totuusarvon (tosi → epätosi, epätosi → tosi)
 
 ```csharp
-using System;
-
-public class Loogiset
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class Loogiset
+//-{
+//-    public static void Main()
+//-    {
         int ika = 20;
         bool onkoOpiskelija = true;
 
@@ -497,8 +511,8 @@ public class Loogiset
         bool eiOpiskelija = !onkoOpiskelija;                  // false
 
         Console.WriteLine($"{taysiIkainen} {saaAlennuksen} {saaAjaaAutoa} {eiOpiskelija}");
-    }
-}
+//-    }
+//-}
 ```
 
 Loogisten operaattoreiden totuustaulut ja käyttö ehdoissa käsitellään
