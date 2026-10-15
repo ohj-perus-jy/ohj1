@@ -308,12 +308,13 @@ kirjoittaa ja testata vastaus siellä ja kopioida lopuksi valmis koodi takaisin
 TIMiin. Koko koodissa kommentit `BYCODEBEGIN` ja `BYCODEEND` kertovat, mikä osa
 koodista on TIMissä näkyvää vastausaluetta.
 
-> [!VINKKI]
-> Alla kopioidaan ja liitetään koko tiedoston sisältö kerralla. Kaiken saa
-> valittua näppäimillä <kbd>Ctrl</kbd> + <kbd>A</kbd>, kopioitua näppäimillä
-> <kbd>Ctrl</kbd> + <kbd>C</kbd> ja liitettyä näppäimillä <kbd>Ctrl</kbd> +
-> <kbd>V</kbd>. Macissa käytä <kbd>Ctrl</kbd>-näppäimen sijaan
-> <kbd>Cmd</kbd>-näppäintä.
+!!! tip "Vinkki"
+
+    Alla kopioidaan ja liitetään koko tiedoston sisältö kerralla. Kaiken saa
+    valittua näppäimillä <kbd>Ctrl</kbd> + <kbd>A</kbd>, kopioitua näppäimillä
+    <kbd>Ctrl</kbd> + <kbd>C</kbd> ja liitettyä näppäimillä <kbd>Ctrl</kbd> +
+    <kbd>V</kbd>. Macissa käytä <kbd>Ctrl</kbd>-näppäimen sijaan
+    <kbd>Cmd</kbd>-näppäintä.
 
 ### Komentorivitehtävät {#tim-consolemain}
 
@@ -361,7 +362,8 @@ TIMistä ennen projektin luomista.
    kopioi se.
 1. **TIMissä:** Liitä koodi tehtävän palautuslaatikkoon ja palauta tehtävä tavalliseen tapaan.
 
-> [!VAROITUS]
-> Rider luo Jypeli-projektiin automaattisesti myös `Ohjelma.cs`-tiedoston, jossa
-> on Main-pääohjelma. **Sitä ei tarvitse eikä pidä muokata**, eikä TIMin koodia
-> liitetä sinne.
+!!! warning "Varoitus"
+
+    Rider luo Jypeli-projektiin automaattisesti myös `Ohjelma.cs`-tiedoston, jossa
+    on Main-pääohjelma. **Sitä ei tarvitse eikä pidä muokata**, eikä TIMin koodia
+    liitetä sinne.

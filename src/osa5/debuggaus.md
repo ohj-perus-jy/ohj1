@@ -68,8 +68,9 @@ Debuggaus‐näkymän **Threads & Variables**-paneelissa (tai välilehdellä) n�
 
 ![Set value painike](./images/set_value.png)
 
-> [!HUOMAUTUS]
->`Double`-tyyppisen muuttujan arvoa muutettaessa on arvoksi asetettava desimaaliluku, esimerkiksi `3.0`. Mikäli asetat arvoksi kokonaisluvun, esimerkiksi `3`, debuggeri antaa virheilmoituksen *"Error: Size of source and of dest differ"*.
+!!! note "Huomautus"
+
+    `Double`-tyyppisen muuttujan arvoa muutettaessa on arvoksi asetettava desimaaliluku, esimerkiksi `3.0`. Mikäli asetat arvoksi kokonaisluvun, esimerkiksi `3`, debuggeri antaa virheilmoituksen *"Error: Size of source and of dest differ"*.
 
 ## Watch 
 
@@ -154,8 +155,9 @@ cannot be cast to class com.intellij.ui.OnePixelSplitter
 
 kokeile asetusten resetointia seuraavien ohjeiden mukaisesti
 
-> [!VAROITUS]
-> Näin tekemällä menetät kaikki asetuksesi, kuten näppäinoikotiet sekä teemat. Ota asetuksistasi halutessasi varmuuskopiot *File* › *Manage IDE Settings* › *Export Settings*.
+!!! warning "Varoitus"
+
+    Näin tekemällä menetät kaikki asetuksesi, kuten näppäinoikotiet sekä teemat. Ota asetuksistasi halutessasi varmuuskopiot *File* › *Manage IDE Settings* › *Export Settings*.
 
  1. Paina Shift+Shift (eli kaksi kertaa Shift-painiketta) *tai* Ctrl+T,
  2. Kirjoita "*Restore Default settings*" ja valitse ko. toiminto

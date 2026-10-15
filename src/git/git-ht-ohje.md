@@ -47,9 +47,10 @@ jossa on valmiina kurssin alkuasetukset.
 Fork-lomakkeen **Project URL** -kohdassa valitaan, kenen alle kopio tulee.
 Avaa pudotusvalikko ja valitse siitä oma nimesi.
 
-> [!VAROITUS]
-> Älä muuta **Project slug** -kohtaa. Sen pitää olla `ohj1ht`, muuten
-> etävarastosi osoite ei ole sama kuin tämän ohjeen esimerkeissä.
+!!! warning "Varoitus"
+
+    Älä muuta **Project slug** -kohtaa. Sen pitää olla `ohj1ht`, muuten
+    etävarastosi osoite ei ole sama kuin tämän ohjeen esimerkeissä.
 
 </step>
 
@@ -69,9 +70,10 @@ ohjaaja näkee työsi. Paina lopuksi **Fork project**.
 Oma kopiosi on nyt valmis. Avaa **Code**-valikko ja kopioi **Clone with HTTPS**
 -kohdan osoite. Tarvitset sitä kloonauksessa ja TIMissä.
 
-> [!HUOMAUTUS]
-> Valitse HTTPS-osoite, älä SSH-osoitetta. SSH-osoitteella push ei onnistu
-> ilman SSH-avainta.
+!!! note "Huomautus"
+
+    Valitse HTTPS-osoite, älä SSH-osoitetta. SSH-osoitteella push ei onnistu
+    ilman SSH-avainta.
 
 </step>
 
@@ -127,18 +129,19 @@ Tämä tehdään kerran jokaisella tietokoneella, jolla teet harjoitustyötä.
 Tee kansio, jossa harjoitustyösi on tällä koneella, ja siirry sinne. Jatkossa
 kaikki git-komennot annetaan tässä kansiossa.
 
-> [!HUOMAUTUS] 
-> Jos olet jo aiemmin tehnyt kurssia varten `ohj1`-kansion (tai
-> muun itse nimeämäsi kansion) muualle, siirry ensin sinne `cd`-komennolla ja
-> tee harjoitustyön kansio vasta sitten. Git Bashissa Windowsin polku
-> kirjoitetaan kauttaviivoin, esimerkiksi `C:\Opiskelu\ohj1` on
-> `/c/Opiskelu/ohj1` (macOS: esimerkiksi `~/kurssit/ohj1`):
->
-> ```bash
-> cd /c/Opiskelu/ohj1
-> mkdir -p harjoitustyo
-> cd harjoitustyo
-> ```
+!!! note "Huomautus"
+
+    Jos olet jo aiemmin tehnyt kurssia varten `ohj1`-kansion (tai
+    muun itse nimeämäsi kansion) muualle, siirry ensin sinne `cd`-komennolla ja
+    tee harjoitustyön kansio vasta sitten. Git Bashissa Windowsin polku
+    kirjoitetaan kauttaviivoin, esimerkiksi `C:\Opiskelu\ohj1` on
+    `/c/Opiskelu/ohj1` (macOS: esimerkiksi `~/kurssit/ohj1`):
+
+    ```bash
+    cd /c/Opiskelu/ohj1
+    mkdir -p harjoitustyo
+    cd harjoitustyo
+    ```
 
 Muuten tee kansio kotikansiosi alle:
 
@@ -164,9 +167,10 @@ vielä välilyönti ja piste: piste tarkoittaa ”tähän kansioon”.
 git clone https://gitlab.jyu.fi/kayttajatunnus/ohj1ht.git .
 ```
 
-> [!VINKKI]
-> Git Bashissa liittäminen on <kbd>Shift</kbd> + <kbd>Insert</kbd>, ei
-> <kbd>Ctrl</kbd> + <kbd>V</kbd>.
+!!! tip "Vinkki"
+
+    Git Bashissa liittäminen on <kbd>Shift</kbd> + <kbd>Insert</kbd>, ei
+    <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
 </step>
 
@@ -214,11 +218,12 @@ valitse **Muistio** ja paina **OK**. Jos koneellasi on jo Markdown-tiedostoille
 editori, esimerkiksi Rider tai Visual Studio Code, tiedosto aukeaa suoraan
 siinä, ja sekin käy.
 
-> [!HUOMAUTUS]
-> Uusi Muistio voi näyttää tiedoston muotoiltuna, jolloin `#`-merkit ja
-> linkkien merkinnät eivät näy. Vaihda silloin näkymäksi Markdown-lähdekoodi
-> (Näytä-valikosta tai ikkunan oikeasta alakulmasta), jotta näet merkinnät ja
-> voit kirjoittaa niitä.
+!!! note "Huomautus"
+
+    Uusi Muistio voi näyttää tiedoston muotoiltuna, jolloin `#`-merkit ja
+    linkkien merkinnät eivät näy. Vaihda silloin näkymäksi Markdown-lähdekoodi
+    (Näytä-valikosta tai ikkunan oikeasta alakulmasta), jotta näet merkinnät ja
+    voit kirjoittaa niitä.
 
 </step>
 
@@ -230,10 +235,11 @@ siinä, ja sekin käy.
 
 Tuplaklikkaa Finderissa `suunnitelma.md`-tiedostoa. Se aukeaa TextEditissä.
 
-> [!VAROITUS]
-> Ota TextEditissä pois **Muokkaa › Korvaukset › Älykkäät lainausmerkit**
-> ennen kirjoittamista. Muuten TextEdit muuttaa lainausmerkit kaareviksi
-> (“ ”), eikä kuvalinkki toimi.
+!!! warning "Varoitus"
+
+    Ota TextEditissä pois **Muokkaa › Korvaukset › Älykkäät lainausmerkit**
+    ennen kirjoittamista. Muuten TextEdit muuttaa lainausmerkit kaareviksi
+    (“ ”), eikä kuvalinkki toimi.
 
 </step>
 
@@ -259,14 +265,15 @@ ensin tiedoston nimi ja sen perään lainausmerkeissä otsikko.
 ![Hahmotelma pelistä](hahmotelma.png "Hahmotelma")
 ```
 
-> [!VAROITUS]
-> 1. Kuvan tiedostopolku on *suhteellinen*: jos kuva on samassa kansiossa kuin
->    suunnitelma.md, kirjoitetaan vain kuvan nimi. Jos kuva on alikansiossa,
->    kirjoitetaan alikansion nimi ja kauttaviiva ennen kuvan nimeä, esimerkiksi
->    `kuvat/hahmotelma.png`. *Älä* kirjoita koko polkua koneeltasi, esimerkiksi
->    `C:\Users\olli\ohj1\harjoitustyo\suunnitelma\hahmotelma.png`.
-> 2. Kuvan tiedostonimen pitää täsmätä kirjain kirjaimelta, myös isot ja pienet
->    kirjaimet. Muuten GitLab ei näytä kuvaa.
+!!! warning "Varoitus"
+
+    1. Kuvan tiedostopolku on *suhteellinen*: jos kuva on samassa kansiossa kuin
+       suunnitelma.md, kirjoitetaan vain kuvan nimi. Jos kuva on alikansiossa,
+       kirjoitetaan alikansion nimi ja kauttaviiva ennen kuvan nimeä, esimerkiksi
+       `kuvat/hahmotelma.png`. *Älä* kirjoita koko polkua koneeltasi, esimerkiksi
+       `C:\Users\olli\ohj1\harjoitustyo\suunnitelma\hahmotelma.png`.
+    2. Kuvan tiedostonimen pitää täsmätä kirjain kirjaimelta, myös isot ja pienet
+       kirjaimet. Muuten GitLab ei näytä kuvaa.
 
 </step>
 
@@ -344,9 +351,10 @@ pääsykoodia), joudut luomaan sille oma tunnus samalla tavalla. Jos kone katoaa
 poista sen tunnus GitLabin tunnuslistasta (**Revoke**); muiden koneiden
 tunnukset toimivat edelleen.
 
-> [!VAROITUS]
-> Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
-> suunnitelmaan, koodiin tai viestiin.
+!!! warning "Varoitus"
+
+    Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
+    suunnitelmaan, koodiin tai viestiin.
 
 </step>
 
@@ -377,10 +385,11 @@ Ensimmäisellä kerralla Git kysyy tunnuksia.
 - **Linux**: kuten macOS:ssä, mutta Git kysyy tunnukset jokaisella pushilla,
   ellei tunnusten tallennusta ole otettu käyttöön.
 
-> [!HUOMAUTUS]
-> Kun pääsytunnus vanhenee vuoden päästä, push antaa virheen *Access denied*.
-> Luo silloin uusi tunnus ja vaihda se vanhan tilalle, ks. [Push ei
-> onnistu](index.md#credentials).
+!!! note "Huomautus"
+
+    Kun pääsytunnus vanhenee vuoden päästä, push antaa virheen *Access denied*.
+    Luo silloin uusi tunnus ja vaihda se vanhan tilalle, ks. [Push ei
+    onnistu](index.md#credentials).
 
 </step>
 
