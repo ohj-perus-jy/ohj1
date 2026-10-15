@@ -1,14 +1,14 @@
 # Heippa, maailma!
 
 
-> [!Osaamistavoitteet]
-> 
-> Tämän osan päätteeksi
-> 
->  * osaat luoda, kääntää C#-lähdekoodia ja ajaa C#-ohjelman, joka tulostaa tekstiä näytölle
->  * osaat asentaa itsellesi kehitysympäristön C#-ohjelmointia varten ja luoda uuden C#-projektin
->  * osaat luoda graafisen C#-ohjelman, jossa on erilaisia muotoja
->  * ymmärrät, millä tavalla (tekstimuotoinen) tieto tallennetaan tietokoneeseen
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan päätteeksi
+
+     * osaat luoda, kääntää C#-lähdekoodia ja ajaa C#-ohjelman, joka tulostaa tekstiä näytölle
+     * osaat asentaa itsellesi kehitysympäristön C#-ohjelmointia varten ja luoda uuden C#-projektin
+     * osaat luoda graafisen C#-ohjelman, jossa on erilaisia muotoja
+     * ymmärrät, millä tavalla (tekstimuotoinen) tieto tallennetaan tietokoneeseen
 
 Harjoituksen päätteeksi sinulla pitäisi olla myös asennettuna
 [kurssin työkalut](../tyokalut.md), sillä kotoa käsin toimiminen
