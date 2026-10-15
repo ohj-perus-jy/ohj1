@@ -2,7 +2,8 @@
  
 ## Syksy 2026
 
- * Tulossa
+ * 📺 Katso: [YouTube](https://youtube.com/live/PocvPYn2OFg?feature=share),
+     Moniviestin (tulossa)
 
 ## Kevät 2026
 
