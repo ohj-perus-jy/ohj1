@@ -1,8 +1,9 @@
 # Yleisimmät virheilmoitukset
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Kokoelma kääntäjän ja suoritusaikaisten virheilmoitusten tulkinnoista. Jokaisen kohdalla kerrotaan tyypillinen syy ja korjaus.
 

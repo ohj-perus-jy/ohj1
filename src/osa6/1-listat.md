@@ -1,8 +1,9 @@
 # Listat
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Taulukon koko on kiinteä. Kun alkioita lisätään ja poistetaan ohjelman suorituksen aikana, käytetään listaa (`List<T>`). Opit luomaan listan, lisäämään ja poistamaan alkioita sekä käymään listan läpi.
 

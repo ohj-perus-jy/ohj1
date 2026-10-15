@@ -8,7 +8,7 @@ Materiaali on `src/`:ssä.
 ## Kirjan rakenne
 
 - Jokainen osa on hakemistossa `src/osaN/`:
-  - `index.md`: 2–3 virkkeen esittelykappale, `> [!Osaamistavoitteet]`-
+  - `index.md`: 2–3 virkkeen esittelykappale, `!!! abstract "Osaamistavoitteet"`-
     laatikko, luennot ja Käsitteet-taulukko vakiotekstin kera (ks. alla).
   - 3–4 aliosaa (poikkeuksellisesti enemmän), tiedostot `1-nimi.md`,
     `2-nimi.md`, … Aliosan lopussa ovat otsikot `## Testaa tietosi`

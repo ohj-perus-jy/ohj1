@@ -5,15 +5,16 @@ ohjelma syntyy jo muutamasta rivistä. Aluksi kirjoitetaan C#-ohjelma, joka
 tulostaa tekstiä ja laskutoimitusten tuloksia, sitten asennetaan
 kehitysympäristö ja tehdään ensimmäinen graafinen ohjelma Jypeli-kirjastolla.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat selittää omin sanoin, mitä algoritmi, ohjelma ja ohjelmointikieli ovat
-> * osaat kirjoittaa, kääntää ja suorittaa tekstiä tulostavan C#-ohjelman
-> * osaat laskea ohjelmassa aritmeettisilla operaattoreilla ja tiedät, miten
->   kokonaislukujen jako eroaa liukulukujen jaosta
-> * osaat asentaa kehitysympäristön ja luoda siihen uuden solutionin ja projektin
-> * osaat tehdä yksinkertaisen graafisen ohjelman Jypeli-kirjastolla
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat selittää omin sanoin, mitä algoritmi, ohjelma ja ohjelmointikieli ovat
+    * osaat kirjoittaa, kääntää ja suorittaa tekstiä tulostavan C#-ohjelman
+    * osaat laskea ohjelmassa aritmeettisilla operaattoreilla ja tiedät, miten
+      kokonaislukujen jako eroaa liukulukujen jaosta
+    * osaat asentaa kehitysympäristön ja luoda siihen uuden solutionin ja projektin
+    * osaat tehdä yksinkertaisen graafisen ohjelman Jypeli-kirjastolla
 
 ## Luennot
 

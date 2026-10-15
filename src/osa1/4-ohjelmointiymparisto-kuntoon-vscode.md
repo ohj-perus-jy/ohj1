@@ -86,12 +86,13 @@ ohj1
  '-harjoitustyo
 ```
 
-> [!VAROITUS]
-> Vältä projektien sijoittamista pilvisynkronoituun kansioon (OneDrive,
-> Dropbox, iCloud), jos voit. Synkronointi ja kääntäjä kirjoittavat samoja
-> tiedostoja yhtä aikaa, ja tuloksena on satunnaisia, vaikeasti selitettäviä
-> virheitä. Varmuuskopio hoituu paremmin Gitillä, josta kerrotaan sivulla
-> [Versiohallinta ja Git](../git/index.md).
+!!! warning "Varoitus"
+
+    Vältä projektien sijoittamista pilvisynkronoituun kansioon (OneDrive,
+    Dropbox, iCloud), jos voit. Synkronointi ja kääntäjä kirjoittavat samoja
+    tiedostoja yhtä aikaa, ja tuloksena on satunnaisia, vaikeasti selitettäviä
+    virheitä. Varmuuskopio hoituu paremmin Gitillä, josta kerrotaan sivulla
+    [Versiohallinta ja Git](../git/index.md).
 
 ## Demokansio ja kaksi erilaista ohjelmaa
 

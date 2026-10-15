@@ -15,11 +15,12 @@ Suoritustavassa 1 arvosana määräytyy tenttipisteistä, joita voi korottaa
 harjoitustehtävistä saatavilla
 [hyvityspisteillä](#hyvitykset-tenttiin).
 
-> [!VAROITUS]
-> Suoritustapa 2 ei sovellu välttämättä sinulle, jos tavoitteenasi on hakea
-> opiskelupaikkaa [avoimen
-> väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin)
-> kautta. Tarkista huolellisesti hakukohteesi valintaperusteet.
+!!! warning "Varoitus"
+
+    Suoritustapa 2 ei sovellu välttämättä sinulle, jos tavoitteenasi on hakea
+    opiskelupaikkaa [avoimen
+    väylän](https://www.jyu.fi/fi/tule-opiskelemaan/kandidaatti-ja-maisteriohjelmat/avoimen-vayla-jyvaskylan-yliopistoon/avoimen-vayla-tieto-ja-ohjelmistotekniikan-opintoihin)
+    kautta. Tarkista huolellisesti hakukohteesi valintaperusteet.
 
 Näet harjoitustehtävistä keräämäsi pisteet ja muut osasuoritusten edistymiset
 [Eteneminen](https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen)-sivulla

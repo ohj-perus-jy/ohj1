@@ -1,8 +1,9 @@
 # Sanakirjat
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Sanakirja (`Dictionary<TKey, TValue>`) tallentaa avain–arvo-pareja: arvo haetaan avaimen perusteella. Opit, milloin sanakirja on parempi valinta kuin lista, ja miten sitä käytetään.
 

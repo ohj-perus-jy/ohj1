@@ -1,8 +1,9 @@
 # Taulukot ja silmukat
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Taulukko ja silmukka kulkevat käsi kädessä: silmukalla käydään taulukon alkiot läpi yksi kerrallaan. Opit kirjoittamaan taulukkoa käsitteleviä funktioita.
 

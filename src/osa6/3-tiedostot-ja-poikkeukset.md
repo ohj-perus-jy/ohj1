@@ -1,8 +1,9 @@
 # Tiedostot ja poikkeukset
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Ohjelman tiedot katoavat, kun ohjelma suljetaan, ellei niitä tallenneta. Opit
 lukemaan tekstitiedoston riveiksi, käsittelemään rivit ja kirjoittamaan

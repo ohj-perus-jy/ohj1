@@ -1,8 +1,9 @@
 # Taulukot
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Taulukko (engl. *array*) on tietorakenne, johon voi tallentaa useita samantyyppisiä arvoja yhden nimen alle. Opit luomaan taulukon, viittaamaan sen alkioihin indeksillä ja ymmärtämään, mitä taulukkomuuttujassa oikeastaan on.
 

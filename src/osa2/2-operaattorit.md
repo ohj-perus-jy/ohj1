@@ -26,6 +26,7 @@ muuntamaan arvo tyypistä toiseen ja lukemaan luku käyttäjältä.
 Muuttujilla voi laskea aivan kuten luvuilla. Laskussa muuttuja edustaa arvoaan. 
 
 !!! note "Huomautus"
+
     Useissa alla olevissa esimerkeissä on piilotettu luokka (`public class`-rivi) ja
     pääohjelman määrittely (`public static void Main()`-rivi), jotka eivät ole
     esimerkkien kannalta oleellisia. Saat kuitenkin aina koko koodin näkyville
@@ -478,9 +479,10 @@ totuusarvon (`true` tai `false`) perustuen vertailun tulokseen.
 //-}
 ```
 
-> [!VAROITUS]
-> Yhtäsuuruutta verrataan kahdella yhtäsuuruusmerkillä `==`. Yksi merkki `=`
-> on sijoitus. Kääntäjä huomaa sekaannuksen useimmiten, mutta ei aina.
+!!! warning "Varoitus"
+
+    Yhtäsuuruutta verrataan kahdella yhtäsuuruusmerkillä `==`. Yksi merkki `=`
+    on sijoitus. Kääntäjä huomaa sekaannuksen useimmiten, mutta ei aina.
 
 Kahden liukuluvun vertaaminen `==`-operaattorilla on huono ajatus, koska
 [liukuluvut ovat likiarvoja](../osa1/3-laskutoimitukset.md#liukuluvuilla-laskeminen):

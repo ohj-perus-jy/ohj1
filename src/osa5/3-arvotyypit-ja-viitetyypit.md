@@ -1,8 +1,9 @@
 # Arvotyypit ja viitetyypit
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Kokonaisluku ja taulukko käyttäytyvät sijoituksessa eri tavoin: toisesta kopioituu arvo, toisesta viite. Opit, mistä ero johtuu ja mitä seurauksia sillä on parametrien välityksessä ja vertailussa.
 

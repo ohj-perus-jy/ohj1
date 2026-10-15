@@ -4,11 +4,12 @@ Rekursiivinen funktio ratkaisee ongelman kutsumalla itseään saman ongelman
 pienemmällä versiolla. Testaamisella varmistetaan, että funktio toimii, ja
 ComTest-testit voi ajaa uudelleen jokaisen muutoksen jälkeen.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat kirjoittaa rekursiivisen funktion ja tunnistat sen lopetusehdon
-> * osaat testata funktion ComTestillä
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat kirjoittaa rekursiivisen funktion ja tunnistat sen lopetusehdon
+    * osaat testata funktion ComTestillä
 
 ## Luennot
 

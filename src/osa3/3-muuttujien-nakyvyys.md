@@ -1,8 +1,9 @@
 # Muuttujien näkyvyys
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Muuttuja ei ole olemassa ja käytettävissä kaikkialla ohjelmassa. Asia tulee
 vastaan heti, kun ohjelmassa on useita aliohjelmia.

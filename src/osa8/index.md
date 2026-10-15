@@ -4,10 +4,11 @@ Kurssin keskeiset käsitteet kootaan yhteen, ja tyypillisistä virheistä
 opitaan, miten ne vältetään. Lopuksi valmistaudutaan tenttiin ja katsotaan,
 miten ohjelmointia voi opiskella kurssin jälkeen.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat kerrata kurssin keskeiset asiat ja valmistautua tenttiin
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat kerrata kurssin keskeiset asiat ja valmistautua tenttiin
 
 ## Luennot
 

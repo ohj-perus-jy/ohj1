@@ -1,8 +1,9 @@
 # Jypeli ja oliot
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 [Ensimmäisessä graafisessa ohjelmassa](../osa1/5-ensimmainen-graafinen-ohjelma.md)
 luotiin peliolio ja lisättiin se peliin. Nyt selitetään, mitä silloin oikeastaan
@@ -20,20 +21,21 @@ Jypeli-peliin.
 <!-- `PhysicsObject pallo = new PhysicsObject(50, 50);` Konstruktorin
      argumentit. Muuttuja viittaa olioon. -->
 
-> [!HUOMAUTUS]
-> Kun olio sijoitetaan muuttujaan, muuttujaan tallentuu *viite* (engl.
-> *reference*) olioon eikä olio itse. Siksi kaksi muuttujaa voi viitata samaan
-> olioon:
->
-> ```csharp,ignore
-> PhysicsObject pallo = new PhysicsObject(40, 40);
-> PhysicsObject sama = pallo;
-> sama.Color = Color.Red;   // myös pallo on nyt punainen
-> ```
->
-> Rivi `PhysicsObject sama = pallo;` ei luo uutta palloa, vaan `pallo` ja
-> `sama` viittaavat samaan olioon. Viitteisiin palataan [arvo- ja
-> viitetyyppien](../osa5/3-arvotyypit-ja-viitetyypit.md) yhteydessä.
+!!! note "Huomautus"
+
+    Kun olio sijoitetaan muuttujaan, muuttujaan tallentuu *viite* (engl.
+    *reference*) olioon eikä olio itse. Siksi kaksi muuttujaa voi viitata samaan
+    olioon:
+
+    ```csharp,ignore
+    PhysicsObject pallo = new PhysicsObject(40, 40);
+    PhysicsObject sama = pallo;
+    sama.Color = Color.Red;   // myös pallo on nyt punainen
+    ```
+
+    Rivi `PhysicsObject sama = pallo;` ei luo uutta palloa, vaan `pallo` ja
+    `sama` viittaavat samaan olioon. Viitteisiin palataan [arvo- ja
+    viitetyyppien](../osa5/3-arvotyypit-ja-viitetyypit.md) yhteydessä.
 
 ## Ominaisuudet
 

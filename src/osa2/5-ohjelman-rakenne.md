@@ -89,10 +89,11 @@ Käytäntö on, että yksi tiedosto sisältää yhden luokan ja että luokan nim
 
 Kääntäjä ei pakota tähän — ohjelma kääntyy, vaikka luokan ja tiedoston nimet eroaisivat — mutta käytännöstä poikkeaminen tekee koodin lukemisesta hankalaa. Kun luokkia on kymmeniä, on korvaamattoman arvokasta tietää, mistä tiedostosta mikäkin luokka löytyy.
 
-> [!VINKKI]
-> Jos vaihdat luokan nimen Riderissä, tee se uudelleennimeämistoiminnolla
-> (vie kursori luokan nimen päälle ja paina <kbd>Shift</kbd> + <kbd>F6</kbd>).
-> Tällöin myös tiedoston nimi ja kaikki viittaukset luokkaan päivittyvät kerralla.
+!!! tip "Vinkki"
+
+    Jos vaihdat luokan nimen Riderissä, tee se uudelleennimeämistoiminnolla
+    (vie kursori luokan nimen päälle ja paina <kbd>Shift</kbd> + <kbd>F6</kbd>).
+    Tällöin myös tiedoston nimi ja kaikki viittaukset luokkaan päivittyvät kerralla.
 
 ### Pääohjelma `Main`
 
@@ -149,11 +150,12 @@ System.Console.WriteLine("Tervehdys!");
 
 Molemmat tavat toimivat, mutta `using`-lause säästää kirjoitusvaivaa ja tekee koodista luettavampaa. `using`-lauseet kirjoitetaan tiedoston alkuun, ennen luokan määrittelyä. Jypeliä käyttävissä ohjelmissa tarvitaan vastaavasti `using Jypeli;`.
 
-> [!HUOMAUTUS]
-> Rider lisää tarvittavat `using`-lauseet yleensä automaattisesti, kun alat kirjoittaa
-> luokan nimeä ja valitset ehdotuksen listasta. Jos näet virheilmoituksen
-> *"The name 'Console' does not exist in the current context"*, tiedostosta puuttuu
-> lähes varmasti `using System;`.
+!!! note "Huomautus"
+
+    Rider lisää tarvittavat `using`-lauseet yleensä automaattisesti, kun alat kirjoittaa
+    luokan nimeä ja valitset ehdotuksen listasta. Jos näet virheilmoituksen
+    *"The name 'Console' does not exist in the current context"*, tiedostosta puuttuu
+    lähes varmasti `using System;`.
 
 ## Suoritusjärjestys
 
@@ -206,11 +208,12 @@ Suorituksen kulku näyttää tältä:
 
 Huomaa, että teksti `"2. Tervehdys!"` tulostuu keskimmäisenä, vaikka se on kirjoitettu tiedostossa vasta viimeisenä. Funktion paluuarvo tulostetaan `Main`-aliohjelman toisella rivillä, kun suoritus on palannut funktiosta. Ohjelman *kirjoitusjärjestys* ja *suoritusjärjestys* ovat siis kaksi eri asiaa.
 
-> [!TÄRKEÄÄ]
-> Aliohjelmien määrittelyjärjestyksellä luokan sisällä ei ole väliä. `Tervehdys`-funktion
-> voi kirjoittaa yhtä hyvin ennen `Main`-aliohjelmaa kuin sen jälkeenkin — ohjelma toimii
-> täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
-> *kutsutaan*.
+!!! tip "Tärkeää"
+
+    Aliohjelmien määrittelyjärjestyksellä luokan sisällä ei ole väliä. `Tervehdys`-funktion
+    voi kirjoittaa yhtä hyvin ennen `Main`-aliohjelmaa kuin sen jälkeenkin — ohjelma toimii
+    täsmälleen samalla tavalla. Merkitystä on vain sillä, missä järjestyksessä aliohjelmia
+    *kutsutaan*.
 
 Kutsuttu aliohjelma voi vuorostaan kutsua toista aliohjelmaa, jolloin kutsut ketjuuntuvat. Suoritus palaa aina takaisin siihen kohtaan, josta kutsu tehtiin. Kun `Main`-aliohjelman viimeinen lause on suoritettu, koko ohjelma päättyy. Kutsumista käsiteltiin [funktioiden](./4-funktiot.md#mitä-kutsussa-tapahtuu) yhteydessä.
 
@@ -232,10 +235,11 @@ public class Sovellus            // taso 0
 
 Kääntäjä ei välitä sisennyksistä lainkaan — ohjelma kääntyisi, vaikka kaikki kirjoitettaisiin yhdelle riville. Sisennys on ihmistä varten: sen avulla lohkojen rakenteen näkee yhdellä silmäyksellä. Sisentämätön koodi on lähes lukukelvotonta, joten sisennyksistä kannattaa pitää huolta alusta asti.
 
-> [!VINKKI]
-> Riderissä koko tiedoston sisennykset saa siistittyä kerralla valitsemalla
-> *Code* › *Reformat Code*. Tee tämä tottumuksesta
-> aina ennen tehtävän palauttamista.
+!!! tip "Vinkki"
+
+    Riderissä koko tiedoston sisennykset saa siistittyä kerralla valitsemalla
+    *Code* › *Reformat Code*. Tee tämä tottumuksesta
+    aina ennen tehtävän palauttamista.
 
 ## Yhteenveto: ohjelman runko
 

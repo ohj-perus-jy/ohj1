@@ -1,8 +1,9 @@
 # Satunnaisluvut
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Pelit ja simulaatiot tarvitsevat satunnaisuutta: nopanheitto, vihollisen
 paikka, arvattava luku. Opit arpomaan lukuja `Random`-luokalla ja Jypelin

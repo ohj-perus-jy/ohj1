@@ -178,11 +178,12 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 - *macOS*: Valitse Pääte aktiiviseksi ja paina `Command`+`V`
 - *Linux*: Valitse komentorivi aktiiviseksi ja paina `Ctrl`+`Shift`+`V` TAI `Shift`+`Insert`. Tarkista pääteohjelmasi ohjeista oikea näppäinoikotie
 
-> [!VAROITUS]
-> Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
-> tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
-> poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
-> Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.
+!!! warning "Varoitus"
+
+    Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
+    tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
+    poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
+    Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.
 
 </details>
 
@@ -636,10 +637,11 @@ Tallenna tiedosto (**Ctrl+S**, macOS: **Cmd+S**). Tallentamisen jälkeen valitse
 
 ## Git 
 
-> [!HUOMAUTUS]
-> Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
-> mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
-> myöhemmin.
+!!! note "Huomautus"
+
+    Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
+    mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
+    myöhemmin.
 
 ### [Windows](#tab/win)
  

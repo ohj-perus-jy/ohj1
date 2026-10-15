@@ -1,8 +1,9 @@
 # Rekursio
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Rekursiivinen funktio kutsuu itseään. Opit tunnistamaan, milloin rekursio on luonteva ratkaisu, ja kirjoittamaan rekursiivisen funktion, joka varmasti päättyy.
 

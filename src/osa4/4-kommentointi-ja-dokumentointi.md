@@ -1,8 +1,9 @@
 # Kommentointi ja dokumentointi
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Opit kirjoittamaan kommentteja ja dokumentoimaan aliohjelmat niin, että sekä
 ihminen että kehitysympäristö hyötyvät niistä. Dokumentaatiokommentit ovat

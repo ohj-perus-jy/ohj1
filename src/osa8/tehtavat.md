@@ -7,8 +7,9 @@ TIMiin: <https://tim.jyu.fi/view/kurssit/tie/itkp102/demot/demo8>.
 Bonustehtävät on merkitty tähtimerkillä <i class="jyu-star"></i>. Pisteytys on
 kuvattu sivulla [Suorittaminen](../suorittaminen.md#harjoitustehtävät).
 
-> [!HUOMAUTUS]
-> Tehtävälista täydennetään sitä mukaa, kun tehtävät kirjoitetaan.
+!!! note "Huomautus"
+
+    Tehtävälista täydennetään sitä mukaa, kun tehtävät kirjoitetaan.
 
 | Tehtävä | Aliosa | Pisteet | Palautus |
 | ------- | ------ | ------: | -------- |

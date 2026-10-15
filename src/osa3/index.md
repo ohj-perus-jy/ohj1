@@ -5,15 +5,16 @@ jotka eivät palauta arvoa, pitkä ohjelma jaetaan nimettyihin paloihin, ja
 muuttujan näkyvyys ratkaisee, missä kohdassa ohjelmaa muuttujaa voi käyttää.
 Lopuksi Jypeli-pelin oliot saavat selityksensä.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat kirjoittaa ehtolauseita ja funktioita, jotka palauttavat eri arvon
->   eri tilanteissa
-> * osaat kirjoittaa aliohjelman, joka ei palauta arvoa, ja tiedät, milloin
->   aliohjelmasta tehdään funktio ja milloin ei
-> * tiedät, missä muuttuja näkyy ja milloin sitä ei enää ole
-> * osaat luoda ja käyttää olioita Jypeli-pelissä
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat kirjoittaa ehtolauseita ja funktioita, jotka palauttavat eri arvon
+      eri tilanteissa
+    * osaat kirjoittaa aliohjelman, joka ei palauta arvoa, ja tiedät, milloin
+      aliohjelmasta tehdään funktio ja milloin ei
+    * tiedät, missä muuttuja näkyy ja milloin sitä ei enää ole
+    * osaat luoda ja käyttää olioita Jypeli-pelissä
 
 ## Luennot
 

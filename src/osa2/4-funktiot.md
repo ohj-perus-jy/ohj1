@@ -201,11 +201,12 @@ double ala = Nelio(3) + 1;
 Kohta 4 on koko asian ydin: kun funktio on suoritettu, kutsu korvautuu
 paluuarvolla, aivan kuin kutsun paikalla olisi alun perin lukenut `9`.
 
-> [!HUOMAUTUS]
-> **Terminologiaa.** Kutsussa annettavia arvoja kutsutaan *argumenteiksi*.
-> Argumenttien arvot välitetään funktion *parametreihin*. Kirjallisuudessa
-> saatetaan nimittää kumpiakin parametreiksi (*todellinen* ja *muodollinen*
-> parametri), mutta tässä käytämme edellä mainittuja termejä.
+!!! note "Huomautus"
+
+    **Terminologiaa.** Kutsussa annettavia arvoja kutsutaan *argumenteiksi*.
+    Argumenttien arvot välitetään funktion *parametreihin*. Kirjallisuudessa
+    saatetaan nimittää kumpiakin parametreiksi (*todellinen* ja *muodollinen*
+    parametri), mutta tässä käytämme edellä mainittuja termejä.
 
 Kutsun alussa tapahtuu siis sijoitus *parametri = argumentti*. Siitä seuraa
 kaksi asiaa, jotka kannattaa huomata heti.
@@ -552,13 +553,14 @@ aaltosulun jälkeen. Kääntäjä puhuu sanasta `public`, koska C# sallii
 aliohjelman sisään niin sanotun paikallisen funktion, jolla ei saa olla
 `public`-sanaa. Tällä kurssilla paikallisia funktioita ei käytetä.
 
-> [!HUOMAUTUS]
-> **Terminologiaa.** Tällä kurssilla *aliohjelma* on yleisnimi kaikille
-> ohjelman nimetyille osille. Arvon palauttavaa aliohjelmaa kutsutaan
-> *funktioksi*, ja olioon liittyvää aliohjelmaa *metodiksi*. Kirjallisuudessa
-> sanoja käytetään ristiin, joten älä hämmenny, jos kohtaat eri nimityksiä.
-> Englanninkielisissä lähteissä C#-aliohjelmia sanotaan lähes aina metodeiksi
-> (*method*).
+!!! note "Huomautus"
+
+    **Terminologiaa.** Tällä kurssilla *aliohjelma* on yleisnimi kaikille
+    ohjelman nimetyille osille. Arvon palauttavaa aliohjelmaa kutsutaan
+    *funktioksi*, ja olioon liittyvää aliohjelmaa *metodiksi*. Kirjallisuudessa
+    sanoja käytetään ristiin, joten älä hämmenny, jos kohtaat eri nimityksiä.
+    Englanninkielisissä lähteissä C#-aliohjelmia sanotaan lähes aina metodeiksi
+    (*method*).
 
 <details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi <code>public</code> ja <code>static</code> pitää kirjoittaa?</summary>
 

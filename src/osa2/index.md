@@ -6,21 +6,22 @@ ohjelman aikana, ja operaattoreilla niistä lasketaan uusia arvoja. Toistuva
 laskutoimitus nimetään funktioksi, jota voi kutsua yhä uudelleen eri
 arvoilla.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat määritellä muuttujia, valita niille sopivan tietotyypin ja sijoittaa
->   niihin arvoja
-> * osaat lukea käyttäjältä tekstiä ja lukuja
-> * tiedät, miten tietotyyppi vaikuttaa laskun tulokseen, ja osaat muuntaa
->   arvon tyypistä toiseen
-> * osaat muodostaa totuusarvoisia lausekkeita vertailu- ja loogisilla
->   operaattoreilla
-> * erotat lauseen ja lausekkeen toisistaan
-> * osaat kirjoittaa funktion, joka saa tietoa parametreina ja palauttaa arvon,
->   ja käyttää sen kutsua lausekkeessa
-> * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
->   järjestyksessä ne suoritetaan
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat määritellä muuttujia, valita niille sopivan tietotyypin ja sijoittaa
+      niihin arvoja
+    * osaat lukea käyttäjältä tekstiä ja lukuja
+    * tiedät, miten tietotyyppi vaikuttaa laskun tulokseen, ja osaat muuntaa
+      arvon tyypistä toiseen
+    * osaat muodostaa totuusarvoisia lausekkeita vertailu- ja loogisilla
+      operaattoreilla
+    * erotat lauseen ja lausekkeen toisistaan
+    * osaat kirjoittaa funktion, joka saa tietoa parametreina ja palauttaa arvon,
+      ja käyttää sen kutsua lausekkeessa
+    * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
+      järjestyksessä ne suoritetaan
 
 ## Luennot
 

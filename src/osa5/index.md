@@ -6,15 +6,16 @@ miksi aliohjelma voi muuttaa kutsujan taulukkoa mutta ei kokonaislukua.
 Lopuksi otetaan käyttöön debuggeri, jolla ohjelman suoritusta voi seurata rivi
 kerrallaan.
 
-> [!Osaamistavoitteet]
-> Tämän osan jälkeen
->
-> * osaat luoda taulukon, viitata sen alkioihin ja käydä sen läpi `for`- ja
->   `foreach`-silmukalla
-> * osaat kirjoittaa taulukkoa käsittelevän funktion
-> * ymmärrät arvotyypin ja viitetyypin eron ja sen vaikutuksen sijoitukseen ja
->   parametrin välitykseen
-> * osaat etsiä ohjelman virheitä debuggerilla
+!!! abstract "Osaamistavoitteet"
+
+    Tämän osan jälkeen
+
+    * osaat luoda taulukon, viitata sen alkioihin ja käydä sen läpi `for`- ja
+      `foreach`-silmukalla
+    * osaat kirjoittaa taulukkoa käsittelevän funktion
+    * ymmärrät arvotyypin ja viitetyypin eron ja sen vaikutuksen sijoitukseen ja
+      parametrin välitykseen
+    * osaat etsiä ohjelman virheitä debuggerilla
 
 ## Luennot
 

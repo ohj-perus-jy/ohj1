@@ -1,8 +1,9 @@
 # Kertaus ja tenttiin valmistautuminen
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Lopuksi kootaan kurssin keskeiset asiat yhteen ja annetaan ohjeita tenttiin
 valmistautumiseen.

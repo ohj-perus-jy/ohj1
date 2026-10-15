@@ -83,14 +83,14 @@ git --version
 
 Jos komento palauttaa versionumeron, niin git on asennettu oikein.
 
-> [!VAROITUS]
->
-> Git Bash -tulkissa liittäminen **ei toimi** tavallisella <kbd>Ctrl</kbd> + <kbd>V</kbd> tai <kbd>Cmd</kbd> + <kbd>V</kbd>-näppäinyhdistelmällä!
-> Sen sijaan käytössä on seuraavat pikanäppäimet:
-> - Liitä kopioitu teksti bashiin: <kbd>Shift</kbd> + <kbd>Insert</kbd> 
-> - Kopioi valittu teksti bashista: <kbd>Ctrl</kbd> + <kbd>Insert</kbd> (<kbd>Cmd</kbd> + <kbd>Insert</kbd> macOS:ssa)
-> 
-> Vaihtoehtoisesti voit oikeaklikata päätteen kursorista ja valita *Paste* tai *Copy*.
+!!! warning "Varoitus"
+
+    Git Bash -tulkissa liittäminen **ei toimi** tavallisella <kbd>Ctrl</kbd> + <kbd>V</kbd> tai <kbd>Cmd</kbd> + <kbd>V</kbd>-näppäinyhdistelmällä!
+    Sen sijaan käytössä on seuraavat pikanäppäimet:
+    - Liitä kopioitu teksti bashiin: <kbd>Shift</kbd> + <kbd>Insert</kbd> 
+    - Kopioi valittu teksti bashista: <kbd>Ctrl</kbd> + <kbd>Insert</kbd> (<kbd>Cmd</kbd> + <kbd>Insert</kbd> macOS:ssa)
+
+    Vaihtoehtoisesti voit oikeaklikata päätteen kursorista ja valita *Paste* tai *Copy*.
 
 ***
 
@@ -149,11 +149,11 @@ Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiin
 `git status`-komentoa voi viljellä missä tahansa välissä. Se kertoo paikallisen varaston tilasta, muun muassa mitä tiedostoja on muutettu, poistettu tai lisätty.
 
 
-> [!HUOMAUTUS]
-> 
-> Harjoitustyön pohjan viemisestä versiohallintaan 
-> on myös [vaiheittainen kuvitettu ohje](git-ht-ohje.md). Voit seurata joko tätä tekstipohjaista ohjetta tai
-> kuvitettua ohjetta. Molempia ei tarvitse lukea.
+!!! note "Huomautus"
+
+    Harjoitustyön pohjan viemisestä versiohallintaan 
+    on myös [vaiheittainen kuvitettu ohje](git-ht-ohje.md). Voit seurata joko tätä tekstipohjaista ohjetta tai
+    kuvitettua ohjetta. Molempia ei tarvitse lukea.
 
 ## Oman etävaraston luominen GitLab-palveluun {#fork}
 
@@ -415,9 +415,10 @@ teet harjoitustyötä myös toisella koneella, luot uuden tunnuksen samalla
 tavalla kuin yllä. Jos kone katoaa, poista sen tunnus GitLabin tunnuslistasta
 (**Revoke**); muiden koneiden tunnukset toimivat edelleen.
 
-> [!VAROITUS]
-> Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
-> suunnitelmaan, koodiin tai viestiin.
+!!! warning "Varoitus"
+
+    Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
+    suunnitelmaan, koodiin tai viestiin.
 
 ## Tehtyjen muutosten lähettäminen etävarastoon (push) {#push}
 

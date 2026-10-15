@@ -1,8 +1,9 @@
 # Merkkijonot
 
-> [!HUOMAUTUS]
-> Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
-> vaiheessa B.
+!!! note "Huomautus"
+
+    Tämä sivu on kesken: runko on valmis, teksti kirjoitetaan rakenneuudistuksen
+    vaiheessa B.
 
 Merkkijono (`string`) on jono merkkejä. Opit käsittelemään merkkijonoja
 valmiilla metodeilla, pilkkomaan niitä osiin ja muuntamaan merkkijonoja luvuiksi

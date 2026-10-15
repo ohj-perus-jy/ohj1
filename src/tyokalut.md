@@ -180,11 +180,12 @@ Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:
 - *macOS*: Valitse Pääte aktiiviseksi ja paina `Command`+`V`
 - *Linux*: Valitse komentorivi aktiiviseksi ja paina `Ctrl`+`Shift`+`V` TAI `Shift`+`Insert`. Tarkista pääteohjelmasi ohjeista oikea näppäinoikotie
 
-> [!VAROITUS]
-> Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
-> tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
-> poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
-> Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.
+!!! warning "Varoitus"
+
+    Älä **ikinä** kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
+    tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
+    poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
+    Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.
 
 </details>
 
@@ -671,10 +672,11 @@ ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yk
 
 ## Git 
 
-> [!HUOMAUTUS]
-> Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
-> mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
-> myöhemmin.
+!!! note "Huomautus"
+
+    Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
+    mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
+    myöhemmin.
 
 ### [Windows](#tab/win)
  
@@ -840,10 +842,11 @@ ulkoiseen konsoliin katso
 [How to launch console app in external
 window?](https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-)
 
-> [!VINKKI]
-> Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
-> valitsemalla *File* › *Manage IDE Settings*
-> › *Settings sync*.
+!!! tip "Vinkki"
+
+    Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
+    valitsemalla *File* › *Manage IDE Settings*
+    › *Settings sync*.
 
 </details>
 
