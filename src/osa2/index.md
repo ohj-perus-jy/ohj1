@@ -51,6 +51,6 @@ ovat [sanastossa](../sanasto.md).
 | [tietotyyppi](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa |
 | [totuusarvo](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` |
 | [tynkä](./4-funktiot.md#kutsusta-määrittelyyn) | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon |
-| [tyyppimuunnos](./2-operaattorit.md#arvon-muuttaminen-toiseen-tyyppiin) | *type conversion* | arvon muuntaminen tyypistä toiseen, esimerkiksi `int.Parse(teksti)` tai `(double)x` |
+| [tyyppimuunnos](./2-operaattorit.md#arvon-muuntaminen-toiseen-tyyppiin) | *type conversion* | arvon muuntaminen tyypistä toiseen, esimerkiksi `int.Parse(teksti)` tai `(double)x` |
 | [vakio](./1-muuttujat-ja-tietotyypit.md#vakiot) | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua |
 | [vertailuoperaattori](./2-operaattorit.md#vertailuoperaattorit) | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon |

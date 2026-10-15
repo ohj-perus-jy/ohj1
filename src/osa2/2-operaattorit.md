@@ -151,19 +151,23 @@ laskettaessa.
 
 </details>
 
-## Arvon muuttaminen toiseen tyyppiin
+## Arvon muuntaminen toiseen tyyppiin
 
 Laskuissa törmää jatkuvasti tilanteeseen, jossa arvo on väärän tyyppinen:
 käyttäjän kirjoittama teksti pitäisi muuttaa luvuksi, kokonaisluku jakaa
-tarkasti tai liukuluku tallentaa kokonaislukuna. Arvon muuttamista tyypistä toiseen sanotaan tyyppimuunnokseksi (engl. type conversion). C#:ssa se tapahtuu neljällä tavalla:
+tarkasti tai liukuluku tallentaa kokonaislukuna. Arvon muuntamista tyypistä
+toiseen sanotaan *tyyppimuunnokseksi* (engl. *type conversion*). C#:ssa se voi
+tapahtua neljällä tavalla:
 
 * Merkkijono muunnetaan luvuksi lukutyypin omalla `Parse`-aliohjelmalla,
-  esimerkiksi `int.Parse()`. 
-* Luvun (ja minkä tahansa muunkin arvon) voi muuntaa merkkijonoksi `.ToString()`-aliohjelmalla.
+  esimerkiksi `int.Parse()`, `double.Parse()`, jne. 
+* Luvun (ja minkä tahansa muunkin arvon) voi muuntaa merkkijonoksi
+  `.ToString()`-aliohjelmalla, esimerkiksi `luku.ToString()` tai interpoloimalla `$"{luku}"`.
 * Lukutyyppien välillä osa muunnoksista tapahtuu automaattisesti ilman erillistä
-  toimintoa.
-* Osa lukutyyppien välisistä muunnoksista on pyydettävä erikseen. Silloin
-  puhutaan *eksplisiittisestä* muunnoksesta.
+  toimintoa, esim. `double x = 10;` muuntaa `int`-tyypin `double`-tyypiksi.
+* Osa lukutyyppien välisistä muunnoksista voi hävittää tietoa, ja ne on
+  pyydettävä erikseen, esim. `int luku = (int)3.14;`. Tällöin puhutaan
+  *eksplisiittisestä* muunnoksesta.
 
 ### Merkkijono luvuksi ja toisin päin
 
@@ -174,6 +178,24 @@ Esimerkiksi `"42" + 1` on `"421"`, ei `43`. Merkkijonon kanssa `+`
 Merkkijonon muuntamiseen luvuksi on jokaiselle lukutyypille oma
 `Parse`-aliohjelma. Kokonaisluvuksi (`int`) muunnetaan `int.Parse`-aliohjelmalla.
 Liukuluvuksi (`double`) muunnetaan `double.Parse`-aliohjelmalla.
+
+```csharp
+//-using System;
+//-
+//-public class Muunnokset
+//-{
+//-    public static void Main()
+//-    {
+        string ikaTekstina = "20";
+        int ika = int.Parse(ikaTekstina);
+        Console.WriteLine(ika + 1);            // 21
+
+        string matkaTekstina = "123.4";
+        double matka = double.Parse(matkaTekstina);
+        Console.WriteLine(matka + 1.3);          // 124.7
+//-    }
+//-}
+```
 
 Toiseen suuntaan muuntamiseen on kaksi tapaa. Luvusta saa merkkijonon
 kirjoittamalla luvun perään `.ToString()`. Saman tuloksen saa myös
@@ -186,12 +208,6 @@ interpoloimalla: `$"{luku}"`.
 //-{
 //-    public static void Main()
 //-    {
-        // Merkkijono luvuksi
-        string ikaTekstina = "20";
-        int ika = int.Parse(ikaTekstina);
-        Console.WriteLine(ika + 1);            // 21
-
-        // Luku merkkijonoksi
         int vuosi = 2026;
         string vuosiTekstina = vuosi.ToString();
         string toinenTapa = $"{vuosi}";
@@ -203,40 +219,76 @@ interpoloimalla: `$"{luku}"`.
 
 ### Luvun lukeminen käyttäjältä
 
-Muunnosta tarvitaan heti, kun ohjelma kysyy käyttäjältä luvun. Kuten
-[syötteen lukemisessa](./1-muuttujat-ja-tietotyypit.md#syötteen-lukeminen-käyttäjältä)
-nähtiin, `Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
-merkkijonona. Rivi on siis muunnettava luvuksi. Aliohjelma valitaan sen
+`Console.ReadLine` antaa käyttäjän kirjoittaman rivin aina
+merkkijonona. Jos tarkoituksena on pyytää käyttäjää syöttämään luku, pitää
+merkkijono muuntaa luvuksi. Aliohjelma valitaan sen
 mukaan, minkä tyyppiseen muuttujaan luku tallennetaan. Kokonaisluku
 muunnetaan `int.Parse`-aliohjelmalla. Liukuluku muunnetaan
 `double.Parse`-aliohjelmalla.
 
-```csharp,ignore
-Console.Write("Anna ikäsi: ");
-string syote = Console.ReadLine();      // esim. "20"
-int ika = int.Parse(syote);             // 20
-Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
-```
-
-Lukeminen ja muuntaminen kirjoitetaan tavallisesti yhdelle riville, jolloin
-välimuuttujaa ei tarvita:
+(Kokeile alla olevia koodeja Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.)
 
 ```csharp,ignore
-Console.Write("Anna ikäsi: ");
-int ika = int.Parse(Console.ReadLine());
-
-Console.Write("Anna matka kilometreinä: ");
-double matka = double.Parse(Console.ReadLine());
+//-using System;
+//-
+//-public class Muunnokset
+//-{
+//-    public static void Main()
+//-    {
+         Console.Write("Anna ikäsi: ");
+         string syote = Console.ReadLine();      // esim. "20"
+         int ika = int.Parse(syote);             // 20
+         Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
+//-    }
+//-}
 ```
 
-Kokeile tätä Riderissä; selaimen koodilaatikko ei osaa kysyä syötettä.
+Lukeminen ja muuntaminen voidaan kirjoittaa yhdelle riville, jolloin erillistä
+`string`-muuttujaa ei tarvita:
+
+```csharp,ignore
+//-using System;
+//-
+//-public class Muunnokset
+//-{
+//-    public static void Main()
+//-    {
+         Console.Write("Anna ikäsi: ");
+         int ika = int.Parse(Console.ReadLine());
+         
+         Console.Write("Anna matka kilometreinä: ");
+         double matka = double.Parse(Console.ReadLine());
+//-    }
+//-}
+```
 
 Jos käyttäjä kirjoittaa jotakin, mikä ei ole luku (vaikkapa `kaksikymmentä`),
 `int.Parse` ei pysty muuntamaan tekstiä ja ohjelma kaatuu virheeseen
 `FormatException`. Toistaiseksi luotamme siihen, että käyttäjä kirjoittaa
-luvun. Syötteen tarkistaminen opitaan [merkkijonojen](../osa4/2-merkkijonot.md)
-yhteydessä, ja samalla selviää, miksi desimaaliluku on joillakin koneilla
-kirjoitettava pilkulla ja toisilla pisteellä.
+luvun, ja desimaaliluvun käyttöjärjestelmänsä ymmärtämässä muodossa. Syötteen
+tarkistaminen opitaan myöhemmin. 
+
+<details closed id="syotevirhe">
+<summary><i class="jyu-star"></i> Valinnaista lisätietoa: Syötteen tarkistaminen TryParse-aliohjelmalla</summary>
+
+Merkkijonon muunnos luvuksi voidaan *yrittää* tehdä käyttäen `TryParse`-aliohjelmaa. Se ei kaada ohjelmaa, vaikka syöte ei olisikaan luku, vaan kertoo, onnistuiko muunnos. `TryParse`-aliohjelma palauttaa totuusarvon, joka kertoo, onnistuiko muunnos.
+
+```csharp
+Console.Write("Anna ikäsi: ");
+string syote = Console.ReadLine();
+if (int.TryParse(syote, out int ika))
+{
+    Console.WriteLine($"Ensi vuonna olet {ika + 1}.");
+}
+else
+{
+    Console.WriteLine("Syöte ei ollut kokonaisluku.");
+}
+```
+
+Jos syöte on kelvollinen kokonaisluku, se muunnetaan `int`-tyypiksi ja tallennetaan muuttujaan `ika`. Jos muunnos epäonnistuu, ohjelma tulostaa virheilmoituksen. `out`-avainsana kertoo, että muuttuja `ika` määritellään tässä yhteydessä.
+
+</details>
 
 ### Automaattinen muunnos
 
