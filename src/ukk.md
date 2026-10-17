@@ -8,6 +8,10 @@ Opintopisteiden mukainen laskennallinen työmäärä on noin 14–15 tuntia viik
 
 Ota yhteyttä vastuuopettajaan. Sairauden tai muun odottamattoman esteen takia saat pisteet kyllä jälkikäteenkin. 
 
+## Miksi tällä kurssilla käytetään C#:ia?
+
+C# ja Java muodostavat Ohjelmointi 1- ja Ohjelmointi 2 -opintojaksojen jatkumon. C# on laajalti käytetty, nykyaikainen ja monipuolinen ohjelmointikieli. C#:n opiskelu antaa hyvän pohjan myöhemmille ohjelmointiopinnoille ja ohjelmistokehitykselle yleisesti. Myös Jypeli-pelimoottori käyttää C#:ia.
+
 ## Voinko käyttää tekoälyä apuna?
 
 Tekoälyä voi käyttää tukena tietyissä tilanteissa, mutta valmiita vastauksia ei saa teettää tekoälyllä. Tentissä tekoälyn käyttö on ehdottomasti kielletty. Tarkemmat tiedot löytyvät [eettisestä ohjeistuksesta](./suorittaminen.md#eettiset-ohjeet). Tekoäly voi selittää asioita väärin, joten siihen ei pidä luottaa sokeasti. 
@@ -21,10 +25,6 @@ näkyviin sivun alareunaan tämän lukuvuoden 2026–2027 ajaksi.
 ## Toimiiko kurssi Macilla tai Linuxilla?
 
 Kyllä. Koska vastuuopettajilla on käytössään sekaisin Windows- ja Linux-koneita, saattaa meillä itsellämme olla joissain kohdin epävarmuutta miten macOS:ssa jokin asia toimii ja miltä se näyttää. Arvostamme suuresti mikäli ilmoitat meille mahdollisista virheistä tai ongelmista, jotta voimme parantaa ohjeita jatkossa. Kunkin sivun alalaidasta löytyy linkit tätä varten. 
-
-## Miksi tällä kurssilla käytetään C#:ia?
-
-C# ja Java muodostavat Ohjelmointi 1- ja Ohjelmointi 2 -opintojaksojen jatkumon. C# on laajalti käytetty, nykyaikainen ja monipuolinen ohjelmointikieli. C#:n opiskelu antaa hyvän pohjan myöhemmille ohjelmointiopinnoille ja ohjelmistokehitykselle yleisesti. Myös Jypeli-pelimoottori käyttää C#:ia.
 
 ## Onko väliä mitä IDEä käyttää (Rider, Visual Studio, VS Code)?
 
