@@ -10,7 +10,7 @@ Tällä opintojaksolla käsitellään ohjelmoinnin perusteita C#-kielellä. Opin
 - ratkaisemaan yksinkertaisia ongelmia sopivilla algoritmeilla ja tietorakenteilla,
 - suunnittelemaan ja toteuttamaan pienimuotoisen pelin C#-kielellä ja siihen tarkoitetuilla työkaluilla.
 
-Et tarvitse aiempaa ohjelmointikokemusta.
+Et tarvitse aiempaa ohjelmointikokemusta. Tarkemman kuvauksen löydät [Sisu-esitteestä](https://opinto-opas.jyu.fi/2026/fi/opintojakso/itkp102/).
 
 ## Miten aloitan?
 
