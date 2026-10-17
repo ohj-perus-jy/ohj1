@@ -22,9 +22,9 @@ Voi. Opintojakson kuluessa joitain tehtäviä uudistetaan, joten on mahdollista
 että jotkin tehtävät muuttuvat. Jos näin käy, niin vanha versio jää kuitenkin
 näkyviin sivun alareunaan tämän lukuvuoden 2026–2027 ajaksi. 
 
-## Toimiiko kurssi Macilla tai Linuxilla?
+## Toimiiko macOS? Entä Linux?
 
-Kyllä. Koska vastuuopettajilla on käytössään sekaisin Windows- ja Linux-koneita, saattaa meillä itsellämme olla joissain kohdin epävarmuutta miten macOS:ssa jokin asia toimii ja miltä se näyttää. Arvostamme suuresti mikäli ilmoitat meille mahdollisista virheistä tai ongelmista, jotta voimme parantaa ohjeita jatkossa. Kunkin sivun alalaidasta löytyy linkit tätä varten. 
+Toimii. Koska vastuuopettajilla on käytössään Windows- ja Linux-koneita, saattaa meillä itsellämme olla joissain kohdin epävarmuutta miten macOS:ssa jokin asia toimii ja miltä se näyttää. Arvostamme suuresti mikäli ilmoitat meille mahdollisista virheistä tai ongelmista, jotta voimme parantaa ohjeita jatkossa. Kunkin sivun alalaidasta löytyy linkit tätä varten. 
 
 ## Onko väliä mitä IDEä käyttää (Rider, Visual Studio, VS Code)?
 
