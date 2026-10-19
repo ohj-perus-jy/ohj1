@@ -13,7 +13,7 @@
 ## Syksy 2026
 
  * 📺 Katso: [YouTube](https://youtube.com/live/nKwBAWz6Kbw?feature=share),
-     Moniviestin (tulossa)
+     [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2026/luento-15)
 
 ## Kevät 2026
 
