@@ -912,8 +912,6 @@ Mikäli sinulla on käytössä Microsoft Defender, Rider yleensä kysyy, haluatk
 Riderin säätävän sen asetukset automaattisesti. Muiden tuotteiden tapauksessa
 asetukset tulee säätää itse. 
 
-[Katso Riderin viralliset toimintaohjeet haittaohjelmien torjuntaohjelmien säätämiseksi.](https://rider-support.jetbrains.com/hc/en-us/articles/360006365380-How-Antivirus-Software-Affects-Rider-s-Performance-on-Windows)
-
 </details>
 
 <details closed> <summary>Rider-lisenssin uudelleenaktivointi  </summary>
