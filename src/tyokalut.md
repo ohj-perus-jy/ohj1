@@ -937,6 +937,36 @@ niin ks: <https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-th
 
 </details>
 
+<details closed><summary>Sovelluksen hallintakäytäntö on estänyt tämän tiedoston (0x800711C7)</summary>
+
+Saatat saada Windowsissa virheen: 
+
+ > Could not load file or assembly ‘Jypeli.FarseerPhysics.dll’. Sovelluksen
+ > hallintakäytäntö on estänyt tämän tiedoston (0x800711C7)
+
+Virhe johtuu Windows 11:n Smart App Control -ominaisuudesta, joka estää sellaisten ohjelmakirjastojen lataamisen, joita ei ole digitaalisesti allekirjoitettu tai jotka eivät ole Microsoftin pilvipalvelun tuntemia. Jypelin fysiikkakirjasto on tällainen. Smart App Control kytkeytyy uusissa Windows-asennuksissa itsestään päälle jonkin ajan kuluttua, joten virhe voi ilmestyä yllättäen koneelle, jolla Jypeli toimi aiemmin. Vika ei ole Jypelissä, Riderissa eikä projektissasi.
+
+Korjaus:
+
+ 1. Avaa *Asetukset* > *Tietosuoja ja suojaus* > *Windowsin suojaus* > *Sovellusten
+ja selaimen hallinta*. 
+ 2. Valitse Smart App Controlin asetukset. 
+ 3. Vaihda asetus
+kohtaan Pois. 
+ 4. Käynnistä ohjelma uudelleen Riderissa – mitään ei tarvitse asentaa
+uudelleen.
+
+**Mitä sammuttaminen tarkoittaa käytännössä?** Smart App Control on Microsoft Defenderin päälle rakennettu lisäkerros, joka on olemassa vain uusissa Windows 11 -asennuksissa. Sen sammuttaminen ei vaikuta Defenderiin, SmartScreeniin tai muihin Windowsin suojauksiin, jotka toimivat edelleen normaalisti. Ohjelmointikäytössä Smart App Control on käytännössä pakko pitää pois päältä, koska se estää myös itse käännettyjen ohjelmien ja monien ohjelmointikirjastojen ajamisen. Ajantasaisessa Windows 11:ssä sen voi myöhemmin kytkeä takaisin päälle samasta asetuksesta; vanhemmissa versioissa uudelleenkäyttöönotto vaatii Windowsin uudelleenasennuksen.
+
+Lisätietoa Microsoftin sivulta: Mikä Smart App Control on? – https://support.microsoft.com/kb/5008908
+
+Jos Smart App Controlin asetukset -kohtaa ei näy tai se on jo pois päältä, mutta
+virhe tulee silti, kone on todennäköisesti organisaation hallinnoima (esim.
+työnantajan) ja esto tulee sen käytännöistä. Silloin ota yhteys koneen
+ylläpitoon tai tee kurssityöt toisella koneella. 
+
+</details>
+
 <details closed><summary>Näppäinkomennot eivät toimi</summary>
  
 Jotkin editorin näppäinoikotiet ei toimi sellaisenaan muilla kuin 
