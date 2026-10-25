@@ -6,17 +6,6 @@ poistettu 2026-09-18. Vaiheet ja päätökset ovat gitin historiassa
 Merkkauksen siirto mdBookin syntaksista Zensicalin omaan ja työkalujen avoimet
 asiat: `zensical/tyokalut/YHTENAISTYS.md`.
 
-## Aineisto
-
-- [ ] `debuggausnayte.md`, *Palautus videona*: numeroitu lista katkeaa, koska
-      `<details>`-lohkot ovat rivin alussa kohtien 1 ja 2 jälkeen. Zensical
-      numeroi 1, 1, 1, 2. Korjaus: lohkot kohtiensa alle neljän välilyönnin
-      sisennyksellä, kuten *Palautus ohjauksessa* -välilehdellä (r. 161).
-- [ ] `src/exercises/1-8-1-bonus_editorin_kayttaminen/handout.md:9`:
-      `https://ohjelmointi1.it.jyu.fi/harjoitustyo.html` antaa 404:n, oikea on
-      `…/harjoitustyo/`. Osoite on tehtävän tekstiä (koodilohkossa, joten
-      lychee ei näe sitä). Tarkista TIMin pohjatiedosto ja mallivastaus samalla.
-
 ## Kehitysympäristö
 
 - [ ] `ohj-mdbook-tooling` arkistoon (*Settings* › *Archive*), kun
@@ -33,8 +22,13 @@ asiat: `zensical/tyokalut/YHTENAISTYS.md`.
 ## Linkit
 
 - [ ] TIM-demojen vanhentuneet linkit: `tim-demot-vanhat-linkit.md`. Auki
-      ryhmät C–F (noin 65 riviä) ja `comtest-examples` (6). Ryhmää A
-      (moniste) ei korjata.
-- [ ] Linkkitarkistus on punainen `main`issa 2026-09-25 alkaen:
-      `luennot/luento10.md` (r. 8), Moniviestin-tallenne 404. Ajastettu
-      TIM-ajo: demo3 ja demo4 → `materiaali/aliohjelmienKirjoittaminen` 404.
+      ryhmät D (16 riviä) ja F (15). Ryhmä E (Jypeli, 11 + 2 taulukosta
+      puuttunutta) korjattu 2026-10-25 jypeli.it.jyu.fi:hin; demo8 B4-5
+      ("Jypeli-sivujen siirtäminen TIMiin") on tehtävänä vanhentunut, päätä
+      poisto tai uudelleenkirjoitus. `comtest-examples`-linkit korjattu
+      2026-10-25 kirjan ComTest-sivulle (2D-taulukot) tai poistettu (THROWS);
+      demo6 T4:n liukulukulinkki on julkisessa kommentissa, ei dokumentissa. Ryhmästä C
+      korjattiin 2026-10-25 tim-api:lla koodauskäytänteet, tekstieditori ja
+      tentti; jäljellä ViLLE (8), Tauno (3), QA (2) ja jypeli-voimia (1), joille
+      ei ole vastinetta kirjassa — jätetään toistaiseksi. Ryhmää A (moniste)
+      ei korjata. Muokkaus: `~/apps/tim-api-py` (`get_par`, `edit_paragraph`).
