@@ -27,17 +27,18 @@ Ohjelmia on kaikkialla, myös siellä, missä niitä ei huomaa.
   Kymmenen rivin ohjelma nimeää ne uudelleen päivämäärän mukaan sillä aikaa,
   kun haet kahvia.
 
-Yhteistä näille on, että ihminen on keksinyt *ohjeen* ja tietokone toistaa sitä
+Yhteistä näille on, että ihminen on tehnyt *ohjeen* ja tietokone toistaa sitä
 väsymättä. Ohjelmointi on siis ennen kaikkea ongelmanratkaisua. Ohjelmointikieli
 on vain se tapa, jolla ratkaisu kirjoitetaan muistiin.
 
 ## Algoritmi eli ohje
 
 *Algoritmi* on täsmällinen, vaiheittainen ohje jonkin tehtävän suorittamiseen.
-Ohjelmoija suunnittelee ensin algoritmin ja kirjoittaa sen sitten ohjelmaksi, jota
-tietokone noudattaa. Algoritmeja on kuitenkin muuallakin kuin tietokoneissa.
-Resepti on algoritmi. Reittiohje on algoritmi. Huonekalun kokoamisohje on
-algoritmi (joskin toisinaan melko tulkinnanvarainen sellainen).
+Ennen ohjelman kirjoittamista ohjelmoijan on mietittävä algoritmi ja vasta
+sitten tietokoneelle suoritettavaksi ohjelmaksi. Algoritmeja on kuitenkin
+muuallakin kuin tietokoneissa. Resepti on algoritmi. Reittiohje on algoritmi.
+Huonekalun kokoamisohje on algoritmi (joskin toisinaan melko tulkinnanvarainen
+sellainen).
 
 Kokeillaan: kirjoita ohje kahvin keittämiseen niin tarkasti, että sitä voisi
 noudattaa henkilö, joka ei ole koskaan nähnyt kahvinkeitintä.
@@ -54,10 +55,9 @@ noudattaa henkilö, joka ei ole koskaan nähnyt kahvinkeitintä.
 
 Huomaa muutama asia. Vaiheet suoritetaan *järjestyksessä*: jos virtakytkintä
 painaa ennen veden lisäämistä, tulos on huono. Jokainen vaihe on niin pieni,
-ettei sitä tarvitse selittää. Ja ohjeessa on silti aukkoja: mitä jos kahvi on
+ettei sitä tarvitse selittää. Ohjeeseen jää silti aukkoja: mitä jos kahvi on
 loppu? Mitä jos säiliössä on jo vettä? Ihminen paikkaa tietenkin aukot itse,
-mutta tietokone ei
-paikkaa mitään.
+mutta tietokone ei paikkaa mitään.
 
 Ohjelmoinnissa algoritmien suorittaminen rakentuu kolmesta perusrakenteesta,
 ja opit ne kaikki tämän kurssin aikana:
