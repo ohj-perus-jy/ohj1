@@ -7,7 +7,7 @@ yksilöllisen järjestelyn mukainen lisäaika.**
 | Tentti  | Päivämäärä | Aika        | Paikka         | Ilmoittaudu                                          | Muuta     |
 | ------- | ---------- | ----------- | -------------- | ---------------------------------------------------- | --------- |
 | Syksy 1 | 27.11.2026 | 14–18       | Ag Aud1 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/tentti-aloitus-2026-11-27-14-00)|           |
-| Syksy 2 | 17.12.2026 | 10–14       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
+| Syksy 2 | 17.12.2026 | 10–14       | Ag Aud3 / Zoom | [Ilmoittaudu](https://tim.jyu.fi/view/kurssit/tie/itkp102/tentti/tentti-aloitus-2026-12-17-10-00)| Myös Ohj2 |
 | Syksy 3 | 14.1.2027  | 16–20       | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
 | Kevät 1 | 9.4.2027   | 10–14       | Ag Aud3 / Zoom |                                                      |           |
 | Kevät 2 | 28.4.2027  | 16:30–20:30 | Ag Aud3 / Zoom |                                                      | Myös Ohj2 |
