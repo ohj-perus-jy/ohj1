@@ -2,5 +2,6 @@
 
 Tämä osa sisältää:
 
- * Yhteenveto-luento [videona](https://youtu.be/R0XGbfFCvzE?si=-HEG4VxfByiwrvU3) tai [tekstimuodossa](https://gitlab.jyu.fi/tie/ohj1/2025k/yhteenveto/-/blob/main/yhteenveto.md) 
+ * Yhteenveto-luento
+   ([YouTube](https://youtu.be/R0XGbfFCvzE?si=-HEG4VxfByiwrvU3), [Moniviestin](https://moniviestin.jyu.fi/fi/ohjelmat/itkp102-ohjelmointi-1-syksy-2026/yhteenveto)) 
  * [Harjoitustehtävät 11](../luennot/harjoitus11.md)
