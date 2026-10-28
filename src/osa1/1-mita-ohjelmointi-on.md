@@ -76,11 +76,12 @@ ohjelmoida. Loppu on yksityiskohtia. Tosin yksityiskohtia on aika paljon.
 
 ## Ohjelma ja ohjelmointikieli
 
-Jotta tietokone voisi noudattaa algoritmia, algoritmi on kirjoitettava
-muotoon, jota tietokone pystyy suorittamaan. Ohjelman suorittaa tietokoneen
-sydän, *prosessori*, joka ymmärtää vain *konekieltä*: jonoja ykkösiä ja
-nollia, joista kukin ryhmä tarkoittaa jotakin hyvin pientä toimenpidettä, kuten "laske kaksi lukua yhteen" tai "siirry ohjeeseen numero
-4711". Konekielinen ohjelma voisi näyttää suunnilleen tältä:
+Jotta tietokone voisi noudattaa algoritmia, algoritmi on kirjoitettava muotoon,
+jota tietokone pystyy suorittamaan. Ohjelman suorittaa tietokoneen sydän,
+*prosessori*, joka ymmärtää vain *konekieltä*: jonoja ykkösiä ja nollia, joista
+kukin ryhmä tarkoittaa jotakin hyvin pientä toimenpidettä, kuten "laske kaksi
+lukua yhteen" tai "siirry ohjeeseen numero 4711". Konekielinen ohjelma voisi
+näyttää suunnilleen tältä:
 
 ```text
 10111000 00000001 00000000 00000000 00000000
@@ -96,10 +97,11 @@ kirjoitettavaksi ja luettavaksi. Sama asia C#-kielellä:
 int summa = 1 + 2;
 ```
 
-Tuo ykkösten ja nollien jono ei ole siis satunnaista bittipuuroa, vaan erään tietokoneen näkökulmasta juuri se
-komentojen sarja, joka laskee yhteen luvut 1 ja 2 ja tallentaa tuloksen
-muistiin. Meidän kannaltamme ohjelmointikielellä ilmaistu komento on tietenkin
-paljon helpompi ymmärtää ja tarvittaessa myös muuttaa.
+Tuo ykkösten ja nollien jono ei ole siis satunnaista bittipuuroa, vaan erään
+tietokoneen näkökulmasta juuri se komentojen sarja, joka laskee yhteen luvut 1
+ja 2 ja tallentaa tuloksen muistiin. Meidän kannaltamme ohjelmointikielellä
+ilmaistu komento on tietenkin paljon helpompi ymmärtää ja tarvittaessa myös
+muuttaa.
 
 <details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Mitä konekielinen ohjelma tarkoittaa?</summary>
 
@@ -122,8 +124,9 @@ hyvin nopeita muistipaikkoja. Tässä käytetään rekistereitä nimeltä `eax` 
   rekisterit lasketaan yhteen: "lisää rekisterin `ebx` arvo rekisteriin
   `eax`". Tämän jälkeen rekisterissä `eax` on luku 3.
 
-Käytännössä konekieli kirjoitetaan *assembly-kielellä* (suomeksi myös *symbolinen konekieli*), jossa jokaisella
-käskyllä on lyhyt nimi. Sama ohjelma assemblyllä:
+Käytännössä konekieli kirjoitetaan *assembly-kielellä* (suomeksi myös
+*symbolinen konekieli*), jossa jokaisella käskyllä on lyhyt nimi. Sama ohjelma
+assemblyllä:
 
 ```text
 mov eax, 1
@@ -133,18 +136,19 @@ add eax, ebx
 
 Assembly vastaa konekieltä käsky käskyltä, joten se on edelleen sidottu yhteen
 prosessorityyppiin. Esimerkiksi puhelimen ARM-prosessorissa samat kolme
-toimenpidettä kirjoitettaisiin aivan eri bittijonoilla. Tämä on yksi syy
-käyttää niin kutsuttua korkean tason ohjelmointikieltä: rivi `int summa = 1 + 2;` on sama kaikilla
-koneilla, ja kääntäjä huolehtii siitä, millaista konekieltä kullekin
-prosessorille tuotetaan.
+toimenpidettä kirjoitettaisiin aivan eri bittijonoilla. Tämä on yksi syy käyttää
+niin kutsuttua korkean tason ohjelmointikieltä: rivi `int summa = 1 + 2;` on
+sama kaikilla koneilla, ja kääntäjä huolehtii siitä, millaista konekieltä
+kullekin prosessorille tuotetaan.
 
 </details>
 
 Ohjelmointikielellä kirjoitettua tekstiä kutsutaan *lähdekoodiksi*. Jotta
-prosessori voisi suorittaa C#-kielisen ohjelman, lähdekoodi täytyy *kääntää*
-konekielelle. Kääntämisen tekee ohjelma nimeltä *kääntäjä*. Kääntäjä on kuin
-pikkutarkka äidinkielenopettaja: se ei päästä läpi yhtäkään puuttuvaa
-puolipistettä, mutta kertoo aina täsmälleen, millä rivillä vika on.
+tietokoneen suoritin eli prosessori voisi suorittaa C#-kielisen ohjelman,
+lähdekoodi täytyy *kääntää* konekielelle. Kääntämisen tekee ohjelma nimeltä
+*kääntäjä*. Kääntäjä on kuin pikkutarkka äidinkielenopettaja: se ei päästä läpi
+yhtäkään puuttuvaa puolipistettä, mutta kertoo aina täsmälleen, millä rivillä
+vika on.
 
 Ohjelmointikieliä on satoja. Tällä kurssilla käytetään **C#**-kieltä (lausutaan
 "c sharp"), joka on Microsoftin kehittämä ja laajasti käytetty kieli. Sillä
