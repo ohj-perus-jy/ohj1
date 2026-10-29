@@ -23,6 +23,27 @@ arvoilla.
     * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
       järjestyksessä ne suoritetaan
 
+!!! note "Huomautus"
+
+    Useissa esimerkeissä on osa koodista, kuten esimerkiksi luokka (`public class`-rivi) ja
+    pääohjelman määrittely (`public static void Main()`-rivi), jos ne eivät ole
+    esimerkkien kannalta oleellisia. Saat kuitenkin aina koko koodin näkyville
+    klikkaamalla laatikon yläreunassa olevaa silmän kuvaa.
+
+<!-- muista: myös copyhint,runhint mahdollisia -->
+```csharp,eyehint
+//-using System;
+//-
+//-public class Tulostusta
+//-{
+//-    public static void Main()
+//-    {
+        Console.WriteLine("Heippa, maailma!");
+        Console.WriteLine("Klikkaa silmän kuvaa!");
+//-    }
+//-}
+```
+
 ## Luennot
 
 Päivitetään lähempänä toteutusta.

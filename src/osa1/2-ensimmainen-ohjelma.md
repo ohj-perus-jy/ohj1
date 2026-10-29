@@ -203,7 +203,7 @@ muotoiluja tai tyylejä. Olet ehkä jo käyttänytkin tekstieditoria, kuten Muis
 (Notepad) Windowsissa tai TextEdit macOS:ssä. Tässä "pelkkä teksti" tarkoittaa,
 että teksti todella tallennetaan tietokoneen muistiin sellaisenaan; esimerkiksi
 Word-asiakirjaan tallentuu tosiasiassa aina paljon muutakin tietoa, kuten
-fontti- ja asettelutietoja.
+fontti- ja asettelutietoja, jota lähdekoodissa ei saa olla.
 
 Tällä kurssilla kirjoitamme lähdekoodin [*Rider*-sovelluskehittimellä](../tyokalut.md#jetbrains-rider) (engl.
 *integrated development environment*, *IDE*). Sovelluskehitin on tekstieditori,
@@ -212,8 +212,19 @@ koodin, ehdottaa täydennyksiä, näyttää virheet jo kirjoittaessa sekä kää
 ajaa ohjelman napin painalluksella. 
 
 Lähdekoodi tallennetaan tiedostoon, joka C#-kielen tapauksessa päättyy yleensä
-`.cs` -tiedostopäätteeseen, kuten `Ohjelma.cs`. Tällöin käyttöjärjestelmä
+`.cs` -tunnisteeseen, kuten `Ohjelma.cs`. Tällöin käyttöjärjestelmä
 tunnistaa tiedoston C#-lähdekooditiedostoksi. 
+
+<details closed><summary>Tiedostotunnisteiden näyttäminen Windowsissa</summary>
+
+Windows ei oletuksena näytä tiedostotunnisteita, mikä hankaloittaa tiedostojen
+tunnistamista. Tiedostotunnisteet saa näkyviin seuraavasti:
+
+1. Avaa Resurssienhallinta (File Explorer).
+2. Valitse yläreunan valikosta *Näytä* (View) ja sen alta *Näytä* (Show).
+3. Rastita *Tiedostotunnisteet* (File name extensions).
+
+</details>
 
 ## Käännösvirheet
 

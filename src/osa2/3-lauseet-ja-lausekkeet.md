@@ -1,26 +1,6 @@
 # Lauseet ja lausekkeet
 
-Ohjelma koostuu *lauseista*, ja lauseet sisältävät *lausekkeita*. Ero kuulostaa
-saivartelulta, mutta se selittää suuren osan siitä, mitä kääntäjä hyväksyy ja
-mitä ei, ja mitä sen virheilmoitukset tarkoittavat.
-
-## Mihin erottelua tarvitaan?
-
-Ajatellaan reseptiä. "Sekoita" on käsky: se saa jotakin tapahtumaan. "2 dl
-jauhoja" ei ole käsky vaan määrä, jonka voi mitata ja käyttää käskyssä:
-"lisää 2 dl jauhoja". Ohjelmoinnissa käsky on *lause* ja määrä on *lauseke*.
-
-Erottelu tulee vastaan jatkuvasti:
-
-* Kun kääntäjä ilmoittaa `CS0201: Only assignment, call, increment, decrement,
-  await, and new object expressions can be used as a statement`, se sanoo:
-  "kirjoitit lausekkeen paikkaan, johon kuuluu lause". Esimerkiksi rivi
-  `a + 1;` on laskutoimitus, jonka tulosta ei käytetä mihinkään.
-* Kun mietit, voiko tulostuskäskyn sisään kirjoittaa laskun
-  (`Console.WriteLine(2 + 3)`), vastaus on kyllä: tulostuskäsky odottaa
-  lauseketta, ja `2 + 3` on lauseke.
-* Kun kirjoitat oman funktion, sen kutsu on lauseke, ja sitä voi käyttää
-  kaikkialla, missä arvoa tarvitaan.
+Ohjelma koostuu *lauseista*, ja lauseet sisältävät *lausekkeita*. 
 
 ## Lause
 
@@ -39,6 +19,10 @@ Myöhemmin vastaan tulee lauseita, jotka eivät pääty puolipisteeseen:
 [toistolauseet](../osa4/1-toistolauseet.md) (`while`, `for`). Niissä on
 aaltosulkujen rajaama lohko, jonka sisällä on lisää lauseita.
 
+C#:ssa on myös yksi erikoisuus: [tyhjä lause](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/statements#134-the-empty-statement), joka koostuu pelkästä puolipisteestä. Se ei tee
+mitään, mutta on hyödyllinen joissain erityistilanteissa, kuten debuggauksessa
+ja eräissä toistolauseissa. 
+
 ## Lauseke
 
 *Lauseke* (engl. *expression*) on asia, jolla on *arvo*. Kun ohjelma suorittaa
@@ -56,12 +40,34 @@ isommiksi lausekkeiksi.
 | `ika` | muuttujan `ika` arvo | muuttujan tyyppi |
 | `ika + 1` | yhtä suurempi kuin `ika` | `int` |
 
-Jokaisella lausekkeella on arvon lisäksi *tyyppi*, joka kertoo, millainen arvo
-on kyseessä. Tyypit esiteltiin
-[muuttujien](./1-muuttujat-ja-tietotyypit.md) yhteydessä.
+Jokaisella lausekkeella on arvon lisäksi tyyppi, joka kertoo, millainen arvo
+on kyseessä (ks. 
+[Muuttujat ja tietotyypit](./1-muuttujat-ja-tietotyypit.md)).
 
 Lausekkeen tunnistaa helposti: jos koodinpätkän voi kirjoittaa sijoituksen
 oikealle puolelle, esimerkiksi `int x = ...;`, se on lauseke.
+
+## Mihin erottelua tarvitaan?
+
+Ajatellaan reseptiä. "Lisää" on käsky: se saa jotakin tapahtumaan. "2 dl
+jauhoja" ei ole käsky vaan määrä, jonka voi mitata ja käyttää käskyssä:
+"Lisää taikinaan 2 dl jauhoja". Ohjelmoinnissa käsky on *lause* ja määrä on
+*lauseke*.
+
+Erottelu tulee vastaan jatkuvasti:
+
+* Kun kääntäjä ilmoittaa `CS0201: Only assignment, call, increment, decrement,
+  await, and new object expressions can be used as a statement`, se sanoo:
+  "kirjoitit lausekkeen paikkaan, johon kuuluu lause". Esimerkiksi rivi
+  `a + 1;` on laskutoimitus, jonka tulosta ei käytetä mihinkään.
+* Kun mietit, voiko tulostuskäskyn sisään kirjoittaa laskun
+  (`Console.WriteLine(2 + 3)`), vastaus on kyllä: tulostuskäsky odottaa
+  lauseketta, ja `2 + 3` on lauseke.
+* Kun kirjoitat oman funktion, sen kutsu on lauseke, ja sitä voi käyttää
+  kaikkialla, missä arvoa tarvitaan.
+
+Ero kuulostaa saivartelulta, mutta se selittää suuren osan siitä, mitä kääntäjä
+hyväksyy ja mitä ei, ja mitä sen virheilmoitukset tarkoittavat.
 
 ## Lauseke lauseen sisällä
 

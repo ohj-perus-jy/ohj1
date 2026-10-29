@@ -535,12 +535,12 @@ jotakin" on niin yleinen toimenpide, sille on lyhennysmerkinnät.
  - `--` vähennä yhdellä
 
 ```csharp
-using System;
-
-public class Sijoitukset
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class Sijoitukset
+//-{
+//-    public static void Main()
+//-    {
         int luku = 10;     // luku on nyt 10
         luku += 5;         // luku on nyt 15 (sama kuin luku = luku + 5)
         luku -= 3;         // luku on nyt 12
@@ -550,8 +550,8 @@ public class Sijoitukset
         luku++;            // luku on nyt 3
         luku--;            // luku on nyt 2
         Console.WriteLine(luku);
-    }
-}
+//-    }
+//-}
 ```
 
 Lisäys- ja vähennysoperaattorit `++` ja `--` voidaan kirjoittaa joko ennen tai
@@ -562,22 +562,19 @@ niillä ei ole eroa. Ero tulee esiin, kun operaattoria käytetään osana suurem
 lauseketta: jälkiliite antaa vanhan arvon, etuliite uuden.
 
 ```csharp
-using System;
-
-public class PlusPlus
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class PlusPlus
+//-{
+//-    public static void Main()
+//-    {
         int luku = 3;
         Console.WriteLine(luku++); // tulostaa 3, sitten luku on 4
         Console.WriteLine(++luku); // luku on ensin 5, sitten tulostaa 5
         Console.WriteLine(luku);   // 5
-    }
-}
+//-    }
+//-}
 ```
-
-Tällä kurssilla `++` ja `--` kirjoitetaan omalle rivilleen, jolloin eroa ei
-tarvitse muistaa.
 
 ## Yhteenveto
 
