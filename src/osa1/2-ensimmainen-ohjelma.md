@@ -126,6 +126,12 @@ yhteydessä.
 
 Tämä rivi on itse asiassa se, joka tekee työn: se tulostaa tekstin "Heippa, maailma!" näytölle. `System.Console.WriteLine` on .NET-kirjaston valmis toiminto, joka hoitaa tekstin tulostamisen konsoli-ikkunaan. Viesti, joka halutaan tulostaa, kirjoitetaan lainausmerkkien sisälle.
 
+Valmiin toiminnon käyttämistä sanotaan *kutsumiseksi* (engl. *call*):
+kirjoitetaan toiminnon nimi ja sulut, ja sulkujen sisään se, mitä toiminto
+tarvitsee. Tässä `Console.WriteLine` tarvitsee tulostettavan tekstin. Kutsu
+tarkoittaa, että tietokone siirtyy hetkeksi suorittamaan valmista koodia ja
+palaa sitten takaisin tähän kohtaan.
+
 Rivi päättyy puolipisteeseen `;`, joka tarkoittaa, että kyseinen *lause* (engl. *statement*) on loppu. C#-kielessä lauseet päättyvät tyypillisesti puolipisteeseen. Käymme lauseita tarkemmin läpi [myöhemmin](../osa2/3-lauseet-ja-lausekkeet.md), mutta tässä riittää tietää, että lausetta voi ajatella kuin käskynä tai ohjeena tietokoneelle. 
 
 ```csharp,noplayground

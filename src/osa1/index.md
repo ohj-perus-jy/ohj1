@@ -36,6 +36,7 @@ ovat [sanastossa](../sanasto.md).
 | [konekieli](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *machine code* | prosessorin ymmärtämät, ykkösistä ja nollista koostuvat käskyt |
 | [konsoli](./2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) | *console* | pelkkää tekstiä näyttävä ikkuna, johon konsoliohjelma tulostaa ja jossa käyttäjä kirjoittaa |
 | [konsoliohjelma](./2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) | *console application* | tekstipohjainen ohjelma ilman painikkeita, valikoita ja kuvia |
+| [kutsu](./2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) | *call* | valmiin toiminnon käyttäminen kirjoittamalla sen nimi ja sulut, joiden sisällä ovat tarvittavat arvot |
 | [käännösvirhe](./2-ensimmainen-ohjelma.md#käännösvirheet) | *compilation error* | virhe, joka estää lähdekoodin kääntämisen |
 | [kääntäjä](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *compiler* | ohjelma, joka kääntää lähdekoodin konekielelle |
 | [kääntäminen](./1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) | *compiling* | lähdekoodin muuntaminen konekieliseksi, suoritettavaksi ohjelmaksi |

@@ -22,6 +22,7 @@ kunkin osan etusivulla.
 | konsoli | *console* | pelkkää tekstiä näyttävä ikkuna, johon konsoliohjelma tulostaa ja jossa käyttäjä kirjoittaa | [1](./osa1/2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) |
 | konsoliohjelma | *console application* | tekstipohjainen ohjelma ilman painikkeita, valikoita ja kuvia | [1](./osa1/2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) |
 | kuormittaminen | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan | [2](./osa2/4-funktiot.md#kuormittaminen) |
+| kutsu | *call* | valmiin toiminnon käyttäminen kirjoittamalla sen nimi ja sulut, joiden sisällä ovat tarvittavat arvot | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | käännösvirhe | *compilation error* | virhe, joka estää lähdekoodin kääntämisen | [1](./osa1/2-ensimmainen-ohjelma.md#käännösvirheet) |
 | kääntäjä | *compiler* | ohjelma, joka kääntää lähdekoodin konekielelle | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |
 | kääntäminen | *compiling* | lähdekoodin muuntaminen konekieliseksi, suoritettavaksi ohjelmaksi | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |

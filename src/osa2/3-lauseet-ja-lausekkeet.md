@@ -1,6 +1,10 @@
 # Lauseet ja lausekkeet
 
-Ohjelma koostuu *lauseista*, ja lauseet sisältävät *lausekkeita*. 
+Ohjelman toiminta koostuu *lauseista*, ja lauseet sisältävät *lausekkeita*.
+Perusajatus on, että lause saa jotakin tapahtumaan ja lauseke antaa arvon.
+
+Lauseiden lisäksi koodi sisältää muuta rakennetta, kuten luokan, `Main`-pääohjelman ja aaltosulkuja,
+jotka eivät ole lauseita, vaan kertoo kääntäjälle, mihin lauseet kuuluvat.
 
 ## Lause
 
@@ -127,6 +131,43 @@ paljastaa eron: `int x = Math.Max(3, 7);` kääntyy, mutta
 Myös [omien funktioiden](./4-funktiot.md) kutsu on lauseke samalla tavalla
 kuin `Math.Max`-kutsu.
 
+
+
+## Kaikki koodi ei ole lauseita tai lausekkeita
+
+Ohjelma sisältää yleensä muutakin kuin vain lauseita ja lausekkeita. Esimerkiksi
+[ensimmäisessä ohjelmassa](../osa1/2-ensimmainen-ohjelma.md) vain yksi rivi
+oli lause:
+
+```csharp,ignore
+public class Ohjelma                                  // luokan määrittely
+{
+    public static void Main()                         // aliohjelman määrittely
+    {
+        System.Console.WriteLine("Heippa, maailma!"); // lause
+    }
+}
+```
+
+Rivit `public class Ohjelma` ja `public static void Main()` ovat
+*määrittelyjä* (engl. *declaration*): ne kertovat kääntäjälle, että luokka ja
+aliohjelma ovat olemassa. Suorituksen aikana niiden kohdalla ei tapahdu
+mitään, vaan suoritus alkaa `Main`-aliohjelman ensimmäisestä lauseesta.
+Myöskään aaltosulut, kommentit ja `using System;` eivät ole lauseita, vaikka
+viimeksi mainittua kutsutaankin usein hämmentävästi `using`-lauseeksi. 
+
+Muuttujan määrittely `int ika = 20;` sen sijaan on lause: se varaa muuttujalle
+paikan ja tallentaa siihen arvon, kun ohjelma suoritetaan.
+
+Lauseet kirjoitetaan aliohjelmien sisään (joitain yksittäisiä epärelevantteja
+poikkeuksia lukuunottamatta). 
+
+Joka ikistä koodin sanaa ei ole kuitenkaan pakko eikä mielekästäkään luokitella
+lauseeksi, lausekkeeksi tai muihin kategorioihin. Luokitteluihin liittyy myös
+kaikenlaisia poikkeuksia ja pilkuntarkkoja sääntöjä, jotka eivät ole kurssin
+kannalta olennaisia. Tärkeintä on ymmärtää se perusajatus, että lause saa
+jotakin tapahtumaan ja lauseke antaa arvon.
+
 <details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: lauseke, joka on myös lause</summary>
 
 Joissakin tapauksissa sama koodinpätkä on sekä lause että lauseke. Tavallisin
@@ -163,6 +204,9 @@ spesifikaatioon](https://docs.microsoft.com/en-us/dotnet/csharp/language-referen
   lauseke.
 * Lauseke käytetään aina jossakin lauseessa: sijoitetaan muuttujaan tai
   annetaan aliohjelmalle.
+* Lauseet kirjoitetaan aliohjelman sisään. Luokan ja aliohjelman
+  määrittelyt, aaltosulut ja `using`-rivi ovat ohjelman rakennetta, eivät
+  lauseita.
 
 ## Testaa tietosi
 
@@ -187,6 +231,15 @@ aliohjelmalle.
 <perustelu>
 **Tarua.** Se on lause: se saa jotakin tapahtumaan eikä tuota arvoa. Sen
 sisällä oleva `"Moi"` on lauseke.
+</perustelu>
+</vaittama>
+
+<vaittama vastaus="tarua">
+`public class Ohjelma` on lause.
+<perustelu>
+**Tarua.** Se on luokan määrittely: se kertoo kääntäjälle, että luokka on
+olemassa, mutta sen kohdalla ei tapahdu mitään, kun ohjelma suoritetaan.
+Lauseet ovat aliohjelmien sisällä.
 </perustelu>
 </vaittama>
 
