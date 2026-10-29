@@ -34,6 +34,6 @@ riittää siis pelkkä `dotnet run`.
 ## Minne käännetty ohjelma menee?
 
 Kääntäjä kirjoittaa tuloksen projektikansion alikansioon `bin`, esimerkiksi
-`bin/Debug/net8.0/`. Riderin *Run* tuottaa tiedostot samaan paikkaan. Kansion
+`bin/Debug/net10.0/`. Riderin *Run* tuottaa tiedostot samaan paikkaan. Kansion
 `bin` (ja sen vieressä olevan `obj`-kansion) voi poistaa huoletta, sillä ne
 syntyvät seuraavalla käännöksellä uudelleen.
