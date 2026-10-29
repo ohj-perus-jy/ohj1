@@ -17,7 +17,14 @@ public static double Nelio(double x)
 ```
 
 Funktio on nimetty [lauseke](./3-lauseet-ja-lausekkeet.md), jossa on aukko.
-Aukko täytetään kutsussa: `Nelio(3)` on lauseke, jonka arvo on 9.
+Lauseke on `x * x`, nimi on `Nelio` ja aukko on `x`: sen paikalla ei ole
+vielä arvoa, joten lauseketta ei voi laskea. Aukko täytetään kutsussa:
+`Nelio(3)` panee aukkoon luvun 3, lausekkeesta tulee `3 * 3`, ja `return`-lause
+antaa (tai *palauttaa*) sen arvon 9 kutsujalle. Kutsun arvo on siis 9.
+
+Funktio voi näyttää monimutkaisemmaltakin. Aukkoja voi olla useita, ja
+aaltosulkujen sisällä voi olla monta riviä. Kutsujan kannalta tilanne on sama:
+kutsu on yhä lauseke, jolla on yksi arvo, ja sen antaa `return`-lause.
 
 ## Mihin funktioita tarvitaan?
 
@@ -31,16 +38,13 @@ eikä sen sisältöä tarvitse enää ajatella.
   kymmenelle autolle, kaava on kymmenessä kohdassa. Copy-paste toimii mainiosti, kunnes huomaat kaavassa
   virheen ja korjaat sen kymmeneen kohtaan. Löydät niistä hyvällä tuurilla
   yhdeksän.
-* **Nimi kertoo, mitä lasketaan.** `litrat / kilometrit * 100` vaatii
-  lukijalta pysähtymisen. `Kulutus(litrat, kilometrit)` ei vaadi. Hyvin
-  nimetty funktio on kuin hyvin nimetty muuttuja: se säästää kommentin ja
-  lukijan hermot.
+* **Nimi kertoo, mitä lasketaan.** `litrat / kilometrit * 100` vaatii lukijalta
+  pysähtymisen ja hetken verran ajattelemista. `Kulutus(litrat, kilometrit)` ei
+  vaadi. 
 * **Ohjelma jakautuu osiin.** `Main` lukee syötteen, kutsuu funktioita ja
-  tulostaa tulokset. Jokainen funktio hoitaa yhden laskun. Kun tulos on väärä,
-  tiedät, mistä vikaa etsiä.
-* **Pienen palan voi testata erikseen.** Funktiosta on helppo tarkistaa,
-  antaako se oikean vastauksen: `Nelio(3)` pitää olla 9. Osassa 7 tarkistus
-  annetaan koneen tehtäväksi: funktiolle kirjoitetaan
+  tulostaa tulokset. Jokainen funktio hoitaa yksittäisen asian. Kun ohjelma on jaettu osiin, sitä on helpompi ymmärtää.
+* **Pienen palan voi testata erikseen.** Funktiosta on helppo tarkistaa, antaako
+  se oikean vastauksen: `Nelio(3)` pitää olla 9, ja `Kulutus(5, 50)` pitää olla 10. Osassa 7 tarkistus annetaan koneen tehtäväksi: funktiolle kirjoitetaan
   [testit](../osa7/2-testaaminen-comtestilla.md), jotka ajetaan napin
   painalluksella.
 
@@ -52,18 +56,25 @@ kohdassa, jota varten se alun perin tehtiin.
 ## Kutsu: mitä sisään, mitä ulos
 
 Aloitetaan käyttämisestä, koska sitä olet jo tehnyt. Funktion *kutsu*
-koostuu funktion nimestä ja suluista. Sulkujen sisään kirjoitetaan arvot,
-joita funktio tarvitsee. Niitä sanotaan *argumenteiksi*. Arvoa, jonka funktio
-antaa takaisin, sanotaan *paluuarvoksi*.
+koostuu funktion nimestä ja suluista. Sulkujen sisään kirjoitetaan arvo,
+jonka funktio tarvitsee. Sitä sanotaan *argumentiksi*. Arvoa, jonka funktio
+antaa takaisin, sanotaan *paluuarvoksi*. Kutsussa `Math.Sqrt(16)` argumentti
+on 16 ja paluuarvo 4.
 
 ```bob
         argumentti                              paluuarvo
                         .-------------------.
    16  ---------------->|     Math.Sqrt     |----------------> 4.0
                         '-------------------'
+```
 
+Argumentteja voi olla useampi. Silloin ne erotetaan toisistaan pilkulla:
+`Math.Max(3, 8)` saa kaksi lukua ja antaa takaisin niistä suuremman.
+
+```bob
+        argumentit                              paluuarvo
                         .-------------------.
-3    8  --------------->|      Math.Max     |----------------> 8
+  3, 8 ---------------->|      Math.Max     |----------------> 8
                         '-------------------'
 ```
 
@@ -84,18 +95,18 @@ Funktion kutsu on lauseke: sillä on arvo. Siksi kutsua voi käyttää
 kaikkialla, missä arvoa tarvitaan.
 
 ```csharp
-using System;
-
-public class Kutsuja
-{
-    public static void Main()
-    {
+//-using System;
+//-
+//-public class Kutsuja
+//-{
+//-    public static void Main()
+//-    {
         double sivu = Math.Sqrt(144);           // paluuarvo talteen muuttujaan
         Console.WriteLine(sivu);                // 12
         Console.WriteLine(Math.Max(3, 8));      // paluuarvo suoraan argumentiksi: 8
         Console.WriteLine(Math.Sqrt(16) + 1);   // paluuarvo osana laskua: 5
-    }
-}
+//-    }
+//-}
 ```
 
 `Console.WriteLine` on poikkeus: se ei anna mitään takaisin, vaan tulostaa.
@@ -103,50 +114,49 @@ Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluu
 
 ## Oma funktio
 
-Kirjoitetaan nyt oma funktio. Alla `Nelio` laskee luvun neliön, ja `Main`
-kutsuu sitä neljästi.
+Kirjoitetaan nyt oma funktio. Alla `Sekunnit` muuntaa minuutit sekunneiksi,
+ja `Main` kutsuu sitä neljästi.
 
 ```csharp
 using System;
 
-public class Neliot
+public class Ajat
 {
     public static void Main()
     {
-        double ala = Nelio(3);
-        Console.WriteLine(ala);                    // 9
-        Console.WriteLine(Nelio(1.5));             // 2.25
-        Console.WriteLine(Nelio(2) + Nelio(3));    // 13
+        double aika = Sekunnit(1.5);
+        Console.WriteLine(aika);                         // 90
+        Console.WriteLine(Sekunnit(0.25));               // 15
+        Console.WriteLine(Sekunnit(2) + Sekunnit(0.5));  // 150
     }
 
-    public static double Nelio(double x)
+    public static double Sekunnit(double minuutit)
     {
-        return x * x;
+        return minuutit * 60;
     }
 }
 ```
 
-Funktio kirjoitetaan `Main`-aliohjelman *alapuolelle*, ja se on rakenteeltaan
-aivan kuin `Main` itse. Käydään määrittely läpi osa kerrallaan:
+Käydään koodi läpi osa kerrallaan:
 
 ```csharp,ignore
-public static double Nelio(double x)
+public static double Sekunnit(double minuutit)
 {
-    return x * x;
+    return minuutit * 60;
 }
 ```
 
 * `public` tarkoittaa, että funktio on julkinen ja sitä voidaan kutsua mistä
-  tahansa ohjelman osasta. Tällä kurssilla kaikki funktiot ovat julkisia.
+  tahansa ohjelman osasta. Tällä kurssilla käytännössä kaikki funktiot ovat julkisia.
 * `static` tarkoittaa, että funktio kuuluu luokalle eikä oliolle.
   Konsoliohjelmissa se kirjoitetaan aina; Jypelissä se jätetään pois, kuten
   alempana nähdään.
 * `double` on *paluuarvon tyyppi*: funktio antaa takaisin `double`-luvun.
-* `Nelio` on funktion nimi. Nimi valitaan itse.
-* `(double x)` on *parametri*: muuttuja, joka saa arvonsa kutsusta.
+* `Sekunnit` on funktion nimi. Nimi valitaan itse.
+* `(double minuutit)` on *parametri*: muuttuja, joka saa arvonsa kutsusta.
   Parametrille annetaan tyyppi ja nimi samoin kuin muuttujalle.
 * Aaltosulkujen `{ }` väliin kirjoitetaan funktion *runko*. `return`-lause
-  laskee lausekkeen `x * x` arvon ja antaa sen kutsujalle.
+  laskee lausekkeen `minuutit * 60` arvon ja antaa sen kutsujalle.
 
 Määrittelyn ensimmäistä riviä sanotaan *esittelyriviksi* (engl. *header*).
 Siitä näkee kaiken, mitä kutsuja tarvitsee: funktion nimen, sen tarvitsemat
@@ -156,12 +166,12 @@ Kolme sääntöä, jotka kannattaa painaa mieleen heti:
 
 * **Funktio kirjoitetaan luokan sisään, `Main`-aliohjelman rinnalle.** Ei
   `Main`-aliohjelman sisään eikä luokan ulkopuolelle. Määrittelyjärjestyksellä
-  ei ole väliä: `Nelio` voi olla ennen `Main`-aliohjelmaa tai sen jälkeen.
+  ei ole väliä: `Sekunnit` voi olla ennen `Main`-aliohjelmaa tai sen jälkeen.
 * **Määrittely ei suorita mitään.** Funktion runko suoritetaan vasta, kun
   funktiota kutsutaan.
 * **Tyypit kuuluvat määrittelyyn, arvot kutsuun.** Kutsussa ei toisteta sanoja
   `public static double`, eikä argumentin eteen kirjoiteta tyyppiä: pelkkä
-  `Nelio(3)` riittää.
+  `Sekunnit(2)` riittää.
 
 Myös `Main` on rakenteeltaan samanlainen. Sen paluuarvon tyypin paikalla lukee
 `void`, joka tarkoittaa, että `Main` ei anna takaisin mitään. Siihen palataan,
@@ -173,33 +183,33 @@ paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 Katsotaan, miten kone suorittaa rivin
 
 ```csharp,ignore
-double ala = Nelio(3) + 1;
+double aika = Sekunnit(2) + 30;
 ```
 
-1. Argumentin arvo lasketaan. Tässä se on valmiiksi `3`.
+1. Argumentin arvo lasketaan. Tässä se on valmiiksi `2`.
 2. Suoritus siirtyy funktioon, ja parametri saa argumentin arvon. On kuin
-   funktion rungon alkuun olisi kirjoitettu `double x = 3;`.
-3. Runko suoritetaan. `return x * x;` laskee arvon `9`, ja suoritus palaa
-   kutsukohtaan.
-4. Kutsun paikalle tulee paluuarvo. Rivistä tulee `double ala = 9 + 1;`, ja
-   `ala` saa arvon 10.
+   funktion rungon alkuun olisi kirjoitettu `double minuutit = 2;`.
+3. Runko suoritetaan. `return minuutit * 60;` laskee arvon `120`, ja suoritus
+   palaa kutsukohtaan.
+4. Kutsun paikalle tulee paluuarvo. Rivistä tulee `double aika = 120 + 30;`,
+   ja `aika` saa arvon 150.
 
 ```bob
-  "Main()"                        "Nelio(double x)"
+  "Main()"                              "Sekunnit(double minuutit)"
      |
-     | "double ala = Nelio(3) + 1;"
+     | "double aika = Sekunnit(2) + 30;"
      |
-     +------ "kutsu, x = 3" ------->+
-     |                              | "return x * x;"
-     |<----- "paluu, arvo 9" -------+
+     +------ "kutsu, minuutit = 2" ------->+
+     |                                     | "return minuutit * 60;"
+     |<----- "paluu, arvo 120" ------------+
      |
-     | "double ala = 9 + 1;"
+     | "double aika = 120 + 30;"
      |
      v
 ```
 
 Kohta 4 on koko asian ydin: kun funktio on suoritettu, kutsu korvautuu
-paluuarvolla, aivan kuin kutsun paikalla olisi alun perin lukenut `9`.
+paluuarvolla, aivan kuin kutsun paikalla olisi alun perin lukenut `120`.
 
 !!! note "Huomautus"
 
@@ -217,14 +227,14 @@ kelpaavat myös argumentiksi. Lausekkeen arvo lasketaan *ensin*, ja vasta
 valmis arvo sijoitetaan parametriin.
 
 ```csharp,ignore
-double sivu = 4;
-Console.WriteLine(Nelio(sivu));         // x = 4, tulostaa 16
-Console.WriteLine(Nelio(sivu + 1));     // x = 5, tulostaa 25
-Console.WriteLine(Nelio(Nelio(2)));     // ensin Nelio(2) on 4, sitten x = 4: 16
+double kesto = 4;
+Console.WriteLine(Sekunnit(kesto));               // minuutit = 4, tulostaa 240
+Console.WriteLine(Sekunnit(kesto + 1));           // minuutit = 5, tulostaa 300
+Console.WriteLine(Sekunnit(Math.Max(kesto, 10))); // ensin Math.Max on 10, sitten minuutit = 10: 600
 ```
 
-**Parametrin nimi on funktion oma asia.** Yllä kutsujan muuttuja on `sivu`,
-mutta funktiossa sama arvo tunnetaan nimellä `x`. Nimien ei tarvitse olla
+**Parametrin nimi on funktion oma asia.** Yllä kutsujan muuttuja on `kesto`,
+mutta funktiossa sama arvo tunnetaan nimellä `minuutit`. Nimien ei tarvitse olla
 samat, eikä funktio edes tiedä, minkä nimisestä muuttujasta arvo tuli tai
 tuliko se muuttujasta lainkaan. Parametriin kopioidaan pelkkä arvo. Parametri
 on funktion oma muuttuja, joka syntyy kutsussa ja katoaa, kun funktio päättyy.
@@ -575,8 +585,9 @@ aliohjelman, joka kuuluu luokasta luodulle *oliolle*. `Math.Sqrt` on
 staattinen: sitä kutsutaan luokan nimellä, eikä mitään "Math-oliota" tarvitse
 luoda. Jypeli-pelin `LuoPallo` sen sijaan kuuluu pelioliolle, jolla on oma
 kenttä, tausta ja olioiden lista; siksi siitä puuttuu `static`. Ero avataan
-kunnolla [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä ja laajemmin
-Ohjelmointi 2 -kurssilla.
+kunnolla [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä, liitteessä
+[Mitä `static` tarkoittaa?](../liitteet/static.md) ja laajemmin Ohjelmointi 2
+-kurssilla.
 
 </details>
 
@@ -651,8 +662,9 @@ sama kuin `Math.Sqrt(16)`.
 <vaittama vastaus="tarua">
 Parametrin nimen pitää olla sama kuin kutsussa käytetyn muuttujan nimi.
 <perustelu>
-**Tarua.** Parametriin kopioidaan pelkkä arvo. Kutsut `Nelio(sivu)` ja
-`Nelio(4)` ovat funktiolle samanlaisia, ja kummassakin parametrin nimi on `x`.
+**Tarua.** Parametriin kopioidaan pelkkä arvo. Kutsut `Sekunnit(kesto)` ja
+`Sekunnit(4)` ovat funktiolle samanlaisia, ja kummassakin parametrin nimi on
+`minuutit`.
 </perustelu>
 </vaittama>
 
