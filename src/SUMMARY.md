@@ -71,6 +71,7 @@
   - [Moniulotteiset taulukot](./liitteet/moniulotteiset-taulukot.md)
   - [Muokattavat merkkijonot: StringBuilder](./liitteet/stringbuilder.md)
   - [Lambda-lausekkeet](./liitteet/lambda-lausekkeet.md)
+  - [Mitä `static` tarkoittaa?](./liitteet/static.md)
   - [C#-kielen tyyppijärjestelmästä](./liitteet/tyyppijarjestelma.md)
   - [Yleisimmät virheilmoitukset](./liitteet/virheilmoitukset.md)
   - [Sanasto](./sanasto.md)

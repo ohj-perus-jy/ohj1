@@ -11,6 +11,8 @@ suorittamiseen, mutta ne syventävät ymmärrystä ja niihin viitataan
 * [Valinnaiset parametrit ja oletusarvot](./oletusarvot.md) (liittyy osaan 2)
 * [Muokattavat merkkijonot: StringBuilder](./stringbuilder.md) (liittyy osaan 4)
 * [Lambda-lausekkeet](./lambda-lausekkeet.md) (liittyy osaan 6)
+* [Mitä `static` tarkoittaa?](./static.md): miksi konsolissa `public static`
+  ja Jypelissä `public` (liittyy osiin 2 ja 3)
 * [C#-kielen tyyppijärjestelmästä](./tyyppijarjestelma.md) (liittyy osaan 5)
 * [Yleisimmät virheilmoitukset](./virheilmoitukset.md)
 * [Sanasto](../sanasto.md)
