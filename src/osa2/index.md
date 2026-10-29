@@ -63,7 +63,7 @@ ovat [sanastossa](../sanasto.md).
 | [kuormittaminen](./4-funktiot.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
 | [lauseke](./3-lauseet-ja-lausekkeet.md#lauseke) | *expression* | koodin osa, jolla on arvo ja tyyppi |
 | [looginen operaattori](./2-operaattorit.md#loogiset-operaattorit) | *logical operator* | operaattori, joka yhdistää totuusarvoja (JA, TAI, EI) |
-| [metodi](./4-funktiot.md#tyypillisiä-virheitä) | *method* | olioon liittyvä aliohjelma |
+| [metodi](./4-funktiot.md#terminologiaa-aliohjelma-funktio-metodi) | *method* | olioon liittyvä aliohjelma |
 | [muuttuja](./1-muuttujat-ja-tietotyypit.md) | *variable* | nimetty paikka, johon tallennetaan yksi arvo |
 | [nimiavaruus](./5-ohjelman-rakenne.md#using-lause-ja-nimiavaruudet) | *namespace* | luokkien ryhmä, ikään kuin kansio luokille |
 | [paluuarvo](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *return value* | arvo, jonka funktio antaa `return`-lauseella takaisin kutsujalle |

@@ -1,13 +1,22 @@
-# Funktiot
+# Aliohjelmat
 
-Olet kutsunut funktioita jo monta kertaa. `Math.Sqrt(16)` antaa luvun 4,
+Olet kutsunut aliohjelmia jo monta kertaa. `Math.Sqrt(16)` antaa luvun 4,
 `Math.Max(3, 8)` antaa suuremman luvuista, `int.Parse("42")` antaa merkkijonoa
 vastaavan kokonaisluvun ja `Console.ReadLine()` antaa käyttäjän kirjoittaman
-rivin. Kaikki toimivat samalla tavalla: funktiolle annetaan jotakin, ja se
-antaa takaisin arvon. Nyt kirjoitat omia funktioita.
+rivin. 
 
-Idea on tuttu matematiikasta. Funktio f(x) = x² ottaa luvun ja antaa sen
-neliön: f(3) = 9. C#:ssa sama funktio näyttää tältä:
+Aliohjelmilla on kolme roolia: 
+
+ - ne voivat ottaa vastaan tietoa, jota kutsuja antaa,
+ - ne voivat hyödyntää saamaansa tietoa ja tehdä toimenpiteitä, kuten tulostaa tai muuttaa ohjelman tilaa, ja
+ - ne voivat palauttaa arvon takaisin sinne, mistä ne kutsuttiin.
+
+Kuten huomaat, kaikki näistä rooleista ovat valinnaisia; aliohjelma voi
+tehdä vain osan niistä. Keskitymme aluksi aliohjelmiin, jotka ottavat vastaan
+tietoa ja antavat takaisin arvon. 
+
+Vastaava idea on tuttu matematiikasta: funktio f(x) = x² ottaa luvun ja antaa sen
+neliön: f(3) = 9. C#:ssa sama funktio näyttäisi koodina tältä:
 
 ```csharp,ignore
 public static double Nelio(double x)
@@ -16,15 +25,16 @@ public static double Nelio(double x)
 }
 ```
 
-Funktio on nimetty [lauseke](./3-lauseet-ja-lausekkeet.md), jossa on aukko.
-Lauseke on `x * x`, nimi on `Nelio` ja aukko on `x`: sen paikalla ei ole
-vielä arvoa, joten lauseketta ei voi laskea. Aukko täytetään kutsussa:
-`Nelio(3)` panee aukkoon luvun 3, lausekkeesta tulee `3 * 3`, ja `return`-lause
-antaa (tai *palauttaa*) sen arvon 9 kutsujalle. Kutsun arvo on siis 9.
+Voidaan sanoa, että aliohjelma on nimetty
+[lauseke](./3-lauseet-ja-lausekkeet.md), jossa on aukko. Tässä lauseke on `x *
+x`, nimi on `Nelio` ja aukko on `x`: sen paikalla ei ole vielä arvoa, joten
+lauseketta ei voi laskea. Aukko täytetään kutsussa: `Nelio(3)` laittaa aukkoon
+luvun 3, lausekkeesta tulee `3 * 3`, ja `return`-lause antaa (tai *palauttaa*)
+sen arvon 9 kutsujalle. Kutsun arvo on siis 9.
 
-Funktio voi näyttää monimutkaisemmaltakin. Aukkoja voi olla useita, ja
+Aliohjelma voi näyttää monimutkaisemmaltakin. Aukkoja voi olla useita, ja
 aaltosulkujen sisällä voi olla monta riviä. Kutsujan kannalta tilanne on sama:
-kutsu on yhä lauseke, jolla on yksi arvo, ja sen antaa `return`-lause.
+kutsu on yhä lauseke, joka tuottaa yhden arvon, ja sen antaa `return`-lause.
 
 ## Mihin funktioita tarvitaan?
 
@@ -52,6 +62,14 @@ Hyvä funktio on *itsenäinen*: se laskee tuloksensa pelkästään sille
 annetuista arvoista. Silloin se toimii samalla tavalla riippumatta siitä,
 mistä sitä kutsutaan, ja samaa funktiota voi käyttää muuallakin kuin siinä
 kohdassa, jota varten se alun perin tehtiin.
+
+## Terminologiaa: aliohjelma, funktio, metodi
+
+Tällä kurssilla *aliohjelma* on yleisnimi kaikille ohjelman nimetyille osille.
+*Funktio* on arvon palauttava aliohjelma, ja olioon liittyvää aliohjelmaa
+kutsutaan *metodiksi*. Kirjallisuudessa sanoja käytetään ristiin, joten älä
+hämmenny, jos kohtaat eri nimityksiä. Englanninkielisissä lähteissä
+C#-aliohjelmia sanotaan lähes aina metodeiksi (*method*).
 
 ## Kutsu: mitä sisään, mitä ulos
 
@@ -109,7 +127,7 @@ kaikkialla, missä arvoa tarvitaan.
 //-}
 ```
 
-`Console.WriteLine` on poikkeus: se ei anna mitään takaisin, vaan tulostaa.
+`Console.WriteLine` ei ole funktio: se ei anna mitään takaisin, vaan tulostaa.
 Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 ## Oma funktio
@@ -562,15 +580,6 @@ oudolta, mutta syy on sijainti: siirrä funktio `Main`-aliohjelman sulkevan
 aaltosulun jälkeen. Kääntäjä puhuu sanasta `public`, koska C# sallii
 aliohjelman sisään niin sanotun paikallisen funktion, jolla ei saa olla
 `public`-sanaa. Tällä kurssilla paikallisia funktioita ei käytetä.
-
-!!! note "Huomautus"
-
-    **Terminologiaa.** Tällä kurssilla *aliohjelma* on yleisnimi kaikille
-    ohjelman nimetyille osille. Arvon palauttavaa aliohjelmaa kutsutaan
-    *funktioksi*, ja olioon liittyvää aliohjelmaa *metodiksi*. Kirjallisuudessa
-    sanoja käytetään ristiin, joten älä hämmenny, jos kohtaat eri nimityksiä.
-    Englanninkielisissä lähteissä C#-aliohjelmia sanotaan lähes aina metodeiksi
-    (*method*).
 
 <details closed><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Miksi <code>public</code> ja <code>static</code> pitää kirjoittaa?</summary>
 

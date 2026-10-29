@@ -34,7 +34,7 @@ kunkin osan etusivulla.
 | luokka | *class* | kokonaisuus, jonka sisään C#:ssa kirjoitetaan kaikki koodi | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | lähdekoodi | *source code* | ohjelmointikielellä kirjoitettu ohjelman teksti | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |
 | merkkijono | *string* | lainausmerkkien sisään kirjoitettu teksti | [1](./osa1/3-laskutoimitukset.md#plus-merkki-ja-teksti) |
-| metodi | *method* | olioon liittyvä aliohjelma | [2](./osa2/4-funktiot.md#tyypillisiä-virheitä) |
+| metodi | *method* | olioon liittyvä aliohjelma | [2](./osa2/4-funktiot.md#terminologiaa-aliohjelma-funktio-metodi) |
 | muuttuja | *variable* | nimetty paikka, johon tallennetaan yksi arvo | [2](./osa2/1-muuttujat-ja-tietotyypit.md) |
 | nimiavaruus | *namespace* | luokkien ryhmä, ikään kuin kansio luokille | [2](./osa2/5-ohjelman-rakenne.md#using-lause-ja-nimiavaruudet) |
 | näkyvyysalue | *scope* | ohjelman alue, jossa muuttuja on olemassa ja käytettävissä | [3](./osa3/3-muuttujien-nakyvyys.md) |
