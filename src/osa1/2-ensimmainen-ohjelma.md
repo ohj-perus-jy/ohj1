@@ -98,9 +98,10 @@ Nimen edessä on kolme sanaa, jotka toistuvat kurssin konsoliohjelmissa:
 
 * `public` tarkoittaa samaa kuin luokan edessä: aliohjelma on julkinen.
 * `static` on olio-ohjelmoinnin käsite, johon tutustutaan tarkemmin
-  Ohjelmointi 2 -kurssilla. Tällä kurssilla konsoliohjelmien aliohjelmat
-  kirjoitetaan `static`-sanan kanssa ja Jypeli-pelien aliohjelmat
-  pääsääntöisesti ilman sitä.
+  Ohjelmointi 2 -kurssilla; utelias voi kurkistaa liitteeseen
+  [Mitä `static` tarkoittaa?](../liitteet/static.md). Tällä kurssilla
+  konsoliohjelmien aliohjelmat kirjoitetaan `static`-sanan kanssa ja
+  Jypeli-pelien aliohjelmat pääsääntöisesti ilman sitä.
 * `void` tarkoittaa, että aliohjelma ei anna tulokseksi mitään arvoa. Siihen
   palataan [aliohjelmien](../osa3/2-aliohjelmat-ilman-paluuarvoa.md)
   yhteydessä.
