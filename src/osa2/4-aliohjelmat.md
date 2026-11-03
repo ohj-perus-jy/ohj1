@@ -147,13 +147,46 @@ Katsotaan, miten kone suorittaa seuraavan rivin:
 double aika = MinuutitSekunneiksi(2) + 30;
 ```
 
-1. Argumentin arvo lasketaan. Tässä se on valmiiksi `2`.
-2. Suoritus siirtyy aliohjelmaan, ja parametri saa argumentin arvon. On kuin
-   aliohjelman rungon alkuun olisi kirjoitettu `double minuutit = 2;`.
-3. Runko suoritetaan. Aliohjelma laskee arvon `120`, palauttaa sen `return`-lauseella, ja suoritus
-   palaa kutsukohtaan.
-4. Kutsun paikalle tulee paluuarvo. Rivistä tulee `double aika = 120 + 30;`,
-   ja `aika` saa arvon 150.
+<walkthrough scenes="images/aliohjelmakutsu/scenes.js">
+
+<step scene="argumentti">
+
+### Argumentin arvo lasketaan
+
+Ensin lasketaan, mikä arvo sulkujen sisällä on. Tässä se on valmiiksi `2`.
+
+</step>
+
+<step scene="siirtyminen">
+
+### Suoritus siirtyy aliohjelmaan
+
+Parametri `minuutit` saa argumentin arvon. On kuin aliohjelman rungon alkuun
+olisi kirjoitettu `double minuutit = 2;`.
+
+</step>
+
+<step scene="runko">
+
+### Runko suoritetaan
+
+Aliohjelma laskee `sekunnit`-muuttujaan arvon `120` ja palauttaa sen
+`return`-lauseella. Suoritus palaa kutsukohtaan.
+
+</step>
+
+<step scene="paluuarvo">
+
+### Kutsun paikalle tulee paluuarvo
+
+Rivistä tulee `double aika = 120 + 30;`, ja `aika` saa arvon 150. Aliohjelman
+omat muuttujat `minuutit` ja `sekunnit` katoavat samalla.
+
+</step>
+
+</walkthrough>
+
+Sama tiivistettynä yhteen kuvaan:
 
 ```bob
   "Main()"                              "MinuutitSekunneiksi(double minuutit)"
@@ -170,7 +203,7 @@ double aika = MinuutitSekunneiksi(2) + 30;
      v
 ```
 
-Kohta 4 on koko asian ydin: kun aliohjelma on suoritettu, kutsu korvautuu
+Viimeinen vaihe on koko asian ydin: kun aliohjelma on suoritettu, kutsu korvautuu
 paluuarvolla, aivan kuin kutsun paikalla olisi alun perin lukenut `120`.
 
 Kutsun alussa tapahtuu sijoitus *parametri = argumentti*. Siitä seuraa
