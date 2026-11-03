@@ -6,7 +6,7 @@ Neliön ala on 49
 ~~~
 
 Älä lisää, poista äläkä muuta rivejä, vaihda vain niiden järjestystä. Laita
-pääohjelma `Main` ennen funktiota `NelionAla`.
+pääohjelma `Main` ennen aliohjelmaa `NelionAla`.
 
 ```csharp
         return sivu * sivu;

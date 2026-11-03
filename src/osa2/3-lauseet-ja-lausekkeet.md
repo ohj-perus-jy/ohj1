@@ -128,7 +128,7 @@ arvoa, joten se ei ole lauseke vaan pelkkä lause. Sama testi kuin edellä
 paljastaa eron: `int x = Math.Max(3, 7);` kääntyy, mutta
 `int x = Console.WriteLine("Moi");` ei käänny.
 
-Myös [omien funktioiden](./4-funktiot.md) kutsu on lauseke samalla tavalla
+Myös [omien funktioiden](./4-aliohjelmat.md) kutsu on lauseke samalla tavalla
 kuin `Math.Max`-kutsu.
 
 

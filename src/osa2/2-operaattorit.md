@@ -141,7 +141,7 @@ public static Vector operator +(Vector a, Vector b)
 
 Kun kääntäjä näkee lausekkeen `a + b` ja molemmat ovat vektoreita, se kutsuu
 tätä aliohjelmaa. Idea on sama kuin
-[funktion kuormittamisessa](./4-funktiot.md#kuormittaminen):
+[funktion kuormittamisessa](./4-aliohjelmat.md#kuormittaminen):
 samalla nimellä on monta versiota, ja kääntäjä valitsee niistä oikean tyyppien
 perusteella.
 

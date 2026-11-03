@@ -1,6 +1,6 @@
 # Aliohjelmat ilman paluuarvoa
 
-[Funktiot](../osa2/4-funktiot.md) laskevat: ne saavat arvoja
+[Funktiot](../osa2/4-aliohjelmat.md) laskevat: ne saavat arvoja
 ja antavat tuloksen takaisin. Kaikki tehtävät eivät kuitenkaan ole laskemista.
 Ohjelman pitää myös tulostaa, piirtää ja lisätä olioita peliin. Sellainen
 aliohjelma *tekee* jotakin eikä anna mitään takaisin. Paluuarvon tyypin
@@ -205,7 +205,7 @@ Lauseke `new string(merkki, pituus)` tekee merkkijonon, jossa `merkki`
 toistuu `pituus` kertaa.
 
 Esittelyrivin voi lukea kutsusta kuten funktioilla
-([Kutsusta määrittelyyn](../osa2/4-funktiot.md#kutsusta-määrittelyyn)). Ero on
+([Kutsusta määrittelyyn](../osa2/4-aliohjelmat.md#kutsusta-määrittelyyn)). Ero on
 ensimmäisessä kohdassa: kun kutsun tulosta ei sijoiteta mihinkään eikä käytetä
 lausekkeessa, aliohjelma on `void`.
 
@@ -307,7 +307,7 @@ painetaan, eikä tee paluuarvolla mitään.
 
 ## Aliohjelmat Jypelissä
 
-Aiemmin tehdyssä [lumiukossa](../osa2/4-funktiot.md#funktiot-jypelissä)
+Aiemmin tehdyssä [lumiukossa](../osa2/4-aliohjelmat.md#aliohjelmat-jypelissä)
 `Begin` lisäsi jokaisen pallon itse. Kun lumiukkoja on useita, `Begin` täyttyy
 `Add`-riveistä. Kootaan lumiukon piirtäminen `void`-aliohjelmaksi.
 `PiirraLumiukko` saa parametreina alimman pallon keskipisteen ja laskee siitä

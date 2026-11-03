@@ -1,139 +1,25 @@
 # Aliohjelmat
 
-Olet kutsunut aliohjelmia jo monta kertaa. `Math.Sqrt(16)` antaa luvun 4,
-`Math.Max(3, 8)` antaa suuremman luvuista, `int.Parse("42")` antaa merkkijonoa
-vastaavan kokonaisluvun ja `Console.ReadLine()` antaa käyttäjän kirjoittaman
-rivin. 
+*Aliohjelma* on ohjelman osa, jolla on nimi. Aliohjelma voi ottaa vastaan
+tietoa, tehdä laskutoimituksia ja muita toimenpiteitä, ja se voi palauttaa
+arvon. Aliohjelmia voidaan käyttää eli *kutsua* useita kertoja. 
 
-Aliohjelmilla on kolme roolia: 
+Alla on esimerkkejä muutamista aliohjelmista, joita olet jo käyttänyt.
 
- - ne voivat ottaa vastaan tietoa, jota kutsuja antaa,
- - ne voivat hyödyntää saamaansa tietoa ja tehdä toimenpiteitä, kuten tulostaa tai muuttaa ohjelman tilaa, ja
- - ne voivat palauttaa arvon takaisin sinne, mistä ne kutsuttiin.
+| Nimi | Tarvitsee | Esimerkki kutsusta | Antaa takaisin |
+| ------ | ------------- | --------------------- | ------------------------------------- |
+| `Math.Sqrt` | yhden luvun | `Math.Sqrt(16)` | `4` |
+| `Math.Max` | kaksi lukua | `Math.Max(3, 8)` | `8` |
+| `int.Parse` | merkkijonon | `int.Parse("42")` | `int`-luvun `42` |
+| `Console.ReadLine` | ei mitään | `Console.ReadLine()` | käyttäjän kirjoittaman rivin |
 
-Kuten huomaat, kaikki näistä rooleista ovat valinnaisia; aliohjelma voi
-tehdä vain osan niistä. Keskitymme aluksi aliohjelmiin, jotka ottavat vastaan
-tietoa ja antavat takaisin arvon. 
+## Oma aliohjelma
 
-Vastaava idea on tuttu matematiikasta: funktio f(x) = x² ottaa luvun ja antaa sen
-neliön: f(3) = 9. C#:ssa sama funktio näyttäisi koodina tältä:
-
-```csharp,ignore
-public static double Nelio(double x)
-{
-    return x * x;
-}
-```
-
-Voidaan sanoa, että aliohjelma on nimetty
-[lauseke](./3-lauseet-ja-lausekkeet.md), jossa on aukko. Tässä lauseke on `x *
-x`, nimi on `Nelio` ja aukko on `x`: sen paikalla ei ole vielä arvoa, joten
-lauseketta ei voi laskea. Aukko täytetään kutsussa: `Nelio(3)` laittaa aukkoon
-luvun 3, lausekkeesta tulee `3 * 3`, ja `return`-lause antaa (tai *palauttaa*)
-sen arvon 9 kutsujalle. Kutsun arvo on siis 9.
-
-Aliohjelma voi näyttää monimutkaisemmaltakin. Aukkoja voi olla useita, ja
-aaltosulkujen sisällä voi olla monta riviä. Kutsujan kannalta tilanne on sama:
-kutsu on yhä lauseke, joka tuottaa yhden arvon, ja sen antaa `return`-lause.
-
-## Mihin funktioita tarvitaan?
-
-Taskulaskimen √-näppäin on funktio. Kun painat sitä, et mieti, miten
-neliöjuuri lasketaan. Riittää, että tiedät, mitä näppäin tekee. Omat funktiot
-toimivat samoin: kun funktio on kerran kirjoitettu, sitä käytetään nimellä,
-eikä sen sisältöä tarvitse enää ajatella.
-
-* **Sama lasku tarvitaan monta kertaa.** Polttoaineenkulutus lasketaan
-  jakamalla litrat kilometreillä ja kertomalla sadalla. Jos ohjelma laskee sen
-  kymmenelle autolle, kaava on kymmenessä kohdassa. Copy-paste toimii mainiosti, kunnes huomaat kaavassa
-  virheen ja korjaat sen kymmeneen kohtaan. Löydät niistä hyvällä tuurilla
-  yhdeksän.
-* **Nimi kertoo, mitä lasketaan.** `litrat / kilometrit * 100` vaatii lukijalta
-  pysähtymisen ja hetken verran ajattelemista. `Kulutus(litrat, kilometrit)` ei
-  vaadi. 
-* **Ohjelma jakautuu osiin.** `Main` lukee syötteen, kutsuu funktioita ja
-  tulostaa tulokset. Jokainen funktio hoitaa yksittäisen asian. Kun ohjelma on jaettu osiin, sitä on helpompi ymmärtää.
-* **Pienen palan voi testata erikseen.** Funktiosta on helppo tarkistaa, antaako
-  se oikean vastauksen: `Nelio(3)` pitää olla 9, ja `Kulutus(5, 50)` pitää olla 10. Osassa 7 tarkistus annetaan koneen tehtäväksi: funktiolle kirjoitetaan
-  [testit](../osa7/2-testaaminen-comtestilla.md), jotka ajetaan napin
-  painalluksella.
-
-Hyvä funktio on *itsenäinen*: se laskee tuloksensa pelkästään sille
-annetuista arvoista. Silloin se toimii samalla tavalla riippumatta siitä,
-mistä sitä kutsutaan, ja samaa funktiota voi käyttää muuallakin kuin siinä
-kohdassa, jota varten se alun perin tehtiin.
-
-## Terminologiaa: aliohjelma, funktio, metodi
-
-Tällä kurssilla *aliohjelma* on yleisnimi kaikille ohjelman nimetyille osille.
-*Funktio* on arvon palauttava aliohjelma, ja olioon liittyvää aliohjelmaa
-kutsutaan *metodiksi*. Kirjallisuudessa sanoja käytetään ristiin, joten älä
-hämmenny, jos kohtaat eri nimityksiä. Englanninkielisissä lähteissä
-C#-aliohjelmia sanotaan lähes aina metodeiksi (*method*).
-
-## Kutsu: mitä sisään, mitä ulos
-
-Aloitetaan käyttämisestä, koska sitä olet jo tehnyt. Funktion *kutsu*
-koostuu funktion nimestä ja suluista. Sulkujen sisään kirjoitetaan arvo,
-jonka funktio tarvitsee. Sitä sanotaan *argumentiksi*. Arvoa, jonka funktio
-antaa takaisin, sanotaan *paluuarvoksi*. Kutsussa `Math.Sqrt(16)` argumentti
-on 16 ja paluuarvo 4.
-
-```bob
-        argumentti                              paluuarvo
-                        .-------------------.
-   16  ---------------->|     Math.Sqrt     |----------------> 4.0
-                        '-------------------'
-```
-
-Argumentteja voi olla useampi. Silloin ne erotetaan toisistaan pilkulla:
-`Math.Max(3, 8)` saa kaksi lukua ja antaa takaisin niistä suuremman.
-
-```bob
-        argumentit                              paluuarvo
-                        .-------------------.
-  3, 8 ---------------->|      Math.Max     |----------------> 8
-                        '-------------------'
-```
-
-Kutsuessa funktiota kannattaa ajatella laatikkona, jonka sisältöä ei tarvitse
-tuntea. Riittää tietää, mitä laatikkoon pannaan ja mitä sieltä tulee ulos.
-
-| Kutsu                 | Tarvitsee     | Antaa takaisin                        |
-| --------------------- | ------------- | ------------------------------------- |
-| `Math.Sqrt(16)`       | luvun         | `double`-luvun `4`                    |
-| `Math.Max(3, 8)`      | kaksi lukua   | suuremman niistä, `8`                 |
-| `int.Parse("42")`     | merkkijonon   | `int`-luvun `42`                      |
-| `Console.ReadLine()`  | ei mitään     | käyttäjän kirjoittaman rivin          |
-
-Viimeinen rivi näyttää, että funktio voi toimia ilman argumenttejakin. Sulut
-kirjoitetaan silti.
-
-Funktion kutsu on lauseke: sillä on arvo. Siksi kutsua voi käyttää
-kaikkialla, missä arvoa tarvitaan.
-
-```csharp
-//-using System;
-//-
-//-public class Kutsuja
-//-{
-//-    public static void Main()
-//-    {
-        double sivu = Math.Sqrt(144);           // paluuarvo talteen muuttujaan
-        Console.WriteLine(sivu);                // 12
-        Console.WriteLine(Math.Max(3, 8));      // paluuarvo suoraan argumentiksi: 8
-        Console.WriteLine(Math.Sqrt(16) + 1);   // paluuarvo osana laskua: 5
-//-    }
-//-}
-```
-
-`Console.WriteLine` ei ole funktio: se ei anna mitään takaisin, vaan tulostaa.
-Tällaisiin aliohjelmiin palataan [myöhemmin](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
-
-## Oma funktio
-
-Kirjoitetaan nyt oma funktio. Alla `Sekunnit` muuntaa minuutit sekunneiksi,
-ja `Main` kutsuu sitä neljästi.
+Kirjoitetaan nyt oma aliohjelma. Sovitaan aluksi, että haluamme tehdä aliohjelman,
+joka muuntaa minuutit sekunneiksi: esimerkiksi 1.5 minuuttia on 90 sekuntia ja
+0.25 minuuttia on 15 sekuntia. Asia lähtee liikkeelle niin, että päätämme
+aluksi, millaista tietoa aliohjelma tarvitsee (tässä tapauksessa minuuttien määrän,
+) ja mitä se antaa takaisin (sekuntien määrän). Sitten kirjoitetaan kutsu:
 
 ```csharp
 using System;
@@ -142,83 +28,141 @@ public class Ajat
 {
     public static void Main()
     {
-        double aika = Sekunnit(1.5);
-        Console.WriteLine(aika);                         // 90
-        Console.WriteLine(Sekunnit(0.25));               // 15
-        Console.WriteLine(Sekunnit(2) + Sekunnit(0.5));  // 150
+        double sekunteina = MinuutitSekunneiksi(1.5);
+        Console.WriteLine(sekunteina);
+    }
+}
+```
+
+Kääntäjä antaa virheen, koska se ei tiedä, mitä `MinuutitSekunneiksi`-kutsun
+kohdalla pitäisi tehdä. Tämä on loogista, koska sellaista aliohjelmaa ei ole
+vielä olemassa tässä ohjelmassa. Määritellä nyt aliohjelma,
+joka tekee juuri tuon asian. 
+
+```csharp
+using System;
+
+public class Ajat
+{
+    public static void Main()
+    {
+        double sekunteina = MinuutitSekunneiksi(1.5);
+        Console.WriteLine(sekunteina);
     }
 
-    public static double Sekunnit(double minuutit)
+    // HIGHLIGHT_GREEN_BEGIN
+    public static double MinuutitSekunneiksi(double minuutit)
     {
-        return minuutit * 60;
+        double sekunnit = minuutit * 60;
+        return sekunnit;
     }
+    // HIGHLIGHT_GREEN_END
 }
 ```
 
 Käydään koodi läpi osa kerrallaan:
 
-```csharp,ignore
-public static double Sekunnit(double minuutit)
-{
-    return minuutit * 60;
-}
-```
-
-* `public` tarkoittaa, että funktio on julkinen ja sitä voidaan kutsua mistä
-  tahansa ohjelman osasta. Tällä kurssilla käytännössä kaikki funktiot ovat julkisia.
-* `static` tarkoittaa, että funktio kuuluu luokalle eikä oliolle.
+* `public` tarkoittaa, että aliohjelma on julkinen ja sitä voidaan kutsua mistä
+  tahansa ohjelman osasta. Tällä kurssilla käytännössä kaikki aliohjelmat ovat julkisia.
+* `static` tarkoittaa, että aliohjelma kuuluu luokalle eikä oliolle.
   Konsoliohjelmissa se kirjoitetaan aina; Jypelissä se jätetään pois, kuten
   alempana nähdään.
-* `double` on *paluuarvon tyyppi*: funktio antaa takaisin `double`-luvun.
-* `Sekunnit` on funktion nimi. Nimi valitaan itse.
-* `(double minuutit)` on *parametri*: muuttuja, joka saa arvonsa kutsusta.
-  Parametrille annetaan tyyppi ja nimi samoin kuin muuttujalle.
-* Aaltosulkujen `{ }` väliin kirjoitetaan funktion *runko*. `return`-lause
-  laskee lausekkeen `minuutit * 60` arvon ja antaa sen kutsujalle.
+* `double` on *paluuarvon tyyppi*: aliohjelma antaa takaisin `double`-luvun.
+* `MinuutitSekunneiksi` on aliohjelman nimi. Nimi valitaan itse.
+* `(double minuutit)`: Sulkujen sisään kirjoitetaan *parametrit*, eli muuttujat,
+  jotka saavat arvonsa kutsussa. 
+* Aaltosulkujen `{ }` väliin kirjoitetaan aliohjelman *runko*. `return`-lause
+  palauttaa arvon aliohjelmasta sinne, mistä sitä kutsuttiin. Tätä
+  arvoa sanotaan *paluuarvoksi*.
 
 Määrittelyn ensimmäistä riviä sanotaan *esittelyriviksi* (engl. *header*).
-Siitä näkee kaiken, mitä kutsuja tarvitsee: funktion nimen, sen tarvitsemat
-tiedot ja sen, minkä tyyppisen arvon funktio antaa takaisin.
+Siitä näkee kaiken, mitä kutsuja tarvitsee: aliohjelman nimen, sen tarvitsemat
+tiedot ja sen, minkä tyyppisen arvon aliohjelma antaa takaisin.
+
+Kutsutaan aliohjelmaamme vielä pari kertaa:
+
+```csharp
+//-using System;
+//-
+//-public class Ajat
+//-{
+//-    public static void Main()
+//-    {
+        Console.WriteLine(MinuutitSekunneiksi(0.25));               // 15
+        Console.WriteLine(MinuutitSekunneiksi(2) + MinuutitSekunneiksi(0.5));  // 150
+//-    }
+//-
+//-    public static double MinuutitSekunneiksi(double minuutit)
+//-    {
+//-        double sekunnit = minuutit * 60;
+//-        return sekunnit;
+//-    }
+//-}
+```
+
+Tässä huomataan, että aliohjelmaa voi kutsua useita kertoja eri arvoilla. Kutsun
+arvo on aina aliohjelman paluuarvo, joten sen voi sijoittaa muuttujaan, tulostaa
+ruudulle tai käyttää osana lauseketta.
+
+!!! note "Terminologiaa: argumentti ja parametri"
+
+    Kutsussa annettavia arvoja kutsutaan *argumenteiksi*.
+    Argumenttien arvot välitetään aliohjelman *parametreihin*. Kirjallisuudessa
+    saatetaan kuitenkin nimittää kumpiakin parametreiksi (*todellinen* ja *muodollinen*
+    parametri).
+
+!!! note "Terminologiaa: aliohjelma, funktio ja metodi"
+
+    Tällä kurssilla käytämme pääasiassa termiä *aliohjelma*, mutta kirjallisuudessa käytetään myös sanoja *funktio* ja *metodi*.
+    Näitä käytetään varsin usein toistensa synonyymeinä, 
+    joten älä hämmenny, jos kohtaat eri nimityksiä.
+    Englanninkielisissä lähteissä C#-aliohjelmia sanotaan lähes aina
+    metodeiksi (*method*).
 
 Kolme sääntöä, jotka kannattaa painaa mieleen heti:
 
-* **Funktio kirjoitetaan luokan sisään, `Main`-aliohjelman rinnalle.** Ei
-  `Main`-aliohjelman sisään eikä luokan ulkopuolelle. Määrittelyjärjestyksellä
-  ei ole väliä: `Sekunnit` voi olla ennen `Main`-aliohjelmaa tai sen jälkeen.
-* **Määrittely ei suorita mitään.** Funktion runko suoritetaan vasta, kun
-  funktiota kutsutaan.
+* **Aliohjelmat kirjoitetaan luokan sisään, `Main`-aliohjelman rinnalle.** Ei
+  siis `Main`-aliohjelman sisään eikä luokan ulkopuolelle.
+  Määrittelyjärjestyksellä ei ole väliä: `MinuutitSekunneiksi` voi olla ennen
+  `Main`-aliohjelmaa tai sen jälkeen.
+* **Aliohjelman runko suoritetaan vasta, kun aliohjelmaa kutsutaan.** Pelkkä määrittely ei vielä tee mitään. 
 * **Tyypit kuuluvat määrittelyyn, arvot kutsuun.** Kutsussa ei toisteta sanoja
   `public static double`, eikä argumentin eteen kirjoiteta tyyppiä: pelkkä
-  `Sekunnit(2)` riittää.
+  `MinuutitSekunneiksi(2)` riittää.
+
+Aliohjelman kutsu on lauseke: sen arvo on paluuarvo. Siksi kutsua voi käyttää
+kaikkialla, missä arvoa tarvitaan. 
 
 Myös `Main` on rakenteeltaan samanlainen. Sen paluuarvon tyypin paikalla lukee
-`void`, joka tarkoittaa, että `Main` ei anna takaisin mitään. Siihen palataan,
-kun käsitellään [aliohjelmia ilman
+`void`, joka tarkoittaa, että `Main` ei anna takaisin mitään. Samanlainen on
+`Console.WriteLine`: se ei anna mitään takaisin, vaan
+tulostaa. Tällaisiin aliohjelmiin palataan, kun käsitellään [aliohjelmia ilman
 paluuarvoa](../osa3/2-aliohjelmat-ilman-paluuarvoa.md).
 
 ## Mitä kutsussa tapahtuu?
 
-Katsotaan, miten kone suorittaa rivin
+Katsotaan, miten kone suorittaa seuraavan rivin:
 
 ```csharp,ignore
-double aika = Sekunnit(2) + 30;
+double aika = MinuutitSekunneiksi(2) + 30;
 ```
 
 1. Argumentin arvo lasketaan. Tässä se on valmiiksi `2`.
-2. Suoritus siirtyy funktioon, ja parametri saa argumentin arvon. On kuin
-   funktion rungon alkuun olisi kirjoitettu `double minuutit = 2;`.
-3. Runko suoritetaan. `return minuutit * 60;` laskee arvon `120`, ja suoritus
+2. Suoritus siirtyy aliohjelmaan, ja parametri saa argumentin arvon. On kuin
+   aliohjelman rungon alkuun olisi kirjoitettu `double minuutit = 2;`.
+3. Runko suoritetaan. Aliohjelma laskee arvon `120`, palauttaa sen `return`-lauseella, ja suoritus
    palaa kutsukohtaan.
 4. Kutsun paikalle tulee paluuarvo. Rivistä tulee `double aika = 120 + 30;`,
    ja `aika` saa arvon 150.
 
 ```bob
-  "Main()"                              "Sekunnit(double minuutit)"
+  "Main()"                              "MinuutitSekunneiksi(double minuutit)"
      |
-     | "double aika = Sekunnit(2) + 30;"
+     | "double aika = MinuutitSekunneiksi(2) + 30;"
      |
      +------ "kutsu, minuutit = 2" ------->+
-     |                                     | "return minuutit * 60;"
+     |                                     | "double sekunnit = minuutit * 60;"
+     |                                     | "return sekunnit;"
      |<----- "paluu, arvo 120" ------------+
      |
      | "double aika = 120 + 30;"
@@ -226,36 +170,29 @@ double aika = Sekunnit(2) + 30;
      v
 ```
 
-Kohta 4 on koko asian ydin: kun funktio on suoritettu, kutsu korvautuu
+Kohta 4 on koko asian ydin: kun aliohjelma on suoritettu, kutsu korvautuu
 paluuarvolla, aivan kuin kutsun paikalla olisi alun perin lukenut `120`.
 
-!!! note "Huomautus"
-
-    **Terminologiaa.** Kutsussa annettavia arvoja kutsutaan *argumenteiksi*.
-    Argumenttien arvot välitetään funktion *parametreihin*. Kirjallisuudessa
-    saatetaan nimittää kumpiakin parametreiksi (*todellinen* ja *muodollinen*
-    parametri), mutta tässä käytämme edellä mainittuja termejä.
-
-Kutsun alussa tapahtuu siis sijoitus *parametri = argumentti*. Siitä seuraa
+Kutsun alussa tapahtuu sijoitus *parametri = argumentti*. Siitä seuraa
 kaksi asiaa, jotka kannattaa huomata heti.
 
-**Argumentti voi olla mikä tahansa lauseke.** Sijoituksen oikealle puolelle
-kelpaa luku, muuttuja, lasku tai toisen funktion kutsu, joten ne kaikki
-kelpaavat myös argumentiksi. Lausekkeen arvo lasketaan *ensin*, ja vasta
-valmis arvo sijoitetaan parametriin.
+**Argumentti voi olla mikä tahansa lauseke**. Sijoituksen oikealle puolelle
+kelpaa luku, muuttuja, lasku tai toisen aliohjelman kutsu, joten ne kaikki
+kelpaavat myös argumentiksi. Lausekkeen arvo lasketaan *ensin*, ja vasta valmis
+arvo sijoitetaan parametriin.
 
 ```csharp,ignore
 double kesto = 4;
-Console.WriteLine(Sekunnit(kesto));               // minuutit = 4, tulostaa 240
-Console.WriteLine(Sekunnit(kesto + 1));           // minuutit = 5, tulostaa 300
-Console.WriteLine(Sekunnit(Math.Max(kesto, 10))); // ensin Math.Max on 10, sitten minuutit = 10: 600
+Console.WriteLine(MinuutitSekunneiksi(kesto));               // minuutit = 4, tulostaa 240
+Console.WriteLine(MinuutitSekunneiksi(kesto + 1));           // minuutit = 5, tulostaa 300
+Console.WriteLine(MinuutitSekunneiksi(Math.Max(kesto, 10))); // ensin Math.Max on 10, sitten minuutit = 10: 600
 ```
 
-**Parametrin nimi on funktion oma asia.** Yllä kutsujan muuttuja on `kesto`,
-mutta funktiossa sama arvo tunnetaan nimellä `minuutit`. Nimien ei tarvitse olla
-samat, eikä funktio edes tiedä, minkä nimisestä muuttujasta arvo tuli tai
+**Parametrin nimi on aliohjelman oma asia.** Yllä kutsujan muuttuja on `kesto`,
+mutta aliohjelmassa sama arvo tunnetaan nimellä `minuutit`. Nimien ei tarvitse olla
+samat, eikä aliohjelma edes tiedä, minkä nimisestä muuttujasta arvo tuli tai
 tuliko se muuttujasta lainkaan. Parametriin kopioidaan pelkkä arvo. Parametri
-on funktion oma muuttuja, joka syntyy kutsussa ja katoaa, kun funktio päättyy.
+on aliohjelman oma muuttuja, joka syntyy kutsussa ja katoaa, kun aliohjelma päättyy.
 Tähän palataan [muuttujien näkyvyyden](../osa3/3-muuttujien-nakyvyys.md)
 yhteydessä.
 
@@ -312,7 +249,7 @@ ja koordinaatit, kannattaa määritellä `double`-tyyppisiksi.
 
 ## Paluuarvon tyyppi
 
-Funktio voi palauttaa minkä tahansa tyyppisen arvon. Paluuarvon tyyppi
+Aliohjelma voi palauttaa minkä tahansa tyyppisen arvon. Paluuarvon tyyppi
 kirjoitetaan esittelyriville nimen eteen, ja `return`-lauseen lausekkeen on
 oltava sitä tyyppiä.
 
@@ -346,8 +283,8 @@ public class Tyypit
 
 ## Kutsusta määrittelyyn
 
-Uutta funktiota ei kannata aloittaa määrittelystä vaan *kutsusta*. Kirjoita
-ensin rivi, jolla haluaisit funktiota käyttää, ikään kuin funktio olisi jo
+Uutta aliohjelmaa ei kannata aloittaa määrittelystä vaan *kutsusta*. Kirjoita
+ensin rivi, jolla haluaisit aliohjelmaa käyttää, ikään kuin aliohjelma olisi jo
 olemassa. Esittelyrivin voi sen jälkeen lukea kutsusta lähes mekaanisesti.
 
 Halutaan muotoilla pistetaulun rivejä. Mukavin kutsu olisi tällainen:
@@ -361,13 +298,13 @@ Käydään kutsu läpi vasemmalta oikealle:
 | Kutsusta näkyy                               | Esittelyriville                  |
 | -------------------------------------------- | -------------------------------- |
 | tulos sijoitetaan `string`-muuttujaan        | paluuarvon tyyppi `string`       |
-| funktion nimi on `MuotoilePisteet`           | `MuotoilePisteet`                |
+| aliohjelman nimi on `MuotoilePisteet`           | `MuotoilePisteet`                |
 | argumentteja on kaksi                        | kaksi parametria                 |
 | 1. argumentti `"Maija"` on merkkijono        | `string` + itse keksitty nimi    |
 | 2. argumentti `120` on kokonaisluku          | `int` + itse keksitty nimi       |
 
 Alkuun tulevat tutut `public static`. Kutsussa on pelkkiä arvoja, joten
-parametrien nimet pitää keksiä itse: mitä `"Maija"` ja `120` funktion
+parametrien nimet pitää keksiä itse: mitä `"Maija"` ja `120` aliohjelman
 kannalta tarkoittavat?
 
 ```text
@@ -378,15 +315,15 @@ public static string MuotoilePisteet(string nimi, int pisteet)
 
 Työjärjestys on aina sama:
 
-1. **Kirjoita kutsu.** Mieti, mitä tietoja funktio tarvitsee ja mitä se antaa
+1. **Kirjoita kutsu.** Mieti, mitä tietoja aliohjelma tarvitsee ja mitä se antaa
    takaisin.
 2. **Kirjoita esittelyrivi** kutsun perusteella.
-3. **Tee tynkä ja käännä.** *Tynkä* on funktio, jonka runko palauttaa jonkin
+3. **Tee tynkä ja käännä.** *Tynkä* on aliohjelma, jonka runko palauttaa jonkin
    oikean tyyppisen arvon, vaikka arvo olisi vielä väärä. Ohjelma kääntyy,
-   vaikka funktio ei vielä tee oikeaa asiaa. Jos ei käänny, vika on kutsussa
+   vaikka aliohjelma ei vielä tee oikeaa asiaa. Jos ei käänny, vika on kutsussa
    tai esittelyrivissä, ja se on helppo löytää, kun muuta uutta koodia ei vielä
    ole.
-4. **Kirjoita runko.** Tässä vaiheessa unohda, mistä funktiota kutsutaan.
+4. **Kirjoita runko.** Tässä vaiheessa unohda, mistä aliohjelmaa kutsutaan.
    Käytössäsi ovat parametrit, eikä muuta tarvita.
 
 ```csharp,ignore
@@ -398,7 +335,7 @@ public static string MuotoilePisteet(string nimi, int pisteet)
 
 Tynkä ei voi olla tyhjä runko `{ }`, koska esittelyrivillä luvataan palauttaa
 `string`, ja kääntäjä pitää lupauksesta kiinni: `CS0161: not all code paths
-return a value`. Lukuja palauttavassa funktiossa tynkä on tavallisesti
+return a value`. Lukuja palauttavassa aliohjelmassa tynkä on tavallisesti
 `return 0;` ja totuusarvoja palauttavassa `return false;`.
 
 Tynkä on tarkistuspiste. Kun ohjelma kääntyy tyngän kanssa, tiedät, että kutsu
@@ -410,7 +347,35 @@ jälkeen sitä etsitään sadalta.
 Osassa 4 työjärjestykseen lisätään dokumentointi ja osassa 7 testit, ks.
 [Testaaminen ComTestillä](../osa7/2-testaaminen-comtestilla.md#ensimmäinen-testi-vaihe-vaiheelta).
 
-## Funktio laskee, `Main` tulostaa
+## Mihin aliohjelmia tarvitaan?
+
+Taskulaskimen √-näppäin toimii kuin aliohjelma. Kun painat sitä, et mieti, miten
+neliöjuuri lasketaan. Riittää, että tiedät, mitä näppäin tekee. Omat aliohjelmat
+toimivat samoin: kun aliohjelma on kerran kirjoitettu, sitä käytetään nimellä,
+eikä sen sisältöä tarvitse enää ajatella.
+
+* **Sama lasku tarvitaan monta kertaa.** Polttoaineenkulutus lasketaan
+  jakamalla litrat kilometreillä ja kertomalla sadalla. Jos ohjelma laskee sen
+  kymmenelle autolle, kaava on kymmenessä kohdassa. Copy-paste toimii mainiosti, kunnes huomaat kaavassa
+  virheen ja korjaat sen kymmeneen kohtaan. Löydät niistä hyvällä tuurilla
+  yhdeksän.
+* **Nimi kertoo, mitä lasketaan.** `litrat / kilometrit * 100` vaatii lukijalta
+  pysähtymisen ja hetken verran ajattelemista. `Kulutus(litrat, kilometrit)` ei
+  vaadi. 
+* **Ohjelma jakautuu osiin.** `Main` lukee syötteen, kutsuu aliohjelmia ja
+  tulostaa tulokset. Jokainen aliohjelma hoitaa yksittäisen asian. Kun ohjelma on
+  jaettu osiin, sitä on helpompi ymmärtää ja muokata.
+* **Pienen palan voi testata erikseen.** Aliohjelmasta on helppo tarkistaa, antaako
+  se oikean vastauksen: `MinuutitSekunneiksi(2)` pitää olla 120, ja `Kulutus(5, 50)` pitää olla 10. Osassa 7 tarkistus annetaan koneen tehtäväksi: aliohjelmalle kirjoitetaan
+  [testit](../osa7/2-testaaminen-comtestilla.md), jotka ajetaan napin
+  painalluksella.
+
+Hyvä aliohjelma on *itsenäinen*: se laskee tuloksensa pelkästään sille
+annetuista arvoista. Silloin se toimii samalla tavalla riippumatta siitä,
+mistä sitä kutsutaan, ja samaa aliohjelmaa voi käyttää muuallakin kuin siinä
+kohdassa, jota varten se alun perin tehtiin.
+
+## Aliohjelma laskee, `Main` tulostaa
 
 Alla oleva ohjelma kysyy käyttäjältä tankatut litrat ja ajetut kilometrit
 ja laskee polttoaineenkulutuksen. Katso, mikä osa tekee mitäkin.
@@ -443,32 +408,32 @@ tuloksen paluuarvona. Syötteen lukeminen ja tulostaminen jäävät
 `Main`-aliohjelmalle. Tästä on kaksi hyötyä:
 
 * **Tuloksen voi käyttää mihin tahansa.** Kutsuja voi tulostaa sen, verrata
-  sitä rajaan tai laskea monen auton keskiarvon. Jos funktio tulostaisi
+  sitä rajaan tai laskea monen auton keskiarvon. Jos aliohjelma tulostaisi
   tuloksen itse, ohjelma ei saisi sitä käyttöönsä.
-* **Funktion voi testata.** Testi kutsuu funktiota ja vertaa paluuarvoa
+* **Aliohjelman voi testata.** Testi kutsuu aliohjelmaa ja vertaa paluuarvoa
   odotettuun. Ruudulle tulostettua tekstiä testi ei näe.
 
-Kirjoita siis laskeva funktio niin, ettei siinä ole `Console.WriteLine`- eikä
+Kirjoita siis laskeva aliohjelma niin, ettei siinä ole `Console.WriteLine`- eikä
 `Console.ReadLine`-kutsuja.
 
-## Funktion nimeäminen
+## Aliohjelman nimeäminen
 
-Funktiot nimetään *PascalCase*-tyylillä eli **isolla** alkukirjaimella, ja
+Aliohjelmat nimetään *PascalCase*-tyylillä eli **isolla** alkukirjaimella, ja
 jokainen sana alkaa isolla: `MuotoilePisteet`, ei `muotoilePisteet`. Näin
-nimestä näkee heti, onko kyseessä muuttuja vai funktio. Ääkkösiä ei käytetä,
+nimestä näkee heti, onko kyseessä muuttuja vai aliohjelma. Ääkkösiä ei käytetä,
 kuten ei muuttujissakaan: `Nelio`, ei `Neliö`. Katso tarkemmin
 [Tyyliopas](../tyyliopas.md#nimeämiskäytännöt).
 
-Nimi kertoo, mitä funktio antaa takaisin (`Keskiarvo`, `Kulutus`) tai mitä
+Nimi kertoo, mitä aliohjelma antaa takaisin (`Keskiarvo`, `Kulutus`) tai mitä
 se tekee arvoilleen (`MuotoilePisteet`, `LaskeAlennus`). Totuusarvon
-palauttava funktio nimetään kysymykseksi: `OnkoTaysiIkainen`, `OnkoParillinen`.
+palauttava aliohjelma nimetään kysymykseksi: `OnkoTaysiIkainen`, `OnkoParillinen`.
 Silloin kutsu luetaan luontevasti: `bool aikuinen = OnkoTaysiIkainen(ika);`.
 
-## Funktiot Jypelissä
+## Aliohjelmat Jypelissä
 
 [Ensimmäisessä graafisessa ohjelmassa](../osa1/5-ensimmainen-graafinen-ohjelma.md)
 jokainen olio luotiin usealla rivillä. Lumiukossa on kolme palloa, ja niiden
-rivit ovat lähes samat. Kirjoitetaan pallon luominen funktioksi, joka
+rivit ovat lähes samat. Kirjoitetaan pallon luominen aliohjelmaksi, joka
 palauttaa valmiin pallon:
 
 ```csharp,feature-jypeli
@@ -499,35 +464,35 @@ public class Lumiukko : PhysicsGame
 }
 ```
 
-`LuoPallo` on funktio siinä missä `Nelio`: se saa parametreina paikan ja säteen
+`LuoPallo` on aliohjelma siinä missä `MinuutitSekunneiksi`: se saa parametreina paikan ja säteen
 ja palauttaa arvon. Arvo on vain luvun sijaan `GameObject`, sama tyyppi kuin
 aiemmissa Jypeli-esimerkeissä. Mikä olio tarkalleen on, selitetään
 [myöhemmin](../osa3/4-jypeli-ja-oliot.md).
 
 Kutsun `LuoPallo(0, -200, 100)` arvo on siis pallo, ja `Add` lisää sen peliin.
-Koska funktio palauttaa pallon eikä lisää sitä itse, kutsuja voi vielä muuttaa
+Koska aliohjelma palauttaa pallon eikä lisää sitä itse, kutsuja voi vielä muuttaa
 sitä: lumiukon pää on keltainen, vaikka `LuoPallo` tekee valkoisia palloja.
 
 Kaksi eroa konsoliohjelmaan:
 
-* Funktion edestä puuttuu `static`. Jypelissä aliohjelmat käyttävät yleensä
+* Aliohjelman edestä puuttuu `static`. Jypelissä aliohjelmat käyttävät yleensä
   pelin omia asioita, kuten `Add`-metodia ja `Level`-ominaisuutta, ja siksi ne
   kirjoitetaan ilman `static`-sanaa. Syy selitetään
   [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä; toistaiseksi riittää
   muistaa sääntö: konsolissa `public static`, Jypelissä `public`.
 * `Begin`-aliohjelmassa on sana `override`. Se kertoo, että Jypelillä on oma
-  `Begin`, jonka tilalle tämä kirjoitetaan. Omissa funktioissa sitä ei
+  `Begin`, jonka tilalle tämä kirjoitetaan. Omissa aliohjelmissa sitä ei
   käytetä.
 
 ## Tyypillisiä virheitä
 
 **Paluuarvo jää käyttämättä.** Rivi `Nelio(5);` kääntyy, mutta mitään ei näy:
-funktio laskee arvon 25, eikä kukaan ota sitä vastaan. Paluuarvo pitää
+aliohjelma laskee arvon 25, eikä kukaan ota sitä vastaan. Paluuarvo pitää
 sijoittaa muuttujaan, tulostaa tai käyttää laskussa. Jypelissä sama virhe näkyy
 kuvasta: pelkkä `LuoPallo(0, 30, 30);` luo pallon, mutta koska sitä ei lisätä
 peliin, lumiukolta puuttuu pää.
 
-**`return` puuttuu.** Alla funktio laskee tuloksen muuttujaan mutta ei palauta
+**`return` puuttuu.** Alla aliohjelma laskee tuloksen muuttujaan mutta ei palauta
 sitä. Kääntäjä ilmoittaa `CS0161: 'Virhe.Nelio(double)': not all code paths
 return a value`. Klikkaa Play nähdäksesi virheilmoituksen ja lisää sitten
 puuttuva rivi.
@@ -565,18 +530,18 @@ corresponds to the required parameter 'b'`. Kutsu `MuotoilePisteet(120,
 Invalid expression term 'double'`. Sama sekaannus toisin päin:
 `public static double Nelio(double 3)` antaa virheen `CS1001: Identifier
 expected`, koska `3` ei ole muuttujan nimi. Määrittelyssä kerrotaan, *millaista* tietoa
-funktio ottaa vastaan, ei sitä, mitä tietoa sille jollakin kerralla annetaan.
+aliohjelma ottaa vastaan, ei sitä, mitä tietoa sille jollakin kerralla annetaan.
 
 **Parametrilta puuttuu tyyppi.** Muuttujia voi määritellä samalla rivillä
 useita (`double a, b;`), mutta parametreja ei: jokaiselle kirjoitetaan oma
 tyyppi, vaikka se olisi sama. `Keskiarvo(double a, b)` ei käänny,
 `Keskiarvo(double a, double b)` kääntyy.
 
-**Funktio `Main`-aliohjelman sisällä.** Funktiot ovat luokan sisällä
+**Aliohjelma `Main`-aliohjelman sisällä.** Aliohjelmat ovat luokan sisällä
 rinnakkain, eivät sisäkkäin. Jos `public static double Nelio(double x)` on
 kirjoitettu `Main`-aliohjelman aaltosulkujen väliin, kääntäjä ilmoittaa
 `CS0106: The modifier 'public' is not valid for this item`. Ilmoitus kuulostaa
-oudolta, mutta syy on sijainti: siirrä funktio `Main`-aliohjelman sulkevan
+oudolta, mutta syy on sijainti: siirrä aliohjelma `Main`-aliohjelman sulkevan
 aaltosulun jälkeen. Kääntäjä puhuu sanasta `public`, koska C# sallii
 aliohjelman sisään niin sanotun paikallisen funktion, jolla ei saa olla
 `public`-sanaa. Tällä kurssilla paikallisia funktioita ei käytetä.
@@ -600,9 +565,9 @@ kunnolla [olioiden](../osa3/4-jypeli-ja-oliot.md) yhteydessä, liitteessä
 
 </details>
 
-<details closed id="kuormittaminen"><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Funktion kuormittaminen</summary>
+<details closed id="kuormittaminen"><summary><i class="jyu-star"></i> Valinnaista lisätietoa: Aliohjelman kuormittaminen</summary>
 
-Samannimisiä funktioita voi olla useita, kunhan niiden parametrilistat
+Samannimisiä aliohjelmia voi olla useita, kunhan niiden parametrilistat
 eroavat toisistaan. Tätä kutsutaan *kuormittamiseksi* (engl. *overloading*).
 Olet jo käyttänyt kuormitettuja aliohjelmia: `Math.Max` hyväksyy sekä
 kokonaisluvut että liukuluvut, ja `Console.WriteLine` hyväksyy argumentikseen
@@ -627,7 +592,7 @@ toisistaan.
 
 Kuormittamista ei tarvita tällä kurssilla omissa ohjelmissa, mutta sen
 tunnistaminen auttaa lukemaan kirjastojen dokumentaatiota, jossa samalla
-nimellä on usein monta versiota. Toinen tapa saada sama funktio toimimaan eri
+nimellä on usein monta versiota. Toinen tapa saada sama aliohjelma toimimaan eri
 määrällä argumentteja on antaa parametreille oletusarvot. Argumentit voi myös
 nimetä kutsussa, jolloin niiden järjestyksen saa valita itse. Kummastakin
 kerrotaan liitteessä [Valinnaiset parametrit ja
@@ -637,16 +602,16 @@ oletusarvot](../liitteet/oletusarvot.md).
 
 ## Yhteenveto
 
-* Funktio saa arvoja parametreina ja antaa tuloksen takaisin
-  `return`-lauseella. Funktion kutsu on lauseke, jonka arvo on paluuarvo.
+* Aliohjelma saa arvoja parametreina ja antaa tuloksen takaisin
+  `return`-lauseella. Aliohjelman kutsu on lauseke, jonka arvo on paluuarvo.
 * Määrittely: `public static Tyyppi Nimi(Tyyppi parametri) { return ...; }`.
   Kutsu: `Nimi(argumentti)`. Määrittely ei suorita mitään; vasta kutsu
   suorittaa.
 * Kutsun alussa argumentit sijoitetaan parametreihin järjestyksessä:
   *parametri = argumentti*. `int` kelpaa `double`-parametrille, toisin päin ei.
-* Uusi funktio syntyy järjestyksessä kutsu, esittelyrivi, kääntyvä tynkä,
+* Uusi aliohjelma syntyy järjestyksessä kutsu, esittelyrivi, kääntyvä tynkä,
   runko.
-* Funktio laskee; syötteen lukeminen ja tulostaminen jäävät `Main`-aliohjelmalle.
+* Aliohjelma laskee; syötteen lukeminen ja tulostaminen jäävät `Main`-aliohjelmalle.
 * Konsolissa `public static`, Jypelissä `public`.
 
 ## Testaa tietosi
@@ -671,14 +636,14 @@ sama kuin `Math.Sqrt(16)`.
 <vaittama vastaus="tarua">
 Parametrin nimen pitää olla sama kuin kutsussa käytetyn muuttujan nimi.
 <perustelu>
-**Tarua.** Parametriin kopioidaan pelkkä arvo. Kutsut `Sekunnit(kesto)` ja
-`Sekunnit(4)` ovat funktiolle samanlaisia, ja kummassakin parametrin nimi on
+**Tarua.** Parametriin kopioidaan pelkkä arvo. Kutsut `MinuutitSekunneiksi(kesto)` ja
+`MinuutitSekunneiksi(4)` ovat aliohjelmalle samanlaisia, ja kummassakin parametrin nimi on
 `minuutit`.
 </perustelu>
 </vaittama>
 
 <vaittama vastaus="tarua">
-Funktion tyngäksi riittää esittelyrivi ja tyhjä runko `{ }`.
+Aliohjelman tyngäksi riittää esittelyrivi ja tyhjä runko `{ }`.
 <perustelu>
 **Tarua.** Esittelyrivi lupaa palauttaa arvon, joten tyhjä runko antaa virheen
 `CS0161`. Tynkä palauttaa jonkin oikean tyyppisen arvon, esimerkiksi
@@ -710,7 +675,7 @@ public static int Kolminkertainen(int luku)
 - [ ] `2`
 
 <perustelu>
-**b.** Parametri `luku` saa arvon 2, ja funktio palauttaa 6. Kutsun paikalle
+**b.** Parametri `luku` saa arvon 2, ja aliohjelma palauttaa 6. Kutsun paikalle
 tulee 6, joten tulostettava lauseke on `6 + 2` eli 8.
 </perustelu>
 </kysymys>
@@ -738,7 +703,7 @@ sijoittaa.
 
 <!-- TIM-palautuslinkit lisätään, kun tehtävät on viety TIMiin.
      Vaiheessa B lisäksi: "Polttoaineenkulutus" (syöte Mainissa, laskenta
-     funktiossa) ja "Lumiukko funktiolla" (Jypeli: LuoPallo palauttaa
+     aliohjelmassa) ja "Lumiukko aliohjelmalla" (Jypeli: LuoPallo palauttaa
      pallon, Begin lisää sen). -->
 
 <task>

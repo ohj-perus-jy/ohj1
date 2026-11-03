@@ -28,7 +28,7 @@
   - [Muuttujat ja tietotyypit](./osa2/1-muuttujat-ja-tietotyypit.md)
   - [Operaattorit ja tyyppimuunnokset](./osa2/2-operaattorit.md)
   - [Lauseet ja lausekkeet](./osa2/3-lauseet-ja-lausekkeet.md)
-  - [Funktiot](./osa2/4-funktiot.md)
+  - [Aliohjelmat](./osa2/4-aliohjelmat.md)
   - [Ohjelman rakenne](./osa2/5-ohjelman-rakenne.md)
   - [Osan 2 tehtävät](./osa2/tehtavat.md)
 - [Ehdot, aliohjelmat ja Jypeli](./osa3/index.md)

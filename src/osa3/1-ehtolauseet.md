@@ -250,7 +250,7 @@ funktiossa](#ehtolause-funktiossa)).
 
 ## Ehtolause funktiossa
 
-Aiemmin kirjoitetuissa [funktioissa](../osa2/4-funktiot.md) oli yksi
+Aiemmin kirjoitetuissa [funktioissa](../osa2/4-aliohjelmat.md) oli yksi
 `return`-lause. Ehtolauseen avulla funktio voi palauttaa eri arvon eri
 tilanteissa. Edellä arvosana laskettiin `Main`-aliohjelmassa apumuuttujaan.
 Luontevampaa on kirjoittaa siitä funktio, jossa jokainen haara palauttaa oman
@@ -341,7 +341,7 @@ public static bool OnkoParillinen(int luku)
 
 Funktio toimii, mutta ehtolause on turha. Vertailu `luku % 2 == 0` on jo
 lauseke, jonka arvo on `true` tai `false`, joten sen voi palauttaa sellaisenaan
-kuten funktiossa [`OnkoTaysiIkainen`](../osa2/4-funktiot.md#paluuarvon-tyyppi):
+kuten funktiossa [`OnkoTaysiIkainen`](../osa2/4-aliohjelmat.md#paluuarvon-tyyppi):
 
 ```csharp,ignore
 public static bool OnkoParillinen(int luku)

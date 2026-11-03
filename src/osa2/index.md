@@ -1,9 +1,9 @@
-# Osa 2: Muuttujat, syöte ja funktiot
+# Osa 2: Muuttujat, syöte ja aliohjelmat
 
 Ohjelma, joka laskee aina samoilla luvuilla, on hyödyllinen vain kerran.
 Muuttujiin tallennetaan arvoja, joita voi lukea käyttäjältä ja muuttaa
 ohjelman aikana, ja operaattoreilla niistä lasketaan uusia arvoja. Toistuva
-laskutoimitus nimetään funktioksi, jota voi kutsua yhä uudelleen eri
+laskutoimitus nimetään aliohjelmaksi, jota voi kutsua yhä uudelleen eri
 arvoilla.
 
 !!! abstract "Osaamistavoitteet"
@@ -18,8 +18,7 @@ arvoilla.
     * osaat muodostaa totuusarvoisia lausekkeita vertailu- ja loogisilla
       operaattoreilla
     * erotat lauseen ja lausekkeen toisistaan
-    * osaat kirjoittaa funktion, joka saa tietoa parametreina ja palauttaa arvon,
-      ja käyttää sen kutsua lausekkeessa
+    * osaat kirjoittaa aliohjelman, joka saa tietoa parametreina ja palauttaa arvon
     * tunnistat ohjelman osat (luokka, `Main`, lauseet, lohkot) ja tiedät, missä
       järjestyksessä ne suoritetaan
 
@@ -56,23 +55,23 @@ ovat [sanastossa](../sanasto.md).
 
 | Käsite | Englanniksi | Selitys |
 | ------ | ----------- | ------- |
-| [argumentti](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *argument* | kutsussa aliohjelmalle annettava arvo |
+| [argumentti](./4-aliohjelmat.md#oma-aliohjelma) | *argument* | kutsussa aliohjelmalle annettava arvo |
 | [avainsana](./1-muuttujat-ja-tietotyypit.md#muuttujan-nimeäminen) | *keyword* | sana, jolla on kielessä kiinteä merkitys ja jota ei voi käyttää omana nimenä |
-| [esittelyrivi](./4-funktiot.md#oma-funktio) | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
-| [funktio](./4-funktiot.md) | *function* | aliohjelma, joka palauttaa arvon |
-| [kuormittaminen](./4-funktiot.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
+| [esittelyrivi](./4-aliohjelmat.md#oma-aliohjelma) | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit |
+| [funktio](./4-aliohjelmat.md#oma-aliohjelma) | *function* | kirjallisuudessa aliohjelmasta käytetty nimitys, erityisesti arvon palauttavasta aliohjelmasta |
+| [kuormittaminen](./4-aliohjelmat.md#kuormittaminen) | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan |
 | [lauseke](./3-lauseet-ja-lausekkeet.md#lauseke) | *expression* | koodin osa, jolla on arvo ja tyyppi |
 | [looginen operaattori](./2-operaattorit.md#loogiset-operaattorit) | *logical operator* | operaattori, joka yhdistää totuusarvoja (JA, TAI, EI) |
-| [metodi](./4-funktiot.md#terminologiaa-aliohjelma-funktio-metodi) | *method* | olioon liittyvä aliohjelma |
+| [metodi](./4-aliohjelmat.md#oma-aliohjelma) | *method* | kirjallisuudessa aliohjelmasta käytetty nimitys, erityisesti olioon liittyvästä aliohjelmasta |
 | [muuttuja](./1-muuttujat-ja-tietotyypit.md) | *variable* | nimetty paikka, johon tallennetaan yksi arvo |
 | [nimiavaruus](./5-ohjelman-rakenne.md#using-lause-ja-nimiavaruudet) | *namespace* | luokkien ryhmä, ikään kuin kansio luokille |
-| [paluuarvo](./4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) | *return value* | arvo, jonka funktio antaa `return`-lauseella takaisin kutsujalle |
-| [parametri](./4-funktiot.md#oma-funktio) | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista |
+| [paluuarvo](./4-aliohjelmat.md#oma-aliohjelma) | *return value* | arvo, jonka aliohjelma antaa `return`-lauseella takaisin kutsujalle |
+| [parametri](./4-aliohjelmat.md#oma-aliohjelma) | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista |
 | [pääohjelma](./5-ohjelman-rakenne.md#yksinkertaisen-ohjelman-osat) | *main method* | `Main`-aliohjelma, josta ohjelman suoritus alkaa |
 | [sijoituslause](./1-muuttujat-ja-tietotyypit.md#arvon-sijoittaminen-ja-muuttaminen) | *assignment statement* | lause, joka tallentaa lausekkeen arvon muuttujaan |
 | [tietotyyppi](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa |
 | [totuusarvo](./1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` |
-| [tynkä](./4-funktiot.md#kutsusta-määrittelyyn) | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon |
+| [tynkä](./4-aliohjelmat.md#kutsusta-määrittelyyn) | *stub* | keskeneräinen mutta kääntyvä aliohjelma, joka palauttaa jonkin oikean tyyppisen arvon |
 | [tyyppimuunnos](./2-operaattorit.md#arvon-muuntaminen-toiseen-tyyppiin) | *type conversion* | arvon muuntaminen tyypistä toiseen, esimerkiksi `int.Parse(teksti)` tai `(double)x` |
 | [vakio](./1-muuttujat-ja-tietotyypit.md#vakiot) | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua |
 | [vertailuoperaattori](./2-operaattorit.md#vertailuoperaattorit) | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon |

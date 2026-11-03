@@ -1,5 +1,5 @@
-Alla olevassa ohjelmassa on valmiina pääohjelma, joka kutsuu viittä funktiota.
-Funktioita ei vielä ole, joten ohjelma ei käänny.
+Alla olevassa ohjelmassa on valmiina pääohjelma, joka kutsuu viittä aliohjelmaa.
+Aliohjelmia ei vielä ole, joten ohjelma ei käänny.
 
 ```csharp
 using System;
@@ -23,11 +23,11 @@ public class Esittelyrivit
 }
 ```
 
-1. Kirjoita jokaiselle funktiolle esittelyrivi kutsun perusteella ja tee
+1. Kirjoita jokaiselle aliohjelmalle esittelyrivi kutsun perusteella ja tee
    funktioista tyngät, jotka palauttavat jonkin oikean tyyppisen arvon
    (esimerkiksi `return 0;`). Käännä ohjelma. Älä jatka, ennen kuin ohjelma
    kääntyy.
-2. Kirjoita funktioiden rungot niin, että ohjelma tulostaa
+2. Kirjoita aliohjelmien rungot niin, että ohjelma tulostaa
 
 ~~~
 Hei, Maija!
@@ -37,10 +37,10 @@ False
 ####################
 ~~~
 
-Älä muuta pääohjelmaa. Funktioissa ei saa olla `Console.WriteLine`-kutsuja.
+Älä muuta pääohjelmaa. Aliohjelmissa ei saa olla `Console.WriteLine`-kutsuja.
 Anna parametreille nimet, joista näkee, mitä ne tarkoittavat. Mieti
 erityisesti, minkä tyyppisiä `Keskiarvo`-funktion parametrien pitää olla, jotta
-funktiota voi kutsua myös argumenteilla `(8, 9.5)`.
+aliohjelmaa voi kutsua myös argumenteilla `(8, 9.5)`.
 
 Vihje: `new string('#', 20)` tekee merkkijonon, jossa merkki `#` toistuu 20
 kertaa.

@@ -1,6 +1,6 @@
 # Valinnaiset parametrit ja oletusarvot
 
-Valinnaista lisätietoa [funktioista](../osa2/4-funktiot.md). Parametrille voi
+Valinnaista lisätietoa [funktioista](../osa2/4-aliohjelmat.md). Parametrille voi
 antaa *oletusarvon*, jolloin argumentin voi jättää kutsussa pois.
 
 ## Oletusarvon määrittely
@@ -50,7 +50,7 @@ argumentteja ei tarvitse käyttää.
 
 ## Oletusarvot vai kuormittaminen?
 
-Sama lopputulos saadaan myös [kuormittamalla](../osa2/4-funktiot.md#kuormittaminen)
+Sama lopputulos saadaan myös [kuormittamalla](../osa2/4-aliohjelmat.md#kuormittaminen)
 aliohjelma, eli kirjoittamalla kaksi samannimistä versiota eri
 parametrilistoilla. Oletusarvo on lyhyempi silloin, kun versiot eroavat vain
 yhden arvon osalta. Kuormittaminen on parempi, kun versiot tekevät eri asioita

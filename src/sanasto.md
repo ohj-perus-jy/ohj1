@@ -8,20 +8,20 @@ kunkin osan etusivulla.
 | --- | --- | --- | --- |
 | algoritmi | *algorithm* | täsmällinen, vaiheittainen ohje tehtävän suorittamiseen | [1](./osa1/1-mita-ohjelmointi-on.md#algoritmi-eli-ohje) |
 | aliohjelma | *subroutine* | nimetty joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
-| argumentti | *argument* | kutsussa aliohjelmalle annettava arvo | [2](./osa2/4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) |
+| argumentti | *argument* | kutsussa aliohjelmalle annettava arvo | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
 | attribuutti | *field* | luokan muuttuja, joka näkyy luokan kaikissa aliohjelmissa | [3](./osa3/3-muuttujien-nakyvyys.md#attribuutit) |
 | avainsana | *keyword* | sana, jolla on kielessä kiinteä merkitys ja jota ei voi käyttää omana nimenä | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-nimeäminen) |
 | ehto | *condition* | totuusarvoinen lauseke, jonka perusteella ehtolause tekee valinnan | [3](./osa3/1-ehtolauseet.md) |
 | ehtolause | *conditional statement* | lause, joka suorittaa koodin vain, jos ehto on tosi | [3](./osa3/1-ehtolauseet.md) |
-| esittelyrivi | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-funktiot.md#oma-funktio) |
-| funktio | *function* | aliohjelma, joka palauttaa arvon | [2](./osa2/4-funktiot.md) |
+| esittelyrivi | *header* | aliohjelman määrittelyn ensimmäinen rivi: paluuarvon tyyppi, nimi ja parametrit | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
+| funktio | *function* | kirjallisuudessa aliohjelmasta käytetty nimitys, erityisesti arvon palauttavasta aliohjelmasta | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
 | kirjasto | *library* | valmista koodia, jota oma ohjelma voi käyttää | [1](./osa1/1-mita-ohjelmointi-on.md#kirjasto) |
 | kokonaislukujako | *integer division* | kokonaislukujen jakolasku, jossa desimaaliosa katkaistaan pois | [1](./osa1/3-laskutoimitukset.md#kokonaislukujako-ja-jakojäännös) |
 | kommentti | *comment* | kääntäjän ohittama, ihmiselle tarkoitettu teksti koodissa | [1](./osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) |
 | konekieli | *machine code* | prosessorin ymmärtämät, ykkösistä ja nollista koostuvat käskyt | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |
 | konsoli | *console* | pelkkää tekstiä näyttävä ikkuna, johon konsoliohjelma tulostaa ja jossa käyttäjä kirjoittaa | [1](./osa1/2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) |
 | konsoliohjelma | *console application* | tekstipohjainen ohjelma ilman painikkeita, valikoita ja kuvia | [1](./osa1/2-ensimmainen-ohjelma.md#miksi-tekstiä-tulostava-ohjelma) |
-| kuormittaminen | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan | [2](./osa2/4-funktiot.md#kuormittaminen) |
+| kuormittaminen | *overloading* | samannimiset aliohjelmat, joiden parametrilistat eroavat toisistaan | [2](./osa2/4-aliohjelmat.md#kuormittaminen) |
 | kutsu | *call* | valmiin toiminnon käyttäminen kirjoittamalla sen nimi ja sulut, joiden sisällä ovat tarvittavat arvot | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | käännösvirhe | *compilation error* | virhe, joka estää lähdekoodin kääntämisen | [1](./osa1/2-ensimmainen-ohjelma.md#käännösvirheet) |
 | kääntäjä | *compiler* | ohjelma, joka kääntää lähdekoodin konekielelle | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |
@@ -34,7 +34,7 @@ kunkin osan etusivulla.
 | luokka | *class* | kokonaisuus, jonka sisään C#:ssa kirjoitetaan kaikki koodi | [1](./osa1/2-ensimmainen-ohjelma.md#ensimmäisen-ohjelman-lähdekoodi) |
 | lähdekoodi | *source code* | ohjelmointikielellä kirjoitettu ohjelman teksti | [1](./osa1/1-mita-ohjelmointi-on.md#ohjelma-ja-ohjelmointikieli) |
 | merkkijono | *string* | lainausmerkkien sisään kirjoitettu teksti | [1](./osa1/3-laskutoimitukset.md#plus-merkki-ja-teksti) |
-| metodi | *method* | olioon liittyvä aliohjelma | [2](./osa2/4-funktiot.md#terminologiaa-aliohjelma-funktio-metodi) |
+| metodi | *method* | kirjallisuudessa aliohjelmasta käytetty nimitys, erityisesti olioon liittyvästä aliohjelmasta | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
 | muuttuja | *variable* | nimetty paikka, johon tallennetaan yksi arvo | [2](./osa2/1-muuttujat-ja-tietotyypit.md) |
 | nimiavaruus | *namespace* | luokkien ryhmä, ikään kuin kansio luokille | [2](./osa2/5-ohjelman-rakenne.md#using-lause-ja-nimiavaruudet) |
 | näkyvyysalue | *scope* | ohjelman alue, jossa muuttuja on olemassa ja käytettävissä | [3](./osa3/3-muuttujien-nakyvyys.md) |
@@ -43,8 +43,8 @@ kunkin osan etusivulla.
 | ominaisuus | *property* | olion tieto, jota luetaan tai muutetaan pisteellä, esimerkiksi `pallo.Color` | [3](./osa3/4-jypeli-ja-oliot.md#ominaisuudet) |
 | operaattori | *operator* | merkki, joka tekee arvoille jotakin, esimerkiksi laskutoimituksen | [1](./osa1/3-laskutoimitukset.md#aritmeettiset-operaattorit) |
 | paikallinen muuttuja | *local variable* | aliohjelman tai lohkon sisällä määritelty muuttuja, joka näkyy vain siellä | [3](./osa3/3-muuttujien-nakyvyys.md#paikalliset-muuttujat) |
-| paluuarvo | *return value* | arvo, jonka funktio antaa `return`-lauseella takaisin kutsujalle | [2](./osa2/4-funktiot.md#kutsu-mitä-sisään-mitä-ulos) |
-| parametri | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista | [2](./osa2/4-funktiot.md#oma-funktio) |
+| paluuarvo | *return value* | arvo, jonka aliohjelma antaa `return`-lauseella takaisin kutsujalle | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
+| parametri | *parameter* | aliohjelman muuttuja, joka saa arvonsa kutsun argumentista | [2](./osa2/4-aliohjelmat.md#oma-aliohjelma) |
 | projekti | *project* | yhden ohjelman koodi ja siihen liittyvät tiedostot | [1](./osa1/4-ohjelmointiymparisto-kuntoon.md#solution-ja-projekti) |
 | pääohjelma | *main method* | `Main`-aliohjelma, josta ohjelman suoritus alkaa | [2](./osa2/5-ohjelman-rakenne.md#yksinkertaisen-ohjelman-osat) |
 | sijoituslause | *assignment statement* | lause, joka tallentaa lausekkeen arvon muuttujaan | [2](./osa2/1-muuttujat-ja-tietotyypit.md#arvon-sijoittaminen-ja-muuttaminen) |
@@ -55,7 +55,7 @@ kunkin osan etusivulla.
 | `switch`-lause | *switch statement* | rakenne, joka vertaa yhtä arvoa moneen kiinteään vaihtoehtoon | [3](./osa3/1-ehtolauseet.md#switch) |
 | tietotyyppi | *data type* | määrittää, millaisia arvoja muuttujaan voi tallentaa | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) |
 | totuusarvo | *boolean* | arvo `true` (tosi) tai `false` (epätosi), tyyppi `bool` | [2](./osa2/1-muuttujat-ja-tietotyypit.md#muuttujan-määrittely) |
-| tynkä | *stub* | keskeneräinen mutta kääntyvä funktio, joka palauttaa jonkin oikean tyyppisen arvon | [2](./osa2/4-funktiot.md#kutsusta-määrittelyyn) |
+| tynkä | *stub* | keskeneräinen mutta kääntyvä aliohjelma, joka palauttaa jonkin oikean tyyppisen arvon | [2](./osa2/4-aliohjelmat.md#kutsusta-määrittelyyn) |
 | tyyppimuunnos | *type conversion* | arvon muuntaminen tyypistä toiseen, esimerkiksi `int.Parse(teksti)` tai `(double)x` | [2](./osa2/2-operaattorit.md#arvon-muuntaminen-toiseen-tyyppiin) |
 | vakio | *constant* | `const`-avainsanalla määritelty arvo, joka ei voi muuttua | [2](./osa2/1-muuttujat-ja-tietotyypit.md#vakiot) |
 | vertailuoperaattori | *comparison operator* | operaattori, joka vertaa kahta arvoa ja tuottaa totuusarvon | [2](./osa2/2-operaattorit.md#vertailuoperaattorit) |

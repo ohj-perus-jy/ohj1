@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="80" class="svgbob">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="208" class="svgbob">
   <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
   stroke: var(--md-default-fg-color);
   stroke-width: 2;
@@ -95,25 +95,26 @@
       <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
     </marker>
   </defs>
-  <rect class="backdrop" x="0" y="0" width="520" height="80"></rect>
-  <text x="66" y="12" >argumentit</text>
-  <text x="386" y="12" >paluuarvo</text>
-  <line x1="56" y1="40" x2="184" y2="40" class="solid"></line>
-  <polygon points="184,36 192,40 184,44" class="filled"></polygon>
-  <text x="250" y="44" >Math.Max</text>
-  <polygon points="488,36 496,40 488,44" class="filled"></polygon>
-  <text x="18" y="44" >3,</text>
-  <text x="42" y="44" >8</text>
-  <text x="506" y="44" >8</text>
+  <rect class="backdrop" x="0" y="0" width="360" height="208"></rect>
+  <polygon points="56,116 48,120 56,124" class="filled"></polygon>
+  <line x1="56" y1="120" x2="96" y2="120" class="solid"></line>
+  <polygon points="40,180 48,180 44,192" class="filled"></polygon>
+  <line x1="280" y1="72" x2="336" y2="72" class="solid"></line>
+  <polygon points="336,68 344,72 336,76" class="filled"></polygon>
+  <text x="18" y="12" >Main()</text>
+  <text x="322" y="12" >MinuutitSekunneiksi(double minuutit)</text>
+  <text x="58" y="44" >double aika = MinuutitSekunneiksi(2) + 30;</text>
+  <text x="106" y="76" >kutsu, minuutit = 2</text>
+  <text x="362" y="92" >double sekunnit = minuutit * 60;</text>
+  <text x="362" y="108" >return sekunnit;</text>
+  <text x="106" y="124" >paluu, arvo 120</text>
+  <text x="58" y="156" >double aika = 120 + 30;</text>
   <g>
-    <path d="M 200,24 A 4,4 0,0,0 196,28" class="nofill"></path>
-    <line x1="196" y1="28" x2="196" y2="52" class="solid"></line>
-    <line x1="200" y1="24" x2="352" y2="24" class="solid"></line>
-    <path d="M 352,24 A 4,4 0,0,1 356,28" class="nofill"></path>
-    <line x1="356" y1="28" x2="356" y2="52" class="solid"></line>
-    <line x1="356" y1="40" x2="488" y2="40" class="solid"></line>
-    <path d="M 196,52 A 4,4 0,0,0 200,56" class="nofill"></path>
-    <line x1="200" y1="56" x2="352" y2="56" class="solid"></line>
-    <path d="M 356,52 A 4,4 0,0,1 352,56" class="nofill"></path>
+    <line x1="44" y1="16" x2="44" y2="180" class="solid"></line>
+    <line x1="44" y1="72" x2="96" y2="72" class="solid"></line>
+  </g>
+  <g>
+    <line x1="348" y1="72" x2="348" y2="120" class="solid"></line>
+    <line x1="248" y1="120" x2="348" y2="120" class="solid"></line>
   </g>
 </svg>

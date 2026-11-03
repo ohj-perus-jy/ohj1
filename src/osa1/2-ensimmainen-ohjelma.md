@@ -91,7 +91,7 @@ väliin.
     public static void Main()
 ```
 
-Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/4-funktiot.md), mutta lyhyesti: 
+Tämä rivi määrittelee *aliohjelman* nimeltä `Main`. Tutustumme aliohjelmiin tarkemmin [osassa 2](../osa2/4-aliohjelmat.md), mutta lyhyesti: 
 aliohjelma on joukko ohjeita, jotka suoritetaan, kun aliohjelmaa kutsutaan. `Main`-aliohjelma on erityinen, koska se on ohjelman aloituspiste — tietokone alkaa suorittaa ohjelmaa juuri tästä aliohjelmasta.
 
 Nimen edessä on kolme sanaa, jotka toistuvat kurssin konsoliohjelmissa:
