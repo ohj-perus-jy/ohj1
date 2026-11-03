@@ -6,7 +6,7 @@ Saat käyttää kaikkia editorin ominaisuuksia, eli leikkaa-liimaa, etsi-ja-korv
 
 ```
 1) Laita 2. rivillä #lisaa_osoite tekstin tilalle harjoitustyön ohjesivun osoite: 
-   https://ohjelmointi1.it.jyu.fi/harjoitustyo.html
+   https://ohjelmointi1.it.jyu.fi/harjoitustyo/
 
 2) Laita 2. rivillä "muuta tämä teksti" tekstin tilalle "Ohj1 harjoitustyön ohje".
 

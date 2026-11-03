@@ -3,3 +3,5 @@
 Tämä osa sisältää:
 
  * [Harjoitustehtävät 10](../luennot/harjoitus10.md)
+
+(Ei luentoja.)

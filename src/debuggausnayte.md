@@ -48,75 +48,75 @@ Valitse haluamasi debuggausnäytteen suoritustapa ja seuraa sen mukaiset ohjeet.
 
 1. Lataa ja avaa DebugKoe-projekti
 
-<details collapsed>
-<summary>Debuggausnäyteprojektin latausohjeet</summary>
-
-1. Lataa [DebugKoe.zip](https://tim.jyu.fi/files/900302/DebugKoe.zip)
-2. Pura lataamasi zip-tiedosto paikkaan, josta löydät sen. Jos suoritat näytteen
-   Agoran mikroluokan tietokoneella, käytä kansiota `C:\MyTemp\ohj1\<käyttäjänimi>`.
-3. Avaa Rider. *Welcome to JetBrains Rider* -näkymässä klikkaa oikeassa yläkulmassa olevaa *Open* -painiketta.
-4. Etsi ja avaa `DebugKoe.sln`-tiedosto Riderissa. Mikäli Rider kysyy, luotatko avattavaan projektiin, valitse *Trust and Open*.
-5. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
-
-</details>
+    <details collapsed>
+    <summary>Debuggausnäyteprojektin latausohjeet</summary>
+    
+    1. Lataa [DebugKoe.zip](https://tim.jyu.fi/files/900302/DebugKoe.zip)
+    2. Pura lataamasi zip-tiedosto paikkaan, josta löydät sen. Jos suoritat näytteen
+       Agoran mikroluokan tietokoneella, käytä kansiota `C:\MyTemp\ohj1\<käyttäjänimi>`.
+    3. Avaa Rider. *Welcome to JetBrains Rider* -näkymässä klikkaa oikeassa yläkulmassa olevaa *Open* -painiketta.
+    4. Etsi ja avaa `DebugKoe.sln`-tiedosto Riderissa. Mikäli Rider kysyy, luotatko avattavaan projektiin, valitse *Trust and     Open*.
+    5. Avaa sen jälkeen Riderissa `Program.cs`-tiedosto, josta ohjelmakoodi löytyy.
+    
+    </details>
 
 2. Lue alla vaatimukset ja ohjeet debuggausnäytteen tekemiselle ja palauttamiselle
 
-<details collapsed>
-<summary>Ruutukaappausvideon vaatimukset ja ohjeet</summary>
-
-**Sisällölliset vaatimukset videolle**
-
-   1. Opiskelijan tulee käyttää kurssilla annettua DebugKoe-tehtävää.
-   2. Videossa tulee näkyä debuggausnäytteen suorittaminen kokonaisuudessaan ja katkeamattomana. Videota ei saa editoida.
-   3. Videolla tulee näkyä sekä ruutukaappauskuva että kuulua opiskelijan puhe selkeällä äänellä. 
-   4. Opiskelijan tulee selittää jokainen tekemänsä toiminto perustellen. Selitys tulee olla 
-      esimerkiksi: 
-      * "Asetan riville 59 ehdollisen keskeytyskohdan, koska..." tai 
-      * "Käytän continue-toimintoa, jotta..."
-
-**Näytteen hylkäämisen perusteet**
-
-   1. Videolla ei näy debuggausnäytteen suorittaminen kokonaisuudessaan.
-   2. Tehtyjä toimia ei perustella.
-   3. Opiskelija ei puhu tai puheesta ei saa selvää.
-   4. Video on kohtuuttoman pitkä (luokkaa kymmeniä minuutteja), sisältää pitkiä pohdintoja tai lukuisia yritysten tai
-      erehdysten sarjoja. 
-   5. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
-   6. Konsolissa ei lue lopuksi:
-```
-Tehtävä 1 läpäisty!
-Tehtävä 2 läpäisty!
-
-Onnittelut, debug-koe läpäisty! Paina Enteriä poistuaksesi.
-```
-
-**Tekniset vaatimukset videolle**
-
-   1. Resoluution tulee olla mielellään vähintään Full HD (1920x1080). Jos näyttösi tarkkuus on hyvin korkea, pienennä sitä. Pääasia on, että tekstistä saa selvää. 
-   2. Äänen tulee olla selvästi kuultavissa. Käytä mielellään hyvälaatuista mikrofonia ja puhu lähelle mikrofonia.
-   3. Tarkista äänentasot testinauhoituksella. Kytke tarvittaessa kohinansuodatukset tai muut automaattiset äänenparannustoiminnot pois päältä mikäli mahdollista.
-   4. Valitse videon laaduksi Korkea, tai vähintään 5 Mbps, jos voit sen valita. 
-   5. Hyviä ohjelmia ruutukaappauksen tekemiseen ovat esimerkiksi Screen-Cast-O-Matic (Windows), Open Broadcast Software (Win/Mac/Linux) ja Quicktime (Mac).
-
-**Näytteen hylkäämisen perusteet**
-
-   1. Video on niin epäselvä ettei tekstistä saa selvää. 
-   2. Puheraita puuttuu tai siitä ei saa selvää.
-
-**Videon jakelun vaatimukset**
-
-Laita video YouTubeen (suositus) tai Moniviestimeen. YouTubessa voit laittaa videon Unlisted-tilaan, mutta **ei** Private-tilaan. Tarkista esimerkiksi selaimen Incognito-tilassa, että video on todella katsottavissa myös kirjautumattomana käyttäjänä. Emme lataa tiedostoja esim. MediaFirestä tai vastaavista tiedostonjakopalveluista. 
-
-Voit poistaa videon näytteen tarkastamisen jälkeen.
-
-**Näytteen hylkäämisen perusteet**
-
-   1. Videon URL-osoite ei ole TIMissa.
-   2. Tarkastaja ei pääse käsiksi videoon.
-   3. Video on jossain muualla kuin YouTubessa tai Moniviestimessä.
-
-</details>
+    <details collapsed>
+    <summary>Ruutukaappausvideon vaatimukset ja ohjeet</summary>
+    
+    **Sisällölliset vaatimukset videolle**
+    
+       1. Opiskelijan tulee käyttää kurssilla annettua DebugKoe-tehtävää.
+       2. Videossa tulee näkyä debuggausnäytteen suorittaminen kokonaisuudessaan ja katkeamattomana. Videota ei saa editoida.
+       3. Videolla tulee näkyä sekä ruutukaappauskuva että kuulua opiskelijan puhe selkeällä äänellä. 
+       4. Opiskelijan tulee selittää jokainen tekemänsä toiminto perustellen. Selitys tulee olla 
+          esimerkiksi: 
+          * "Asetan riville 59 ehdollisen keskeytyskohdan, koska..." tai 
+          * "Käytän continue-toimintoa, jotta..."
+    
+    **Näytteen hylkäämisen perusteet**
+    
+       1. Videolla ei näy debuggausnäytteen suorittaminen kokonaisuudessaan.
+       2. Tehtyjä toimia ei perustella.
+       3. Opiskelija ei puhu tai puheesta ei saa selvää.
+       4. Video on kohtuuttoman pitkä (luokkaa kymmeniä minuutteja), sisältää pitkiä pohdintoja tai lukuisia yritysten tai
+          erehdysten sarjoja. 
+       5. Annetut perustelut ovat oleellisesti vääriä tai sisältävät selkeitä virhekäsityksiä. Näytteen toisessa osassa on kiinnitettävä erityistä huomiota siihen, mihin kohtaan ohjelman suoritus keskeytyy ja miksi.
+       6. Konsolissa ei lue lopuksi:
+    ```
+    Tehtävä 1 läpäisty!
+    Tehtävä 2 läpäisty!
+    
+    Onnittelut, debug-koe läpäisty! Paina Enteriä poistuaksesi.
+    ```
+    
+    **Tekniset vaatimukset videolle**
+    
+       1. Resoluution tulee olla mielellään vähintään Full HD (1920x1080). Jos näyttösi tarkkuus on hyvin korkea, pienennä sitä. Pääasia on, että tekstistä saa selvää. 
+       2. Äänen tulee olla selvästi kuultavissa. Käytä mielellään hyvälaatuista mikrofonia ja puhu lähelle mikrofonia.
+       3. Tarkista äänentasot testinauhoituksella. Kytke tarvittaessa kohinansuodatukset tai muut automaattiset äänenparannustoiminnot pois päältä mikäli mahdollista.
+       4. Valitse videon laaduksi Korkea, tai vähintään 5 Mbps, jos voit sen valita. 
+       5. Hyviä ohjelmia ruutukaappauksen tekemiseen ovat esimerkiksi Screen-Cast-O-Matic (Windows), Open Broadcast Software (Win/Mac/Linux) ja Quicktime (Mac).
+    
+    **Näytteen hylkäämisen perusteet**
+    
+       1. Video on niin epäselvä ettei tekstistä saa selvää. 
+       2. Puheraita puuttuu tai siitä ei saa selvää.
+    
+    **Videon jakelun vaatimukset**
+    
+    Laita video YouTubeen (suositus) tai Moniviestimeen. YouTubessa voit laittaa videon Unlisted-tilaan, mutta **ei** Private-tilaan. Tarkista esimerkiksi selaimen Incognito-tilassa, että video on todella katsottavissa myös kirjautumattomana käyttäjänä. Emme lataa tiedostoja esim. MediaFirestä tai vastaavista tiedostonjakopalveluista. 
+    
+    Voit poistaa videon näytteen tarkastamisen jälkeen.
+    
+    **Näytteen hylkäämisen perusteet**
+    
+       1. Videon URL-osoite ei ole TIMissa.
+       2. Tarkastaja ei pääse käsiksi videoon.
+       3. Video on jossain muualla kuin YouTubessa tai Moniviestimessä.
+    
+    </details>
 
 3. Tee DebugKoe-projektissa olevat tehtävät ja nauhoita suorituksesi, ks. ohjeet yllä. 
 

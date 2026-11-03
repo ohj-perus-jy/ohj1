@@ -10,16 +10,24 @@ Ryhmät:
 - **B** – TIMin Rider-ohje `…/itkp102/ohjeet/rider#…` – **KORJATTU 19.9.2026** (64 kpl `#tim-consolemain` / `#tim-fysiikkapeli` → `ohjelmointi1.it.jyu.fi/osa1/2-ohjelmointiymparisto-kuntoon/#…`)
 - **C** – muut itkp102-sivut TIMissä (ohjeet/ville, tauno, tyokalut, koodauskaytanteet, tekstieditori, luennot, qa, tentti, jypeli-voimia …)
 - **D** – vanha `kurssit/tie/ohj1` -polku, `tim.jyu.fi/view/1` / `view/2` (vanha moniste) ja `tim.pm/comtest`
-- **E** – Jypeli: `/view/kurssit/jypeli/…`, trac npo-wiki, kurssit.it.jyu.fi/npo → jypeli.it.jyu.fi
+- **E** – Jypeli: `/view/kurssit/jypeli/…`, trac npo-wiki, kurssit.it.jyu.fi/npo → jypeli.it.jyu.fi – **KORJATTU 25.10.2026**
 - **F** – muu vanhentunut (trac-esimerkit, vanhojen vuosien gitlab-esimerkit, m3-videot 2024, kurssit.it.jyu.fi-videot) – ei välttämättä uudelle sivustolle, mutta kannattaa katsoa
 
 Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Moniste**-painike osoittaa
 `…/itkp102/materiaali/moniste` ja **Luennot**-painike sivuston juureen `https://ohjelmointi1.it.jyu.fi/`
 (ei `/luennot/`). Korjaus yhteen paikkaan riittää.
 
-**ComTest-linkit – KORJATTU 19.9.2026:** `ohjeet/rider#testien-lisääminen-comtest` (5), `moniste#comtest` (5) ja `tim.pm/comtest` (1) → `https://ohjelmointi1.it.jyu.fi/osa4/comtest/`; `ohjeet/tyokalut#comtest` (4) → `https://ohjelmointi1.it.jyu.fi/tyokalut/#comtest`. AUKI: `comtest-examples#matrix` (demo5 ×2, demo8, demo9, demo10) ja `comtest-examples#THROWS` (harjoittelu) – uusi sivu ei kata 2D-taulukoita eikä poikkeuksia.
+**ComTest-linkit – KORJATTU 19.9.2026:** `ohjeet/rider#testien-lisääminen-comtest` (5), `moniste#comtest` (5) ja `tim.pm/comtest` (1) → `https://ohjelmointi1.it.jyu.fi/osa4/comtest/`; `ohjeet/tyokalut#comtest` (4) → `https://ohjelmointi1.it.jyu.fi/tyokalut/#comtest`. `comtest-examples#matrix` (demo5 ×2, demo8, demo9, demo10) → `https://ohjelmointi1.it.jyu.fi/osa4/comtest/#kaksiulotteiset-taulukot` ja `comtest-examples#THROWS`-lause poistettu harjoittelusta – KORJATTU 25.10.2026 (tim-api). demo5 G1-2:n lause "valmista funktiota, joka palauttaa matriisin merkkijonona" muutettu, koska kirja vertaa taulukoita suoraan `===`. demo6 T4:n `#testing-floating-point-numbers` on julkisessa kommentissa (note), ei dokumentissa.
 
 **Trac-linkit – KORJATTU 19.9.2026:** demo4 Jonoja.cs ja demo10 SierpinskinKolmio2.cs upotettu avattaviksi alueiksi, demo7 perintä → `jypeli.it.jyu.fi/oma-oliotyyppi/luokan-periminen/`, demo5/8/9/10 kommentoidut `taulukot2D`-lohkot poistettu.
+
+**aliohjelmienKirjoittaminen – KORJATTU 25.10.2026:** linkit poistettu demoista 3–6 (demo3 Tehtävä 3.1, demo4 T5*, demo5 Osaamistavoitteet, demo6 B4). Sivua ei ole enää TIMissä (404).
+
+**Jo korjattu TIMissä (havaittu 25.10.2026):** demo3 T4 `luennot#luento5` → `https://ohjelmointi1.it.jyu.fi/luennot/luento5/`.
+
+**Ryhmä E – KORJATTU 25.10.2026 (tim-api):** kaikki Jypeli-linkit viety `jypeli.it.jyu.fi`:hin sopivalle sivulle (satunnaisuus, Pong-tutoriaali, teksti#messagedisplay, ohjainten-lisays#hiiri, pistelaskuri, räjähdykset, painovoima, olioiden liikuttelu). demo5 B4:ssä oli lisäksi kaksi taulukosta puuttunutta linkkiä (toinen MessageDisplay, Pong), korjattu samalla. demo7 G2:n trac-linkki oli jo korjattu. demo8 B4-5 ("Jypeli-sivujen siirtäminen TIMiin") osoittaa nyt sivuston juureen, mutta tehtävä on itsessään vanhentunut — päätettävä poisto tai uudelleenkirjoitus.
+
+**Ryhmä C – KORJATTU 25.10.2026 (tim-api):** `ohjeet/koodauskaytanteet` (demo11 ×4) → `https://ohjelmointi1.it.jyu.fi/tyyliopas/`; `ohjeet/tekstieditori` (demo1 B3) → `…/tyokalut/#tekstieditori`; `tentti/koti#tentti` (demo3 T2*, qst-plugin) → `…/tentti/`. JÄTETÄÄN: `materiaali/jypeli/jypeli-voimia` (demo3 B1) on kuusivaiheinen harjoitus, jolle ei ole vastinetta jypeli.it.jyu.fi:ssä.
 
 ## demo1 (9)
 
@@ -33,7 +41,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 6 | V2. ViLLE (1 p.) |  *(pluginin sisällä: 866951.V1)* | `http://kurssit.it.jyu.fi/ITKP102/2014s/luento/luento02a.mp4` | F |
 | 7 | V2. ViLLE (1 p.) | ViLLE-ohjeet | `…/itkp102/ohjeet/ville` | C |
 | 8 | B2. Kysymys QA-palstalle (1 p.) | QA-sivulle halumasi otsikon alle jokin kysymys | `…/itkp102/qa` | C |
-| 9 | B3. Tekstieditorin käyttäminen (1 p.) | tekstieditoria | `…/itkp102/ohjeet/tekstieditori` | C |
+| 9 | B3. Tekstieditorin käyttäminen (1 p.) | tekstieditoria | `…/itkp102/ohjeet/tekstieditori` | C– korjattu 25.10.2026 → `tyokalut/#tekstieditori` |
 
 ## demo2 (13)
 
@@ -48,9 +56,9 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 7 | V2. ViLLE (1 p.) | ViLLEstä | `…/itkp102/ohjeet/ville` | C |
 | 8 | B1. Algoritmeja (1 p.) | Algoritmit | `…/itkp102/materiaali/moniste#algoritmit` | A |
 | 9 | B1. Algoritmeja (1 p.) |  *(pluginin sisällä: 866954.bonus_algoritmeja_1)* | `https://tim.jyu.fi/view/2#algoritmin-suunnittelu` | D |
-| 10 | G1-2. Suorakulmiot (2 p.) | Vector-luokan dokumentaatio | `http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/struct_jypeli_1_1_vector.html` | E |
+| 10 | G1-2. Suorakulmiot (2 p.) | Vector-luokan dokumentaatio | `http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/struct_jypeli_1_1_vector.html` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/fysiikka/painovoima/` (teksti "Painovoima Jypelissä") |
 | 11 | G1-2. Suorakulmiot (2 p.) | for-silmukka | `…/itkp102/materiaali/moniste#for-silmukka` | A |
-| 12 | G1-2. Suorakulmiot (2 p.) | RandomGen | `/view/kurssit/jypeli/matematiikka/satunnaisuus` | E |
+| 12 | G1-2. Suorakulmiot (2 p.) | RandomGen | `/view/kurssit/jypeli/matematiikka/satunnaisuus` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/matematiikka/satunnaisuus/` |
 | 13 | G3-4. Erilaisia lumiukkoja (2 p.) | Aliohjelman kuormittaminen | `…/itkp102/materiaali/moniste#aliohjelman-kuormittaminen` | A |
 
 ## demo3 (16)
@@ -58,13 +66,13 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | # | Otsikko | Linkkiteksti | Nykyinen kohde | Ryhmä |
 |---|---|---|---|---|
 | 1 | T1. Tyyppi ja nimi muuttujalle (1 p.) | 7. Muuttujat | `…/itkp102/materiaali/moniste#muuttujat` | A |
-| 2 | T2*. Valitse sopiva tyyppi (1 p.) |  *(pluginin sisällä: 866958.tehtava_valitse_tyyppi)* | `…/itkp102/tentti/koti#tentti` | C |
+| 2 | T2*. Valitse sopiva tyyppi (1 p.) |  *(pluginin sisällä: 866958.tehtava_valitse_tyyppi)* | `…/itkp102/tentti/koti#tentti` | C– korjattu 25.10.2026 → `tentti/` |
 | 3 | T3*. Yksinkertaisia funktioita (1 p.) | 9. Aliohjelman paluuarvo | `…/itkp102/materiaali/moniste#aliohjelman-paluuarvo` | A |
-| 4 | Tehtävä 3.1 | Lisätietoa aliohjelmien kirjoittamisesta | `…/itkp102/materiaali/aliohjelmienKirjoittaminen` | C |
+| 4 | Tehtävä 3.1 | Lisätietoa aliohjelmien kirjoittamisesta | `…/itkp102/materiaali/aliohjelmienKirjoittaminen` | C– poistettu 25.10.2026 |
 | 5 | Tehtävä 3.1 | Luku 7.7.3 Arvonmuutto-operaattorit | `…/itkp102/materiaali/moniste#arvonmuunto` | A |
 | 6 | Tehtävä 3.2 | 7.8.1. | `https://tim.jyu.fi/view/kurssit/tie/ohj1/moniste/Ohjelmointi-1#WbRwxc1yrw0v` | D |
 | 7 | T4. Yksikkömuunnokset (1 p.) | 9. Aliohjelman paluuarvo | `…/itkp102/materiaali/moniste#aliohjelman-paluuarvo` | A |
-| 8 | T4. Yksikkömuunnokset (1 p.) | Luento 5 | `…/itkp102/luennot#luento5` | C |
+| 8 | T4. Yksikkömuunnokset (1 p.) | Luento 5 | `…/itkp102/luennot#luento5` | C– korjattu |
 | 9 | T4. Yksikkömuunnokset (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 10 | T5. Muuttujat ja operaattorit (1 p.) | 7.7 Operaattorit | `…/itkp102/materiaali/moniste#operaattorit` | A |
 | 11 | T6. Erilaisia portaita (1 p.) | 6.5 Aliohjelman kuormittaminen | `…/itkp102/materiaali/moniste#aliohjelman-kuormittaminen` | A |
@@ -84,7 +92,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 4 | T5*. Pidempi merkkijono kahdesta (1 p.) | 13. Ehtolauseet | `…/itkp102/materiaali/moniste#ehtolauseet-valintalauseet` | A |
 | 5 | T5*. Pidempi merkkijono kahdesta (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 6 | T5*. Pidempi merkkijono kahdesta (1 p.) | QA-palstalla ehdotettua väliaikaista korjeusta | `https://tim.jyu.fi/view/kurssit/tie/itkp102/qa#rider-2025-bug` | C |
-| 7 | T5*. Pidempi merkkijono kahdesta (1 p.) | Lisätietoa aliohjelmien kirjoittamisesta | `…/itkp102/materiaali/aliohjelmienKirjoittaminen` | C |
+| 7 | T5*. Pidempi merkkijono kahdesta (1 p.) | Lisätietoa aliohjelmien kirjoittamisesta | `…/itkp102/materiaali/aliohjelmienKirjoittaminen` | C– poistettu 25.10.2026 |
 | 8 | T6. Kirjainten muuttaminen (1 p.) | 12. Merkkijonot | `…/itkp102/materiaali/moniste#merkkijonot` | A |
 | 9 | T6. Kirjainten muuttaminen (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 10 | T7. Suurin ja pienin (1 p.) | 13. Ehtolauseet | `…/itkp102/materiaali/moniste#ehtolauseet` | A |
@@ -95,14 +103,14 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 15 | T9. Binäärilukulaskuja (1 p.) | 26.4 Negatiiviset binääriluvut | `…/itkp102/materiaali/moniste#negatiiviset-bin%C3%A4%C3%A4riluvut` | A |
 | 16 | T10. Testaa kaksi aliohjelmaa (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 17 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest | `…/itkp102/materiaali/moniste#comtest` | A |
-| 18 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C |
+| 18 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C– korjattu 19.9.2026 → `tyokalut/#comtest` |
 | 19 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-testien kirjoittaminen Riderissa | `…/itkp102/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest` | B |
 | 20 | V1. ViLLE (1 p.) | ViLLEn käyttöohje | `…/itkp102/ohjeet/ville#k%C3%A4ytt%C3%B6-muilla-kerroilla` | C |
-| 21 | B2-3. Pallojen törmäily (2 p.) | RandomGen-luokkaan | `/view/kurssit/jypeli/matematiikka/satunnaisuus` | E |
-| 22 | B2-3. Pallojen törmäily (2 p.) | Pong-tutoriaaleista | `/view/kurssit/jypeli/mallit/alku#pong` | E |
+| 21 | B2-3. Pallojen törmäily (2 p.) | RandomGen-luokkaan | `/view/kurssit/jypeli/matematiikka/satunnaisuus` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/matematiikka/satunnaisuus/` |
+| 22 | B2-3. Pallojen törmäily (2 p.) | Pong-tutoriaaleista | `/view/kurssit/jypeli/mallit/alku#pong` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/tutoriaalit/pong/` |
 | 23 | Tehtävä B4.2 | 12.1.2. Null-viittaus ja tyhjä merkkijono | `…/itkp102/materiaali/moniste#null-viittaus-ja-tyhj%C3%A4-merkkijono` | A |
 | 24 | Tehtävä B4.2 | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 25 | G1. Pallot räjähtää (1 p.) | Jypelin ohjeet | `/view/kurssit/jypeli/wiki` | E |
+| 25 | G1. Pallot räjähtää (1 p.) | Jypelin ohjeet | `/view/kurssit/jypeli/wiki` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/grafiikka/rajahdykset/` (teksti "Räjähdykset Jypelissä") |
 
 ## demo5 (34)
 
@@ -111,7 +119,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 1 | Osaamistavoitteet | taulukkoa | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 2 | Osaamistavoitteet | silmukkarakenteiden | `…/itkp102/materiaali/moniste#toistorakenteet-silmukat` | A |
 | 3 | Osaamistavoitteet | luentomonisteessa | `…/itkp102/materiaali/moniste#WbRwxc1yrw0v` | A |
-| 4 | Osaamistavoitteet | Aliohjelmien kirjoittaminen | `https://tim.jyu.fi/view/kurssit/tie/ohj1/materiaali/aliohjelmienKirjoittaminen` | D |
+| 4 | Osaamistavoitteet | Aliohjelmien kirjoittaminen | `https://tim.jyu.fi/view/kurssit/tie/ohj1/materiaali/aliohjelmienKirjoittaminen` | D– poistettu 25.10.2026 |
 | 5 | Osaamistavoitteet | 1-ulotteiset taulukot | `https://tim.jyu.fi/view/kurssit/tie/ohj1/materiaali/taulukot` | D |
 | 6 | T1*. Tulostusta silmukalla (1 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
 | 7 | T2. Hep! (1 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
@@ -128,9 +136,9 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 18 | T9. Tee ja testaa aliohjelma (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 19 | T10. Testaa kaksi aliohjelmaa (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 20 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest | `…/itkp102/materiaali/moniste#comtest` | A |
-| 21 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C |
+| 21 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C– korjattu 19.9.2026 → `tyokalut/#comtest` |
 | 22 | T10. Testaa kaksi aliohjelmaa (1 p.) | ComTest-testien kirjoittaminen Riderissa | `…/itkp102/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest` | B |
-| 23 | T10. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D |
+| 23 | T10. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D– korjattu 25.10.2026 → `osa4/comtest/#kaksiulotteiset-taulukot` |
 | 24 | V1. ViLLE (1 p.) | Villen käyttöohje | `…/itkp102/ohjeet/ville` | C |
 | 25 | B1. Erilaisia silmukoita (1 p.) | 16. Toistorakenteet | `…/itkp102/materiaali/moniste#toistorakenteet-silmukat` | A |
 | 26 | B2. Muokattavat merkkijonot (1 p.) | 12.4 Muokattavat merkkijonot: StringBuilder | `…/itkp102/materiaali/moniste#muokattavat-merkkijonot-stringbuilder` | A |
@@ -138,9 +146,9 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 28 | B3. Muuta kirjaimet (1 p.) | 12. Merkkijonot | `…/itkp102/materiaali/moniste#merkkijonot` | A |
 | 29 | B3. Muuta kirjaimet (1 p.) | 12.4 Muokattavat merkkijonot: StringBuilder | `…/itkp102/materiaali/moniste#muokattavat-merkkijonot-stringbuilder` | A |
 | 30 | B4. Pistelaskuri pallopeliin (1 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
-| 31 | B4. Pistelaskuri pallopeliin (1 p.) | Jypelin ohjeista | `/view/kurssit/jypeli/wiki` | E |
-| 32 | B4. Pistelaskuri pallopeliin (1 p.) | MessageDisplay-oliolla | `/view/kurssit/jypeli/kayttoliittyma/teksti#messagedisplay` | E |
-| 33 | G1-2. Moniulotteiset taulukot C#:lla (2 p.) | valmista funktiota, joka palauttaa matriisin merkkijonona | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D |
+| 31 | B4. Pistelaskuri pallopeliin (1 p.) | Jypelin ohjeista | `/view/kurssit/jypeli/wiki` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/kayttoliittyma/pistelaskuri/` |
+| 32 | B4. Pistelaskuri pallopeliin (1 p.) | MessageDisplay-oliolla | `/view/kurssit/jypeli/kayttoliittyma/teksti#messagedisplay` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/kayttoliittyma/teksti/#messagedisplay` |
+| 33 | G1-2. Moniulotteiset taulukot C#:lla (2 p.) | valmista funktiota, joka palauttaa matriisin merkkijonona | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D– korjattu 25.10.2026 → `osa4/comtest/#kaksiulotteiset-taulukot` |
 | 34 | G3. LINQ ja lambdat (1 p.) | 23.3. Anonyymit funktiot (lambda-lausekkeet) | `…/itkp102/materiaali/moniste#lambda` | A |
 
 ## demo6 (33)
@@ -160,7 +168,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 11 | T4. Keskiarvo (1 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
 | 12 | T4. Keskiarvo (1 p.) | 15. Taulukot | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 13 | T4. Keskiarvo (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 14 | T4. Keskiarvo (1 p.) | ComTest-ohje | `https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/comtest-examples#testing-floating-point-numbers` | D |
+| 14 | T4. Keskiarvo (1 p.) | ComTest-ohje | `https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/comtest-examples#testing-floating-point-numbers` | D– julkisessa kommentissa (note), ei dokumentissa |
 | 15 | T5. Keskiarvo negatiiviseen asti (1 p.) | 16.8. Silmukan suorituksen kontrollointi | `…/itkp102/materiaali/moniste#silmukan-suorituksen-kontrollointi-break--ja-continue-lauseilla` | A |
 | 16 | T5. Keskiarvo negatiiviseen asti (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 17 | T5. Keskiarvo negatiiviseen asti (1 p.) | Luku 16.8. | `https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste#silmukan-suorituksen-kontrollointi-break--ja-continue-lauseilla` | A |
@@ -175,7 +183,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 26 | B2-3. Paras hinta-arvio asunnolle (2 p.) | 16. Toistorakenteet | `…/itkp102/materiaali/moniste#toistorakenteet-silmukat` | A |
 | 27 | B2-3. Paras hinta-arvio asunnolle (2 p.) | 15. Taulukot | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 28 | B2-3. Paras hinta-arvio asunnolle (2 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 29 | B4. Esittelyrivi ja tynkä toteutus (1 p.) | Aliohjelmien kirjoittaminen | `/view/kurssit/tie/ohj1/materiaali/aliohjelmienKirjoittaminen` | D |
+| 29 | B4. Esittelyrivi ja tynkä toteutus (1 p.) | Aliohjelmien kirjoittaminen | `/view/kurssit/tie/ohj1/materiaali/aliohjelmienKirjoittaminen` | D– poistettu 25.10.2026 |
 | 30 | B5. Pisteiden etäisyys 2-ulotteisella tasolla (1 p.) | 9. Aliohjelman paluuarvo | `…/itkp102/materiaali/moniste#aliohjelman-paluuarvo` | A |
 | 31 | B5. Pisteiden etäisyys 2-ulotteisella tasolla (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 32 | B6. Luvun skaalaus (1 p.) | 9. Aliohjelman paluuarvo | `…/itkp102/materiaali/moniste#aliohjelman-paluuarvo` | A |
@@ -197,12 +205,12 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 10 | T4-5. Lähin pallo Jypelissä (2 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
 | 11 | T4-5. Lähin pallo Jypelissä (2 p.) | 15. Taulukot | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 12 | T4-5. Lähin pallo Jypelissä (2 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
-| 13 | T4-5. Lähin pallo Jypelissä (2 p.) | Vector | `http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/struct_jypeli_1_1_vector.html#_details` | E |
+| 13 | T4-5. Lähin pallo Jypelissä (2 p.) | Vector | `http://kurssit.it.jyu.fi/npo/material/latest/documentation/html/struct_jypeli_1_1_vector.html#_details` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/oliot/liikuttelu/` |
 | 14 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
 | 15 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | 15. Taulukot | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 16 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
-| 17 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | tätä ohjetta käyttäen | `/view/kurssit/jypeli/ohjaimet/ohjainten-lisays#hiiri` | E |
-| 18 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | Katso video siitä, miltä lopputuloksen pitäisi näyttää | `http://kurssit.it.jyu.fi/ITKP102/materiaalia/lahinPiste.mp4` | F |
+| 17 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | tätä ohjetta käyttäen | `/view/kurssit/jypeli/ohjaimet/ohjainten-lisays#hiiri` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/ohjaimet/ohjainten-lisays/#hiiri` |
+| 18 | T6. Lähin pallo Jypelissä interaktiivisesti (1 p.) | Katso video siitä, miltä lopputuloksen pitäisi näyttää | `http://kurssit.it.jyu.fi/ITKP102/materiaalia/lahinPiste.mp4` | F– korjattu 25.10.2026: video ladattu TIMiin, `/files/1058517/lahinPiste.mp4` |
 | 19 | V1. ViLLE (1 p.) | Villen käyttöohje | `…/itkp102/ohjeet/ville` | C |
 | 20 | B1. Luo puu merkkijonoilla (1 p.) | 16. Toistorakenteet (silmukat) | `…/itkp102/materiaali/moniste#toistorakenteet` | A |
 | 21 | B1. Luo puu merkkijonoilla (1 p.) | 12.4. Muokattavat merkkijonot | `…/itkp102/materiaali/moniste#stringbuilder` | A |
@@ -219,7 +227,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 32 | G2. Tasohyppelypeli (1 p.) | Kevät 2024 Luento 13 (PellottavaPelin aloitus) | `https://m3.jyu.fi/jyumv/ohjelmat/it/yhteiset/itkp102-kevat-2024/recording-22-02-2024-09.31#position=3587` | F |
 | 33 | G2. Tasohyppelypeli (1 p.) | Kevät 2024 Luento 14 (PelottavaPeli loppuun) | `https://m3.jyu.fi/jyumv/ohjelmat/it/yhteiset/itkp102-kevat-2024/recording-22-02-2024-09.39#position=3018` | F |
 | 34 | G2. Tasohyppelypeli (1 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
-| 35 | G2. Tasohyppelypeli (1 p.) | perintä | `https://trac.cc.jyu.fi/projects/npo/wiki/Perinta` | E |
+| 35 | G2. Tasohyppelypeli (1 p.) | perintä | `https://trac.cc.jyu.fi/projects/npo/wiki/Perinta` | E– oli jo korjattu TIMissä → `jypeli.it.jyu.fi/oma-oliotyyppi/luokan-periminen/` |
 
 ## demo8 (26)
 
@@ -242,15 +250,15 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 15 | T7. Ohjelmakoodin siistiminen (1 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
 | 16 | T8. Testaa kaksi aliohjelmaa (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 17 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest | `…/itkp102/materiaali/moniste#comtest` | A |
-| 18 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C |
+| 18 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C– korjattu 19.9.2026 → `tyokalut/#comtest` |
 | 19 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-testien kirjoittaminen Riderissa | `…/itkp102/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest` | B |
-| 20 | T8. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D |
+| 20 | T8. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D– korjattu 25.10.2026 → `osa4/comtest/#kaksiulotteiset-taulukot` |
 | 21 | V1. ViLLE (1 p.) | Villen käyttöohje | `…/itkp102/ohjeet/ville` | C |
 | 22 | B1. Kolikonheittopeli (1 p.) | Jypeli-tehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-fysiikkapeli` | B |
 | 23 | B2. Moodi (1 p.) | 15. Taulukot | `…/itkp102/materiaali/moniste#taulukot` | A |
 | 24 | B2. Moodi (1 p.) | 16. Toistorakenteet | `…/itkp102/materiaali/moniste#toistorakenteet-silmukat` | A |
 | 25 | B2. Moodi (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 26 | B4-5. Jypeli-sivujen siirtäminen TIMiin (2 p.) | https://tim.jyu.fi/view/kurssit/jypeli/sivujen-toteutus | `https://tim.jyu.fi/view/kurssit/jypeli/sivujen-toteutus` | E |
+| 26 | B4-5. Jypeli-sivujen siirtäminen TIMiin (2 p.) | https://tim.jyu.fi/view/kurssit/jypeli/sivujen-toteutus | `https://tim.jyu.fi/view/kurssit/jypeli/sivujen-toteutus` | E– korjattu 25.10.2026 → `jypeli.it.jyu.fi/` (tehtävä itse vanhentunut: pyytää siirtämään sivuja Trac Wikistä TIMiin) |
 
 ## demo9 (29)
 
@@ -275,7 +283,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 17 | T7. Testaa kaksi aliohjelmaa (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 18 | T7. Testaa kaksi aliohjelmaa (1 p.) | ComTest | `…/itkp102/materiaali/moniste#comtest` | A |
 | 19 | T7. Testaa kaksi aliohjelmaa (1 p.) | ComTest-testien kirjoittaminen Riderissa | `…/itkp102/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest` | B |
-| 20 | T7. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D |
+| 20 | T7. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D– korjattu 25.10.2026 → `osa4/comtest/#kaksiulotteiset-taulukot` |
 | 21 | V1. ViLLE (1 p.) | ViLLE | `https://tim.jyu.fi/view/kurssit/tie/ohj1/ville` | D |
 | 22 | V1. ViLLE (1 p.) | ViLLEn käyttöohje | `https://tim.jyu.fi/view/kurssit/tie/ohj1/ville#k%C3%A4ytt%C3%B6-muilla-kerroilla` | D |
 | 23 | B1. Sanan haku sanakirjasta (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
@@ -306,9 +314,9 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 14 | T7. Poikkeusten käsittely (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
 | 15 | T8. Testaa kaksi aliohjelmaa (1 p.) | 11. Testaaminen | `…/itkp102/materiaali/moniste#testaaminen` | A |
 | 16 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest | `…/itkp102/materiaali/moniste#comtest` | A |
-| 17 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C |
+| 17 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-laajennoksen asennus | `…/itkp102/ohjeet/tyokalut#comtest` | C– korjattu 19.9.2026 → `tyokalut/#comtest` |
 | 18 | T8. Testaa kaksi aliohjelmaa (1 p.) | ComTest-testien kirjoittaminen Riderissa | `…/itkp102/ohjeet/rider#testien-lis%C3%A4%C3%A4minen-comtest` | B |
-| 19 | T8. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D |
+| 19 | T8. Testaa kaksi aliohjelmaa (1 p.) | täältä | `/view/kurssit/tie/ohj1/tyokalut/comtest-examples#matrix` | D– korjattu 25.10.2026 → `osa4/comtest/#kaksiulotteiset-taulukot` |
 | 20 | V1. ViLLE (1 p.) | ViLLE | `/view/kurssit/tie/ohj1/ville` | D |
 | 21 | V1. ViLLE (1 p.) | ViLLEn käyttöohje | `/view/kurssit/tie/ohj1/ville#k%C3%A4ytt%C3%B6-muilla-kerroilla` | D |
 | 22 | B1-2. Pallopuu rekursiolla (2 p.) | 22. Rekursio | `…/itkp102/materiaali/moniste#rekursio` | A |
@@ -335,12 +343,12 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 
 | # | Otsikko | Linkkiteksti | Nykyinen kohde | Ryhmä |
 |---|---|---|---|---|
-| 1 | Harjoitustentti | ohjelmointikäytänteet | `…/itkp102/ohjeet/koodauskaytanteet` | C |
+| 1 | Harjoitustentti | ohjelmointikäytänteet | `…/itkp102/ohjeet/koodauskaytanteet` | C– korjattu 25.10.2026 → `tyyliopas/` |
 | 2 | T1-2*. Toiseksi suurin (2 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 3 | T1-2*. Toiseksi suurin (2 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C |
+| 3 | T1-2*. Toiseksi suurin (2 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C– korjattu 25.10.2026 → `tyyliopas/` |
 | 4 | T4. Bussipysäkit (1 p.) | Komentorivitehtävien tekeminen Riderissa | `…/itkp102/ohjeet/rider#tim-consolemain` | B |
-| 5 | T4. Bussipysäkit (1 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C |
-| 6 | T6. Aliohjelman toteutus (1 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C |
+| 5 | T4. Bussipysäkit (1 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C– korjattu 25.10.2026 → `tyyliopas/` |
+| 6 | T6. Aliohjelman toteutus (1 p.) | kurssin ohjelmointikäytänteitä | `…/itkp102/ohjeet/koodauskaytanteet` | C– korjattu 25.10.2026 → `tyyliopas/` |
 | 7 | V1. ViLLE (1 p.) | Villen käyttöohje | `/view/kurssit/tie/ohj1/ville#k%C3%A4ytt%C3%B6-muilla-kerroilla` | D |
 
 ## demo12 (1)
@@ -356,7 +364,7 @@ Lisäksi kaikille sivuille yhteinen ylävalikko (preamble, plugin 869948): **Mon
 | 1 | 4.2 Merkkijonofunktio | merkkionojen kohdalta | `https://tim.jyu.fi/view/1#merkkijonot` | D |
 | 2 | 5.1 StringBuilder | luentomoniste | `https://tim.jyu.fi/view/1#stringbuilder` | D |
 | 3 | 5.3 Lukujen tulostaminen | luentomonisteesta lukujen muotoilusta | `https://tim.jyu.fi/view/1#doubleformat` | D |
-| 4 | 6.3 Etsiminen | tästä lisää | `https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/comtest-examples#THROWS` | D |
+| 4 | 6.3 Etsiminen | tästä lisää | `https://tim.jyu.fi/view/kurssit/tie/ohj1/tyokalut/comtest-examples#THROWS` | D– poistettu 25.10.2026 |
 
 ## kertaustehtavia (1)
 

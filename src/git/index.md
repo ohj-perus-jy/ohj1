@@ -159,6 +159,8 @@ Nämä samat ohjeet pätevät myös ryhmätyössä, mutta silloin kannattaa kiin
 
 Tässä vaiheessa luodaan henkilökohtainen etävarasto (engl. *remote repository*) [gitlab.jyu.fi](https://gitlab.jyu.fi)-palveluun. Etävarastosta käytetään jatkossa nimitystä `origin`. Kunkin opiskelijan (tai ryhmätyön) etävarasto perustuu valmiiseen pohjaan, josta tehdään kopiohaara, eli GitLab-terminologiassa *fork*. Forkkauksen ansiosta saadaan uuteen Git-varastoosi kurssin alkuasetukset.
 
+Tarvitset ensimmäisen kirjautumisen yhteydessä monivaiheisen tunnistautumisen välineen (MFA), esimerkiksi Microsoft Authenticatorin (lue tarvittaessa [JY:n ohjeistus](https://www.jyu.fi/fi/yliopistopalvelut/digipalvelut/palvelut/tietoturva/monivaiheinen-tunnistautuminen-jyvaskylan-yliopistossa). Avaa se valmiiksi. 
+
 **Tämä vaihe tehdään kurssilla <u>yhden kerran</u>.** 
 
  1. (a) Jos sinulla on JY-tunnukset: Kirjaudu gitlab.jyu-palveluun (<https://gitlab.jyu.fi/>) JY-tunnuksilla. 
