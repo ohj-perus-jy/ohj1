@@ -37,7 +37,7 @@ jobs:
   # Ääneenluvun leikkeet ovat erillisessä repossa (kirja.toml: [puhe] repo),
   # jonka tyokalut/puhe.py täyttää; --strict kaatuu myös, jos se puuttuu.
   deploy:
-    runs-on: vellu2-vps
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
@@ -87,7 +87,7 @@ jobs:
         run: |
           python3 tyokalut/convert.py --strict
           zensical build
-      # Työhakemisto säilyy runnerilla ajojen välillä: tyhjennetään edellisen
+      # Työhakemisto voi säilyä runnerilla ajojen välillä: tyhjennetään edellisen
       # ajon _site, jotta vanhat sivut ja .git eivät jää paikalleen.
       - name: Kokoa sivusto
         run: |
