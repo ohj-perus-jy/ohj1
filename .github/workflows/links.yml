@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   lychee:
-    runs-on: vellu2-vps
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
@@ -28,7 +28,7 @@ jobs:
   # TIM-sivut muuttuvat gitin ulkopuolella: vain ajastettuna ja käsin.
   tim:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: vellu2-vps
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
