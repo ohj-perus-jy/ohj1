@@ -1,0 +1,3321 @@
+
+<!doctype html>
+<html lang="fi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ohjelmointi1.it.jyu.fi/git/git-ht-ohje/">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.73">
+    
+    
+      
+        <title>Harjoitustyön pohja vaiheittain - Ohjelmointi 1</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/fonts.css">
+    
+      <link rel="stylesheet" href="../../assets/css/paletti.css">
+    
+      <link rel="stylesheet" href="../../assets/css/typography.css">
+    
+      <link rel="stylesheet" href="../../assets/css/fontmenu.css">
+    
+      <link rel="stylesheet" href="../../assets/css/layout.css">
+    
+      <link rel="stylesheet" href="../../assets/css/sitemenu.css">
+    
+      <link rel="stylesheet" href="../../assets/css/search.css">
+    
+      <link rel="stylesheet" href="../../assets/css/admonitions.css">
+    
+      <link rel="stylesheet" href="../../assets/css/tasks.css">
+    
+      <link rel="stylesheet" href="../../assets/css/icons.css">
+    
+      <link rel="stylesheet" href="../../assets/css/tables.css">
+    
+      <link rel="stylesheet" href="../../assets/css/code.css">
+    
+      <link rel="stylesheet" href="../../assets/css/requirements.css">
+    
+      <link rel="stylesheet" href="../../assets/css/diagrams.css">
+    
+      <link rel="stylesheet" href="../../assets/css/codebuttons.css">
+    
+      <link rel="stylesheet" href="../../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../../assets/css/highlights.css">
+    
+      <link rel="stylesheet" href="../../assets/css/hidelines.css">
+    
+      <link rel="stylesheet" href="../../assets/css/copy.css">
+    
+      <link rel="stylesheet" href="../../assets/css/hints.css">
+    
+      <link rel="stylesheet" href="../../assets/css/print.css">
+    
+      <link rel="stylesheet" href="../../assets/css/walkthrough.css">
+    
+      <link rel="stylesheet" href="../../assets/css/puhe.css">
+    
+      <link rel="stylesheet" href="../../assets/css/visa.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <link rel="preload" href="../../assets/fonts/source-serif-4/normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Hyppää sisältöön
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Ylätunniste"><button type="button" class="md-header__button md-icon jyu-rail-button" id="jyu-rail-button"
+            title="Piilota valikko" aria-label="Piilota valikko"
+            aria-expanded="true" aria-controls="jyu-rail" aria-keyshortcuts="b">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+    </button>
+    <script>try{if(localStorage.getItem("jyu-rail")==="hidden")document.documentElement.setAttribute("data-jyu-rail","hidden")}catch(e){}</script>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigaatio</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        
+        <div class="md-header__topic jyu-sites" data-md-component="jyu-sites">
+          <span class="md-ellipsis"><a href="../..">Ohjelmointi 1</a>
+          </span>
+            <button type="button" class="jyu-sites__button" id="jyu-sites-button"
+                    title="Vaihda sivustoa" aria-label="Vaihda sivustoa"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="jyu-sites-list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="jyu-sites__list" id="jyu-sites-list" role="menu" aria-label="Sivustot" hidden>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="../.." aria-current="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Ohjelmointi 1</span>
+                  </a>
+                </li>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="https://jypeli.it.jyu.fi/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Jypeli-ohjeet</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Harjoitustyön pohja vaiheittain
+            
+          </span>
+        </div>
+      </div>
+    </div><button type="button" class="md-header__button md-icon jyu-puhe-button" hidden
+            title="Kuuntele sivu" aria-label="Kuuntele sivu" aria-pressed="false">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298zM16 9a5 5 0 0 1 0 6M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+    </button>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Haku</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Haku">
+  <button type="button" class="md-search__button" title="Haku (Ctrl+K)">
+    Haku
+  </button>
+</div><script>if(/^Mac/.test(document.documentElement.dataset.platform))document.querySelectorAll(".md-search__button").forEach(b=>b.title=b.title.replace("Ctrl+K","⌘K"))</script>
+      
+    <div class="md-header__option jyu-font" data-md-component="jyu-font" data-steps="90 100 110 120 135 150 175">
+      <button type="button" class="jyu-font__button" id="jyu-font-button"
+              title="Leipäteksti: Serif, 100 %" aria-label="Leipäteksti: Serif, 100 %"
+              aria-haspopup="dialog" aria-expanded="false" aria-controls="jyu-font-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-type" viewBox="0 0 24 24"><path d="M12 4v16M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M9 20h6"/></svg>
+        <span class="jyu-font__chevron"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <div class="jyu-font__panel" id="jyu-font-panel" role="dialog" aria-label="Leipäteksti" hidden>
+        <div class="jyu-font__size" role="group" aria-labelledby="jyu-font-size-label">
+          <span class="jyu-font__size-label" id="jyu-font-size-label">Tekstin koko</span>
+          <button type="button" class="jyu-font__step" data-step="-1" aria-label="Pienennä tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+          </button>
+          <button type="button" class="jyu-font__reset" title="Palauta 100 %" aria-label="Palauta 100 %" aria-disabled="true"><span aria-live="polite">100 %</span></button>
+          <button type="button" class="jyu-font__step" data-step="1" aria-label="Suurenna tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+          </button>
+        </div>
+        <ul class="jyu-font__list" id="jyu-font-list" role="listbox" aria-label="Leipätekstin kirjasin">
+          <li class="jyu-font__item" role="option" aria-selected="true" tabindex="-1" data-font="" data-short="Serif">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Source Serif 4</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="atkinson" data-short="Atkinson">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Atkinson Hyperlegible Next</span>
+            <span class="jyu-font__kind">sans-serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="literata" data-short="Literata">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Literata</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+        </ul>
+      </div>
+    </div><script>try{var b=document.body,f=localStorage.getItem("jyu-font"),k=localStorage.getItem("jyu-text-size");if(f&&document.querySelector('.jyu-font__item[data-font="'+f+'"]'))b.setAttribute("data-jyu-font",f);if(k&&document.querySelector(".jyu-font").dataset.steps.split(" ").indexOf(k)>=0)b.style.setProperty("--jyu-text-scale",k/100)}catch(e){}</script>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda tummaan teemaan"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Vaihda tummaan teemaan" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda vaaleaan teemaan"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Vaihda vaaleaan teemaan" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    <a href="../../tulosta/" title="Tulosta koko kirja" aria-label="Tulosta koko kirja" class="md-header__button md-icon jyu-print-button">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+    </a>
+    <div class="md-header__source">
+      
+        
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigaatio" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ohjelmointi 1" class="md-nav__button md-logo" aria-label="Ohjelmointi 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Ohjelmointi 1
+  </label>
+  
+    <div class="md-nav__source">
+      
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aloitus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suorittaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suorittaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tyokalut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Työkalut ja asentaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versiohallinta ja Git
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harjoitustyo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Harjoitustyö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debuggausnayte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Debuggausnäyte
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tentti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tentti
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tentti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tentti/tenttiohjeet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tenttiohjeet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tyyliopas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tyyliopas
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ukk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Usein kysyttyä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://tim.jyu.fi" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Omat tiedot (TIM)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1 Osa 1
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  1 Osa 1
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.1 Luento 1: Johdatus, mitä ohjelmointi on?
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.2 Luento 2: IDE, graafinen ohjelma
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osa1/2-ohjelmointiymparisto-kuntoon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.3 Ohjelmointiympäristö kuntoon
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.4 Harjoitustehtävät 1
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2 Osa 2
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  2 Osa 2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1 Luento 3: Muuttujat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2 Luento 4: Aliohjelmat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.3 Harjoitustehtävät 2
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3 Osa 3
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_13">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  3 Osa 3
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.1 Luento 5: muuttujat, operaattorit, aliohjelman paluuarvo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.2 Luento 6: aliohjelman kuormittaminen, ehtolauseet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.3 Harjoitustehtävät 3
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4 Osa 4
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_14">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  4 Osa 4
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.1 Luento 7: Testaaminen, ComTest
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.2 Luento 8: Harjoitustyö, Merkkijonot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osa4/comtest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.3 Testaaminen ComTestillä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.4 Harjoitustehtävät 4
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5 Osa 5
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_15">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  5 Osa 5
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.1 Luento 9: Toistolauseet ja debuggaus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.2 Luento 10: Taulukot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osa5/debuggaus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.3 Debuggaus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.4 Harjoitustehtävät 5
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6 Osa 6
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_16">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  6 Osa 6
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.1 Luento 11: Tyyppimuunnokset, kertaus operaattoreista
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.2 Luento 12: Taulukkoja ja silmukoita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.3 Harjoitustehtävät 6
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7 Osa 7
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_17" id="__nav_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_17">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  7 Osa 7
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.1 Luento 13: StringBuilder, moniulotteiset taulukot, List, Dictionary
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.2 Luento 14: Dictionary, osa 2
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.3 Harjoitustehtävät 7
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8 Osa 8
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_18" id="__nav_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_18">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  8 Osa 8
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.1 Luento 15: C#-kielen tyyppijärjestelmästä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.2 Luento 16: `switch`-lause, attribuutit, rekursio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.3 Harjoitustehtävät 8
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa9/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9 Osa 9
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_19" id="__nav_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  9 Osa 9
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.1 Luento 17: Rekursio / Kertaus, tietoa tentistä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/luento18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.2 Luento 18: Kertaus, tietoa tentistä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.3 Harjoitustehtävät 9
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa10/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10 Osa 10
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_20" id="__nav_20_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_20">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  10 Osa 10
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10.1 Harjoitustehtävät 10
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../osa11/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11 Osa 11
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_21" id="__nav_21_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_21">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  11 Osa 11
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/harjoitus11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.1 Harjoitustehtävät 11
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../luennot/extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12 Extrat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oma-etavarasto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Oma etävarasto
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Oma etävarasto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kirjaudu-gitlabiin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kirjaudu GitLabiin
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaa-kurssin-pohjaprojekti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Avaa kurssin pohjaprojekti
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valitse-kopiolle-oma-nimesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valitse kopiolle oma nimesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kuvaus-julkinen-nakyvyys-ja-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kuvaus, julkinen näkyvyys ja fork
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kopioi-etavarastosi-osoite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kopioi etävarastosi osoite
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kloonaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kloonaus
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kloonaus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-avaa-git-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Windows: avaa Git Bash
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-avaa-paate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        macOS: avaa Pääte
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerro-gitille-nimesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kerro Gitille nimesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee-harjoitustyolle-kansio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tee harjoitustyölle kansio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kloonaa-etavarasto-koneellesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kloonaa etävarasto koneellesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#katso-mita-kansioon-tuli" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Katso, mitä kansioon tuli
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suunnitelma" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Suunnitelma
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suunnitelma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#siirra-kuva-suunnitelma-kansioon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Siirrä kuva suunnitelma-kansioon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-avaa-suunnitelmamd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Windows: avaa suunnitelma.md
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-avaa-suunnitelmamd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        macOS: avaa suunnitelma.md
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kirjoita-suunnitelma" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kirjoita suunnitelma
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkita-kuva-oikein" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Linkitä kuva oikein
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiedostot-gitlabiin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tiedostot GitLabiin
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tiedostot GitLabiin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#muutosten-vieminen-paikalliseen-varastoon-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Muutosten vieminen paikalliseen varastoon 1 / 2
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muutosten-vieminen-paikalliseen-varastoon-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Muutosten vieminen paikalliseen varastoon 2 / 2
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaa-gitlabin-asetukset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Avaa GitLabin asetukset
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaa-personal-access-tokens-sivu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Avaa Personal access tokens -sivu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anna-tunnukselle-nimi-ja-oikeudet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Anna tunnukselle nimi ja oikeudet
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kopioi-paasytunnus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kopioi pääsytunnus
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laheta-muutokset-etavarastoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lähetä muutokset etävarastoon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarkista-tulos-gitlabista" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tarkista tulos GitLabista
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koodipohja" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Koodipohja
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Koodipohja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tee-koodipohja-riderissa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tee koodipohja Riderissa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kokeile-etta-pohja-kaynnistyy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kokeile, että pohja käynnistyy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarkista-kansiorakenne" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tarkista kansiorakenne
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lisaa-koodipohja-ja-tarkista-tilanne" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lisää koodipohja ja tarkista tilanne
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vie-koodipohja-versiohallintaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Vie koodipohja versiohallintaan
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osoite-timiin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Osoite TIMiin
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Osoite TIMiin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tallenna-osoite-oma-eteneminen-sivulle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tallenna osoite Oma eteneminen -sivulle
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="harjoitustyon-pohja-vaiheittain">Harjoitustyön pohja vaiheittain<a class="headerlink" href="#harjoitustyon-pohja-vaiheittain" title="Pysyvä linkki tähän otsikkoon">&para;</a></h1>
+<p>Tällä sivulla viedään harjoitustyön pohja versiohallintaan alusta loppuun: teet
+kurssin pohjaprojektista oman kopion GitLabiin, haet sen koneellesi, kirjoitat
+suunnitelman, lähetät sen takaisin GitLabiin ja lisäät lopuksi koodipohjan.
+Kuva näyttää, mitä ruudulla tapahtuu, ja teksti kertoo, mitä sinun pitää tehdä.</p>
+<p>Komentojen taustat on selitetty sivulla <a href="../">Versiohallinta ja Git</a>. </p>
+<p>Ohjeessa käytetään JY:n GitLabia (gitlab.jyu.fi). Jos sinulla ei ole
+JY-tunnuksia, tee oma etävarasto GitHubiin, ks. <a href="../#fork">Oman etävaraston
+luominen</a>.</p>
+<script src="../../images/git-ht-ohje/scenes.js"></script>
+
+<div class="jyu-walk">
+<h2 id="oma-etavarasto">Oma etävarasto<a class="headerlink" href="#oma-etavarasto" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/a1ba077361e6afda.mp3" data-scene="kirjaudu">
+<h3 id="kirjaudu-gitlabiin">Kirjaudu GitLabiin<a class="headerlink" href="#kirjaudu-gitlabiin" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Avaa Jyväskylän yliopiston GitLab-palvelu (<a href="https://gitlab.jyu.fi">https://gitlab.jyu.fi</a>) ja kirjaudu <strong>JYUNET</strong>-välilehdellä
+JY-käyttäjätunnuksellasi ja salasanallasi.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/a07a458059f01375.mp3" data-scene="pohjaprojekti">
+<h3 id="avaa-kurssin-pohjaprojekti">Avaa kurssin pohjaprojekti<a class="headerlink" href="#avaa-kurssin-pohjaprojekti" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Kirjoita osoiteriville kurssin pohjaprojektin osoite. </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://gitlab.jyu.fi/tie/ohj1/ohj1ht
+</span></code></pre></div>
+<p>Paina oikeasta yläkulmasta <strong>Fork</strong>. Fork tekee pohjasta sinulle oman kopion,
+jossa on valmiina kurssin alkuasetukset.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/b4e232582c7fede4.mp3" data-scene="fork-nimiavaruus">
+<h3 id="valitse-kopiolle-oma-nimesi">Valitse kopiolle oma nimesi<a class="headerlink" href="#valitse-kopiolle-oma-nimesi" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Fork-lomakkeen <strong>Project URL</strong> -kohdassa valitaan, kenen alle kopio tulee.
+Avaa pudotusvalikko ja valitse siitä oma nimesi.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varoitus</p>
+<p>Älä muuta <strong>Project slug</strong> -kohtaa. Sen pitää olla <code>ohj1ht</code>, muuten
+etävarastosi osoite ei ole sama kuin tämän ohjeen esimerkeissä.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/8958b2213b6f9c7b.mp3" data-scene="fork-nakyvyys">
+<h3 id="kuvaus-julkinen-nakyvyys-ja-fork">Kuvaus, julkinen näkyvyys ja fork<a class="headerlink" href="#kuvaus-julkinen-nakyvyys-ja-fork" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Kirjoita projektille lyhyt kuvaus. Valitse näkyvyydeksi <strong>Public</strong>, jotta
+ohjaaja näkee työsi. Paina lopuksi <strong>Fork project</strong>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/07eddc1ac63f7a35.mp3" data-scene="kopioi-osoite">
+<h3 id="kopioi-etavarastosi-osoite">Kopioi etävarastosi osoite<a class="headerlink" href="#kopioi-etavarastosi-osoite" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Oma kopiosi on nyt valmis. Avaa <strong>Code</strong>-valikko ja kopioi <strong>Clone with HTTPS</strong>
+-kohdan osoite. Tarvitset sitä kloonauksessa ja TIMissä.</p>
+<div class="admonition note">
+<p class="admonition-title">Huomautus</p>
+<p>Valitse HTTPS-osoite, älä SSH-osoitetta. SSH-osoitteella push ei onnistu
+ilman SSH-avainta.</p>
+</div>
+</section>
+<h2 id="kloonaus">Kloonaus<a class="headerlink" href="#kloonaus" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/7e03377e93bbaa26.mp3" data-scene="avaa-windows">
+<h3 id="windows-avaa-git-bash">Windows: avaa Git Bash<a class="headerlink" href="#windows-avaa-git-bash" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>(macOS:ssä voit ohittaa tämän vaiheen.)</p>
+<p>Paina tehtäväpalkin <strong>Haku</strong>-kenttää, kirjoita <code>git bash</code> ja valitse
+hakutuloksista <strong>Git Bash</strong>. Avautuu komentorivi, jolla annetaan tämän ohjeen
+komennot.</p>
+<p>Jos Git Bashia ei löydy, asenna ensin <a href="../../tyokalut/#git">Git</a>. </p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/9b77e793dd47d22a.mp3" data-scene="avaa-macos">
+<h3 id="macos-avaa-paate">macOS: avaa Pääte<a class="headerlink" href="#macos-avaa-paate" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>(Windowsissa voit ohittaa tämän vaiheen.)</p>
+<p>Avaa Dockista <strong>Launchpad</strong>, kirjoita hakukenttään <code>Pääte</code> (englanninkielisessä
+järjestelmässä <code>Terminal</code>) ja avaa <strong>Pääte</strong>. Linuxissa käytä jakelusi omaa
+päätettä, ks. <a href="../#miten-saan-gitin-auki">Miten saan Gitin auki</a>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/7e1bc3de74231a09.mp3" data-scene="git-config">
+<h3 id="kerro-gitille-nimesi">Kerro Gitille nimesi<a class="headerlink" href="#kerro-gitille-nimesi" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Anna Git Bashissa (macOS: Päätteessä) nimesi ja sähköpostiosoitteesi. Git
+liittää ne jokaiseen tekemääsi muutokseen.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Olli Opiskelija"</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"olli.o.opiskelija@student.jyu.fi"</span>
+</span></code></pre></div>
+<p>Tämä tehdään kerran jokaisella tietokoneella, jolla teet harjoitustyötä.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/1e3b8bdc37352ae3.mp3" data-scene="kansio">
+<h3 id="tee-harjoitustyolle-kansio">Tee harjoitustyölle kansio<a class="headerlink" href="#tee-harjoitustyolle-kansio" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Tee kansio, jossa harjoitustyösi on tällä koneella, ja siirry sinne. Jatkossa
+kaikki git-komennot annetaan tässä kansiossa.</p>
+<div class="admonition note">
+<p class="admonition-title">Huomautus</p>
+<p>Jos olet jo aiemmin tehnyt kurssia varten <code>ohj1</code>-kansion (tai
+muun itse nimeämäsi kansion) muualle, siirry ensin sinne <code>cd</code>-komennolla ja
+tee harjoitustyön kansio vasta sitten. Git Bashissa Windowsin polku
+kirjoitetaan kauttaviivoin, esimerkiksi <code>C:\Opiskelu\ohj1</code> on
+<code>/c/Opiskelu/ohj1</code> (macOS: esimerkiksi <code>~/kurssit/ohj1</code>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>/c/Opiskelu/ohj1
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>harjoitustyo
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>harjoitustyo
+</span></code></pre></div>
+</div>
+<p>Muuten tee kansio kotikansiosi alle:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>ohj1/harjoitustyo
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>ohj1/harjoitustyo
+</span></code></pre></div>
+<p>Git Bash aukeaa kotikansioosi (<code>~</code>), joten kansio tulee esimerkiksi polkuun
+<code>C:\Users\olli\ohj1\harjoitustyo</code>. Paina sijainti mieleen: tarvitset sitä koko
+harjoitustyön ajan.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/3675227bddc6f1fa.mp3" data-scene="clone">
+<h3 id="kloonaa-etavarasto-koneellesi">Kloonaa etävarasto koneellesi<a class="headerlink" href="#kloonaa-etavarasto-koneellesi" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Kirjoita <code>git clone</code>, välilyönti ja liitä kopioimasi osoite. Loppuun tulee
+vielä välilyönti ja piste: piste tarkoittaa ”tähän kansioon”.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.jyu.fi/kayttajatunnus/ohj1ht.git<span class="w"> </span>.
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Vinkki</p>
+<p>Git Bashissa liittäminen on <kbd>Shift</kbd> + <kbd>Insert</kbd>, ei
+<kbd>Ctrl</kbd> + <kbd>V</kbd>.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/405f8040b95e8bfd.mp3" data-scene="ls">
+<h3 id="katso-mita-kansioon-tuli">Katso, mitä kansioon tuli<a class="headerlink" href="#katso-mita-kansioon-tuli" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Komento <code>ls -la</code> listaa kansion sisällön piilotiedostoineen.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ls<span class="w"> </span>-la
+</span></code></pre></div>
+<ul>
+<li><code>.git/</code> on paikallinen varasto: koko muutoshistoria on siellä.</li>
+<li><code>suunnitelma/</code> on kansio suunnitelmalle ja sen kuville.</li>
+<li><code>check.sh</code> tarkistaa, ettei kansion juureen ole eksynyt sinne kuulumattomia
+  tiedostoja.</li>
+<li><code>.gitignore</code> luettelee tiedostot, joita ei viedä versiohallintaan.</li>
+</ul>
+</section>
+<h2 id="suunnitelma">Suunnitelma<a class="headerlink" href="#suunnitelma" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/eb8d0e1cbb1a9397.mp3" data-scene="kuva">
+<h3 id="siirra-kuva-suunnitelma-kansioon">Siirrä kuva suunnitelma-kansioon<a class="headerlink" href="#siirra-kuva-suunnitelma-kansioon" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Siirrä tiedostonhallinnassa suunnitelmasi kuva (tai kuvat) kansioon
+<code>ohj1/harjoitustyo/suunnitelma</code>. Avaa kuva tuplaklikkaamalla ja varmista, että
+se on oikea.</p>
+<p>Kuva saa olla enintään 1920 × 1080 pikseliä ja mieluiten alle 1 Mt.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/825943f565abea04.mp3" data-scene="avaa-md-windows">
+<h3 id="windows-avaa-suunnitelmamd">Windows: avaa suunnitelma.md<a class="headerlink" href="#windows-avaa-suunnitelmamd" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>(macOS:ssä voit ohittaa tämän vaiheen.)</p>
+<p>Tuplaklikkaa tiedostonhallinnassa <code>suunnitelma.md</code>-tiedostoa. Windows ei
+tunnista .md-tiedostoja valmiiksi, joten se kysyy, millä tiedosto avataan:
+valitse <strong>Muistio</strong> ja paina <strong>OK</strong>. Jos koneellasi on jo Markdown-tiedostoille
+editori, esimerkiksi Rider tai Visual Studio Code, tiedosto aukeaa suoraan
+siinä, ja sekin käy.</p>
+<div class="admonition note">
+<p class="admonition-title">Huomautus</p>
+<p>Uusi Muistio voi näyttää tiedoston muotoiltuna, jolloin <code>#</code>-merkit ja
+linkkien merkinnät eivät näy. Vaihda silloin näkymäksi Markdown-lähdekoodi
+(Näytä-valikosta tai ikkunan oikeasta alakulmasta), jotta näet merkinnät ja
+voit kirjoittaa niitä.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/092077e9103aad78.mp3" data-scene="avaa-md-macos">
+<h3 id="macos-avaa-suunnitelmamd">macOS: avaa suunnitelma.md<a class="headerlink" href="#macos-avaa-suunnitelmamd" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>(Windowsissa voit ohittaa tämän vaiheen.)</p>
+<p>Tuplaklikkaa Finderissa <code>suunnitelma.md</code>-tiedostoa. Se aukeaa TextEditissä.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varoitus</p>
+<p>Ota TextEditissä pois <strong>Muokkaa <span class="jyu-path">›</span> Korvaukset <span class="jyu-path">›</span> Älykkäät lainausmerkit</strong>
+ennen kirjoittamista. Muuten TextEdit muuttaa lainausmerkit kaareviksi
+(“ ”), eikä kuvalinkki toimi.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/bb45edea320b4742.mp3" data-scene="suunnitelma">
+<h3 id="kirjoita-suunnitelma">Kirjoita suunnitelma<a class="headerlink" href="#kirjoita-suunnitelma" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Täytä tiedot ja poista kaikki suluissa olevat ohjetekstit. Mitä suunnitelmassa
+pitää olla, kerrotaan <a href="../../harjoitustyo/#suunnitelma">suunnitelman vaatimuksissa</a>.
+Tallenna tiedosto: <kbd>Ctrl</kbd> + <kbd>S</kbd> (macOS: <kbd>Cmd</kbd> +
+<kbd>S</kbd>).</p>
+</section>
+<section class="jyu-step" data-scene="kuvalinkki">
+<h3 id="linkita-kuva-oikein">Linkitä kuva oikein<a class="headerlink" href="#linkita-kuva-oikein" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Kuvalinkissä on kolme osaa: hakasulkeisiin kuvaileva teksti, kaarisulkeisiin
+ensin tiedoston nimi ja sen perään lainausmerkeissä otsikko.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>![<span class="nt">Hahmotelma pelistä</span>](<span class="na">hahmotelma.png "Hahmotelma"</span>)
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Varoitus</p>
+<ol>
+<li>Kuvan tiedostopolku on <em>suhteellinen</em>: jos kuva on samassa kansiossa kuin
+   suunnitelma.md, kirjoitetaan vain kuvan nimi. Jos kuva on alikansiossa,
+   kirjoitetaan alikansion nimi ja kauttaviiva ennen kuvan nimeä, esimerkiksi
+   <code>kuvat/hahmotelma.png</code>. <em>Älä</em> kirjoita koko polkua koneeltasi, esimerkiksi
+   <code>C:\Users\olli\ohj1\harjoitustyo\suunnitelma\hahmotelma.png</code>.</li>
+<li>Kuvan tiedostonimen pitää täsmätä kirjain kirjaimelta, myös isot ja pienet
+   kirjaimet. Muuten GitLab ei näytä kuvaa.</li>
+</ol>
+</div>
+</section>
+<h2 id="tiedostot-gitlabiin">Tiedostot GitLabiin<a class="headerlink" href="#tiedostot-gitlabiin" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/7f8adad56dbd8bbd.mp3" data-scene="add-status">
+<h3 id="muutosten-vieminen-paikalliseen-varastoon-1-2">Muutosten vieminen paikalliseen varastoon 1 / 2<a class="headerlink" href="#muutosten-vieminen-paikalliseen-varastoon-1-2" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p><code>git add --all</code> merkitsee kaikki muutokset mukaan seuraavaan committiin.
+Tarkista heti perään <code>git status</code>-komennolla, että mukana on vain se, mitä
+pitääkin.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>add<span class="w"> </span>--all
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/1d6a7b34a215a43e.mp3" data-scene="commit">
+<h3 id="muutosten-vieminen-paikalliseen-varastoon-2-2">Muutosten vieminen paikalliseen varastoon 2 / 2<a class="headerlink" href="#muutosten-vieminen-paikalliseen-varastoon-2-2" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Commit tallentaa muutokset paikalliseen varastoon. Kirjoita lainausmerkkeihin
+viesti, josta näkee, mitä muutit.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Suunnitelma ja hahmotelmakuva"</span>
+</span></code></pre></div>
+</section>
+<section class="jyu-step" data-scene="token-asetukset">
+<h3 id="avaa-gitlabin-asetukset">Avaa GitLabin asetukset<a class="headerlink" href="#avaa-gitlabin-asetukset" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>GitLabin etävarastoon ei voi lähettää muutoksia ilman tunnistautumista. Jotta
+GitLab tietää, kuka olet, pitää luoda <em>pääsytunnus</em> (engl. <em>personal access token</em>).
+Se tehdään GitLabin asetuksissa, jotka löytyvät oikeasta yläkulmasta oman kuvakkeesi alta <strong>Preferences</strong>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/dad17766d3b7802d.mp3" data-scene="token-uusi">
+<h3 id="avaa-personal-access-tokens-sivu">Avaa Personal access tokens -sivu<a class="headerlink" href="#avaa-personal-access-tokens-sivu" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Valitse vasemmasta valikosta <strong>Access <span class="jyu-path">›</span> Personal access tokens</strong>. Avaa
+<strong>Generate token</strong> -valikko ja valitse <strong>Legacy token</strong>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/9871b276f16b5e3f.mp3" data-scene="token-luonti">
+<h3 id="anna-tunnukselle-nimi-ja-oikeudet">Anna tunnukselle nimi ja oikeudet<a class="headerlink" href="#anna-tunnukselle-nimi-ja-oikeudet" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Anna tunnukselle nimi, josta tunnistat koneen, esimerkiksi <code>ohj1-kotikone</code>.
+Vaihda <strong>Expiration date</strong> -kohtaan päivä noin vuoden päähän: oletuksena
+tunnus vanhenee jo kuukauden kuluttua. Valitse oikeuksista <strong>read_repository</strong>
+ja <strong>write_repository</strong>, vieritä lomakkeen loppuun ja paina <strong>Generate token</strong>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/8d3f0f6ebe986673.mp3" data-scene="token-kopioi">
+<h3 id="kopioi-paasytunnus">Kopioi pääsytunnus<a class="headerlink" href="#kopioi-paasytunnus" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>GitLab näyttää tunnuksen vain tämän kerran. Kopioi se leikepöydälle ja pidä
+sivu auki, kunnes push on seuraavassa vaiheessa onnistunut. </p>
+<p>Tunnusta ei tarvitse tallentaa minnekään: Windowsissa ja macOS:ssä Git muistaa
+sen tällä koneella ensimmäisen pushin jälkeen (joka tehdään kohta). Jos teet
+harjoitustyötä myös toisella koneella (tai suljet vahingossa sivun kopioimatta
+pääsykoodia), joudut luomaan sille oma tunnus samalla tavalla. Jos kone katoaa,
+poista sen tunnus GitLabin tunnuslistasta (<strong>Revoke</strong>); muiden koneiden
+tunnukset toimivat edelleen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varoitus</p>
+<p>Pääsytunnus on kuin salasana. Älä kirjoita sitä tekstitiedostoon,
+suunnitelmaan, koodiin tai viestiin.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/87c568d93238021d.mp3" data-scene="push">
+<h3 id="laheta-muutokset-etavarastoon">Lähetä muutokset etävarastoon<a class="headerlink" href="#laheta-muutokset-etavarastoon" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p><code>git push</code> lähettää commitit GitLabiin. Ilman sitä muutokset ovat vain omalla
+koneellasi.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+<p>Ensimmäisellä kerralla Git kysyy tunnuksia.</p>
+<ul>
+<li><strong>Windows</strong>: Git Credential Manager avaa kirjautumisikkunan. Valitse
+  <strong>Token</strong> ja kirjoita käyttäjätunnuksesi. Pääsytunnusta ei kirjoiteta vaan
+  liitetään: napsauta <strong>Personal access token</strong> -kenttää hiiren oikealla
+  painikkeella ja valitse <strong>Paste</strong> (tai paina <kbd>Ctrl</kbd> + <kbd>V</kbd>).
+  Kenttään tulee pelkkiä pisteitä. Windows muistaa tunnuksen, eikä sitä kysytä
+  uudelleen.</li>
+<li><strong>macOS</strong>: kirjautumisikkunaa ei ole, eikä tunnuksen ja salasanan välillä
+  valita. Pääte kysyy ensin <code>Username</code>, johon kirjoitat käyttäjätunnuksesi, ja
+  sitten <code>Password</code>, johon liität äsken tekemäsi pääsytunnuksen (<kbd>Cmd</kbd> +
+  <kbd>V</kbd> ja <kbd>Enter</kbd>). Liitetty tunnus ei näy ruudulla. macOS
+  tallentaa sen avainnippuun, eikä sitä kysytä uudelleen.</li>
+<li><strong>Linux</strong>: kuten macOS:ssä, mutta Git kysyy tunnukset jokaisella pushilla,
+  ellei tunnusten tallennusta ole otettu käyttöön.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Huomautus</p>
+<p>Kun pääsytunnus vanhenee vuoden päästä, push antaa virheen <em>Access denied</em>.
+Luo silloin uusi tunnus ja vaihda se vanhan tilalle, ks. <a href="../#credentials">Push ei
+onnistu</a>.</p>
+</div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/df253e2a2f6f598e.mp3" data-scene="gitlab-tulos">
+<h3 id="tarkista-tulos-gitlabista">Tarkista tulos GitLabista<a class="headerlink" href="#tarkista-tulos-gitlabista" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Avaa etävarastosi selaimessa ja siellä <code>suunnitelma</code>-kansio. Commitin viesti
+ja kuva näkyvät listassa. Avaa vielä <code>suunnitelma.md</code> ja katso, että kuva
+näkyy.</p>
+</section>
+<h2 id="koodipohja">Koodipohja<a class="headerlink" href="#koodipohja" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/7b8b0c45f3e090f8.mp3" data-scene="rider-uusi">
+<h3 id="tee-koodipohja-riderissa">Tee koodipohja Riderissa<a class="headerlink" href="#tee-koodipohja-riderissa" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Valitse Riderissa <strong>New Solution</strong> ja vasemmalta <strong>Custom Templates</strong>
+-kohdasta <strong>Fysiikkapeli</strong>.</p>
+<ul>
+<li><strong>Solution name</strong>: pelisi nimi ilman ääkkösiä, esimerkiksi
+  <code>PertinSeikkailut</code></li>
+<li><strong>Project name</strong>: sama nimi</li>
+<li><strong>Solution directory</strong>: kloonattu harjoitustyökansio, eli juuri se kansio,
+  jonka äsken kloonasit GitLabista, esimerkiksi
+  <code>C:\Users\olli\ohj1\harjoitustyo</code></li>
+</ul>
+<p>Valitse <strong>Put solution and project in the same directory</strong>. Harjoitustyössä
+on vain yksi projekti, joten solution ja projekti tulevat yhteen kansioon
+<code>harjoitustyo/PertinSeikkailut</code>; Rider näyttää sen kentän alla. Demoissa
+ruutu jätetään tyhjäksi, koska samaan solutioniin tulee monta projektia, ks.
+<a href="../../osa1/2-ohjelmointiymparisto-kuntoon/#uusi-solution">Uusi solution</a>.</p>
+<p>Jätä <strong>Create Git repository</strong> valitsematta: harjoitustyökansio on jo
+Git-varasto, eikä sen sisään saa syntyä toista. Paina lopuksi <strong>Create</strong>.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/329b68f129f9f23d.mp3" data-scene="rider-aja">
+<h3 id="kokeile-etta-pohja-kaynnistyy">Kokeile, että pohja käynnistyy<a class="headerlink" href="#kokeile-etta-pohja-kaynnistyy" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Aja ohjelma yläpalkin vihreästä ▶-napista. Vaaleansininen ikkuna tarkoittaa,
+että pohja toimii. Sulje ikkuna.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/424e32cb2bf3fcf9.mp3" data-scene="check">
+<h3 id="tarkista-kansiorakenne">Tarkista kansiorakenne<a class="headerlink" href="#tarkista-kansiorakenne" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Aja pohjan tarkistusskripti Git Bashissa harjoitustyökansiossa.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>bash<span class="w"> </span>check.sh
+</span></code></pre></div>
+<p>Juureen saa jäädä vain <code>.gitignore</code>, <code>README.md</code> ja <code>check.sh</code>. Jos skripti
+löytää juuresta muita tiedostoja, esimerkiksi <code>.sln</code>-tiedoston, siirrä ne
+omaan kansioonsa ennen committia.</p>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/f430fa3276ec5abc.mp3" data-scene="koodi-status">
+<h3 id="lisaa-koodipohja-ja-tarkista-tilanne">Lisää koodipohja ja tarkista tilanne<a class="headerlink" href="#lisaa-koodipohja-ja-tarkista-tilanne" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Sama komentojen sarja kuin suunnitelmalle. Käännöksen tulokset (<code>bin</code>- ja
+<code>obj</code>-kansiot) jäävät pois <code>.gitignore</code>-tiedoston ansiosta. Katso, että <code>git
+status</code> ei näytä <code>bin</code>- tai <code>obj</code>-kansioita. Jos näyttää, joku edeltävä vaihe on
+mennyt pieleen, ja pitää tehdä uudestaan.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>add<span class="w"> </span>--all
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+</section>
+<section class="jyu-step" data-audio="../../assets/puhe/c57f321408645a4b.mp3" data-scene="koodi-push">
+<h3 id="vie-koodipohja-versiohallintaan">Vie koodipohja versiohallintaan<a class="headerlink" href="#vie-koodipohja-versiohallintaan" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Kun listassa on vain koodipohjan tiedostot, tallenna ne commitiin ja lähetä
+GitLabiin.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Harjoitustyön koodipohja"</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+</section>
+<h2 id="osoite-timiin">Osoite TIMiin<a class="headerlink" href="#osoite-timiin" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<section class="jyu-step" data-audio="../../assets/puhe/9ef57973dcbbcc78.mp3" data-scene="tim">
+<h3 id="tallenna-osoite-oma-eteneminen-sivulle">Tallenna osoite Oma eteneminen -sivulle<a class="headerlink" href="#tallenna-osoite-oma-eteneminen-sivulle" title="Pysyvä linkki tähän otsikkoon">&para;</a></h3>
+<p>Liitä etävarastosi HTTPS-osoite TIMin <a href="https://tim.jyu.fi/view/kurssit/tie/itkp102/eteneminen">Oma eteneminen
+-sivulle</a> ja tallenna.
+Ohjaaja löytää työsi tästä osoitteesta.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>https://gitlab.jyu.fi/kayttajatunnus/ohj1ht.git
+</span></code></pre></div>
+<p>Seuraavaksi esittelet suunnitelman ohjaajalle, ks. <a href="../../harjoitustyo/#vaihe-1-suunnitelma-versiohallinnassa">harjoitustyön vaihe
+1</a>.</p>
+</section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          <script>var allowed=["Chrome OS","Git-etävarasto","Linux","Palautus ohjauksessa","Palautus videona","Windows","ZIP-paketti","macOS"];var tabs=(__md_get("__tabs")||[]).filter(function(t){return allowed.indexOf(t)>=0});if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script><script>for(var set of document.querySelectorAll(".tabbed-set")){var labels=[].slice.call(set.querySelectorAll(".tabbed-labels label"));if(labels.some(function(l){return allowed.indexOf(l.innerText.trim())>=0}))continue;for(var input of set.querySelectorAll(":scope > input"))input.addEventListener("change",function(){var label=document.querySelector('label[for="'+this.id+'"]');if(label)label.setAttribute("data-md-switching","")})}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Ohjelmointi 1 -oppimateriaali &copy; 2025 Denis Zhidkikh, Sami Sarsa, Antti-Jussi Lakanen &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fi" rel="license" title="Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen">CC BY-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+
+
+
+
+  
+  
+  
+  
+
+<div class="jyu-footer-links">
+    <a href="https://github.com/ohj-perus-jy/ohj1/edit/main/src/git/git-ht-ohje.md" class="md-copyright md-copyright--link" rel="edit" title="Muokkaa tätä sivua GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+      Muokkaa
+    </a>
+    <a href="https://github.com/ohj-perus-jy/ohj1/commits/main/src/git/git-ht-ohje.md" class="md-copyright md-copyright--link" title="Sivun muutokset GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5M12 7v5l4 2"/></svg>
+      Muutoshistoria
+    </a>
+  <a href="https://github.com/ohj-perus-jy/ohj1/issues/new?template=ilmoita-ongelmasta.yml&amp;url=git/git-ht-ohje.md" class="md-copyright md-copyright--link" title="Avaa issue GitHubissa">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg>
+    Ilmoita ongelma
+  </a>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","navigation.footer","content.tabs.link","content.footnote.tooltips","content.tooltips","toc.follow","content.code.copy"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Kopioitu leikepöydälle","clipboard.copy":"Kopioi leikepöydälle","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 lisää tällä sivulla","search.result.more.other":"# lisää tällä sivulla","search.result.none":"Ei täsmääviä dokumentteja","search.result.one":"1 täsmäävä dokumentti","search.result.other":"# täsmäävää dokumenttia","search.result.placeholder":"Kirjoita aloittaaksesi haun","search.result.term.missing":"Puuttuu","select.version":"Valitse versio"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.77dd0ce9.min.js"></script>
+      
+        <script src="../../assets/js/tooltips.js"></script>
+      
+        <script src="../../assets/js/nav-scroll.js"></script>
+      
+        <script src="../../assets/js/rail.js"></script>
+      
+        <script src="../../assets/js/toc.js"></script>
+      
+        <script src="../../assets/js/print.js"></script>
+      
+        <script src="../../assets/js/fontmenu.js"></script>
+      
+        <script src="../../assets/js/theme.js"></script>
+      
+        <script src="../../assets/js/sitemenu.js"></script>
+      
+        <script src="../../assets/js/search.js"></script>
+      
+        <script src="../../assets/js/playground.js"></script>
+      
+        <script src="../../assets/js/hidelines.js"></script>
+      
+        <script src="../../assets/js/highlights.js"></script>
+      
+        <script src="../../assets/js/copy.js"></script>
+      
+        <script src="../../assets/js/hints.js"></script>
+      
+        <script src="../../assets/js/asciinema.js"></script>
+      
+        <script src="../../assets/js/walkthrough.js"></script>
+      
+        <script src="../../assets/js/visa.js"></script>
+      
+        <script src="../../assets/js/puhe.js"></script>
+      
+    
+  </body>
+</html>
