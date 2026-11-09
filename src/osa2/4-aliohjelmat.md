@@ -1,25 +1,55 @@
 # Aliohjelmat
 
-*Aliohjelma* on ohjelman osa, jolla on nimi. Aliohjelma voi ottaa vastaan
-tietoa, tehdä laskutoimituksia ja muita toimenpiteitä, ja se voi palauttaa
-arvon. Aliohjelmia voidaan käyttää eli *kutsua* useita kertoja. 
+*Aliohjelma* on ohjelman osa, jolla on nimi. Aliohjelma voi 
+
+ * ottaa vastaan tietoa eli *parametreja*,
+ * tehdä laskutoimituksia ja muita toimenpiteitä, ja 
+ * se voi antaa takaisin eli *palauttaa* arvon. 
+
+Aliohjelmia voidaan käyttää eli *kutsua* useita kertoja, jolloin samalla
+koodilla voidaan tehdä sama asia monessa kohdassa ohjelmaa. 
 
 Alla on esimerkkejä muutamista aliohjelmista, joita olet jo käyttänyt.
 
-| Nimi | Tarvitsee | Esimerkki kutsusta | Antaa takaisin |
+| Nimi | Ottaa vastaan | Esimerkki kutsusta | Antaa takaisin |
 | ------ | ------------- | --------------------- | ------------------------------------- |
 | `Math.Sqrt` | yhden luvun | `Math.Sqrt(16)` | `4` |
 | `Math.Max` | kaksi lukua | `Math.Max(3, 8)` | `8` |
 | `int.Parse` | merkkijonon | `int.Parse("42")` | `int`-luvun `42` |
 | `Console.ReadLine` | ei mitään | `Console.ReadLine()` | käyttäjän kirjoittaman rivin |
 
+Kerrataan vielä lyhyesti, miten näitä valmiita aliohjelmia käytetään koodissa.
+Voit ajaa tämän koodin itse omalla koneellasi.
+
+```csharp,ignore
+//-using System;
+//-
+//-public class Esimerkki
+//-{
+//-    public static void Main()
+//-    {
+        // kutsutaan ReadLine, joka palauttaa merkkijonon
+        string rivi = Console.ReadLine();      
+
+        // kutsutaan Parse, joka palauttaa kokonaisluvun 
+        int luku = int.Parse(rivi);            
+
+        // kutsutaan Sqrt, joka palauttaa liukuluvun
+        double neliöjuuri = Math.Sqrt(luku);   
+        
+        // kutsutaan WriteLine, joka tulostaa arvon ja ei palauta mitään
+        Console.WriteLine("Annoit luvun " + luku + " neliöjuuri on " + neliöjuuri);
+//-    }
+//-}
+```
+
 ## Oma aliohjelma
 
 Kirjoitetaan nyt oma aliohjelma. Sovitaan aluksi, että haluamme tehdä aliohjelman,
 joka muuntaa minuutit sekunneiksi: esimerkiksi 1.5 minuuttia on 90 sekuntia ja
 0.25 minuuttia on 15 sekuntia. Asia lähtee liikkeelle niin, että päätämme
-aluksi, millaista tietoa aliohjelma tarvitsee (tässä tapauksessa minuuttien määrän,
-) ja mitä se antaa takaisin (sekuntien määrän). Sitten kirjoitetaan kutsu:
+aluksi, millaista tietoa aliohjelma tarvitsee (minuuttien
+määrän) ja mitä se antaa takaisin (sekuntien määrän). Sitten kirjoitetaan kutsu:
 
 ```csharp
 using System;
