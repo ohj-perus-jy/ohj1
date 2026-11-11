@@ -1,0 +1,3883 @@
+
+<!doctype html>
+<html lang="fi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ohjelmointi1.it.jyu.fi/tyokalut/">
+      
+      
+      
+        <link rel="prev" href="../suorittaminen/">
+      
+      
+        <link rel="next" href="../git/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.1.1">
+    
+    
+      
+        <title>Työkalut ja asentaminen - Ohjelmointi 1</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.ebb7f775.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/fonts.css">
+    
+      <link rel="stylesheet" href="../assets/css/paletti.css">
+    
+      <link rel="stylesheet" href="../assets/css/typography.css">
+    
+      <link rel="stylesheet" href="../assets/css/fontmenu.css">
+    
+      <link rel="stylesheet" href="../assets/css/layout.css">
+    
+      <link rel="stylesheet" href="../assets/css/sitemenu.css">
+    
+      <link rel="stylesheet" href="../assets/css/search.css">
+    
+      <link rel="stylesheet" href="../assets/css/admonitions.css">
+    
+      <link rel="stylesheet" href="../assets/css/tasks.css">
+    
+      <link rel="stylesheet" href="../assets/css/icons.css">
+    
+      <link rel="stylesheet" href="../assets/css/tables.css">
+    
+      <link rel="stylesheet" href="../assets/css/code.css">
+    
+      <link rel="stylesheet" href="../assets/css/requirements.css">
+    
+      <link rel="stylesheet" href="../assets/css/diagrams.css">
+    
+      <link rel="stylesheet" href="../assets/css/codebuttons.css">
+    
+      <link rel="stylesheet" href="../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../assets/css/highlights.css">
+    
+      <link rel="stylesheet" href="../assets/css/hidelines.css">
+    
+      <link rel="stylesheet" href="../assets/css/copy.css">
+    
+      <link rel="stylesheet" href="../assets/css/hints.css">
+    
+      <link rel="stylesheet" href="../assets/css/print.css">
+    
+      <link rel="stylesheet" href="../assets/css/walkthrough.css">
+    
+      <link rel="stylesheet" href="../assets/css/puhe.css">
+    
+      <link rel="stylesheet" href="../assets/css/visa.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <link rel="preload" href="../assets/fonts/source-serif-4/normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Hyppää sisältöön
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Ylätunniste"><button type="button" class="md-header__button md-icon jyu-rail-button" id="jyu-rail-button"
+            title="Piilota valikko" aria-label="Piilota valikko"
+            aria-expanded="true" aria-controls="jyu-rail" aria-keyshortcuts="b">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+    </button>
+    <script>try{if(localStorage.getItem("jyu-rail")==="hidden")document.documentElement.setAttribute("data-jyu-rail","hidden")}catch(e){}</script>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigaatio</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        
+        <div class="md-header__topic jyu-sites" data-md-component="jyu-sites">
+          <span class="md-ellipsis"><a href="./..">Ohjelmointi 1</a>
+          </span>
+            <button type="button" class="jyu-sites__button" id="jyu-sites-button"
+                    title="Vaihda sivustoa" aria-label="Vaihda sivustoa"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="jyu-sites-list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="jyu-sites__list" id="jyu-sites-list" role="menu" aria-label="Sivustot" hidden>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="./.." aria-current="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Ohjelmointi 1</span>
+                  </a>
+                </li>
+              
+                <li role="none">
+                  <a class="jyu-sites__item" role="menuitem" href="https://jypeli.it.jyu.fi/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span>Jypeli-ohjeet</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Työkalut ja asentaminen
+            
+          </span>
+        </div>
+      </div>
+    </div><button type="button" class="md-header__button md-icon jyu-puhe-button" hidden
+            title="Kuuntele sivu" aria-label="Kuuntele sivu" aria-pressed="false">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298zM16 9a5 5 0 0 1 0 6M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+    </button>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Haku</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Haku">
+  <button type="button" class="md-search__button" title="Haku (Ctrl+K)">
+    Haku
+  </button>
+</div><script>if(/^Mac/.test(document.documentElement.dataset.platform))document.querySelectorAll(".md-search__button").forEach(b=>b.title=b.title.replace("Ctrl+K","⌘K"))</script>
+      
+    <div class="md-header__option jyu-font" data-md-component="jyu-font" data-steps="90 100 110 120 135 150 175">
+      <button type="button" class="jyu-font__button" id="jyu-font-button"
+              title="Leipäteksti: Serif, 100 %" aria-label="Leipäteksti: Serif, 100 %"
+              aria-haspopup="dialog" aria-expanded="false" aria-controls="jyu-font-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-type" viewBox="0 0 24 24"><path d="M12 4v16M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M9 20h6"/></svg>
+        <span class="jyu-font__chevron"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <div class="jyu-font__panel" id="jyu-font-panel" role="dialog" aria-label="Leipäteksti" hidden>
+        <div class="jyu-font__size" role="group" aria-labelledby="jyu-font-size-label">
+          <span class="jyu-font__size-label" id="jyu-font-size-label">Tekstin koko</span>
+          <button type="button" class="jyu-font__step" data-step="-1" aria-label="Pienennä tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+          </button>
+          <button type="button" class="jyu-font__reset" title="Palauta 100 %" aria-label="Palauta 100 %" aria-disabled="true"><span aria-live="polite">100 %</span></button>
+          <button type="button" class="jyu-font__step" data-step="1" aria-label="Suurenna tekstiä">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg>
+          </button>
+        </div>
+        <ul class="jyu-font__list" id="jyu-font-list" role="listbox" aria-label="Leipätekstin kirjasin">
+          <li class="jyu-font__item" role="option" aria-selected="true" tabindex="-1" data-font="" data-short="Serif">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Source Serif 4</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="atkinson" data-short="Atkinson">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Atkinson Hyperlegible Next</span>
+            <span class="jyu-font__kind">sans-serif</span>
+          </li>
+          <li class="jyu-font__item" role="option" aria-selected="false" tabindex="-1" data-font="literata" data-short="Literata">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+            <span class="jyu-font__name">Literata</span>
+            <span class="jyu-font__kind">serif</span>
+          </li>
+        </ul>
+      </div>
+    </div><script>try{var b=document.body,f=localStorage.getItem("jyu-font"),k=localStorage.getItem("jyu-text-size");if(f&&document.querySelector('.jyu-font__item[data-font="'+f+'"]'))b.setAttribute("data-jyu-font",f);if(k&&document.querySelector(".jyu-font").dataset.steps.split(" ").indexOf(k)>=0)b.style.setProperty("--jyu-text-scale",k/100)}catch(e){}</script>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda tummaan teemaan"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Vaihda tummaan teemaan" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Vaihda vaaleaan teemaan"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Vaihda vaaleaan teemaan" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    <a href="../tulosta/" title="Tulosta koko kirja" aria-label="Tulosta koko kirja" class="md-header__button md-icon jyu-print-button">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+    </a>
+    <div class="md-header__source">
+      
+        
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigaatio" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Ohjelmointi 1" class="md-nav__button md-logo" aria-label="Ohjelmointi 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Ohjelmointi 1
+  </label>
+  
+    <div class="md-nav__source">
+      
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aloitus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suorittaminen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suorittaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Työkalut ja asentaminen
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Työkalut ja asentaminen
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kayttojarjestelma-ja-vaatimukset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Käyttöjärjestelmä ja vaatimukset
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pikakurssi-komentorivin-kayttoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pikakurssi komentorivin käyttöön
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valmistelu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valmistelu
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        .NET
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetbrains-rider" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JetBrains Rider
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rider-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Riderin tekoälyasetusten kytkeminen pois päältä
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jypeli" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JyPeli
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ComTest
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Git
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mita-seuraavaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitä seuraavaksi?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ongelmatilanteita-ja-niiden-ratkaisuja" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ongelmatilanteita ja niiden ratkaisuja
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valinnaiset-tyokalut" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valinnaiset työkalut
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tekstieditori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tekstieditori
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versiohallinta ja Git
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harjoitustyo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Harjoitustyö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debuggausnayte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Debuggausnäyte
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tentti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tentti
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tentti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tentti/tenttiohjeet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tenttiohjeet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tyyliopas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tyyliopas
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ukk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Usein kysyttyä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://tim.jyu.fi" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Omat tiedot (TIM)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1 Osa 1
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  1 Osa 1
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.1 Luento 1: Johdatus, mitä ohjelmointi on?
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.2 Luento 2: IDE, graafinen ohjelma
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osa1/2-ohjelmointiymparisto-kuntoon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.3 Ohjelmointiympäristö kuntoon
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1.4 Harjoitustehtävät 1
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2 Osa 2
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  2 Osa 2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.1 Luento 3: Muuttujat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.2 Luento 4: Aliohjelmat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2.3 Harjoitustehtävät 2
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3 Osa 3
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_13">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  3 Osa 3
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.1 Luento 5: muuttujat, operaattorit, aliohjelman paluuarvo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.2 Luento 6: aliohjelman kuormittaminen, ehtolauseet
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3.3 Harjoitustehtävät 3
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4 Osa 4
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_14">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  4 Osa 4
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.1 Luento 7: Testaaminen, ComTest
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.2 Luento 8: Harjoitustyö, Merkkijonot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osa4/comtest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.3 Testaaminen ComTestillä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4.4 Harjoitustehtävät 4
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5 Osa 5
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_15">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  5 Osa 5
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.1 Luento 9: Toistolauseet ja debuggaus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.2 Luento 10: Taulukot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osa5/debuggaus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.3 Debuggaus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5.4 Harjoitustehtävät 5
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6 Osa 6
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_16">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  6 Osa 6
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.1 Luento 11: Tyyppimuunnokset, kertaus operaattoreista
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.2 Luento 12: Taulukkoja ja silmukoita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  6.3 Harjoitustehtävät 6
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7 Osa 7
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_17" id="__nav_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_17">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  7 Osa 7
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.1 Luento 13: StringBuilder, moniulotteiset taulukot, List, Dictionary
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.2 Luento 14: Dictionary, osa 2
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  7.3 Harjoitustehtävät 7
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8 Osa 8
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_18" id="__nav_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_18">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  8 Osa 8
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.1 Luento 15: C#-kielen tyyppijärjestelmästä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.2 Luento 16: `switch`-lause, attribuutit, rekursio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  8.3 Harjoitustehtävät 8
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa9/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9 Osa 9
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_19" id="__nav_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  9 Osa 9
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.1 Luento 17: Rekursio / Kertaus, tietoa tentistä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/luento18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.2 Luento 18: Kertaus, tietoa tentistä
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  9.3 Harjoitustehtävät 9
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa10/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10 Osa 10
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_20" id="__nav_20_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_20">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  10 Osa 10
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10.1 Harjoitustehtävät 10
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../osa11/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11 Osa 11
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_21" id="__nav_21_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_21">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  11 Osa 11
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/harjoitus11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  11.1 Harjoitustehtävät 11
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luennot/extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  12 Extrat
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kayttojarjestelma-ja-vaatimukset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Käyttöjärjestelmä ja vaatimukset
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pikakurssi-komentorivin-kayttoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pikakurssi komentorivin käyttöön
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valmistelu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valmistelu
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        .NET
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetbrains-rider" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JetBrains Rider
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rider-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Riderin tekoälyasetusten kytkeminen pois päältä
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jypeli" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JyPeli
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ComTest
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Git
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mita-seuraavaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitä seuraavaksi?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ongelmatilanteita-ja-niiden-ratkaisuja" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ongelmatilanteita ja niiden ratkaisuja
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valinnaiset-tyokalut" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valinnaiset työkalut
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tekstieditori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tekstieditori
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 data-puhe="5a4b686cf9c573b5" id="tyokaluohjeet">Työkaluohjeet<a class="headerlink" href="#tyokaluohjeet" title="Pysyvä linkki tähän otsikkoon">&para;</a></h1>
+<p><span class=jyu-puhe data-puhe=05979a654a89d8c5></span><strong>Ohjelmointi 1</strong> -opintojaksolla käytämme alla olevia työkaluja. Tässä
+dokumentissa opastetaan, miten nämä työkalut asennetaan. </p>
+<ul>
+<li><strong><a href="#net">.NET</a></strong> &ndash; <em>ohjelmistoviitekehys</em> (engl. framework), tarvitaan
+  C#-ohjelmien kehittämiseen ja valmiiden ohjelmien ajamiseen. </li>
+<li><span class=jyu-puhe data-puhe=104e7be64e170cc0></span><strong><a href="#jetbrains-rider">JetBrains Rider</a></strong> &ndash; <em>integroitu kehitysympäristö</em>, jolla voi
+  kirjoittaa, kääntää, ajaa ja debugata ohjelmia. Rider on erityisesti .NET- ja
+  C#-ohjelmille tarkoitettu IDE. Käytämme ilmaista Community Edition -versiota.</li>
+<li><span class=jyu-puhe data-puhe=ce3230388d5dc3fb></span><strong><a href="#jypeli">JyPeli</a></strong> &ndash; <em>pelimoottori</em>, joka on Jyväskylän yliopistossa kehitetty
+  C#-kirjasto pelien tekemiseen.</li>
+<li><span class=jyu-puhe data-puhe=6d3c32976bec2ed1></span><strong><a href="#comtest">ComTest</a></strong> &ndash; <em>yksikkötestigeneraattori</em>, joka on aputyökalu, jonka
+  avulla kirjoitetulle koodille voidaan kirjoittaa testejä helposti luettavalla
+  merkintätavalla.</li>
+<li><span class=jyu-puhe data-puhe=944acf7a385dce7e></span><strong><a href="#git">Git</a></strong> &ndash; <em>versiohallintaohjelma</em>, joka mahdollistaa koodin versioinnin
+  ja yhteistyön koodaajien välillä. Tätä voisi kutsua koodaajien Google
+  Docsiksi. Gitiä tarvitset mahdollisesti vasta harjoitustyön yhteydessä, joten
+  sitä ei tarvitse asentaa vielä opintojakson alussa.</li>
+</ul>
+<p><span class=jyu-puhe data-puhe=6fd6f254a099cb49></span>Yllä olevat ohjelmat löytyvät valmiiksi asennettuna <a href="https://navi.jyu.fi/space/m118987">Agoran mikroluokissa</a> (Alban puoleinen pääty, 1. ja 2. kerros). Jos sinulla on oma tietokone, suosittelemme vahvasti, että asennat ohjelmat lisäksi niille tietokoneille, joilla aiot suorittaa opintojakson.</p>
+<h2 data-puhe="173f598dcec2c9b7" id="kayttojarjestelma-ja-vaatimukset">Käyttöjärjestelmä ja vaatimukset<a class="headerlink" href="#kayttojarjestelma-ja-vaatimukset" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=3e3251d6731a83ab></span>Tällä sivulla olevat ohjeet riippuvat käyttöjärjestelmästä. 
+Valitse käyttöjärjestelmä alta.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Linux</label><label for="__tabbed_1_4">Chrome OS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=7fb2760c822d3e2b></span>Valitsit Windows -käyttöjärjestelmän. Alla olevat ohjeet on testattu Windows
+11:llä. Windows 10:llä toimisesta ei ole varmuutta.</p>
+</div>
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=1b6f2dd8dff6560d></span>Valitsit macOS-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=2c67d8146fdc3e23></span>macOS 10.15 Catalina</li>
+<li><span class=jyu-puhe data-puhe=3ebd7bf0710c4fc2></span>macOS 13 Ventura</li>
+<li><span class=jyu-puhe data-puhe=8958249cf4f064cc></span>macOS 14 Sonoma</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=9f5d6271199f4e96></span>Valitsit Linux-käyttöjärjestelmän. Alla olevat ohjeet on testattu seuraavilla käyttöjärjestelmillä:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=d6ab2af1cb1928ce></span>Arch Linux (<code>6.16.1-arch1-1</code>)</li>
+<li><span class=jyu-puhe data-puhe=1c7a150fac716a85></span>Linux Mint 22.1 (<code>Linux 6.8.0-51-generic</code>)</li>
+<li><span class=jyu-puhe data-puhe=39dc584dd2aa20e5></span>Linux Ubuntu 24.04.3 LTS</li>
+<li><span class=jyu-puhe data-puhe=bae852e4f72ffb26></span>Debian 13</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=b72ab6281d8d753b></span>Kurssin ohjelmointiympäristö <strong>ei ole tuettu</strong> Chrome OS -käyttöjärjestelmässä.
+Vaikka työkalujen asentaminen saattaakin onnistua, emme voi taata, että kaikki
+työkalut toimivat käyttökelpoisesti tai edes oikein. Suosittelemme vahvasti käyttämään
+joko Windows-, macOS- tai Linux-käyttöjärjestelmää.</p>
+</div>
+</div>
+</div>
+<h2 data-puhe="f645f4964434057f" id="pikakurssi-komentorivin-kayttoon">Pikakurssi komentorivin käyttöön<a class="headerlink" href="#pikakurssi-komentorivin-kayttoon" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=206142da654d18e0></span>Tämän sivun asennusohjeet vaativat komentorivin avaamista ja käyttöä.</p>
+<p><span class=jyu-puhe data-puhe=198b48f365ab394e></span>Jos et ikinä ennen käyttänyt komentoriviä, katso pikainen johdatus komentorivin
+käyttöön alta.</p>
+<details closed="closed">
+<p><summary data-puhe="62525b806a136614">Pikainen johdatus komentorivin käyttöön (Avaa klikkaamalla)</summary></p>
+<p><span class=jyu-puhe data-puhe=b7be2020e5ee9e32></span><strong>Mikä on komentorivi?</strong></p>
+<p><span class=jyu-puhe data-puhe=4679f4b7372a6b58></span><em>Komentorivi</em> on (tämän ohjeen puitteissa) tietokoneohjelma, jolla tietokonetta
+voi ohjata tekstillä. Esimerkiksi, kun Windowsissa jonkun kansion sisällön
+katsominen onnistuu graafisesti avaamalla Resurssienhallinta (macOS:lla Finder),
+sama asia onnistuu komentorivillä kirjoittamalla tekstimuotoinen <em>komento</em>, joka
+tulostaa näkyviin kansion sisällön.</p>
+<p><span class=jyu-puhe data-puhe=9d93a2bc79736a95></span>Vaikka olet ehkä aiemmin käyttänyt komentoriviä harvoin jos koskaan,
+ohjelmoinnin yhteydessä komentorivi on varsin hyödyllinen työkalu. Syitä on
+monia, kuten toiston ja automaation helpottaminen. Tämän ohjeen kannalta
+olennainen syy on, että ohjelmien asentaminen onnistuu nykyään jopa helpommin
+komentorivillä kuin etsimällä sopiva asennusohjelma verkosta.</p>
+<p><span class=jyu-puhe data-puhe=cbc57a1e547d2dd4></span>Komentorivistä käytetään myös nimityksiä <em>pääte</em> ja <em>terminaali</em>. Englanniksi
+komentorivistä käytetään nimityksiä <em>command line</em>, <em>terminal</em> ja <em>shell</em>.
+Kaikki nämä tarkoittavat samaa asiaa: ohjelmaa, jolla tietokonetta voi ohjata
+kirjoittamalla komentoja tekstinä.</p>
+<hr />
+<p><span class=jyu-puhe data-puhe=d2f3779e4e269830></span><strong>Miten avaan komentoriviin omalla tietokoneellani?</strong></p>
+<p><span class=jyu-puhe data-puhe=9663f74044f3d020></span>Toimintatapa vaihtelee eri käyttöjärjestelmillä. Samalla käyttöjärjestelmällä
+voi olla myös useita komentoriviohjelmia. Alla olevilla ohjeilla saata ainakin
+kaikki tarvittavat työkalut asennettua.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label><label for="__tabbed_2_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=54dd0ce7075967d3></span>Paina <em>Käynnistä</em>-painikkeen vieressä olevaa <em>Haku-ikonia</em></li>
+<li><span class=jyu-puhe data-puhe=35a25b5240e5aec0></span>Kirjoita hakupalkkiin <em>PowerShell</em></li>
+<li><span class=jyu-puhe data-puhe=4dde54a80c12218e></span>Valitse löytyvistä tuloksista <em>Windows PowerShell</em></li>
+</ol>
+<p><span class=jyu-puhe data-puhe=bc4f7b150d29e812></span>Tämä avaa PowerShell-komentorivin, joka on eräs Windowsilla oleva komentorivipääte.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=83c3308791db1d64></span>Avaa <em>Launchpad</em></li>
+<li><span class=jyu-puhe data-puhe=31cf24c2f89703f5></span>Kirjoita ylhäällä olevaan hakupalkkiin <em>Pääte</em> (tai <em>Terminal</em> jos käyttöjärjestelmän kieli on englanti)</li>
+<li><span class=jyu-puhe data-puhe=51b5f8e6136c8dc2></span>Avaa hakutuloksena löytyvä <em>Pääte</em> tai <em>Terminal</em>-sovellus</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=8c80e1b786c720f8></span>Tämä avaa Pääte-sovelluksen, joka on macOS:n sisäänrakennettu pääte.</p>
+</div>
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=2c5f3b0d0391a3ba></span>Käytä jakelun omaa päätettä. Pääte yleensä löytyy sanalla <em>Terminal</em> tai
+<em>Terminal Emulator</em>. Tämä usein avaa bash-päätteen, joka on sopiva 
+tämän ohjeen kannalta.</p>
+</div>
+</div>
+</div>
+<p><span class=jyu-puhe data-puhe=85960a23ba2a4f51></span><strong>Miten käytän komentoriviä?</strong></p>
+<p><span class=jyu-puhe data-puhe=96fd50183964af12></span>Kun näet tällä sivulla alla olevan tapaisen laatikon:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=89340a6a6febcb54></span>Tulee sinun kirjoittaa laatikossa oleva komento ja suorittaa se komentorivillä.
+Toimi seuraavasti:</p>
+<ol>
+<li><span class=jyu-puhe data-puhe=c644f4028226b3fe></span>Klikkaa komentorivi aktiiviseksi ikkunaksi.</li>
+<li><span class=jyu-puhe data-puhe=d87d556572d22d4b></span>Kirjoita laatikossa oleva komento komentoriviin näppäimistöllä.</li>
+<li><span class=jyu-puhe data-puhe=5f0ea636706ad6bc></span><strong>Tarkista, että kirjoitit komennon täysin oikein.</strong> Huomaa, että kirjainkoolla, välilyönneillä ja muilla merkeillä on merkitystä komennon kannalta!</li>
+<li><span class=jyu-puhe data-puhe=2e911a2aa95f7b9a></span><strong>Kun olet varmistanut, että kirjoitit komennon oikein</strong>, paina Enter-näppäintä.</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=bc40b96ac7940c6d></span>Riippuen komennosta komentoriviin voi ilmestyä tuloste, virhe tai ei mitään.
+Jotkin ohjelmat eivät tulosta mitään tekstiä onnistumisen merkiksi.
+Kun komennon suoritus on valmis, komentorivin uudelle riville ilmestyy uusi komentokehote.</p>
+<p><span class=jyu-puhe data-puhe=2dd97f00fb5d0569></span><strong>Kokeile</strong> kirjoittaa ja suorittaa yllä oleva esimerkkikomento.
+Komento listaa hakemistossa olevien tiedostojen ja kansioiden nimiä (<code>ls</code> on lyhenne sanalle "<strong>l</strong>i<strong>s</strong>t").</p>
+<p><span class=jyu-puhe data-puhe=303f1200f8ceee06></span>Kun tällä sivulla näet laatikon, jossa on useita rivejä, kuten</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Kissa"</span>
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=41b54ae33530148b></span>Toimi seuraavasti:</p>
+<ol>
+<li><span class=jyu-puhe data-puhe=715cd6f5bf8d02b6></span>Tee yllä mainitut vaiheet 1–4 <em>vain ensimmäisellä rivillä</em> olevalle komennolle (eli tässä <code>echo "Kissa"</code>)</li>
+<li><span class=jyu-puhe data-puhe=4ce79e41070f89a4></span>Tee yllä mainitut vaiheet 1–4 <em>vain toisella rivillä</em> olevalle komennolle (eli <code>ls</code>)</li>
+<li><span class=jyu-puhe data-puhe=8dd265b5ecdf03c6></span>Jatka rivien suorittamista kunnes olet suorittanut kaikki laatikossa olevat rivit</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=ba1851de32a1e07d></span>Toisin sanoen, tällä sivulla jokainen yksittäinen komento on aseteltu omalle rivilleen. Tarkoitus on, että suoritat jokaisen rivin yksi kerrallaan siinä järjestyksessä, jossa ne on laatikossa kirjoitettu.</p>
+<p><span class=jyu-puhe data-puhe=e6f544706f22f173></span><strong>Kokeile</strong> kirjoittaa ja suorittaa yllä olevassa laatikossa olevat komennot. Kirjoita ja suorita ensin komento <code>echo "Kissa"</code> ja sen jälkeen komento <code>ls</code>. Muista, että tietokone suorittaa komennon vasta, kun painat Enter-painiketta.</p>
+<p><span class=jyu-puhe data-puhe=1728ddfad2729d6c></span><strong>Voinko kopioida komentoja kirjoittamisen sijaan?</strong></p>
+<p><span class=jyu-puhe data-puhe=0347dcf86519da40></span>Kyllä voit. Tällä ohjesivulla komentojen kopiointi onnistuu klikkaamalla kopioitavasta komennosta
+kerran ja painamalla <code>Ctrl</code>+<code>C</code> (Windows, Linux) tai <code>Command</code>+<code>C</code> (macOS).</p>
+<p><span class=jyu-puhe data-puhe=bf4a150f9d66795d></span>Komennon liittäminen komentoriville riippuu käyttöjärjestelmästä:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=2d31a64ca926da80></span><em>Windows</em>: Valitse PowerShell-komentorivi aktiiviseksi ja paina <code>Ctrl</code>+<code>V</code> (tai klikkaa hiiren oikea painike)</li>
+<li><span class=jyu-puhe data-puhe=337a8f5064c1bba2></span><em>macOS</em>: Valitse Pääte aktiiviseksi ja paina <code>Command</code>+<code>V</code></li>
+<li><span class=jyu-puhe data-puhe=cae35fcfbfbcb812></span><em>Linux</em>: Valitse komentorivi aktiiviseksi ja paina <code>Ctrl</code>+<code>Shift</code>+<code>V</code> TAI <code>Shift</code>+<code>Insert</code>. Tarkista pääteohjelmasi ohjeista oikea näppäinoikotie</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title"><span class=jyu-puhe data-puhe=c374643da28cccdf></span>Varoitus</p>
+<p><span class=jyu-puhe data-puhe=8904f76f6ebc8064></span>Älä <strong>ikinä</strong> kopioi ja liitä komentoriville mitään komentoja, joihin et luota etkä
+tiedä, mitä ne oikeasti tekevät. Komentorivien komennot ovat usein peruuttamattomia: jos vahingossa poistat jonkun tiedoston,
+poisto on usein lopullinen eikä sitä voi peruuttaa. Esimerkiksi tekoälyn ehdottamiin komentoihin tulee suhtautua aina varauksella.
+Tällä sivulla mainitut komennot on testattu toimivaksi ja turvalliseksi vastuuopettajan toimesta.</p>
+</div>
+</details>
+<h2 data-puhe="005a745f641b502b" id="valmistelu">Valmistelu<a class="headerlink" href="#valmistelu" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">macOS</label><label for="__tabbed_3_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=8cd7dc269d14e065></span>Varmista, että tietokoneesi on ajan tasalla (Windows Update:ssa ei uusia
+    päivityksiä) ja että näytönohjaimen ajurit ovat asennettu.</li>
+<li><span class=jyu-puhe data-puhe=ea2d36a63496da3b></span>Avaa PowerShell-komentorivi (<em>Haku-ikoni</em> <span class="jyu-path">›</span> Kirjoita <em>PowerShell</em>
+    <span class="jyu-path">›</span> <em>Windows PowerShell</em>).</li>
+<li>
+<p><span class=jyu-puhe data-puhe=72070a61ef29b740></span>Kokeile, että <code>winget</code>-komento on asennettu ja toimii. Suorita seuraava komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>winget<span class="w"> </span>-v
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=ae969ac8660fcf92></span>Tuloksena pitäisi tulostua <code>winget</code>-työkalun versio. Jos sen sijaan saat
+virheen, jossa lukee <em>'winget' is not recognized as the name of a cmdlet,
+function, script file, or operable program</em>, tarkoittaa tämä, että sinulla
+todennäköisesti ei ole <code>winget</code>-työkalua asennettuna. Kokeile siinä
+tapauksessa seuraavat ratkaisut:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=6ec5ba7dbcf4b6d1></span>Tarkista, että käyttöjärjestelmäsi on ajan tasalla</li>
+<li><span class=jyu-puhe data-puhe=4977a29f19d73f70></span>Kokeile ladata ja asentaa <code>winget</code>-käsin: <a href="https://github.com/microsoft/winget-cli/releases/download/v1.11.430/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle">Lataa
+  asennusohjelma</a>. 
+  Asennuksen jälkeen sulje ja käynnistä PowerShell uudelleen.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=1e9c99ed866043a1></span>Avaa Pääte tai Terminal (<em>Launchpad</em> <span class="jyu-path">›</span> <em>Pääte</em>/<em>Terminal</em>)</li>
+<li>
+<p><span class=jyu-puhe data-puhe=0122cbb246ce5ce8></span>Asenna ensin macOS:n kehitystyökalut suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>xcode-select<span class="w"> </span>--install
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=ddd3d91b468cb9a1></span>Komennon suorittamisen jälkeen saatat saada seuraavanlaisen ilmoituksen:
+<em>Komento "xcode-select" vaatii komentorivikehitystyökalut. Haluatko asentaa
+työkalut nyt?</em> (Englanniksi: <em>The 'xcode-select' command requires the
+command line developer tools. Would you like to install the tools now?</em>)</p>
+<p><span class=jyu-puhe data-puhe=9dd0efa6297ba27f></span>Jos sellainen ilmoitus ilmestyy, valitse <em>Asenna</em>/<em>Install</em> ja odota
+työkalujen asentumista. Hyväksy tarvittaessa käyttöehdot. Kun asennus on
+valmis, saat <em>Ohjelmisto asennettiin</em>/<em>The software was installed</em>
+-dialogin. Klikkaa silloin <em>Valmis</em>.</p>
+<p><span class=jyu-puhe data-puhe=01e9e1a2e51f0747></span>Jos saat virheen, jossa lukee <code>command line tools are already installed</code>, sinulla
+on jo tarvittavat työkalut asennettuna ja voit jatkaa seuraavaan vaiheeseen.  </p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=78ab5440c8e95728></span>Asenna Homebrew-ohjelmahallintatyökalu seuraavalla komennolla:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=09538e3f45dcb8c0></span><em>Anna työkalun latautua rauhassa.</em></p>
+<p><span class=jyu-puhe data-puhe=70194562b8a62862></span>Kirjoita macOS-käyttäjäsi salasana, kun <em>Password</em>-kenttä ilmestyy.
+<em>Huomaa, että salasanan kirjoittaminen ei tuota mitään näkyvää tulostetta komentoriville,
+ei edes <code>*</code>-merkkejä.</em> Paina Enter-painiketta, kun olet kirjoittanut salasanan.</p>
+<p><span class=jyu-puhe data-puhe=8e8d8f57828255f1></span>Ennen asennusta Homebrew vielä tulostaa varmistusdialogin, jonka lopussa lukee</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Press RETURN/ENTER to continue or any other key to abort:
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=3d7e5ce010abc8ef></span>Paina siinä tapauksessa Enter-näppäintä ja odota ohjelman asentumista.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=3807dd7c153466bf></span>Suorita seuraavat komennot (huom: 1 komento per rivi, 4 komentoa yhteensä):</p>
+<p><div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">BREW_PREFIX</span><span class="o">=</span><span class="k">$(</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>arm64<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/opt/homebrew<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/usr/local<span class="w"> </span><span class="k">)</span>
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"eval \"\$(</span><span class="si">${</span><span class="nv">BREW_PREFIX</span><span class="si">}</span><span class="s2">/bin/brew shellenv)\""</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span><span class="si">${</span><span class="nv">BREW_PREFIX</span><span class="si">}</span>/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">"</span>
+</span></code></pre></div></p>
+<p><span class=jyu-puhe data-puhe=6095fb4f2a698379></span>Nämä komennot tekevät seuraavat asiat:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=c66a73659858a135></span>Komento 1 tarkistaa, onko tietokone Apple Silicon tai Intel -pohjainen.</li>
+<li><span class=jyu-puhe data-puhe=8e86f6d7c2973533></span>Komento 2 lisää tyhjän rivin komentoriviasetuksiin</li>
+<li><span class=jyu-puhe data-puhe=b6837bf5ffeac379></span>Komento 3 muokkaa komentorivin asetuksia niin, että jatkossa Homebrew ladataan aina avatessa uusi Pääte</li>
+<li><span class=jyu-puhe data-puhe=d05f1eb413c85ea3></span>Komento 4 lataa Homebrewin nykyiseen komentoriviin</li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=0541b0021d01fcf3></span>Testaa, että Homebrew toimii suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>brew<span class="w"> </span>--version
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=72f1dd5a2bf91b81></span>Jos asennus suoritettiin onnistuneesti, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Homebrew X.X.X
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=b8c6e2d3479b9aa6></span>Versionumero <code>X.X.X</code> voi olla mikä tahansa; olennaista on, että tuloste ilmestyy näkyviin.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><span class=jyu-puhe data-puhe=47f3d5b971bbea8b></span>Alla olevat ohjeet olettavat, että sinulla on kokemusta ohjelmien asentamisesta
+sinun käyttämälläsi Linux-jakelulla.
+Linux-ohjeet toimivat täten ohjenuorana; käytä tarvittaessa omaa harkintaa.</p>
+<ol>
+<li><span class=jyu-puhe data-puhe=e02838f2b82e697e></span>Tarkista, että sinulla on tarvittavat grafiikkakirjastot asennettuna. 
+   JyPeli ainakin tarvitsee GLFW-kirjaston, joka löytyy eri jakeluista valmiina pakkauksena:<ul>
+<li><span class=jyu-puhe data-puhe=ed013750e1799171></span>Ubuntu, Debian, openSUSE: <code>libglfw3</code></li>
+<li><span class=jyu-puhe data-puhe=0671a2993c971037></span>Arch, Fedora: <code>glfw</code></li>
+</ul>
+</li>
+<li><span class=jyu-puhe data-puhe=3881821027f13e89></span>Vaikka osa työkaluista löytyy jakelujen pakkaustehallinnasta, jotkin graafiset ohjelmat (erityisesti Rider ja VS Code)
+   eivät ole yleensä julkaistu jakelukohtaisissa repoissa.
+   <em>Suosittelemme</em> käyttämään jakelusta riippumatonta pakkaustenhallintaa, 
+   kuten <a href="https://snapcraft.io/docs/installing-snapd">Snap</a> tai <a href="https://flatpak.org/">Flatpak</a>. Tällä sivulla olevat ohjeet käyttävät ensisijaisesti Snapia tai jakelukohtaisia
+   pakkauksia, jos niitä on.</li>
+<li><span class=jyu-puhe data-puhe=bb800dfac3ad0da5></span>Kun olet asentanut tarvittavat esipakkaukset, käynnistä uusi tyhjä pääte.</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 data-puhe="d283f21bb5e49f80" id="net">.NET<a class="headerlink" href="#net" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">macOS</label><label for="__tabbed_4_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=a720ef767897fd89></span>Avaa PowerShell-komentorivi ellei se ole jo auki.</li>
+<li>
+<p><span class=jyu-puhe data-puhe=c556f776efae6aa6></span>Suorita alla oleva komento</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>winget<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>--id<span class="o">=</span>Microsoft.DotNet.SDK.10
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=1a5b248fd5906f19></span>Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+Jos näet komentorivillä kysymyksen, kuten:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Do you agree to all the source agreements terms?
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>[Y] Yes [N] No:
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=5e7e511813fa200a></span>Paina komentorivillä <code>y</code>-näppäintä ja sen jälkeen <code>Enter</code>-näppäintä.</p>
+<p><span class=jyu-puhe data-puhe=87f8fe66e159738f></span>Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti <code>Successfully installed</code>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=264405663e693ac1></span>Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=133454e5c7508fd9></span>Testaa, että .NET on asennettu suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>dotnet<span class="w"> </span>--list-sdks
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>10.0.XXX [C:\Program Files\dotnet\sdk]
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=323ef59d715a94f7></span>Huomaa, että <code>XXX</code> on joku numero; olennaista, että versiona lukee <code>10.0</code> ja että virhettä ei tule.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=3dff9dd0c9dc265d></span>Avaa Pääte ellei se ole jo</li>
+<li>
+<p>Asenna .NET suorittamalla alla oleva komento</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>dotnet-sdk
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=420b6ce736135825></span>Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+macOS-käyttäjän salasanaa <code>Password:</code>-kentässä. Kirjoita silloin
+salasana paikalle ja paina Enter-näppäintä.
+(Mikäli vastaan tulee tilanne että edelliset komennot menevät läpi mutta
+dotnet ei kuitenkaan ole asentunut, voit seurata <a href="https://learn.microsoft.com/en-us/dotnet/core/install/macos">Microsoftin asennusohjeita</a>)</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=34dfab4fe1236d21></span>Sulje kaikki auki olevat komentorivit ja avaa uusi Pääte</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=133454e5c7508fd9></span>Testaa, että .NET on asennettu suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>dotnet<span class="w"> </span>--list-sdks
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>10.0.XXX [/usr/local/share/dotnet/sdk]
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=323ef59d715a94f7></span>Huomaa, että <code>XXX</code> on joku numero; olennaista, että versiona lukee <code>10.0</code> ja että virhettä ei tule.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=739f231d03805c2e></span>Avaa jakelusi pääteohjelma ellei se ole jo</li>
+<li><span class=jyu-puhe data-puhe=b46e58799ad834be></span>Asenna .NET SDK -pakkaus: <code>dotnet-sdk-10.0</code>. Pakkauksen nimi on yleensä sama
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)</li>
+<li><span class=jyu-puhe data-puhe=9944a3514d437410></span>Asennuksen jälkeen sulje ja avaa pääte uudelleen</li>
+<li>
+<p><span class=jyu-puhe data-puhe=133454e5c7508fd9></span>Testaa, että .NET on asennettu suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>dotnet<span class="w"> </span>--list-sdks
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>10.0.XXX [/usr/local/share/dotnet/sdk]
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=323ef59d715a94f7></span>Huomaa, että <code>XXX</code> on joku numero; olennaista, että versiona lukee <code>10.0</code> ja että virhettä ei tule.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 data-puhe="eefc25254724d465" id="jetbrains-rider">JetBrains Rider<a class="headerlink" href="#jetbrains-rider" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">macOS</label><label for="__tabbed_5_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=a720ef767897fd89></span>Avaa PowerShell-komentorivi ellei se ole jo auki.</li>
+<li>
+<p><span class=jyu-puhe data-puhe=4d2ead99f8b36055></span>Asenna JetBrains Rider suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>winget<span class="w"> </span>install<span class="w"> </span>--interactive<span class="w"> </span>-e<span class="w"> </span>--id<span class="o">=</span>JetBrains.Rider
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=0bcc614cf402e818></span>Ohjelman lataamisen jälkeen avautuu asennusohjelma.
+Etene asennusohjelmassa eteenpäin <em>Next</em>-painikkeella.
+Kohdassa <em>Installation Options</em> valitse seuraavat ruksit päälle:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=f5553a3f95455dc6></span>Add "Open Folder as Project"</li>
+<li><span class=jyu-puhe data-puhe=dfa77bb69da33e86></span>Install JetBrains ETW Host Service</li>
+<li><span class=jyu-puhe data-puhe=ef544f36838b5e29></span>Add Rider executables to Microsoft Defender exclusions</li>
+<li><span class=jyu-puhe data-puhe=73d5cc1324864678></span>Create Associations: .sln, .cs, .csproj</li>
+</ul>
+<p><span class=jyu-puhe data-puhe=46461aac72bcd10e></span>Etene asennusohjelmassa ja anna ohjelman asentua. </p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=6d281f1e35229032></span>Kun pääset asennusohjelman loppuun, valitse <em>Run JetBrains Rider</em> ja paina <em>Finish</em>.
+   Testaa, että ohjelma toimii.</p>
+<p><span class=jyu-puhe data-puhe=e8c66ddb5599f2d0></span>Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+Järjestelmä saattaa myös kysyä, <em>Rider on internetistä ladattu sovellus. Avataanko se?</em>.
+Siinä tapauksessa voi valita <em>Avaa</em>.</p>
+<p><span class=jyu-puhe data-puhe=24a9d28ad7d48f88></span>Hyväksy mahdolliset Riderin käyttöehdot.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=305e4ceb3ccfd3b5></span>Ikkunaan ilmestyy mainos tekoälylisäkkeestä: <em>JetBrains Rider goes AI</em>. Paina
+   kulmasta X, <strong>älä</strong> paina Let's go. Saat nyt ilmoituksen <em>Free trial has
+   started ..xx days left.</em> </p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=3c5fe475a8811800></span>Paina oikeasta alakulmasta Trial, ja valitse <em>Free for Learning and hobby</em>, 
+   ja sen jälkeen <em>Learning and self-education</em>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=3df6a6ba36ae2642></span>Valitse <em>Register</em>-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse <em>Continue with email</em> ja tee itsellesi tunnus. Tunnuksen ei tarvitse
+   liittyä yliopistoon mitenkään.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=e2be6ce9957a2c14></span>Kun olet rekisteröitynyt, saatat mahdollisesti joutua kirjautumaan uudelleen. Valitse silloin <em>Log in for Non-Commercial License</em>.</p>
+<p><span class=jyu-puhe data-puhe=9024e65fd77a2804></span>Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+<em>Start Non-Commercial license</em>. (TODO: Tämä vaihe on muuttunut syksyllä 2026. Jos tämä ohje ei vastaa tilannetta, muokkaa tätä ohjetta tai ilmoita opettajille.)</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=312951c439a53c84></span>Suorita asetusten asettaminen loppuun. Suositellut asetukset:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=f7544e052c9437ad></span>Teema: Valitse haluamasi teema</li>
+<li><span class=jyu-puhe data-puhe=a82f5ef6947970c3></span>Näppäimistöasettelu: <em>Suosittelemme</em> vaihtoehtoja Visual Studio tai VS Code</li>
+<li><span class=jyu-puhe data-puhe=5cba65612042a103></span>Pluginit: valitse <em>Continue without Plugins</em></li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=dd40c3a78c4374db></span>Kun olet valmis ja pääset <em>Welcome to JetBrains Rider</em> -ikkunaan, ohjelman
+   asennus on onnistunut.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=bb94f7a923f62f34></span>Poistetaan oikoluku. Ollessasi <em>Welcome</em>-ikkunassa, valitse alhaalta
+   <em>Configure</em>. Kirjoita hakukenttään "spell" ja mene <em>Spelling</em> <span class="jyu-path">›</span> <em>.NET
+   languages</em> ja klikkaa pois valinta <em>Enable spell checking</em> -kohdasta.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=54ff34bcfeb04cd7></span>Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa <a href="https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1">asetuspaketti
+(settings.zip)</a> </p>
+<ul>
+<li><span class=jyu-puhe data-puhe=74f6416f15c26079></span>Valitse <em>Welcome</em>-ikkunassa vasemmasta alalaidasta <em>Configure</em> <span class="jyu-path">›</span> <em>Import Settings...</em></li>
+<li><span class=jyu-puhe data-puhe=e5214f64ac22d29f></span>Etsi ja valitse äsken haettu tiedosto</li>
+<li><span class=jyu-puhe data-puhe=4fcfe7ca8abdc3e1></span>Klikkaa OK, sitten Import and Restart</li>
+</ul>
+</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=3f287fbb2fc17285></span>Jos et halua ladata asetuksia tiedostosta, voit <a href="#rider-settings">asettaa ne manuaalisesti</a>.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=3dff9dd0c9dc265d></span>Avaa Pääte ellei se ole jo</li>
+<li>
+<p><span class=jyu-puhe data-puhe=4d2ead99f8b36055></span>Asenna JetBrains Rider suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>rider
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=e968bb878696b54a></span>Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+macOS-käyttäjän salasanaa <code>Password:</code>-kentässä. Kirjoita silloin
+salasana paikalle ja paina Enter-näppäintä.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=5fc80226aae8d426></span>Tarkista, että Rider toimii. Avaa Launchpad ja käynnistä sieltä <em>Rider</em>.</p>
+<p><span class=jyu-puhe data-puhe=1ac2bd0c899cd7c8></span>Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+Järjestelmä saattaa myös kysyä, <em>Rider on internetistä ladattu appi. Avataanko se?</em>.
+Siinä tapauksessa voi valita <em>Avaa</em>.</p>
+<p><span class=jyu-puhe data-puhe=24a9d28ad7d48f88></span>Hyväksy mahdolliset Riderin käyttöehdot.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=75f965cbded41ff8></span>Kun JetBrains Rider kysyy lisenssiä, valitse <strong>Free Non-Commercial License</strong>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=3df6a6ba36ae2642></span>Valitse <em>Register</em>-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse <em>Continue with email</em> ja tee itsellesi tunnus. Tunnuksen <em>ei</em> tarvitse liittyä yliopistoon mitenkään.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=c1da5816c3fcdc01></span>Kun olet rekisteröitynyt, avaa Rider ja valitse <em>Log in for Non-Commercial License</em>.</p>
+<p><span class=jyu-puhe data-puhe=7533edbceb01416e></span>Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+<em>Start Non-Commercial license</em>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=312951c439a53c84></span>Suorita asetusten asettaminen loppuun. Suositellut asetukset:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=f7544e052c9437ad></span>Teema: Valitse haluamasi teema</li>
+<li><span class=jyu-puhe data-puhe=a82f5ef6947970c3></span>Näppäimistöasettelu: <em>Suosittelemme</em> vaihtoehtoja Visual Studio tai VS Code</li>
+<li><span class=jyu-puhe data-puhe=5cba65612042a103></span>Pluginit: valitse <em>Continue without Plugins</em></li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=dd40c3a78c4374db></span>Kun olet valmis ja pääset <em>Welcome to JetBrains Rider</em> -ikkunaan, ohjelman
+   asennus on onnistunut.</p>
+</li>
+<li>
+<p>Poistetaan oikoluku. Ollessasi <em>Welcome</em>-ikkunassa, valitse alhaalta
+   <em>Configure</em> <span class="jyu-path">›</span> <em>Settings</em>. Kirjoita hakukenttään "spell" ja mene <em>Spelling</em> <span class="jyu-path">›</span> <em>.NET
+   languages</em> ja klikkaa pois valinta <em>Enable spell checking</em> -kohdasta.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=6675e93e7d1a0afc></span>Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa <a href="https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1">asetuspaketti
+(settings.zip)</a>.
+HUOM! Lataa tiedosto <kbd>Ctrl</kbd> + klikkaamalla <span class="jyu-path">›</span> <em>Lataa linkitetty tiedosto nimellä</em>. Muutoin tiedosto ei
+tallennu oikein. </p>
+<ul>
+<li><span class=jyu-puhe data-puhe=74f6416f15c26079></span>Valitse <em>Welcome</em>-ikkunassa vasemmasta alalaidasta <em>Configure</em> <span class="jyu-path">›</span> <em>Import Settings...</em></li>
+<li><span class=jyu-puhe data-puhe=e5214f64ac22d29f></span>Etsi ja valitse äsken haettu tiedosto</li>
+<li><span class=jyu-puhe data-puhe=4fcfe7ca8abdc3e1></span>Klikkaa OK, sitten <em>Import and Restart</em></li>
+</ul>
+</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=3f287fbb2fc17285></span>Jos et halua ladata asetuksia tiedostosta, voit <a href="#rider-settings">asettaa ne manuaalisesti</a>.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=739f231d03805c2e></span>Avaa jakelusi pääteohjelma ellei se ole jo</li>
+<li>
+<p><span class=jyu-puhe data-puhe=dc738d4f080a59c8></span>Asenna Rider. Asennustapa vaihtelee jakelun mukaan:</p>
+<ul>
+<li>
+<p><span class=jyu-puhe data-puhe=712e1372eb023e71></span>Arch: Asenna <a href="https://aur.archlinux.org/packages/rider"><code>rider</code></a>-pakkaus AUR:sta.
+  Voit asentaa sen käsin tai käyttämällä <a href="https://github.com/Jguer/yay">yay</a>-työkalua:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>rider
+</span></code></pre></div>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=ac732300c1997803></span>Muut jakelut: Suosittelemme asentamaan <a href="https://snapcraft.io/rider">Rider-snapin</a> käyttäen <code>snap</code>-pakkaustenhallintaa:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>snap<span class="w"> </span>install<span class="w"> </span>rider<span class="w"> </span>--classic
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=daf7ca3d54573cad></span>Vaihtoehtoisesti voit asentaa Riderin käsin seuraamalla <a href="https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux">virallisia asennusohjeita</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=516428f7f00da092></span>Tarkista, että Rider toimii. Käynnistä JetBrains Rider (joko sovellusvalikosta tai <code>rider</code>-komennolla).
+    Ensimmäisellä kerralla käynnistys saattaa kestää, sillä järjestelmä tarkistaa sovelluksen.
+    Järjestelmä saattaa myös kysyä, <em>Rider on internetsitä ladattu appi. Avataanko se?</em>.
+    Siinä tapauksessa voi valita <em>Avaa</em>.</p>
+<p><span class=jyu-puhe data-puhe=24a9d28ad7d48f88></span>Hyväksy mahdolliset Riderin käyttöehdot.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=75f965cbded41ff8></span>Kun JetBrains Rider kysyy lisenssiä, valitse <strong>Free Non-Commercial License</strong>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=e305b7b08d692c82></span>Valitse <em>Register</em>-linkki ja rekisteröidy JetBrains-käyttäjäksi.
+   Valitse <em>Continue with email</em> ja tee itsellesi tunnus.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=c1da5816c3fcdc01></span>Kun olet rekisteröitynyt, avaa Rider ja valitse <em>Log in for Non-Commercial License</em>.</p>
+<p><span class=jyu-puhe data-puhe=7533edbceb01416e></span>Kun olet kirjautunut, hyväksy vielä lisenssin ehdot ja valitse
+<em>Start Non-Commercial license</em>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=312951c439a53c84></span>Suorita asetusten asettaminen loppuun. Suositellut asetukset:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=f7544e052c9437ad></span>Teema: Valitse haluamasi teema</li>
+<li><span class=jyu-puhe data-puhe=a82f5ef6947970c3></span>Näppäimistöasettelu: <em>Suosittelemme</em> vaihtoehtoja Visual Studio tai VS Code</li>
+<li><span class=jyu-puhe data-puhe=5cba65612042a103></span>Pluginit: valitse <em>Continue without Plugins</em></li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=dd40c3a78c4374db></span>Kun olet valmis ja pääset <em>Welcome to JetBrains Rider</em> -ikkunaan, ohjelman
+   asennus on onnistunut.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=bb94f7a923f62f34></span>Poistetaan oikoluku. Ollessasi <em>Welcome</em>-ikkunassa, valitse alhaalta
+   <em>Configure</em>. Kirjoita hakukenttään "spell" ja mene <em>Spelling</em> <span class="jyu-path">›</span> <em>.NET
+   languages</em> ja klikkaa pois valinta <em>Enable spell checking</em> -kohdasta.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=2a251a34578d0348></span>Laitetaan opintojakson suositellut koodin muotoilu- ja analyysiasetukset.
+   Lataa <a href="https://gitlab.jyu.fi/tie/ohj1/2024s/esimerkit/-/raw/main/mallit/RiderSettings/settings.zip?r=1">asetuspaketti
+(settings.zip)</a>
+(Linuxissa voi joutua vaihtamaan tarkentimen <code>.jar</code> latauksen jälkeen)</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=74f6416f15c26079></span>Valitse <em>Welcome</em>-ikkunassa vasemmasta alalaidasta <em>Configure</em> <span class="jyu-path">›</span> <em>Import Settings...</em></li>
+<li><span class=jyu-puhe data-puhe=e5214f64ac22d29f></span>Etsi ja valitse äsken haettu tiedosto</li>
+<li><span class=jyu-puhe data-puhe=4fcfe7ca8abdc3e1></span>Klikkaa OK, sitten Import and Restart</li>
+</ul>
+</li>
+</ol>
+<p><span class=jyu-puhe data-puhe=3f287fbb2fc17285></span>Jos et halua ladata asetuksia tiedostosta, voit <a href="#rider-settings">asettaa ne manuaalisesti</a>.</p>
+</div>
+</div>
+</div>
+<h2 data-puhe="bc1599cb10d2a479" id="rider-ai">Riderin tekoälyasetusten kytkeminen pois päältä<a class="headerlink" href="#rider-ai" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=44256a784df40453></span>Riderissa on parikin erilaista tekoälypohjaista täydennysominaisuutta: <em>AI
+Asisstant</em> ja <em>Inline Completion</em>. Näiden
+avulla Rider yrittää täydentää kirjoitettua koodia. Esimerkki Riderin
+tekoälypohjaisesta koodin täydennyksestä, jossa parin sanan kirjoittamisen jälkeen Rider ehdottaa useamman rivin valmista koodia himmennettynä tekstinä: </p>
+<p><img alt="" src="../images/rider-ai-inline-completion.gif" /></p>
+<p><span class=jyu-puhe data-puhe=bdac74c4b2d664fb></span>Voit kytkeä nämä ominaisuudet pois päältä seuraavasti.</p>
+<ol>
+<li><span class=jyu-puhe data-puhe=1a277b41ebdff426></span>AI Assistantin kytkeminen pois<ul>
+<li><span class=jyu-puhe data-puhe=b35c9338f33d2162></span><em>Settings</em> <span class="jyu-path">›</span> <em>Plugins</em></li>
+<li><span class=jyu-puhe data-puhe=b6b355b2dd15d9ee></span>Valitse Installed-välilehti</li>
+<li><span class=jyu-puhe data-puhe=6566572e2368f299></span>Etsi <em>AI Assistant</em> ja poista plugin käytöstä (Disable) tai poista se kokonaan (Uninstall)</li>
+</ul>
+</li>
+<li><span class=jyu-puhe data-puhe=bb5078a033092bf0></span>Inline Completion -täydennyksen kytkeminen pois<ul>
+<li><span class=jyu-puhe data-puhe=e666320263107c5a></span>Avaa Rider <em>Welcome to JetBrains Rider</em> -näkymään</li>
+<li><span class=jyu-puhe data-puhe=0ddde908236b1c39></span>Valitse vasemmasta alalalaidasta <em>Configure</em> <span class="jyu-path">›</span> <em>Settings</em></li>
+<li><span class=jyu-puhe data-puhe=8ef08601ac800f00></span>Mene asetuksissa kohtaan <em>Editor</em> <span class="jyu-path">›</span> <em>General</em> <span class="jyu-path">›</span> <em>Code Completion</em> <span class="jyu-path">›</span> <em>Inline</em></li>
+<li><span class=jyu-puhe data-puhe=7aa1a5562b05b644></span>Ota ruksi <strong>pois</strong> kohdasta <em>Enable inline completion using language models</em></li>
+<li><span class=jyu-puhe data-puhe=7117908a7c2593fe></span>Tallenna asetukset <em>Save</em>-painikkeella</li>
+</ul>
+</li>
+</ol>
+<h2 data-puhe="d2a61ef307ac030f" id="jypeli">JyPeli<a class="headerlink" href="#jypeli" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<ol>
+<li><span class=jyu-puhe data-puhe=2e2c47bb953f7e7a></span>Avaa käyttöjärjestelmäsi komentorivi (PowerShell, Pääte tai vastaava).</li>
+<li>
+<p>Asenna JyPeli-projektipohjat (engl. <em>templates</em>) suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>dotnet<span class="w"> </span>new<span class="w"> </span>install<span class="w"> </span>Jypeli.Templates
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=1b3dc41e6fae29a1></span>Kun asennus on valmis, näet jotakin tekstiä mallia:</p>
+<p><div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Success: Jypeli.Templates installed the following templates:
+</span></code></pre></div>
+3. <span class=jyu-puhe data-puhe=bd902c5d5f51a185></span>Kokeile, että JyPeli toimii luomalla tasohyppelypeliprojekti ja suorittamalla se.
+   Suorita alla olevat komennot (huom: yhteensä neljä komentoa):</p>
+<p><div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>dotnet<span class="w"> </span>new<span class="w"> </span>Tasohyppelypeli<span class="w"> </span>-o<span class="w"> </span>TasohyppelypeliTesti
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">cd</span><span class="w"> </span>TasohyppelypeliTesti
+</span></code></pre></div>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>dotnet<span class="w"> </span>run
+</span></code></pre></div></p>
+<p><span class=jyu-puhe data-puhe=8d89f358c78025ed></span>Erityisesti viimeisen komennon suorittaminen voi hieman kestää. 
+Komennot tekevät seuraavat asiat:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=aad2800583320eb3></span>Komento 1 muuttaa aktiivisen hakemiston kotihakemistoksi</li>
+<li><span class=jyu-puhe data-puhe=2fbe6547f5648b8d></span>Komento 2 tekee uuden C#-projektin, jonka pohja otetaan JyPeli tasohyppelypeliesimerkistä</li>
+<li><span class=jyu-puhe data-puhe=e88e09ae86590285></span>Komento 3 siirtää komentorivin projektikansion sisälle</li>
+<li><span class=jyu-puhe data-puhe=abf933e05eb8e9de></span>Komento 4 kääntää ja käynnistää pelin. </li>
+</ul>
+<p><span class=jyu-puhe data-puhe=5d4dc6577d62ed73></span>Tuloksena pitäisi avautua pelattava tasohyppelypeli.</p>
+<p><span class=jyu-puhe data-puhe=57bb7c4c007b1bf9></span>Voit kokeilla peliä tai sulkea sen.</p>
+</li>
+</ol>
+<h2 data-puhe="dfe26fa8fb575525" id="comtest">ComTest<a class="headerlink" href="#comtest" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=3c985bd45f310434></span>ComTest on Riderin lisäosa, jonka avulla tällä opintojaksolla kirjoitetaan yksikkötestejä.</p>
+<ol>
+<li><span class=jyu-puhe data-puhe=5fe01498ce935039></span>Avaa JetBrains Rider ja odota, kunnes pääset <em>Welcome to JetBrains Rider</em> -näkymään</li>
+<li><span class=jyu-puhe data-puhe=a3b57f7069a078e4></span>Klikkaa ikkunan vasemmassa alalaidassa oleva <em>Configure</em> <span class="jyu-path">›</span> <em>Plugins</em></li>
+<li><span class=jyu-puhe data-puhe=746d853eda03ddfb></span>Valitse <em>Marketplace</em>-välilehti ja hae hakusanalla <code>ComTest</code></li>
+<li><span class=jyu-puhe data-puhe=d3a176cb86801290></span>Valitse Comtest Runner -pluginin kohdalta <em>Install</em>
+     <img alt="ComTest Runner -lisäosan asentaminen Riderissa" src=".././images/rider-install-comtest.gif" /></li>
+<li><span class=jyu-puhe data-puhe=e6eed4c933652642></span>Paina <em>Save</em></li>
+<li><span class=jyu-puhe data-puhe=09670711e32739b6></span>Sulje JetBrains Rider</li>
+</ol>
+<h2 data-puhe="7ea1a59837bbc245" id="git">Git<a class="headerlink" href="#git" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title"><span class=jyu-puhe data-puhe=f7cd500d4070ff52></span>Huomautus</p>
+<p><span class=jyu-puhe data-puhe=edfe016077e7c010></span>Gitiä ei tarvitse asentaa vielä opintojakson alussa. Tarvitset Gitiä
+mahdollisesti vasta harjoitustyön yhteydessä, joten voit palata tähän kohtaan
+myöhemmin.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows</label><label for="__tabbed_6_2">macOS</label><label for="__tabbed_6_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=a720ef767897fd89></span>Avaa PowerShell-komentorivi ellei se ole jo auki.</li>
+<li>
+<p><span class=jyu-puhe data-puhe=2737666374845efa></span>Asenna Git for Windows suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>winget<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>--id<span class="o">=</span>Git.Git<span class="w"> </span>--custom<span class="w"> </span><span class="s1">'/COMPONENTS="ext,ext\shellhere,ext\guihere"'</span>
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=1a5b248fd5906f19></span>Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+Jos näet komentorivillä kysymyksen, kuten:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Do you agree to all the source agreements terms?
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>[Y] Yes [N] No:
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=5e7e511813fa200a></span>Paina komentorivillä <code>y</code>-näppäintä ja sen jälkeen <code>Enter</code>-näppäintä.</p>
+<p><span class=jyu-puhe data-puhe=87f8fe66e159738f></span>Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti <code>Successfully installed</code>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=264405663e693ac1></span>Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=1fed61fc4698803a></span>Testaa, että <code>git</code>-komento on asennettu suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>git version X.XX.XX
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=6f2d3321c1034d2b></span>Tekstin <code>X.XX.XX</code> tilalla näkyy git-työkalun tarkka versio.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=0f72be8510f99ac7></span>Testaa, vielä, että Git Bash on asennettu. Mene <em>Haku-ikoni</em> <span class="jyu-path">›</span> Kirjoita <em>Git Bash</em> <span class="jyu-path">›</span> Valitse <em>Git Bash</em>.</p>
+<p><span class=jyu-puhe data-puhe=2b934f06ce3e38cd></span>Jos kaikki toimii, pitäisi avautua Git Bash -komentorivi:   </p>
+<div class="jyu-anim" data-scene="avaa-windows" markdown="1">
+<p><span class=jyu-puhe data-puhe=05444974385a5457></span><img alt="Git bash avattu" src="../images/gitbash-avattu2.png" /></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=3dff9dd0c9dc265d></span>Avaa Pääte ellei se ole jo</li>
+<li>
+<p><span class=jyu-puhe data-puhe=da52687f40ad3ba2></span>Git-työkalun pitäisi olla jo valmiiksi asennettu jos teit Valmistelu-vaiheessa olevat asiat. Tarkista, että Git toimii suorittamalla seuraava komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git version X.XX.XX
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=6f2d3321c1034d2b></span>Tekstin <code>X.XX.XX</code> tilalla näkyy git-työkalun tarkka versio.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=739f231d03805c2e></span>Avaa jakelusi pääteohjelma ellei se ole jo</li>
+<li><span class=jyu-puhe data-puhe=0cb83e7a4dbd920c></span>Asenna Git-pakkaus: <code>git</code>. Pakkauksen nimi on yleensä sama
+   kaikissa yleisillä jakeluissa (Ubuntu, Debian, Fedora, Arch jne.)</li>
+<li><span class=jyu-puhe data-puhe=9944a3514d437410></span>Asennuksen jälkeen sulje ja avaa pääte uudelleen</li>
+<li>
+<p><span class=jyu-puhe data-puhe=1fed61fc4698803a></span>Testaa, että <code>git</code>-komento on asennettu suorittamalla komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=7a4de3850aafdaf9></span>Jos asennus onnistui, näet seuraavanlaisen tulosteen:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>git version X.XX.XX
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=6f2d3321c1034d2b></span>Tekstin <code>X.XX.XX</code> tilalla näkyy git-työkalun tarkka versio.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 data-puhe="02e2d5f5a33398a2" id="mita-seuraavaksi">Mitä seuraavaksi?<a class="headerlink" href="#mita-seuraavaksi" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=9dcfda650bbfc838></span>Onneksi olkoon! Asennettujen työkalujen käyttöä käydään läpi luennoilla sekä
+muun uassa mmateriaalin luvussa <a href="../osa1/2-ohjelmointiymparisto-kuntoon/">1.3 Ohjelmointiympäristö
+kuntoon</a>.</p>
+<p><span class=jyu-puhe data-puhe=3f968c9bc352fc4b></span>Jos olet <em>tutkinto-opiskelija</em>, sinulla on oikeus hankkia <a href="https://www.jetbrains.com/academy/student-pack/">JetBrains Student Pack</a>, joka sisältää käyttöoikeuden kaikkiin JetBrains IDE-ohjelmiin. Tällä opintojaksolla Riderin <em>Non-commercial license</em> -lisenssi riittää, mutta erityisesti ohjelmoinnista kiinnostuneelle Student Packista voi olla hyötyä myöhemmissä opinnoissa.</p>
+<details closed="closed" id="rider-settings">
+<summary data-puhe="dc6f2b513fc7a909"> Valinnaista lisätietoa: Koodin muotoilu- ja analyysiasetukset </summary>
+<p><span class=jyu-puhe data-puhe=c06ee46ecfeee9cc></span>Seuraavassa on muutamia esimerkkejä varoituksista, joita settings.zipissä on
+otettu pois päältä. Näistä varoituksista on enemmänkin haittaa kuin hyötyä tämän
+kurssin kannalta. Ajatus on, että on parempi, että varoituksia tulee vain niistä
+asioista, jotka on oikeasti syytä ottaa huomioon. Kun opit ohjelmointia lisää,
+on noista edistyneemmistä varoituksistakin enemmän hyötyä. Kannattaa avata
+Riderissa joku solution, jos säädät seuraavia käsin.</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=c4d743c3e9cf2b53></span><strong>Huomatus nimiavaruudesta:</strong> Kurssilla ei aina käytetä nimiavaruuksia: 
+  kirjoita asetusten hakukentään <code>inspection severity</code> ja mene asetuksissa <code>Editor/Inspection Settings/Inspection
+Severity/C#</code> valitsemalla <code>Inspection Severity</code> alla olevista kielistä C#. Pitäisi tulla näkyviin uusi valikko C#:n kielikohtaisia asetuksia.
+Kirjoita tämän uuden valikon omaan hakuun <code>namespace</code> ja ota ruksi pois kohdasta 
+<code>Namespace does not correspond to file location</code>, joka löytyy uudesta valikossa <code>Constraints violations</code>-
+alaotsikon alta.</li>
+<li><strong>Luokasta ole luotu oliota:</strong> Kurssilla luokkia käytetään (myös) tallentamaan
+  joukko staattisia aliohjelmia, joten tämä varoitus ei ole relevantti. Samaan tapaan 
+kuin edellisessä kohdassa, mene ensin C#:n kielikohtaisiin asetuksiin: <code>Editor/Inspection Settings/Inspection Severity/C#</code> ja kirjoita avautuvan valikon hakukentään <code>instantiated</code> ja ota ruksi pois kohdasta <code>Non-private accessibility</code>, joka on alaotsikon <code>Potential Code Quality Issues</code> ja <code>Class is never instantiated</code>-asetuksen alla.</li>
+<li><strong>Metodi voisi olla private:</strong> Yleiskäyttöiseksi tarkoitetut funktiot kannattaa tehdä julkisiksi, mutta koska niitä ei ole vielä mistään kutsuttu, Rider huomauttaa tästä. 
+Mene taas C#:n kielikohtaisten asetusten valikkoon <code>Editor/Inspection Settings/Inspection Severity/C#</code> edellisen kohdan tavoin.
+Hae <code>member</code> ja etsi <code>Common Practices and Code Improvements</code> alaotsikon alta <code>Member can be made private</code>-asetuksen
+alla oleva asetus <code>Non-private accessibility</code>, josta ota ruksi pois.</li>
+<li><span class=jyu-puhe data-puhe=fbec1c6f61a5bba9></span><strong>Luokkaa ei ole määritelty nimiavaruudessa:</strong> Koska kurssilla ei aina käytetä nimiavaruuksia:
+  Jos koodissa on jossakin kohti alleviivattuna <code>class</code>-sanan jälkeinen nimi, niin mene
+sen nimen alkuun,
+  paina nimeä ja vasemmalle syttyy vasaran kuva. Klikkaa vasaraa ja valitse valikosta <code>Inspection:
+'Declare types in namespaces'/Configure inspection severity/Do not show</code> kuten kuvassa alla: 
+<img alt="Poistetaan Laskuja-luokan nimen alleviivaus näkyvistä" src=".././images/vesan_asetukset_alleviivaus.png" />
+Tämän <code>Context Actions</code>-valikon saa auki myös klikkaamalla hiiren oikealla painikkeella alleviivattua
+kohtaa ja valitsemalla valikosta <code>Show Context Actions</code>. Joissain tapauksissa valikon saa auki rivinumeroiden 
+vieressä olevasta hehkulampun kuvasta.<code>Context Actions</code>-valikon saa auki kursorin kohdalla 
+myös painamalla <code>Alt + Enter</code>. Tällä samalla menetelmällä on helppo säätää pois häiritseviä alleviivauksia, 
+<strong>mutta ensin on varmistuttava, että kyseinen asetus/alleviivaus/vihje ei ole itselle tarpeellinen tai huomionarvoinen</strong>.</li>
+<li>
+<p><span class=jyu-puhe data-puhe=aaabae0db01e670b></span><strong><code>var</code>-sanan käyttö:</strong> Pyritään oppimaan tyyppien merkitystä. Toimi kuten edellä
+silloin kun ehdotetaan esimerkiksi <code>int ika</code> tyyppisessä lausessa <code>int</code> sanan kohdalle
+että <code>use var</code>, eli poista tämä huomautus käytöstä.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=e665f3d4b6fcdedc></span><code>Editor/General/Code Completion</code> poista ruksi "Preselect the best match to
+insert it by pressing dot, parantheses, and other keys"</p>
+</li>
+<li><span class=jyu-puhe data-puhe=20f94d1ee1e765bc></span><code>Editor/Inlay Hints</code> poista ruksi "Enable Inlay Hints in .NET languages"</li>
+</ul>
+</details>
+<details closed="closed">
+<summary data-puhe="a67bbea66f72f503">Valinnaista lisätietoa: Suositeltavat käyttöliittymän asetukset </summary>
+<p><span class=jyu-puhe data-puhe=64251c86993afdd9></span>Tässä on lueteltu muutamia asetuksia, joita luentojen esimerkeissä käytetään tai on käytetty. Jokainen voi toki rakennella ympäristöstään haluamansa, mutta näistä voi olla sinulle hyötyä jos haluat seurata täsmälleen luennolla käytettyjä asetuksia. </p>
+<p><span class=jyu-puhe data-puhe=1c713a34e75711a7></span><strong>Siirrä alaosan paneelit yhteen reunaan.</strong> <img alt="Move panels example gif" src=".././images/rider-paneelit-vasemmalle.gif" /> Tämän
+ansiosta esimerkiksi tulosteita on helpompi tarkastella hieman leveämmässä näkymässä. Joissakin tilanteissa
+(esimerkiksi debugatessa) joitakin paneeleja voi olla hyvä siirtää tarvittaessa oikeallekin. Voit
+myös piilottaa turhia paneeleja näkyviltä kun klikkaat hiiren oikealla kuvakkeen päällä ja sitten Hide.</p>
+<p><span class=jyu-puhe data-puhe=30644505bed284e8></span><strong>Paneeleita voi "unpinnata"</strong> eli piilottaa näkyvistä silloin kun ne eivät ole aktiivisia. Klikkaa paneelista kolmea pistettä ja valitse <em>View Mode</em> <span class="jyu-path">›</span> <em>Dock Unpinned</em>. Jos unpinnaat esimerkiksi Debug-paneelin, voit ajaa ConsoleMain-sovelluksen (Debug-tilassa), ja painaa ajon jälkeen Esc-näppäintä. Paneeli sulkeutuu ja fokus siirtyy takaisin editoriin. (Ei tarvitse koskea hiireen, JES! :))</p>
+<p><span class=jyu-puhe data-puhe=bae2d5fb9ff39696></span><strong>Piilota onnistuneen käännöksen ilmoitus.</strong> Tämä ilmoitus on lähinnä vain tiellä. Valitse <em>Settings</em> <span class="jyu-path">›</span> <em>Notifications</em> <span class="jyu-path">›</span> <em>Build messages</em> <span class="jyu-path">›</span> <em>No popup</em>. Suosittelen myös poistamaan valinnan kohdasta <em>Show in tool window</em>, koska harvemmin on tarvetta tietää tarkkoja kellonaikoja milloin käännös on onnistunut tai epäonnistunut. </p>
+<p><span class=jyu-puhe data-puhe=66145cde9cfdf820></span><strong>Koko ruudun tilan</strong> saat käyntiin <em>View</em> <span class="jyu-path">›</span> <em>Appearance</em> <span class="jyu-path">›</span> <em>Enter Full Screen</em>. Minulla näppäinoikotie on Ctrl+Shift+Enter, mutta 
+kuten mitä tahansa näppäinoikoteitä, tätäkin voi muuttaa kohdasta <em>Settings</em> <span class="jyu-path">›</span> <em>Keymap</em>. Myös <em>Distraction Free Mode</em> on mielestäni mukava, vaikkakin se piilottaa jotain 
+hyviäkin käyttöliittymäelementtejä, kuten koodialueiden supistamiseen liittyvät pikkukolmiot. </p>
+<p><span class=jyu-puhe data-puhe=8379fa2b09689472></span><strong>Debug/release-valikon näyttäminen New UI:ssa.</strong> Jos käytät uutta käyttöliittymävaihtoehtoa (Settings New UI), kannattaa ns. debug/release-käännösvalikko ottaa käyttöön <a href="https://youtrack.jetbrains.com/issue/RIDER-83004/No-Edit-Solution-Configuration-and-Build-button-in-new-UI">tässä ohjeessa kuvatulla tavalla</a>.</p>
+<p><span class=jyu-puhe data-puhe=9e76b100a27eedec></span><strong>Ulkoisen konsoli-ikkunan käyttäminen</strong>: Jos haluat konsoliohjelman aukeavan
+ulkoiseen konsoliin katso 
+<a href="https://rider-support.jetbrains.com/hc/en-us/community/posts/115000162270-How-to-launch-console-app-in-external-window-">How to launch console app in external
+window?</a></p>
+<div class="admonition tip">
+<p class="admonition-title"><span class=jyu-puhe data-puhe=21602fe091c391c6></span>Vinkki</p>
+<p><span class=jyu-puhe data-puhe=9e9e129540ccc8dd></span>Pro tip: Jos käytät Rideria usealla tietokoneella, voit synkronoida asetuksesi
+valitsemalla <em>File</em> <span class="jyu-path">›</span> <em>Manage IDE Settings</em>
+<span class="jyu-path">›</span> <em>Settings sync</em>.</p>
+</div>
+</details>
+<h2 data-puhe="765029c84565ba74" id="ongelmatilanteita-ja-niiden-ratkaisuja">Ongelmatilanteita ja niiden ratkaisuja<a class="headerlink" href="#ongelmatilanteita-ja-niiden-ratkaisuja" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=85e8fdc842ff30cd></span>Alla on lueteltu joitain yleisimpiä ongelmatilanteita, joita asennuksen tai työkalujen käytön yhteydessä voi tulla vastaan. Jos löydät ongelman, jota ei ole listattu alla, </p>
+<ul>
+<li><span class=jyu-puhe data-puhe=c2e052f76b99be07></span>tule pääteohjauksiin. Ajat ja paikat löytyvät <a href="../#tuki-ja-palaute">kotisivulta</a>), </li>
+<li><span class=jyu-puhe data-puhe=d86b6365aa4742fc></span>laita viestiä <a href="../#teams-jy">Teamsissa</a> (Kysymyksiä ja apua -kanava) tai</li>
+<li><span class=jyu-puhe data-puhe=e58e3c85e600c741></span>laita viestiä opettajille: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#104;&#106;&#49;&#45;&#111;&#112;&#101;&#116;&#64;&#106;&#121;&#117;&#46;&#111;&#110;&#109;&#105;&#99;&#114;&#111;&#115;&#111;&#102;&#116;&#46;&#99;&#111;&#109;">&#111;&#104;&#106;&#49;&#45;&#111;&#112;&#101;&#116;&#64;&#106;&#121;&#117;&#46;&#111;&#110;&#109;&#105;&#99;&#114;&#111;&#115;&#111;&#102;&#116;&#46;&#99;&#111;&#109;</a>. </li>
+</ul>
+<details closed="closed">
+<summary data-puhe="80613b573d93f413"> Silk.NET.Core.Loader.SymbolLoadingException' occurred in Silk.NET.Core.dll: 'Native symbol not found (Symbol: glfwWindowHintString)</summary>
+<p><span class=jyu-puhe data-puhe=185f1f0935f03990></span>Yllä olevan virheviestin syynä on todennäköisimmin että sinulla ei ole GLFW asennettuna, 
+tai se on liian vanha. Monen Linux-distron mukana tulee versio 3.2, mutta Jypeli
+vaatii vähintään version 3.3.</p>
+<p><span class=jyu-puhe data-puhe=293db0b4bdb669dd></span>Asenna uusin GLFW-versio käyttämäsi paketinhallinnan avulla.</p>
+</details>
+<details closed="closed">
+<summary data-puhe="67898e15c0a8060e"> System.PlatformNotSupportedException: GLFW is not supported on this platform...</summary>
+<p><span class=jyu-puhe data-puhe=bb0dc6cccfd1b986></span>Voi olla että tietokoneellasi ei ole näytönohjaimen ajureita asennettuna.
+Mene <em>Windowsin asetukset</em> <span class="jyu-path">›</span> <em>Päivitykset</em> <span class="jyu-path">›</span> <em>Valinnaiset</em> (päivitä-nappulan alapuolella)
+-&gt; Ajurit.
+Asenna sieltä jotenkin näyttöön liittyvä ajuri, esimerkiksi "Intel Display Driver"</p>
+<p><span class=jyu-puhe data-puhe=d28f331289020912></span>Jos ajuria ei löydy ja käytät kannettavaa, todennäköisesti sinulla on integroitu
+näytöonohjain, jolloin ajuri voi löytyä prosessorin valmistajan (Intel tai AMD)
+sivulta. Hae ajurit Googlesta esimerkiksi hakusanalla <code>Intel graphics driver</code>
+tai <code>AMD graphics driver</code> prosessorin valmistajasta riippuen.</p>
+<p><span class=jyu-puhe data-puhe=8b7e40a30be2b87d></span>Seuraavista työkaluista voi olla hyötyä:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=721900ddced6a872></span>Intel: <a href="https://www.intel.com/content/www/us/en/support/detect.html">Driver support &amp; Assistant tool</a></li>
+<li><span class=jyu-puhe data-puhe=f64917acf5d7e361></span>AMD: <a href="https://www.amd.com/en/support/download/drivers.html">Auto detect and install drivers</a></li>
+</ul>
+</details>
+<details closed="closed">
+<summary data-puhe="2ddc0dcea07dbdf5">Rider pyytää asentamaan .NETia vaikka olen asentanut sen jo </summary>
+<p><span class=jyu-puhe data-puhe=99b927f2aa5a5c79></span>Voi olla, että Rider ei löydä oikeaa .NET-versiota.</p>
+<p><span class=jyu-puhe data-puhe=2d55f7c92b47a9ca></span>Kokeile seuraavaa:</p>
+<ul>
+<li><span class=jyu-puhe data-puhe=d3c1f9fa9481fe5f></span>Avaa Rider aloitusnäkymä (jos Rider on auki, laita se kiinni ja avaa uudelleen).</li>
+<li><span class=jyu-puhe data-puhe=28e2ee69b13109d7></span>Avaa asetukset menemällä <em>Configure</em> (vasemmassa alalaidassa) <span class="jyu-path">›</span> <em>Settings</em></li>
+<li><span class=jyu-puhe data-puhe=5c9f8964fd02c1f5></span>Mene kohtaan <em>Build, Execution, Deployment</em> <span class="jyu-path">›</span> <em>Toolset and Build</em></li>
+<li>
+<p><span class=jyu-puhe data-puhe=643d7121b9f57374></span>Klikkaa kohdan <em>.NET CLI executable path</em> -kentän alasvetovalikkoa:</p>
+<p><span class=jyu-puhe data-puhe=0bcc7f7f75fab9e5></span><img alt=".NET CLI executable path -kentän alasvetovalikko" src=".././images/rider-dotnet-cli-path.png" /></p>
+</li>
+</ul>
+<p><span class=jyu-puhe data-puhe=0cc269ca70aba392></span>Jos alasvetovalikon listassa näkyy useampi vaihtoehto, kokeile valita jotain
+toista vaihtoehtoa kuin nykyinen arvo. Paina lopuksi <em>Save</em> ja kokeile luoda
+uusi solution. Jos virhe toistuu, kokeile jotain toista valintaa.</p>
+</details>
+<details closed="closed">
+<summary data-puhe="525bd9e41dd03cbd"> Rider on hidas tai antaa erilaisia oikeusvirheitä </summary>
+<p><span class=jyu-puhe data-puhe=cebb89d09e8546e4></span>Erityisesti Windows-laitteilla Rider tai C#-ohjelmien ajaminen voi olla hidasta
+haittaohjelmien torjuntaohjelman erityisen tiukkojen tarkistusääntöjen vuoksi.</p>
+<p><span class=jyu-puhe data-puhe=3c8906108ea6dd59></span>Mikäli sinulla on käytössä Microsoft Defender, Rider yleensä kysyy, haluatko
+Riderin säätävän sen asetukset automaattisesti. Muiden tuotteiden tapauksessa
+asetukset tulee säätää itse. </p>
+</details>
+<details closed="closed">
+<p><summary data-puhe="d59f488880e182e6">Rider-lisenssin uudelleenaktivointi  </summary></p>
+<p><span class=jyu-puhe data-puhe=39944cd9b3f65b09></span>Lisenssi täytyy mahdollisesti aika ajoin uudelleenaktivoida kohdasta <em>Help</em> <span class="jyu-path">›</span>
+<em>Manage licenses</em> <span class="jyu-path">›</span> <em>Activate</em>.</p>
+</details>
+<details closed="closed">
+<p><summary data-puhe="62a366c8a57a7213">dotnet not found / command not found: dotnet </summary></p>
+<p><span class=jyu-puhe data-puhe=ef0ee9c9849ff07d></span>Katso .NET-asennusohjeet Työkalut-ohjeesta.</p>
+</details>
+<details closed="closed">
+<summary data-puhe="a69a53e07b86d8b6">A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist </summary>
+<p><span class=jyu-puhe data-puhe=f112f3952dcba0bd></span>Jos komentoriviltä tulee (Linux):</p>
+<div class="language-text highlight"><pre><span></span><code>A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist
+</code></pre></div>
+<p><span class=jyu-puhe data-puhe=dbc8135d0eddc6e5></span>niin ks: <a href="https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist">https://stackoverflow.com/questions/73753672/a-fatal-error-occurred-the-folder-usr-share-dotnet-host-fxr-does-not-exist</a></p>
+</details>
+<details closed="closed">
+<summary>Sovelluksen hallintakäytäntö on estänyt tämän tiedoston (0x800711C7)</summary>
+<p>Saatat saada Windowsissa virheen: </p>
+<blockquote>
+<p>Could not load file or assembly ‘Jypeli.FarseerPhysics.dll’. Sovelluksen
+hallintakäytäntö on estänyt tämän tiedoston (0x800711C7)</p>
+</blockquote>
+<p>Virhe johtuu Windows 11:n Smart App Control -ominaisuudesta, joka estää sellaisten ohjelmakirjastojen lataamisen, joita ei ole digitaalisesti allekirjoitettu tai jotka eivät ole Microsoftin pilvipalvelun tuntemia. Jypelin fysiikkakirjasto on tällainen. Smart App Control kytkeytyy uusissa Windows-asennuksissa itsestään päälle jonkin ajan kuluttua, joten virhe voi ilmestyä yllättäen koneelle, jolla Jypeli toimi aiemmin. Vika ei ole Jypelissä, Riderissa eikä projektissasi.</p>
+<p>Korjaus:</p>
+<ol>
+<li>Avaa <em>Asetukset</em> &gt; <em>Tietosuoja ja suojaus</em> &gt; <em>Windowsin suojaus</em> &gt; <em>Sovellusten
+ja selaimen hallinta</em>. </li>
+<li>Valitse Smart App Controlin asetukset. </li>
+<li>Vaihda asetus
+kohtaan Pois. </li>
+<li>Käynnistä ohjelma uudelleen Riderissa – mitään ei tarvitse asentaa
+uudelleen.</li>
+</ol>
+<p><strong>Mitä sammuttaminen tarkoittaa käytännössä?</strong> Smart App Control on Microsoft Defenderin päälle rakennettu lisäkerros, joka on olemassa vain uusissa Windows 11 -asennuksissa. Sen sammuttaminen ei vaikuta Defenderiin, SmartScreeniin tai muihin Windowsin suojauksiin, jotka toimivat edelleen normaalisti. Ohjelmointikäytössä Smart App Control on käytännössä pakko pitää pois päältä, koska se estää myös itse käännettyjen ohjelmien ja monien ohjelmointikirjastojen ajamisen. Ajantasaisessa Windows 11:ssä sen voi myöhemmin kytkeä takaisin päälle samasta asetuksesta; vanhemmissa versioissa uudelleenkäyttöönotto vaatii Windowsin uudelleenasennuksen.</p>
+<p>Lisätietoa Microsoftin sivulta: Mikä Smart App Control on? – <a href="https://support.microsoft.com/kb/5008908">https://support.microsoft.com/kb/5008908</a></p>
+<p>Jos Smart App Controlin asetukset -kohtaa ei näy tai se on jo pois päältä, mutta
+virhe tulee silti, kone on todennäköisesti organisaation hallinnoima (esim.
+työnantajan) ja esto tulee sen käytännöistä. Silloin ota yhteys koneen
+ylläpitoon tai tee kurssityöt toisella koneella. </p>
+</details>
+<details closed="closed">
+<summary data-puhe="b38c4ff0d4de34e5">Näppäinkomennot eivät toimi</summary>
+<p><span class=jyu-puhe data-puhe=57fe7c98e44bc356></span>Jotkin editorin näppäinoikotiet ei toimi sellaisenaan muilla kuin 
+Yhdysvaltalaisilla näppäimistöillä. On siis tarpeen valita toimimattomille 
+suosikkikomennoillesi uudet näppäinoikotiet asetuksista:
+<code>File → Settings → Keymap → Editor actions</code>.</p>
+</details>
+<h2 data-puhe="387c4b35dbec69cc" id="valinnaiset-tyokalut">Valinnaiset työkalut<a class="headerlink" href="#valinnaiset-tyokalut" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<h2 data-puhe="e2feeaa3914b1ccc" id="tekstieditori">Tekstieditori<a class="headerlink" href="#tekstieditori" title="Pysyvä linkki tähän otsikkoon">&para;</a></h2>
+<p><span class=jyu-puhe data-puhe=d0dd894265201a30></span>Halutessasi voit asentaa myös tekstieditorin, joka on monen ohjelmoijan
+perustyökalu. Opintojaksolla tarvitaan tekstieditoria lähinnä yksittäisissä
+bonus-tehtävissä, joten pakollista sen asentaminen ei ole. </p>
+<p><span class=jyu-puhe data-puhe=69814e54fe717374></span>Käytämme tässä ohjeessa Visual Studio Codea (VS Code). Jos haluat käyttää jotain
+muuta tekstieditoria, voit toki tehdä niin, mutta ohjeet on kirjoitettu VS Coden
+käyttöä ajatellen.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Windows</label><label for="__tabbed_7_2">macOS</label><label for="__tabbed_7_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=a720ef767897fd89></span>Avaa PowerShell-komentorivi ellei se ole jo auki.</li>
+<li>
+<p><span class=jyu-puhe data-puhe=77ec8901361c5427></span>Asenna VS Code suorittamalla seuraava komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>winget<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>--id<span class="o">=</span>Microsoft.VisualStudioCode<span class="w"> </span>--override<span class="w"> </span><span class="s1">'/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'</span>
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=1a5b248fd5906f19></span>Odota komennon suorittamista loppuun ja anna tarvittaessa asennusoikeus.
+Jos näet komentorivillä kysymyksen, kuten:</p>
+<div class="language-text highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Do you agree to all the source agreements terms?
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>[Y] Yes [N] No:
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=5e7e511813fa200a></span>Paina komentorivillä <code>y</code>-näppäintä ja sen jälkeen <code>Enter</code>-näppäintä.</p>
+<p><span class=jyu-puhe data-puhe=87f8fe66e159738f></span>Tarkista lopuksi, että komentorivillä olevassa tulosteessa on teksti <code>Successfully installed</code>.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=264405663e693ac1></span>Sulje kaikki auki olevat komentorivit ja avaa uusi PowerShell-komentorivi</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=7e0d445954339872></span>Kokeile käynnistää VS Code suorittamalla komento:</p>
+<p><div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>code
+</span></code></pre></div>
+<span class=jyu-puhe data-puhe=38084be2b6542a2a></span>Jos VS Code avautuu, olet onnistuneesti asentanut sen!
+Jatkossa pääset VS Codeen myös klikkaamalla käynnistä-palkin <em>Hae-ikonia</em> <span class="jyu-path">›</span> Kirjoita <em>Visual Studio Code</em> <span class="jyu-path">›</span> Valitse <em>Visual Studio Code</em>.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=3dff9dd0c9dc265d></span>Avaa Pääte ellei se ole jo</li>
+<li>
+<p><span class=jyu-puhe data-puhe=751cb9a6db83832a></span>Asenna VS Code suorittamalla alla oleva komento:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>visual-studio-code
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=e968bb878696b54a></span>Anna asennuksen suoriutua loppuun asti. Sinulta saatetaan pyytää
+macOS-käyttäjän salasanaa <code>Password:</code>-kentässä. Kirjoita silloin
+salasana paikalle ja paina Enter-näppäintä.</p>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=53925b51f3746a9b></span>Tarkista, että VS Code toimii. Avaa Launchpad ja käynnistä sieltä <em>Visual Studio Code</em>.</p>
+<p><span class=jyu-puhe data-puhe=4e9407425f75cd94></span>Jos VS Code avautuu, olet onnistuneesti asentanut sen!</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class=jyu-puhe data-puhe=739f231d03805c2e></span>Avaa jakelusi pääteohjelma ellei se ole jo</li>
+<li>
+<p><span class=jyu-puhe data-puhe=52017b1ad0011361></span>Asenna Visual Studio Code. Asennustapa vaihtelee jakelun mukaan:</p>
+<ul>
+<li>
+<p><span class=jyu-puhe data-puhe=dd06da086ac4cd22></span>Arch: Asenna <a href="https://aur.archlinux.org/packages/visual-studio-code-bin"><code>visual-studio-code-bin</code></a>-pakkaus AUR:sta. Voit asentaa sen
+  käsin tai käyttämällä <a href="https://github.com/Jguer/yay">yay</a>-työkalua:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>visual-studio-code-bin
+</span></code></pre></div>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=023454cbc700688b></span>Muut jakelut: Suosittelemme asentamaan <a href="https://snapcraft.io/code">code-snapin</a> käyttäen <code>snap</code>-työkalua:</p>
+<div class="language-bash highlight" data-puhe="3a4117f04635e2c6"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>snap<span class="w"> </span>install<span class="w"> </span>code<span class="w"> </span>--classic
+</span></code></pre></div>
+<p><span class=jyu-puhe data-puhe=eb36be843e17645c></span>Vaihtoehtoisesti voit asentaa VS Coden käsin seuraamalla <a href="https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux">virallisia asennusohjeita</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class=jyu-puhe data-puhe=220b15ca1c9bf6ff></span>Tarkista, että VS Code toimii. Käynnistä VS Code joko sovellusvalikosta tai <code>code</code>-komennolla. 
+    Jos VS Code avautuu, olet onnistuneesti asentanut sen!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<script src="../images/git-ht-ohje/scenes.js"></script>
+
+<script type="application/json" id="jyu-puhe">{"valilehdet": {"Windows\nmacOS\nLinux\nChrome OS": {"joukko": "8bc4b78e4a2c8b55", "valinta": {"Windows": "c8537108c1a05f65", "macOS": "4f70bb54f9c01992", "Linux": "08f5ad2941d5194d", "Chrome OS": "7d8f3e9541eba229"}}, "Windows\nmacOS\nLinux": {"joukko": "cd4de2880d884643", "valinta": {"Windows": "c8537108c1a05f65", "macOS": "4f70bb54f9c01992", "Linux": "08f5ad2941d5194d"}}}}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          <script>var allowed=["Chrome OS","Git-etävarasto","Linux","Palautus ohjauksessa","Palautus videona","Windows","ZIP-paketti","macOS"];var tabs=(__md_get("__tabs")||[]).filter(function(t){return allowed.indexOf(t)>=0});if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script><script>for(var set of document.querySelectorAll(".tabbed-set")){var labels=[].slice.call(set.querySelectorAll(".tabbed-labels label"));if(labels.some(function(l){return allowed.indexOf(l.innerText.trim())>=0}))continue;for(var input of set.querySelectorAll(":scope > input"))input.addEventListener("change",function(){var label=document.querySelector('label[for="'+this.id+'"]');if(label)label.setAttribute("data-md-switching","")})}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Alatunniste" >
+        
+          
+          <a href="../suorittaminen/" class="md-footer__link md-footer__link--prev" aria-label="Edellinen: Suorittaminen">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Edellinen
+              </span>
+              <div class="md-ellipsis">
+                Suorittaminen
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../git/" class="md-footer__link md-footer__link--next" aria-label="Seuraava: Versiohallinta ja Git">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Seuraava
+              </span>
+              <div class="md-ellipsis">
+                Versiohallinta ja Git
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Ohjelmointi 1 -oppimateriaali &copy; 2025 Denis Zhidkikh, Sami Sarsa, Antti-Jussi Lakanen &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fi" rel="license" title="Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen">CC BY-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+
+
+
+
+  
+  
+  
+  
+
+<div class="jyu-footer-links">
+    <a href="https://github.com/ohj-perus-jy/ohj1/edit/main/src/tyokalut.md" class="md-copyright md-copyright--link" rel="edit" title="Muokkaa tätä sivua GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+      Muokkaa
+    </a>
+    <a href="https://github.com/ohj-perus-jy/ohj1/commits/main/src/tyokalut.md" class="md-copyright md-copyright--link" title="Sivun muutokset GitHubissa">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5M12 7v5l4 2"/></svg>
+      Muutoshistoria
+    </a>
+  <a href="https://github.com/ohj-perus-jy/ohj1/issues/new?template=ilmoita-ongelmasta.yml&amp;url=tyokalut.md" class="md-copyright md-copyright--link" title="Avaa issue GitHubissa">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg>
+    Ilmoita ongelma
+  </a>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.indexes","navigation.footer","content.tabs.link","content.footnote.tooltips","content.tooltips","toc.follow","content.code.copy"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Kopioitu leikepöydälle","clipboard.copy":"Kopioi leikepöydälle","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 lisää tällä sivulla","search.result.more.other":"# lisää tällä sivulla","search.result.none":"Ei täsmääviä dokumentteja","search.result.one":"1 täsmäävä dokumentti","search.result.other":"# täsmäävää dokumenttia","search.result.placeholder":"Kirjoita aloittaaksesi haun","search.result.term.missing":"Puuttuu","select.version":"Valitse versio"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3cb411a8.min.js"></script>
+      
+        <script src="../assets/js/tooltips.js"></script>
+      
+        <script src="../assets/js/nav-scroll.js"></script>
+      
+        <script src="../assets/js/rail.js"></script>
+      
+        <script src="../assets/js/toc.js"></script>
+      
+        <script src="../assets/js/print.js"></script>
+      
+        <script src="../assets/js/fontmenu.js"></script>
+      
+        <script src="../assets/js/theme.js"></script>
+      
+        <script src="../assets/js/sitemenu.js"></script>
+      
+        <script src="../assets/js/search.js"></script>
+      
+        <script src="../assets/js/playground.js"></script>
+      
+        <script src="../assets/js/hidelines.js"></script>
+      
+        <script src="../assets/js/highlights.js"></script>
+      
+        <script src="../assets/js/copy.js"></script>
+      
+        <script src="../assets/js/hints.js"></script>
+      
+        <script src="../assets/js/asciinema.js"></script>
+      
+        <script src="../assets/js/walkthrough.js"></script>
+      
+        <script src="../assets/js/visa.js"></script>
+      
+        <script src="../assets/js/puhe.js"></script>
+      
+    
+  </body>
+</html>
