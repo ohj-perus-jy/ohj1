@@ -28,6 +28,17 @@ lisäaikaa tentteihin [yksilöllisenä
 järjestelynä](https://www.jyu.fi/fi/opiskelijalle/kandi-ja-maisteriopiskelijan-ohjeet/opintojen-suunnittelu-ja-ohjaus/yksilolliset-jarjestelyt-opinnoissa-esteettomyys-ja-saavutettavuus),
 ilmoita siitä lomakkeella tenttiin ilmoittautumisen yhteydessä. 
 
+## Mitä tentissä pitää osata
+
+Tenttialueena toimii
+[kurssimoniste](https://tim.jyu.fi/view/kurssit/tie/itkp102/materiaali/moniste)
+sekä harjoitustehtävien perustehtävät. [Tyyliopas](/tyyliopas) sekä
+[debuggaus](/osa5/debuggaus) tulee myös hallita.
+
+Tenttialueeseen **eivät** kuitenkaan kuulu monisteen luvut 19–21, 24 eikä 28. 
+
+Voit katsella aiempia tenttejä [täällä](https://users.jyu.fi/~anlakane/ohjelmointi1/tentit/).
+
 ## Tentin säännöt ja ohjeet {#tenttisaannot}
 
 Ennen kuin ilmoittaudut tenttiin, lue huolellisesti (i) [Jyväskylän yliopiston
