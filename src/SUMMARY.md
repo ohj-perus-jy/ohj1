@@ -24,7 +24,7 @@
   - [Ohjelmointiympäristö kuntoon](./osa1/4-ohjelmointiymparisto-kuntoon.md)
   - [Ensimmäinen graafinen ohjelma](./osa1/5-ensimmainen-graafinen-ohjelma.md)
   - [Osan 1 tehtävät](./osa1/tehtavat.md)
-- [Muuttujat, syöte ja funktiot](./osa2/index.md)
+- [Muuttujat, syöte ja aliohjelmat](./osa2/index.md)
   - [Muuttujat ja tietotyypit](./osa2/1-muuttujat-ja-tietotyypit.md)
   - [Operaattorit ja tyyppimuunnokset](./osa2/2-operaattorit.md)
   - [Lauseet ja lausekkeet](./osa2/3-lauseet-ja-lausekkeet.md)

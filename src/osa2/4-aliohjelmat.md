@@ -45,11 +45,12 @@ Voit ajaa tämän koodin itse omalla koneellasi.
 
 ## Oma aliohjelma
 
-Kirjoitetaan nyt oma aliohjelma. Sovitaan aluksi, että haluamme tehdä aliohjelman,
-joka muuntaa minuutit sekunneiksi: esimerkiksi 1.5 minuuttia on 90 sekuntia ja
-0.25 minuuttia on 15 sekuntia. Asia lähtee liikkeelle niin, että päätämme
-aluksi, millaista tietoa aliohjelma tarvitsee (minuuttien
-määrän) ja mitä se antaa takaisin (sekuntien määrän). Sitten kirjoitetaan kutsu:
+Kirjoitetaan nyt oma aliohjelma. Sovitaan aluksi, että haluamme tehdä
+aliohjelman, joka muuntaa minuutit sekunneiksi: esimerkiksi 1.5 minuuttia on 90
+sekuntia ja 0.25 minuuttia on 15 sekuntia. Asia lähtee liikkeelle niin, että
+päätämme aluksi, millaista tietoa aliohjelma tarvitsee (minuuttien määrän,
+desimaaliluku) ja mitä se antaa takaisin (sekuntien määrän, desimaaliluku).
+Sitten kirjoitetaan kutsu:
 
 ```csharp
 using System;
@@ -65,7 +66,7 @@ public class Ajat
 ```
 
 Kääntäjä antaa virheen, koska se ei tiedä, mitä `MinuutitSekunneiksi`-kutsun
-kohdalla pitäisi tehdä. Tämä on loogista, koska sellaista aliohjelmaa ei ole
+kohdalla pitäisi tehdä. Tämä on loogista, koska tuota aliohjelmaa ei ole
 vielä olemassa tässä ohjelmassa. Määritellä nyt aliohjelma,
 joka tekee juuri tuon asian. 
 
@@ -96,13 +97,15 @@ Käydään koodi läpi osa kerrallaan:
   tahansa ohjelman osasta. Tällä kurssilla käytännössä kaikki aliohjelmat ovat julkisia.
 * `static` tarkoittaa, että aliohjelma kuuluu luokalle eikä oliolle.
   Konsoliohjelmissa se kirjoitetaan aina; Jypelissä se jätetään pois, kuten
-  alempana nähdään.
+  myöhemmin nähdään.
 * `double` on *paluuarvon tyyppi*: aliohjelma antaa takaisin `double`-luvun.
-* `MinuutitSekunneiksi` on aliohjelman nimi. Nimi valitaan itse.
+* `MinuutitSekunneiksi` on aliohjelman nimi. Nimi valitaan itse, ja se on
+  kirjoitettava täsmälleen kuten kutsussa.
 * `(double minuutit)`: Sulkujen sisään kirjoitetaan *parametrit*, eli muuttujat,
-  jotka saavat arvonsa kutsussa. 
+  jotka saavat arvonsa kutsussa. Tässä meillä on yksi muuttuja, mutta myöhemmin
+  näemme esimerkkejä useammastakin. 
 * Aaltosulkujen `{ }` väliin kirjoitetaan aliohjelman *runko*. `return`-lause
-  palauttaa arvon aliohjelmasta sinne, mistä sitä kutsuttiin. Tätä
+  palauttaa arvon aliohjelmasta sinne, mistä sitä kutsuttiin. Palautettavaa
   arvoa sanotaan *paluuarvoksi*.
 
 Määrittelyn ensimmäistä riviä sanotaan *esittelyriviksi* (engl. *header*).
@@ -118,7 +121,8 @@ Kutsutaan aliohjelmaamme vielä pari kertaa:
 //-{
 //-    public static void Main()
 //-    {
-        Console.WriteLine(MinuutitSekunneiksi(0.25));               // 15
+        double alleMinuutti = MinuutitSekunneiksi(0.25);
+        Console.WriteLine(alleMinuutti);               // 15
         Console.WriteLine(MinuutitSekunneiksi(2) + MinuutitSekunneiksi(0.5));  // 150
 //-    }
 //-
@@ -209,8 +213,9 @@ Aliohjelma laskee `sekunnit`-muuttujaan arvon `120` ja palauttaa sen
 
 ### Kutsun paikalle tulee paluuarvo
 
-Rivistä tulee `double aika = 120 + 30;`, ja `aika` saa arvon 150. Aliohjelman
-omat muuttujat `minuutit` ja `sekunnit` katoavat samalla.
+Kutsun `MinuutitSekunneiksi(2)` arvoksi tulee suorituksen aikana `120`. Rivi
+jatkuu kuin siinä lukisi `double aika = 120 + 30;`, ja `aika` saa arvon 150.
+Aliohjelman omat muuttujat `minuutit` ja `sekunnit` katoavat samalla.
 
 </step>
 
