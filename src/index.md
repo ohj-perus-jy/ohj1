@@ -61,8 +61,7 @@ Lisäksi ohjausta annetaan ajanvarauksella:
 | Ohjaaja | Ajanvarauslinkki                                                                                          |
 | ------- | --------------------------------------------------------------------------------------------------------- |
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled) |
-<!--
-| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |-->
+| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |
 
 
 <!--
