@@ -46,7 +46,7 @@ Ohjaukset ovat yhteisiä TIEP111 Ohjelmointi 2- ja ITKP102 Ohjelmointi 1
 -opintojaksojen kanssa. Ohjaajat auttavat kummankin kurssin opiskelijoita.
 
 Varaamme oikeuden ohjausajankohtien muuttamiseen. 27.11. jälkeen ohjausta on
-saatavilla ajanvarauksella. Linkki ajanvaraukseen tulee myöhemmin saataville. 
+saatavilla ajanvarauksella. 
 
 <!-- 
 | Tukikanava | Aika                              | Paikka/Linkki                                                                                                                   |
@@ -56,13 +56,14 @@ saatavilla ajanvarauksella. Linkki ajanvaraukseen tulee myöhemmin saataville.
 | Sähköposti | Rajoitetusti kesäaikana           | ohj1-opet@jyu.onmicrosoft.com                                                                                                   |
 
 Lisäksi ohjausta annetaan ajanvarauksella: 
+-->
 
 | Ohjaaja | Ajanvarauslinkki                                                                                          |
 | ------- | --------------------------------------------------------------------------------------------------------- |
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled) |
-| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |
+<!--
+| Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |-->
 
--->
 
 <!--
 Ajalla 1.6.–21.6. ohjausta on saatavana seuraavasti
