@@ -62,7 +62,7 @@ Lisäksi ohjausta annetaan ajanvarauksella:
 | ------- | --------------------------------------------------------------------------------------------------------- |
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled) |
 | Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                        |
-
+| Santtu  | [Varaa aika](https://bookings.cloud.microsoft/book/OhjAjanvarausSanttuSalo@bookings.jyu.fi/?ismsaljsauthenabled) |
 
 <!--
 Ajalla 1.6.–21.6. ohjausta on saatavana seuraavasti
@@ -80,7 +80,7 @@ Ajalla 24.4.–31.5. ohjausta on saatavana vain ajanvarauksella.
 | Ohjaaja | Ajanvarauslinkki                                                                                                 |
 | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | Tatu    | [Varaa aika](https://outlook.office.com/book/AjanvarausTatuKauhanen@bookings.jyu.fi/?ismsaljsauthenabled)        |
-| Santtu  | [Varaa aika](https://bookings.cloud.microsoft/book/OhjAjanvarausSanttuSalo@bookings.jyu.fi/?ismsaljsauthenabled) |
+|
 | Karri   | [Varaa aika](https://book.ms/b/ks@bookings.jyu.fi)                                                               |
 
 -->
