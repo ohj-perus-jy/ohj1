@@ -21,14 +21,20 @@ asiat: `zensical/tyokalut/YHTENAISTYS.md`.
 
 ## Linkit
 
-- [ ] TIM-demojen vanhentuneet linkit: `tim-demot-vanhat-linkit.md`. Auki
-      ryhmät D (16 riviä) ja F (15). Ryhmä E (Jypeli, 11 + 2 taulukosta
-      puuttunutta) korjattu 2026-10-25 jypeli.it.jyu.fi:hin; demo8 B4-5
-      ("Jypeli-sivujen siirtäminen TIMiin") on tehtävänä vanhentunut, päätä
-      poisto tai uudelleenkirjoitus. `comtest-examples`-linkit korjattu
-      2026-10-25 kirjan ComTest-sivulle (2D-taulukot) tai poistettu (THROWS);
-      demo6 T4:n liukulukulinkki on julkisessa kommentissa, ei dokumentissa. Ryhmästä C
-      korjattiin 2026-10-25 tim-api:lla koodauskäytänteet, tekstieditori ja
-      tentti; jäljellä ViLLE (8), Tauno (3), QA (2) ja jypeli-voimia (1), joille
-      ei ole vastinetta kirjassa — jätetään toistaiseksi. Ryhmää A (moniste)
-      ei korjata. Muokkaus: `~/apps/tim-api-py` (`get_par`, `edit_paragraph`).
+- [ ] demo12 (Extra-bonusdemo): tutkimuskyselyn linkki osoittaa kevään 2025
+      loppukyselyyn (`…/ohj1/v/2025/kevat/kyselyt/loppukysely`). Päivitä, kun
+      uusi loppukysely on tehty.
+- [ ] demo8 B4-5 ("Jypeli-sivujen siirtäminen TIMiin") on tehtävänä
+      vanhentunut: päätä poisto tai uudelleenkirjoitus. Linkki osoittaa nyt
+      jypeli.it.jyu.fi:n juureen.
+- [ ] TIM-demojen linkit kirjaan, kun kirjan luvut valmistuvat. Demot
+      viittaavat yhä TIM-monisteeseen (`…/itkp102/materiaali/moniste#…`, noin
+      130 linkkiä) sekä TIMin ViLLE-, Tauno- ja QA-sivuihin ja
+      `jypeli-voimia`-harjoitukseen (demo3 B1), joille ei ole vastinetta
+      kirjassa. Vuosikohtaiset esimerkkilinkit: demo3 T6 (gitlab 2022k
+      Lumiukko.cs, jätetty ennalleen), demo5 T3 ja demo8 T4-5 (gitlab 2026s,
+      vanhenevat esimerkkirepon vaihtuessa). Vanhentuneiden linkkien kartoitus
+      käytiin loppuun 2026-11-27 ja `tim-demot-vanhat-linkit.md` poistettiin
+      (viimeisin versio commitissa ce08935). Tuoreen tilanteen saa hakemalla
+      demot `~/apps/tim-api-py`:llä (`get_document_markdown`, `get_par`,
+      `edit_paragraph`).
